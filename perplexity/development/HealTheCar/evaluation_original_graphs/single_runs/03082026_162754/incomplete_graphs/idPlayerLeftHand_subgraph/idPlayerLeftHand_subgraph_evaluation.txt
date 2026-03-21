@@ -1,0 +1,1221 @@
+GRAPH NAME: idPlayerLeftHand_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 942   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------------------+
+|                                     GOLD OUTPUTS                                     |
++-------------------------------------------------------------------------+------------+
+| Gold Output                                                             | Generated? |
++-------------------------------------------------------------------------+------------+
+| the player's left hand on the local left west of the broken side mirror | True       |
++-------------------------------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                           NODE METRICS                                           |
++------------------+--------------+---------------+------------------+-----------------------------+
+| Node             | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++------------------+--------------+---------------+------------------+-----------------------------+
+| idPlayerLeftHand | True         | True          | Covered          | Included                    |
+| idLocalLeft      | True         | True          | Covered          | Included                    |
+| idSideMirror1    | True         | True          | Covered          | Included                    |
+| idFace           | True         | False         | Covered          | Successor of failed element |
+| broken           | True         | True          | Covered          | Included                    |
++------------------+--------------+---------------+------------------+-----------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                EDGE METRICS                                                                               |
++-----------------------------------+------------------+---------------+--------------+---------------+---------------------------------+-----------------------------------+
+| Edge                              | Parent           | Child         | Edge Covered | Edge Included | Coverage Comment                | Inclusion Comment                 |
++-----------------------------------+------------------+---------------+--------------+---------------+---------------------------------+-----------------------------------+
+| idPlayerLeftHand_prop_idLocation  | idPlayerLeftHand | idLocalLeft   | True         | True          | Covered                         | Included                          |
+| isWestOf                          | idPlayerLeftHand | idSideMirror1 | True         | True          | Covered                         | Included                          |
+| idSideMirror1_prop_idDescriptor_1 | idSideMirror1    | idFace        | False        | False         | Error during execution ('ARG1') | No SEMENT generated for this edge |
+| idSideMirror1_prop_idDescriptor_2 | idSideMirror1    | broken        | True         | True          | Covered                         | Included                          |
++-----------------------------------+------------------+---------------+--------------+---------------+---------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h91                                                                       |
+|               |   INDEX: x90                                                                     |
+|               |   RELS: < [ loc_nonsp LBL: h154 ARG0: i151 ARG1: u152 ARG2: u153 ]               |
+|               |           [ def_implicit_q LBL: h165 ARG0: x162 RSTR: h163 BODY: h164 ]          |
+|               |           [ _west_a_1 LBL: h150 ARG0: i147 ARG1: x148 ARG2: u149 ]               |
+|               |           [ def_udef_a_q LBL: h160 ARG0: x157 RSTR: h158 BODY: h159 ]            |
+|               |           [ _break_v_cause LBL: h146 ARG0: e143 [ e PERF: - ] ARG1: i144 ARG2:   |
+|               | i145 ]                                                                           |
+|               |           [ compound LBL: h140 ARG0: e137 [ e PROG: - ] ARG1: u138 ARG2: u139 ]  |
+|               |           [ udef_q LBL: h135 ARG0: x132 RSTR: h133 BODY: h134 ]                  |
+|               |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|               |           [ _mirror_n_1 LBL: h129 ARG0: x128 ]                                   |
+|               |           [ place_n LBL: h156 ARG0: x155 ]                                       |
+|               |           [ _on_p_loc LBL: h122 ARG0: e119 ARG1: u120 ARG2: u121 ]               |
+|               |           [ def_udef_a_q LBL: h126 ARG0: x123 RSTR: h124 BODY: h125 ]            |
+|               |           [ _local_a_1 LBL: h115 ARG0: e113 ARG1: u114 ]                         |
+|               |           [ _left_n_of LBL: h118 ARG0: x116 ARG1: i117 ]                         |
+|               |           [ poss LBL: h112 ARG0: e109 ARG1: x110 ARG2: i111 ]                    |
+|               |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|               |           [ _player_n_of LBL: h89 ARG0: x87 ARG1: i88 ]                          |
+|               |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: u101 ARG2: u102 ]  |
+|               |           [ udef_q LBL: h98 ARG0: x95 RSTR: h96 BODY: h97 ]                      |
+|               |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|               |           [ _hand_n_1 LBL: h91 ARG0: x90 ] >                                     |
+|               |   HCONS: < h133 qeq h131 h158 qeq h129 h163 qeq h156 h124 qeq h118 h105 qeq h89  |
+|               | h96 qeq h94 >                                                                    |
+|               |   ICONS: < e143 topic i145 >                                                     |
+|               |   EQS: < x132 eq x130 h140 eq h136 u139 eq x132 h140 eq h129 u138 eq x128 h146   |
+|               | eq h129 i145 eq x128 x157 eq x128 h150 eq h161 u149 eq x157 h150 eq h156 x148 eq |
+|               | x155 x162 eq x155 h154 eq h166 u153 eq x162 h115 eq h118 u114 eq x116 x123 eq    |
+|               | x116 h122 eq h127 u121 eq x123 x104 eq x87 h112 eq h108 i111 eq x104 x95 eq x92  |
+|               | h103 eq h99 u102 eq x95 h103 eq h91 u101 eq x90 h112 eq h91 x110 eq x90 h122 eq  |
+|               | h91 u120 eq x90 h154 eq h91 u152 eq x90 > ]                                      |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h103                                                                      |
+|               |   INDEX: x110                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h103 ARG0: i151 ARG1: x110 ARG2: x148 ]               |
+|               |           [ def_implicit_q LBL: h165 ARG0: x148 RSTR: h163 BODY: h164 ]          |
+|               |           [ _west_a_1 LBL: h150 ARG0: i147 ARG1: x148 ARG2: x128 ]               |
+|               |           [ def_udef_a_q LBL: h160 ARG0: x128 RSTR: h158 BODY: h159 ]            |
+|               |           [ _break_v_cause LBL: h129 ARG0: e143 [ e PERF: - ] ARG1: i144 ARG2:   |
+|               | x128 ]                                                                           |
+|               |           [ compound LBL: h129 ARG0: e137 [ e PROG: - ] ARG1: x128 ARG2: x130 ]  |
+|               |           [ udef_q LBL: h135 ARG0: x130 RSTR: h133 BODY: h134 ]                  |
+|               |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|               |           [ _mirror_n_1 LBL: h129 ARG0: x128 ]                                   |
+|               |           [ place_n LBL: h150 ARG0: x148 ]                                       |
+|               |           [ _on_p_loc LBL: h103 ARG0: e119 ARG1: x110 ARG2: x116 ]               |
+|               |           [ def_udef_a_q LBL: h126 ARG0: x116 RSTR: h124 BODY: h125 ]            |
+|               |           [ _local_a_1 LBL: h115 ARG0: e113 ARG1: x116 ]                         |
+|               |           [ _left_n_of LBL: h115 ARG0: x116 ARG1: i117 ]                         |
+|               |           [ poss LBL: h103 ARG0: e109 ARG1: x110 ARG2: x104 ]                    |
+|               |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|               |           [ _player_n_of LBL: h89 ARG0: x104 ARG1: i88 ]                         |
+|               |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: x110 ARG2: x92 ]   |
+|               |           [ udef_q LBL: h98 ARG0: x92 RSTR: h96 BODY: h97 ]                      |
+|               |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|               |           [ _hand_n_1 LBL: h103 ARG0: x110 ] >                                   |
+|               |   HCONS: < h133 qeq h131 h158 qeq h129 h163 qeq h150 h124 qeq h115 h105 qeq h89  |
+|               | h96 qeq h94 >                                                                    |
+|               |   ICONS: < e143 topic x128 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h175                                                                      |
+|               |   INDEX: e172                                                                    |
+|               |   RELS: < [ unknown LBL: h171 ARG: x110 ARG0: e172 ]                             |
+|               |           [ def_udef_a_q LBL: h170 ARG0: x110 RSTR: h168 BODY: h169 ]            |
+|               |           [ loc_nonsp LBL: h103 ARG0: i151 ARG1: x110 ARG2: x148 ]               |
+|               |           [ def_implicit_q LBL: h165 ARG0: x148 RSTR: h163 BODY: h164 ]          |
+|               |           [ _west_a_1 LBL: h150 ARG0: i147 ARG1: x148 ARG2: x128 ]               |
+|               |           [ def_udef_a_q LBL: h160 ARG0: x128 RSTR: h158 BODY: h159 ]            |
+|               |           [ _break_v_cause LBL: h129 ARG0: e143 [ e PERF: - ] ARG1: i144 ARG2:   |
+|               | x128 ]                                                                           |
+|               |           [ compound LBL: h129 ARG0: e137 [ e PROG: - ] ARG1: x128 ARG2: x130 ]  |
+|               |           [ udef_q LBL: h135 ARG0: x130 RSTR: h133 BODY: h134 ]                  |
+|               |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|               |           [ _mirror_n_1 LBL: h129 ARG0: x128 ]                                   |
+|               |           [ place_n LBL: h150 ARG0: x148 ]                                       |
+|               |           [ _on_p_loc LBL: h103 ARG0: e119 ARG1: x110 ARG2: x116 ]               |
+|               |           [ def_udef_a_q LBL: h126 ARG0: x116 RSTR: h124 BODY: h125 ]            |
+|               |           [ _local_a_1 LBL: h115 ARG0: e113 ARG1: x116 ]                         |
+|               |           [ _left_n_of LBL: h115 ARG0: x116 ARG1: i117 ]                         |
+|               |           [ poss LBL: h103 ARG0: e109 ARG1: x110 ARG2: x104 ]                    |
+|               |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|               |           [ _player_n_of LBL: h89 ARG0: x104 ARG1: i88 ]                         |
+|               |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: x110 ARG2: x92 ]   |
+|               |           [ udef_q LBL: h98 ARG0: x92 RSTR: h96 BODY: h97 ]                      |
+|               |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|               |           [ _hand_n_1 LBL: h103 ARG0: x110 ] >                                   |
+|               |   HCONS: < h133 qeq h131 h158 qeq h129 h163 qeq h150 h124 qeq h115 h105 qeq h89  |
+|               | h96 qeq h94 h168 qeq h103 h175 qeq h171 >                                        |
+|               |   ICONS: < e143 topic x128 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                             NODE SEMENTS                                            |
++------------------+----------------------------------------------------------------------------------+
+| Node             | Generated SEMENT                                                                 |
++------------------+----------------------------------------------------------------------------------+
+| idPlayerLeftHand | [ TOP: h91                                                                       |
+|                  |   INDEX: x90                                                                     |
+|                  |   RELS: < [ poss LBL: h112 ARG0: e109 ARG1: x110 ARG2: i111 ]                    |
+|                  |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|                  |           [ _player_n_of LBL: h89 ARG0: x87 ARG1: i88 ]                          |
+|                  |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: u101 ARG2: u102 ]  |
+|                  |           [ udef_q LBL: h98 ARG0: x95 RSTR: h96 BODY: h97 ]                      |
+|                  |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|                  |           [ _hand_n_1 LBL: h91 ARG0: x90 ] >                                     |
+|                  |   HCONS: < h105 qeq h89 h96 qeq h94 >                                            |
+|                  |   EQS: < x104 eq x87 h112 eq h108 i111 eq x104 x95 eq x92 h103 eq h99 u102 eq    |
+|                  | x95 h103 eq h91 u101 eq x90 h112 eq h91 x110 eq x90 > ]                          |
++------------------+----------------------------------------------------------------------------------+
+| idLocalLeft      | [ TOP: h118                                                                      |
+|                  |   INDEX: x116                                                                    |
+|                  |   RELS: < [ _local_a_1 LBL: h115 ARG0: e113 ARG1: u114 ]                         |
+|                  |           [ _left_n_of LBL: h118 ARG0: x116 ARG1: i117 ] >                       |
+|                  |   EQS: < h115 eq h118 u114 eq x116 >                                             |
+|                  |   SLOTS: < ARG1: i117 > ]                                                        |
++------------------+----------------------------------------------------------------------------------+
+| idSideMirror1    | [ TOP: h129                                                                      |
+|                  |   INDEX: x128                                                                    |
+|                  |   RELS: < [ compound LBL: h140 ARG0: e137 [ e PROG: - ] ARG1: u138 ARG2: u139 ]  |
+|                  |           [ udef_q LBL: h135 ARG0: x132 RSTR: h133 BODY: h134 ]                  |
+|                  |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|                  |           [ _mirror_n_1 LBL: h129 ARG0: x128 ] >                                 |
+|                  |   HCONS: < h133 qeq h131 >                                                       |
+|                  |   EQS: < x132 eq x130 h140 eq h136 u139 eq x132 h140 eq h129 u138 eq x128 > ]    |
++------------------+----------------------------------------------------------------------------------+
+| idFace           | [ TOP: h142                                                                      |
+|                  |   INDEX: x141                                                                    |
+|                  |   RELS: < [ _face_n_1 LBL: h142 ARG0: x141 ] > ]                                 |
++------------------+----------------------------------------------------------------------------------+
+| broken           | [ TOP: h146                                                                      |
+|                  |   INDEX: e143                                                                    |
+|                  |   RELS: < [ _break_v_cause LBL: h146 ARG0: e143 ARG1: i144 ARG2: i145 ] >        |
+|                  |   SLOTS: < ARG1: i144 ARG2: i145 > ]                                             |
++------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                       EDGE SEMENTS                                                                      |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+| Edge                              | Parent           | Child         | Generated SEMENT                                                                 |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+| idPlayerLeftHand_prop_idLocation  | idPlayerLeftHand | idLocalLeft   | [ TOP: h91                                                                       |
+|                                   |                  |               |   INDEX: x90                                                                     |
+|                                   |                  |               |   RELS: < [ _on_p_loc LBL: h122 ARG0: e119 ARG1: u120 ARG2: u121 ]               |
+|                                   |                  |               |           [ def_udef_a_q LBL: h126 ARG0: x123 RSTR: h124 BODY: h125 ]            |
+|                                   |                  |               |           [ _local_a_1 LBL: h115 ARG0: e113 ARG1: u114 ]                         |
+|                                   |                  |               |           [ _left_n_of LBL: h118 ARG0: x116 ARG1: i117 ]                         |
+|                                   |                  |               |           [ poss LBL: h112 ARG0: e109 ARG1: x110 ARG2: i111 ]                    |
+|                                   |                  |               |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|                                   |                  |               |           [ _player_n_of LBL: h89 ARG0: x87 ARG1: i88 ]                          |
+|                                   |                  |               |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: u101 ARG2: u102 ]  |
+|                                   |                  |               |           [ udef_q LBL: h98 ARG0: x95 RSTR: h96 BODY: h97 ]                      |
+|                                   |                  |               |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|                                   |                  |               |           [ _hand_n_1 LBL: h91 ARG0: x90 ] >                                     |
+|                                   |                  |               |   HCONS: < h124 qeq h118 h105 qeq h89 h96 qeq h94 >                              |
+|                                   |                  |               |   EQS: < h115 eq h118 u114 eq x116 x123 eq x116 h122 eq h127 u121 eq x123 x104   |
+|                                   |                  |               | eq x87 h112 eq h108 i111 eq x104 x95 eq x92 h103 eq h99 u102 eq x95 h103 eq h91  |
+|                                   |                  |               | u101 eq x90 h112 eq h91 x110 eq x90 h122 eq h91 u120 eq x90 > ]                  |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+| isWestOf                          | idPlayerLeftHand | idSideMirror1 | [ TOP: h91                                                                       |
+|                                   |                  |               |   INDEX: x90                                                                     |
+|                                   |                  |               |   RELS: < [ loc_nonsp LBL: h154 ARG0: i151 ARG1: u152 ARG2: u153 ]               |
+|                                   |                  |               |           [ def_implicit_q LBL: h165 ARG0: x162 RSTR: h163 BODY: h164 ]          |
+|                                   |                  |               |           [ _west_a_1 LBL: h150 ARG0: i147 ARG1: x148 ARG2: u149 ]               |
+|                                   |                  |               |           [ def_udef_a_q LBL: h160 ARG0: x157 RSTR: h158 BODY: h159 ]            |
+|                                   |                  |               |           [ _break_v_cause LBL: h146 ARG0: e143 [ e PERF: - ] ARG1: i144 ARG2:   |
+|                                   |                  |               | i145 ]                                                                           |
+|                                   |                  |               |           [ compound LBL: h140 ARG0: e137 [ e PROG: - ] ARG1: u138 ARG2: u139 ]  |
+|                                   |                  |               |           [ udef_q LBL: h135 ARG0: x132 RSTR: h133 BODY: h134 ]                  |
+|                                   |                  |               |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|                                   |                  |               |           [ _mirror_n_1 LBL: h129 ARG0: x128 ]                                   |
+|                                   |                  |               |           [ place_n LBL: h156 ARG0: x155 ]                                       |
+|                                   |                  |               |           [ _on_p_loc LBL: h122 ARG0: e119 ARG1: u120 ARG2: u121 ]               |
+|                                   |                  |               |           [ def_udef_a_q LBL: h126 ARG0: x123 RSTR: h124 BODY: h125 ]            |
+|                                   |                  |               |           [ _local_a_1 LBL: h115 ARG0: e113 ARG1: u114 ]                         |
+|                                   |                  |               |           [ _left_n_of LBL: h118 ARG0: x116 ARG1: i117 ]                         |
+|                                   |                  |               |           [ poss LBL: h112 ARG0: e109 ARG1: x110 ARG2: i111 ]                    |
+|                                   |                  |               |           [ def_udef_a_q LBL: h107 ARG0: x104 RSTR: h105 BODY: h106 ]            |
+|                                   |                  |               |           [ _player_n_of LBL: h89 ARG0: x87 ARG1: i88 ]                          |
+|                                   |                  |               |           [ compound LBL: h103 ARG0: e100 [ e PROG: - ] ARG1: u101 ARG2: u102 ]  |
+|                                   |                  |               |           [ udef_q LBL: h98 ARG0: x95 RSTR: h96 BODY: h97 ]                      |
+|                                   |                  |               |           [ _left_n_of LBL: h94 ARG0: x92 ARG1: i93 ]                            |
+|                                   |                  |               |           [ _hand_n_1 LBL: h91 ARG0: x90 ] >                                     |
+|                                   |                  |               |   HCONS: < h133 qeq h131 h158 qeq h129 h163 qeq h156 h124 qeq h118 h105 qeq h89  |
+|                                   |                  |               | h96 qeq h94 >                                                                    |
+|                                   |                  |               |   ICONS: < e143 topic i145 >                                                     |
+|                                   |                  |               |   EQS: < x132 eq x130 h140 eq h136 u139 eq x132 h140 eq h129 u138 eq x128 h146   |
+|                                   |                  |               | eq h129 i145 eq x128 x157 eq x128 h150 eq h161 u149 eq x157 h150 eq h156 x148 eq |
+|                                   |                  |               | x155 x162 eq x155 h154 eq h166 u153 eq x162 h115 eq h118 u114 eq x116 x123 eq    |
+|                                   |                  |               | x116 h122 eq h127 u121 eq x123 x104 eq x87 h112 eq h108 i111 eq x104 x95 eq x92  |
+|                                   |                  |               | h103 eq h99 u102 eq x95 h103 eq h91 u101 eq x90 h112 eq h91 x110 eq x90 h122 eq  |
+|                                   |                  |               | h91 u120 eq x90 h154 eq h91 u152 eq x90 > ]                                      |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+| idSideMirror1_prop_idDescriptor_1 | idSideMirror1    | idFace        | None                                                                             |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+| idSideMirror1_prop_idDescriptor_2 | idSideMirror1    | broken        | [ TOP: h129                                                                      |
+|                                   |                  |               |   INDEX: x128                                                                    |
+|                                   |                  |               |   RELS: < [ _break_v_cause LBL: h146 ARG0: e143 [ e PERF: - ] ARG1: i144 ARG2:   |
+|                                   |                  |               | i145 ]                                                                           |
+|                                   |                  |               |           [ compound LBL: h140 ARG0: e137 [ e PROG: - ] ARG1: u138 ARG2: u139 ]  |
+|                                   |                  |               |           [ udef_q LBL: h135 ARG0: x132 RSTR: h133 BODY: h134 ]                  |
+|                                   |                  |               |           [ _side_n_1 LBL: h131 ARG0: x130 ]                                     |
+|                                   |                  |               |           [ _mirror_n_1 LBL: h129 ARG0: x128 ] >                                 |
+|                                   |                  |               |   HCONS: < h133 qeq h131 >                                                       |
+|                                   |                  |               |   ICONS: < e143 topic i145 >                                                     |
+|                                   |                  |               |   EQS: < x132 eq x130 h140 eq h136 u139 eq x132 h140 eq h129 u138 eq x128 h146   |
+|                                   |                  |               | eq h129 i145 eq x128 > ]                                                         |
++-----------------------------------+------------------+---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+|                                GENERATED ENGLISH TEXT                               |
++-----+-------------------------------------------------------------------------------+
+| #   | Generated Text                                                                |
++-----+-------------------------------------------------------------------------------+
+| 1   | A player's left hand on a local left west of a broken side mirror             |
+| 2   | A player's left hand on a local left west of the broken side mirror           |
+| 3   | A player's left hand on a local left west of the broken side mirrors          |
+| 4   | A player's left hand on a local left, west of a broken side mirror            |
+| 5   | A player's left hand on a local left, west of the broken side mirror          |
+| 6   | A player's left hand on a local left, west of the broken side mirrors         |
+| 7   | A player's left hand on local lefts west of a broken side mirror              |
+| 8   | A player's left hand on local lefts west of broken side mirrors               |
+| 9   | A player's left hand on local lefts west of the broken side mirror            |
+| 10  | A player's left hand on local lefts west of the broken side mirrors           |
+| 11  | A player's left hand on local lefts west of the broken side mirrors.          |
+| 12  | A player's left hand on local lefts west of the sides broken mirrors          |
+| 13  | A player's left hand on local lefts, west of a broken side mirror             |
+| 14  | A player's left hand on local lefts, west of the broken side mirror           |
+| 15  | A player's left hand on the local left west of a broken side mirror           |
+| 16  | A player's left hand on the local left west of the broken side mirror         |
+| 17  | A player's left hand on the local left, west of a broken side mirror          |
+| 18  | A player's left hand on the local left, west of the broken side mirror        |
+| 19  | A player's left hand on the local lefts west of a broken side mirror          |
+| 20  | A player's left hand on the local lefts west of the broken side mirror        |
+| 21  | A player's left hand on the local lefts west of the broken side mirrors       |
+| 22  | A player's left hand on the local lefts, west of a broken side mirror         |
+| 23  | A player's left hand on the local lefts, west of the broken side mirror       |
+| 24  | A player's left hand on the local lefts, west of the broken side mirrors      |
+| 25  | A player's left hand west of a broken side mirror on a local left             |
+| 26  | A player's left hand west of a broken side mirror on a local left.            |
+| 27  | A player's left hand west of a broken side mirror on local lefts              |
+| 28  | A player's left hand west of a broken side mirror on local lefts.             |
+| 29  | A player's left hand west of a broken side mirror on the local left           |
+| 30  | A player's left hand west of a broken side mirror on the local left.          |
+| 31  | A player's left hand west of a broken side mirror on the local lefts          |
+| 32  | A player's left hand west of a broken side mirror on the local lefts.         |
+| 33  | A player's left hand west of a broken side mirror, on the local lefts         |
+| 34  | A player's left hand west of the broken side mirror on a local left           |
+| 35  | A player's left hand west of the broken side mirror on a local left.          |
+| 36  | A player's left hand west of the broken side mirror on local lefts            |
+| 37  | A player's left hand west of the broken side mirror on local lefts.           |
+| 38  | A player's left hand west of the broken side mirror on the local left         |
+| 39  | A player's left hand west of the broken side mirror on the local left.        |
+| 40  | A player's left hand west of the broken side mirror on the local lefts        |
+| 41  | A player's left hand west of the broken side mirror on the local lefts.       |
+| 42  | A player's left hand west of the broken side mirror, on the local lefts       |
+| 43  | A player's left hand west of the broken side mirrors on a local left          |
+| 44  | A player's left hand west of the broken side mirrors on a local left.         |
+| 45  | A player's left hand west of the broken side mirrors on local lefts           |
+| 46  | A player's left hand west of the broken side mirrors on local lefts.          |
+| 47  | A player's left hand west of the broken side mirrors on the local lefts       |
+| 48  | A player's left hand west of the broken side mirrors on the local lefts.      |
+| 49  | A player's left hand west of the broken side mirrors, on the local lefts      |
+| 50  | A player's left hand west of the sides broken mirror, on the local lefts      |
+| 51  | A player's left hand west of the sides broken mirrors, on the local lefts     |
+| 52  | A player's left hand, on a local left west of a broken side mirror            |
+| 53  | A player's left hand, on a local left west of the broken side mirror          |
+| 54  | A player's left hand, on a local left west of the broken side mirrors         |
+| 55  | A player's left hand, on local lefts west of a broken side mirror             |
+| 56  | A player's left hand, on local lefts west of the broken side mirror           |
+| 57  | A player's left hand, on local lefts west of the broken side mirrors          |
+| 58  | A player's left hand, on the local left west of a broken side mirror          |
+| 59  | A player's left hand, on the local left west of the broken side mirror        |
+| 60  | A player's left hand, on the local left west of the broken side mirrors       |
+| 61  | A player's left hand, on the local lefts west of a broken side mirror         |
+| 62  | A player's left hand, on the local lefts west of a broken side mirror.        |
+| 63  | A player's left hand, on the local lefts west of a sides broken mirror        |
+| 64  | A player's left hand, on the local lefts west of broken side mirrors          |
+| 65  | A player's left hand, on the local lefts west of the broken side mirror       |
+| 66  | A player's left hand, on the local lefts west of the broken side mirrors      |
+| 67  | A player's left hand, on the local lefts west of the broken side mirrors.     |
+| 68  | A player's left hand, on the local lefts west of the sides broken mirror      |
+| 69  | A player's left hand, on the local lefts west of the sides broken mirrors     |
+| 70  | A player's left hand, on the local lefts west of the sides broken mirrors.    |
+| 71  | A player's left hands on a local left west of a broken side mirror            |
+| 72  | A player's left hands on a local left west of a broken side mirror.           |
+| 73  | A player's left hands on a local left west of a sides broken mirror           |
+| 74  | A player's left hands on a local left west of broken side mirrors             |
+| 75  | A player's left hands on a local left west of broken side mirrors.            |
+| 76  | A player's left hands on a local left west of the broken side mirror          |
+| 77  | A player's left hands on a local left west of the broken side mirror.         |
+| 78  | A player's left hands on a local left west of the broken side mirrors         |
+| 79  | A player's left hands on a local left west of the broken side mirrors.        |
+| 80  | A player's left hands on a local left west of the sides broken mirror         |
+| 81  | A player's left hands on a local left west of the sides broken mirror.        |
+| 82  | A player's left hands on a local left west of the sides broken mirrors        |
+| 83  | A player's left hands on a local left west of the sides broken mirrors.       |
+| 84  | A player's left hands on a local left, west of a broken side mirror           |
+| 85  | A player's left hands on a local left, west of the broken side mirror         |
+| 86  | A player's left hands on a local left, west of the broken side mirrors        |
+| 87  | A player's left hands on local lefts west of a broken side mirror             |
+| 88  | A player's left hands on local lefts west of a broken side mirror.            |
+| 89  | A player's left hands on local lefts west of a sides broken mirror            |
+| 90  | A player's left hands on local lefts west of a sides broken mirror.           |
+| 91  | A player's left hands on local lefts west of broken side mirrors              |
+| 92  | A player's left hands on local lefts west of broken side mirrors.             |
+| 93  | A player's left hands on local lefts west of the broken side mirror           |
+| 94  | A player's left hands on local lefts west of the broken side mirror.          |
+| 95  | A player's left hands on local lefts west of the broken side mirrors          |
+| 96  | A player's left hands on local lefts west of the broken side mirrors.         |
+| 97  | A player's left hands on local lefts west of the sides broken mirror          |
+| 98  | A player's left hands on local lefts west of the sides broken mirror.         |
+| 99  | A player's left hands on local lefts west of the sides broken mirrors         |
+| 100 | A player's left hands on local lefts west of the sides broken mirrors.        |
+| 101 | A player's left hands on local lefts, west of a broken side mirror            |
+| 102 | A player's left hands on local lefts, west of the broken side mirror          |
+| 103 | A player's left hands on local lefts, west of the broken side mirrors         |
+| 104 | A player's left hands on the local left west of a broken side mirror          |
+| 105 | A player's left hands on the local left west of broken side mirrors           |
+| 106 | A player's left hands on the local left west of the broken side mirror        |
+| 107 | A player's left hands on the local left west of the broken side mirrors       |
+| 108 | A player's left hands on the local left west of the broken side mirrors.      |
+| 109 | A player's left hands on the local left west of the sides broken mirror       |
+| 110 | A player's left hands on the local left west of the sides broken mirrors      |
+| 111 | A player's left hands on the local left west of the sides broken mirrors.     |
+| 112 | A player's left hands on the local left, west of a broken side mirror         |
+| 113 | A player's left hands on the local left, west of the broken side mirror       |
+| 114 | A player's left hands on the local left, west of the broken side mirrors      |
+| 115 | A player's left hands on the local lefts west of a broken side mirror         |
+| 116 | A player's left hands on the local lefts west of a broken side mirror.        |
+| 117 | A player's left hands on the local lefts west of a sides broken mirror        |
+| 118 | A player's left hands on the local lefts west of broken side mirrors          |
+| 119 | A player's left hands on the local lefts west of broken side mirrors.         |
+| 120 | A player's left hands on the local lefts west of the broken side mirror       |
+| 121 | A player's left hands on the local lefts west of the broken side mirror.      |
+| 122 | A player's left hands on the local lefts west of the broken side mirrors      |
+| 123 | A player's left hands on the local lefts west of the broken side mirrors.     |
+| 124 | A player's left hands on the local lefts west of the sides broken mirror      |
+| 125 | A player's left hands on the local lefts west of the sides broken mirror.     |
+| 126 | A player's left hands on the local lefts west of the sides broken mirrors     |
+| 127 | A player's left hands on the local lefts west of the sides broken mirrors.    |
+| 128 | A player's left hands on the local lefts, west of a broken side mirror        |
+| 129 | A player's left hands on the local lefts, west of the broken side mirror      |
+| 130 | A player's left hands on the local lefts, west of the broken side mirrors     |
+| 131 | A player's left hands west of a broken side mirror on a local left            |
+| 132 | A player's left hands west of a broken side mirror on a local left.           |
+| 133 | A player's left hands west of a broken side mirror on local lefts             |
+| 134 | A player's left hands west of a broken side mirror on local lefts.            |
+| 135 | A player's left hands west of a broken side mirror on the local left          |
+| 136 | A player's left hands west of a broken side mirror on the local left.         |
+| 137 | A player's left hands west of a broken side mirror on the local lefts         |
+| 138 | A player's left hands west of a broken side mirror on the local lefts.        |
+| 139 | A player's left hands west of a broken side mirror, on a local left           |
+| 140 | A player's left hands west of a broken side mirror, on the local left         |
+| 141 | A player's left hands west of a broken side mirror, on the local lefts        |
+| 142 | A player's left hands west of a sides broken mirror on a local left           |
+| 143 | A player's left hands west of a sides broken mirror on a local left.          |
+| 144 | A player's left hands west of a sides broken mirror on local lefts            |
+| 145 | A player's left hands west of a sides broken mirror on local lefts.           |
+| 146 | A player's left hands west of a sides broken mirror on the local left.        |
+| 147 | A player's left hands west of a sides broken mirror on the local lefts        |
+| 148 | A player's left hands west of a sides broken mirror on the local lefts.       |
+| 149 | A player's left hands west of a sides broken mirror, on the local lefts       |
+| 150 | A player's left hands west of broken side mirrors on a local left             |
+| 151 | A player's left hands west of broken side mirrors on a local left.            |
+| 152 | A player's left hands west of broken side mirrors on local lefts              |
+| 153 | A player's left hands west of broken side mirrors on local lefts.             |
+| 154 | A player's left hands west of broken side mirrors on the local left           |
+| 155 | A player's left hands west of broken side mirrors on the local left.          |
+| 156 | A player's left hands west of broken side mirrors on the local lefts          |
+| 157 | A player's left hands west of broken side mirrors on the local lefts.         |
+| 158 | A player's left hands west of the broken side mirror on a local left          |
+| 159 | A player's left hands west of the broken side mirror on a local left.         |
+| 160 | A player's left hands west of the broken side mirror on local lefts           |
+| 161 | A player's left hands west of the broken side mirror on local lefts.          |
+| 162 | A player's left hands west of the broken side mirror on the local left        |
+| 163 | A player's left hands west of the broken side mirror on the local left.       |
+| 164 | A player's left hands west of the broken side mirror on the local lefts       |
+| 165 | A player's left hands west of the broken side mirror on the local lefts.      |
+| 166 | A player's left hands west of the broken side mirror, on the local lefts      |
+| 167 | A player's left hands west of the broken side mirrors on a local left         |
+| 168 | A player's left hands west of the broken side mirrors on a local left.        |
+| 169 | A player's left hands west of the broken side mirrors on local lefts          |
+| 170 | A player's left hands west of the broken side mirrors on local lefts.         |
+| 171 | A player's left hands west of the broken side mirrors on the local left       |
+| 172 | A player's left hands west of the broken side mirrors on the local left.      |
+| 173 | A player's left hands west of the broken side mirrors on the local lefts      |
+| 174 | A player's left hands west of the broken side mirrors on the local lefts.     |
+| 175 | A player's left hands west of the broken side mirrors, on the local lefts     |
+| 176 | A player's left hands west of the sides broken mirror on a local left         |
+| 177 | A player's left hands west of the sides broken mirror on a local left.        |
+| 178 | A player's left hands west of the sides broken mirror on local lefts          |
+| 179 | A player's left hands west of the sides broken mirror on local lefts.         |
+| 180 | A player's left hands west of the sides broken mirror on the local left       |
+| 181 | A player's left hands west of the sides broken mirror on the local left.      |
+| 182 | A player's left hands west of the sides broken mirror on the local lefts      |
+| 183 | A player's left hands west of the sides broken mirror on the local lefts.     |
+| 184 | A player's left hands west of the sides broken mirror, on the local lefts     |
+| 185 | A player's left hands west of the sides broken mirrors on a local left        |
+| 186 | A player's left hands west of the sides broken mirrors on a local left.       |
+| 187 | A player's left hands west of the sides broken mirrors on local lefts         |
+| 188 | A player's left hands west of the sides broken mirrors on local lefts.        |
+| 189 | A player's left hands west of the sides broken mirrors on the local left      |
+| 190 | A player's left hands west of the sides broken mirrors on the local left.     |
+| 191 | A player's left hands west of the sides broken mirrors on the local lefts     |
+| 192 | A player's left hands west of the sides broken mirrors on the local lefts.    |
+| 193 | A player's left hands west of the sides broken mirrors, on the local lefts    |
+| 194 | A player's left hands, on a local left west of a broken side mirror           |
+| 195 | A player's left hands, on a local left west of broken side mirrors            |
+| 196 | A player's left hands, on a local left west of the broken side mirror         |
+| 197 | A player's left hands, on a local left west of the broken side mirrors        |
+| 198 | A player's left hands, on a local left west of the broken side mirrors.       |
+| 199 | A player's left hands, on a local left west of the sides broken mirror        |
+| 200 | A player's left hands, on a local left west of the sides broken mirrors       |
+| 201 | A player's left hands, on a local left west of the sides broken mirrors.      |
+| 202 | A player's left hands, on local lefts west of a broken side mirror            |
+| 203 | A player's left hands, on local lefts west of broken side mirrors             |
+| 204 | A player's left hands, on local lefts west of the broken side mirror          |
+| 205 | A player's left hands, on local lefts west of the broken side mirrors         |
+| 206 | A player's left hands, on local lefts west of the broken side mirrors.        |
+| 207 | A player's left hands, on local lefts west of the sides broken mirrors        |
+| 208 | A player's left hands, on the local left west of a broken side mirror         |
+| 209 | A player's left hands, on the local left west of broken side mirrors          |
+| 210 | A player's left hands, on the local left west of the broken side mirror       |
+| 211 | A player's left hands, on the local left west of the broken side mirrors      |
+| 212 | A player's left hands, on the local left west of the broken side mirrors.     |
+| 213 | A player's left hands, on the local left west of the sides broken mirrors     |
+| 214 | A player's left hands, on the local lefts west of a broken side mirror        |
+| 215 | A player's left hands, on the local lefts west of a broken side mirror.       |
+| 216 | A player's left hands, on the local lefts west of a sides broken mirror       |
+| 217 | A player's left hands, on the local lefts west of broken side mirrors         |
+| 218 | A player's left hands, on the local lefts west of broken side mirrors.        |
+| 219 | A player's left hands, on the local lefts west of the broken side mirror      |
+| 220 | A player's left hands, on the local lefts west of the broken side mirror.     |
+| 221 | A player's left hands, on the local lefts west of the broken side mirrors     |
+| 222 | A player's left hands, on the local lefts west of the broken side mirrors.    |
+| 223 | A player's left hands, on the local lefts west of the sides broken mirror     |
+| 224 | A player's left hands, on the local lefts west of the sides broken mirrors    |
+| 225 | A player's left hands, on the local lefts west of the sides broken mirrors.   |
+| 226 | A player's left hands, west of a broken side mirror on the local lefts.       |
+| 227 | Players' left hand on a local left west of a broken side mirror               |
+| 228 | Players' left hand on a local left west of the broken side mirror             |
+| 229 | Players' left hand on a local left, west of a broken side mirror              |
+| 230 | Players' left hand on a local left, west of the broken side mirror            |
+| 231 | Players' left hand on local lefts west of a broken side mirror                |
+| 232 | Players' left hand on local lefts west of the broken side mirror              |
+| 233 | Players' left hand on local lefts west of the broken side mirrors             |
+| 234 | Players' left hand on local lefts, west of a broken side mirror               |
+| 235 | Players' left hand on the local left west of a broken side mirror             |
+| 236 | Players' left hand on the local left, west of a broken side mirror            |
+| 237 | Players' left hand on the local lefts west of a broken side mirror            |
+| 238 | Players' left hand on the local lefts west of the broken side mirror          |
+| 239 | Players' left hand on the local lefts, west of a broken side mirror           |
+| 240 | Players' left hand on the local lefts, west of the broken side mirror         |
+| 241 | Players' left hand west of a broken side mirror on a local left               |
+| 242 | Players' left hand west of a broken side mirror on a local left.              |
+| 243 | Players' left hand west of a broken side mirror on local lefts                |
+| 244 | Players' left hand west of a broken side mirror on local lefts.               |
+| 245 | Players' left hand west of a broken side mirror on the local left             |
+| 246 | Players' left hand west of a broken side mirror on the local left.            |
+| 247 | Players' left hand west of a broken side mirror on the local lefts            |
+| 248 | Players' left hand west of a broken side mirror on the local lefts.           |
+| 249 | Players' left hand west of the broken side mirror on a local left             |
+| 250 | Players' left hand west of the broken side mirror on a local left.            |
+| 251 | Players' left hand west of the broken side mirror on local lefts              |
+| 252 | Players' left hand west of the broken side mirror on local lefts.             |
+| 253 | Players' left hand west of the broken side mirror on the local lefts          |
+| 254 | Players' left hand west of the broken side mirror on the local lefts.         |
+| 255 | Players' left hand, on a local left west of a broken side mirror              |
+| 256 | Players' left hand, on a local left west of the broken side mirror            |
+| 257 | Players' left hand, on local lefts west of a broken side mirror               |
+| 258 | Players' left hand, on local lefts west of the broken side mirror             |
+| 259 | Players' left hand, on the local left west of a broken side mirror            |
+| 260 | Players' left hand, on the local left west of the broken side mirror          |
+| 261 | Players' left hand, on the local lefts west of a broken side mirror           |
+| 262 | Players' left hand, on the local lefts west of the broken side mirror         |
+| 263 | Players' left hand, on the local lefts west of the broken side mirrors        |
+| 264 | Players' left hands on a local left west of a broken side mirror              |
+| 265 | Players' left hands on a local left west of broken side mirrors               |
+| 266 | Players' left hands on a local left west of the broken side mirror            |
+| 267 | Players' left hands on a local left west of the broken side mirrors           |
+| 268 | Players' left hands on a local left west of the broken side mirrors.          |
+| 269 | Players' left hands on a local left west of the sides broken mirror           |
+| 270 | Players' left hands on a local left west of the sides broken mirrors          |
+| 271 | Players' left hands on a local left west of the sides broken mirrors.         |
+| 272 | Players' left hands on a local left, west of a broken side mirror             |
+| 273 | Players' left hands on a local left, west of the broken side mirror           |
+| 274 | Players' left hands on local lefts west of a broken side mirror               |
+| 275 | Players' left hands on local lefts west of a broken side mirror.              |
+| 276 | Players' left hands on local lefts west of a sides broken mirror              |
+| 277 | Players' left hands on local lefts west of broken side mirrors                |
+| 278 | Players' left hands on local lefts west of broken side mirrors.               |
+| 279 | Players' left hands on local lefts west of the broken side mirror             |
+| 280 | Players' left hands on local lefts west of the broken side mirror.            |
+| 281 | Players' left hands on local lefts west of the broken side mirrors            |
+| 282 | Players' left hands on local lefts west of the broken side mirrors.           |
+| 283 | Players' left hands on local lefts west of the sides broken mirror            |
+| 284 | Players' left hands on local lefts west of the sides broken mirror.           |
+| 285 | Players' left hands on local lefts west of the sides broken mirrors           |
+| 286 | Players' left hands on local lefts west of the sides broken mirrors.          |
+| 287 | Players' left hands on local lefts, west of a broken side mirror              |
+| 288 | Players' left hands on local lefts, west of the broken side mirror            |
+| 289 | Players' left hands on the local left west of a broken side mirror            |
+| 290 | Players' left hands on the local left west of the broken side mirror          |
+| 291 | Players' left hands on the local left west of the broken side mirrors         |
+| 292 | Players' left hands on the local left, west of a broken side mirror           |
+| 293 | Players' left hands on the local left, west of the broken side mirror         |
+| 294 | Players' left hands on the local lefts west of a broken side mirror           |
+| 295 | Players' left hands on the local lefts west of broken side mirrors            |
+| 296 | Players' left hands on the local lefts west of the broken side mirror         |
+| 297 | Players' left hands on the local lefts west of the broken side mirrors        |
+| 298 | Players' left hands on the local lefts west of the broken side mirrors.       |
+| 299 | Players' left hands on the local lefts west of the sides broken mirror        |
+| 300 | Players' left hands on the local lefts west of the sides broken mirrors       |
+| 301 | Players' left hands on the local lefts west of the sides broken mirrors.      |
+| 302 | Players' left hands on the local lefts, west of a broken side mirror          |
+| 303 | Players' left hands on the local lefts, west of the broken side mirror        |
+| 304 | Players' left hands west of a broken side mirror on a local left              |
+| 305 | Players' left hands west of a broken side mirror on a local left.             |
+| 306 | Players' left hands west of a broken side mirror on local lefts               |
+| 307 | Players' left hands west of a broken side mirror on local lefts.              |
+| 308 | Players' left hands west of a broken side mirror on the local left            |
+| 309 | Players' left hands west of a broken side mirror on the local left.           |
+| 310 | Players' left hands west of a broken side mirror on the local lefts           |
+| 311 | Players' left hands west of a broken side mirror on the local lefts.          |
+| 312 | Players' left hands west of a broken side mirror, on the local lefts          |
+| 313 | Players' left hands west of a sides broken mirror on the local lefts.         |
+| 314 | Players' left hands west of broken side mirrors on a local left               |
+| 315 | Players' left hands west of broken side mirrors on a local left.              |
+| 316 | Players' left hands west of broken side mirrors on local lefts                |
+| 317 | Players' left hands west of broken side mirrors on local lefts.               |
+| 318 | Players' left hands west of broken side mirrors on the local lefts            |
+| 319 | Players' left hands west of broken side mirrors on the local lefts.           |
+| 320 | Players' left hands west of the broken side mirror on a local left            |
+| 321 | Players' left hands west of the broken side mirror on a local left.           |
+| 322 | Players' left hands west of the broken side mirror on local lefts             |
+| 323 | Players' left hands west of the broken side mirror on local lefts.            |
+| 324 | Players' left hands west of the broken side mirror on the local left          |
+| 325 | Players' left hands west of the broken side mirror on the local left.         |
+| 326 | Players' left hands west of the broken side mirror on the local lefts         |
+| 327 | Players' left hands west of the broken side mirror on the local lefts.        |
+| 328 | Players' left hands west of the broken side mirrors on a local left           |
+| 329 | Players' left hands west of the broken side mirrors on a local left.          |
+| 330 | Players' left hands west of the broken side mirrors on local lefts            |
+| 331 | Players' left hands west of the broken side mirrors on local lefts.           |
+| 332 | Players' left hands west of the broken side mirrors on the local left         |
+| 333 | Players' left hands west of the broken side mirrors on the local left.        |
+| 334 | Players' left hands west of the broken side mirrors on the local lefts        |
+| 335 | Players' left hands west of the broken side mirrors on the local lefts.       |
+| 336 | Players' left hands west of the sides broken mirror on a local left.          |
+| 337 | Players' left hands west of the sides broken mirror on local lefts            |
+| 338 | Players' left hands west of the sides broken mirror on local lefts.           |
+| 339 | Players' left hands west of the sides broken mirror on the local lefts        |
+| 340 | Players' left hands west of the sides broken mirror on the local lefts.       |
+| 341 | Players' left hands west of the sides broken mirrors on a local left          |
+| 342 | Players' left hands west of the sides broken mirrors on a local left.         |
+| 343 | Players' left hands west of the sides broken mirrors on local lefts           |
+| 344 | Players' left hands west of the sides broken mirrors on local lefts.          |
+| 345 | Players' left hands west of the sides broken mirrors on the local lefts       |
+| 346 | Players' left hands west of the sides broken mirrors on the local lefts.      |
+| 347 | Players' left hands, on a local left west of a broken side mirror             |
+| 348 | Players' left hands, on a local left west of the broken side mirror           |
+| 349 | Players' left hands, on a local left west of the broken side mirrors          |
+| 350 | Players' left hands, on local lefts west of a broken side mirror              |
+| 351 | Players' left hands, on local lefts west of the broken side mirror            |
+| 352 | Players' left hands, on local lefts west of the broken side mirrors           |
+| 353 | Players' left hands, on the local left west of a broken side mirror           |
+| 354 | Players' left hands, on the local left west of the broken side mirror         |
+| 355 | Players' left hands, on the local left west of the broken side mirrors        |
+| 356 | Players' left hands, on the local lefts west of a broken side mirror          |
+| 357 | Players' left hands, on the local lefts west of broken side mirrors           |
+| 358 | Players' left hands, on the local lefts west of the broken side mirror        |
+| 359 | Players' left hands, on the local lefts west of the broken side mirrors       |
+| 360 | Players' left hands, on the local lefts west of the broken side mirrors.      |
+| 361 | Players' left hands, on the local lefts west of the sides broken mirrors      |
+| 362 | The player's left hand on a local left west of a broken side mirror           |
+| 363 | The player's left hand on a local left west of broken side mirrors            |
+| 364 | The player's left hand on a local left west of the broken side mirror         |
+| 365 | The player's left hand on a local left west of the broken side mirrors        |
+| 366 | The player's left hand on a local left west of the broken side mirrors.       |
+| 367 | The player's left hand on a local left west of the sides broken mirror        |
+| 368 | The player's left hand on a local left west of the sides broken mirrors       |
+| 369 | The player's left hand on a local left west of the sides broken mirrors.      |
+| 370 | The player's left hand on a local left, west of a broken side mirror          |
+| 371 | The player's left hand on a local left, west of broken side mirrors           |
+| 372 | The player's left hand on a local left, west of the broken side mirror        |
+| 373 | The player's left hand on a local left, west of the broken side mirrors       |
+| 374 | The player's left hand on a local left, west of the sides broken mirror       |
+| 375 | The player's left hand on a local left, west of the sides broken mirrors      |
+| 376 | The player's left hand on local lefts west of a broken side mirror            |
+| 377 | The player's left hand on local lefts west of a broken side mirror.           |
+| 378 | The player's left hand on local lefts west of a sides broken mirror           |
+| 379 | The player's left hand on local lefts west of broken side mirrors             |
+| 380 | The player's left hand on local lefts west of broken side mirrors.            |
+| 381 | The player's left hand on local lefts west of the broken side mirror          |
+| 382 | The player's left hand on local lefts west of the broken side mirror.         |
+| 383 | The player's left hand on local lefts west of the broken side mirrors         |
+| 384 | The player's left hand on local lefts west of the broken side mirrors.        |
+| 385 | The player's left hand on local lefts west of the sides broken mirror         |
+| 386 | The player's left hand on local lefts west of the sides broken mirrors        |
+| 387 | The player's left hand on local lefts west of the sides broken mirrors.       |
+| 388 | The player's left hand on local lefts, west of a broken side mirror           |
+| 389 | The player's left hand on local lefts, west of the broken side mirror         |
+| 390 | The player's left hand on local lefts, west of the broken side mirrors        |
+| 391 | The player's left hand on the local left west of a broken side mirror         |
+| 392 | The player's left hand on the local left west of the broken side mirror       |
+| 393 | The player's left hand on the local left west of the broken side mirrors      |
+| 394 | The player's left hand on the local left, west of a broken side mirror        |
+| 395 | The player's left hand on the local left, west of the broken side mirror      |
+| 396 | The player's left hand on the local left, west of the broken side mirrors     |
+| 397 | The player's left hand on the local lefts west of a broken side mirror        |
+| 398 | The player's left hand on the local lefts west of broken side mirrors         |
+| 399 | The player's left hand on the local lefts west of the broken side mirror      |
+| 400 | The player's left hand on the local lefts west of the broken side mirrors     |
+| 401 | The player's left hand on the local lefts west of the broken side mirrors.    |
+| 402 | The player's left hand on the local lefts west of the sides broken mirror     |
+| 403 | The player's left hand on the local lefts west of the sides broken mirrors    |
+| 404 | The player's left hand on the local lefts west of the sides broken mirrors.   |
+| 405 | The player's left hand on the local lefts, west of a broken side mirror       |
+| 406 | The player's left hand on the local lefts, west of broken side mirrors        |
+| 407 | The player's left hand on the local lefts, west of the broken side mirror     |
+| 408 | The player's left hand on the local lefts, west of the broken side mirrors    |
+| 409 | The player's left hand on the local lefts, west of the sides broken mirrors   |
+| 410 | The player's left hand west of a broken side mirror on a local left           |
+| 411 | The player's left hand west of a broken side mirror on a local left.          |
+| 412 | The player's left hand west of a broken side mirror on local lefts            |
+| 413 | The player's left hand west of a broken side mirror on local lefts.           |
+| 414 | The player's left hand west of a broken side mirror on the local left         |
+| 415 | The player's left hand west of a broken side mirror on the local left.        |
+| 416 | The player's left hand west of a broken side mirror on the local lefts        |
+| 417 | The player's left hand west of a broken side mirror on the local lefts.       |
+| 418 | The player's left hand west of a broken side mirror, on a local left          |
+| 419 | The player's left hand west of a broken side mirror, on local lefts           |
+| 420 | The player's left hand west of a broken side mirror, on the local left        |
+| 421 | The player's left hand west of a broken side mirror, on the local lefts       |
+| 422 | The player's left hand west of a sides broken mirror, on the local lefts      |
+| 423 | The player's left hand west of broken side mirrors on a local left.           |
+| 424 | The player's left hand west of broken side mirrors on local lefts             |
+| 425 | The player's left hand west of broken side mirrors on local lefts.            |
+| 426 | The player's left hand west of broken side mirrors on the local lefts         |
+| 427 | The player's left hand west of broken side mirrors on the local lefts.        |
+| 428 | The player's left hand west of broken side mirrors, on the local lefts        |
+| 429 | The player's left hand west of the broken side mirror on a local left         |
+| 430 | The player's left hand west of the broken side mirror on a local left.        |
+| 431 | The player's left hand west of the broken side mirror on local lefts          |
+| 432 | The player's left hand west of the broken side mirror on local lefts.         |
+| 433 | The player's left hand west of the broken side mirror on the local left       |
+| 434 | The player's left hand west of the broken side mirror on the local left.      |
+| 435 | The player's left hand west of the broken side mirror on the local lefts      |
+| 436 | The player's left hand west of the broken side mirror on the local lefts.     |
+| 437 | The player's left hand west of the broken side mirror, on a local left        |
+| 438 | The player's left hand west of the broken side mirror, on local lefts         |
+| 439 | The player's left hand west of the broken side mirror, on the local left      |
+| 440 | The player's left hand west of the broken side mirror, on the local lefts     |
+| 441 | The player's left hand west of the broken side mirrors on a local left        |
+| 442 | The player's left hand west of the broken side mirrors on a local left.       |
+| 443 | The player's left hand west of the broken side mirrors on local lefts         |
+| 444 | The player's left hand west of the broken side mirrors on local lefts.        |
+| 445 | The player's left hand west of the broken side mirrors on the local left      |
+| 446 | The player's left hand west of the broken side mirrors on the local left.     |
+| 447 | The player's left hand west of the broken side mirrors on the local lefts     |
+| 448 | The player's left hand west of the broken side mirrors on the local lefts.    |
+| 449 | The player's left hand west of the broken side mirrors, on a local left       |
+| 450 | The player's left hand west of the broken side mirrors, on local lefts        |
+| 451 | The player's left hand west of the broken side mirrors, on the local left     |
+| 452 | The player's left hand west of the broken side mirrors, on the local lefts    |
+| 453 | The player's left hand west of the sides broken mirror on local lefts         |
+| 454 | The player's left hand west of the sides broken mirror on the local lefts     |
+| 455 | The player's left hand west of the sides broken mirror on the local lefts.    |
+| 456 | The player's left hand west of the sides broken mirror, on a local left       |
+| 457 | The player's left hand west of the sides broken mirror, on the local left     |
+| 458 | The player's left hand west of the sides broken mirror, on the local lefts    |
+| 459 | The player's left hand west of the sides broken mirrors on a local left.      |
+| 460 | The player's left hand west of the sides broken mirrors on local lefts        |
+| 461 | The player's left hand west of the sides broken mirrors on local lefts.       |
+| 462 | The player's left hand west of the sides broken mirrors on the local lefts    |
+| 463 | The player's left hand west of the sides broken mirrors on the local lefts.   |
+| 464 | The player's left hand west of the sides broken mirrors, on a local left      |
+| 465 | The player's left hand west of the sides broken mirrors, on the local left    |
+| 466 | The player's left hand west of the sides broken mirrors, on the local lefts   |
+| 467 | The player's left hand, on a local left west of a broken side mirror          |
+| 468 | The player's left hand, on a local left west of a broken side mirror.         |
+| 469 | The player's left hand, on a local left west of a sides broken mirror         |
+| 470 | The player's left hand, on a local left west of broken side mirrors           |
+| 471 | The player's left hand, on a local left west of the broken side mirror        |
+| 472 | The player's left hand, on a local left west of the broken side mirrors       |
+| 473 | The player's left hand, on a local left west of the broken side mirrors.      |
+| 474 | The player's left hand, on a local left west of the sides broken mirror       |
+| 475 | The player's left hand, on a local left west of the sides broken mirrors      |
+| 476 | The player's left hand, on a local left west of the sides broken mirrors.     |
+| 477 | The player's left hand, on local lefts west of a broken side mirror           |
+| 478 | The player's left hand, on local lefts west of broken side mirrors            |
+| 479 | The player's left hand, on local lefts west of the broken side mirror         |
+| 480 | The player's left hand, on local lefts west of the broken side mirrors        |
+| 481 | The player's left hand, on local lefts west of the broken side mirrors.       |
+| 482 | The player's left hand, on local lefts west of the sides broken mirror        |
+| 483 | The player's left hand, on local lefts west of the sides broken mirrors       |
+| 484 | The player's left hand, on local lefts west of the sides broken mirrors.      |
+| 485 | The player's left hand, on the local left west of a broken side mirror        |
+| 486 | The player's left hand, on the local left west of broken side mirrors         |
+| 487 | The player's left hand, on the local left west of the broken side mirror      |
+| 488 | The player's left hand, on the local left west of the broken side mirrors     |
+| 489 | The player's left hand, on the local left west of the broken side mirrors.    |
+| 490 | The player's left hand, on the local left west of the sides broken mirror     |
+| 491 | The player's left hand, on the local left west of the sides broken mirrors    |
+| 492 | The player's left hand, on the local left west of the sides broken mirrors.   |
+| 493 | The player's left hand, on the local lefts west of a broken side mirror       |
+| 494 | The player's left hand, on the local lefts west of a broken side mirror.      |
+| 495 | The player's left hand, on the local lefts west of a sides broken mirror      |
+| 496 | The player's left hand, on the local lefts west of broken side mirrors        |
+| 497 | The player's left hand, on the local lefts west of broken side mirrors.       |
+| 498 | The player's left hand, on the local lefts west of the broken side mirror     |
+| 499 | The player's left hand, on the local lefts west of the broken side mirror.    |
+| 500 | The player's left hand, on the local lefts west of the broken side mirrors    |
+| 501 | The player's left hand, on the local lefts west of the broken side mirrors.   |
+| 502 | The player's left hand, on the local lefts west of the sides broken mirror    |
+| 503 | The player's left hand, on the local lefts west of the sides broken mirror.   |
+| 504 | The player's left hand, on the local lefts west of the sides broken mirrors   |
+| 505 | The player's left hand, on the local lefts west of the sides broken mirrors.  |
+| 506 | The player's left hand, west of a broken side mirror on a local left.         |
+| 507 | The player's left hand, west of a broken side mirror on local lefts           |
+| 508 | The player's left hand, west of a broken side mirror on local lefts.          |
+| 509 | The player's left hand, west of a broken side mirror on the local lefts       |
+| 510 | The player's left hand, west of a broken side mirror on the local lefts.      |
+| 511 | The player's left hands on a local left west of a broken side mirror          |
+| 512 | The player's left hands on a local left west of a broken side mirror.         |
+| 513 | The player's left hands on a local left west of a sides broken mirror         |
+| 514 | The player's left hands on a local left west of a sides broken mirror.        |
+| 515 | The player's left hands on a local left west of broken side mirrors           |
+| 516 | The player's left hands on a local left west of broken side mirrors.          |
+| 517 | The player's left hands on a local left west of the broken side mirror        |
+| 518 | The player's left hands on a local left west of the broken side mirror.       |
+| 519 | The player's left hands on a local left west of the broken side mirrors       |
+| 520 | The player's left hands on a local left west of the broken side mirrors.      |
+| 521 | The player's left hands on a local left west of the sides broken mirror       |
+| 522 | The player's left hands on a local left west of the sides broken mirror.      |
+| 523 | The player's left hands on a local left west of the sides broken mirrors      |
+| 524 | The player's left hands on a local left west of the sides broken mirrors.     |
+| 525 | The player's left hands on a local left, west of a broken side mirror         |
+| 526 | The player's left hands on a local left, west of a sides broken mirror        |
+| 527 | The player's left hands on a local left, west of broken side mirrors          |
+| 528 | The player's left hands on a local left, west of the broken side mirror       |
+| 529 | The player's left hands on a local left, west of the broken side mirrors      |
+| 530 | The player's left hands on a local left, west of the sides broken mirror      |
+| 531 | The player's left hands on a local left, west of the sides broken mirrors     |
+| 532 | The player's left hands on local lefts west of a broken side mirror           |
+| 533 | The player's left hands on local lefts west of a broken side mirror.          |
+| 534 | The player's left hands on local lefts west of a sides broken mirror          |
+| 535 | The player's left hands on local lefts west of a sides broken mirror.         |
+| 536 | The player's left hands on local lefts west of broken side mirrors            |
+| 537 | The player's left hands on local lefts west of broken side mirrors.           |
+| 538 | The player's left hands on local lefts west of the broken side mirror         |
+| 539 | The player's left hands on local lefts west of the broken side mirror.        |
+| 540 | The player's left hands on local lefts west of the broken side mirrors        |
+| 541 | The player's left hands on local lefts west of the broken side mirrors.       |
+| 542 | The player's left hands on local lefts west of the sides broken mirror        |
+| 543 | The player's left hands on local lefts west of the sides broken mirror.       |
+| 544 | The player's left hands on local lefts west of the sides broken mirrors       |
+| 545 | The player's left hands on local lefts west of the sides broken mirrors.      |
+| 546 | The player's left hands on local lefts, west of a broken side mirror          |
+| 547 | The player's left hands on local lefts, west of the broken side mirror        |
+| 548 | The player's left hands on local lefts, west of the broken side mirrors       |
+| 549 | The player's left hands on the local left west of a broken side mirror        |
+| 550 | The player's left hands on the local left west of a broken side mirror.       |
+| 551 | The player's left hands on the local left west of a sides broken mirror       |
+| 552 | The player's left hands on the local left west of broken side mirrors         |
+| 553 | The player's left hands on the local left west of broken side mirrors.        |
+| 554 | The player's left hands on the local left west of the broken side mirror      |
+| 555 | The player's left hands on the local left west of the broken side mirror.     |
+| 556 | The player's left hands on the local left west of the broken side mirrors     |
+| 557 | The player's left hands on the local left west of the broken side mirrors.    |
+| 558 | The player's left hands on the local left west of the sides broken mirror     |
+| 559 | The player's left hands on the local left west of the sides broken mirror.    |
+| 560 | The player's left hands on the local left west of the sides broken mirrors    |
+| 561 | The player's left hands on the local left west of the sides broken mirrors.   |
+| 562 | The player's left hands on the local left, west of a broken side mirror       |
+| 563 | The player's left hands on the local left, west of the broken side mirror     |
+| 564 | The player's left hands on the local left, west of the broken side mirrors    |
+| 565 | The player's left hands on the local lefts west of a broken side mirror       |
+| 566 | The player's left hands on the local lefts west of a broken side mirror.      |
+| 567 | The player's left hands on the local lefts west of a sides broken mirror      |
+| 568 | The player's left hands on the local lefts west of a sides broken mirror.     |
+| 569 | The player's left hands on the local lefts west of broken side mirrors        |
+| 570 | The player's left hands on the local lefts west of broken side mirrors.       |
+| 571 | The player's left hands on the local lefts west of the broken side mirror     |
+| 572 | The player's left hands on the local lefts west of the broken side mirror.    |
+| 573 | The player's left hands on the local lefts west of the broken side mirrors    |
+| 574 | The player's left hands on the local lefts west of the broken side mirrors.   |
+| 575 | The player's left hands on the local lefts west of the sides broken mirror    |
+| 576 | The player's left hands on the local lefts west of the sides broken mirror.   |
+| 577 | The player's left hands on the local lefts west of the sides broken mirrors   |
+| 578 | The player's left hands on the local lefts west of the sides broken mirrors.  |
+| 579 | The player's left hands on the local lefts, west of a broken side mirror      |
+| 580 | The player's left hands on the local lefts, west of broken side mirrors       |
+| 581 | The player's left hands on the local lefts, west of the broken side mirror    |
+| 582 | The player's left hands on the local lefts, west of the broken side mirrors   |
+| 583 | The player's left hands on the local lefts, west of the sides broken mirror   |
+| 584 | The player's left hands on the local lefts, west of the sides broken mirrors  |
+| 585 | The player's left hands west of a broken side mirror on a local left          |
+| 586 | The player's left hands west of a broken side mirror on a local left.         |
+| 587 | The player's left hands west of a broken side mirror on local lefts           |
+| 588 | The player's left hands west of a broken side mirror on local lefts.          |
+| 589 | The player's left hands west of a broken side mirror on the local left        |
+| 590 | The player's left hands west of a broken side mirror on the local left.       |
+| 591 | The player's left hands west of a broken side mirror on the local lefts       |
+| 592 | The player's left hands west of a broken side mirror on the local lefts.      |
+| 593 | The player's left hands west of a broken side mirror, on a local left         |
+| 594 | The player's left hands west of a broken side mirror, on local lefts          |
+| 595 | The player's left hands west of a broken side mirror, on the local left       |
+| 596 | The player's left hands west of a broken side mirror, on the local lefts      |
+| 597 | The player's left hands west of a sides broken mirror on a local left         |
+| 598 | The player's left hands west of a sides broken mirror on a local left.        |
+| 599 | The player's left hands west of a sides broken mirror on local lefts          |
+| 600 | The player's left hands west of a sides broken mirror on local lefts.         |
+| 601 | The player's left hands west of a sides broken mirror on the local left       |
+| 602 | The player's left hands west of a sides broken mirror on the local left.      |
+| 603 | The player's left hands west of a sides broken mirror on the local lefts      |
+| 604 | The player's left hands west of a sides broken mirror on the local lefts.     |
+| 605 | The player's left hands west of a sides broken mirror, on the local left      |
+| 606 | The player's left hands west of a sides broken mirror, on the local lefts     |
+| 607 | The player's left hands west of broken side mirrors on a local left           |
+| 608 | The player's left hands west of broken side mirrors on a local left.          |
+| 609 | The player's left hands west of broken side mirrors on local lefts            |
+| 610 | The player's left hands west of broken side mirrors on local lefts.           |
+| 611 | The player's left hands west of broken side mirrors on the local left         |
+| 612 | The player's left hands west of broken side mirrors on the local left.        |
+| 613 | The player's left hands west of broken side mirrors on the local lefts        |
+| 614 | The player's left hands west of broken side mirrors on the local lefts.       |
+| 615 | The player's left hands west of broken side mirrors, on the local lefts       |
+| 616 | The player's left hands west of the broken side mirror on a local left        |
+| 617 | The player's left hands west of the broken side mirror on a local left.       |
+| 618 | The player's left hands west of the broken side mirror on local lefts         |
+| 619 | The player's left hands west of the broken side mirror on local lefts.        |
+| 620 | The player's left hands west of the broken side mirror on the local left      |
+| 621 | The player's left hands west of the broken side mirror on the local left.     |
+| 622 | The player's left hands west of the broken side mirror on the local lefts     |
+| 623 | The player's left hands west of the broken side mirror on the local lefts.    |
+| 624 | The player's left hands west of the broken side mirror, on a local left       |
+| 625 | The player's left hands west of the broken side mirror, on local lefts        |
+| 626 | The player's left hands west of the broken side mirror, on the local left     |
+| 627 | The player's left hands west of the broken side mirror, on the local lefts    |
+| 628 | The player's left hands west of the broken side mirrors on a local left       |
+| 629 | The player's left hands west of the broken side mirrors on a local left.      |
+| 630 | The player's left hands west of the broken side mirrors on local lefts        |
+| 631 | The player's left hands west of the broken side mirrors on local lefts.       |
+| 632 | The player's left hands west of the broken side mirrors on the local left     |
+| 633 | The player's left hands west of the broken side mirrors on the local left.    |
+| 634 | The player's left hands west of the broken side mirrors on the local lefts    |
+| 635 | The player's left hands west of the broken side mirrors on the local lefts.   |
+| 636 | The player's left hands west of the broken side mirrors, on a local left      |
+| 637 | The player's left hands west of the broken side mirrors, on local lefts       |
+| 638 | The player's left hands west of the broken side mirrors, on the local left    |
+| 639 | The player's left hands west of the broken side mirrors, on the local lefts   |
+| 640 | The player's left hands west of the sides broken mirror on a local left       |
+| 641 | The player's left hands west of the sides broken mirror on a local left.      |
+| 642 | The player's left hands west of the sides broken mirror on local lefts        |
+| 643 | The player's left hands west of the sides broken mirror on local lefts.       |
+| 644 | The player's left hands west of the sides broken mirror on the local left     |
+| 645 | The player's left hands west of the sides broken mirror on the local left.    |
+| 646 | The player's left hands west of the sides broken mirror on the local lefts    |
+| 647 | The player's left hands west of the sides broken mirror on the local lefts.   |
+| 648 | The player's left hands west of the sides broken mirror, on a local left      |
+| 649 | The player's left hands west of the sides broken mirror, on local lefts       |
+| 650 | The player's left hands west of the sides broken mirror, on the local left    |
+| 651 | The player's left hands west of the sides broken mirror, on the local lefts   |
+| 652 | The player's left hands west of the sides broken mirrors on a local left      |
+| 653 | The player's left hands west of the sides broken mirrors on a local left.     |
+| 654 | The player's left hands west of the sides broken mirrors on local lefts       |
+| 655 | The player's left hands west of the sides broken mirrors on local lefts.      |
+| 656 | The player's left hands west of the sides broken mirrors on the local left    |
+| 657 | The player's left hands west of the sides broken mirrors on the local left.   |
+| 658 | The player's left hands west of the sides broken mirrors on the local lefts   |
+| 659 | The player's left hands west of the sides broken mirrors on the local lefts.  |
+| 660 | The player's left hands west of the sides broken mirrors, on a local left     |
+| 661 | The player's left hands west of the sides broken mirrors, on local lefts      |
+| 662 | The player's left hands west of the sides broken mirrors, on the local left   |
+| 663 | The player's left hands west of the sides broken mirrors, on the local lefts  |
+| 664 | The player's left hands, on a local left west of a broken side mirror         |
+| 665 | The player's left hands, on a local left west of a broken side mirror.        |
+| 666 | The player's left hands, on a local left west of a sides broken mirror        |
+| 667 | The player's left hands, on a local left west of broken side mirrors          |
+| 668 | The player's left hands, on a local left west of broken side mirrors.         |
+| 669 | The player's left hands, on a local left west of the broken side mirror       |
+| 670 | The player's left hands, on a local left west of the broken side mirror.      |
+| 671 | The player's left hands, on a local left west of the broken side mirrors      |
+| 672 | The player's left hands, on a local left west of the broken side mirrors.     |
+| 673 | The player's left hands, on a local left west of the sides broken mirror      |
+| 674 | The player's left hands, on a local left west of the sides broken mirrors     |
+| 675 | The player's left hands, on a local left west of the sides broken mirrors.    |
+| 676 | The player's left hands, on local lefts west of a broken side mirror          |
+| 677 | The player's left hands, on local lefts west of a broken side mirror.         |
+| 678 | The player's left hands, on local lefts west of a sides broken mirror         |
+| 679 | The player's left hands, on local lefts west of broken side mirrors           |
+| 680 | The player's left hands, on local lefts west of broken side mirrors.          |
+| 681 | The player's left hands, on local lefts west of the broken side mirror        |
+| 682 | The player's left hands, on local lefts west of the broken side mirror.       |
+| 683 | The player's left hands, on local lefts west of the broken side mirrors       |
+| 684 | The player's left hands, on local lefts west of the broken side mirrors.      |
+| 685 | The player's left hands, on local lefts west of the sides broken mirror       |
+| 686 | The player's left hands, on local lefts west of the sides broken mirrors      |
+| 687 | The player's left hands, on local lefts west of the sides broken mirrors.     |
+| 688 | The player's left hands, on the local left west of a broken side mirror       |
+| 689 | The player's left hands, on the local left west of a broken side mirror.      |
+| 690 | The player's left hands, on the local left west of a sides broken mirror      |
+| 691 | The player's left hands, on the local left west of broken side mirrors        |
+| 692 | The player's left hands, on the local left west of broken side mirrors.       |
+| 693 | The player's left hands, on the local left west of the broken side mirror     |
+| 694 | The player's left hands, on the local left west of the broken side mirror.    |
+| 695 | The player's left hands, on the local left west of the broken side mirrors    |
+| 696 | The player's left hands, on the local left west of the broken side mirrors.   |
+| 697 | The player's left hands, on the local left west of the sides broken mirror    |
+| 698 | The player's left hands, on the local left west of the sides broken mirrors   |
+| 699 | The player's left hands, on the local left west of the sides broken mirrors.  |
+| 700 | The player's left hands, on the local lefts west of a broken side mirror      |
+| 701 | The player's left hands, on the local lefts west of a broken side mirror.     |
+| 702 | The player's left hands, on the local lefts west of a sides broken mirror     |
+| 703 | The player's left hands, on the local lefts west of a sides broken mirror.    |
+| 704 | The player's left hands, on the local lefts west of broken side mirrors       |
+| 705 | The player's left hands, on the local lefts west of broken side mirrors.      |
+| 706 | The player's left hands, on the local lefts west of the broken side mirror    |
+| 707 | The player's left hands, on the local lefts west of the broken side mirror.   |
+| 708 | The player's left hands, on the local lefts west of the broken side mirrors   |
+| 709 | The player's left hands, on the local lefts west of the broken side mirrors.  |
+| 710 | The player's left hands, on the local lefts west of the sides broken mirror   |
+| 711 | The player's left hands, on the local lefts west of the sides broken mirror.  |
+| 712 | The player's left hands, on the local lefts west of the sides broken mirrors  |
+| 713 | The player's left hands, on the local lefts west of the sides broken mirrors. |
+| 714 | The player's left hands, west of a broken side mirror on a local left         |
+| 715 | The player's left hands, west of a broken side mirror on a local left.        |
+| 716 | The player's left hands, west of a broken side mirror on local lefts          |
+| 717 | The player's left hands, west of a broken side mirror on local lefts.         |
+| 718 | The player's left hands, west of a broken side mirror on the local left.      |
+| 719 | The player's left hands, west of a broken side mirror on the local lefts      |
+| 720 | The player's left hands, west of a broken side mirror on the local lefts.     |
+| 721 | The player's left hands, west of the broken side mirror on a local left.      |
+| 722 | The player's left hands, west of the broken side mirror on local lefts        |
+| 723 | The player's left hands, west of the broken side mirror on local lefts.       |
+| 724 | The player's left hands, west of the broken side mirror on the local lefts    |
+| 725 | The player's left hands, west of the broken side mirror on the local lefts.   |
+| 726 | The players' left hand on a local left west of a broken side mirror           |
+| 727 | The players' left hand on a local left west of the broken side mirror         |
+| 728 | The players' left hand on a local left west of the broken side mirrors        |
+| 729 | The players' left hand on a local left, west of a broken side mirror          |
+| 730 | The players' left hand on a local left, west of the broken side mirror        |
+| 731 | The players' left hand on a local left, west of the broken side mirrors       |
+| 732 | The players' left hand on local lefts west of a broken side mirror            |
+| 733 | The players' left hand on local lefts west of broken side mirrors             |
+| 734 | The players' left hand on local lefts west of the broken side mirror          |
+| 735 | The players' left hand on local lefts west of the broken side mirrors         |
+| 736 | The players' left hand on local lefts west of the broken side mirrors.        |
+| 737 | The players' left hand on local lefts west of the sides broken mirrors        |
+| 738 | The players' left hand on local lefts, west of a broken side mirror           |
+| 739 | The players' left hand on local lefts, west of the broken side mirror         |
+| 740 | The players' left hand on the local left west of a broken side mirror         |
+| 741 | The players' left hand on the local left west of the broken side mirror       |
+| 742 | The players' left hand on the local left, west of a broken side mirror        |
+| 743 | The players' left hand on the local left, west of the broken side mirror      |
+| 744 | The players' left hand on the local lefts west of a broken side mirror        |
+| 745 | The players' left hand on the local lefts west of the broken side mirror      |
+| 746 | The players' left hand on the local lefts west of the broken side mirrors     |
+| 747 | The players' left hand on the local lefts, west of a broken side mirror       |
+| 748 | The players' left hand on the local lefts, west of the broken side mirror     |
+| 749 | The players' left hand on the local lefts, west of the broken side mirrors    |
+| 750 | The players' left hand west of a broken side mirror on a local left           |
+| 751 | The players' left hand west of a broken side mirror on a local left.          |
+| 752 | The players' left hand west of a broken side mirror on local lefts            |
+| 753 | The players' left hand west of a broken side mirror on local lefts.           |
+| 754 | The players' left hand west of a broken side mirror on the local left         |
+| 755 | The players' left hand west of a broken side mirror on the local left.        |
+| 756 | The players' left hand west of a broken side mirror on the local lefts        |
+| 757 | The players' left hand west of a broken side mirror on the local lefts.       |
+| 758 | The players' left hand west of a broken side mirror, on the local lefts       |
+| 759 | The players' left hand west of the broken side mirror on a local left         |
+| 760 | The players' left hand west of the broken side mirror on a local left.        |
+| 761 | The players' left hand west of the broken side mirror on local lefts          |
+| 762 | The players' left hand west of the broken side mirror on local lefts.         |
+| 763 | The players' left hand west of the broken side mirror on the local left       |
+| 764 | The players' left hand west of the broken side mirror on the local left.      |
+| 765 | The players' left hand west of the broken side mirror on the local lefts      |
+| 766 | The players' left hand west of the broken side mirror on the local lefts.     |
+| 767 | The players' left hand west of the broken side mirror, on the local lefts     |
+| 768 | The players' left hand west of the broken side mirrors on a local left        |
+| 769 | The players' left hand west of the broken side mirrors on a local left.       |
+| 770 | The players' left hand west of the broken side mirrors on local lefts         |
+| 771 | The players' left hand west of the broken side mirrors on local lefts.        |
+| 772 | The players' left hand west of the broken side mirrors on the local lefts     |
+| 773 | The players' left hand west of the broken side mirrors on the local lefts.    |
+| 774 | The players' left hand west of the broken side mirrors, on the local lefts    |
+| 775 | The players' left hand west of the sides broken mirror, on the local lefts    |
+| 776 | The players' left hand west of the sides broken mirrors, on the local lefts   |
+| 777 | The players' left hand, on a local left west of a broken side mirror          |
+| 778 | The players' left hand, on a local left west of the broken side mirror        |
+| 779 | The players' left hand, on a local left west of the broken side mirrors       |
+| 780 | The players' left hand, on local lefts west of a broken side mirror           |
+| 781 | The players' left hand, on local lefts west of the broken side mirror         |
+| 782 | The players' left hand, on local lefts west of the broken side mirrors        |
+| 783 | The players' left hand, on the local left west of a broken side mirror        |
+| 784 | The players' left hand, on the local left west of the broken side mirror      |
+| 785 | The players' left hand, on the local left west of the broken side mirrors     |
+| 786 | The players' left hand, on the local lefts west of a broken side mirror       |
+| 787 | The players' left hand, on the local lefts west of broken side mirrors        |
+| 788 | The players' left hand, on the local lefts west of the broken side mirror     |
+| 789 | The players' left hand, on the local lefts west of the broken side mirrors    |
+| 790 | The players' left hand, on the local lefts west of the broken side mirrors.   |
+| 791 | The players' left hand, on the local lefts west of the sides broken mirror    |
+| 792 | The players' left hand, on the local lefts west of the sides broken mirrors   |
+| 793 | The players' left hand, on the local lefts west of the sides broken mirrors.  |
+| 794 | The players' left hands on a local left west of a broken side mirror          |
+| 795 | The players' left hands on a local left west of a broken side mirror.         |
+| 796 | The players' left hands on a local left west of a sides broken mirror         |
+| 797 | The players' left hands on a local left west of broken side mirrors           |
+| 798 | The players' left hands on a local left west of broken side mirrors.          |
+| 799 | The players' left hands on a local left west of the broken side mirror        |
+| 800 | The players' left hands on a local left west of the broken side mirror.       |
+| 801 | The players' left hands on a local left west of the broken side mirrors       |
+| 802 | The players' left hands on a local left west of the broken side mirrors.      |
+| 803 | The players' left hands on a local left west of the sides broken mirror       |
+| 804 | The players' left hands on a local left west of the sides broken mirror.      |
+| 805 | The players' left hands on a local left west of the sides broken mirrors      |
+| 806 | The players' left hands on a local left west of the sides broken mirrors.     |
+| 807 | The players' left hands on a local left, west of a broken side mirror         |
+| 808 | The players' left hands on a local left, west of the broken side mirror       |
+| 809 | The players' left hands on a local left, west of the broken side mirrors      |
+| 810 | The players' left hands on local lefts west of a broken side mirror           |
+| 811 | The players' left hands on local lefts west of a broken side mirror.          |
+| 812 | The players' left hands on local lefts west of a sides broken mirror          |
+| 813 | The players' left hands on local lefts west of a sides broken mirror.         |
+| 814 | The players' left hands on local lefts west of broken side mirrors            |
+| 815 | The players' left hands on local lefts west of broken side mirrors.           |
+| 816 | The players' left hands on local lefts west of the broken side mirror         |
+| 817 | The players' left hands on local lefts west of the broken side mirror.        |
+| 818 | The players' left hands on local lefts west of the broken side mirrors        |
+| 819 | The players' left hands on local lefts west of the broken side mirrors.       |
+| 820 | The players' left hands on local lefts west of the sides broken mirror        |
+| 821 | The players' left hands on local lefts west of the sides broken mirror.       |
+| 822 | The players' left hands on local lefts west of the sides broken mirrors       |
+| 823 | The players' left hands on local lefts west of the sides broken mirrors.      |
+| 824 | The players' left hands on local lefts, west of a broken side mirror          |
+| 825 | The players' left hands on local lefts, west of the broken side mirror        |
+| 826 | The players' left hands on local lefts, west of the broken side mirrors       |
+| 827 | The players' left hands on the local left west of a broken side mirror        |
+| 828 | The players' left hands on the local left west of broken side mirrors         |
+| 829 | The players' left hands on the local left west of the broken side mirror      |
+| 830 | The players' left hands on the local left west of the broken side mirrors     |
+| 831 | The players' left hands on the local left west of the broken side mirrors.    |
+| 832 | The players' left hands on the local left west of the sides broken mirror     |
+| 833 | The players' left hands on the local left west of the sides broken mirrors    |
+| 834 | The players' left hands on the local left west of the sides broken mirrors.   |
+| 835 | The players' left hands on the local left, west of a broken side mirror       |
+| 836 | The players' left hands on the local left, west of the broken side mirror     |
+| 837 | The players' left hands on the local lefts west of a broken side mirror       |
+| 838 | The players' left hands on the local lefts west of a broken side mirror.      |
+| 839 | The players' left hands on the local lefts west of a sides broken mirror      |
+| 840 | The players' left hands on the local lefts west of broken side mirrors        |
+| 841 | The players' left hands on the local lefts west of broken side mirrors.       |
+| 842 | The players' left hands on the local lefts west of the broken side mirror     |
+| 843 | The players' left hands on the local lefts west of the broken side mirror.    |
+| 844 | The players' left hands on the local lefts west of the broken side mirrors    |
+| 845 | The players' left hands on the local lefts west of the broken side mirrors.   |
+| 846 | The players' left hands on the local lefts west of the sides broken mirror    |
+| 847 | The players' left hands on the local lefts west of the sides broken mirror.   |
+| 848 | The players' left hands on the local lefts west of the sides broken mirrors   |
+| 849 | The players' left hands on the local lefts west of the sides broken mirrors.  |
+| 850 | The players' left hands on the local lefts, west of a broken side mirror      |
+| 851 | The players' left hands on the local lefts, west of the broken side mirror    |
+| 852 | The players' left hands on the local lefts, west of the broken side mirrors   |
+| 853 | The players' left hands west of a broken side mirror on a local left          |
+| 854 | The players' left hands west of a broken side mirror on a local left.         |
+| 855 | The players' left hands west of a broken side mirror on local lefts           |
+| 856 | The players' left hands west of a broken side mirror on local lefts.          |
+| 857 | The players' left hands west of a broken side mirror on the local left        |
+| 858 | The players' left hands west of a broken side mirror on the local left.       |
+| 859 | The players' left hands west of a broken side mirror on the local lefts       |
+| 860 | The players' left hands west of a broken side mirror on the local lefts.      |
+| 861 | The players' left hands west of a broken side mirror, on the local left       |
+| 862 | The players' left hands west of a broken side mirror, on the local lefts      |
+| 863 | The players' left hands west of a sides broken mirror on a local left         |
+| 864 | The players' left hands west of a sides broken mirror on a local left.        |
+| 865 | The players' left hands west of a sides broken mirror on local lefts          |
+| 866 | The players' left hands west of a sides broken mirror on local lefts.         |
+| 867 | The players' left hands west of a sides broken mirror on the local left.      |
+| 868 | The players' left hands west of a sides broken mirror on the local lefts      |
+| 869 | The players' left hands west of a sides broken mirror on the local lefts.     |
+| 870 | The players' left hands west of a sides broken mirror, on the local lefts     |
+| 871 | The players' left hands west of broken side mirrors on a local left           |
+| 872 | The players' left hands west of broken side mirrors on a local left.          |
+| 873 | The players' left hands west of broken side mirrors on local lefts            |
+| 874 | The players' left hands west of broken side mirrors on local lefts.           |
+| 875 | The players' left hands west of broken side mirrors on the local left         |
+| 876 | The players' left hands west of broken side mirrors on the local left.        |
+| 877 | The players' left hands west of broken side mirrors on the local lefts        |
+| 878 | The players' left hands west of broken side mirrors on the local lefts.       |
+| 879 | The players' left hands west of the broken side mirror on a local left        |
+| 880 | The players' left hands west of the broken side mirror on a local left.       |
+| 881 | The players' left hands west of the broken side mirror on local lefts         |
+| 882 | The players' left hands west of the broken side mirror on local lefts.        |
+| 883 | The players' left hands west of the broken side mirror on the local left      |
+| 884 | The players' left hands west of the broken side mirror on the local left.     |
+| 885 | The players' left hands west of the broken side mirror on the local lefts     |
+| 886 | The players' left hands west of the broken side mirror on the local lefts.    |
+| 887 | The players' left hands west of the broken side mirror, on the local lefts    |
+| 888 | The players' left hands west of the broken side mirrors on a local left       |
+| 889 | The players' left hands west of the broken side mirrors on a local left.      |
+| 890 | The players' left hands west of the broken side mirrors on local lefts        |
+| 891 | The players' left hands west of the broken side mirrors on local lefts.       |
+| 892 | The players' left hands west of the broken side mirrors on the local left     |
+| 893 | The players' left hands west of the broken side mirrors on the local left.    |
+| 894 | The players' left hands west of the broken side mirrors on the local lefts    |
+| 895 | The players' left hands west of the broken side mirrors on the local lefts.   |
+| 896 | The players' left hands west of the broken side mirrors, on the local lefts   |
+| 897 | The players' left hands west of the sides broken mirror on a local left       |
+| 898 | The players' left hands west of the sides broken mirror on a local left.      |
+| 899 | The players' left hands west of the sides broken mirror on local lefts        |
+| 900 | The players' left hands west of the sides broken mirror on local lefts.       |
+| 901 | The players' left hands west of the sides broken mirror on the local left     |
+| 902 | The players' left hands west of the sides broken mirror on the local left.    |
+| 903 | The players' left hands west of the sides broken mirror on the local lefts    |
+| 904 | The players' left hands west of the sides broken mirror on the local lefts.   |
+| 905 | The players' left hands west of the sides broken mirror, on the local lefts   |
+| 906 | The players' left hands west of the sides broken mirrors on a local left      |
+| 907 | The players' left hands west of the sides broken mirrors on a local left.     |
+| 908 | The players' left hands west of the sides broken mirrors on local lefts       |
+| 909 | The players' left hands west of the sides broken mirrors on local lefts.      |
+| 910 | The players' left hands west of the sides broken mirrors on the local left    |
+| 911 | The players' left hands west of the sides broken mirrors on the local left.   |
+| 912 | The players' left hands west of the sides broken mirrors on the local lefts   |
+| 913 | The players' left hands west of the sides broken mirrors on the local lefts.  |
+| 914 | The players' left hands west of the sides broken mirrors, on the local lefts  |
+| 915 | The players' left hands, on a local left west of a broken side mirror         |
+| 916 | The players' left hands, on a local left west of broken side mirrors          |
+| 917 | The players' left hands, on a local left west of the broken side mirror       |
+| 918 | The players' left hands, on a local left west of the broken side mirrors      |
+| 919 | The players' left hands, on a local left west of the broken side mirrors.     |
+| 920 | The players' left hands, on a local left west of the sides broken mirrors     |
+| 921 | The players' left hands, on local lefts west of a broken side mirror          |
+| 922 | The players' left hands, on local lefts west of broken side mirrors           |
+| 923 | The players' left hands, on local lefts west of the broken side mirror        |
+| 924 | The players' left hands, on local lefts west of the broken side mirrors       |
+| 925 | The players' left hands, on local lefts west of the sides broken mirrors      |
+| 926 | The players' left hands, on the local left west of a broken side mirror       |
+| 927 | The players' left hands, on the local left west of broken side mirrors        |
+| 928 | The players' left hands, on the local left west of the broken side mirror     |
+| 929 | The players' left hands, on the local left west of the broken side mirrors    |
+| 930 | The players' left hands, on the local left west of the sides broken mirrors   |
+| 931 | The players' left hands, on the local lefts west of a broken side mirror      |
+| 932 | The players' left hands, on the local lefts west of a broken side mirror.     |
+| 933 | The players' left hands, on the local lefts west of a sides broken mirror     |
+| 934 | The players' left hands, on the local lefts west of broken side mirrors       |
+| 935 | The players' left hands, on the local lefts west of broken side mirrors.      |
+| 936 | The players' left hands, on the local lefts west of the broken side mirror    |
+| 937 | The players' left hands, on the local lefts west of the broken side mirror.   |
+| 938 | The players' left hands, on the local lefts west of the broken side mirrors   |
+| 939 | The players' left hands, on the local lefts west of the broken side mirrors.  |
+| 940 | The players' left hands, on the local lefts west of the sides broken mirror   |
+| 941 | The players' left hands, on the local lefts west of the sides broken mirrors  |
+| 942 | The players' left hands, on the local lefts west of the sides broken mirrors. |
++-----+-------------------------------------------------------------------------------+
+

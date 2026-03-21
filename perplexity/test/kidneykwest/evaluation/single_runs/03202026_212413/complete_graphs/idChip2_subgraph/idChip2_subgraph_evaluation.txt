@@ -1,0 +1,474 @@
+GRAPH NAME: idChip2_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 240   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 6     |
+| Nodes Covered                   | 6     |
+| Nodes Included                  | 6     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 5     |
+| Edges Included                  | 5     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------------+
+|                             GOLD OUTPUTS                             |
++---------------------------------------------------------+------------+
+| Gold Output                                             | Generated? |
++---------------------------------------------------------+------------+
+| the salty potato chip west of the unknown orange carrot | True       |
++---------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idChip2   | True         | True          | Covered          | Included          |
+| idpotato  | True         | True          | Covered          | Included          |
+| salty     | True         | True          | Covered          | Included          |
+| idCarrot1 | True         | True          | Covered          | Included          |
+| orange    | True         | True          | Covered          | Included          |
+| true      | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                         |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                           | Parent    | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| idChip2_prop_idMaterial        | idChip2   | idpotato  | True         | True          | Covered          | Included          |
+| idChip2_prop_idSaltiness       | idChip2   | salty     | True         | True          | Covered          | Included          |
+| isWestOf                       | idChip2   | idCarrot1 | True         | True          | Covered          | Included          |
+| idCarrot1_prop_idColor         | idCarrot1 | orange    | True         | True          | Covered          | Included          |
+| idCarrot1_prop_idUnknownObject | idCarrot1 | true      | True         | True          | Covered          | Included          |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h388                                                                      |
+|               |   INDEX: x387                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h430 ARG0: e427 ARG1: u428 ARG2: x429 ]               |
+|               |           [ def_implicit_q LBL: h441 ARG0: x438 RSTR: h439 BODY: h440 ]          |
+|               |           [ _west_a_1 LBL: h426 ARG0: i423 ARG1: x424 ARG2: u425 ]               |
+|               |           [ def_udef_a_q LBL: h436 ARG0: x433 RSTR: h434 BODY: h435 ]            |
+|               |           [ _un-_a_neg LBL: h422 ARG0: i420 ARG1: e421 ]                         |
+|               |           [ _know_v_1 LBL: h419 ARG0: e416 [ e PERF: - ] ARG1: u417 ARG2: i418 ] |
+|               |           [ _orange_a_1 LBL: h407 ARG0: i405 ARG1: i406 ]                        |
+|               |           [ _carrot_n_1 LBL: h404 ARG0: x403 ]                                   |
+|               |           [ place_n LBL: h432 ARG0: x431 ]                                       |
+|               |           [ _salty_a_1 LBL: h402 ARG0: e400 ARG1: u401 ]                         |
+|               |           [ compound LBL: h399 ARG0: e396 [ e PROG: - ] ARG1: u397 ARG2: u398 ]  |
+|               |           [ udef_q LBL: h394 ARG0: x391 RSTR: h392 BODY: h393 ]                  |
+|               |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|               |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|               |   HCONS: < h434 qeq h404 h439 qeq h432 h392 qeq h390 >                           |
+|               |   ICONS: < e416 topic i418 >                                                     |
+|               |   EQS: < h422 eq h419 e421 eq e416 h407 eq h404 i406 eq x403 h419 eq h404 i418   |
+|               | eq x403 x433 eq x403 h426 eq h437 u425 eq x433 h426 eq h432 x424 eq x431 x438 eq |
+|               | x431 h430 eq h442 x429 eq x438 x391 eq x389 h399 eq h395 u398 eq x391 h399 eq    |
+|               | h388 u397 eq x387 h402 eq h388 u401 eq x387 h430 eq h388 u428 eq x387 > ]        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h388                                                                      |
+|               |   INDEX: x387                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h388 ARG0: e427 ARG1: x387 ARG2: x424 ]               |
+|               |           [ def_implicit_q LBL: h441 ARG0: x424 RSTR: h439 BODY: h440 ]          |
+|               |           [ _west_a_1 LBL: h426 ARG0: i423 ARG1: x424 ARG2: x403 ]               |
+|               |           [ def_udef_a_q LBL: h436 ARG0: x403 RSTR: h434 BODY: h435 ]            |
+|               |           [ _un-_a_neg LBL: h404 ARG0: i420 ARG1: e416 [ e PERF: - ] ]           |
+|               |           [ _know_v_1 LBL: h404 ARG0: e416 ARG1: u417 ARG2: x403 ]               |
+|               |           [ _orange_a_1 LBL: h404 ARG0: i405 ARG1: x403 ]                        |
+|               |           [ _carrot_n_1 LBL: h404 ARG0: x403 ]                                   |
+|               |           [ place_n LBL: h426 ARG0: x424 ]                                       |
+|               |           [ _salty_a_1 LBL: h388 ARG0: e400 ARG1: x387 ]                         |
+|               |           [ compound LBL: h388 ARG0: e396 [ e PROG: - ] ARG1: x387 ARG2: x389 ]  |
+|               |           [ udef_q LBL: h394 ARG0: x389 RSTR: h392 BODY: h393 ]                  |
+|               |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|               |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|               |   HCONS: < h434 qeq h404 h439 qeq h426 h392 qeq h390 >                           |
+|               |   ICONS: < e416 topic x403 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h451                                                                      |
+|               |   INDEX: e448                                                                    |
+|               |   RELS: < [ unknown LBL: h447 ARG: x387 ARG0: e448 ]                             |
+|               |           [ def_udef_a_q LBL: h446 ARG0: x387 RSTR: h444 BODY: h445 ]            |
+|               |           [ loc_nonsp LBL: h388 ARG0: e427 ARG1: x387 ARG2: x424 ]               |
+|               |           [ def_implicit_q LBL: h441 ARG0: x424 RSTR: h439 BODY: h440 ]          |
+|               |           [ _west_a_1 LBL: h426 ARG0: i423 ARG1: x424 ARG2: x403 ]               |
+|               |           [ def_udef_a_q LBL: h436 ARG0: x403 RSTR: h434 BODY: h435 ]            |
+|               |           [ _un-_a_neg LBL: h404 ARG0: i420 ARG1: e416 [ e PERF: - ] ]           |
+|               |           [ _know_v_1 LBL: h404 ARG0: e416 ARG1: u417 ARG2: x403 ]               |
+|               |           [ _orange_a_1 LBL: h404 ARG0: i405 ARG1: x403 ]                        |
+|               |           [ _carrot_n_1 LBL: h404 ARG0: x403 ]                                   |
+|               |           [ place_n LBL: h426 ARG0: x424 ]                                       |
+|               |           [ _salty_a_1 LBL: h388 ARG0: e400 ARG1: x387 ]                         |
+|               |           [ compound LBL: h388 ARG0: e396 [ e PROG: - ] ARG1: x387 ARG2: x389 ]  |
+|               |           [ udef_q LBL: h394 ARG0: x389 RSTR: h392 BODY: h393 ]                  |
+|               |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|               |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|               |   HCONS: < h434 qeq h404 h439 qeq h426 h392 qeq h390 h444 qeq h388 h451 qeq h447 |
+|               | >                                                                                |
+|               |   ICONS: < e416 topic x403 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                   |
++-----------+-----------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                      |
++-----------+-----------------------------------------------------------------------+
+| idChip2   | [ TOP: h388                                                           |
+|           |   INDEX: x387                                                         |
+|           |   RELS: < [ _chip_n_1 LBL: h388 ARG0: x387 ] > ]                      |
++-----------+-----------------------------------------------------------------------+
+| idpotato  | [ TOP: h390                                                           |
+|           |   INDEX: x389                                                         |
+|           |   RELS: < [ _potato_n_1 LBL: h390 ARG0: x389 ] > ]                    |
++-----------+-----------------------------------------------------------------------+
+| salty     | [ TOP: h402                                                           |
+|           |   INDEX: e400                                                         |
+|           |   RELS: < [ _salty_a_1 LBL: h402 ARG0: e400 ARG1: u401 ] >            |
+|           |   SLOTS: < ARG1: u401 > ]                                             |
++-----------+-----------------------------------------------------------------------+
+| idCarrot1 | [ TOP: h404                                                           |
+|           |   INDEX: x403                                                         |
+|           |   RELS: < [ _carrot_n_1 LBL: h404 ARG0: x403 ] > ]                    |
++-----------+-----------------------------------------------------------------------+
+| orange    | [ TOP: h407                                                           |
+|           |   INDEX: i405                                                         |
+|           |   RELS: < [ _orange_a_1 LBL: h407 ARG0: i405 ARG1: i406 ] >           |
+|           |   SLOTS: < ARG1: i406 > ]                                             |
++-----------+-----------------------------------------------------------------------+
+| true      | [ TOP: h411                                                           |
+|           |   INDEX: e408                                                         |
+|           |   RELS: < [ _true_a_of LBL: h411 ARG0: e408 ARG1: u409 ARG2: u410 ] > |
+|           |   SLOTS: < ARG1: u409 ARG2: u410 > ]                                  |
++-----------+-----------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                               |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| Edge                           | Parent    | Child     | Generated SEMENT                                                                 |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idChip2_prop_idMaterial        | idChip2   | idpotato  | [ TOP: h388                                                                      |
+|                                |           |           |   INDEX: x387                                                                    |
+|                                |           |           |   RELS: < [ compound LBL: h399 ARG0: e396 [ e PROG: - ] ARG1: u397 ARG2: u398 ]  |
+|                                |           |           |           [ udef_q LBL: h394 ARG0: x391 RSTR: h392 BODY: h393 ]                  |
+|                                |           |           |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|                                |           |           |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|                                |           |           |   HCONS: < h392 qeq h390 >                                                       |
+|                                |           |           |   EQS: < x391 eq x389 h399 eq h395 u398 eq x391 h399 eq h388 u397 eq x387 > ]    |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idChip2_prop_idSaltiness       | idChip2   | salty     | [ TOP: h388                                                                      |
+|                                |           |           |   INDEX: x387                                                                    |
+|                                |           |           |   RELS: < [ _salty_a_1 LBL: h402 ARG0: e400 ARG1: u401 ]                         |
+|                                |           |           |           [ compound LBL: h399 ARG0: e396 [ e PROG: - ] ARG1: u397 ARG2: u398 ]  |
+|                                |           |           |           [ udef_q LBL: h394 ARG0: x391 RSTR: h392 BODY: h393 ]                  |
+|                                |           |           |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|                                |           |           |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|                                |           |           |   HCONS: < h392 qeq h390 >                                                       |
+|                                |           |           |   EQS: < x391 eq x389 h399 eq h395 u398 eq x391 h399 eq h388 u397 eq x387 h402   |
+|                                |           |           | eq h388 u401 eq x387 > ]                                                         |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| isWestOf                       | idChip2   | idCarrot1 | [ TOP: h388                                                                      |
+|                                |           |           |   INDEX: x387                                                                    |
+|                                |           |           |   RELS: < [ loc_nonsp LBL: h430 ARG0: e427 ARG1: u428 ARG2: x429 ]               |
+|                                |           |           |           [ def_implicit_q LBL: h441 ARG0: x438 RSTR: h439 BODY: h440 ]          |
+|                                |           |           |           [ _west_a_1 LBL: h426 ARG0: i423 ARG1: x424 ARG2: u425 ]               |
+|                                |           |           |           [ def_udef_a_q LBL: h436 ARG0: x433 RSTR: h434 BODY: h435 ]            |
+|                                |           |           |           [ _un-_a_neg LBL: h422 ARG0: i420 ARG1: e421 ]                         |
+|                                |           |           |           [ _know_v_1 LBL: h419 ARG0: e416 [ e PERF: - ] ARG1: u417 ARG2: i418 ] |
+|                                |           |           |           [ _orange_a_1 LBL: h407 ARG0: i405 ARG1: i406 ]                        |
+|                                |           |           |           [ _carrot_n_1 LBL: h404 ARG0: x403 ]                                   |
+|                                |           |           |           [ place_n LBL: h432 ARG0: x431 ]                                       |
+|                                |           |           |           [ _salty_a_1 LBL: h402 ARG0: e400 ARG1: u401 ]                         |
+|                                |           |           |           [ compound LBL: h399 ARG0: e396 [ e PROG: - ] ARG1: u397 ARG2: u398 ]  |
+|                                |           |           |           [ udef_q LBL: h394 ARG0: x391 RSTR: h392 BODY: h393 ]                  |
+|                                |           |           |           [ _potato_n_1 LBL: h390 ARG0: x389 ]                                   |
+|                                |           |           |           [ _chip_n_1 LBL: h388 ARG0: x387 ] >                                   |
+|                                |           |           |   HCONS: < h434 qeq h404 h439 qeq h432 h392 qeq h390 >                           |
+|                                |           |           |   ICONS: < e416 topic i418 >                                                     |
+|                                |           |           |   EQS: < h422 eq h419 e421 eq e416 h407 eq h404 i406 eq x403 h419 eq h404 i418   |
+|                                |           |           | eq x403 x433 eq x403 h426 eq h437 u425 eq x433 h426 eq h432 x424 eq x431 x438 eq |
+|                                |           |           | x431 h430 eq h442 x429 eq x438 x391 eq x389 h399 eq h395 u398 eq x391 h399 eq    |
+|                                |           |           | h388 u397 eq x387 h402 eq h388 u401 eq x387 h430 eq h388 u428 eq x387 > ]        |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idCarrot1_prop_idColor         | idCarrot1 | orange    | [ TOP: h404                                                                      |
+|                                |           |           |   INDEX: x403                                                                    |
+|                                |           |           |   RELS: < [ _orange_a_1 LBL: h407 ARG0: i405 ARG1: i406 ]                        |
+|                                |           |           |           [ _carrot_n_1 LBL: h404 ARG0: x403 ] >                                 |
+|                                |           |           |   EQS: < h407 eq h404 i406 eq x403 > ]                                           |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idCarrot1_prop_idUnknownObject | idCarrot1 | true      | [ TOP: h404                                                                      |
+|                                |           |           |   INDEX: x403                                                                    |
+|                                |           |           |   RELS: < [ _un-_a_neg LBL: h422 ARG0: i420 ARG1: e421 ]                         |
+|                                |           |           |           [ _know_v_1 LBL: h419 ARG0: e416 [ e PERF: - ] ARG1: u417 ARG2: i418 ] |
+|                                |           |           |           [ _orange_a_1 LBL: h407 ARG0: i405 ARG1: i406 ]                        |
+|                                |           |           |           [ _carrot_n_1 LBL: h404 ARG0: x403 ] >                                 |
+|                                |           |           |   ICONS: < e416 topic i418 >                                                     |
+|                                |           |           |   EQS: < h422 eq h419 e421 eq e416 h407 eq h404 i406 eq x403 h419 eq h404 i418   |
+|                                |           |           | eq x403 > ]                                                                      |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------+
+|                       GENERATED ENGLISH TEXT                       |
++-----+--------------------------------------------------------------+
+| #   | Generated Text                                               |
++-----+--------------------------------------------------------------+
+| 1   | A potatoes salty chip west of an orange unknown carrot       |
+| 2   | A potatoes salty chip west of an orange unknown carrot.      |
+| 3   | A potatoes salty chip west of an unknown orange carrot       |
+| 4   | A potatoes salty chip west of an unknown orange carrot.      |
+| 5   | A potatoes salty chip west of orange unknown carrots         |
+| 6   | A potatoes salty chip west of orange unknown carrots.        |
+| 7   | A potatoes salty chip west of the orange unknown carrot      |
+| 8   | A potatoes salty chip west of the orange unknown carrot.     |
+| 9   | A potatoes salty chip west of the orange unknown carrots     |
+| 10  | A potatoes salty chip west of the orange unknown carrots.    |
+| 11  | A potatoes salty chip west of the unknown orange carrot      |
+| 12  | A potatoes salty chip west of the unknown orange carrot.     |
+| 13  | A potatoes salty chip west of the unknown orange carrots     |
+| 14  | A potatoes salty chip west of the unknown orange carrots.    |
+| 15  | A potatoes salty chip west of unknown orange carrots         |
+| 16  | A potatoes salty chip west of unknown orange carrots.        |
+| 17  | A potatoes salty chip, west of an orange unknown carrot      |
+| 18  | A potatoes salty chip, west of an unknown orange carrot      |
+| 19  | A potatoes salty chip, west of orange unknown carrots        |
+| 20  | A potatoes salty chip, west of the orange unknown carrot     |
+| 21  | A potatoes salty chip, west of the orange unknown carrots    |
+| 22  | A potatoes salty chip, west of the unknown orange carrot     |
+| 23  | A potatoes salty chip, west of the unknown orange carrots    |
+| 24  | A potatoes salty chip, west of unknown orange carrots        |
+| 25  | A salty potato chip west of an orange unknown carrot         |
+| 26  | A salty potato chip west of an orange unknown carrot.        |
+| 27  | A salty potato chip west of an unknown orange carrot         |
+| 28  | A salty potato chip west of an unknown orange carrot.        |
+| 29  | A salty potato chip west of orange unknown carrots           |
+| 30  | A salty potato chip west of orange unknown carrots.          |
+| 31  | A salty potato chip west of the orange unknown carrot        |
+| 32  | A salty potato chip west of the orange unknown carrot.       |
+| 33  | A salty potato chip west of the orange unknown carrots       |
+| 34  | A salty potato chip west of the orange unknown carrots.      |
+| 35  | A salty potato chip west of the unknown orange carrot        |
+| 36  | A salty potato chip west of the unknown orange carrot.       |
+| 37  | A salty potato chip west of the unknown orange carrots       |
+| 38  | A salty potato chip west of the unknown orange carrots.      |
+| 39  | A salty potato chip west of unknown orange carrots           |
+| 40  | A salty potato chip west of unknown orange carrots.          |
+| 41  | A salty potato chip, west of an orange unknown carrot        |
+| 42  | A salty potato chip, west of an unknown orange carrot        |
+| 43  | A salty potato chip, west of orange unknown carrots          |
+| 44  | A salty potato chip, west of the orange unknown carrot       |
+| 45  | A salty potato chip, west of the orange unknown carrots      |
+| 46  | A salty potato chip, west of the unknown orange carrot       |
+| 47  | A salty potato chip, west of the unknown orange carrots      |
+| 48  | A salty potato chip, west of unknown orange carrots          |
+| 49  | Potatoes salty chip west of an orange unknown carrot         |
+| 50  | Potatoes salty chip west of an orange unknown carrot.        |
+| 51  | Potatoes salty chip west of an unknown orange carrot         |
+| 52  | Potatoes salty chip west of an unknown orange carrot.        |
+| 53  | Potatoes salty chip west of orange unknown carrots           |
+| 54  | Potatoes salty chip west of orange unknown carrots.          |
+| 55  | Potatoes salty chip west of the orange unknown carrot        |
+| 56  | Potatoes salty chip west of the orange unknown carrot.       |
+| 57  | Potatoes salty chip west of the orange unknown carrots       |
+| 58  | Potatoes salty chip west of the orange unknown carrots.      |
+| 59  | Potatoes salty chip west of the unknown orange carrot        |
+| 60  | Potatoes salty chip west of the unknown orange carrot.       |
+| 61  | Potatoes salty chip west of the unknown orange carrots       |
+| 62  | Potatoes salty chip west of the unknown orange carrots.      |
+| 63  | Potatoes salty chip west of unknown orange carrots           |
+| 64  | Potatoes salty chip west of unknown orange carrots.          |
+| 65  | Potatoes salty chip, west of an orange unknown carrot        |
+| 66  | Potatoes salty chip, west of an unknown orange carrot        |
+| 67  | Potatoes salty chip, west of orange unknown carrots          |
+| 68  | Potatoes salty chip, west of the orange unknown carrot       |
+| 69  | Potatoes salty chip, west of the orange unknown carrots      |
+| 70  | Potatoes salty chip, west of the unknown orange carrot       |
+| 71  | Potatoes salty chip, west of the unknown orange carrots      |
+| 72  | Potatoes salty chip, west of unknown orange carrots          |
+| 73  | Potatoes salty chips west of an orange unknown carrot        |
+| 74  | Potatoes salty chips west of an orange unknown carrot.       |
+| 75  | Potatoes salty chips west of an unknown orange carrot        |
+| 76  | Potatoes salty chips west of an unknown orange carrot.       |
+| 77  | Potatoes salty chips west of orange unknown carrots          |
+| 78  | Potatoes salty chips west of orange unknown carrots.         |
+| 79  | Potatoes salty chips west of the orange unknown carrot       |
+| 80  | Potatoes salty chips west of the orange unknown carrot.      |
+| 81  | Potatoes salty chips west of the orange unknown carrots      |
+| 82  | Potatoes salty chips west of the orange unknown carrots.     |
+| 83  | Potatoes salty chips west of the unknown orange carrot       |
+| 84  | Potatoes salty chips west of the unknown orange carrot.      |
+| 85  | Potatoes salty chips west of the unknown orange carrots      |
+| 86  | Potatoes salty chips west of the unknown orange carrots.     |
+| 87  | Potatoes salty chips west of unknown orange carrots          |
+| 88  | Potatoes salty chips west of unknown orange carrots.         |
+| 89  | Potatoes salty chips, west of an orange unknown carrot       |
+| 90  | Potatoes salty chips, west of an unknown orange carrot       |
+| 91  | Potatoes salty chips, west of orange unknown carrots         |
+| 92  | Potatoes salty chips, west of the orange unknown carrot      |
+| 93  | Potatoes salty chips, west of the orange unknown carrots     |
+| 94  | Potatoes salty chips, west of the unknown orange carrot      |
+| 95  | Potatoes salty chips, west of the unknown orange carrots     |
+| 96  | Potatoes salty chips, west of unknown orange carrots         |
+| 97  | Salty potato chip west of an orange unknown carrot           |
+| 98  | Salty potato chip west of an orange unknown carrot.          |
+| 99  | Salty potato chip west of an unknown orange carrot           |
+| 100 | Salty potato chip west of an unknown orange carrot.          |
+| 101 | Salty potato chip west of orange unknown carrots             |
+| 102 | Salty potato chip west of orange unknown carrots.            |
+| 103 | Salty potato chip west of the orange unknown carrot          |
+| 104 | Salty potato chip west of the orange unknown carrot.         |
+| 105 | Salty potato chip west of the orange unknown carrots         |
+| 106 | Salty potato chip west of the orange unknown carrots.        |
+| 107 | Salty potato chip west of the unknown orange carrot          |
+| 108 | Salty potato chip west of the unknown orange carrot.         |
+| 109 | Salty potato chip west of the unknown orange carrots         |
+| 110 | Salty potato chip west of the unknown orange carrots.        |
+| 111 | Salty potato chip west of unknown orange carrots             |
+| 112 | Salty potato chip west of unknown orange carrots.            |
+| 113 | Salty potato chip, west of an orange unknown carrot          |
+| 114 | Salty potato chip, west of an unknown orange carrot          |
+| 115 | Salty potato chip, west of orange unknown carrots            |
+| 116 | Salty potato chip, west of the orange unknown carrot         |
+| 117 | Salty potato chip, west of the orange unknown carrots        |
+| 118 | Salty potato chip, west of the unknown orange carrot         |
+| 119 | Salty potato chip, west of the unknown orange carrots        |
+| 120 | Salty potato chip, west of unknown orange carrots            |
+| 121 | Salty potato chips west of an orange unknown carrot          |
+| 122 | Salty potato chips west of an orange unknown carrot.         |
+| 123 | Salty potato chips west of an unknown orange carrot          |
+| 124 | Salty potato chips west of an unknown orange carrot.         |
+| 125 | Salty potato chips west of orange unknown carrots            |
+| 126 | Salty potato chips west of orange unknown carrots.           |
+| 127 | Salty potato chips west of the orange unknown carrot         |
+| 128 | Salty potato chips west of the orange unknown carrot.        |
+| 129 | Salty potato chips west of the orange unknown carrots        |
+| 130 | Salty potato chips west of the orange unknown carrots.       |
+| 131 | Salty potato chips west of the unknown orange carrot         |
+| 132 | Salty potato chips west of the unknown orange carrot.        |
+| 133 | Salty potato chips west of the unknown orange carrots        |
+| 134 | Salty potato chips west of the unknown orange carrots.       |
+| 135 | Salty potato chips west of unknown orange carrots            |
+| 136 | Salty potato chips west of unknown orange carrots.           |
+| 137 | Salty potato chips, west of an orange unknown carrot         |
+| 138 | Salty potato chips, west of an unknown orange carrot         |
+| 139 | Salty potato chips, west of orange unknown carrots           |
+| 140 | Salty potato chips, west of the orange unknown carrot        |
+| 141 | Salty potato chips, west of the orange unknown carrots       |
+| 142 | Salty potato chips, west of the unknown orange carrot        |
+| 143 | Salty potato chips, west of the unknown orange carrots       |
+| 144 | Salty potato chips, west of unknown orange carrots           |
+| 145 | The potatoes salty chip west of an orange unknown carrot     |
+| 146 | The potatoes salty chip west of an orange unknown carrot.    |
+| 147 | The potatoes salty chip west of an unknown orange carrot     |
+| 148 | The potatoes salty chip west of an unknown orange carrot.    |
+| 149 | The potatoes salty chip west of orange unknown carrots       |
+| 150 | The potatoes salty chip west of orange unknown carrots.      |
+| 151 | The potatoes salty chip west of the orange unknown carrot    |
+| 152 | The potatoes salty chip west of the orange unknown carrot.   |
+| 153 | The potatoes salty chip west of the orange unknown carrots   |
+| 154 | The potatoes salty chip west of the orange unknown carrots.  |
+| 155 | The potatoes salty chip west of the unknown orange carrot    |
+| 156 | The potatoes salty chip west of the unknown orange carrot.   |
+| 157 | The potatoes salty chip west of the unknown orange carrots   |
+| 158 | The potatoes salty chip west of the unknown orange carrots.  |
+| 159 | The potatoes salty chip west of unknown orange carrots       |
+| 160 | The potatoes salty chip west of unknown orange carrots.      |
+| 161 | The potatoes salty chip, west of an orange unknown carrot    |
+| 162 | The potatoes salty chip, west of an unknown orange carrot    |
+| 163 | The potatoes salty chip, west of orange unknown carrots      |
+| 164 | The potatoes salty chip, west of the orange unknown carrot   |
+| 165 | The potatoes salty chip, west of the orange unknown carrots  |
+| 166 | The potatoes salty chip, west of the unknown orange carrot   |
+| 167 | The potatoes salty chip, west of the unknown orange carrots  |
+| 168 | The potatoes salty chip, west of unknown orange carrots      |
+| 169 | The potatoes salty chips west of an orange unknown carrot    |
+| 170 | The potatoes salty chips west of an orange unknown carrot.   |
+| 171 | The potatoes salty chips west of an unknown orange carrot    |
+| 172 | The potatoes salty chips west of an unknown orange carrot.   |
+| 173 | The potatoes salty chips west of orange unknown carrots      |
+| 174 | The potatoes salty chips west of orange unknown carrots.     |
+| 175 | The potatoes salty chips west of the orange unknown carrot   |
+| 176 | The potatoes salty chips west of the orange unknown carrot.  |
+| 177 | The potatoes salty chips west of the orange unknown carrots  |
+| 178 | The potatoes salty chips west of the orange unknown carrots. |
+| 179 | The potatoes salty chips west of the unknown orange carrot   |
+| 180 | The potatoes salty chips west of the unknown orange carrot.  |
+| 181 | The potatoes salty chips west of the unknown orange carrots  |
+| 182 | The potatoes salty chips west of the unknown orange carrots. |
+| 183 | The potatoes salty chips west of unknown orange carrots      |
+| 184 | The potatoes salty chips west of unknown orange carrots.     |
+| 185 | The potatoes salty chips, west of an orange unknown carrot   |
+| 186 | The potatoes salty chips, west of an unknown orange carrot   |
+| 187 | The potatoes salty chips, west of orange unknown carrots     |
+| 188 | The potatoes salty chips, west of the orange unknown carrot  |
+| 189 | The potatoes salty chips, west of the orange unknown carrots |
+| 190 | The potatoes salty chips, west of the unknown orange carrot  |
+| 191 | The potatoes salty chips, west of the unknown orange carrots |
+| 192 | The potatoes salty chips, west of unknown orange carrots     |
+| 193 | The salty potato chip west of an orange unknown carrot       |
+| 194 | The salty potato chip west of an orange unknown carrot.      |
+| 195 | The salty potato chip west of an unknown orange carrot       |
+| 196 | The salty potato chip west of an unknown orange carrot.      |
+| 197 | The salty potato chip west of orange unknown carrots         |
+| 198 | The salty potato chip west of orange unknown carrots.        |
+| 199 | The salty potato chip west of the orange unknown carrot      |
+| 200 | The salty potato chip west of the orange unknown carrot.     |
+| 201 | The salty potato chip west of the orange unknown carrots     |
+| 202 | The salty potato chip west of the orange unknown carrots.    |
+| 203 | The salty potato chip west of the unknown orange carrot      |
+| 204 | The salty potato chip west of the unknown orange carrot.     |
+| 205 | The salty potato chip west of the unknown orange carrots     |
+| 206 | The salty potato chip west of the unknown orange carrots.    |
+| 207 | The salty potato chip west of unknown orange carrots         |
+| 208 | The salty potato chip west of unknown orange carrots.        |
+| 209 | The salty potato chip, west of an orange unknown carrot      |
+| 210 | The salty potato chip, west of an unknown orange carrot      |
+| 211 | The salty potato chip, west of orange unknown carrots        |
+| 212 | The salty potato chip, west of the orange unknown carrot     |
+| 213 | The salty potato chip, west of the orange unknown carrots    |
+| 214 | The salty potato chip, west of the unknown orange carrot     |
+| 215 | The salty potato chip, west of the unknown orange carrots    |
+| 216 | The salty potato chip, west of unknown orange carrots        |
+| 217 | The salty potato chips west of an orange unknown carrot      |
+| 218 | The salty potato chips west of an orange unknown carrot.     |
+| 219 | The salty potato chips west of an unknown orange carrot      |
+| 220 | The salty potato chips west of an unknown orange carrot.     |
+| 221 | The salty potato chips west of orange unknown carrots        |
+| 222 | The salty potato chips west of orange unknown carrots.       |
+| 223 | The salty potato chips west of the orange unknown carrot     |
+| 224 | The salty potato chips west of the orange unknown carrot.    |
+| 225 | The salty potato chips west of the orange unknown carrots    |
+| 226 | The salty potato chips west of the orange unknown carrots.   |
+| 227 | The salty potato chips west of the unknown orange carrot     |
+| 228 | The salty potato chips west of the unknown orange carrot.    |
+| 229 | The salty potato chips west of the unknown orange carrots    |
+| 230 | The salty potato chips west of the unknown orange carrots.   |
+| 231 | The salty potato chips west of unknown orange carrots        |
+| 232 | The salty potato chips west of unknown orange carrots.       |
+| 233 | The salty potato chips, west of an orange unknown carrot     |
+| 234 | The salty potato chips, west of an unknown orange carrot     |
+| 235 | The salty potato chips, west of orange unknown carrots       |
+| 236 | The salty potato chips, west of the orange unknown carrot    |
+| 237 | The salty potato chips, west of the orange unknown carrots   |
+| 238 | The salty potato chips, west of the unknown orange carrot    |
+| 239 | The salty potato chips, west of the unknown orange carrots   |
+| 240 | The salty potato chips, west of unknown orange carrots       |
++-----+--------------------------------------------------------------+
+

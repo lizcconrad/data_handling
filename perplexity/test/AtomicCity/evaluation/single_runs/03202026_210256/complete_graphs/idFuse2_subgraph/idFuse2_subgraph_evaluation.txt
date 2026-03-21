@@ -1,0 +1,225 @@
+GRAPH NAME: idFuse2_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------+
+|                 GOLD OUTPUTS                 |
++---------------------------------+------------+
+| Gold Output                     | Generated? |
++---------------------------------+------------+
+| the blue fuse near the fuse box | True       |
++---------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idFuse2    | True         | True          | Covered          | Included          |
+| blue       | True         | True          | Covered          | Included          |
+| idFuseBox1 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------+
+|                                                    EDGE METRICS                                                   |
++----------------------+---------+------------+--------------+---------------+------------------+-------------------+
+| Edge                 | Parent  | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------+---------+------------+--------------+---------------+------------------+-------------------+
+| idFuse2_prop_idColor | idFuse2 | blue       | True         | True          | Covered          | Included          |
+| isNear               | idFuse2 | idFuseBox1 | True         | True          | Covered          | Included          |
++----------------------+---------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1139                                                                     |
+|               |   INDEX: x1138                                                                   |
+|               |   RELS: < [ _near_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: i1159 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|               | u1155 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _fuse_n_1 LBL: h1147 ARG0: x1146 ]                                   |
+|               |           [ _box_n_of LBL: h1145 ARG0: x1143 ARG1: i1144 ]                       |
+|               |           [ _blue_a_1 LBL: h1142 ARG0: i1140 ARG1: i1141 ]                       |
+|               |           [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] >                                 |
+|               |   HCONS: < h1149 qeq h1147 h1162 qeq h1145 >                                     |
+|               |   EQS: < x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq    |
+|               | x1143 x1161 eq x1143 h1160 eq h1165 i1159 eq x1161 h1142 eq h1139 i1141 eq x1138 |
+|               | h1160 eq h1139 u1158 eq x1138 > ]                                                |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1139                                                                     |
+|               |   INDEX: x1138                                                                   |
+|               |   RELS: < [ _near_p LBL: h1139 ARG0: e1157 ARG1: x1138 ARG2: x1143 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1143 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1145 ARG0: e1153 [ e PROG: - ] ARG1: x1143 ARG2:      |
+|               | x1146 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1146 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _fuse_n_1 LBL: h1147 ARG0: x1146 ]                                   |
+|               |           [ _box_n_of LBL: h1145 ARG0: x1143 ARG1: i1144 ]                       |
+|               |           [ _blue_a_1 LBL: h1139 ARG0: i1140 ARG1: x1138 ]                       |
+|               |           [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] >                                 |
+|               |   HCONS: < h1149 qeq h1147 h1162 qeq h1145 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1174                                                                     |
+|               |   INDEX: e1171                                                                   |
+|               |   RELS: < [ unknown LBL: h1170 ARG: x1138 ARG0: e1171 ]                          |
+|               |           [ def_udef_a_q LBL: h1169 ARG0: x1138 RSTR: h1167 BODY: h1168 ]        |
+|               |           [ _near_p LBL: h1139 ARG0: e1157 ARG1: x1138 ARG2: x1143 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1143 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1145 ARG0: e1153 [ e PROG: - ] ARG1: x1143 ARG2:      |
+|               | x1146 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1146 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _fuse_n_1 LBL: h1147 ARG0: x1146 ]                                   |
+|               |           [ _box_n_of LBL: h1145 ARG0: x1143 ARG1: i1144 ]                       |
+|               |           [ _blue_a_1 LBL: h1139 ARG0: i1140 ARG1: x1138 ]                       |
+|               |           [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] >                                 |
+|               |   HCONS: < h1149 qeq h1147 h1162 qeq h1145 h1167 qeq h1139 h1174 qeq h1170 > ]   |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------+
+|                                          NODE SEMENTS                                         |
++------------+----------------------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                                 |
++------------+----------------------------------------------------------------------------------+
+| idFuse2    | [ TOP: h1139                                                                     |
+|            |   INDEX: x1138                                                                   |
+|            |   RELS: < [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] > ]                               |
++------------+----------------------------------------------------------------------------------+
+| blue       | [ TOP: h1142                                                                     |
+|            |   INDEX: i1140                                                                   |
+|            |   RELS: < [ _blue_a_1 LBL: h1142 ARG0: i1140 ARG1: i1141 ] >                     |
+|            |   SLOTS: < ARG1: i1141 > ]                                                       |
++------------+----------------------------------------------------------------------------------+
+| idFuseBox1 | [ TOP: h1145                                                                     |
+|            |   INDEX: x1143                                                                   |
+|            |   RELS: < [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|            | u1155 ]                                                                          |
+|            |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|            |           [ _fuse_n_1 LBL: h1147 ARG0: x1146 ]                                   |
+|            |           [ _box_n_of LBL: h1145 ARG0: x1143 ARG1: i1144 ] >                     |
+|            |   HCONS: < h1149 qeq h1147 >                                                     |
+|            |   EQS: < x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq    |
+|            | x1143 >                                                                          |
+|            |   SLOTS: < ARG1: i1144 > ]                                                       |
++------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+|                                                          EDGE SEMENTS                                                          |
++----------------------+---------+------------+----------------------------------------------------------------------------------+
+| Edge                 | Parent  | Child      | Generated SEMENT                                                                 |
++----------------------+---------+------------+----------------------------------------------------------------------------------+
+| idFuse2_prop_idColor | idFuse2 | blue       | [ TOP: h1139                                                                     |
+|                      |         |            |   INDEX: x1138                                                                   |
+|                      |         |            |   RELS: < [ _blue_a_1 LBL: h1142 ARG0: i1140 ARG1: i1141 ]                       |
+|                      |         |            |           [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] >                                 |
+|                      |         |            |   EQS: < h1142 eq h1139 i1141 eq x1138 > ]                                       |
++----------------------+---------+------------+----------------------------------------------------------------------------------+
+| isNear               | idFuse2 | idFuseBox1 | [ TOP: h1139                                                                     |
+|                      |         |            |   INDEX: x1138                                                                   |
+|                      |         |            |   RELS: < [ _near_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: i1159 ]             |
+|                      |         |            |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|                      |         |            |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|                      |         |            | u1155 ]                                                                          |
+|                      |         |            |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|                      |         |            |           [ _fuse_n_1 LBL: h1147 ARG0: x1146 ]                                   |
+|                      |         |            |           [ _box_n_of LBL: h1145 ARG0: x1143 ARG1: i1144 ]                       |
+|                      |         |            |           [ _blue_a_1 LBL: h1142 ARG0: i1140 ARG1: i1141 ]                       |
+|                      |         |            |           [ _fuse_n_1 LBL: h1139 ARG0: x1138 ] >                                 |
+|                      |         |            |   HCONS: < h1149 qeq h1147 h1162 qeq h1145 >                                     |
+|                      |         |            |   EQS: < x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq    |
+|                      |         |            | x1143 x1161 eq x1143 h1160 eq h1165 i1159 eq x1161 h1142 eq h1139 i1141 eq x1138 |
+|                      |         |            | h1160 eq h1139 u1158 eq x1138 > ]                                                |
++----------------------+---------+------------+----------------------------------------------------------------------------------+
+
++------------------------------------------+
+|          GENERATED ENGLISH TEXT          |
++----+-------------------------------------+
+| #  | Generated Text                      |
++----+-------------------------------------+
+| 1  | A blue fuse near a fuse box         |
+| 2  | A blue fuse near a fuse box.        |
+| 3  | A blue fuse near fuse boxes         |
+| 4  | A blue fuse near fuse boxes.        |
+| 5  | A blue fuse near the fuse box       |
+| 6  | A blue fuse near the fuse box.      |
+| 7  | A blue fuse near the fuse boxes     |
+| 8  | A blue fuse near the fuse boxes.    |
+| 9  | A blue fuse, near a fuse box        |
+| 10 | A blue fuse, near fuse boxes        |
+| 11 | A blue fuse, near the fuse box      |
+| 12 | A blue fuse, near the fuse boxes    |
+| 13 | Blue fuse near a fuse box           |
+| 14 | Blue fuse near a fuse box.          |
+| 15 | Blue fuse near fuse boxes           |
+| 16 | Blue fuse near fuse boxes.          |
+| 17 | Blue fuse near the fuse box         |
+| 18 | Blue fuse near the fuse box.        |
+| 19 | Blue fuse near the fuse boxes       |
+| 20 | Blue fuse near the fuse boxes.      |
+| 21 | Blue fuse, near a fuse box          |
+| 22 | Blue fuse, near fuse boxes          |
+| 23 | Blue fuse, near the fuse box        |
+| 24 | Blue fuse, near the fuse boxes      |
+| 25 | Blue fuses near a fuse box          |
+| 26 | Blue fuses near a fuse box.         |
+| 27 | Blue fuses near fuse boxes          |
+| 28 | Blue fuses near fuse boxes.         |
+| 29 | Blue fuses near the fuse box        |
+| 30 | Blue fuses near the fuse box.       |
+| 31 | Blue fuses near the fuse boxes      |
+| 32 | Blue fuses near the fuse boxes.     |
+| 33 | Blue fuses, near a fuse box         |
+| 34 | Blue fuses, near fuse boxes         |
+| 35 | Blue fuses, near the fuse box       |
+| 36 | Blue fuses, near the fuse boxes     |
+| 37 | The blue fuse near a fuse box       |
+| 38 | The blue fuse near a fuse box.      |
+| 39 | The blue fuse near fuse boxes       |
+| 40 | The blue fuse near fuse boxes.      |
+| 41 | The blue fuse near the fuse box     |
+| 42 | The blue fuse near the fuse box.    |
+| 43 | The blue fuse near the fuse boxes   |
+| 44 | The blue fuse near the fuse boxes.  |
+| 45 | The blue fuse, near a fuse box      |
+| 46 | The blue fuse, near fuse boxes      |
+| 47 | The blue fuse, near the fuse box    |
+| 48 | The blue fuse, near the fuse boxes  |
+| 49 | The blue fuses near a fuse box      |
+| 50 | The blue fuses near a fuse box.     |
+| 51 | The blue fuses near fuse boxes      |
+| 52 | The blue fuses near fuse boxes.     |
+| 53 | The blue fuses near the fuse box    |
+| 54 | The blue fuses near the fuse box.   |
+| 55 | The blue fuses near the fuse boxes  |
+| 56 | The blue fuses near the fuse boxes. |
+| 57 | The blue fuses, near a fuse box     |
+| 58 | The blue fuses, near fuse boxes     |
+| 59 | The blue fuses, near the fuse box   |
+| 60 | The blue fuses, near the fuse boxes |
++----+-------------------------------------+
+

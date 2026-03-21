@@ -1,0 +1,322 @@
+GRAPH NAME: idBackyard1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------+
+|                        GOLD OUTPUTS                        |
++-----------------------------------------------+------------+
+| Gold Output                                   | Generated? |
++-----------------------------------------------+------------+
+| the unknown backyard north of the metal table | True       |
++-----------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idBackyard1 | True         | True          | Covered          | Included          |
+| true        | True         | True          | Covered          | Included          |
+| idTable1    | True         | True          | Covered          | Included          |
+| idmetal     | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+|                                                           EDGE METRICS                                                          |
++----------------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent      | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+| idBackyard1_prop_idUnknownObject | idBackyard1 | true     | True         | True          | Covered          | Included          |
+| isNorthOf                        | idBackyard1 | idTable1 | True         | True          | Covered          | Included          |
+| idTable1_prop_idMaterial         | idTable1    | idmetal  | True         | True          | Covered          | Included          |
++----------------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2305                                                                     |
+|               |   INDEX: x2304                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2341 ARG0: e2338 ARG1: u2339 ARG2: x2340 ]           |
+|               |           [ def_implicit_q LBL: h2352 ARG0: x2349 RSTR: h2350 BODY: h2351 ]      |
+|               |           [ _north_a_1 LBL: h2337 ARG0: i2334 ARG1: x2335 ARG2: u2336 ]          |
+|               |           [ def_udef_a_q LBL: h2347 ARG0: x2344 RSTR: h2345 BODY: h2346 ]        |
+|               |           [ compound LBL: h2333 ARG0: e2330 [ e PROG: - ] ARG1: u2331 ARG2:      |
+|               | u2332 ]                                                                          |
+|               |           [ udef_q LBL: h2328 ARG0: x2325 RSTR: h2326 BODY: h2327 ]              |
+|               |           [ _metal_n_1 LBL: h2324 ARG0: x2323 ]                                  |
+|               |           [ _table_n_1 LBL: h2322 ARG0: x2321 ]                                  |
+|               |           [ place_n LBL: h2343 ARG0: x2342 ]                                     |
+|               |           [ _un-_a_neg LBL: h2320 ARG0: i2318 ARG1: e2319 ]                      |
+|               |           [ _know_v_1 LBL: h2317 ARG0: e2314 [ e PERF: - ] ARG1: u2315 ARG2:     |
+|               | i2316 ]                                                                          |
+|               |           [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] >                             |
+|               |   HCONS: < h2326 qeq h2324 h2345 qeq h2322 h2350 qeq h2343 >                     |
+|               |   ICONS: < e2314 topic i2316 >                                                   |
+|               |   EQS: < x2325 eq x2323 h2333 eq h2329 u2332 eq x2325 h2333 eq h2322 u2331 eq    |
+|               | x2321 x2344 eq x2321 h2337 eq h2348 u2336 eq x2344 h2337 eq h2343 x2335 eq x2342 |
+|               | x2349 eq x2342 h2341 eq h2353 x2340 eq x2349 h2320 eq h2317 e2319 eq e2314 h2317 |
+|               | eq h2305 i2316 eq x2304 h2341 eq h2305 u2339 eq x2304 > ]                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2305                                                                     |
+|               |   INDEX: x2304                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2305 ARG0: e2338 ARG1: x2304 ARG2: x2335 ]           |
+|               |           [ def_implicit_q LBL: h2352 ARG0: x2335 RSTR: h2350 BODY: h2351 ]      |
+|               |           [ _north_a_1 LBL: h2337 ARG0: i2334 ARG1: x2335 ARG2: x2321 ]          |
+|               |           [ def_udef_a_q LBL: h2347 ARG0: x2321 RSTR: h2345 BODY: h2346 ]        |
+|               |           [ compound LBL: h2322 ARG0: e2330 [ e PROG: - ] ARG1: x2321 ARG2:      |
+|               | x2323 ]                                                                          |
+|               |           [ udef_q LBL: h2328 ARG0: x2323 RSTR: h2326 BODY: h2327 ]              |
+|               |           [ _metal_n_1 LBL: h2324 ARG0: x2323 ]                                  |
+|               |           [ _table_n_1 LBL: h2322 ARG0: x2321 ]                                  |
+|               |           [ place_n LBL: h2337 ARG0: x2335 ]                                     |
+|               |           [ _un-_a_neg LBL: h2305 ARG0: i2318 ARG1: e2314 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2305 ARG0: e2314 ARG1: u2315 ARG2: x2304 ]           |
+|               |           [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] >                             |
+|               |   HCONS: < h2326 qeq h2324 h2345 qeq h2322 h2350 qeq h2337 >                     |
+|               |   ICONS: < e2314 topic x2304 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2362                                                                     |
+|               |   INDEX: e2359                                                                   |
+|               |   RELS: < [ unknown LBL: h2358 ARG: x2304 ARG0: e2359 ]                          |
+|               |           [ def_udef_a_q LBL: h2357 ARG0: x2304 RSTR: h2355 BODY: h2356 ]        |
+|               |           [ loc_nonsp LBL: h2305 ARG0: e2338 ARG1: x2304 ARG2: x2335 ]           |
+|               |           [ def_implicit_q LBL: h2352 ARG0: x2335 RSTR: h2350 BODY: h2351 ]      |
+|               |           [ _north_a_1 LBL: h2337 ARG0: i2334 ARG1: x2335 ARG2: x2321 ]          |
+|               |           [ def_udef_a_q LBL: h2347 ARG0: x2321 RSTR: h2345 BODY: h2346 ]        |
+|               |           [ compound LBL: h2322 ARG0: e2330 [ e PROG: - ] ARG1: x2321 ARG2:      |
+|               | x2323 ]                                                                          |
+|               |           [ udef_q LBL: h2328 ARG0: x2323 RSTR: h2326 BODY: h2327 ]              |
+|               |           [ _metal_n_1 LBL: h2324 ARG0: x2323 ]                                  |
+|               |           [ _table_n_1 LBL: h2322 ARG0: x2321 ]                                  |
+|               |           [ place_n LBL: h2337 ARG0: x2335 ]                                     |
+|               |           [ _un-_a_neg LBL: h2305 ARG0: i2318 ARG1: e2314 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2305 ARG0: e2314 ARG1: u2315 ARG2: x2304 ]           |
+|               |           [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] >                             |
+|               |   HCONS: < h2326 qeq h2324 h2345 qeq h2322 h2350 qeq h2337 h2355 qeq h2305 h2362 |
+|               | qeq h2358 >                                                                      |
+|               |   ICONS: < e2314 topic x2304 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------+
+|                                       NODE SEMENTS                                      |
++-------------+---------------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                          |
++-------------+---------------------------------------------------------------------------+
+| idBackyard1 | [ TOP: h2305                                                              |
+|             |   INDEX: x2304                                                            |
+|             |   RELS: < [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] > ]                    |
++-------------+---------------------------------------------------------------------------+
+| true        | [ TOP: h2309                                                              |
+|             |   INDEX: e2306                                                            |
+|             |   RELS: < [ _true_a_of LBL: h2309 ARG0: e2306 ARG1: u2307 ARG2: u2308 ] > |
+|             |   SLOTS: < ARG1: u2307 ARG2: u2308 > ]                                    |
++-------------+---------------------------------------------------------------------------+
+| idTable1    | [ TOP: h2322                                                              |
+|             |   INDEX: x2321                                                            |
+|             |   RELS: < [ _table_n_1 LBL: h2322 ARG0: x2321 ] > ]                       |
++-------------+---------------------------------------------------------------------------+
+| idmetal     | [ TOP: h2324                                                              |
+|             |   INDEX: x2323                                                            |
+|             |   RELS: < [ _metal_n_1 LBL: h2324 ARG0: x2323 ] > ]                       |
++-------------+---------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                 |
++----------------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| Edge                             | Parent      | Child    | Generated SEMENT                                                                 |
++----------------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| idBackyard1_prop_idUnknownObject | idBackyard1 | true     | [ TOP: h2305                                                                     |
+|                                  |             |          |   INDEX: x2304                                                                   |
+|                                  |             |          |   RELS: < [ _un-_a_neg LBL: h2320 ARG0: i2318 ARG1: e2319 ]                      |
+|                                  |             |          |           [ _know_v_1 LBL: h2317 ARG0: e2314 [ e PERF: - ] ARG1: u2315 ARG2:     |
+|                                  |             |          | i2316 ]                                                                          |
+|                                  |             |          |           [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] >                             |
+|                                  |             |          |   ICONS: < e2314 topic i2316 >                                                   |
+|                                  |             |          |   EQS: < h2320 eq h2317 e2319 eq e2314 h2317 eq h2305 i2316 eq x2304 > ]         |
++----------------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| isNorthOf                        | idBackyard1 | idTable1 | [ TOP: h2305                                                                     |
+|                                  |             |          |   INDEX: x2304                                                                   |
+|                                  |             |          |   RELS: < [ loc_nonsp LBL: h2341 ARG0: e2338 ARG1: u2339 ARG2: x2340 ]           |
+|                                  |             |          |           [ def_implicit_q LBL: h2352 ARG0: x2349 RSTR: h2350 BODY: h2351 ]      |
+|                                  |             |          |           [ _north_a_1 LBL: h2337 ARG0: i2334 ARG1: x2335 ARG2: u2336 ]          |
+|                                  |             |          |           [ def_udef_a_q LBL: h2347 ARG0: x2344 RSTR: h2345 BODY: h2346 ]        |
+|                                  |             |          |           [ compound LBL: h2333 ARG0: e2330 [ e PROG: - ] ARG1: u2331 ARG2:      |
+|                                  |             |          | u2332 ]                                                                          |
+|                                  |             |          |           [ udef_q LBL: h2328 ARG0: x2325 RSTR: h2326 BODY: h2327 ]              |
+|                                  |             |          |           [ _metal_n_1 LBL: h2324 ARG0: x2323 ]                                  |
+|                                  |             |          |           [ _table_n_1 LBL: h2322 ARG0: x2321 ]                                  |
+|                                  |             |          |           [ place_n LBL: h2343 ARG0: x2342 ]                                     |
+|                                  |             |          |           [ _un-_a_neg LBL: h2320 ARG0: i2318 ARG1: e2319 ]                      |
+|                                  |             |          |           [ _know_v_1 LBL: h2317 ARG0: e2314 [ e PERF: - ] ARG1: u2315 ARG2:     |
+|                                  |             |          | i2316 ]                                                                          |
+|                                  |             |          |           [ _backyard_n_1 LBL: h2305 ARG0: x2304 ] >                             |
+|                                  |             |          |   HCONS: < h2326 qeq h2324 h2345 qeq h2322 h2350 qeq h2343 >                     |
+|                                  |             |          |   ICONS: < e2314 topic i2316 >                                                   |
+|                                  |             |          |   EQS: < x2325 eq x2323 h2333 eq h2329 u2332 eq x2325 h2333 eq h2322 u2331 eq    |
+|                                  |             |          | x2321 x2344 eq x2321 h2337 eq h2348 u2336 eq x2344 h2337 eq h2343 x2335 eq x2342 |
+|                                  |             |          | x2349 eq x2342 h2341 eq h2353 x2340 eq x2349 h2320 eq h2317 e2319 eq e2314 h2317 |
+|                                  |             |          | eq h2305 i2316 eq x2304 h2341 eq h2305 u2339 eq x2304 > ]                        |
++----------------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| idTable1_prop_idMaterial         | idTable1    | idmetal  | [ TOP: h2322                                                                     |
+|                                  |             |          |   INDEX: x2321                                                                   |
+|                                  |             |          |   RELS: < [ compound LBL: h2333 ARG0: e2330 [ e PROG: - ] ARG1: u2331 ARG2:      |
+|                                  |             |          | u2332 ]                                                                          |
+|                                  |             |          |           [ udef_q LBL: h2328 ARG0: x2325 RSTR: h2326 BODY: h2327 ]              |
+|                                  |             |          |           [ _metal_n_1 LBL: h2324 ARG0: x2323 ]                                  |
+|                                  |             |          |           [ _table_n_1 LBL: h2322 ARG0: x2321 ] >                                |
+|                                  |             |          |   HCONS: < h2326 qeq h2324 >                                                     |
+|                                  |             |          |   EQS: < x2325 eq x2323 h2333 eq h2329 u2332 eq x2325 h2333 eq h2322 u2331 eq    |
+|                                  |             |          | x2321 > ]                                                                        |
++----------------------------------+-------------+----------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                 |
++-----+---------------------------------------------------+
+| #   | Generated Text                                    |
++-----+---------------------------------------------------+
+| 1   | An unknown back yard north of a metal table       |
+| 2   | An unknown back yard north of a metal table.      |
+| 3   | An unknown back yard north of metal tables        |
+| 4   | An unknown back yard north of metal tables.       |
+| 5   | An unknown back yard north of the metal table     |
+| 6   | An unknown back yard north of the metal table.    |
+| 7   | An unknown back yard north of the metal tables    |
+| 8   | An unknown back yard north of the metal tables.   |
+| 9   | An unknown back yard, north of a metal table      |
+| 10  | An unknown back yard, north of metal tables       |
+| 11  | An unknown back yard, north of the metal table    |
+| 12  | An unknown back yard, north of the metal tables   |
+| 13  | An unknown backyard north of a metal table        |
+| 14  | An unknown backyard north of a metal table.       |
+| 15  | An unknown backyard north of metal tables         |
+| 16  | An unknown backyard north of metal tables.        |
+| 17  | An unknown backyard north of the metal table      |
+| 18  | An unknown backyard north of the metal table.     |
+| 19  | An unknown backyard north of the metal tables     |
+| 20  | An unknown backyard north of the metal tables.    |
+| 21  | An unknown backyard, north of a metal table       |
+| 22  | An unknown backyard, north of metal tables        |
+| 23  | An unknown backyard, north of the metal table     |
+| 24  | An unknown backyard, north of the metal tables    |
+| 25  | The unknown back yard north of a metal table      |
+| 26  | The unknown back yard north of a metal table.     |
+| 27  | The unknown back yard north of metal tables       |
+| 28  | The unknown back yard north of metal tables.      |
+| 29  | The unknown back yard north of the metal table    |
+| 30  | The unknown back yard north of the metal table.   |
+| 31  | The unknown back yard north of the metal tables   |
+| 32  | The unknown back yard north of the metal tables.  |
+| 33  | The unknown back yard, north of a metal table     |
+| 34  | The unknown back yard, north of metal tables      |
+| 35  | The unknown back yard, north of the metal table   |
+| 36  | The unknown back yard, north of the metal tables  |
+| 37  | The unknown back yards north of a metal table     |
+| 38  | The unknown back yards north of a metal table.    |
+| 39  | The unknown back yards north of metal tables      |
+| 40  | The unknown back yards north of metal tables.     |
+| 41  | The unknown back yards north of the metal table   |
+| 42  | The unknown back yards north of the metal table.  |
+| 43  | The unknown back yards north of the metal tables  |
+| 44  | The unknown back yards north of the metal tables. |
+| 45  | The unknown back yards, north of a metal table    |
+| 46  | The unknown back yards, north of metal tables     |
+| 47  | The unknown back yards, north of the metal table  |
+| 48  | The unknown back yards, north of the metal tables |
+| 49  | The unknown backyard north of a metal table       |
+| 50  | The unknown backyard north of a metal table.      |
+| 51  | The unknown backyard north of metal tables        |
+| 52  | The unknown backyard north of metal tables.       |
+| 53  | The unknown backyard north of the metal table     |
+| 54  | The unknown backyard north of the metal table.    |
+| 55  | The unknown backyard north of the metal tables    |
+| 56  | The unknown backyard north of the metal tables.   |
+| 57  | The unknown backyard, north of a metal table      |
+| 58  | The unknown backyard, north of metal tables       |
+| 59  | The unknown backyard, north of the metal table    |
+| 60  | The unknown backyard, north of the metal tables   |
+| 61  | The unknown backyards north of a metal table      |
+| 62  | The unknown backyards north of a metal table.     |
+| 63  | The unknown backyards north of metal tables       |
+| 64  | The unknown backyards north of metal tables.      |
+| 65  | The unknown backyards north of the metal table    |
+| 66  | The unknown backyards north of the metal table.   |
+| 67  | The unknown backyards north of the metal tables   |
+| 68  | The unknown backyards north of the metal tables.  |
+| 69  | The unknown backyards, north of a metal table     |
+| 70  | The unknown backyards, north of metal tables      |
+| 71  | The unknown backyards, north of the metal table   |
+| 72  | The unknown backyards, north of the metal tables  |
+| 73  | Unknown back yard north of a metal table          |
+| 74  | Unknown back yard north of a metal table.         |
+| 75  | Unknown back yard north of metal tables           |
+| 76  | Unknown back yard north of metal tables.          |
+| 77  | Unknown back yard north of the metal table        |
+| 78  | Unknown back yard north of the metal table.       |
+| 79  | Unknown back yard north of the metal tables       |
+| 80  | Unknown back yard north of the metal tables.      |
+| 81  | Unknown back yard, north of a metal table         |
+| 82  | Unknown back yard, north of metal tables          |
+| 83  | Unknown back yard, north of the metal table       |
+| 84  | Unknown back yard, north of the metal tables      |
+| 85  | Unknown back yards north of a metal table         |
+| 86  | Unknown back yards north of a metal table.        |
+| 87  | Unknown back yards north of metal tables          |
+| 88  | Unknown back yards north of metal tables.         |
+| 89  | Unknown back yards north of the metal table       |
+| 90  | Unknown back yards north of the metal table.      |
+| 91  | Unknown back yards north of the metal tables      |
+| 92  | Unknown back yards north of the metal tables.     |
+| 93  | Unknown back yards, north of a metal table        |
+| 94  | Unknown back yards, north of metal tables         |
+| 95  | Unknown back yards, north of the metal table      |
+| 96  | Unknown back yards, north of the metal tables     |
+| 97  | Unknown backyard north of a metal table           |
+| 98  | Unknown backyard north of a metal table.          |
+| 99  | Unknown backyard north of metal tables            |
+| 100 | Unknown backyard north of metal tables.           |
+| 101 | Unknown backyard north of the metal table         |
+| 102 | Unknown backyard north of the metal table.        |
+| 103 | Unknown backyard north of the metal tables        |
+| 104 | Unknown backyard north of the metal tables.       |
+| 105 | Unknown backyard, north of a metal table          |
+| 106 | Unknown backyard, north of metal tables           |
+| 107 | Unknown backyard, north of the metal table        |
+| 108 | Unknown backyard, north of the metal tables       |
+| 109 | Unknown backyards north of a metal table          |
+| 110 | Unknown backyards north of a metal table.         |
+| 111 | Unknown backyards north of metal tables           |
+| 112 | Unknown backyards north of metal tables.          |
+| 113 | Unknown backyards north of the metal table        |
+| 114 | Unknown backyards north of the metal table.       |
+| 115 | Unknown backyards north of the metal tables       |
+| 116 | Unknown backyards north of the metal tables.      |
+| 117 | Unknown backyards, north of a metal table         |
+| 118 | Unknown backyards, north of metal tables          |
+| 119 | Unknown backyards, north of the metal table       |
+| 120 | Unknown backyards, north of the metal tables      |
++-----+---------------------------------------------------+
+

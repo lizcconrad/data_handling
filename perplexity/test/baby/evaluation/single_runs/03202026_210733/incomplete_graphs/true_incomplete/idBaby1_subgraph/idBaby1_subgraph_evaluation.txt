@@ -1,0 +1,1128 @@
+GRAPH NAME: idBaby1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 847   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.6   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.6   |
+| Edge Inclusion                  | 0.6   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------------------------------+
+|                                                 GOLD OUTPUTS                                                |
++------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                    | Generated? |
++------------------------------------------------------------------------------------------------+------------+
+| the unknown baby who hasn't cried west of the unknown door from the bedroom to the living room | False      |
++------------------------------------------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              NODE METRICS                                                             |
++---------------------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Node                      | Node Covered | Node Included | Coverage Comment                       | Inclusion Comment                 |
++---------------------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idBaby1                   | True         | True          | Covered                                | Included                          |
+| idNone                    | False        | False         | 'idNone' not in lexicon's node entries | No SEMENT generated for this node |
+| true                      | True         | True          | Covered                                | Included                          |
+| 0                         | True         | False         | Covered                                | Successor of failed element       |
+| idLivingRoomToBedroomDoor | True         | True          | Covered                                | Included                          |
++---------------------------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                      EDGE METRICS                                                                                                      |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| Edge                                           | Parent                    | Child                     | Edge Covered | Edge Included | Coverage Comment                           | Inclusion Comment                 |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| idBaby1_prop_idCrawlingRoom                    | idBaby1                   | idNone                    | False        | False         | child of 'idCrawlingRoom' has no SEMENT    | No SEMENT generated for this edge |
+| idBaby1_prop_idUnknownObject                   | idBaby1                   | true                      | True         | True          | Covered                                    | Included                          |
+| idBaby1_prop_idCryTurns                        | idBaby1                   | 0                         | False        | False         | 'idCryTurns' not in lexicon's edge entries | No SEMENT generated for this edge |
+| isWestOf                                       | idBaby1                   | idLivingRoomToBedroomDoor | True         | True          | Covered                                    | Included                          |
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true                      | True         | True          | Covered                                    | Included                          |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1123                                                                     |
+|               |   INDEX: x1122                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1199 ARG0: e1196 ARG1: u1197 ARG2: x1198 ]           |
+|               |           [ def_implicit_q LBL: h1210 ARG0: x1207 RSTR: h1208 BODY: h1209 ]      |
+|               |           [ _west_a_1 LBL: h1195 ARG0: i1192 ARG1: x1193 ARG2: u1194 ]           |
+|               |           [ def_udef_a_q LBL: h1205 ARG0: x1202 RSTR: h1203 BODY: h1204 ]        |
+|               |           [ _un-_a_neg LBL: h1191 ARG0: i1189 ARG1: e1190 ]                      |
+|               |           [ _know_v_1 LBL: h1188 ARG0: e1185 [ e PERF: - ] ARG1: u1186 ARG2:     |
+|               | i1187 ]                                                                          |
+|               |           [ _to_p LBL: h1171 ARG0: e1168 ARG1: u1169 ARG2: i1170 ]               |
+|               |           [ def_udef_a_q LBL: h1175 ARG0: x1172 RSTR: h1173 BODY: h1174 ]        |
+|               |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|               |           [ _from_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: u1159 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|               | u1155 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|               |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|               |           [ _door_n_1 LBL: h1143 ARG0: x1142 ]                                   |
+|               |           [ place_n LBL: h1201 ARG0: x1200 ]                                     |
+|               |           [ _un-_a_neg LBL: h1138 ARG0: i1136 ARG1: e1137 ]                      |
+|               |           [ _know_v_1 LBL: h1135 ARG0: e1132 [ e PERF: - ] ARG1: u1133 ARG2:     |
+|               | i1134 ]                                                                          |
+|               |           [ _baby_n_1 LBL: h1123 ARG0: x1122 ] >                                 |
+|               |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 h1203 qeq h1143 h1208 |
+|               | qeq h1201 >                                                                      |
+|               |   ICONS: < e1185 topic i1187 e1132 topic i1134 >                                 |
+|               |   EQS: < h1191 eq h1188 e1190 eq e1185 x1172 eq x1166 h1171 eq h1176 i1170 eq    |
+|               | x1172 x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq x1144 |
+|               | x1161 eq x1144 h1160 eq h1165 u1159 eq x1161 h1160 eq h1143 u1158 eq x1142 h1171 |
+|               | eq h1143 u1169 eq x1142 h1188 eq h1143 i1187 eq x1142 x1202 eq x1142 h1195 eq    |
+|               | h1206 u1194 eq x1202 h1195 eq h1201 x1193 eq x1200 x1207 eq x1200 h1199 eq h1211 |
+|               | x1198 eq x1207 h1138 eq h1135 e1137 eq e1132 h1135 eq h1123 i1134 eq x1122 h1199 |
+|               | eq h1123 u1197 eq x1122 > ]                                                      |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1123                                                                     |
+|               |   INDEX: x1122                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1123 ARG0: e1196 ARG1: x1122 ARG2: x1193 ]           |
+|               |           [ def_implicit_q LBL: h1210 ARG0: x1193 RSTR: h1208 BODY: h1209 ]      |
+|               |           [ _west_a_1 LBL: h1195 ARG0: i1192 ARG1: x1193 ARG2: x1142 ]           |
+|               |           [ def_udef_a_q LBL: h1205 ARG0: x1142 RSTR: h1203 BODY: h1204 ]        |
+|               |           [ _un-_a_neg LBL: h1143 ARG0: i1189 ARG1: e1185 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1143 ARG0: e1185 ARG1: u1186 ARG2: x1142 ]           |
+|               |           [ _to_p LBL: h1143 ARG0: e1168 ARG1: x1142 ARG2: x1166 ]               |
+|               |           [ def_udef_a_q LBL: h1175 ARG0: x1166 RSTR: h1173 BODY: h1174 ]        |
+|               |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|               |           [ _from_p LBL: h1143 ARG0: e1157 ARG1: x1142 ARG2: x1144 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1144 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1145 ARG0: e1153 [ e PROG: - ] ARG1: x1144 ARG2:      |
+|               | x1146 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1146 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|               |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|               |           [ _door_n_1 LBL: h1143 ARG0: x1142 ]                                   |
+|               |           [ place_n LBL: h1195 ARG0: x1193 ]                                     |
+|               |           [ _un-_a_neg LBL: h1123 ARG0: i1136 ARG1: e1132 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1123 ARG0: e1132 ARG1: u1133 ARG2: x1122 ]           |
+|               |           [ _baby_n_1 LBL: h1123 ARG0: x1122 ] >                                 |
+|               |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 h1203 qeq h1143 h1208 |
+|               | qeq h1195 >                                                                      |
+|               |   ICONS: < e1185 topic x1142 e1132 topic x1122 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1220                                                                     |
+|               |   INDEX: e1217                                                                   |
+|               |   RELS: < [ unknown LBL: h1216 ARG: x1122 ARG0: e1217 ]                          |
+|               |           [ def_udef_a_q LBL: h1215 ARG0: x1122 RSTR: h1213 BODY: h1214 ]        |
+|               |           [ loc_nonsp LBL: h1123 ARG0: e1196 ARG1: x1122 ARG2: x1193 ]           |
+|               |           [ def_implicit_q LBL: h1210 ARG0: x1193 RSTR: h1208 BODY: h1209 ]      |
+|               |           [ _west_a_1 LBL: h1195 ARG0: i1192 ARG1: x1193 ARG2: x1142 ]           |
+|               |           [ def_udef_a_q LBL: h1205 ARG0: x1142 RSTR: h1203 BODY: h1204 ]        |
+|               |           [ _un-_a_neg LBL: h1143 ARG0: i1189 ARG1: e1185 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1143 ARG0: e1185 ARG1: u1186 ARG2: x1142 ]           |
+|               |           [ _to_p LBL: h1143 ARG0: e1168 ARG1: x1142 ARG2: x1166 ]               |
+|               |           [ def_udef_a_q LBL: h1175 ARG0: x1166 RSTR: h1173 BODY: h1174 ]        |
+|               |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|               |           [ _from_p LBL: h1143 ARG0: e1157 ARG1: x1142 ARG2: x1144 ]             |
+|               |           [ def_udef_a_q LBL: h1164 ARG0: x1144 RSTR: h1162 BODY: h1163 ]        |
+|               |           [ compound LBL: h1145 ARG0: e1153 [ e PROG: - ] ARG1: x1144 ARG2:      |
+|               | x1146 ]                                                                          |
+|               |           [ udef_q LBL: h1151 ARG0: x1146 RSTR: h1149 BODY: h1150 ]              |
+|               |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|               |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|               |           [ _door_n_1 LBL: h1143 ARG0: x1142 ]                                   |
+|               |           [ place_n LBL: h1195 ARG0: x1193 ]                                     |
+|               |           [ _un-_a_neg LBL: h1123 ARG0: i1136 ARG1: e1132 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1123 ARG0: e1132 ARG1: u1133 ARG2: x1122 ]           |
+|               |           [ _baby_n_1 LBL: h1123 ARG0: x1122 ] >                                 |
+|               |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 h1203 qeq h1143 h1208 |
+|               | qeq h1195 h1213 qeq h1123 h1220 qeq h1216 >                                      |
+|               |   ICONS: < e1185 topic x1142 e1132 topic x1122 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| Node                      | Generated SEMENT                                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| idBaby1                   | [ TOP: h1123                                                                     |
+|                           |   INDEX: x1122                                                                   |
+|                           |   RELS: < [ _baby_n_1 LBL: h1123 ARG0: x1122 ] > ]                               |
++---------------------------+----------------------------------------------------------------------------------+
+| idNone                    | None                                                                             |
++---------------------------+----------------------------------------------------------------------------------+
+| true                      | [ TOP: h1180                                                                     |
+|                           |   INDEX: e1177                                                                   |
+|                           |   RELS: < [ _true_a_of LBL: h1180 ARG0: e1177 ARG1: u1178 ARG2: u1179 ] >        |
+|                           |   SLOTS: < ARG1: u1178 ARG2: u1179 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| 0                         | [ TOP: h1141                                                                     |
+|                           |   INDEX: i1139                                                                   |
+|                           |   RELS: < [ card LBL: h1141 ARG0: i1139 ARG1: u1140 CARG: "0" ] >                |
+|                           |   SLOTS: < ARG1: u1140 > ]                                                       |
++---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor | [ TOP: h1143                                                                     |
+|                           |   INDEX: x1142                                                                   |
+|                           |   RELS: < [ _to_p LBL: h1171 ARG0: e1168 ARG1: u1169 ARG2: i1170 ]               |
+|                           |           [ def_udef_a_q LBL: h1175 ARG0: x1172 RSTR: h1173 BODY: h1174 ]        |
+|                           |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|                           |           [ _from_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: u1159 ]             |
+|                           |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|                           |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|                           | u1155 ]                                                                          |
+|                           |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|                           |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|                           |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|                           |           [ _door_n_1 LBL: h1143 ARG0: x1142 ] >                                 |
+|                           |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 >                     |
+|                           |   EQS: < x1172 eq x1166 h1171 eq h1176 i1170 eq x1172 x1148 eq x1146 h1156 eq    |
+|                           | h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq x1144 x1161 eq x1144 h1160 eq h1165 |
+|                           | u1159 eq x1161 h1160 eq h1143 u1158 eq x1142 h1171 eq h1143 u1169 eq x1142 > ]   |
++---------------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                        EDGE SEMENTS                                                                                       |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| Edge                                           | Parent                    | Child                     | Generated SEMENT                                                                 |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idBaby1_prop_idCrawlingRoom                    | idBaby1                   | idNone                    | None                                                                             |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idBaby1_prop_idUnknownObject                   | idBaby1                   | true                      | [ TOP: h1123                                                                     |
+|                                                |                           |                           |   INDEX: x1122                                                                   |
+|                                                |                           |                           |   RELS: < [ _un-_a_neg LBL: h1138 ARG0: i1136 ARG1: e1137 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h1135 ARG0: e1132 [ e PERF: - ] ARG1: u1133 ARG2:     |
+|                                                |                           |                           | i1134 ]                                                                          |
+|                                                |                           |                           |           [ _baby_n_1 LBL: h1123 ARG0: x1122 ] >                                 |
+|                                                |                           |                           |   ICONS: < e1132 topic i1134 >                                                   |
+|                                                |                           |                           |   EQS: < h1138 eq h1135 e1137 eq e1132 h1135 eq h1123 i1134 eq x1122 > ]         |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idBaby1_prop_idCryTurns                        | idBaby1                   | 0                         | None                                                                             |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| isWestOf                                       | idBaby1                   | idLivingRoomToBedroomDoor | [ TOP: h1123                                                                     |
+|                                                |                           |                           |   INDEX: x1122                                                                   |
+|                                                |                           |                           |   RELS: < [ loc_nonsp LBL: h1199 ARG0: e1196 ARG1: u1197 ARG2: x1198 ]           |
+|                                                |                           |                           |           [ def_implicit_q LBL: h1210 ARG0: x1207 RSTR: h1208 BODY: h1209 ]      |
+|                                                |                           |                           |           [ _west_a_1 LBL: h1195 ARG0: i1192 ARG1: x1193 ARG2: u1194 ]           |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h1205 ARG0: x1202 RSTR: h1203 BODY: h1204 ]        |
+|                                                |                           |                           |           [ _un-_a_neg LBL: h1191 ARG0: i1189 ARG1: e1190 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h1188 ARG0: e1185 [ e PERF: - ] ARG1: u1186 ARG2:     |
+|                                                |                           |                           | i1187 ]                                                                          |
+|                                                |                           |                           |           [ _to_p LBL: h1171 ARG0: e1168 ARG1: u1169 ARG2: i1170 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h1175 ARG0: x1172 RSTR: h1173 BODY: h1174 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|                                                |                           |                           |           [ _from_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: u1159 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|                                                |                           |                           |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|                                                |                           |                           | u1155 ]                                                                          |
+|                                                |                           |                           |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|                                                |                           |                           |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|                                                |                           |                           |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h1143 ARG0: x1142 ]                                   |
+|                                                |                           |                           |           [ place_n LBL: h1201 ARG0: x1200 ]                                     |
+|                                                |                           |                           |           [ _un-_a_neg LBL: h1138 ARG0: i1136 ARG1: e1137 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h1135 ARG0: e1132 [ e PERF: - ] ARG1: u1133 ARG2:     |
+|                                                |                           |                           | i1134 ]                                                                          |
+|                                                |                           |                           |           [ _baby_n_1 LBL: h1123 ARG0: x1122 ] >                                 |
+|                                                |                           |                           |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 h1203 qeq h1143 h1208 |
+|                                                |                           |                           | qeq h1201 >                                                                      |
+|                                                |                           |                           |   ICONS: < e1185 topic i1187 e1132 topic i1134 >                                 |
+|                                                |                           |                           |   EQS: < h1191 eq h1188 e1190 eq e1185 x1172 eq x1166 h1171 eq h1176 i1170 eq    |
+|                                                |                           |                           | x1172 x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq x1144 |
+|                                                |                           |                           | x1161 eq x1144 h1160 eq h1165 u1159 eq x1161 h1160 eq h1143 u1158 eq x1142 h1171 |
+|                                                |                           |                           | eq h1143 u1169 eq x1142 h1188 eq h1143 i1187 eq x1142 x1202 eq x1142 h1195 eq    |
+|                                                |                           |                           | h1206 u1194 eq x1202 h1195 eq h1201 x1193 eq x1200 x1207 eq x1200 h1199 eq h1211 |
+|                                                |                           |                           | x1198 eq x1207 h1138 eq h1135 e1137 eq e1132 h1135 eq h1123 i1134 eq x1122 h1199 |
+|                                                |                           |                           | eq h1123 u1197 eq x1122 > ]                                                      |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true                      | [ TOP: h1143                                                                     |
+|                                                |                           |                           |   INDEX: x1142                                                                   |
+|                                                |                           |                           |   RELS: < [ _un-_a_neg LBL: h1191 ARG0: i1189 ARG1: e1190 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h1188 ARG0: e1185 [ e PERF: - ] ARG1: u1186 ARG2:     |
+|                                                |                           |                           | i1187 ]                                                                          |
+|                                                |                           |                           |           [ _to_p LBL: h1171 ARG0: e1168 ARG1: u1169 ARG2: i1170 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h1175 ARG0: x1172 RSTR: h1173 BODY: h1174 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h1167 ARG0: x1166 ]                                |
+|                                                |                           |                           |           [ _from_p LBL: h1160 ARG0: e1157 ARG1: u1158 ARG2: u1159 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h1164 ARG0: x1161 RSTR: h1162 BODY: h1163 ]        |
+|                                                |                           |                           |           [ compound LBL: h1156 ARG0: e1153 [ e PROG: - ] ARG1: u1154 ARG2:      |
+|                                                |                           |                           | u1155 ]                                                                          |
+|                                                |                           |                           |           [ udef_q LBL: h1151 ARG0: x1148 RSTR: h1149 BODY: h1150 ]              |
+|                                                |                           |                           |           [ _living_n_1 LBL: h1147 ARG0: x1146 ]                                 |
+|                                                |                           |                           |           [ _room_n_unit LBL: h1145 ARG0: x1144 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h1143 ARG0: x1142 ] >                                 |
+|                                                |                           |                           |   HCONS: < h1173 qeq h1167 h1149 qeq h1147 h1162 qeq h1145 >                     |
+|                                                |                           |                           |   ICONS: < e1185 topic i1187 >                                                   |
+|                                                |                           |                           |   EQS: < h1191 eq h1188 e1190 eq e1185 x1172 eq x1166 h1171 eq h1176 i1170 eq    |
+|                                                |                           |                           | x1172 x1148 eq x1146 h1156 eq h1152 u1155 eq x1148 h1156 eq h1145 u1154 eq x1144 |
+|                                                |                           |                           | x1161 eq x1144 h1160 eq h1165 u1159 eq x1161 h1160 eq h1143 u1158 eq x1142 h1171 |
+|                                                |                           |                           | eq h1143 u1169 eq x1142 h1188 eq h1143 i1187 eq x1142 > ]                        |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------+
+|                                   GENERATED ENGLISH TEXT                                  |
++-----+-------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                      |
++-----+-------------------------------------------------------------------------------------+
+| 1   | An unknown baby west of an unknown door from a living room to the bedrooms          |
+| 2   | An unknown baby west of an unknown door from a living room to the bedrooms.         |
+| 3   | An unknown baby west of an unknown door from living rooms to the bedrooms           |
+| 4   | An unknown baby west of an unknown door from the living room to the bedroom         |
+| 5   | An unknown baby west of an unknown door from the living room to the bedrooms        |
+| 6   | An unknown baby west of an unknown door from the living room to the bedrooms.       |
+| 7   | An unknown baby west of an unknown door from the living rooms to the bedroom        |
+| 8   | An unknown baby west of an unknown door from the living rooms to the bedrooms       |
+| 9   | An unknown baby west of an unknown door from the living rooms to the bedrooms.      |
+| 10  | An unknown baby west of an unknown door to the bedroom from a living room           |
+| 11  | An unknown baby west of an unknown door to the bedroom from the living room         |
+| 12  | An unknown baby west of an unknown door to the bedroom from the living rooms        |
+| 13  | An unknown baby west of an unknown door to the bedrooms from a living room          |
+| 14  | An unknown baby west of an unknown door to the bedrooms from the living room        |
+| 15  | An unknown baby west of an unknown door to the bedrooms from the living rooms       |
+| 16  | An unknown baby west of the unknown door from a living room to a bedroom            |
+| 17  | An unknown baby west of the unknown door from a living room to bedrooms             |
+| 18  | An unknown baby west of the unknown door from a living room to the bedroom          |
+| 19  | An unknown baby west of the unknown door from a living room to the bedrooms         |
+| 20  | An unknown baby west of the unknown door from a living room to the bedrooms.        |
+| 21  | An unknown baby west of the unknown door from living rooms to the bedroom           |
+| 22  | An unknown baby west of the unknown door from living rooms to the bedrooms          |
+| 23  | An unknown baby west of the unknown door from living rooms to the bedrooms.         |
+| 24  | An unknown baby west of the unknown door from the living room to a bedroom          |
+| 25  | An unknown baby west of the unknown door from the living room to bedrooms           |
+| 26  | An unknown baby west of the unknown door from the living room to bedrooms.          |
+| 27  | An unknown baby west of the unknown door from the living room to the bedroom        |
+| 28  | An unknown baby west of the unknown door from the living room to the bedrooms       |
+| 29  | An unknown baby west of the unknown door from the living room to the bedrooms.      |
+| 30  | An unknown baby west of the unknown door from the living rooms to a bedroom         |
+| 31  | An unknown baby west of the unknown door from the living rooms to bedrooms          |
+| 32  | An unknown baby west of the unknown door from the living rooms to bedrooms.         |
+| 33  | An unknown baby west of the unknown door from the living rooms to the bedroom       |
+| 34  | An unknown baby west of the unknown door from the living rooms to the bedrooms      |
+| 35  | An unknown baby west of the unknown door from the living rooms to the bedrooms.     |
+| 36  | An unknown baby west of the unknown door to a bedroom from a living room            |
+| 37  | An unknown baby west of the unknown door to a bedroom from the living room          |
+| 38  | An unknown baby west of the unknown door to a bedroom from the living rooms         |
+| 39  | An unknown baby west of the unknown door to bedrooms from a living room             |
+| 40  | An unknown baby west of the unknown door to bedrooms from the living room           |
+| 41  | An unknown baby west of the unknown door to bedrooms from the living rooms          |
+| 42  | An unknown baby west of the unknown door to the bedroom from a living room          |
+| 43  | An unknown baby west of the unknown door to the bedroom from living rooms           |
+| 44  | An unknown baby west of the unknown door to the bedroom from living rooms.          |
+| 45  | An unknown baby west of the unknown door to the bedroom from the living room        |
+| 46  | An unknown baby west of the unknown door to the bedroom from the living rooms       |
+| 47  | An unknown baby west of the unknown door to the bedroom from the living rooms.      |
+| 48  | An unknown baby west of the unknown door to the bedrooms from a living room         |
+| 49  | An unknown baby west of the unknown door to the bedrooms from living rooms          |
+| 50  | An unknown baby west of the unknown door to the bedrooms from living rooms.         |
+| 51  | An unknown baby west of the unknown door to the bedrooms from the living room       |
+| 52  | An unknown baby west of the unknown door to the bedrooms from the living rooms      |
+| 53  | An unknown baby west of the unknown door to the bedrooms from the living rooms.     |
+| 54  | An unknown baby west of the unknown doors from a living room to a bedroom           |
+| 55  | An unknown baby west of the unknown doors from a living room to a bedroom.          |
+| 56  | An unknown baby west of the unknown doors from a living room to bedrooms            |
+| 57  | An unknown baby west of the unknown doors from a living room to bedrooms.           |
+| 58  | An unknown baby west of the unknown doors from a living room to the bedroom         |
+| 59  | An unknown baby west of the unknown doors from a living room to the bedroom.        |
+| 60  | An unknown baby west of the unknown doors from a living room to the bedrooms        |
+| 61  | An unknown baby west of the unknown doors from a living room to the bedrooms.       |
+| 62  | An unknown baby west of the unknown doors from living rooms to a bedroom            |
+| 63  | An unknown baby west of the unknown doors from living rooms to bedrooms             |
+| 64  | An unknown baby west of the unknown doors from living rooms to bedrooms.            |
+| 65  | An unknown baby west of the unknown doors from living rooms to the bedroom          |
+| 66  | An unknown baby west of the unknown doors from living rooms to the bedrooms         |
+| 67  | An unknown baby west of the unknown doors from living rooms to the bedrooms.        |
+| 68  | An unknown baby west of the unknown doors from the living room to a bedroom         |
+| 69  | An unknown baby west of the unknown doors from the living room to a bedroom.        |
+| 70  | An unknown baby west of the unknown doors from the living room to bedrooms          |
+| 71  | An unknown baby west of the unknown doors from the living room to bedrooms.         |
+| 72  | An unknown baby west of the unknown doors from the living room to the bedroom       |
+| 73  | An unknown baby west of the unknown doors from the living room to the bedroom.      |
+| 74  | An unknown baby west of the unknown doors from the living room to the bedrooms      |
+| 75  | An unknown baby west of the unknown doors from the living room to the bedrooms.     |
+| 76  | An unknown baby west of the unknown doors from the living rooms to a bedroom        |
+| 77  | An unknown baby west of the unknown doors from the living rooms to a bedroom.       |
+| 78  | An unknown baby west of the unknown doors from the living rooms to bedrooms         |
+| 79  | An unknown baby west of the unknown doors from the living rooms to bedrooms.        |
+| 80  | An unknown baby west of the unknown doors from the living rooms to the bedroom      |
+| 81  | An unknown baby west of the unknown doors from the living rooms to the bedroom.     |
+| 82  | An unknown baby west of the unknown doors from the living rooms to the bedrooms     |
+| 83  | An unknown baby west of the unknown doors from the living rooms to the bedrooms.    |
+| 84  | An unknown baby west of the unknown doors to a bedroom from a living room           |
+| 85  | An unknown baby west of the unknown doors to a bedroom from a living room.          |
+| 86  | An unknown baby west of the unknown doors to a bedroom from living rooms            |
+| 87  | An unknown baby west of the unknown doors to a bedroom from living rooms.           |
+| 88  | An unknown baby west of the unknown doors to a bedroom from the living room         |
+| 89  | An unknown baby west of the unknown doors to a bedroom from the living rooms        |
+| 90  | An unknown baby west of the unknown doors to a bedroom from the living rooms.       |
+| 91  | An unknown baby west of the unknown doors to bedrooms from a living room            |
+| 92  | An unknown baby west of the unknown doors to bedrooms from living rooms             |
+| 93  | An unknown baby west of the unknown doors to bedrooms from living rooms.            |
+| 94  | An unknown baby west of the unknown doors to bedrooms from the living room          |
+| 95  | An unknown baby west of the unknown doors to bedrooms from the living rooms         |
+| 96  | An unknown baby west of the unknown doors to bedrooms from the living rooms.        |
+| 97  | An unknown baby west of the unknown doors to the bedroom from a living room         |
+| 98  | An unknown baby west of the unknown doors to the bedroom from a living room.        |
+| 99  | An unknown baby west of the unknown doors to the bedroom from living rooms          |
+| 100 | An unknown baby west of the unknown doors to the bedroom from living rooms.         |
+| 101 | An unknown baby west of the unknown doors to the bedroom from the living room       |
+| 102 | An unknown baby west of the unknown doors to the bedroom from the living room.      |
+| 103 | An unknown baby west of the unknown doors to the bedroom from the living rooms      |
+| 104 | An unknown baby west of the unknown doors to the bedroom from the living rooms.     |
+| 105 | An unknown baby west of the unknown doors to the bedrooms from a living room        |
+| 106 | An unknown baby west of the unknown doors to the bedrooms from a living room.       |
+| 107 | An unknown baby west of the unknown doors to the bedrooms from living rooms         |
+| 108 | An unknown baby west of the unknown doors to the bedrooms from living rooms.        |
+| 109 | An unknown baby west of the unknown doors to the bedrooms from the living room      |
+| 110 | An unknown baby west of the unknown doors to the bedrooms from the living room.     |
+| 111 | An unknown baby west of the unknown doors to the bedrooms from the living rooms     |
+| 112 | An unknown baby west of the unknown doors to the bedrooms from the living rooms.    |
+| 113 | An unknown baby west of unknown doors from a living room to the bedrooms            |
+| 114 | An unknown baby west of unknown doors from living rooms to the bedrooms             |
+| 115 | An unknown baby west of unknown doors from the living room to the bedrooms          |
+| 116 | An unknown baby west of unknown doors from the living rooms to the bedrooms         |
+| 117 | An unknown baby west of unknown doors from the living rooms to the bedrooms.        |
+| 118 | An unknown baby west of unknown doors to a bedroom from a living room               |
+| 119 | An unknown baby west of unknown doors to the bedroom from a living room             |
+| 120 | An unknown baby west of unknown doors to the bedroom from the living room           |
+| 121 | An unknown baby west of unknown doors to the bedroom from the living rooms          |
+| 122 | An unknown baby west of unknown doors to the bedrooms from a living room            |
+| 123 | An unknown baby west of unknown doors to the bedrooms from the living room          |
+| 124 | An unknown baby west of unknown doors to the bedrooms from the living rooms         |
+| 125 | The unknown babies west of an unknown door from a living room to a bedroom          |
+| 126 | The unknown babies west of an unknown door from a living room to a bedroom.         |
+| 127 | The unknown babies west of an unknown door from a living room to bedrooms           |
+| 128 | The unknown babies west of an unknown door from a living room to bedrooms.          |
+| 129 | The unknown babies west of an unknown door from a living room to the bedroom        |
+| 130 | The unknown babies west of an unknown door from a living room to the bedroom.       |
+| 131 | The unknown babies west of an unknown door from a living room to the bedrooms       |
+| 132 | The unknown babies west of an unknown door from a living room to the bedrooms.      |
+| 133 | The unknown babies west of an unknown door from a living room, to the bedrooms      |
+| 134 | The unknown babies west of an unknown door from living rooms to a bedroom           |
+| 135 | The unknown babies west of an unknown door from living rooms to a bedroom.          |
+| 136 | The unknown babies west of an unknown door from living rooms to bedrooms            |
+| 137 | The unknown babies west of an unknown door from living rooms to bedrooms.           |
+| 138 | The unknown babies west of an unknown door from living rooms to the bedroom         |
+| 139 | The unknown babies west of an unknown door from living rooms to the bedroom.        |
+| 140 | The unknown babies west of an unknown door from living rooms to the bedrooms        |
+| 141 | The unknown babies west of an unknown door from living rooms to the bedrooms.       |
+| 142 | The unknown babies west of an unknown door from living rooms, to the bedrooms       |
+| 143 | The unknown babies west of an unknown door from the living room to a bedroom        |
+| 144 | The unknown babies west of an unknown door from the living room to a bedroom.       |
+| 145 | The unknown babies west of an unknown door from the living room to bedrooms         |
+| 146 | The unknown babies west of an unknown door from the living room to bedrooms.        |
+| 147 | The unknown babies west of an unknown door from the living room to the bedroom      |
+| 148 | The unknown babies west of an unknown door from the living room to the bedroom.     |
+| 149 | The unknown babies west of an unknown door from the living room to the bedrooms     |
+| 150 | The unknown babies west of an unknown door from the living room to the bedrooms.    |
+| 151 | The unknown babies west of an unknown door from the living room, to the bedrooms    |
+| 152 | The unknown babies west of an unknown door from the living rooms to a bedroom       |
+| 153 | The unknown babies west of an unknown door from the living rooms to a bedroom.      |
+| 154 | The unknown babies west of an unknown door from the living rooms to bedrooms        |
+| 155 | The unknown babies west of an unknown door from the living rooms to bedrooms.       |
+| 156 | The unknown babies west of an unknown door from the living rooms to the bedroom     |
+| 157 | The unknown babies west of an unknown door from the living rooms to the bedroom.    |
+| 158 | The unknown babies west of an unknown door from the living rooms to the bedrooms    |
+| 159 | The unknown babies west of an unknown door from the living rooms to the bedrooms.   |
+| 160 | The unknown babies west of an unknown door from the living rooms, to the bedrooms   |
+| 161 | The unknown babies west of an unknown door to a bedroom from a living room          |
+| 162 | The unknown babies west of an unknown door to a bedroom from a living room.         |
+| 163 | The unknown babies west of an unknown door to a bedroom from living rooms           |
+| 164 | The unknown babies west of an unknown door to a bedroom from living rooms.          |
+| 165 | The unknown babies west of an unknown door to a bedroom from the living room        |
+| 166 | The unknown babies west of an unknown door to a bedroom from the living room.       |
+| 167 | The unknown babies west of an unknown door to a bedroom from the living rooms       |
+| 168 | The unknown babies west of an unknown door to a bedroom from the living rooms.      |
+| 169 | The unknown babies west of an unknown door to bedrooms from a living room           |
+| 170 | The unknown babies west of an unknown door to bedrooms from a living room.          |
+| 171 | The unknown babies west of an unknown door to bedrooms from living rooms            |
+| 172 | The unknown babies west of an unknown door to bedrooms from living rooms.           |
+| 173 | The unknown babies west of an unknown door to bedrooms from the living room         |
+| 174 | The unknown babies west of an unknown door to bedrooms from the living room.        |
+| 175 | The unknown babies west of an unknown door to bedrooms from the living rooms        |
+| 176 | The unknown babies west of an unknown door to bedrooms from the living rooms.       |
+| 177 | The unknown babies west of an unknown door to the bedroom from a living room        |
+| 178 | The unknown babies west of an unknown door to the bedroom from a living room.       |
+| 179 | The unknown babies west of an unknown door to the bedroom from living rooms         |
+| 180 | The unknown babies west of an unknown door to the bedroom from living rooms.        |
+| 181 | The unknown babies west of an unknown door to the bedroom from the living room      |
+| 182 | The unknown babies west of an unknown door to the bedroom from the living room.     |
+| 183 | The unknown babies west of an unknown door to the bedroom from the living rooms     |
+| 184 | The unknown babies west of an unknown door to the bedroom from the living rooms.    |
+| 185 | The unknown babies west of an unknown door to the bedrooms from a living room       |
+| 186 | The unknown babies west of an unknown door to the bedrooms from a living room.      |
+| 187 | The unknown babies west of an unknown door to the bedrooms from living rooms        |
+| 188 | The unknown babies west of an unknown door to the bedrooms from living rooms.       |
+| 189 | The unknown babies west of an unknown door to the bedrooms from the living room     |
+| 190 | The unknown babies west of an unknown door to the bedrooms from the living room.    |
+| 191 | The unknown babies west of an unknown door to the bedrooms from the living rooms    |
+| 192 | The unknown babies west of an unknown door to the bedrooms from the living rooms.   |
+| 193 | The unknown babies west of the unknown door from a living room to a bedroom         |
+| 194 | The unknown babies west of the unknown door from a living room to a bedroom.        |
+| 195 | The unknown babies west of the unknown door from a living room to bedrooms          |
+| 196 | The unknown babies west of the unknown door from a living room to bedrooms.         |
+| 197 | The unknown babies west of the unknown door from a living room to the bedroom       |
+| 198 | The unknown babies west of the unknown door from a living room to the bedroom.      |
+| 199 | The unknown babies west of the unknown door from a living room to the bedrooms      |
+| 200 | The unknown babies west of the unknown door from a living room to the bedrooms.     |
+| 201 | The unknown babies west of the unknown door from a living room, to the bedrooms     |
+| 202 | The unknown babies west of the unknown door from living rooms to a bedroom          |
+| 203 | The unknown babies west of the unknown door from living rooms to a bedroom.         |
+| 204 | The unknown babies west of the unknown door from living rooms to bedrooms           |
+| 205 | The unknown babies west of the unknown door from living rooms to bedrooms.          |
+| 206 | The unknown babies west of the unknown door from living rooms to the bedroom        |
+| 207 | The unknown babies west of the unknown door from living rooms to the bedroom.       |
+| 208 | The unknown babies west of the unknown door from living rooms to the bedrooms       |
+| 209 | The unknown babies west of the unknown door from living rooms to the bedrooms.      |
+| 210 | The unknown babies west of the unknown door from living rooms, to the bedrooms      |
+| 211 | The unknown babies west of the unknown door from the living room to a bedroom       |
+| 212 | The unknown babies west of the unknown door from the living room to a bedroom.      |
+| 213 | The unknown babies west of the unknown door from the living room to bedrooms        |
+| 214 | The unknown babies west of the unknown door from the living room to bedrooms.       |
+| 215 | The unknown babies west of the unknown door from the living room to the bedroom     |
+| 216 | The unknown babies west of the unknown door from the living room to the bedroom.    |
+| 217 | The unknown babies west of the unknown door from the living room to the bedrooms    |
+| 218 | The unknown babies west of the unknown door from the living room to the bedrooms.   |
+| 219 | The unknown babies west of the unknown door from the living room, to the bedrooms   |
+| 220 | The unknown babies west of the unknown door from the living rooms to a bedroom      |
+| 221 | The unknown babies west of the unknown door from the living rooms to a bedroom.     |
+| 222 | The unknown babies west of the unknown door from the living rooms to bedrooms       |
+| 223 | The unknown babies west of the unknown door from the living rooms to bedrooms.      |
+| 224 | The unknown babies west of the unknown door from the living rooms to the bedroom    |
+| 225 | The unknown babies west of the unknown door from the living rooms to the bedroom.   |
+| 226 | The unknown babies west of the unknown door from the living rooms to the bedrooms   |
+| 227 | The unknown babies west of the unknown door from the living rooms to the bedrooms.  |
+| 228 | The unknown babies west of the unknown door from the living rooms, to the bedrooms  |
+| 229 | The unknown babies west of the unknown door to a bedroom from a living room         |
+| 230 | The unknown babies west of the unknown door to a bedroom from a living room.        |
+| 231 | The unknown babies west of the unknown door to a bedroom from living rooms          |
+| 232 | The unknown babies west of the unknown door to a bedroom from living rooms.         |
+| 233 | The unknown babies west of the unknown door to a bedroom from the living room       |
+| 234 | The unknown babies west of the unknown door to a bedroom from the living room.      |
+| 235 | The unknown babies west of the unknown door to a bedroom from the living rooms      |
+| 236 | The unknown babies west of the unknown door to a bedroom from the living rooms.     |
+| 237 | The unknown babies west of the unknown door to bedrooms from a living room          |
+| 238 | The unknown babies west of the unknown door to bedrooms from a living room.         |
+| 239 | The unknown babies west of the unknown door to bedrooms from living rooms           |
+| 240 | The unknown babies west of the unknown door to bedrooms from living rooms.          |
+| 241 | The unknown babies west of the unknown door to bedrooms from the living room        |
+| 242 | The unknown babies west of the unknown door to bedrooms from the living room.       |
+| 243 | The unknown babies west of the unknown door to bedrooms from the living rooms       |
+| 244 | The unknown babies west of the unknown door to bedrooms from the living rooms.      |
+| 245 | The unknown babies west of the unknown door to the bedroom from a living room       |
+| 246 | The unknown babies west of the unknown door to the bedroom from a living room.      |
+| 247 | The unknown babies west of the unknown door to the bedroom from living rooms        |
+| 248 | The unknown babies west of the unknown door to the bedroom from living rooms.       |
+| 249 | The unknown babies west of the unknown door to the bedroom from the living room     |
+| 250 | The unknown babies west of the unknown door to the bedroom from the living room.    |
+| 251 | The unknown babies west of the unknown door to the bedroom from the living rooms    |
+| 252 | The unknown babies west of the unknown door to the bedroom from the living rooms.   |
+| 253 | The unknown babies west of the unknown door to the bedrooms from a living room      |
+| 254 | The unknown babies west of the unknown door to the bedrooms from a living room.     |
+| 255 | The unknown babies west of the unknown door to the bedrooms from living rooms       |
+| 256 | The unknown babies west of the unknown door to the bedrooms from living rooms.      |
+| 257 | The unknown babies west of the unknown door to the bedrooms from the living room    |
+| 258 | The unknown babies west of the unknown door to the bedrooms from the living room.   |
+| 259 | The unknown babies west of the unknown door to the bedrooms from the living rooms   |
+| 260 | The unknown babies west of the unknown door to the bedrooms from the living rooms.  |
+| 261 | The unknown babies west of the unknown doors from a living room to a bedroom        |
+| 262 | The unknown babies west of the unknown doors from a living room to a bedroom.       |
+| 263 | The unknown babies west of the unknown doors from a living room to bedrooms         |
+| 264 | The unknown babies west of the unknown doors from a living room to bedrooms.        |
+| 265 | The unknown babies west of the unknown doors from a living room to the bedroom      |
+| 266 | The unknown babies west of the unknown doors from a living room to the bedroom.     |
+| 267 | The unknown babies west of the unknown doors from a living room to the bedrooms     |
+| 268 | The unknown babies west of the unknown doors from a living room to the bedrooms.    |
+| 269 | The unknown babies west of the unknown doors from a living room, to a bedroom       |
+| 270 | The unknown babies west of the unknown doors from a living room, to the bedroom     |
+| 271 | The unknown babies west of the unknown doors from a living room, to the bedrooms    |
+| 272 | The unknown babies west of the unknown doors from living rooms to a bedroom         |
+| 273 | The unknown babies west of the unknown doors from living rooms to a bedroom.        |
+| 274 | The unknown babies west of the unknown doors from living rooms to bedrooms          |
+| 275 | The unknown babies west of the unknown doors from living rooms to bedrooms.         |
+| 276 | The unknown babies west of the unknown doors from living rooms to the bedroom       |
+| 277 | The unknown babies west of the unknown doors from living rooms to the bedroom.      |
+| 278 | The unknown babies west of the unknown doors from living rooms to the bedrooms      |
+| 279 | The unknown babies west of the unknown doors from living rooms to the bedrooms.     |
+| 280 | The unknown babies west of the unknown doors from living rooms, to a bedroom        |
+| 281 | The unknown babies west of the unknown doors from living rooms, to the bedroom      |
+| 282 | The unknown babies west of the unknown doors from living rooms, to the bedrooms     |
+| 283 | The unknown babies west of the unknown doors from the living room to a bedroom      |
+| 284 | The unknown babies west of the unknown doors from the living room to a bedroom.     |
+| 285 | The unknown babies west of the unknown doors from the living room to bedrooms       |
+| 286 | The unknown babies west of the unknown doors from the living room to bedrooms.      |
+| 287 | The unknown babies west of the unknown doors from the living room to the bedroom    |
+| 288 | The unknown babies west of the unknown doors from the living room to the bedroom.   |
+| 289 | The unknown babies west of the unknown doors from the living room to the bedrooms   |
+| 290 | The unknown babies west of the unknown doors from the living room to the bedrooms.  |
+| 291 | The unknown babies west of the unknown doors from the living room, to a bedroom     |
+| 292 | The unknown babies west of the unknown doors from the living room, to the bedroom   |
+| 293 | The unknown babies west of the unknown doors from the living room, to the bedrooms  |
+| 294 | The unknown babies west of the unknown doors from the living rooms to a bedroom     |
+| 295 | The unknown babies west of the unknown doors from the living rooms to a bedroom.    |
+| 296 | The unknown babies west of the unknown doors from the living rooms to bedrooms      |
+| 297 | The unknown babies west of the unknown doors from the living rooms to bedrooms.     |
+| 298 | The unknown babies west of the unknown doors from the living rooms to the bedroom   |
+| 299 | The unknown babies west of the unknown doors from the living rooms to the bedroom.  |
+| 300 | The unknown babies west of the unknown doors from the living rooms to the bedrooms  |
+| 301 | The unknown babies west of the unknown doors from the living rooms to the bedrooms. |
+| 302 | The unknown babies west of the unknown doors from the living rooms, to a bedroom    |
+| 303 | The unknown babies west of the unknown doors from the living rooms, to the bedroom  |
+| 304 | The unknown babies west of the unknown doors from the living rooms, to the bedrooms |
+| 305 | The unknown babies west of the unknown doors to a bedroom from a living room        |
+| 306 | The unknown babies west of the unknown doors to a bedroom from a living room.       |
+| 307 | The unknown babies west of the unknown doors to a bedroom from living rooms         |
+| 308 | The unknown babies west of the unknown doors to a bedroom from living rooms.        |
+| 309 | The unknown babies west of the unknown doors to a bedroom from the living room      |
+| 310 | The unknown babies west of the unknown doors to a bedroom from the living room.     |
+| 311 | The unknown babies west of the unknown doors to a bedroom from the living rooms     |
+| 312 | The unknown babies west of the unknown doors to a bedroom from the living rooms.    |
+| 313 | The unknown babies west of the unknown doors to a bedroom, from a living room       |
+| 314 | The unknown babies west of the unknown doors to a bedroom, from the living rooms    |
+| 315 | The unknown babies west of the unknown doors to bedrooms from a living room         |
+| 316 | The unknown babies west of the unknown doors to bedrooms from a living room.        |
+| 317 | The unknown babies west of the unknown doors to bedrooms from living rooms          |
+| 318 | The unknown babies west of the unknown doors to bedrooms from living rooms.         |
+| 319 | The unknown babies west of the unknown doors to bedrooms from the living room       |
+| 320 | The unknown babies west of the unknown doors to bedrooms from the living room.      |
+| 321 | The unknown babies west of the unknown doors to bedrooms from the living rooms      |
+| 322 | The unknown babies west of the unknown doors to bedrooms from the living rooms.     |
+| 323 | The unknown babies west of the unknown doors to bedrooms, from a living room        |
+| 324 | The unknown babies west of the unknown doors to bedrooms, from living rooms         |
+| 325 | The unknown babies west of the unknown doors to bedrooms, from the living room      |
+| 326 | The unknown babies west of the unknown doors to bedrooms, from the living rooms     |
+| 327 | The unknown babies west of the unknown doors to the bedroom from a living room      |
+| 328 | The unknown babies west of the unknown doors to the bedroom from a living room.     |
+| 329 | The unknown babies west of the unknown doors to the bedroom from living rooms       |
+| 330 | The unknown babies west of the unknown doors to the bedroom from living rooms.      |
+| 331 | The unknown babies west of the unknown doors to the bedroom from the living room    |
+| 332 | The unknown babies west of the unknown doors to the bedroom from the living room.   |
+| 333 | The unknown babies west of the unknown doors to the bedroom from the living rooms   |
+| 334 | The unknown babies west of the unknown doors to the bedroom from the living rooms.  |
+| 335 | The unknown babies west of the unknown doors to the bedroom, from a living room     |
+| 336 | The unknown babies west of the unknown doors to the bedroom, from the living rooms  |
+| 337 | The unknown babies west of the unknown doors to the bedrooms from a living room     |
+| 338 | The unknown babies west of the unknown doors to the bedrooms from a living room.    |
+| 339 | The unknown babies west of the unknown doors to the bedrooms from living rooms      |
+| 340 | The unknown babies west of the unknown doors to the bedrooms from living rooms.     |
+| 341 | The unknown babies west of the unknown doors to the bedrooms from the living room   |
+| 342 | The unknown babies west of the unknown doors to the bedrooms from the living room.  |
+| 343 | The unknown babies west of the unknown doors to the bedrooms from the living rooms  |
+| 344 | The unknown babies west of the unknown doors to the bedrooms from the living rooms. |
+| 345 | The unknown babies west of the unknown doors to the bedrooms, from a living room    |
+| 346 | The unknown babies west of the unknown doors to the bedrooms, from living rooms     |
+| 347 | The unknown babies west of the unknown doors to the bedrooms, from the living room  |
+| 348 | The unknown babies west of the unknown doors to the bedrooms, from the living rooms |
+| 349 | The unknown babies west of unknown doors from a living room to a bedroom            |
+| 350 | The unknown babies west of unknown doors from a living room to a bedroom.           |
+| 351 | The unknown babies west of unknown doors from a living room to bedrooms             |
+| 352 | The unknown babies west of unknown doors from a living room to bedrooms.            |
+| 353 | The unknown babies west of unknown doors from a living room to the bedroom          |
+| 354 | The unknown babies west of unknown doors from a living room to the bedroom.         |
+| 355 | The unknown babies west of unknown doors from a living room to the bedrooms         |
+| 356 | The unknown babies west of unknown doors from a living room to the bedrooms.        |
+| 357 | The unknown babies west of unknown doors from living rooms to a bedroom             |
+| 358 | The unknown babies west of unknown doors from living rooms to a bedroom.            |
+| 359 | The unknown babies west of unknown doors from living rooms to bedrooms              |
+| 360 | The unknown babies west of unknown doors from living rooms to bedrooms.             |
+| 361 | The unknown babies west of unknown doors from living rooms to the bedroom           |
+| 362 | The unknown babies west of unknown doors from living rooms to the bedrooms          |
+| 363 | The unknown babies west of unknown doors from living rooms to the bedrooms.         |
+| 364 | The unknown babies west of unknown doors from the living room to a bedroom          |
+| 365 | The unknown babies west of unknown doors from the living room to a bedroom.         |
+| 366 | The unknown babies west of unknown doors from the living room to bedrooms           |
+| 367 | The unknown babies west of unknown doors from the living room to bedrooms.          |
+| 368 | The unknown babies west of unknown doors from the living room to the bedroom        |
+| 369 | The unknown babies west of unknown doors from the living room to the bedroom.       |
+| 370 | The unknown babies west of unknown doors from the living room to the bedrooms       |
+| 371 | The unknown babies west of unknown doors from the living room to the bedrooms.      |
+| 372 | The unknown babies west of unknown doors from the living rooms to a bedroom         |
+| 373 | The unknown babies west of unknown doors from the living rooms to a bedroom.        |
+| 374 | The unknown babies west of unknown doors from the living rooms to bedrooms          |
+| 375 | The unknown babies west of unknown doors from the living rooms to bedrooms.         |
+| 376 | The unknown babies west of unknown doors from the living rooms to the bedroom       |
+| 377 | The unknown babies west of unknown doors from the living rooms to the bedroom.      |
+| 378 | The unknown babies west of unknown doors from the living rooms to the bedrooms      |
+| 379 | The unknown babies west of unknown doors from the living rooms to the bedrooms.     |
+| 380 | The unknown babies west of unknown doors to a bedroom from a living room            |
+| 381 | The unknown babies west of unknown doors to a bedroom from a living room.           |
+| 382 | The unknown babies west of unknown doors to a bedroom from living rooms             |
+| 383 | The unknown babies west of unknown doors to a bedroom from living rooms.            |
+| 384 | The unknown babies west of unknown doors to a bedroom from the living room          |
+| 385 | The unknown babies west of unknown doors to a bedroom from the living room.         |
+| 386 | The unknown babies west of unknown doors to a bedroom from the living rooms         |
+| 387 | The unknown babies west of unknown doors to a bedroom from the living rooms.        |
+| 388 | The unknown babies west of unknown doors to bedrooms from a living room             |
+| 389 | The unknown babies west of unknown doors to bedrooms from a living room.            |
+| 390 | The unknown babies west of unknown doors to bedrooms from living rooms              |
+| 391 | The unknown babies west of unknown doors to bedrooms from living rooms.             |
+| 392 | The unknown babies west of unknown doors to bedrooms from the living room           |
+| 393 | The unknown babies west of unknown doors to bedrooms from the living room.          |
+| 394 | The unknown babies west of unknown doors to bedrooms from the living rooms          |
+| 395 | The unknown babies west of unknown doors to bedrooms from the living rooms.         |
+| 396 | The unknown babies west of unknown doors to the bedroom from a living room          |
+| 397 | The unknown babies west of unknown doors to the bedroom from a living room.         |
+| 398 | The unknown babies west of unknown doors to the bedroom from living rooms           |
+| 399 | The unknown babies west of unknown doors to the bedroom from living rooms.          |
+| 400 | The unknown babies west of unknown doors to the bedroom from the living room        |
+| 401 | The unknown babies west of unknown doors to the bedroom from the living room.       |
+| 402 | The unknown babies west of unknown doors to the bedroom from the living rooms       |
+| 403 | The unknown babies west of unknown doors to the bedroom from the living rooms.      |
+| 404 | The unknown babies west of unknown doors to the bedrooms from a living room         |
+| 405 | The unknown babies west of unknown doors to the bedrooms from a living room.        |
+| 406 | The unknown babies west of unknown doors to the bedrooms from living rooms          |
+| 407 | The unknown babies west of unknown doors to the bedrooms from living rooms.         |
+| 408 | The unknown babies west of unknown doors to the bedrooms from the living room       |
+| 409 | The unknown babies west of unknown doors to the bedrooms from the living room.      |
+| 410 | The unknown babies west of unknown doors to the bedrooms from the living rooms      |
+| 411 | The unknown babies west of unknown doors to the bedrooms from the living rooms.     |
+| 412 | The unknown baby west of an unknown door from a living room to the bedroom          |
+| 413 | The unknown baby west of an unknown door from a living room to the bedrooms         |
+| 414 | The unknown baby west of an unknown door from a living room to the bedrooms.        |
+| 415 | The unknown baby west of an unknown door from living rooms to the bedrooms          |
+| 416 | The unknown baby west of an unknown door from the living room to a bedroom          |
+| 417 | The unknown baby west of an unknown door from the living room to the bedroom        |
+| 418 | The unknown baby west of an unknown door from the living room to the bedrooms       |
+| 419 | The unknown baby west of an unknown door from the living room to the bedrooms.      |
+| 420 | The unknown baby west of an unknown door from the living rooms to a bedroom         |
+| 421 | The unknown baby west of an unknown door from the living rooms to the bedroom       |
+| 422 | The unknown baby west of an unknown door from the living rooms to the bedrooms      |
+| 423 | The unknown baby west of an unknown door from the living rooms to the bedrooms.     |
+| 424 | The unknown baby west of an unknown door to a bedroom from a living room            |
+| 425 | The unknown baby west of an unknown door to a bedroom from the living room          |
+| 426 | The unknown baby west of an unknown door to a bedroom from the living rooms         |
+| 427 | The unknown baby west of an unknown door to bedrooms from a living room             |
+| 428 | The unknown baby west of an unknown door to the bedroom from a living room          |
+| 429 | The unknown baby west of an unknown door to the bedroom from living rooms           |
+| 430 | The unknown baby west of an unknown door to the bedroom from the living room        |
+| 431 | The unknown baby west of an unknown door to the bedroom from the living rooms       |
+| 432 | The unknown baby west of an unknown door to the bedroom from the living rooms.      |
+| 433 | The unknown baby west of an unknown door to the bedrooms from a living room         |
+| 434 | The unknown baby west of an unknown door to the bedrooms from the living room       |
+| 435 | The unknown baby west of an unknown door to the bedrooms from the living rooms      |
+| 436 | The unknown baby west of the unknown door from a living room to a bedroom           |
+| 437 | The unknown baby west of the unknown door from a living room to bedrooms            |
+| 438 | The unknown baby west of the unknown door from a living room to bedrooms.           |
+| 439 | The unknown baby west of the unknown door from a living room to the bedroom         |
+| 440 | The unknown baby west of the unknown door from a living room to the bedrooms        |
+| 441 | The unknown baby west of the unknown door from a living room to the bedrooms.       |
+| 442 | The unknown baby west of the unknown door from living rooms to a bedroom            |
+| 443 | The unknown baby west of the unknown door from living rooms to the bedroom          |
+| 444 | The unknown baby west of the unknown door from living rooms to the bedrooms         |
+| 445 | The unknown baby west of the unknown door from living rooms to the bedrooms.        |
+| 446 | The unknown baby west of the unknown door from the living room to a bedroom         |
+| 447 | The unknown baby west of the unknown door from the living room to bedrooms          |
+| 448 | The unknown baby west of the unknown door from the living room to bedrooms.         |
+| 449 | The unknown baby west of the unknown door from the living room to the bedroom       |
+| 450 | The unknown baby west of the unknown door from the living room to the bedrooms      |
+| 451 | The unknown baby west of the unknown door from the living room to the bedrooms.     |
+| 452 | The unknown baby west of the unknown door from the living rooms to a bedroom        |
+| 453 | The unknown baby west of the unknown door from the living rooms to bedrooms         |
+| 454 | The unknown baby west of the unknown door from the living rooms to bedrooms.        |
+| 455 | The unknown baby west of the unknown door from the living rooms to the bedroom      |
+| 456 | The unknown baby west of the unknown door from the living rooms to the bedrooms     |
+| 457 | The unknown baby west of the unknown door from the living rooms to the bedrooms.    |
+| 458 | The unknown baby west of the unknown door to a bedroom from a living room           |
+| 459 | The unknown baby west of the unknown door to a bedroom from living rooms            |
+| 460 | The unknown baby west of the unknown door to a bedroom from the living room         |
+| 461 | The unknown baby west of the unknown door to a bedroom from the living rooms        |
+| 462 | The unknown baby west of the unknown door to a bedroom from the living rooms.       |
+| 463 | The unknown baby west of the unknown door to bedrooms from a living room            |
+| 464 | The unknown baby west of the unknown door to bedrooms from the living room          |
+| 465 | The unknown baby west of the unknown door to bedrooms from the living rooms         |
+| 466 | The unknown baby west of the unknown door to the bedroom from a living room         |
+| 467 | The unknown baby west of the unknown door to the bedroom from a living room.        |
+| 468 | The unknown baby west of the unknown door to the bedroom from living rooms          |
+| 469 | The unknown baby west of the unknown door to the bedroom from living rooms.         |
+| 470 | The unknown baby west of the unknown door to the bedroom from the living room       |
+| 471 | The unknown baby west of the unknown door to the bedroom from the living rooms      |
+| 472 | The unknown baby west of the unknown door to the bedroom from the living rooms.     |
+| 473 | The unknown baby west of the unknown door to the bedrooms from a living room        |
+| 474 | The unknown baby west of the unknown door to the bedrooms from living rooms         |
+| 475 | The unknown baby west of the unknown door to the bedrooms from living rooms.        |
+| 476 | The unknown baby west of the unknown door to the bedrooms from the living room      |
+| 477 | The unknown baby west of the unknown door to the bedrooms from the living rooms     |
+| 478 | The unknown baby west of the unknown door to the bedrooms from the living rooms.    |
+| 479 | The unknown baby west of the unknown doors from a living room to a bedroom          |
+| 480 | The unknown baby west of the unknown doors from a living room to a bedroom.         |
+| 481 | The unknown baby west of the unknown doors from a living room to bedrooms           |
+| 482 | The unknown baby west of the unknown doors from a living room to bedrooms.          |
+| 483 | The unknown baby west of the unknown doors from a living room to the bedroom        |
+| 484 | The unknown baby west of the unknown doors from a living room to the bedroom.       |
+| 485 | The unknown baby west of the unknown doors from a living room to the bedrooms       |
+| 486 | The unknown baby west of the unknown doors from a living room to the bedrooms.      |
+| 487 | The unknown baby west of the unknown doors from living rooms to a bedroom           |
+| 488 | The unknown baby west of the unknown doors from living rooms to a bedroom.          |
+| 489 | The unknown baby west of the unknown doors from living rooms to bedrooms            |
+| 490 | The unknown baby west of the unknown doors from living rooms to bedrooms.           |
+| 491 | The unknown baby west of the unknown doors from living rooms to the bedroom         |
+| 492 | The unknown baby west of the unknown doors from living rooms to the bedrooms        |
+| 493 | The unknown baby west of the unknown doors from living rooms to the bedrooms.       |
+| 494 | The unknown baby west of the unknown doors from the living room to a bedroom        |
+| 495 | The unknown baby west of the unknown doors from the living room to a bedroom.       |
+| 496 | The unknown baby west of the unknown doors from the living room to bedrooms         |
+| 497 | The unknown baby west of the unknown doors from the living room to bedrooms.        |
+| 498 | The unknown baby west of the unknown doors from the living room to the bedroom      |
+| 499 | The unknown baby west of the unknown doors from the living room to the bedroom.     |
+| 500 | The unknown baby west of the unknown doors from the living room to the bedrooms     |
+| 501 | The unknown baby west of the unknown doors from the living room to the bedrooms.    |
+| 502 | The unknown baby west of the unknown doors from the living rooms to a bedroom       |
+| 503 | The unknown baby west of the unknown doors from the living rooms to a bedroom.      |
+| 504 | The unknown baby west of the unknown doors from the living rooms to bedrooms        |
+| 505 | The unknown baby west of the unknown doors from the living rooms to bedrooms.       |
+| 506 | The unknown baby west of the unknown doors from the living rooms to the bedroom     |
+| 507 | The unknown baby west of the unknown doors from the living rooms to the bedroom.    |
+| 508 | The unknown baby west of the unknown doors from the living rooms to the bedrooms    |
+| 509 | The unknown baby west of the unknown doors from the living rooms to the bedrooms.   |
+| 510 | The unknown baby west of the unknown doors to a bedroom from a living room          |
+| 511 | The unknown baby west of the unknown doors to a bedroom from a living room.         |
+| 512 | The unknown baby west of the unknown doors to a bedroom from living rooms           |
+| 513 | The unknown baby west of the unknown doors to a bedroom from living rooms.          |
+| 514 | The unknown baby west of the unknown doors to a bedroom from the living room        |
+| 515 | The unknown baby west of the unknown doors to a bedroom from the living room.       |
+| 516 | The unknown baby west of the unknown doors to a bedroom from the living rooms       |
+| 517 | The unknown baby west of the unknown doors to a bedroom from the living rooms.      |
+| 518 | The unknown baby west of the unknown doors to bedrooms from a living room           |
+| 519 | The unknown baby west of the unknown doors to bedrooms from a living room.          |
+| 520 | The unknown baby west of the unknown doors to bedrooms from living rooms            |
+| 521 | The unknown baby west of the unknown doors to bedrooms from living rooms.           |
+| 522 | The unknown baby west of the unknown doors to bedrooms from the living room         |
+| 523 | The unknown baby west of the unknown doors to bedrooms from the living room.        |
+| 524 | The unknown baby west of the unknown doors to bedrooms from the living rooms        |
+| 525 | The unknown baby west of the unknown doors to bedrooms from the living rooms.       |
+| 526 | The unknown baby west of the unknown doors to the bedroom from a living room        |
+| 527 | The unknown baby west of the unknown doors to the bedroom from a living room.       |
+| 528 | The unknown baby west of the unknown doors to the bedroom from living rooms         |
+| 529 | The unknown baby west of the unknown doors to the bedroom from living rooms.        |
+| 530 | The unknown baby west of the unknown doors to the bedroom from the living room      |
+| 531 | The unknown baby west of the unknown doors to the bedroom from the living room.     |
+| 532 | The unknown baby west of the unknown doors to the bedroom from the living rooms     |
+| 533 | The unknown baby west of the unknown doors to the bedroom from the living rooms.    |
+| 534 | The unknown baby west of the unknown doors to the bedrooms from a living room       |
+| 535 | The unknown baby west of the unknown doors to the bedrooms from a living room.      |
+| 536 | The unknown baby west of the unknown doors to the bedrooms from living rooms        |
+| 537 | The unknown baby west of the unknown doors to the bedrooms from living rooms.       |
+| 538 | The unknown baby west of the unknown doors to the bedrooms from the living room     |
+| 539 | The unknown baby west of the unknown doors to the bedrooms from the living room.    |
+| 540 | The unknown baby west of the unknown doors to the bedrooms from the living rooms    |
+| 541 | The unknown baby west of the unknown doors to the bedrooms from the living rooms.   |
+| 542 | The unknown baby west of unknown doors from a living room to the bedrooms           |
+| 543 | The unknown baby west of unknown doors from a living room to the bedrooms.          |
+| 544 | The unknown baby west of unknown doors from living rooms to the bedrooms            |
+| 545 | The unknown baby west of unknown doors from the living room to the bedrooms         |
+| 546 | The unknown baby west of unknown doors from the living room to the bedrooms.        |
+| 547 | The unknown baby west of unknown doors from the living rooms to the bedrooms        |
+| 548 | The unknown baby west of unknown doors from the living rooms to the bedrooms.       |
+| 549 | The unknown baby west of unknown doors to a bedroom from a living room              |
+| 550 | The unknown baby west of unknown doors to bedrooms from a living room               |
+| 551 | The unknown baby west of unknown doors to the bedroom from a living room            |
+| 552 | The unknown baby west of unknown doors to the bedroom from the living room          |
+| 553 | The unknown baby west of unknown doors to the bedroom from the living rooms         |
+| 554 | The unknown baby west of unknown doors to the bedrooms from a living room           |
+| 555 | The unknown baby west of unknown doors to the bedrooms from the living room         |
+| 556 | The unknown baby west of unknown doors to the bedrooms from the living rooms        |
+| 557 | Unknown babies west of an unknown door from a living room to a bedroom              |
+| 558 | Unknown babies west of an unknown door from a living room to a bedroom.             |
+| 559 | Unknown babies west of an unknown door from a living room to bedrooms               |
+| 560 | Unknown babies west of an unknown door from a living room to bedrooms.              |
+| 561 | Unknown babies west of an unknown door from a living room to the bedroom            |
+| 562 | Unknown babies west of an unknown door from a living room to the bedrooms           |
+| 563 | Unknown babies west of an unknown door from a living room to the bedrooms.          |
+| 564 | Unknown babies west of an unknown door from living rooms to a bedroom               |
+| 565 | Unknown babies west of an unknown door from living rooms to bedrooms                |
+| 566 | Unknown babies west of an unknown door from living rooms to bedrooms.               |
+| 567 | Unknown babies west of an unknown door from living rooms to the bedroom             |
+| 568 | Unknown babies west of an unknown door from living rooms to the bedrooms            |
+| 569 | Unknown babies west of an unknown door from living rooms to the bedrooms.           |
+| 570 | Unknown babies west of an unknown door from the living room to a bedroom            |
+| 571 | Unknown babies west of an unknown door from the living room to a bedroom.           |
+| 572 | Unknown babies west of an unknown door from the living room to bedrooms             |
+| 573 | Unknown babies west of an unknown door from the living room to bedrooms.            |
+| 574 | Unknown babies west of an unknown door from the living room to the bedroom          |
+| 575 | Unknown babies west of an unknown door from the living room to the bedroom.         |
+| 576 | Unknown babies west of an unknown door from the living room to the bedrooms         |
+| 577 | Unknown babies west of an unknown door from the living room to the bedrooms.        |
+| 578 | Unknown babies west of an unknown door from the living rooms to a bedroom           |
+| 579 | Unknown babies west of an unknown door from the living rooms to a bedroom.          |
+| 580 | Unknown babies west of an unknown door from the living rooms to bedrooms            |
+| 581 | Unknown babies west of an unknown door from the living rooms to bedrooms.           |
+| 582 | Unknown babies west of an unknown door from the living rooms to the bedroom         |
+| 583 | Unknown babies west of an unknown door from the living rooms to the bedroom.        |
+| 584 | Unknown babies west of an unknown door from the living rooms to the bedrooms        |
+| 585 | Unknown babies west of an unknown door from the living rooms to the bedrooms.       |
+| 586 | Unknown babies west of an unknown door to a bedroom from a living room              |
+| 587 | Unknown babies west of an unknown door to a bedroom from living rooms               |
+| 588 | Unknown babies west of an unknown door to a bedroom from living rooms.              |
+| 589 | Unknown babies west of an unknown door to a bedroom from the living room            |
+| 590 | Unknown babies west of an unknown door to a bedroom from the living rooms           |
+| 591 | Unknown babies west of an unknown door to a bedroom from the living rooms.          |
+| 592 | Unknown babies west of an unknown door to bedrooms from a living room               |
+| 593 | Unknown babies west of an unknown door to bedrooms from living rooms                |
+| 594 | Unknown babies west of an unknown door to bedrooms from living rooms.               |
+| 595 | Unknown babies west of an unknown door to bedrooms from the living room             |
+| 596 | Unknown babies west of an unknown door to bedrooms from the living rooms            |
+| 597 | Unknown babies west of an unknown door to bedrooms from the living rooms.           |
+| 598 | Unknown babies west of an unknown door to the bedroom from a living room            |
+| 599 | Unknown babies west of an unknown door to the bedroom from a living room.           |
+| 600 | Unknown babies west of an unknown door to the bedroom from living rooms             |
+| 601 | Unknown babies west of an unknown door to the bedroom from living rooms.            |
+| 602 | Unknown babies west of an unknown door to the bedroom from the living room          |
+| 603 | Unknown babies west of an unknown door to the bedroom from the living room.         |
+| 604 | Unknown babies west of an unknown door to the bedroom from the living rooms         |
+| 605 | Unknown babies west of an unknown door to the bedroom from the living rooms.        |
+| 606 | Unknown babies west of an unknown door to the bedrooms from a living room           |
+| 607 | Unknown babies west of an unknown door to the bedrooms from a living room.          |
+| 608 | Unknown babies west of an unknown door to the bedrooms from living rooms            |
+| 609 | Unknown babies west of an unknown door to the bedrooms from living rooms.           |
+| 610 | Unknown babies west of an unknown door to the bedrooms from the living room         |
+| 611 | Unknown babies west of an unknown door to the bedrooms from the living room.        |
+| 612 | Unknown babies west of an unknown door to the bedrooms from the living rooms        |
+| 613 | Unknown babies west of an unknown door to the bedrooms from the living rooms.       |
+| 614 | Unknown babies west of the unknown door from a living room to a bedroom             |
+| 615 | Unknown babies west of the unknown door from a living room to a bedroom.            |
+| 616 | Unknown babies west of the unknown door from a living room to bedrooms              |
+| 617 | Unknown babies west of the unknown door from a living room to bedrooms.             |
+| 618 | Unknown babies west of the unknown door from a living room to the bedroom           |
+| 619 | Unknown babies west of the unknown door from a living room to the bedroom.          |
+| 620 | Unknown babies west of the unknown door from a living room to the bedrooms          |
+| 621 | Unknown babies west of the unknown door from a living room to the bedrooms.         |
+| 622 | Unknown babies west of the unknown door from living rooms to a bedroom              |
+| 623 | Unknown babies west of the unknown door from living rooms to a bedroom.             |
+| 624 | Unknown babies west of the unknown door from living rooms to bedrooms               |
+| 625 | Unknown babies west of the unknown door from living rooms to bedrooms.              |
+| 626 | Unknown babies west of the unknown door from living rooms to the bedroom            |
+| 627 | Unknown babies west of the unknown door from living rooms to the bedroom.           |
+| 628 | Unknown babies west of the unknown door from living rooms to the bedrooms           |
+| 629 | Unknown babies west of the unknown door from living rooms to the bedrooms.          |
+| 630 | Unknown babies west of the unknown door from the living room to a bedroom           |
+| 631 | Unknown babies west of the unknown door from the living room to a bedroom.          |
+| 632 | Unknown babies west of the unknown door from the living room to bedrooms            |
+| 633 | Unknown babies west of the unknown door from the living room to bedrooms.           |
+| 634 | Unknown babies west of the unknown door from the living room to the bedroom         |
+| 635 | Unknown babies west of the unknown door from the living room to the bedroom.        |
+| 636 | Unknown babies west of the unknown door from the living room to the bedrooms        |
+| 637 | Unknown babies west of the unknown door from the living room to the bedrooms.       |
+| 638 | Unknown babies west of the unknown door from the living rooms to a bedroom          |
+| 639 | Unknown babies west of the unknown door from the living rooms to a bedroom.         |
+| 640 | Unknown babies west of the unknown door from the living rooms to bedrooms           |
+| 641 | Unknown babies west of the unknown door from the living rooms to bedrooms.          |
+| 642 | Unknown babies west of the unknown door from the living rooms to the bedroom        |
+| 643 | Unknown babies west of the unknown door from the living rooms to the bedroom.       |
+| 644 | Unknown babies west of the unknown door from the living rooms to the bedrooms       |
+| 645 | Unknown babies west of the unknown door from the living rooms to the bedrooms.      |
+| 646 | Unknown babies west of the unknown door to a bedroom from a living room             |
+| 647 | Unknown babies west of the unknown door to a bedroom from a living room.            |
+| 648 | Unknown babies west of the unknown door to a bedroom from living rooms              |
+| 649 | Unknown babies west of the unknown door to a bedroom from living rooms.             |
+| 650 | Unknown babies west of the unknown door to a bedroom from the living room           |
+| 651 | Unknown babies west of the unknown door to a bedroom from the living room.          |
+| 652 | Unknown babies west of the unknown door to a bedroom from the living rooms          |
+| 653 | Unknown babies west of the unknown door to a bedroom from the living rooms.         |
+| 654 | Unknown babies west of the unknown door to bedrooms from a living room              |
+| 655 | Unknown babies west of the unknown door to bedrooms from a living room.             |
+| 656 | Unknown babies west of the unknown door to bedrooms from living rooms               |
+| 657 | Unknown babies west of the unknown door to bedrooms from living rooms.              |
+| 658 | Unknown babies west of the unknown door to bedrooms from the living room            |
+| 659 | Unknown babies west of the unknown door to bedrooms from the living room.           |
+| 660 | Unknown babies west of the unknown door to bedrooms from the living rooms           |
+| 661 | Unknown babies west of the unknown door to bedrooms from the living rooms.          |
+| 662 | Unknown babies west of the unknown door to the bedroom from a living room           |
+| 663 | Unknown babies west of the unknown door to the bedroom from a living room.          |
+| 664 | Unknown babies west of the unknown door to the bedroom from living rooms            |
+| 665 | Unknown babies west of the unknown door to the bedroom from living rooms.           |
+| 666 | Unknown babies west of the unknown door to the bedroom from the living room         |
+| 667 | Unknown babies west of the unknown door to the bedroom from the living room.        |
+| 668 | Unknown babies west of the unknown door to the bedroom from the living rooms        |
+| 669 | Unknown babies west of the unknown door to the bedroom from the living rooms.       |
+| 670 | Unknown babies west of the unknown door to the bedrooms from a living room          |
+| 671 | Unknown babies west of the unknown door to the bedrooms from a living room.         |
+| 672 | Unknown babies west of the unknown door to the bedrooms from living rooms           |
+| 673 | Unknown babies west of the unknown door to the bedrooms from living rooms.          |
+| 674 | Unknown babies west of the unknown door to the bedrooms from the living room        |
+| 675 | Unknown babies west of the unknown door to the bedrooms from the living room.       |
+| 676 | Unknown babies west of the unknown door to the bedrooms from the living rooms       |
+| 677 | Unknown babies west of the unknown door to the bedrooms from the living rooms.      |
+| 678 | Unknown babies west of the unknown doors from a living room to a bedroom            |
+| 679 | Unknown babies west of the unknown doors from a living room to a bedroom.           |
+| 680 | Unknown babies west of the unknown doors from a living room to bedrooms             |
+| 681 | Unknown babies west of the unknown doors from a living room to bedrooms.            |
+| 682 | Unknown babies west of the unknown doors from a living room to the bedroom          |
+| 683 | Unknown babies west of the unknown doors from a living room to the bedroom.         |
+| 684 | Unknown babies west of the unknown doors from a living room to the bedrooms         |
+| 685 | Unknown babies west of the unknown doors from a living room to the bedrooms.        |
+| 686 | Unknown babies west of the unknown doors from a living room, to the bedrooms        |
+| 687 | Unknown babies west of the unknown doors from living rooms to a bedroom             |
+| 688 | Unknown babies west of the unknown doors from living rooms to a bedroom.            |
+| 689 | Unknown babies west of the unknown doors from living rooms to bedrooms              |
+| 690 | Unknown babies west of the unknown doors from living rooms to bedrooms.             |
+| 691 | Unknown babies west of the unknown doors from living rooms to the bedroom           |
+| 692 | Unknown babies west of the unknown doors from living rooms to the bedroom.          |
+| 693 | Unknown babies west of the unknown doors from living rooms to the bedrooms          |
+| 694 | Unknown babies west of the unknown doors from living rooms to the bedrooms.         |
+| 695 | Unknown babies west of the unknown doors from living rooms, to the bedrooms         |
+| 696 | Unknown babies west of the unknown doors from the living room to a bedroom          |
+| 697 | Unknown babies west of the unknown doors from the living room to a bedroom.         |
+| 698 | Unknown babies west of the unknown doors from the living room to bedrooms           |
+| 699 | Unknown babies west of the unknown doors from the living room to bedrooms.          |
+| 700 | Unknown babies west of the unknown doors from the living room to the bedroom        |
+| 701 | Unknown babies west of the unknown doors from the living room to the bedroom.       |
+| 702 | Unknown babies west of the unknown doors from the living room to the bedrooms       |
+| 703 | Unknown babies west of the unknown doors from the living room to the bedrooms.      |
+| 704 | Unknown babies west of the unknown doors from the living room, to the bedrooms      |
+| 705 | Unknown babies west of the unknown doors from the living rooms to a bedroom         |
+| 706 | Unknown babies west of the unknown doors from the living rooms to a bedroom.        |
+| 707 | Unknown babies west of the unknown doors from the living rooms to bedrooms          |
+| 708 | Unknown babies west of the unknown doors from the living rooms to bedrooms.         |
+| 709 | Unknown babies west of the unknown doors from the living rooms to the bedroom       |
+| 710 | Unknown babies west of the unknown doors from the living rooms to the bedroom.      |
+| 711 | Unknown babies west of the unknown doors from the living rooms to the bedrooms      |
+| 712 | Unknown babies west of the unknown doors from the living rooms to the bedrooms.     |
+| 713 | Unknown babies west of the unknown doors from the living rooms, to the bedrooms     |
+| 714 | Unknown babies west of the unknown doors to a bedroom from a living room            |
+| 715 | Unknown babies west of the unknown doors to a bedroom from a living room.           |
+| 716 | Unknown babies west of the unknown doors to a bedroom from living rooms             |
+| 717 | Unknown babies west of the unknown doors to a bedroom from living rooms.            |
+| 718 | Unknown babies west of the unknown doors to a bedroom from the living room          |
+| 719 | Unknown babies west of the unknown doors to a bedroom from the living room.         |
+| 720 | Unknown babies west of the unknown doors to a bedroom from the living rooms         |
+| 721 | Unknown babies west of the unknown doors to a bedroom from the living rooms.        |
+| 722 | Unknown babies west of the unknown doors to bedrooms from a living room             |
+| 723 | Unknown babies west of the unknown doors to bedrooms from a living room.            |
+| 724 | Unknown babies west of the unknown doors to bedrooms from living rooms              |
+| 725 | Unknown babies west of the unknown doors to bedrooms from living rooms.             |
+| 726 | Unknown babies west of the unknown doors to bedrooms from the living room           |
+| 727 | Unknown babies west of the unknown doors to bedrooms from the living room.          |
+| 728 | Unknown babies west of the unknown doors to bedrooms from the living rooms          |
+| 729 | Unknown babies west of the unknown doors to bedrooms from the living rooms.         |
+| 730 | Unknown babies west of the unknown doors to the bedroom from a living room          |
+| 731 | Unknown babies west of the unknown doors to the bedroom from a living room.         |
+| 732 | Unknown babies west of the unknown doors to the bedroom from living rooms           |
+| 733 | Unknown babies west of the unknown doors to the bedroom from living rooms.          |
+| 734 | Unknown babies west of the unknown doors to the bedroom from the living room        |
+| 735 | Unknown babies west of the unknown doors to the bedroom from the living room.       |
+| 736 | Unknown babies west of the unknown doors to the bedroom from the living rooms       |
+| 737 | Unknown babies west of the unknown doors to the bedroom from the living rooms.      |
+| 738 | Unknown babies west of the unknown doors to the bedrooms from a living room         |
+| 739 | Unknown babies west of the unknown doors to the bedrooms from a living room.        |
+| 740 | Unknown babies west of the unknown doors to the bedrooms from living rooms          |
+| 741 | Unknown babies west of the unknown doors to the bedrooms from living rooms.         |
+| 742 | Unknown babies west of the unknown doors to the bedrooms from the living room       |
+| 743 | Unknown babies west of the unknown doors to the bedrooms from the living room.      |
+| 744 | Unknown babies west of the unknown doors to the bedrooms from the living rooms      |
+| 745 | Unknown babies west of the unknown doors to the bedrooms from the living rooms.     |
+| 746 | Unknown babies west of unknown doors from a living room to a bedroom                |
+| 747 | Unknown babies west of unknown doors from a living room to bedrooms                 |
+| 748 | Unknown babies west of unknown doors from a living room to bedrooms.                |
+| 749 | Unknown babies west of unknown doors from a living room to the bedroom              |
+| 750 | Unknown babies west of unknown doors from a living room to the bedrooms             |
+| 751 | Unknown babies west of unknown doors from a living room to the bedrooms.            |
+| 752 | Unknown babies west of unknown doors from living rooms to the bedrooms              |
+| 753 | Unknown babies west of unknown doors from living rooms to the bedrooms.             |
+| 754 | Unknown babies west of unknown doors from the living room to a bedroom              |
+| 755 | Unknown babies west of unknown doors from the living room to a bedroom.             |
+| 756 | Unknown babies west of unknown doors from the living room to bedrooms               |
+| 757 | Unknown babies west of unknown doors from the living room to bedrooms.              |
+| 758 | Unknown babies west of unknown doors from the living room to the bedroom            |
+| 759 | Unknown babies west of unknown doors from the living room to the bedrooms           |
+| 760 | Unknown babies west of unknown doors from the living room to the bedrooms.          |
+| 761 | Unknown babies west of unknown doors from the living rooms to a bedroom             |
+| 762 | Unknown babies west of unknown doors from the living rooms to a bedroom.            |
+| 763 | Unknown babies west of unknown doors from the living rooms to bedrooms              |
+| 764 | Unknown babies west of unknown doors from the living rooms to bedrooms.             |
+| 765 | Unknown babies west of unknown doors from the living rooms to the bedroom           |
+| 766 | Unknown babies west of unknown doors from the living rooms to the bedrooms          |
+| 767 | Unknown babies west of unknown doors from the living rooms to the bedrooms.         |
+| 768 | Unknown babies west of unknown doors to a bedroom from a living room                |
+| 769 | Unknown babies west of unknown doors to a bedroom from living rooms                 |
+| 770 | Unknown babies west of unknown doors to a bedroom from living rooms.                |
+| 771 | Unknown babies west of unknown doors to a bedroom from the living room              |
+| 772 | Unknown babies west of unknown doors to a bedroom from the living rooms             |
+| 773 | Unknown babies west of unknown doors to a bedroom from the living rooms.            |
+| 774 | Unknown babies west of unknown doors to bedrooms from a living room                 |
+| 775 | Unknown babies west of unknown doors to bedrooms from living rooms                  |
+| 776 | Unknown babies west of unknown doors to bedrooms from the living room               |
+| 777 | Unknown babies west of unknown doors to bedrooms from the living rooms              |
+| 778 | Unknown babies west of unknown doors to bedrooms from the living rooms.             |
+| 779 | Unknown babies west of unknown doors to the bedroom from a living room              |
+| 780 | Unknown babies west of unknown doors to the bedroom from a living room.             |
+| 781 | Unknown babies west of unknown doors to the bedroom from living rooms               |
+| 782 | Unknown babies west of unknown doors to the bedroom from living rooms.              |
+| 783 | Unknown babies west of unknown doors to the bedroom from the living room            |
+| 784 | Unknown babies west of unknown doors to the bedroom from the living room.           |
+| 785 | Unknown babies west of unknown doors to the bedroom from the living rooms           |
+| 786 | Unknown babies west of unknown doors to the bedroom from the living rooms.          |
+| 787 | Unknown babies west of unknown doors to the bedrooms from a living room             |
+| 788 | Unknown babies west of unknown doors to the bedrooms from a living room.            |
+| 789 | Unknown babies west of unknown doors to the bedrooms from living rooms              |
+| 790 | Unknown babies west of unknown doors to the bedrooms from living rooms.             |
+| 791 | Unknown babies west of unknown doors to the bedrooms from the living room           |
+| 792 | Unknown babies west of unknown doors to the bedrooms from the living room.          |
+| 793 | Unknown babies west of unknown doors to the bedrooms from the living rooms          |
+| 794 | Unknown babies west of unknown doors to the bedrooms from the living rooms.         |
+| 795 | Unknown baby west of an unknown door from a living room to the bedrooms             |
+| 796 | Unknown baby west of an unknown door from the living room to the bedrooms           |
+| 797 | Unknown baby west of an unknown door from the living rooms to the bedrooms          |
+| 798 | Unknown baby west of the unknown door from a living room to the bedrooms            |
+| 799 | Unknown baby west of the unknown door from living rooms to the bedrooms             |
+| 800 | Unknown baby west of the unknown door from the living room to the bedrooms          |
+| 801 | Unknown baby west of the unknown door from the living rooms to the bedrooms         |
+| 802 | Unknown baby west of the unknown door to the bedroom from a living room             |
+| 803 | Unknown baby west of the unknown door to the bedroom from the living room           |
+| 804 | Unknown baby west of the unknown door to the bedroom from the living rooms          |
+| 805 | Unknown baby west of the unknown door to the bedrooms from a living room            |
+| 806 | Unknown baby west of the unknown door to the bedrooms from the living room          |
+| 807 | Unknown baby west of the unknown door to the bedrooms from the living rooms         |
+| 808 | Unknown baby west of the unknown doors from a living room to a bedroom              |
+| 809 | Unknown baby west of the unknown doors from a living room to bedrooms               |
+| 810 | Unknown baby west of the unknown doors from a living room to the bedroom            |
+| 811 | Unknown baby west of the unknown doors from a living room to the bedrooms           |
+| 812 | Unknown baby west of the unknown doors from a living room to the bedrooms.          |
+| 813 | Unknown baby west of the unknown doors from living rooms to the bedroom             |
+| 814 | Unknown baby west of the unknown doors from living rooms to the bedrooms            |
+| 815 | Unknown baby west of the unknown doors from living rooms to the bedrooms.           |
+| 816 | Unknown baby west of the unknown doors from the living room to a bedroom            |
+| 817 | Unknown baby west of the unknown doors from the living room to bedrooms             |
+| 818 | Unknown baby west of the unknown doors from the living room to bedrooms.            |
+| 819 | Unknown baby west of the unknown doors from the living room to the bedroom          |
+| 820 | Unknown baby west of the unknown doors from the living room to the bedrooms         |
+| 821 | Unknown baby west of the unknown doors from the living room to the bedrooms.        |
+| 822 | Unknown baby west of the unknown doors from the living rooms to a bedroom           |
+| 823 | Unknown baby west of the unknown doors from the living rooms to bedrooms            |
+| 824 | Unknown baby west of the unknown doors from the living rooms to bedrooms.           |
+| 825 | Unknown baby west of the unknown doors from the living rooms to the bedroom         |
+| 826 | Unknown baby west of the unknown doors from the living rooms to the bedrooms        |
+| 827 | Unknown baby west of the unknown doors from the living rooms to the bedrooms.       |
+| 828 | Unknown baby west of the unknown doors to a bedroom from a living room              |
+| 829 | Unknown baby west of the unknown doors to a bedroom from the living room            |
+| 830 | Unknown baby west of the unknown doors to a bedroom from the living rooms           |
+| 831 | Unknown baby west of the unknown doors to bedrooms from a living room               |
+| 832 | Unknown baby west of the unknown doors to bedrooms from the living room             |
+| 833 | Unknown baby west of the unknown doors to bedrooms from the living rooms            |
+| 834 | Unknown baby west of the unknown doors to the bedroom from a living room            |
+| 835 | Unknown baby west of the unknown doors to the bedroom from living rooms             |
+| 836 | Unknown baby west of the unknown doors to the bedroom from living rooms.            |
+| 837 | Unknown baby west of the unknown doors to the bedroom from the living room          |
+| 838 | Unknown baby west of the unknown doors to the bedroom from the living rooms         |
+| 839 | Unknown baby west of the unknown doors to the bedroom from the living rooms.        |
+| 840 | Unknown baby west of the unknown doors to the bedrooms from a living room           |
+| 841 | Unknown baby west of the unknown doors to the bedrooms from living rooms            |
+| 842 | Unknown baby west of the unknown doors to the bedrooms from living rooms.           |
+| 843 | Unknown baby west of the unknown doors to the bedrooms from the living room         |
+| 844 | Unknown baby west of the unknown doors to the bedrooms from the living rooms        |
+| 845 | Unknown baby west of the unknown doors to the bedrooms from the living rooms.       |
+| 846 | Unknown baby west of unknown doors from the living room to the bedrooms             |
+| 847 | Unknown baby west of unknown doors from the living rooms to the bedrooms            |
++-----+-------------------------------------------------------------------------------------+
+

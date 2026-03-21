@@ -1,0 +1,1105 @@
+GRAPH NAME: idKitchen1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 888   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------------------+
+|                                     GOLD OUTPUTS                                     |
++-------------------------------------------------------------------------+------------+
+| Gold Output                                                             | Generated? |
++-------------------------------------------------------------------------+------------+
+| the bare kitchen east of the open door from the bedroom to the bathroom | True       |
++-------------------------------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------+
+|                                          NODE METRICS                                          |
++--------------------------+--------------+---------------+------------------+-------------------+
+| Node                     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------------------+--------------+---------------+------------------+-------------------+
+| idKitchen1               | True         | True          | Covered          | Included          |
+| bare                     | True         | True          | Covered          | Included          |
+| idBedroomToBathroomDoor1 | True         | True          | Covered          | Included          |
+| open                     | True         | True          | Covered          | Included          |
++--------------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                              EDGE METRICS                                                                             |
++-------------------------------------------+--------------------------+--------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                      | Parent                   | Child                    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-------------------------------------------+--------------------------+--------------------------+--------------+---------------+------------------+-------------------+
+| idKitchen1_prop_idDescriptor              | idKitchen1               | bare                     | True         | True          | Covered          | Included          |
+| isEastOf                                  | idKitchen1               | idBedroomToBathroomDoor1 | True         | True          | Covered          | Included          |
+| idBedroomToBathroomDoor1_prop_idOpenState | idBedroomToBathroomDoor1 | open                     | True         | True          | Covered          | Included          |
++-------------------------------------------+--------------------------+--------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h488                                                                      |
+|               |   INDEX: x487                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h528 ARG0: e525 ARG1: u526 ARG2: x527 ]               |
+|               |           [ def_implicit_q LBL: h539 ARG0: x536 RSTR: h537 BODY: h538 ]          |
+|               |           [ _east_a_1 LBL: h524 ARG0: i521 ARG1: x522 ARG2: u523 ]               |
+|               |           [ def_udef_a_q LBL: h534 ARG0: x531 RSTR: h532 BODY: h533 ]            |
+|               |           [ _open_a_to LBL: h520 ARG0: e517 ARG1: u518 ARG2: u519 ]              |
+|               |           [ _to_p LBL: h511 ARG0: e508 ARG1: u509 ARG2: i510 ]                   |
+|               |           [ def_udef_a_q LBL: h515 ARG0: x512 RSTR: h513 BODY: h514 ]            |
+|               |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|               |           [ _from_p LBL: h500 ARG0: e497 ARG1: u498 ARG2: u499 ]                 |
+|               |           [ def_udef_a_q LBL: h504 ARG0: x501 RSTR: h502 BODY: h503 ]            |
+|               |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|               |           [ _door_n_1 LBL: h494 ARG0: x493 ]                                     |
+|               |           [ place_n LBL: h530 ARG0: x529 ]                                       |
+|               |           [ _bare_a_of LBL: h492 ARG0: e489 ARG1: u490 ARG2: u491 ]              |
+|               |           [ _kitchen_n_1 LBL: h488 ARG0: x487 ] >                                |
+|               |   HCONS: < h513 qeq h507 h502 qeq h496 h532 qeq h494 h537 qeq h530 >             |
+|               |   EQS: < x512 eq x506 h511 eq h516 i510 eq x512 x501 eq x495 h500 eq h505 u499   |
+|               | eq x501 h500 eq h494 u498 eq x493 h511 eq h494 u509 eq x493 h520 eq h494 u518 eq |
+|               | x493 x531 eq x493 h524 eq h535 u523 eq x531 h524 eq h530 x522 eq x529 x536 eq    |
+|               | x529 h528 eq h540 x527 eq x536 h492 eq h488 u490 eq x487 h528 eq h488 u526 eq    |
+|               | x487 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h488                                                                      |
+|               |   INDEX: x487                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h488 ARG0: e525 ARG1: x487 ARG2: x522 ]               |
+|               |           [ def_implicit_q LBL: h539 ARG0: x522 RSTR: h537 BODY: h538 ]          |
+|               |           [ _east_a_1 LBL: h524 ARG0: i521 ARG1: x522 ARG2: x493 ]               |
+|               |           [ def_udef_a_q LBL: h534 ARG0: x493 RSTR: h532 BODY: h533 ]            |
+|               |           [ _open_a_to LBL: h494 ARG0: e517 ARG1: x493 ARG2: u519 ]              |
+|               |           [ _to_p LBL: h494 ARG0: e508 ARG1: x493 ARG2: x506 ]                   |
+|               |           [ def_udef_a_q LBL: h515 ARG0: x506 RSTR: h513 BODY: h514 ]            |
+|               |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|               |           [ _from_p LBL: h494 ARG0: e497 ARG1: x493 ARG2: x495 ]                 |
+|               |           [ def_udef_a_q LBL: h504 ARG0: x495 RSTR: h502 BODY: h503 ]            |
+|               |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|               |           [ _door_n_1 LBL: h494 ARG0: x493 ]                                     |
+|               |           [ place_n LBL: h524 ARG0: x522 ]                                       |
+|               |           [ _bare_a_of LBL: h488 ARG0: e489 ARG1: x487 ARG2: u491 ]              |
+|               |           [ _kitchen_n_1 LBL: h488 ARG0: x487 ] >                                |
+|               |   HCONS: < h513 qeq h507 h502 qeq h496 h532 qeq h494 h537 qeq h524 > ]           |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h549                                                                      |
+|               |   INDEX: e546                                                                    |
+|               |   RELS: < [ unknown LBL: h545 ARG: x487 ARG0: e546 ]                             |
+|               |           [ def_udef_a_q LBL: h544 ARG0: x487 RSTR: h542 BODY: h543 ]            |
+|               |           [ loc_nonsp LBL: h488 ARG0: e525 ARG1: x487 ARG2: x522 ]               |
+|               |           [ def_implicit_q LBL: h539 ARG0: x522 RSTR: h537 BODY: h538 ]          |
+|               |           [ _east_a_1 LBL: h524 ARG0: i521 ARG1: x522 ARG2: x493 ]               |
+|               |           [ def_udef_a_q LBL: h534 ARG0: x493 RSTR: h532 BODY: h533 ]            |
+|               |           [ _open_a_to LBL: h494 ARG0: e517 ARG1: x493 ARG2: u519 ]              |
+|               |           [ _to_p LBL: h494 ARG0: e508 ARG1: x493 ARG2: x506 ]                   |
+|               |           [ def_udef_a_q LBL: h515 ARG0: x506 RSTR: h513 BODY: h514 ]            |
+|               |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|               |           [ _from_p LBL: h494 ARG0: e497 ARG1: x493 ARG2: x495 ]                 |
+|               |           [ def_udef_a_q LBL: h504 ARG0: x495 RSTR: h502 BODY: h503 ]            |
+|               |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|               |           [ _door_n_1 LBL: h494 ARG0: x493 ]                                     |
+|               |           [ place_n LBL: h524 ARG0: x522 ]                                       |
+|               |           [ _bare_a_of LBL: h488 ARG0: e489 ARG1: x487 ARG2: u491 ]              |
+|               |           [ _kitchen_n_1 LBL: h488 ARG0: x487 ] >                                |
+|               |   HCONS: < h513 qeq h507 h502 qeq h496 h532 qeq h494 h537 qeq h524 h542 qeq h488 |
+|               | h549 qeq h545 > ]                                                                |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                |
++--------------------------+----------------------------------------------------------------------------------+
+| Node                     | Generated SEMENT                                                                 |
++--------------------------+----------------------------------------------------------------------------------+
+| idKitchen1               | [ TOP: h488                                                                      |
+|                          |   INDEX: x487                                                                    |
+|                          |   RELS: < [ _kitchen_n_1 LBL: h488 ARG0: x487 ] > ]                              |
++--------------------------+----------------------------------------------------------------------------------+
+| bare                     | [ TOP: h492                                                                      |
+|                          |   INDEX: e489                                                                    |
+|                          |   RELS: < [ _bare_a_of LBL: h492 ARG0: e489 ARG1: u490 ARG2: u491 ] >            |
+|                          |   SLOTS: < ARG1: u490 ARG2: u491 > ]                                             |
++--------------------------+----------------------------------------------------------------------------------+
+| idBedroomToBathroomDoor1 | [ TOP: h494                                                                      |
+|                          |   INDEX: x493                                                                    |
+|                          |   RELS: < [ _to_p LBL: h511 ARG0: e508 ARG1: u509 ARG2: i510 ]                   |
+|                          |           [ def_udef_a_q LBL: h515 ARG0: x512 RSTR: h513 BODY: h514 ]            |
+|                          |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|                          |           [ _from_p LBL: h500 ARG0: e497 ARG1: u498 ARG2: u499 ]                 |
+|                          |           [ def_udef_a_q LBL: h504 ARG0: x501 RSTR: h502 BODY: h503 ]            |
+|                          |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|                          |           [ _door_n_1 LBL: h494 ARG0: x493 ] >                                   |
+|                          |   HCONS: < h513 qeq h507 h502 qeq h496 >                                         |
+|                          |   EQS: < x512 eq x506 h511 eq h516 i510 eq x512 x501 eq x495 h500 eq h505 u499   |
+|                          | eq x501 h500 eq h494 u498 eq x493 h511 eq h494 u509 eq x493 > ]                  |
++--------------------------+----------------------------------------------------------------------------------+
+| open                     | [ TOP: h520                                                                      |
+|                          |   INDEX: e517                                                                    |
+|                          |   RELS: < [ _open_a_to LBL: h520 ARG0: e517 ARG1: u518 ARG2: u519 ] >            |
+|                          |   SLOTS: < ARG1: u518 ARG2: u519 > ]                                             |
++--------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                    EDGE SEMENTS                                                                                    |
++-------------------------------------------+--------------------------+--------------------------+----------------------------------------------------------------------------------+
+| Edge                                      | Parent                   | Child                    | Generated SEMENT                                                                 |
++-------------------------------------------+--------------------------+--------------------------+----------------------------------------------------------------------------------+
+| idKitchen1_prop_idDescriptor              | idKitchen1               | bare                     | [ TOP: h488                                                                      |
+|                                           |                          |                          |   INDEX: x487                                                                    |
+|                                           |                          |                          |   RELS: < [ _bare_a_of LBL: h492 ARG0: e489 ARG1: u490 ARG2: u491 ]              |
+|                                           |                          |                          |           [ _kitchen_n_1 LBL: h488 ARG0: x487 ] >                                |
+|                                           |                          |                          |   EQS: < h492 eq h488 u490 eq x487 > ]                                           |
++-------------------------------------------+--------------------------+--------------------------+----------------------------------------------------------------------------------+
+| isEastOf                                  | idKitchen1               | idBedroomToBathroomDoor1 | [ TOP: h488                                                                      |
+|                                           |                          |                          |   INDEX: x487                                                                    |
+|                                           |                          |                          |   RELS: < [ loc_nonsp LBL: h528 ARG0: e525 ARG1: u526 ARG2: x527 ]               |
+|                                           |                          |                          |           [ def_implicit_q LBL: h539 ARG0: x536 RSTR: h537 BODY: h538 ]          |
+|                                           |                          |                          |           [ _east_a_1 LBL: h524 ARG0: i521 ARG1: x522 ARG2: u523 ]               |
+|                                           |                          |                          |           [ def_udef_a_q LBL: h534 ARG0: x531 RSTR: h532 BODY: h533 ]            |
+|                                           |                          |                          |           [ _open_a_to LBL: h520 ARG0: e517 ARG1: u518 ARG2: u519 ]              |
+|                                           |                          |                          |           [ _to_p LBL: h511 ARG0: e508 ARG1: u509 ARG2: i510 ]                   |
+|                                           |                          |                          |           [ def_udef_a_q LBL: h515 ARG0: x512 RSTR: h513 BODY: h514 ]            |
+|                                           |                          |                          |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|                                           |                          |                          |           [ _from_p LBL: h500 ARG0: e497 ARG1: u498 ARG2: u499 ]                 |
+|                                           |                          |                          |           [ def_udef_a_q LBL: h504 ARG0: x501 RSTR: h502 BODY: h503 ]            |
+|                                           |                          |                          |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|                                           |                          |                          |           [ _door_n_1 LBL: h494 ARG0: x493 ]                                     |
+|                                           |                          |                          |           [ place_n LBL: h530 ARG0: x529 ]                                       |
+|                                           |                          |                          |           [ _bare_a_of LBL: h492 ARG0: e489 ARG1: u490 ARG2: u491 ]              |
+|                                           |                          |                          |           [ _kitchen_n_1 LBL: h488 ARG0: x487 ] >                                |
+|                                           |                          |                          |   HCONS: < h513 qeq h507 h502 qeq h496 h532 qeq h494 h537 qeq h530 >             |
+|                                           |                          |                          |   EQS: < x512 eq x506 h511 eq h516 i510 eq x512 x501 eq x495 h500 eq h505 u499   |
+|                                           |                          |                          | eq x501 h500 eq h494 u498 eq x493 h511 eq h494 u509 eq x493 h520 eq h494 u518 eq |
+|                                           |                          |                          | x493 x531 eq x493 h524 eq h535 u523 eq x531 h524 eq h530 x522 eq x529 x536 eq    |
+|                                           |                          |                          | x529 h528 eq h540 x527 eq x536 h492 eq h488 u490 eq x487 h528 eq h488 u526 eq    |
+|                                           |                          |                          | x487 > ]                                                                         |
++-------------------------------------------+--------------------------+--------------------------+----------------------------------------------------------------------------------+
+| idBedroomToBathroomDoor1_prop_idOpenState | idBedroomToBathroomDoor1 | open                     | [ TOP: h494                                                                      |
+|                                           |                          |                          |   INDEX: x493                                                                    |
+|                                           |                          |                          |   RELS: < [ _open_a_to LBL: h520 ARG0: e517 ARG1: u518 ARG2: u519 ]              |
+|                                           |                          |                          |           [ _to_p LBL: h511 ARG0: e508 ARG1: u509 ARG2: i510 ]                   |
+|                                           |                          |                          |           [ def_udef_a_q LBL: h515 ARG0: x512 RSTR: h513 BODY: h514 ]            |
+|                                           |                          |                          |           [ _bathroom_n_1 LBL: h507 ARG0: x506 ]                                 |
+|                                           |                          |                          |           [ _from_p LBL: h500 ARG0: e497 ARG1: u498 ARG2: u499 ]                 |
+|                                           |                          |                          |           [ def_udef_a_q LBL: h504 ARG0: x501 RSTR: h502 BODY: h503 ]            |
+|                                           |                          |                          |           [ _bedroom_n_1 LBL: h496 ARG0: x495 ]                                  |
+|                                           |                          |                          |           [ _door_n_1 LBL: h494 ARG0: x493 ] >                                   |
+|                                           |                          |                          |   HCONS: < h513 qeq h507 h502 qeq h496 >                                         |
+|                                           |                          |                          |   EQS: < x512 eq x506 h511 eq h516 i510 eq x512 x501 eq x495 h500 eq h505 u499   |
+|                                           |                          |                          | eq x501 h500 eq h494 u498 eq x493 h511 eq h494 u509 eq x493 h520 eq h494 u518 eq |
+|                                           |                          |                          | x493 > ]                                                                         |
++-------------------------------------------+--------------------------+--------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                               GENERATED ENGLISH TEXT                               |
++-----+------------------------------------------------------------------------------+
+| #   | Generated Text                                                               |
++-----+------------------------------------------------------------------------------+
+| 1   | A bare kitchen east of an open door from a bedroom to a bathroom             |
+| 2   | A bare kitchen east of an open door from a bedroom to a bathroom.            |
+| 3   | A bare kitchen east of an open door from a bedroom to bathrooms              |
+| 4   | A bare kitchen east of an open door from a bedroom to bathrooms.             |
+| 5   | A bare kitchen east of an open door from a bedroom to the bathroom           |
+| 6   | A bare kitchen east of an open door from a bedroom to the bathroom.          |
+| 7   | A bare kitchen east of an open door from a bedroom to the bathrooms          |
+| 8   | A bare kitchen east of an open door from a bedroom to the bathrooms.         |
+| 9   | A bare kitchen east of an open door from bedrooms to a bathroom              |
+| 10  | A bare kitchen east of an open door from bedrooms to a bathroom.             |
+| 11  | A bare kitchen east of an open door from bedrooms to bathrooms               |
+| 12  | A bare kitchen east of an open door from bedrooms to bathrooms.              |
+| 13  | A bare kitchen east of an open door from bedrooms to the bathroom            |
+| 14  | A bare kitchen east of an open door from bedrooms to the bathroom.           |
+| 15  | A bare kitchen east of an open door from bedrooms to the bathrooms           |
+| 16  | A bare kitchen east of an open door from bedrooms to the bathrooms.          |
+| 17  | A bare kitchen east of an open door from bedrooms, to the bathroom           |
+| 18  | A bare kitchen east of an open door from bedrooms, to the bathrooms          |
+| 19  | A bare kitchen east of an open door from the bedroom to a bathroom           |
+| 20  | A bare kitchen east of an open door from the bedroom to a bathroom.          |
+| 21  | A bare kitchen east of an open door from the bedroom to bathrooms            |
+| 22  | A bare kitchen east of an open door from the bedroom to bathrooms.           |
+| 23  | A bare kitchen east of an open door from the bedroom to the bathroom         |
+| 24  | A bare kitchen east of an open door from the bedroom to the bathroom.        |
+| 25  | A bare kitchen east of an open door from the bedroom to the bathrooms        |
+| 26  | A bare kitchen east of an open door from the bedroom to the bathrooms.       |
+| 27  | A bare kitchen east of an open door from the bedrooms to a bathroom          |
+| 28  | A bare kitchen east of an open door from the bedrooms to a bathroom.         |
+| 29  | A bare kitchen east of an open door from the bedrooms to bathrooms           |
+| 30  | A bare kitchen east of an open door from the bedrooms to bathrooms.          |
+| 31  | A bare kitchen east of an open door from the bedrooms to the bathroom        |
+| 32  | A bare kitchen east of an open door from the bedrooms to the bathroom.       |
+| 33  | A bare kitchen east of an open door from the bedrooms to the bathrooms       |
+| 34  | A bare kitchen east of an open door from the bedrooms to the bathrooms.      |
+| 35  | A bare kitchen east of an open door to a bathroom from a bedroom             |
+| 36  | A bare kitchen east of an open door to a bathroom from a bedroom.            |
+| 37  | A bare kitchen east of an open door to a bathroom from bedrooms              |
+| 38  | A bare kitchen east of an open door to a bathroom from bedrooms.             |
+| 39  | A bare kitchen east of an open door to a bathroom from the bedroom           |
+| 40  | A bare kitchen east of an open door to a bathroom from the bedroom.          |
+| 41  | A bare kitchen east of an open door to a bathroom from the bedrooms          |
+| 42  | A bare kitchen east of an open door to a bathroom from the bedrooms.         |
+| 43  | A bare kitchen east of an open door to bathrooms from a bedroom              |
+| 44  | A bare kitchen east of an open door to bathrooms from a bedroom.             |
+| 45  | A bare kitchen east of an open door to bathrooms from bedrooms               |
+| 46  | A bare kitchen east of an open door to bathrooms from bedrooms.              |
+| 47  | A bare kitchen east of an open door to bathrooms from the bedroom            |
+| 48  | A bare kitchen east of an open door to bathrooms from the bedroom.           |
+| 49  | A bare kitchen east of an open door to bathrooms from the bedrooms           |
+| 50  | A bare kitchen east of an open door to bathrooms from the bedrooms.          |
+| 51  | A bare kitchen east of an open door to the bathroom from a bedroom           |
+| 52  | A bare kitchen east of an open door to the bathroom from a bedroom.          |
+| 53  | A bare kitchen east of an open door to the bathroom from bedrooms            |
+| 54  | A bare kitchen east of an open door to the bathroom from bedrooms.           |
+| 55  | A bare kitchen east of an open door to the bathroom from the bedroom         |
+| 56  | A bare kitchen east of an open door to the bathroom from the bedroom.        |
+| 57  | A bare kitchen east of an open door to the bathroom from the bedrooms        |
+| 58  | A bare kitchen east of an open door to the bathroom from the bedrooms.       |
+| 59  | A bare kitchen east of an open door to the bathrooms from a bedroom          |
+| 60  | A bare kitchen east of an open door to the bathrooms from a bedroom.         |
+| 61  | A bare kitchen east of an open door to the bathrooms from bedrooms           |
+| 62  | A bare kitchen east of an open door to the bathrooms from bedrooms.          |
+| 63  | A bare kitchen east of an open door to the bathrooms from the bedroom        |
+| 64  | A bare kitchen east of an open door to the bathrooms from the bedroom.       |
+| 65  | A bare kitchen east of an open door to the bathrooms from the bedrooms       |
+| 66  | A bare kitchen east of an open door to the bathrooms from the bedrooms.      |
+| 67  | A bare kitchen east of open doors from a bedroom to the bathrooms            |
+| 68  | A bare kitchen east of open doors from the bedroom to the bathroom           |
+| 69  | A bare kitchen east of open doors from the bedroom to the bathrooms          |
+| 70  | A bare kitchen east of open doors from the bedrooms to the bathrooms         |
+| 71  | A bare kitchen east of open doors to a bathroom from the bedrooms            |
+| 72  | A bare kitchen east of open doors to a bathroom from the bedrooms.           |
+| 73  | A bare kitchen east of open doors to bathrooms from the bedrooms             |
+| 74  | A bare kitchen east of open doors to bathrooms from the bedrooms.            |
+| 75  | A bare kitchen east of open doors to the bathroom from a bedroom             |
+| 76  | A bare kitchen east of open doors to the bathroom from bedrooms              |
+| 77  | A bare kitchen east of open doors to the bathroom from bedrooms.             |
+| 78  | A bare kitchen east of open doors to the bathroom from the bedroom           |
+| 79  | A bare kitchen east of open doors to the bathroom from the bedrooms          |
+| 80  | A bare kitchen east of open doors to the bathroom from the bedrooms.         |
+| 81  | A bare kitchen east of open doors to the bathrooms from the bedrooms         |
+| 82  | A bare kitchen east of open doors to the bathrooms from the bedrooms.        |
+| 83  | A bare kitchen east of the open door from a bedroom to a bathroom            |
+| 84  | A bare kitchen east of the open door from a bedroom to a bathroom.           |
+| 85  | A bare kitchen east of the open door from a bedroom to bathrooms             |
+| 86  | A bare kitchen east of the open door from a bedroom to bathrooms.            |
+| 87  | A bare kitchen east of the open door from a bedroom to the bathroom          |
+| 88  | A bare kitchen east of the open door from a bedroom to the bathroom.         |
+| 89  | A bare kitchen east of the open door from a bedroom to the bathrooms         |
+| 90  | A bare kitchen east of the open door from a bedroom to the bathrooms.        |
+| 91  | A bare kitchen east of the open door from bedrooms to a bathroom             |
+| 92  | A bare kitchen east of the open door from bedrooms to a bathroom.            |
+| 93  | A bare kitchen east of the open door from bedrooms to bathrooms              |
+| 94  | A bare kitchen east of the open door from bedrooms to bathrooms.             |
+| 95  | A bare kitchen east of the open door from bedrooms to the bathroom           |
+| 96  | A bare kitchen east of the open door from bedrooms to the bathroom.          |
+| 97  | A bare kitchen east of the open door from bedrooms to the bathrooms          |
+| 98  | A bare kitchen east of the open door from bedrooms to the bathrooms.         |
+| 99  | A bare kitchen east of the open door from bedrooms, to the bathrooms         |
+| 100 | A bare kitchen east of the open door from the bedroom to a bathroom          |
+| 101 | A bare kitchen east of the open door from the bedroom to a bathroom.         |
+| 102 | A bare kitchen east of the open door from the bedroom to bathrooms           |
+| 103 | A bare kitchen east of the open door from the bedroom to bathrooms.          |
+| 104 | A bare kitchen east of the open door from the bedroom to the bathroom        |
+| 105 | A bare kitchen east of the open door from the bedroom to the bathroom.       |
+| 106 | A bare kitchen east of the open door from the bedroom to the bathrooms       |
+| 107 | A bare kitchen east of the open door from the bedroom to the bathrooms.      |
+| 108 | A bare kitchen east of the open door from the bedrooms to a bathroom         |
+| 109 | A bare kitchen east of the open door from the bedrooms to a bathroom.        |
+| 110 | A bare kitchen east of the open door from the bedrooms to bathrooms          |
+| 111 | A bare kitchen east of the open door from the bedrooms to bathrooms.         |
+| 112 | A bare kitchen east of the open door from the bedrooms to the bathroom       |
+| 113 | A bare kitchen east of the open door from the bedrooms to the bathroom.      |
+| 114 | A bare kitchen east of the open door from the bedrooms to the bathrooms      |
+| 115 | A bare kitchen east of the open door from the bedrooms to the bathrooms.     |
+| 116 | A bare kitchen east of the open door to a bathroom from a bedroom            |
+| 117 | A bare kitchen east of the open door to a bathroom from a bedroom.           |
+| 118 | A bare kitchen east of the open door to a bathroom from bedrooms             |
+| 119 | A bare kitchen east of the open door to a bathroom from bedrooms.            |
+| 120 | A bare kitchen east of the open door to a bathroom from the bedroom          |
+| 121 | A bare kitchen east of the open door to a bathroom from the bedroom.         |
+| 122 | A bare kitchen east of the open door to a bathroom from the bedrooms         |
+| 123 | A bare kitchen east of the open door to a bathroom from the bedrooms.        |
+| 124 | A bare kitchen east of the open door to bathrooms from a bedroom             |
+| 125 | A bare kitchen east of the open door to bathrooms from a bedroom.            |
+| 126 | A bare kitchen east of the open door to bathrooms from bedrooms              |
+| 127 | A bare kitchen east of the open door to bathrooms from bedrooms.             |
+| 128 | A bare kitchen east of the open door to bathrooms from the bedroom           |
+| 129 | A bare kitchen east of the open door to bathrooms from the bedroom.          |
+| 130 | A bare kitchen east of the open door to bathrooms from the bedrooms          |
+| 131 | A bare kitchen east of the open door to bathrooms from the bedrooms.         |
+| 132 | A bare kitchen east of the open door to the bathroom from a bedroom          |
+| 133 | A bare kitchen east of the open door to the bathroom from a bedroom.         |
+| 134 | A bare kitchen east of the open door to the bathroom from bedrooms           |
+| 135 | A bare kitchen east of the open door to the bathroom from bedrooms.          |
+| 136 | A bare kitchen east of the open door to the bathroom from the bedroom        |
+| 137 | A bare kitchen east of the open door to the bathroom from the bedroom.       |
+| 138 | A bare kitchen east of the open door to the bathroom from the bedrooms       |
+| 139 | A bare kitchen east of the open door to the bathroom from the bedrooms.      |
+| 140 | A bare kitchen east of the open door to the bathrooms from a bedroom         |
+| 141 | A bare kitchen east of the open door to the bathrooms from a bedroom.        |
+| 142 | A bare kitchen east of the open door to the bathrooms from bedrooms          |
+| 143 | A bare kitchen east of the open door to the bathrooms from bedrooms.         |
+| 144 | A bare kitchen east of the open door to the bathrooms from the bedroom       |
+| 145 | A bare kitchen east of the open door to the bathrooms from the bedroom.      |
+| 146 | A bare kitchen east of the open door to the bathrooms from the bedrooms      |
+| 147 | A bare kitchen east of the open door to the bathrooms from the bedrooms.     |
+| 148 | A bare kitchen east of the open doors from a bedroom to a bathroom           |
+| 149 | A bare kitchen east of the open doors from a bedroom to a bathroom.          |
+| 150 | A bare kitchen east of the open doors from a bedroom to bathrooms            |
+| 151 | A bare kitchen east of the open doors from a bedroom to bathrooms.           |
+| 152 | A bare kitchen east of the open doors from a bedroom to the bathroom         |
+| 153 | A bare kitchen east of the open doors from a bedroom to the bathroom.        |
+| 154 | A bare kitchen east of the open doors from a bedroom to the bathrooms        |
+| 155 | A bare kitchen east of the open doors from a bedroom to the bathrooms.       |
+| 156 | A bare kitchen east of the open doors from bedrooms to a bathroom            |
+| 157 | A bare kitchen east of the open doors from bedrooms to a bathroom.           |
+| 158 | A bare kitchen east of the open doors from bedrooms to bathrooms             |
+| 159 | A bare kitchen east of the open doors from bedrooms to bathrooms.            |
+| 160 | A bare kitchen east of the open doors from bedrooms to the bathroom          |
+| 161 | A bare kitchen east of the open doors from bedrooms to the bathroom.         |
+| 162 | A bare kitchen east of the open doors from bedrooms to the bathrooms         |
+| 163 | A bare kitchen east of the open doors from bedrooms to the bathrooms.        |
+| 164 | A bare kitchen east of the open doors from bedrooms, to the bathrooms        |
+| 165 | A bare kitchen east of the open doors from the bedroom to a bathroom         |
+| 166 | A bare kitchen east of the open doors from the bedroom to a bathroom.        |
+| 167 | A bare kitchen east of the open doors from the bedroom to bathrooms          |
+| 168 | A bare kitchen east of the open doors from the bedroom to bathrooms.         |
+| 169 | A bare kitchen east of the open doors from the bedroom to the bathroom       |
+| 170 | A bare kitchen east of the open doors from the bedroom to the bathroom.      |
+| 171 | A bare kitchen east of the open doors from the bedroom to the bathrooms      |
+| 172 | A bare kitchen east of the open doors from the bedroom to the bathrooms.     |
+| 173 | A bare kitchen east of the open doors from the bedrooms to a bathroom        |
+| 174 | A bare kitchen east of the open doors from the bedrooms to a bathroom.       |
+| 175 | A bare kitchen east of the open doors from the bedrooms to bathrooms         |
+| 176 | A bare kitchen east of the open doors from the bedrooms to bathrooms.        |
+| 177 | A bare kitchen east of the open doors from the bedrooms to the bathroom      |
+| 178 | A bare kitchen east of the open doors from the bedrooms to the bathroom.     |
+| 179 | A bare kitchen east of the open doors from the bedrooms to the bathrooms     |
+| 180 | A bare kitchen east of the open doors from the bedrooms to the bathrooms.    |
+| 181 | A bare kitchen east of the open doors to a bathroom from a bedroom           |
+| 182 | A bare kitchen east of the open doors to a bathroom from a bedroom.          |
+| 183 | A bare kitchen east of the open doors to a bathroom from bedrooms            |
+| 184 | A bare kitchen east of the open doors to a bathroom from bedrooms.           |
+| 185 | A bare kitchen east of the open doors to a bathroom from the bedroom         |
+| 186 | A bare kitchen east of the open doors to a bathroom from the bedroom.        |
+| 187 | A bare kitchen east of the open doors to a bathroom from the bedrooms        |
+| 188 | A bare kitchen east of the open doors to a bathroom from the bedrooms.       |
+| 189 | A bare kitchen east of the open doors to bathrooms from a bedroom            |
+| 190 | A bare kitchen east of the open doors to bathrooms from a bedroom.           |
+| 191 | A bare kitchen east of the open doors to bathrooms from bedrooms             |
+| 192 | A bare kitchen east of the open doors to bathrooms from bedrooms.            |
+| 193 | A bare kitchen east of the open doors to bathrooms from the bedroom          |
+| 194 | A bare kitchen east of the open doors to bathrooms from the bedroom.         |
+| 195 | A bare kitchen east of the open doors to bathrooms from the bedrooms         |
+| 196 | A bare kitchen east of the open doors to bathrooms from the bedrooms.        |
+| 197 | A bare kitchen east of the open doors to the bathroom from a bedroom         |
+| 198 | A bare kitchen east of the open doors to the bathroom from a bedroom.        |
+| 199 | A bare kitchen east of the open doors to the bathroom from bedrooms          |
+| 200 | A bare kitchen east of the open doors to the bathroom from bedrooms.         |
+| 201 | A bare kitchen east of the open doors to the bathroom from the bedroom       |
+| 202 | A bare kitchen east of the open doors to the bathroom from the bedroom.      |
+| 203 | A bare kitchen east of the open doors to the bathroom from the bedrooms      |
+| 204 | A bare kitchen east of the open doors to the bathroom from the bedrooms.     |
+| 205 | A bare kitchen east of the open doors to the bathrooms from a bedroom        |
+| 206 | A bare kitchen east of the open doors to the bathrooms from a bedroom.       |
+| 207 | A bare kitchen east of the open doors to the bathrooms from bedrooms         |
+| 208 | A bare kitchen east of the open doors to the bathrooms from bedrooms.        |
+| 209 | A bare kitchen east of the open doors to the bathrooms from the bedroom      |
+| 210 | A bare kitchen east of the open doors to the bathrooms from the bedroom.     |
+| 211 | A bare kitchen east of the open doors to the bathrooms from the bedrooms     |
+| 212 | A bare kitchen east of the open doors to the bathrooms from the bedrooms.    |
+| 213 | Bare kitchen east of an open door from a bedroom to the bathroom             |
+| 214 | Bare kitchen east of an open door from a bedroom to the bathrooms            |
+| 215 | Bare kitchen east of an open door from bedrooms to the bathroom              |
+| 216 | Bare kitchen east of an open door from bedrooms to the bathrooms             |
+| 217 | Bare kitchen east of an open door from the bedroom to a bathroom             |
+| 218 | Bare kitchen east of an open door from the bedroom to the bathroom           |
+| 219 | Bare kitchen east of an open door from the bedroom to the bathrooms          |
+| 220 | Bare kitchen east of an open door from the bedroom to the bathrooms.         |
+| 221 | Bare kitchen east of an open door from the bedrooms to a bathroom            |
+| 222 | Bare kitchen east of an open door from the bedrooms to the bathroom          |
+| 223 | Bare kitchen east of an open door from the bedrooms to the bathrooms         |
+| 224 | Bare kitchen east of an open door to a bathroom from a bedroom               |
+| 225 | Bare kitchen east of an open door to a bathroom from the bedroom             |
+| 226 | Bare kitchen east of an open door to a bathroom from the bedrooms            |
+| 227 | Bare kitchen east of an open door to a bathroom from the bedrooms.           |
+| 228 | Bare kitchen east of an open door to bathrooms from the bedrooms             |
+| 229 | Bare kitchen east of an open door to the bathroom from a bedroom             |
+| 230 | Bare kitchen east of an open door to the bathroom from bedrooms              |
+| 231 | Bare kitchen east of an open door to the bathroom from bedrooms.             |
+| 232 | Bare kitchen east of an open door to the bathroom from the bedroom           |
+| 233 | Bare kitchen east of an open door to the bathroom from the bedrooms          |
+| 234 | Bare kitchen east of an open door to the bathroom from the bedrooms.         |
+| 235 | Bare kitchen east of an open door to the bathrooms from the bedroom          |
+| 236 | Bare kitchen east of an open door to the bathrooms from the bedrooms         |
+| 237 | Bare kitchen east of an open door to the bathrooms from the bedrooms.        |
+| 238 | Bare kitchen east of open doors to the bathroom from the bedrooms            |
+| 239 | Bare kitchen east of the open door from a bedroom to a bathroom              |
+| 240 | Bare kitchen east of the open door from a bedroom to the bathroom            |
+| 241 | Bare kitchen east of the open door from a bedroom to the bathrooms           |
+| 242 | Bare kitchen east of the open door from a bedroom to the bathrooms.          |
+| 243 | Bare kitchen east of the open door from bedrooms to a bathroom               |
+| 244 | Bare kitchen east of the open door from bedrooms to the bathroom             |
+| 245 | Bare kitchen east of the open door from bedrooms to the bathrooms            |
+| 246 | Bare kitchen east of the open door from bedrooms to the bathrooms.           |
+| 247 | Bare kitchen east of the open door from the bedroom to a bathroom            |
+| 248 | Bare kitchen east of the open door from the bedroom to a bathroom.           |
+| 249 | Bare kitchen east of the open door from the bedroom to bathrooms             |
+| 250 | Bare kitchen east of the open door from the bedroom to the bathroom          |
+| 251 | Bare kitchen east of the open door from the bedroom to the bathrooms         |
+| 252 | Bare kitchen east of the open door from the bedroom to the bathrooms.        |
+| 253 | Bare kitchen east of the open door from the bedrooms to a bathroom           |
+| 254 | Bare kitchen east of the open door from the bedrooms to bathrooms            |
+| 255 | Bare kitchen east of the open door from the bedrooms to the bathroom         |
+| 256 | Bare kitchen east of the open door from the bedrooms to the bathrooms        |
+| 257 | Bare kitchen east of the open door from the bedrooms to the bathrooms.       |
+| 258 | Bare kitchen east of the open door to a bathroom from a bedroom              |
+| 259 | Bare kitchen east of the open door to a bathroom from bedrooms               |
+| 260 | Bare kitchen east of the open door to a bathroom from bedrooms.              |
+| 261 | Bare kitchen east of the open door to a bathroom from the bedroom            |
+| 262 | Bare kitchen east of the open door to a bathroom from the bedrooms           |
+| 263 | Bare kitchen east of the open door to a bathroom from the bedrooms.          |
+| 264 | Bare kitchen east of the open door to bathrooms from a bedroom               |
+| 265 | Bare kitchen east of the open door to bathrooms from bedrooms                |
+| 266 | Bare kitchen east of the open door to bathrooms from the bedroom             |
+| 267 | Bare kitchen east of the open door to bathrooms from the bedrooms            |
+| 268 | Bare kitchen east of the open door to bathrooms from the bedrooms.           |
+| 269 | Bare kitchen east of the open door to the bathroom from a bedroom            |
+| 270 | Bare kitchen east of the open door to the bathroom from a bedroom.           |
+| 271 | Bare kitchen east of the open door to the bathroom from bedrooms             |
+| 272 | Bare kitchen east of the open door to the bathroom from bedrooms.            |
+| 273 | Bare kitchen east of the open door to the bathroom from the bedroom          |
+| 274 | Bare kitchen east of the open door to the bathroom from the bedroom.         |
+| 275 | Bare kitchen east of the open door to the bathroom from the bedrooms         |
+| 276 | Bare kitchen east of the open door to the bathroom from the bedrooms.        |
+| 277 | Bare kitchen east of the open door to the bathrooms from a bedroom           |
+| 278 | Bare kitchen east of the open door to the bathrooms from bedrooms            |
+| 279 | Bare kitchen east of the open door to the bathrooms from the bedroom         |
+| 280 | Bare kitchen east of the open door to the bathrooms from the bedrooms        |
+| 281 | Bare kitchen east of the open door to the bathrooms from the bedrooms.       |
+| 282 | Bare kitchen east of the open doors from the bedroom to the bathroom         |
+| 283 | Bare kitchen east of the open doors from the bedroom to the bathrooms        |
+| 284 | Bare kitchen east of the open doors from the bedrooms to the bathroom        |
+| 285 | Bare kitchen east of the open doors from the bedrooms to the bathrooms       |
+| 286 | Bare kitchen east of the open doors to a bathroom from the bedrooms          |
+| 287 | Bare kitchen east of the open doors to a bathroom from the bedrooms.         |
+| 288 | Bare kitchen east of the open doors to bathrooms from the bedrooms           |
+| 289 | Bare kitchen east of the open doors to the bathroom from a bedroom           |
+| 290 | Bare kitchen east of the open doors to the bathroom from bedrooms            |
+| 291 | Bare kitchen east of the open doors to the bathroom from the bedroom         |
+| 292 | Bare kitchen east of the open doors to the bathroom from the bedrooms        |
+| 293 | Bare kitchen east of the open doors to the bathroom from the bedrooms.       |
+| 294 | Bare kitchen east of the open doors to the bathrooms from the bedrooms       |
+| 295 | Bare kitchen, east of the open door to the bathroom from the bedrooms        |
+| 296 | Bare kitchens east of an open door from a bedroom to a bathroom              |
+| 297 | Bare kitchens east of an open door from a bedroom to a bathroom.             |
+| 298 | Bare kitchens east of an open door from a bedroom to bathrooms               |
+| 299 | Bare kitchens east of an open door from a bedroom to the bathroom            |
+| 300 | Bare kitchens east of an open door from a bedroom to the bathrooms           |
+| 301 | Bare kitchens east of an open door from a bedroom to the bathrooms.          |
+| 302 | Bare kitchens east of an open door from bedrooms to a bathroom               |
+| 303 | Bare kitchens east of an open door from bedrooms to a bathroom.              |
+| 304 | Bare kitchens east of an open door from bedrooms to bathrooms                |
+| 305 | Bare kitchens east of an open door from bedrooms to the bathroom             |
+| 306 | Bare kitchens east of an open door from bedrooms to the bathrooms            |
+| 307 | Bare kitchens east of an open door from bedrooms to the bathrooms.           |
+| 308 | Bare kitchens east of an open door from the bedroom to a bathroom            |
+| 309 | Bare kitchens east of an open door from the bedroom to a bathroom.           |
+| 310 | Bare kitchens east of an open door from the bedroom to bathrooms             |
+| 311 | Bare kitchens east of an open door from the bedroom to bathrooms.            |
+| 312 | Bare kitchens east of an open door from the bedroom to the bathroom          |
+| 313 | Bare kitchens east of an open door from the bedroom to the bathroom.         |
+| 314 | Bare kitchens east of an open door from the bedroom to the bathrooms         |
+| 315 | Bare kitchens east of an open door from the bedroom to the bathrooms.        |
+| 316 | Bare kitchens east of an open door from the bedrooms to a bathroom           |
+| 317 | Bare kitchens east of an open door from the bedrooms to a bathroom.          |
+| 318 | Bare kitchens east of an open door from the bedrooms to bathrooms            |
+| 319 | Bare kitchens east of an open door from the bedrooms to bathrooms.           |
+| 320 | Bare kitchens east of an open door from the bedrooms to the bathroom         |
+| 321 | Bare kitchens east of an open door from the bedrooms to the bathroom.        |
+| 322 | Bare kitchens east of an open door from the bedrooms to the bathrooms        |
+| 323 | Bare kitchens east of an open door from the bedrooms to the bathrooms.       |
+| 324 | Bare kitchens east of an open door to a bathroom from a bedroom              |
+| 325 | Bare kitchens east of an open door to a bathroom from a bedroom.             |
+| 326 | Bare kitchens east of an open door to a bathroom from bedrooms               |
+| 327 | Bare kitchens east of an open door to a bathroom from bedrooms.              |
+| 328 | Bare kitchens east of an open door to a bathroom from the bedroom            |
+| 329 | Bare kitchens east of an open door to a bathroom from the bedroom.           |
+| 330 | Bare kitchens east of an open door to a bathroom from the bedrooms           |
+| 331 | Bare kitchens east of an open door to a bathroom from the bedrooms.          |
+| 332 | Bare kitchens east of an open door to bathrooms from a bedroom               |
+| 333 | Bare kitchens east of an open door to bathrooms from a bedroom.              |
+| 334 | Bare kitchens east of an open door to bathrooms from bedrooms                |
+| 335 | Bare kitchens east of an open door to bathrooms from bedrooms.               |
+| 336 | Bare kitchens east of an open door to bathrooms from the bedroom             |
+| 337 | Bare kitchens east of an open door to bathrooms from the bedrooms            |
+| 338 | Bare kitchens east of an open door to bathrooms from the bedrooms.           |
+| 339 | Bare kitchens east of an open door to the bathroom from a bedroom            |
+| 340 | Bare kitchens east of an open door to the bathroom from a bedroom.           |
+| 341 | Bare kitchens east of an open door to the bathroom from bedrooms             |
+| 342 | Bare kitchens east of an open door to the bathroom from bedrooms.            |
+| 343 | Bare kitchens east of an open door to the bathroom from the bedroom          |
+| 344 | Bare kitchens east of an open door to the bathroom from the bedroom.         |
+| 345 | Bare kitchens east of an open door to the bathroom from the bedrooms         |
+| 346 | Bare kitchens east of an open door to the bathroom from the bedrooms.        |
+| 347 | Bare kitchens east of an open door to the bathrooms from a bedroom           |
+| 348 | Bare kitchens east of an open door to the bathrooms from a bedroom.          |
+| 349 | Bare kitchens east of an open door to the bathrooms from bedrooms            |
+| 350 | Bare kitchens east of an open door to the bathrooms from bedrooms.           |
+| 351 | Bare kitchens east of an open door to the bathrooms from the bedroom         |
+| 352 | Bare kitchens east of an open door to the bathrooms from the bedroom.        |
+| 353 | Bare kitchens east of an open door to the bathrooms from the bedrooms        |
+| 354 | Bare kitchens east of an open door to the bathrooms from the bedrooms.       |
+| 355 | Bare kitchens east of open doors from the bedroom to the bathrooms           |
+| 356 | Bare kitchens east of open doors to a bathroom from the bedrooms             |
+| 357 | Bare kitchens east of open doors to bathrooms from the bedrooms              |
+| 358 | Bare kitchens east of open doors to the bathroom from the bedrooms           |
+| 359 | Bare kitchens east of open doors to the bathroom from the bedrooms.          |
+| 360 | Bare kitchens east of open doors to the bathrooms from the bedrooms          |
+| 361 | Bare kitchens east of the open door from a bedroom to a bathroom             |
+| 362 | Bare kitchens east of the open door from a bedroom to a bathroom.            |
+| 363 | Bare kitchens east of the open door from a bedroom to bathrooms              |
+| 364 | Bare kitchens east of the open door from a bedroom to bathrooms.             |
+| 365 | Bare kitchens east of the open door from a bedroom to the bathroom           |
+| 366 | Bare kitchens east of the open door from a bedroom to the bathroom.          |
+| 367 | Bare kitchens east of the open door from a bedroom to the bathrooms          |
+| 368 | Bare kitchens east of the open door from a bedroom to the bathrooms.         |
+| 369 | Bare kitchens east of the open door from bedrooms to a bathroom              |
+| 370 | Bare kitchens east of the open door from bedrooms to a bathroom.             |
+| 371 | Bare kitchens east of the open door from bedrooms to bathrooms               |
+| 372 | Bare kitchens east of the open door from bedrooms to bathrooms.              |
+| 373 | Bare kitchens east of the open door from bedrooms to the bathroom            |
+| 374 | Bare kitchens east of the open door from bedrooms to the bathroom.           |
+| 375 | Bare kitchens east of the open door from bedrooms to the bathrooms           |
+| 376 | Bare kitchens east of the open door from bedrooms to the bathrooms.          |
+| 377 | Bare kitchens east of the open door from the bedroom to a bathroom           |
+| 378 | Bare kitchens east of the open door from the bedroom to a bathroom.          |
+| 379 | Bare kitchens east of the open door from the bedroom to bathrooms            |
+| 380 | Bare kitchens east of the open door from the bedroom to bathrooms.           |
+| 381 | Bare kitchens east of the open door from the bedroom to the bathroom         |
+| 382 | Bare kitchens east of the open door from the bedroom to the bathroom.        |
+| 383 | Bare kitchens east of the open door from the bedroom to the bathrooms        |
+| 384 | Bare kitchens east of the open door from the bedroom to the bathrooms.       |
+| 385 | Bare kitchens east of the open door from the bedrooms to a bathroom          |
+| 386 | Bare kitchens east of the open door from the bedrooms to a bathroom.         |
+| 387 | Bare kitchens east of the open door from the bedrooms to bathrooms           |
+| 388 | Bare kitchens east of the open door from the bedrooms to bathrooms.          |
+| 389 | Bare kitchens east of the open door from the bedrooms to the bathroom        |
+| 390 | Bare kitchens east of the open door from the bedrooms to the bathroom.       |
+| 391 | Bare kitchens east of the open door from the bedrooms to the bathrooms       |
+| 392 | Bare kitchens east of the open door from the bedrooms to the bathrooms.      |
+| 393 | Bare kitchens east of the open door to a bathroom from a bedroom             |
+| 394 | Bare kitchens east of the open door to a bathroom from a bedroom.            |
+| 395 | Bare kitchens east of the open door to a bathroom from bedrooms              |
+| 396 | Bare kitchens east of the open door to a bathroom from bedrooms.             |
+| 397 | Bare kitchens east of the open door to a bathroom from the bedroom           |
+| 398 | Bare kitchens east of the open door to a bathroom from the bedroom.          |
+| 399 | Bare kitchens east of the open door to a bathroom from the bedrooms          |
+| 400 | Bare kitchens east of the open door to a bathroom from the bedrooms.         |
+| 401 | Bare kitchens east of the open door to bathrooms from a bedroom              |
+| 402 | Bare kitchens east of the open door to bathrooms from a bedroom.             |
+| 403 | Bare kitchens east of the open door to bathrooms from bedrooms               |
+| 404 | Bare kitchens east of the open door to bathrooms from bedrooms.              |
+| 405 | Bare kitchens east of the open door to bathrooms from the bedroom            |
+| 406 | Bare kitchens east of the open door to bathrooms from the bedroom.           |
+| 407 | Bare kitchens east of the open door to bathrooms from the bedrooms           |
+| 408 | Bare kitchens east of the open door to bathrooms from the bedrooms.          |
+| 409 | Bare kitchens east of the open door to the bathroom from a bedroom           |
+| 410 | Bare kitchens east of the open door to the bathroom from a bedroom.          |
+| 411 | Bare kitchens east of the open door to the bathroom from bedrooms            |
+| 412 | Bare kitchens east of the open door to the bathroom from bedrooms.           |
+| 413 | Bare kitchens east of the open door to the bathroom from the bedroom         |
+| 414 | Bare kitchens east of the open door to the bathroom from the bedroom.        |
+| 415 | Bare kitchens east of the open door to the bathroom from the bedrooms        |
+| 416 | Bare kitchens east of the open door to the bathroom from the bedrooms.       |
+| 417 | Bare kitchens east of the open door to the bathrooms from a bedroom          |
+| 418 | Bare kitchens east of the open door to the bathrooms from a bedroom.         |
+| 419 | Bare kitchens east of the open door to the bathrooms from bedrooms           |
+| 420 | Bare kitchens east of the open door to the bathrooms from bedrooms.          |
+| 421 | Bare kitchens east of the open door to the bathrooms from the bedroom        |
+| 422 | Bare kitchens east of the open door to the bathrooms from the bedroom.       |
+| 423 | Bare kitchens east of the open door to the bathrooms from the bedrooms       |
+| 424 | Bare kitchens east of the open door to the bathrooms from the bedrooms.      |
+| 425 | Bare kitchens east of the open doors from a bedroom to a bathroom            |
+| 426 | Bare kitchens east of the open doors from a bedroom to bathrooms             |
+| 427 | Bare kitchens east of the open doors from a bedroom to the bathroom          |
+| 428 | Bare kitchens east of the open doors from a bedroom to the bathrooms         |
+| 429 | Bare kitchens east of the open doors from a bedroom to the bathrooms.        |
+| 430 | Bare kitchens east of the open doors from bedrooms to a bathroom             |
+| 431 | Bare kitchens east of the open doors from bedrooms to bathrooms              |
+| 432 | Bare kitchens east of the open doors from bedrooms to the bathroom           |
+| 433 | Bare kitchens east of the open doors from bedrooms to the bathrooms          |
+| 434 | Bare kitchens east of the open doors from bedrooms to the bathrooms.         |
+| 435 | Bare kitchens east of the open doors from the bedroom to a bathroom          |
+| 436 | Bare kitchens east of the open doors from the bedroom to a bathroom.         |
+| 437 | Bare kitchens east of the open doors from the bedroom to bathrooms           |
+| 438 | Bare kitchens east of the open doors from the bedroom to bathrooms.          |
+| 439 | Bare kitchens east of the open doors from the bedroom to the bathroom        |
+| 440 | Bare kitchens east of the open doors from the bedroom to the bathroom.       |
+| 441 | Bare kitchens east of the open doors from the bedroom to the bathrooms       |
+| 442 | Bare kitchens east of the open doors from the bedroom to the bathrooms.      |
+| 443 | Bare kitchens east of the open doors from the bedrooms to a bathroom         |
+| 444 | Bare kitchens east of the open doors from the bedrooms to a bathroom.        |
+| 445 | Bare kitchens east of the open doors from the bedrooms to bathrooms          |
+| 446 | Bare kitchens east of the open doors from the bedrooms to bathrooms.         |
+| 447 | Bare kitchens east of the open doors from the bedrooms to the bathroom       |
+| 448 | Bare kitchens east of the open doors from the bedrooms to the bathroom.      |
+| 449 | Bare kitchens east of the open doors from the bedrooms to the bathrooms      |
+| 450 | Bare kitchens east of the open doors from the bedrooms to the bathrooms.     |
+| 451 | Bare kitchens east of the open doors to a bathroom from a bedroom            |
+| 452 | Bare kitchens east of the open doors to a bathroom from a bedroom.           |
+| 453 | Bare kitchens east of the open doors to a bathroom from bedrooms             |
+| 454 | Bare kitchens east of the open doors to a bathroom from bedrooms.            |
+| 455 | Bare kitchens east of the open doors to a bathroom from the bedroom          |
+| 456 | Bare kitchens east of the open doors to a bathroom from the bedrooms         |
+| 457 | Bare kitchens east of the open doors to a bathroom from the bedrooms.        |
+| 458 | Bare kitchens east of the open doors to bathrooms from a bedroom             |
+| 459 | Bare kitchens east of the open doors to bathrooms from bedrooms              |
+| 460 | Bare kitchens east of the open doors to bathrooms from bedrooms.             |
+| 461 | Bare kitchens east of the open doors to bathrooms from the bedroom           |
+| 462 | Bare kitchens east of the open doors to bathrooms from the bedrooms          |
+| 463 | Bare kitchens east of the open doors to bathrooms from the bedrooms.         |
+| 464 | Bare kitchens east of the open doors to the bathroom from a bedroom          |
+| 465 | Bare kitchens east of the open doors to the bathroom from a bedroom.         |
+| 466 | Bare kitchens east of the open doors to the bathroom from bedrooms           |
+| 467 | Bare kitchens east of the open doors to the bathroom from bedrooms.          |
+| 468 | Bare kitchens east of the open doors to the bathroom from the bedroom        |
+| 469 | Bare kitchens east of the open doors to the bathroom from the bedroom.       |
+| 470 | Bare kitchens east of the open doors to the bathroom from the bedrooms       |
+| 471 | Bare kitchens east of the open doors to the bathroom from the bedrooms.      |
+| 472 | Bare kitchens east of the open doors to the bathrooms from a bedroom         |
+| 473 | Bare kitchens east of the open doors to the bathrooms from bedrooms          |
+| 474 | Bare kitchens east of the open doors to the bathrooms from bedrooms.         |
+| 475 | Bare kitchens east of the open doors to the bathrooms from the bedroom       |
+| 476 | Bare kitchens east of the open doors to the bathrooms from the bedrooms      |
+| 477 | Bare kitchens east of the open doors to the bathrooms from the bedrooms.     |
+| 478 | Bare kitchens, east of the open door to the bathroom from the bedrooms       |
+| 479 | The bare kitchen east of an open door from a bedroom to a bathroom           |
+| 480 | The bare kitchen east of an open door from a bedroom to a bathroom.          |
+| 481 | The bare kitchen east of an open door from a bedroom to bathrooms            |
+| 482 | The bare kitchen east of an open door from a bedroom to bathrooms.           |
+| 483 | The bare kitchen east of an open door from a bedroom to the bathroom         |
+| 484 | The bare kitchen east of an open door from a bedroom to the bathroom.        |
+| 485 | The bare kitchen east of an open door from a bedroom to the bathrooms        |
+| 486 | The bare kitchen east of an open door from a bedroom to the bathrooms.       |
+| 487 | The bare kitchen east of an open door from bedrooms to a bathroom            |
+| 488 | The bare kitchen east of an open door from bedrooms to a bathroom.           |
+| 489 | The bare kitchen east of an open door from bedrooms to bathrooms             |
+| 490 | The bare kitchen east of an open door from bedrooms to bathrooms.            |
+| 491 | The bare kitchen east of an open door from bedrooms to the bathroom          |
+| 492 | The bare kitchen east of an open door from bedrooms to the bathroom.         |
+| 493 | The bare kitchen east of an open door from bedrooms to the bathrooms         |
+| 494 | The bare kitchen east of an open door from bedrooms to the bathrooms.        |
+| 495 | The bare kitchen east of an open door from bedrooms, to the bathrooms        |
+| 496 | The bare kitchen east of an open door from the bedroom to a bathroom         |
+| 497 | The bare kitchen east of an open door from the bedroom to a bathroom.        |
+| 498 | The bare kitchen east of an open door from the bedroom to bathrooms          |
+| 499 | The bare kitchen east of an open door from the bedroom to bathrooms.         |
+| 500 | The bare kitchen east of an open door from the bedroom to the bathroom       |
+| 501 | The bare kitchen east of an open door from the bedroom to the bathroom.      |
+| 502 | The bare kitchen east of an open door from the bedroom to the bathrooms      |
+| 503 | The bare kitchen east of an open door from the bedroom to the bathrooms.     |
+| 504 | The bare kitchen east of an open door from the bedrooms to a bathroom        |
+| 505 | The bare kitchen east of an open door from the bedrooms to a bathroom.       |
+| 506 | The bare kitchen east of an open door from the bedrooms to bathrooms         |
+| 507 | The bare kitchen east of an open door from the bedrooms to bathrooms.        |
+| 508 | The bare kitchen east of an open door from the bedrooms to the bathroom      |
+| 509 | The bare kitchen east of an open door from the bedrooms to the bathroom.     |
+| 510 | The bare kitchen east of an open door from the bedrooms to the bathrooms     |
+| 511 | The bare kitchen east of an open door from the bedrooms to the bathrooms.    |
+| 512 | The bare kitchen east of an open door to a bathroom from a bedroom           |
+| 513 | The bare kitchen east of an open door to a bathroom from a bedroom.          |
+| 514 | The bare kitchen east of an open door to a bathroom from bedrooms            |
+| 515 | The bare kitchen east of an open door to a bathroom from bedrooms.           |
+| 516 | The bare kitchen east of an open door to a bathroom from the bedroom         |
+| 517 | The bare kitchen east of an open door to a bathroom from the bedroom.        |
+| 518 | The bare kitchen east of an open door to a bathroom from the bedrooms        |
+| 519 | The bare kitchen east of an open door to a bathroom from the bedrooms.       |
+| 520 | The bare kitchen east of an open door to bathrooms from a bedroom            |
+| 521 | The bare kitchen east of an open door to bathrooms from a bedroom.           |
+| 522 | The bare kitchen east of an open door to bathrooms from bedrooms             |
+| 523 | The bare kitchen east of an open door to bathrooms from bedrooms.            |
+| 524 | The bare kitchen east of an open door to bathrooms from the bedroom          |
+| 525 | The bare kitchen east of an open door to bathrooms from the bedroom.         |
+| 526 | The bare kitchen east of an open door to bathrooms from the bedrooms         |
+| 527 | The bare kitchen east of an open door to bathrooms from the bedrooms.        |
+| 528 | The bare kitchen east of an open door to the bathroom from a bedroom         |
+| 529 | The bare kitchen east of an open door to the bathroom from a bedroom.        |
+| 530 | The bare kitchen east of an open door to the bathroom from bedrooms          |
+| 531 | The bare kitchen east of an open door to the bathroom from bedrooms.         |
+| 532 | The bare kitchen east of an open door to the bathroom from the bedroom       |
+| 533 | The bare kitchen east of an open door to the bathroom from the bedroom.      |
+| 534 | The bare kitchen east of an open door to the bathroom from the bedrooms      |
+| 535 | The bare kitchen east of an open door to the bathroom from the bedrooms.     |
+| 536 | The bare kitchen east of an open door to the bathrooms from a bedroom        |
+| 537 | The bare kitchen east of an open door to the bathrooms from a bedroom.       |
+| 538 | The bare kitchen east of an open door to the bathrooms from bedrooms         |
+| 539 | The bare kitchen east of an open door to the bathrooms from bedrooms.        |
+| 540 | The bare kitchen east of an open door to the bathrooms from the bedroom      |
+| 541 | The bare kitchen east of an open door to the bathrooms from the bedroom.     |
+| 542 | The bare kitchen east of an open door to the bathrooms from the bedrooms     |
+| 543 | The bare kitchen east of an open door to the bathrooms from the bedrooms.    |
+| 544 | The bare kitchen east of open doors from a bedroom to the bathrooms          |
+| 545 | The bare kitchen east of open doors from the bedroom to the bathroom         |
+| 546 | The bare kitchen east of open doors from the bedroom to the bathrooms        |
+| 547 | The bare kitchen east of open doors from the bedrooms to the bathrooms       |
+| 548 | The bare kitchen east of open doors to a bathroom from the bedrooms          |
+| 549 | The bare kitchen east of open doors to a bathroom from the bedrooms.         |
+| 550 | The bare kitchen east of open doors to bathrooms from the bedrooms           |
+| 551 | The bare kitchen east of open doors to bathrooms from the bedrooms.          |
+| 552 | The bare kitchen east of open doors to the bathroom from a bedroom           |
+| 553 | The bare kitchen east of open doors to the bathroom from bedrooms            |
+| 554 | The bare kitchen east of open doors to the bathroom from bedrooms.           |
+| 555 | The bare kitchen east of open doors to the bathroom from the bedroom         |
+| 556 | The bare kitchen east of open doors to the bathroom from the bedrooms        |
+| 557 | The bare kitchen east of open doors to the bathroom from the bedrooms.       |
+| 558 | The bare kitchen east of open doors to the bathrooms from the bedrooms       |
+| 559 | The bare kitchen east of open doors to the bathrooms from the bedrooms.      |
+| 560 | The bare kitchen east of the open door from a bedroom to a bathroom          |
+| 561 | The bare kitchen east of the open door from a bedroom to a bathroom.         |
+| 562 | The bare kitchen east of the open door from a bedroom to bathrooms           |
+| 563 | The bare kitchen east of the open door from a bedroom to bathrooms.          |
+| 564 | The bare kitchen east of the open door from a bedroom to the bathroom        |
+| 565 | The bare kitchen east of the open door from a bedroom to the bathroom.       |
+| 566 | The bare kitchen east of the open door from a bedroom to the bathrooms       |
+| 567 | The bare kitchen east of the open door from a bedroom to the bathrooms.      |
+| 568 | The bare kitchen east of the open door from bedrooms to a bathroom           |
+| 569 | The bare kitchen east of the open door from bedrooms to a bathroom.          |
+| 570 | The bare kitchen east of the open door from bedrooms to bathrooms            |
+| 571 | The bare kitchen east of the open door from bedrooms to bathrooms.           |
+| 572 | The bare kitchen east of the open door from bedrooms to the bathroom         |
+| 573 | The bare kitchen east of the open door from bedrooms to the bathroom.        |
+| 574 | The bare kitchen east of the open door from bedrooms to the bathrooms        |
+| 575 | The bare kitchen east of the open door from bedrooms to the bathrooms.       |
+| 576 | The bare kitchen east of the open door from bedrooms, to the bathrooms       |
+| 577 | The bare kitchen east of the open door from the bedroom to a bathroom        |
+| 578 | The bare kitchen east of the open door from the bedroom to a bathroom.       |
+| 579 | The bare kitchen east of the open door from the bedroom to bathrooms         |
+| 580 | The bare kitchen east of the open door from the bedroom to bathrooms.        |
+| 581 | The bare kitchen east of the open door from the bedroom to the bathroom      |
+| 582 | The bare kitchen east of the open door from the bedroom to the bathroom.     |
+| 583 | The bare kitchen east of the open door from the bedroom to the bathrooms     |
+| 584 | The bare kitchen east of the open door from the bedroom to the bathrooms.    |
+| 585 | The bare kitchen east of the open door from the bedrooms to a bathroom       |
+| 586 | The bare kitchen east of the open door from the bedrooms to a bathroom.      |
+| 587 | The bare kitchen east of the open door from the bedrooms to bathrooms        |
+| 588 | The bare kitchen east of the open door from the bedrooms to bathrooms.       |
+| 589 | The bare kitchen east of the open door from the bedrooms to the bathroom     |
+| 590 | The bare kitchen east of the open door from the bedrooms to the bathroom.    |
+| 591 | The bare kitchen east of the open door from the bedrooms to the bathrooms    |
+| 592 | The bare kitchen east of the open door from the bedrooms to the bathrooms.   |
+| 593 | The bare kitchen east of the open door to a bathroom from a bedroom          |
+| 594 | The bare kitchen east of the open door to a bathroom from a bedroom.         |
+| 595 | The bare kitchen east of the open door to a bathroom from bedrooms           |
+| 596 | The bare kitchen east of the open door to a bathroom from bedrooms.          |
+| 597 | The bare kitchen east of the open door to a bathroom from the bedroom        |
+| 598 | The bare kitchen east of the open door to a bathroom from the bedroom.       |
+| 599 | The bare kitchen east of the open door to a bathroom from the bedrooms       |
+| 600 | The bare kitchen east of the open door to a bathroom from the bedrooms.      |
+| 601 | The bare kitchen east of the open door to bathrooms from a bedroom           |
+| 602 | The bare kitchen east of the open door to bathrooms from a bedroom.          |
+| 603 | The bare kitchen east of the open door to bathrooms from bedrooms            |
+| 604 | The bare kitchen east of the open door to bathrooms from bedrooms.           |
+| 605 | The bare kitchen east of the open door to bathrooms from the bedroom         |
+| 606 | The bare kitchen east of the open door to bathrooms from the bedroom.        |
+| 607 | The bare kitchen east of the open door to bathrooms from the bedrooms        |
+| 608 | The bare kitchen east of the open door to bathrooms from the bedrooms.       |
+| 609 | The bare kitchen east of the open door to the bathroom from a bedroom        |
+| 610 | The bare kitchen east of the open door to the bathroom from a bedroom.       |
+| 611 | The bare kitchen east of the open door to the bathroom from bedrooms         |
+| 612 | The bare kitchen east of the open door to the bathroom from bedrooms.        |
+| 613 | The bare kitchen east of the open door to the bathroom from the bedroom      |
+| 614 | The bare kitchen east of the open door to the bathroom from the bedroom.     |
+| 615 | The bare kitchen east of the open door to the bathroom from the bedrooms     |
+| 616 | The bare kitchen east of the open door to the bathroom from the bedrooms.    |
+| 617 | The bare kitchen east of the open door to the bathrooms from a bedroom       |
+| 618 | The bare kitchen east of the open door to the bathrooms from a bedroom.      |
+| 619 | The bare kitchen east of the open door to the bathrooms from bedrooms        |
+| 620 | The bare kitchen east of the open door to the bathrooms from bedrooms.       |
+| 621 | The bare kitchen east of the open door to the bathrooms from the bedroom     |
+| 622 | The bare kitchen east of the open door to the bathrooms from the bedroom.    |
+| 623 | The bare kitchen east of the open door to the bathrooms from the bedrooms    |
+| 624 | The bare kitchen east of the open door to the bathrooms from the bedrooms.   |
+| 625 | The bare kitchen east of the open doors from a bedroom to a bathroom         |
+| 626 | The bare kitchen east of the open doors from a bedroom to a bathroom.        |
+| 627 | The bare kitchen east of the open doors from a bedroom to bathrooms          |
+| 628 | The bare kitchen east of the open doors from a bedroom to bathrooms.         |
+| 629 | The bare kitchen east of the open doors from a bedroom to the bathroom       |
+| 630 | The bare kitchen east of the open doors from a bedroom to the bathroom.      |
+| 631 | The bare kitchen east of the open doors from a bedroom to the bathrooms      |
+| 632 | The bare kitchen east of the open doors from a bedroom to the bathrooms.     |
+| 633 | The bare kitchen east of the open doors from bedrooms to a bathroom          |
+| 634 | The bare kitchen east of the open doors from bedrooms to a bathroom.         |
+| 635 | The bare kitchen east of the open doors from bedrooms to bathrooms           |
+| 636 | The bare kitchen east of the open doors from bedrooms to bathrooms.          |
+| 637 | The bare kitchen east of the open doors from bedrooms to the bathroom        |
+| 638 | The bare kitchen east of the open doors from bedrooms to the bathroom.       |
+| 639 | The bare kitchen east of the open doors from bedrooms to the bathrooms       |
+| 640 | The bare kitchen east of the open doors from bedrooms to the bathrooms.      |
+| 641 | The bare kitchen east of the open doors from bedrooms, to the bathrooms      |
+| 642 | The bare kitchen east of the open doors from the bedroom to a bathroom       |
+| 643 | The bare kitchen east of the open doors from the bedroom to a bathroom.      |
+| 644 | The bare kitchen east of the open doors from the bedroom to bathrooms        |
+| 645 | The bare kitchen east of the open doors from the bedroom to bathrooms.       |
+| 646 | The bare kitchen east of the open doors from the bedroom to the bathroom     |
+| 647 | The bare kitchen east of the open doors from the bedroom to the bathroom.    |
+| 648 | The bare kitchen east of the open doors from the bedroom to the bathrooms    |
+| 649 | The bare kitchen east of the open doors from the bedroom to the bathrooms.   |
+| 650 | The bare kitchen east of the open doors from the bedrooms to a bathroom      |
+| 651 | The bare kitchen east of the open doors from the bedrooms to a bathroom.     |
+| 652 | The bare kitchen east of the open doors from the bedrooms to bathrooms       |
+| 653 | The bare kitchen east of the open doors from the bedrooms to bathrooms.      |
+| 654 | The bare kitchen east of the open doors from the bedrooms to the bathroom    |
+| 655 | The bare kitchen east of the open doors from the bedrooms to the bathroom.   |
+| 656 | The bare kitchen east of the open doors from the bedrooms to the bathrooms   |
+| 657 | The bare kitchen east of the open doors from the bedrooms to the bathrooms.  |
+| 658 | The bare kitchen east of the open doors to a bathroom from a bedroom         |
+| 659 | The bare kitchen east of the open doors to a bathroom from a bedroom.        |
+| 660 | The bare kitchen east of the open doors to a bathroom from bedrooms          |
+| 661 | The bare kitchen east of the open doors to a bathroom from bedrooms.         |
+| 662 | The bare kitchen east of the open doors to a bathroom from the bedroom       |
+| 663 | The bare kitchen east of the open doors to a bathroom from the bedroom.      |
+| 664 | The bare kitchen east of the open doors to a bathroom from the bedrooms      |
+| 665 | The bare kitchen east of the open doors to a bathroom from the bedrooms.     |
+| 666 | The bare kitchen east of the open doors to bathrooms from a bedroom          |
+| 667 | The bare kitchen east of the open doors to bathrooms from a bedroom.         |
+| 668 | The bare kitchen east of the open doors to bathrooms from bedrooms           |
+| 669 | The bare kitchen east of the open doors to bathrooms from bedrooms.          |
+| 670 | The bare kitchen east of the open doors to bathrooms from the bedroom        |
+| 671 | The bare kitchen east of the open doors to bathrooms from the bedroom.       |
+| 672 | The bare kitchen east of the open doors to bathrooms from the bedrooms       |
+| 673 | The bare kitchen east of the open doors to bathrooms from the bedrooms.      |
+| 674 | The bare kitchen east of the open doors to the bathroom from a bedroom       |
+| 675 | The bare kitchen east of the open doors to the bathroom from a bedroom.      |
+| 676 | The bare kitchen east of the open doors to the bathroom from bedrooms        |
+| 677 | The bare kitchen east of the open doors to the bathroom from bedrooms.       |
+| 678 | The bare kitchen east of the open doors to the bathroom from the bedroom     |
+| 679 | The bare kitchen east of the open doors to the bathroom from the bedroom.    |
+| 680 | The bare kitchen east of the open doors to the bathroom from the bedrooms    |
+| 681 | The bare kitchen east of the open doors to the bathroom from the bedrooms.   |
+| 682 | The bare kitchen east of the open doors to the bathrooms from a bedroom      |
+| 683 | The bare kitchen east of the open doors to the bathrooms from a bedroom.     |
+| 684 | The bare kitchen east of the open doors to the bathrooms from bedrooms       |
+| 685 | The bare kitchen east of the open doors to the bathrooms from bedrooms.      |
+| 686 | The bare kitchen east of the open doors to the bathrooms from the bedroom    |
+| 687 | The bare kitchen east of the open doors to the bathrooms from the bedroom.   |
+| 688 | The bare kitchen east of the open doors to the bathrooms from the bedrooms   |
+| 689 | The bare kitchen east of the open doors to the bathrooms from the bedrooms.  |
+| 690 | The bare kitchen, east of the open door to the bathroom from the bedrooms    |
+| 691 | The bare kitchens east of an open door from a bedroom to a bathroom          |
+| 692 | The bare kitchens east of an open door from a bedroom to a bathroom.         |
+| 693 | The bare kitchens east of an open door from a bedroom to bathrooms           |
+| 694 | The bare kitchens east of an open door from a bedroom to bathrooms.          |
+| 695 | The bare kitchens east of an open door from a bedroom to the bathroom        |
+| 696 | The bare kitchens east of an open door from a bedroom to the bathroom.       |
+| 697 | The bare kitchens east of an open door from a bedroom to the bathrooms       |
+| 698 | The bare kitchens east of an open door from a bedroom to the bathrooms.      |
+| 699 | The bare kitchens east of an open door from bedrooms to a bathroom           |
+| 700 | The bare kitchens east of an open door from bedrooms to a bathroom.          |
+| 701 | The bare kitchens east of an open door from bedrooms to bathrooms            |
+| 702 | The bare kitchens east of an open door from bedrooms to bathrooms.           |
+| 703 | The bare kitchens east of an open door from bedrooms to the bathroom         |
+| 704 | The bare kitchens east of an open door from bedrooms to the bathroom.        |
+| 705 | The bare kitchens east of an open door from bedrooms to the bathrooms        |
+| 706 | The bare kitchens east of an open door from bedrooms to the bathrooms.       |
+| 707 | The bare kitchens east of an open door from bedrooms, to the bathrooms       |
+| 708 | The bare kitchens east of an open door from the bedroom to a bathroom        |
+| 709 | The bare kitchens east of an open door from the bedroom to a bathroom.       |
+| 710 | The bare kitchens east of an open door from the bedroom to bathrooms         |
+| 711 | The bare kitchens east of an open door from the bedroom to bathrooms.        |
+| 712 | The bare kitchens east of an open door from the bedroom to the bathroom      |
+| 713 | The bare kitchens east of an open door from the bedroom to the bathroom.     |
+| 714 | The bare kitchens east of an open door from the bedroom to the bathrooms     |
+| 715 | The bare kitchens east of an open door from the bedroom to the bathrooms.    |
+| 716 | The bare kitchens east of an open door from the bedrooms to a bathroom       |
+| 717 | The bare kitchens east of an open door from the bedrooms to a bathroom.      |
+| 718 | The bare kitchens east of an open door from the bedrooms to bathrooms        |
+| 719 | The bare kitchens east of an open door from the bedrooms to bathrooms.       |
+| 720 | The bare kitchens east of an open door from the bedrooms to the bathroom     |
+| 721 | The bare kitchens east of an open door from the bedrooms to the bathroom.    |
+| 722 | The bare kitchens east of an open door from the bedrooms to the bathrooms    |
+| 723 | The bare kitchens east of an open door from the bedrooms to the bathrooms.   |
+| 724 | The bare kitchens east of an open door to a bathroom from a bedroom          |
+| 725 | The bare kitchens east of an open door to a bathroom from a bedroom.         |
+| 726 | The bare kitchens east of an open door to a bathroom from bedrooms           |
+| 727 | The bare kitchens east of an open door to a bathroom from bedrooms.          |
+| 728 | The bare kitchens east of an open door to a bathroom from the bedroom        |
+| 729 | The bare kitchens east of an open door to a bathroom from the bedroom.       |
+| 730 | The bare kitchens east of an open door to a bathroom from the bedrooms       |
+| 731 | The bare kitchens east of an open door to a bathroom from the bedrooms.      |
+| 732 | The bare kitchens east of an open door to bathrooms from a bedroom           |
+| 733 | The bare kitchens east of an open door to bathrooms from a bedroom.          |
+| 734 | The bare kitchens east of an open door to bathrooms from bedrooms            |
+| 735 | The bare kitchens east of an open door to bathrooms from bedrooms.           |
+| 736 | The bare kitchens east of an open door to bathrooms from the bedroom         |
+| 737 | The bare kitchens east of an open door to bathrooms from the bedroom.        |
+| 738 | The bare kitchens east of an open door to bathrooms from the bedrooms        |
+| 739 | The bare kitchens east of an open door to bathrooms from the bedrooms.       |
+| 740 | The bare kitchens east of an open door to the bathroom from a bedroom        |
+| 741 | The bare kitchens east of an open door to the bathroom from a bedroom.       |
+| 742 | The bare kitchens east of an open door to the bathroom from bedrooms         |
+| 743 | The bare kitchens east of an open door to the bathroom from bedrooms.        |
+| 744 | The bare kitchens east of an open door to the bathroom from the bedroom      |
+| 745 | The bare kitchens east of an open door to the bathroom from the bedroom.     |
+| 746 | The bare kitchens east of an open door to the bathroom from the bedrooms     |
+| 747 | The bare kitchens east of an open door to the bathroom from the bedrooms.    |
+| 748 | The bare kitchens east of an open door to the bathrooms from a bedroom       |
+| 749 | The bare kitchens east of an open door to the bathrooms from a bedroom.      |
+| 750 | The bare kitchens east of an open door to the bathrooms from bedrooms        |
+| 751 | The bare kitchens east of an open door to the bathrooms from bedrooms.       |
+| 752 | The bare kitchens east of an open door to the bathrooms from the bedroom     |
+| 753 | The bare kitchens east of an open door to the bathrooms from the bedroom.    |
+| 754 | The bare kitchens east of an open door to the bathrooms from the bedrooms    |
+| 755 | The bare kitchens east of an open door to the bathrooms from the bedrooms.   |
+| 756 | The bare kitchens east of open doors from the bedroom to the bathrooms       |
+| 757 | The bare kitchens east of open doors from the bedrooms to the bathrooms      |
+| 758 | The bare kitchens east of open doors to a bathroom from the bedrooms         |
+| 759 | The bare kitchens east of open doors to a bathroom from the bedrooms.        |
+| 760 | The bare kitchens east of open doors to bathrooms from the bedrooms          |
+| 761 | The bare kitchens east of open doors to the bathroom from bedrooms           |
+| 762 | The bare kitchens east of open doors to the bathroom from the bedroom        |
+| 763 | The bare kitchens east of open doors to the bathroom from the bedrooms       |
+| 764 | The bare kitchens east of open doors to the bathroom from the bedrooms.      |
+| 765 | The bare kitchens east of open doors to the bathrooms from the bedrooms      |
+| 766 | The bare kitchens east of the open door from a bedroom to a bathroom         |
+| 767 | The bare kitchens east of the open door from a bedroom to a bathroom.        |
+| 768 | The bare kitchens east of the open door from a bedroom to bathrooms          |
+| 769 | The bare kitchens east of the open door from a bedroom to bathrooms.         |
+| 770 | The bare kitchens east of the open door from a bedroom to the bathroom       |
+| 771 | The bare kitchens east of the open door from a bedroom to the bathroom.      |
+| 772 | The bare kitchens east of the open door from a bedroom to the bathrooms      |
+| 773 | The bare kitchens east of the open door from a bedroom to the bathrooms.     |
+| 774 | The bare kitchens east of the open door from bedrooms to a bathroom          |
+| 775 | The bare kitchens east of the open door from bedrooms to a bathroom.         |
+| 776 | The bare kitchens east of the open door from bedrooms to bathrooms           |
+| 777 | The bare kitchens east of the open door from bedrooms to bathrooms.          |
+| 778 | The bare kitchens east of the open door from bedrooms to the bathroom        |
+| 779 | The bare kitchens east of the open door from bedrooms to the bathroom.       |
+| 780 | The bare kitchens east of the open door from bedrooms to the bathrooms       |
+| 781 | The bare kitchens east of the open door from bedrooms to the bathrooms.      |
+| 782 | The bare kitchens east of the open door from the bedroom to a bathroom       |
+| 783 | The bare kitchens east of the open door from the bedroom to a bathroom.      |
+| 784 | The bare kitchens east of the open door from the bedroom to bathrooms        |
+| 785 | The bare kitchens east of the open door from the bedroom to bathrooms.       |
+| 786 | The bare kitchens east of the open door from the bedroom to the bathroom     |
+| 787 | The bare kitchens east of the open door from the bedroom to the bathroom.    |
+| 788 | The bare kitchens east of the open door from the bedroom to the bathrooms    |
+| 789 | The bare kitchens east of the open door from the bedroom to the bathrooms.   |
+| 790 | The bare kitchens east of the open door from the bedrooms to a bathroom      |
+| 791 | The bare kitchens east of the open door from the bedrooms to a bathroom.     |
+| 792 | The bare kitchens east of the open door from the bedrooms to bathrooms       |
+| 793 | The bare kitchens east of the open door from the bedrooms to bathrooms.      |
+| 794 | The bare kitchens east of the open door from the bedrooms to the bathroom    |
+| 795 | The bare kitchens east of the open door from the bedrooms to the bathroom.   |
+| 796 | The bare kitchens east of the open door from the bedrooms to the bathrooms   |
+| 797 | The bare kitchens east of the open door from the bedrooms to the bathrooms.  |
+| 798 | The bare kitchens east of the open door to a bathroom from a bedroom         |
+| 799 | The bare kitchens east of the open door to a bathroom from a bedroom.        |
+| 800 | The bare kitchens east of the open door to a bathroom from bedrooms          |
+| 801 | The bare kitchens east of the open door to a bathroom from bedrooms.         |
+| 802 | The bare kitchens east of the open door to a bathroom from the bedroom       |
+| 803 | The bare kitchens east of the open door to a bathroom from the bedroom.      |
+| 804 | The bare kitchens east of the open door to a bathroom from the bedrooms      |
+| 805 | The bare kitchens east of the open door to a bathroom from the bedrooms.     |
+| 806 | The bare kitchens east of the open door to bathrooms from a bedroom          |
+| 807 | The bare kitchens east of the open door to bathrooms from a bedroom.         |
+| 808 | The bare kitchens east of the open door to bathrooms from bedrooms           |
+| 809 | The bare kitchens east of the open door to bathrooms from bedrooms.          |
+| 810 | The bare kitchens east of the open door to bathrooms from the bedroom        |
+| 811 | The bare kitchens east of the open door to bathrooms from the bedroom.       |
+| 812 | The bare kitchens east of the open door to bathrooms from the bedrooms       |
+| 813 | The bare kitchens east of the open door to bathrooms from the bedrooms.      |
+| 814 | The bare kitchens east of the open door to the bathroom from a bedroom       |
+| 815 | The bare kitchens east of the open door to the bathroom from a bedroom.      |
+| 816 | The bare kitchens east of the open door to the bathroom from bedrooms        |
+| 817 | The bare kitchens east of the open door to the bathroom from bedrooms.       |
+| 818 | The bare kitchens east of the open door to the bathroom from the bedroom     |
+| 819 | The bare kitchens east of the open door to the bathroom from the bedroom.    |
+| 820 | The bare kitchens east of the open door to the bathroom from the bedrooms    |
+| 821 | The bare kitchens east of the open door to the bathroom from the bedrooms.   |
+| 822 | The bare kitchens east of the open door to the bathrooms from a bedroom      |
+| 823 | The bare kitchens east of the open door to the bathrooms from a bedroom.     |
+| 824 | The bare kitchens east of the open door to the bathrooms from bedrooms       |
+| 825 | The bare kitchens east of the open door to the bathrooms from bedrooms.      |
+| 826 | The bare kitchens east of the open door to the bathrooms from the bedroom    |
+| 827 | The bare kitchens east of the open door to the bathrooms from the bedroom.   |
+| 828 | The bare kitchens east of the open door to the bathrooms from the bedrooms   |
+| 829 | The bare kitchens east of the open door to the bathrooms from the bedrooms.  |
+| 830 | The bare kitchens east of the open doors from a bedroom to a bathroom        |
+| 831 | The bare kitchens east of the open doors from a bedroom to a bathroom.       |
+| 832 | The bare kitchens east of the open doors from a bedroom to bathrooms         |
+| 833 | The bare kitchens east of the open doors from a bedroom to the bathroom      |
+| 834 | The bare kitchens east of the open doors from a bedroom to the bathrooms     |
+| 835 | The bare kitchens east of the open doors from a bedroom to the bathrooms.    |
+| 836 | The bare kitchens east of the open doors from bedrooms to a bathroom         |
+| 837 | The bare kitchens east of the open doors from bedrooms to a bathroom.        |
+| 838 | The bare kitchens east of the open doors from bedrooms to bathrooms          |
+| 839 | The bare kitchens east of the open doors from bedrooms to the bathroom       |
+| 840 | The bare kitchens east of the open doors from bedrooms to the bathrooms      |
+| 841 | The bare kitchens east of the open doors from bedrooms to the bathrooms.     |
+| 842 | The bare kitchens east of the open doors from the bedroom to a bathroom      |
+| 843 | The bare kitchens east of the open doors from the bedroom to a bathroom.     |
+| 844 | The bare kitchens east of the open doors from the bedroom to bathrooms       |
+| 845 | The bare kitchens east of the open doors from the bedroom to bathrooms.      |
+| 846 | The bare kitchens east of the open doors from the bedroom to the bathroom    |
+| 847 | The bare kitchens east of the open doors from the bedroom to the bathroom.   |
+| 848 | The bare kitchens east of the open doors from the bedroom to the bathrooms   |
+| 849 | The bare kitchens east of the open doors from the bedroom to the bathrooms.  |
+| 850 | The bare kitchens east of the open doors from the bedrooms to a bathroom     |
+| 851 | The bare kitchens east of the open doors from the bedrooms to a bathroom.    |
+| 852 | The bare kitchens east of the open doors from the bedrooms to bathrooms      |
+| 853 | The bare kitchens east of the open doors from the bedrooms to bathrooms.     |
+| 854 | The bare kitchens east of the open doors from the bedrooms to the bathroom   |
+| 855 | The bare kitchens east of the open doors from the bedrooms to the bathroom.  |
+| 856 | The bare kitchens east of the open doors from the bedrooms to the bathrooms  |
+| 857 | The bare kitchens east of the open doors from the bedrooms to the bathrooms. |
+| 858 | The bare kitchens east of the open doors to a bathroom from a bedroom        |
+| 859 | The bare kitchens east of the open doors to a bathroom from a bedroom.       |
+| 860 | The bare kitchens east of the open doors to a bathroom from bedrooms         |
+| 861 | The bare kitchens east of the open doors to a bathroom from bedrooms.        |
+| 862 | The bare kitchens east of the open doors to a bathroom from the bedroom      |
+| 863 | The bare kitchens east of the open doors to a bathroom from the bedroom.     |
+| 864 | The bare kitchens east of the open doors to a bathroom from the bedrooms     |
+| 865 | The bare kitchens east of the open doors to a bathroom from the bedrooms.    |
+| 866 | The bare kitchens east of the open doors to bathrooms from a bedroom         |
+| 867 | The bare kitchens east of the open doors to bathrooms from a bedroom.        |
+| 868 | The bare kitchens east of the open doors to bathrooms from bedrooms          |
+| 869 | The bare kitchens east of the open doors to bathrooms from bedrooms.         |
+| 870 | The bare kitchens east of the open doors to bathrooms from the bedroom       |
+| 871 | The bare kitchens east of the open doors to bathrooms from the bedrooms      |
+| 872 | The bare kitchens east of the open doors to bathrooms from the bedrooms.     |
+| 873 | The bare kitchens east of the open doors to the bathroom from a bedroom      |
+| 874 | The bare kitchens east of the open doors to the bathroom from a bedroom.     |
+| 875 | The bare kitchens east of the open doors to the bathroom from bedrooms       |
+| 876 | The bare kitchens east of the open doors to the bathroom from bedrooms.      |
+| 877 | The bare kitchens east of the open doors to the bathroom from the bedroom    |
+| 878 | The bare kitchens east of the open doors to the bathroom from the bedroom.   |
+| 879 | The bare kitchens east of the open doors to the bathroom from the bedrooms   |
+| 880 | The bare kitchens east of the open doors to the bathroom from the bedrooms.  |
+| 881 | The bare kitchens east of the open doors to the bathrooms from a bedroom     |
+| 882 | The bare kitchens east of the open doors to the bathrooms from a bedroom.    |
+| 883 | The bare kitchens east of the open doors to the bathrooms from bedrooms      |
+| 884 | The bare kitchens east of the open doors to the bathrooms from bedrooms.     |
+| 885 | The bare kitchens east of the open doors to the bathrooms from the bedroom   |
+| 886 | The bare kitchens east of the open doors to the bathrooms from the bedrooms  |
+| 887 | The bare kitchens east of the open doors to the bathrooms from the bedrooms. |
+| 888 | The bare kitchens, east of the open door to the bathroom from the bedrooms   |
++-----+------------------------------------------------------------------------------+
+

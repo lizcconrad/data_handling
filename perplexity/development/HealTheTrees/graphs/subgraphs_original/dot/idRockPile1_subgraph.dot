@@ -1,0 +1,19 @@
+strict digraph {
+idRockPile1 [node_type="entity_node", root=root, lexicon_key=idRockPile];
+grey [lexicon_key=grey];
+bumpy [lexicon_key=bumpy];
+yes [lexicon_key=yes];
+idRockyArea1 [lexicon_key=idRockyArea];
+rocky [lexicon_key=rocky];
+idClearing1 [lexicon_key=idClearing];
+grassy [lexicon_key=grassy];
+idCave1 [lexicon_key=idCave];
+idRockPile1 -> grey [label="idRockPile1_prop_idColor", edge_type=property, lexicon_key=idColor];
+idRockPile1 -> bumpy [label="idRockPile1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idRockPile1 -> yes [label="idRockPile1_prop_idImmovable", edge_type=property, lexicon_key=idImmovable];
+idRockPile1 -> idRockyArea1 [label=isNear, edge_type=relationship, lexicon_key=isNear];
+idRockPile1 -> idClearing1 [label=isWestOf, edge_type=relationship, lexicon_key=isWestOf];
+idRockyArea1 -> rocky [label="idRockyArea1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idRockyArea1 -> idCave1 [label=isWestOf, edge_type=relationship, lexicon_key=isWestOf];
+idClearing1 -> grassy [label="idClearing1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+}

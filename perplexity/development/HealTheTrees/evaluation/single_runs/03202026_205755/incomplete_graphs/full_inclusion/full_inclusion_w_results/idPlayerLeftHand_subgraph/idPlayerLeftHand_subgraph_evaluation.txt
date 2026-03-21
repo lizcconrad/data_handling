@@ -1,0 +1,1180 @@
+GRAPH NAME: idPlayerLeftHand_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 931   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------------------------------------------+
+|                                            GOLD OUTPUTS                                            |
++---------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                           | Generated? |
++---------------------------------------------------------------------------------------+------------+
+| the player's left hand on the local left near the player who has not found the bottle | False      |
++---------------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------+
+|                                      NODE METRICS                                      |
++------------------+--------------+---------------+------------------+-------------------+
+| Node             | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------+--------------+---------------+------------------+-------------------+
+| idPlayerLeftHand | True         | True          | Covered          | Included          |
+| idLocalLeft      | True         | True          | Covered          | Included          |
+| idPlayer         | True         | True          | Covered          | Included          |
+| false            | True         | True          | Covered          | Included          |
++------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE METRICS                                                              |
++----------------------------------+------------------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent           | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+------------------+-------------+--------------+---------------+------------------+-------------------+
+| idPlayerLeftHand_prop_idLocation | idPlayerLeftHand | idLocalLeft | True         | True          | Covered          | Included          |
+| isNear                           | idPlayerLeftHand | idPlayer    | True         | True          | Covered          | Included          |
+| idPlayer_prop_idBottleFound      | idPlayer         | false       | True         | True          | Covered          | Included          |
++----------------------------------+------------------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h105                                                                      |
+|               |   INDEX: x104                                                                    |
+|               |   RELS: < [ _near_p LBL: h171 ARG0: e168 ARG1: u169 ARG2: i170 ]                 |
+|               |           [ def_udef_a_q LBL: h175 ARG0: x172 RSTR: h173 BODY: h174 ]            |
+|               |           [ neg LBL: h161 ARG0: e159 [ e TENSE: tensed ] ARG1: h160 ]            |
+|               |           [ _find_v_1 LBL: h158 ARG0: e155 [ e TENSE: tensed ] ARG1: i156 ARG2:  |
+|               | i157 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h166 ARG0: x163 RSTR: h164 BODY: h165 ]            |
+|               |           [ _bottle_n_of LBL: h150 ARG0: x148 ARG1: i149 ]                       |
+|               |           [ _player_n_of LBL: h144 ARG0: x142 [ x NUM: sg ] ARG1: i143 ]         |
+|               |           [ _on_p_loc LBL: h136 ARG0: e133 ARG1: u134 ARG2: u135 ]               |
+|               |           [ def_udef_a_q LBL: h140 ARG0: x137 RSTR: h138 BODY: h139 ]            |
+|               |           [ _local_a_1 LBL: h129 ARG0: e127 ARG1: u128 ]                         |
+|               |           [ _left_n_of LBL: h132 ARG0: x130 ARG1: i131 ]                         |
+|               |           [ poss LBL: h126 ARG0: e123 ARG1: x124 ARG2: i125 ]                    |
+|               |           [ def_udef_a_q LBL: h121 ARG0: x118 RSTR: h119 BODY: h120 ]            |
+|               |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|               |           [ compound LBL: h117 ARG0: e114 [ e PROG: - ] ARG1: u115 ARG2: u116 ]  |
+|               |           [ udef_q LBL: h112 ARG0: x109 RSTR: h110 BODY: h111 ]                  |
+|               |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|               |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|               |   HCONS: < h160 qeq h158 h164 qeq h150 h173 qeq h144 h138 qeq h132 h119 qeq h103 |
+|               | h110 qeq h108 >                                                                  |
+|               |   EQS: < h162 eq h160 x163 eq x148 h161 eq h167 i157 eq x163 h161 eq h144 i156   |
+|               | eq x142 x172 eq x142 h171 eq h176 i170 eq x172 h129 eq h132 u128 eq x130 x137 eq |
+|               | x130 h136 eq h141 u135 eq x137 x118 eq x101 h126 eq h122 i125 eq x118 x109 eq    |
+|               | x106 h117 eq h113 u116 eq x109 h117 eq h105 u115 eq x104 h126 eq h105 x124 eq    |
+|               | x104 h136 eq h105 u134 eq x104 h171 eq h105 u169 eq x104 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h105                                                                      |
+|               |   INDEX: x104                                                                    |
+|               |   RELS: < [ _near_p LBL: h105 ARG0: e168 ARG1: x104 ARG2: x142 [ x NUM: sg ] ]   |
+|               |           [ def_udef_a_q LBL: h175 ARG0: x142 RSTR: h173 BODY: h174 ]            |
+|               |           [ neg LBL: h144 ARG0: e159 [ e TENSE: tensed ] ARG1: h160 ]            |
+|               |           [ _find_v_1 LBL: h158 ARG0: e155 [ e TENSE: tensed ] ARG1: x142 ARG2:  |
+|               | x148 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h166 ARG0: x148 RSTR: h164 BODY: h165 ]            |
+|               |           [ _bottle_n_of LBL: h150 ARG0: x148 ARG1: i149 ]                       |
+|               |           [ _player_n_of LBL: h144 ARG0: x142 ARG1: i143 ]                       |
+|               |           [ _on_p_loc LBL: h105 ARG0: e133 ARG1: x104 ARG2: x130 ]               |
+|               |           [ def_udef_a_q LBL: h140 ARG0: x130 RSTR: h138 BODY: h139 ]            |
+|               |           [ _local_a_1 LBL: h129 ARG0: e127 ARG1: x130 ]                         |
+|               |           [ _left_n_of LBL: h129 ARG0: x130 ARG1: i131 ]                         |
+|               |           [ poss LBL: h105 ARG0: e123 ARG1: x104 ARG2: x101 ]                    |
+|               |           [ def_udef_a_q LBL: h121 ARG0: x101 RSTR: h119 BODY: h120 ]            |
+|               |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|               |           [ compound LBL: h105 ARG0: e114 [ e PROG: - ] ARG1: x104 ARG2: x106 ]  |
+|               |           [ udef_q LBL: h112 ARG0: x106 RSTR: h110 BODY: h111 ]                  |
+|               |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|               |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|               |   HCONS: < h160 qeq h158 h164 qeq h150 h173 qeq h144 h138 qeq h129 h119 qeq h103 |
+|               | h110 qeq h108 > ]                                                                |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h185                                                                      |
+|               |   INDEX: e182                                                                    |
+|               |   RELS: < [ unknown LBL: h181 ARG: x104 ARG0: e182 ]                             |
+|               |           [ def_udef_a_q LBL: h180 ARG0: x104 RSTR: h178 BODY: h179 ]            |
+|               |           [ _near_p LBL: h105 ARG0: e168 ARG1: x104 ARG2: x142 [ x NUM: sg ] ]   |
+|               |           [ def_udef_a_q LBL: h175 ARG0: x142 RSTR: h173 BODY: h174 ]            |
+|               |           [ neg LBL: h144 ARG0: e159 [ e TENSE: tensed ] ARG1: h160 ]            |
+|               |           [ _find_v_1 LBL: h158 ARG0: e155 [ e TENSE: tensed ] ARG1: x142 ARG2:  |
+|               | x148 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h166 ARG0: x148 RSTR: h164 BODY: h165 ]            |
+|               |           [ _bottle_n_of LBL: h150 ARG0: x148 ARG1: i149 ]                       |
+|               |           [ _player_n_of LBL: h144 ARG0: x142 ARG1: i143 ]                       |
+|               |           [ _on_p_loc LBL: h105 ARG0: e133 ARG1: x104 ARG2: x130 ]               |
+|               |           [ def_udef_a_q LBL: h140 ARG0: x130 RSTR: h138 BODY: h139 ]            |
+|               |           [ _local_a_1 LBL: h129 ARG0: e127 ARG1: x130 ]                         |
+|               |           [ _left_n_of LBL: h129 ARG0: x130 ARG1: i131 ]                         |
+|               |           [ poss LBL: h105 ARG0: e123 ARG1: x104 ARG2: x101 ]                    |
+|               |           [ def_udef_a_q LBL: h121 ARG0: x101 RSTR: h119 BODY: h120 ]            |
+|               |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|               |           [ compound LBL: h105 ARG0: e114 [ e PROG: - ] ARG1: x104 ARG2: x106 ]  |
+|               |           [ udef_q LBL: h112 ARG0: x106 RSTR: h110 BODY: h111 ]                  |
+|               |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|               |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|               |   HCONS: < h160 qeq h158 h164 qeq h150 h173 qeq h144 h138 qeq h129 h119 qeq h103 |
+|               | h110 qeq h108 h178 qeq h105 h185 qeq h181 > ]                                    |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                             NODE SEMENTS                                            |
++------------------+----------------------------------------------------------------------------------+
+| Node             | Generated SEMENT                                                                 |
++------------------+----------------------------------------------------------------------------------+
+| idPlayerLeftHand | [ TOP: h105                                                                      |
+|                  |   INDEX: x104                                                                    |
+|                  |   RELS: < [ poss LBL: h126 ARG0: e123 ARG1: x124 ARG2: i125 ]                    |
+|                  |           [ def_udef_a_q LBL: h121 ARG0: x118 RSTR: h119 BODY: h120 ]            |
+|                  |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|                  |           [ compound LBL: h117 ARG0: e114 [ e PROG: - ] ARG1: u115 ARG2: u116 ]  |
+|                  |           [ udef_q LBL: h112 ARG0: x109 RSTR: h110 BODY: h111 ]                  |
+|                  |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|                  |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|                  |   HCONS: < h119 qeq h103 h110 qeq h108 >                                         |
+|                  |   EQS: < x118 eq x101 h126 eq h122 i125 eq x118 x109 eq x106 h117 eq h113 u116   |
+|                  | eq x109 h117 eq h105 u115 eq x104 h126 eq h105 x124 eq x104 > ]                  |
++------------------+----------------------------------------------------------------------------------+
+| idLocalLeft      | [ TOP: h132                                                                      |
+|                  |   INDEX: x130                                                                    |
+|                  |   RELS: < [ _local_a_1 LBL: h129 ARG0: e127 ARG1: u128 ]                         |
+|                  |           [ _left_n_of LBL: h132 ARG0: x130 ARG1: i131 ] >                       |
+|                  |   EQS: < h129 eq h132 u128 eq x130 >                                             |
+|                  |   SLOTS: < ARG1: i131 > ]                                                        |
++------------------+----------------------------------------------------------------------------------+
+| idPlayer         | [ TOP: h144                                                                      |
+|                  |   INDEX: x142 [ x NUM: sg ]                                                      |
+|                  |   RELS: < [ _player_n_of LBL: h144 ARG0: x142 ARG1: i143 ] >                     |
+|                  |   SLOTS: < ARG1: i143 > ]                                                        |
++------------------+----------------------------------------------------------------------------------+
+| false            | [ TOP: h147                                                                      |
+|                  |   INDEX: e145                                                                    |
+|                  |   RELS: < [ _false_a_of LBL: h147 ARG0: e145 ARG1: h146 ] >                      |
+|                  |   SLOTS: < ARG1: h146 > ]                                                        |
++------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     EDGE SEMENTS                                                                     |
++----------------------------------+------------------+-------------+----------------------------------------------------------------------------------+
+| Edge                             | Parent           | Child       | Generated SEMENT                                                                 |
++----------------------------------+------------------+-------------+----------------------------------------------------------------------------------+
+| idPlayerLeftHand_prop_idLocation | idPlayerLeftHand | idLocalLeft | [ TOP: h105                                                                      |
+|                                  |                  |             |   INDEX: x104                                                                    |
+|                                  |                  |             |   RELS: < [ _on_p_loc LBL: h136 ARG0: e133 ARG1: u134 ARG2: u135 ]               |
+|                                  |                  |             |           [ def_udef_a_q LBL: h140 ARG0: x137 RSTR: h138 BODY: h139 ]            |
+|                                  |                  |             |           [ _local_a_1 LBL: h129 ARG0: e127 ARG1: u128 ]                         |
+|                                  |                  |             |           [ _left_n_of LBL: h132 ARG0: x130 ARG1: i131 ]                         |
+|                                  |                  |             |           [ poss LBL: h126 ARG0: e123 ARG1: x124 ARG2: i125 ]                    |
+|                                  |                  |             |           [ def_udef_a_q LBL: h121 ARG0: x118 RSTR: h119 BODY: h120 ]            |
+|                                  |                  |             |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|                                  |                  |             |           [ compound LBL: h117 ARG0: e114 [ e PROG: - ] ARG1: u115 ARG2: u116 ]  |
+|                                  |                  |             |           [ udef_q LBL: h112 ARG0: x109 RSTR: h110 BODY: h111 ]                  |
+|                                  |                  |             |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|                                  |                  |             |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|                                  |                  |             |   HCONS: < h138 qeq h132 h119 qeq h103 h110 qeq h108 >                           |
+|                                  |                  |             |   EQS: < h129 eq h132 u128 eq x130 x137 eq x130 h136 eq h141 u135 eq x137 x118   |
+|                                  |                  |             | eq x101 h126 eq h122 i125 eq x118 x109 eq x106 h117 eq h113 u116 eq x109 h117 eq |
+|                                  |                  |             | h105 u115 eq x104 h126 eq h105 x124 eq x104 h136 eq h105 u134 eq x104 > ]        |
++----------------------------------+------------------+-------------+----------------------------------------------------------------------------------+
+| isNear                           | idPlayerLeftHand | idPlayer    | [ TOP: h105                                                                      |
+|                                  |                  |             |   INDEX: x104                                                                    |
+|                                  |                  |             |   RELS: < [ _near_p LBL: h171 ARG0: e168 ARG1: u169 ARG2: i170 ]                 |
+|                                  |                  |             |           [ def_udef_a_q LBL: h175 ARG0: x172 RSTR: h173 BODY: h174 ]            |
+|                                  |                  |             |           [ neg LBL: h161 ARG0: e159 [ e TENSE: tensed ] ARG1: h160 ]            |
+|                                  |                  |             |           [ _find_v_1 LBL: h158 ARG0: e155 [ e TENSE: tensed ] ARG1: i156 ARG2:  |
+|                                  |                  |             | i157 ]                                                                           |
+|                                  |                  |             |           [ def_udef_a_q LBL: h166 ARG0: x163 RSTR: h164 BODY: h165 ]            |
+|                                  |                  |             |           [ _bottle_n_of LBL: h150 ARG0: x148 ARG1: i149 ]                       |
+|                                  |                  |             |           [ _player_n_of LBL: h144 ARG0: x142 [ x NUM: sg ] ARG1: i143 ]         |
+|                                  |                  |             |           [ _on_p_loc LBL: h136 ARG0: e133 ARG1: u134 ARG2: u135 ]               |
+|                                  |                  |             |           [ def_udef_a_q LBL: h140 ARG0: x137 RSTR: h138 BODY: h139 ]            |
+|                                  |                  |             |           [ _local_a_1 LBL: h129 ARG0: e127 ARG1: u128 ]                         |
+|                                  |                  |             |           [ _left_n_of LBL: h132 ARG0: x130 ARG1: i131 ]                         |
+|                                  |                  |             |           [ poss LBL: h126 ARG0: e123 ARG1: x124 ARG2: i125 ]                    |
+|                                  |                  |             |           [ def_udef_a_q LBL: h121 ARG0: x118 RSTR: h119 BODY: h120 ]            |
+|                                  |                  |             |           [ _player_n_of LBL: h103 ARG0: x101 ARG1: i102 ]                       |
+|                                  |                  |             |           [ compound LBL: h117 ARG0: e114 [ e PROG: - ] ARG1: u115 ARG2: u116 ]  |
+|                                  |                  |             |           [ udef_q LBL: h112 ARG0: x109 RSTR: h110 BODY: h111 ]                  |
+|                                  |                  |             |           [ _left_n_of LBL: h108 ARG0: x106 ARG1: i107 ]                         |
+|                                  |                  |             |           [ _hand_n_1 LBL: h105 ARG0: x104 ] >                                   |
+|                                  |                  |             |   HCONS: < h160 qeq h158 h164 qeq h150 h173 qeq h144 h138 qeq h132 h119 qeq h103 |
+|                                  |                  |             | h110 qeq h108 >                                                                  |
+|                                  |                  |             |   EQS: < h162 eq h160 x163 eq x148 h161 eq h167 i157 eq x163 h161 eq h144 i156   |
+|                                  |                  |             | eq x142 x172 eq x142 h171 eq h176 i170 eq x172 h129 eq h132 u128 eq x130 x137 eq |
+|                                  |                  |             | x130 h136 eq h141 u135 eq x137 x118 eq x101 h126 eq h122 i125 eq x118 x109 eq    |
+|                                  |                  |             | x106 h117 eq h113 u116 eq x109 h117 eq h105 u115 eq x104 h126 eq h105 x124 eq    |
+|                                  |                  |             | x104 h136 eq h105 u134 eq x104 h171 eq h105 u169 eq x104 > ]                     |
++----------------------------------+------------------+-------------+----------------------------------------------------------------------------------+
+| idPlayer_prop_idBottleFound      | idPlayer         | false       | [ TOP: h144                                                                      |
+|                                  |                  |             |   INDEX: x142 [ x NUM: sg ]                                                      |
+|                                  |                  |             |   RELS: < [ neg LBL: h161 ARG0: e159 [ e TENSE: tensed ] ARG1: h160 ]            |
+|                                  |                  |             |           [ _find_v_1 LBL: h158 ARG0: e155 [ e TENSE: tensed ] ARG1: i156 ARG2:  |
+|                                  |                  |             | i157 ]                                                                           |
+|                                  |                  |             |           [ def_udef_a_q LBL: h166 ARG0: x163 RSTR: h164 BODY: h165 ]            |
+|                                  |                  |             |           [ _bottle_n_of LBL: h150 ARG0: x148 ARG1: i149 ]                       |
+|                                  |                  |             |           [ _player_n_of LBL: h144 ARG0: x142 ARG1: i143 ] >                     |
+|                                  |                  |             |   HCONS: < h160 qeq h158 h164 qeq h150 >                                         |
+|                                  |                  |             |   EQS: < h162 eq h160 x163 eq x148 h161 eq h167 i157 eq x163 h161 eq h144 i156   |
+|                                  |                  |             | eq x142 >                                                                        |
+|                                  |                  |             |   SLOTS: < ARG1: i143 > ]                                                        |
++----------------------------------+------------------+-------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------+
+|                                       GENERATED ENGLISH TEXT                                       |
++-----+----------------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                               |
++-----+----------------------------------------------------------------------------------------------+
+| 1   | A player's left hand near a player the bottles are not found by, on the local lefts          |
+| 2   | A player's left hand near a player the bottles will not be found by, on the local lefts      |
+| 3   | A player's left hand on a local left near a player the bottles are not found by              |
+| 4   | A player's left hand on a local left near a player the bottles are not found by.             |
+| 5   | A player's left hand on a local left near a player the bottles will not be found by          |
+| 6   | A player's left hand on a local left near a player the bottles will not be found by          |
+| 7   | A player's left hand on a local left, near a player the bottles are not found by             |
+| 8   | A player's left hand on local lefts near a player the bottles are not found by               |
+| 9   | A player's left hand on local lefts near a player the bottles are not found by.              |
+| 10  | A player's left hand on local lefts near a player the bottles were not found by              |
+| 11  | A player's left hand on local lefts near a player the bottles were not found by.             |
+| 12  | A player's left hand on local lefts near a player the bottles will be not found by           |
+| 13  | A player's left hand on local lefts near a player the bottles will not be found by           |
+| 14  | A player's left hand on local lefts near a player the bottles will not be found by           |
+| 15  | A player's left hand on local lefts near a player the bottles will not be found by.          |
+| 16  | A player's left hand on local lefts near a player the bottles will not be found by.          |
+| 17  | A player's left hand on local lefts near the player the bottles are not found by             |
+| 18  | A player's left hand on local lefts near the player the bottles are not found by.            |
+| 19  | A player's left hand on local lefts near the player the bottles will not be found by         |
+| 20  | A player's left hand on the local lefts near a player the bottles are not found by           |
+| 21  | A player's left hand on the local lefts near a player the bottles are not found by.          |
+| 22  | A player's left hand on the local lefts near a player the bottles will not be found by       |
+| 23  | A player's left hand on the local lefts near a player the bottles will not be found by       |
+| 24  | A player's left hand, on the local lefts near a player the bottles are not found by          |
+| 25  | A player's left hands near a player the bottles are not found by on a local left             |
+| 26  | A player's left hands near a player the bottles are not found by on a local left.            |
+| 27  | A player's left hands near a player the bottles are not found by on local lefts              |
+| 28  | A player's left hands near a player the bottles are not found by on local lefts.             |
+| 29  | A player's left hands near a player the bottles are not found by on the local lefts          |
+| 30  | A player's left hands near a player the bottles are not found by on the local lefts.         |
+| 31  | A player's left hands near a player the bottles are not found by, on the local lefts         |
+| 32  | A player's left hands near a player the bottles will not be found by on local lefts          |
+| 33  | A player's left hands near a player the bottles will not be found by on local lefts          |
+| 34  | A player's left hands near a player the bottles will not be found by on the local lefts      |
+| 35  | A player's left hands near a player the bottles will not be found by on the local lefts.     |
+| 36  | A player's left hands near a player the bottles will not be found by on the local lefts.     |
+| 37  | A player's left hands near a player the bottles will not be found by, on the local lefts     |
+| 38  | A player's left hands near a player the bottles will not be found by, on the local lefts     |
+| 39  | A player's left hands near the player the bottles are not found by, on the local lefts       |
+| 40  | A player's left hands on a local left near a player the bottle is not found by               |
+| 41  | A player's left hands on a local left near a player the bottle is not found by.              |
+| 42  | A player's left hands on a local left near a player the bottle was not found by              |
+| 43  | A player's left hands on a local left near a player the bottle was not found by.             |
+| 44  | A player's left hands on a local left near a player the bottle will not be found by          |
+| 45  | A player's left hands on a local left near a player the bottle will not be found by          |
+| 46  | A player's left hands on a local left near a player the bottle will not be found by.         |
+| 47  | A player's left hands on a local left near a player the bottle will not be found by.         |
+| 48  | A player's left hands on a local left near a player the bottles are non found by             |
+| 49  | A player's left hands on a local left near a player the bottles are not found by             |
+| 50  | A player's left hands on a local left near a player the bottles are not found by             |
+| 51  | A player's left hands on a local left near a player the bottles are not found by.            |
+| 52  | A player's left hands on a local left near a player the bottles are not found by.            |
+| 53  | A player's left hands on a local left near a player the bottles were not found by            |
+| 54  | A player's left hands on a local left near a player the bottles were not found by            |
+| 55  | A player's left hands on a local left near a player the bottles were not found by.           |
+| 56  | A player's left hands on a local left near a player the bottles were not found by.           |
+| 57  | A player's left hands on a local left near a player the bottles will be not found by         |
+| 58  | A player's left hands on a local left near a player the bottles will be not found by.        |
+| 59  | A player's left hands on a local left near a player the bottles will not be found by         |
+| 60  | A player's left hands on a local left near a player the bottles will not be found by         |
+| 61  | A player's left hands on a local left near a player the bottles will not be found by.        |
+| 62  | A player's left hands on a local left near a player the bottles will not be found by.        |
+| 63  | A player's left hands on a local left near a player the bottles won't be found by            |
+| 64  | A player's left hands on a local left near a player the bottles won't be found by.           |
+| 65  | A player's left hands on a local left near the player the bottle is not found by             |
+| 66  | A player's left hands on a local left near the player the bottles are not found by           |
+| 67  | A player's left hands on a local left near the player the bottles are not found by           |
+| 68  | A player's left hands on a local left near the player the bottles are not found by.          |
+| 69  | A player's left hands on a local left near the player the bottles were not found by          |
+| 70  | A player's left hands on a local left near the player the bottles were not found by.         |
+| 71  | A player's left hands on a local left near the player the bottles will be not found by       |
+| 72  | A player's left hands on a local left near the player the bottles will be not found by.      |
+| 73  | A player's left hands on a local left near the player the bottles will not be found by       |
+| 74  | A player's left hands on a local left near the player the bottles will not be found by       |
+| 75  | A player's left hands on a local left near the player the bottles will not be found by.      |
+| 76  | A player's left hands on a local left near the player the bottles will not be found by.      |
+| 77  | A player's left hands on a local left, near a player the bottles are not found by            |
+| 78  | A player's left hands on local lefts near a player a bottle is not found by                  |
+| 79  | A player's left hands on local lefts near a player a bottle is not found by.                 |
+| 80  | A player's left hands on local lefts near a player a bottle will not be found by             |
+| 81  | A player's left hands on local lefts near a player a bottle will not be found by             |
+| 82  | A player's left hands on local lefts near a player the bottle is not found by                |
+| 83  | A player's left hands on local lefts near a player the bottle is not found by                |
+| 84  | A player's left hands on local lefts near a player the bottle is not found by.               |
+| 85  | A player's left hands on local lefts near a player the bottle is not found by.               |
+| 86  | A player's left hands on local lefts near a player the bottle was not found by               |
+| 87  | A player's left hands on local lefts near a player the bottle was not found by               |
+| 88  | A player's left hands on local lefts near a player the bottle was not found by.              |
+| 89  | A player's left hands on local lefts near a player the bottle was not found by.              |
+| 90  | A player's left hands on local lefts near a player the bottle will be not found by           |
+| 91  | A player's left hands on local lefts near a player the bottle will be not found by.          |
+| 92  | A player's left hands on local lefts near a player the bottle will not be found by           |
+| 93  | A player's left hands on local lefts near a player the bottle will not be found by           |
+| 94  | A player's left hands on local lefts near a player the bottle will not be found by.          |
+| 95  | A player's left hands on local lefts near a player the bottle will not be found by.          |
+| 96  | A player's left hands on local lefts near a player the bottle won't be found by              |
+| 97  | A player's left hands on local lefts near a player the bottles are non found by              |
+| 98  | A player's left hands on local lefts near a player the bottles are non found by.             |
+| 99  | A player's left hands on local lefts near a player the bottles are not found by              |
+| 100 | A player's left hands on local lefts near a player the bottles are not found by              |
+| 101 | A player's left hands on local lefts near a player the bottles are not found by.             |
+| 102 | A player's left hands on local lefts near a player the bottles are not found by.             |
+| 103 | A player's left hands on local lefts near a player the bottles were non found by             |
+| 104 | A player's left hands on local lefts near a player the bottles were not found by             |
+| 105 | A player's left hands on local lefts near a player the bottles were not found by             |
+| 106 | A player's left hands on local lefts near a player the bottles were not found by.            |
+| 107 | A player's left hands on local lefts near a player the bottles were not found by.            |
+| 108 | A player's left hands on local lefts near a player the bottles will be non found by          |
+| 109 | A player's left hands on local lefts near a player the bottles will be non found by.         |
+| 110 | A player's left hands on local lefts near a player the bottles will be not found by          |
+| 111 | A player's left hands on local lefts near a player the bottles will be not found by.         |
+| 112 | A player's left hands on local lefts near a player the bottles will not be found by          |
+| 113 | A player's left hands on local lefts near a player the bottles will not be found by          |
+| 114 | A player's left hands on local lefts near a player the bottles will not be found by.         |
+| 115 | A player's left hands on local lefts near a player the bottles will not be found by.         |
+| 116 | A player's left hands on local lefts near a player the bottles won't be found by             |
+| 117 | A player's left hands on local lefts near a player the bottles won't be found by.            |
+| 118 | A player's left hands on local lefts near the player the bottle is not found by              |
+| 119 | A player's left hands on local lefts near the player the bottle is not found by.             |
+| 120 | A player's left hands on local lefts near the player the bottle was not found by             |
+| 121 | A player's left hands on local lefts near the player the bottle will not be found by         |
+| 122 | A player's left hands on local lefts near the player the bottle will not be found by         |
+| 123 | A player's left hands on local lefts near the player the bottle will not be found by.        |
+| 124 | A player's left hands on local lefts near the player the bottle will not be found by.        |
+| 125 | A player's left hands on local lefts near the player the bottles are not found by            |
+| 126 | A player's left hands on local lefts near the player the bottles are not found by            |
+| 127 | A player's left hands on local lefts near the player the bottles are not found by.           |
+| 128 | A player's left hands on local lefts near the player the bottles are not found by.           |
+| 129 | A player's left hands on local lefts near the player the bottles were not found by           |
+| 130 | A player's left hands on local lefts near the player the bottles were not found by           |
+| 131 | A player's left hands on local lefts near the player the bottles were not found by.          |
+| 132 | A player's left hands on local lefts near the player the bottles were not found by.          |
+| 133 | A player's left hands on local lefts near the player the bottles will be not found by        |
+| 134 | A player's left hands on local lefts near the player the bottles will be not found by.       |
+| 135 | A player's left hands on local lefts near the player the bottles will not be found by        |
+| 136 | A player's left hands on local lefts near the player the bottles will not be found by        |
+| 137 | A player's left hands on local lefts near the player the bottles will not be found by.       |
+| 138 | A player's left hands on local lefts near the player the bottles will not be found by.       |
+| 139 | A player's left hands on local lefts near the player the bottles won't be found by           |
+| 140 | A player's left hands on local lefts near the player the bottles won't be found by.          |
+| 141 | A player's left hands on the local left near a player the bottle is not found by             |
+| 142 | A player's left hands on the local left near a player the bottles are not found by           |
+| 143 | A player's left hands on the local left near a player the bottles are not found by           |
+| 144 | A player's left hands on the local left near a player the bottles are not found by.          |
+| 145 | A player's left hands on the local left near a player the bottles were not found by          |
+| 146 | A player's left hands on the local left near a player the bottles were not found by.         |
+| 147 | A player's left hands on the local left near a player the bottles will be not found by       |
+| 148 | A player's left hands on the local left near a player the bottles will be not found by.      |
+| 149 | A player's left hands on the local left near a player the bottles will not be found by       |
+| 150 | A player's left hands on the local left near a player the bottles will not be found by       |
+| 151 | A player's left hands on the local left near a player the bottles will not be found by.      |
+| 152 | A player's left hands on the local left near a player the bottles will not be found by.      |
+| 153 | A player's left hands on the local left near the player the bottles are not found by         |
+| 154 | A player's left hands on the local left near the player the bottles are not found by.        |
+| 155 | A player's left hands on the local left near the player the bottles will not be found by     |
+| 156 | A player's left hands on the local left near the player the bottles will not be found by     |
+| 157 | A player's left hands on the local lefts near a player the bottle is not found by            |
+| 158 | A player's left hands on the local lefts near a player the bottle is not found by.           |
+| 159 | A player's left hands on the local lefts near a player the bottle was not found by           |
+| 160 | A player's left hands on the local lefts near a player the bottle was not found by.          |
+| 161 | A player's left hands on the local lefts near a player the bottle will not be found by       |
+| 162 | A player's left hands on the local lefts near a player the bottle will not be found by       |
+| 163 | A player's left hands on the local lefts near a player the bottle will not be found by.      |
+| 164 | A player's left hands on the local lefts near a player the bottle will not be found by.      |
+| 165 | A player's left hands on the local lefts near a player the bottles are non found by          |
+| 166 | A player's left hands on the local lefts near a player the bottles are not found by          |
+| 167 | A player's left hands on the local lefts near a player the bottles are not found by          |
+| 168 | A player's left hands on the local lefts near a player the bottles are not found by.         |
+| 169 | A player's left hands on the local lefts near a player the bottles are not found by.         |
+| 170 | A player's left hands on the local lefts near a player the bottles were not found by         |
+| 171 | A player's left hands on the local lefts near a player the bottles were not found by         |
+| 172 | A player's left hands on the local lefts near a player the bottles were not found by.        |
+| 173 | A player's left hands on the local lefts near a player the bottles were not found by.        |
+| 174 | A player's left hands on the local lefts near a player the bottles will be not found by      |
+| 175 | A player's left hands on the local lefts near a player the bottles will be not found by.     |
+| 176 | A player's left hands on the local lefts near a player the bottles will not be found by      |
+| 177 | A player's left hands on the local lefts near a player the bottles will not be found by      |
+| 178 | A player's left hands on the local lefts near a player the bottles will not be found by.     |
+| 179 | A player's left hands on the local lefts near a player the bottles will not be found by.     |
+| 180 | A player's left hands on the local lefts near a player the bottles won't be found by         |
+| 181 | A player's left hands on the local lefts near a player the bottles won't be found by.        |
+| 182 | A player's left hands on the local lefts near the player the bottle is not found by          |
+| 183 | A player's left hands on the local lefts near the player the bottles are not found by        |
+| 184 | A player's left hands on the local lefts near the player the bottles are not found by        |
+| 185 | A player's left hands on the local lefts near the player the bottles are not found by.       |
+| 186 | A player's left hands on the local lefts near the player the bottles were not found by       |
+| 187 | A player's left hands on the local lefts near the player the bottles were not found by.      |
+| 188 | A player's left hands on the local lefts near the player the bottles will be not found by    |
+| 189 | A player's left hands on the local lefts near the player the bottles will be not found by.   |
+| 190 | A player's left hands on the local lefts near the player the bottles will not be found by    |
+| 191 | A player's left hands on the local lefts near the player the bottles will not be found by    |
+| 192 | A player's left hands on the local lefts near the player the bottles will not be found by.   |
+| 193 | A player's left hands on the local lefts near the player the bottles will not be found by.   |
+| 194 | A player's left hands on the local lefts, near a player the bottles are not found by         |
+| 195 | A player's left hands, on the local lefts near a player the bottles are not found by         |
+| 196 | A player's left hands, on the local lefts near a player the bottles are not found by.        |
+| 197 | A player's left hands, on the local lefts near a player the bottles will not be found by     |
+| 198 | A player's left hands, on the local lefts near a player the bottles will not be found by     |
+| 199 | Players' left hand on local lefts near a player the bottles are not found by                 |
+| 200 | Players' left hand on local lefts near a player the bottles are not found by.                |
+| 201 | Players' left hand on local lefts near a player the bottles will not be found by             |
+| 202 | Players' left hands on a local left near a player the bottle is not found by                 |
+| 203 | Players' left hands on a local left near a player the bottles are not found by               |
+| 204 | Players' left hands on a local left near a player the bottles are not found by               |
+| 205 | Players' left hands on a local left near a player the bottles are not found by.              |
+| 206 | Players' left hands on a local left near a player the bottles were not found by              |
+| 207 | Players' left hands on a local left near a player the bottles were not found by.             |
+| 208 | Players' left hands on a local left near a player the bottles will be not found by           |
+| 209 | Players' left hands on a local left near a player the bottles will be not found by.          |
+| 210 | Players' left hands on a local left near a player the bottles will not be found by           |
+| 211 | Players' left hands on a local left near a player the bottles will not be found by           |
+| 212 | Players' left hands on a local left near a player the bottles will not be found by.          |
+| 213 | Players' left hands on a local left near a player the bottles will not be found by.          |
+| 214 | Players' left hands on a local left near the player the bottles are not found by             |
+| 215 | Players' left hands on a local left near the player the bottles are not found by.            |
+| 216 | Players' left hands on a local left near the player the bottles will not be found by         |
+| 217 | Players' left hands on a local left near the player the bottles will not be found by         |
+| 218 | Players' left hands on local lefts near a player the bottle is not found by                  |
+| 219 | Players' left hands on local lefts near a player the bottle is not found by.                 |
+| 220 | Players' left hands on local lefts near a player the bottle was not found by                 |
+| 221 | Players' left hands on local lefts near a player the bottle will not be found by             |
+| 222 | Players' left hands on local lefts near a player the bottle will not be found by             |
+| 223 | Players' left hands on local lefts near a player the bottle will not be found by.            |
+| 224 | Players' left hands on local lefts near a player the bottle will not be found by.            |
+| 225 | Players' left hands on local lefts near a player the bottles are not found by                |
+| 226 | Players' left hands on local lefts near a player the bottles are not found by                |
+| 227 | Players' left hands on local lefts near a player the bottles are not found by.               |
+| 228 | Players' left hands on local lefts near a player the bottles are not found by.               |
+| 229 | Players' left hands on local lefts near a player the bottles were not found by               |
+| 230 | Players' left hands on local lefts near a player the bottles were not found by               |
+| 231 | Players' left hands on local lefts near a player the bottles were not found by.              |
+| 232 | Players' left hands on local lefts near a player the bottles were not found by.              |
+| 233 | Players' left hands on local lefts near a player the bottles will be not found by            |
+| 234 | Players' left hands on local lefts near a player the bottles will be not found by.           |
+| 235 | Players' left hands on local lefts near a player the bottles will not be found by            |
+| 236 | Players' left hands on local lefts near a player the bottles will not be found by            |
+| 237 | Players' left hands on local lefts near a player the bottles will not be found by.           |
+| 238 | Players' left hands on local lefts near a player the bottles will not be found by.           |
+| 239 | Players' left hands on local lefts near a player the bottles won't be found by               |
+| 240 | Players' left hands on local lefts near a player the bottles won't be found by.              |
+| 241 | Players' left hands on local lefts near the player the bottle is not found by                |
+| 242 | Players' left hands on local lefts near the player the bottles are not found by              |
+| 243 | Players' left hands on local lefts near the player the bottles are not found by              |
+| 244 | Players' left hands on local lefts near the player the bottles are not found by.             |
+| 245 | Players' left hands on local lefts near the player the bottles were not found by             |
+| 246 | Players' left hands on local lefts near the player the bottles were not found by.            |
+| 247 | Players' left hands on local lefts near the player the bottles will be not found by          |
+| 248 | Players' left hands on local lefts near the player the bottles will not be found by          |
+| 249 | Players' left hands on local lefts near the player the bottles will not be found by          |
+| 250 | Players' left hands on local lefts near the player the bottles will not be found by.         |
+| 251 | Players' left hands on local lefts near the player the bottles will not be found by.         |
+| 252 | Players' left hands on the local left near a player the bottles are not found by             |
+| 253 | Players' left hands on the local left near a player the bottles are not found by.            |
+| 254 | Players' left hands on the local left near a player the bottles will not be found by         |
+| 255 | Players' left hands on the local left near a player the bottles will not be found by         |
+| 256 | Players' left hands on the local lefts near a player the bottle is not found by              |
+| 257 | Players' left hands on the local lefts near a player the bottles are not found by            |
+| 258 | Players' left hands on the local lefts near a player the bottles are not found by            |
+| 259 | Players' left hands on the local lefts near a player the bottles are not found by.           |
+| 260 | Players' left hands on the local lefts near a player the bottles were not found by           |
+| 261 | Players' left hands on the local lefts near a player the bottles were not found by.          |
+| 262 | Players' left hands on the local lefts near a player the bottles will be not found by        |
+| 263 | Players' left hands on the local lefts near a player the bottles will be not found by.       |
+| 264 | Players' left hands on the local lefts near a player the bottles will not be found by        |
+| 265 | Players' left hands on the local lefts near a player the bottles will not be found by        |
+| 266 | Players' left hands on the local lefts near a player the bottles will not be found by.       |
+| 267 | Players' left hands on the local lefts near a player the bottles will not be found by.       |
+| 268 | Players' left hands on the local lefts near the player the bottles are not found by          |
+| 269 | Players' left hands on the local lefts near the player the bottles are not found by.         |
+| 270 | Players' left hands on the local lefts near the player the bottles will not be found by      |
+| 271 | Players' left hands on the local lefts near the player the bottles will not be found by      |
+| 272 | The player's left hand near a player the bottles are not found by, on a local left           |
+| 273 | The player's left hand near a player the bottles are not found by, on local lefts            |
+| 274 | The player's left hand near a player the bottles are not found by, on the local left         |
+| 275 | The player's left hand near a player the bottles are not found by, on the local lefts        |
+| 276 | The player's left hand near a player the bottles were not found by, on the local lefts       |
+| 277 | The player's left hand near a player the bottles will be not found by, on the local lefts    |
+| 278 | The player's left hand near a player the bottles will not be found by, on the local lefts    |
+| 279 | The player's left hand near a player the bottles will not be found by, on the local lefts    |
+| 280 | The player's left hand near the player the bottles are not found by, on the local lefts      |
+| 281 | The player's left hand near the player the bottles will not be found by, on the local lefts  |
+| 282 | The player's left hand near the player the bottles will not be found by, on the local lefts  |
+| 283 | The player's left hand on a local left near a player the bottle is not found by              |
+| 284 | The player's left hand on a local left near a player the bottles are not found by            |
+| 285 | The player's left hand on a local left near a player the bottles are not found by            |
+| 286 | The player's left hand on a local left near a player the bottles are not found by.           |
+| 287 | The player's left hand on a local left near a player the bottles were not found by           |
+| 288 | The player's left hand on a local left near a player the bottles were not found by.          |
+| 289 | The player's left hand on a local left near a player the bottles will be not found by        |
+| 290 | The player's left hand on a local left near a player the bottles will not be found by        |
+| 291 | The player's left hand on a local left near a player the bottles will not be found by        |
+| 292 | The player's left hand on a local left near a player the bottles will not be found by.       |
+| 293 | The player's left hand on a local left near a player the bottles will not be found by.       |
+| 294 | The player's left hand on a local left near the player the bottles are not found by          |
+| 295 | The player's left hand on a local left near the player the bottles are not found by.         |
+| 296 | The player's left hand on a local left near the player the bottles will not be found by      |
+| 297 | The player's left hand on a local left near the player the bottles will not be found by      |
+| 298 | The player's left hand on a local left, near a player the bottles are not found by           |
+| 299 | The player's left hand on a local left, near a player the bottles were not found by          |
+| 300 | The player's left hand on a local left, near a player the bottles will not be found by       |
+| 301 | The player's left hand on a local left, near a player the bottles will not be found by       |
+| 302 | The player's left hand on a local left, near the player the bottles are not found by         |
+| 303 | The player's left hand on local lefts near a player the bottle is not found by               |
+| 304 | The player's left hand on local lefts near a player the bottle is not found by.              |
+| 305 | The player's left hand on local lefts near a player the bottle was not found by              |
+| 306 | The player's left hand on local lefts near a player the bottle will not be found by          |
+| 307 | The player's left hand on local lefts near a player the bottle will not be found by          |
+| 308 | The player's left hand on local lefts near a player the bottles are not found by             |
+| 309 | The player's left hand on local lefts near a player the bottles are not found by             |
+| 310 | The player's left hand on local lefts near a player the bottles are not found by.            |
+| 311 | The player's left hand on local lefts near a player the bottles are not found by.            |
+| 312 | The player's left hand on local lefts near a player the bottles were not found by            |
+| 313 | The player's left hand on local lefts near a player the bottles were not found by            |
+| 314 | The player's left hand on local lefts near a player the bottles were not found by.           |
+| 315 | The player's left hand on local lefts near a player the bottles will be not found by         |
+| 316 | The player's left hand on local lefts near a player the bottles will be not found by.        |
+| 317 | The player's left hand on local lefts near a player the bottles will not be found by         |
+| 318 | The player's left hand on local lefts near a player the bottles will not be found by         |
+| 319 | The player's left hand on local lefts near a player the bottles will not be found by.        |
+| 320 | The player's left hand on local lefts near a player the bottles will not be found by.        |
+| 321 | The player's left hand on local lefts near a player the bottles won't be found by            |
+| 322 | The player's left hand on local lefts near a player the bottles won't be found by.           |
+| 323 | The player's left hand on local lefts near the player the bottles are not found by           |
+| 324 | The player's left hand on local lefts near the player the bottles are not found by.          |
+| 325 | The player's left hand on local lefts near the player the bottles were not found by          |
+| 326 | The player's left hand on local lefts near the player the bottles were not found by.         |
+| 327 | The player's left hand on local lefts near the player the bottles will be not found by       |
+| 328 | The player's left hand on local lefts near the player the bottles will not be found by       |
+| 329 | The player's left hand on local lefts near the player the bottles will not be found by       |
+| 330 | The player's left hand on local lefts near the player the bottles will not be found by.      |
+| 331 | The player's left hand on local lefts near the player the bottles will not be found by.      |
+| 332 | The player's left hand on local lefts, near a player the bottles are not found by            |
+| 333 | The player's left hand on the local left near a player the bottles are not found by          |
+| 334 | The player's left hand on the local left near a player the bottles are not found by.         |
+| 335 | The player's left hand on the local left near a player the bottles will not be found by      |
+| 336 | The player's left hand on the local left near a player the bottles will not be found by      |
+| 337 | The player's left hand on the local left, near a player the bottles are not found by         |
+| 338 | The player's left hand on the local lefts near a player the bottle is not found by           |
+| 339 | The player's left hand on the local lefts near a player the bottles are not found by         |
+| 340 | The player's left hand on the local lefts near a player the bottles are not found by         |
+| 341 | The player's left hand on the local lefts near a player the bottles are not found by.        |
+| 342 | The player's left hand on the local lefts near a player the bottles were not found by        |
+| 343 | The player's left hand on the local lefts near a player the bottles were not found by.       |
+| 344 | The player's left hand on the local lefts near a player the bottles will be not found by     |
+| 345 | The player's left hand on the local lefts near a player the bottles will be not found by.    |
+| 346 | The player's left hand on the local lefts near a player the bottles will not be found by     |
+| 347 | The player's left hand on the local lefts near a player the bottles will not be found by     |
+| 348 | The player's left hand on the local lefts near a player the bottles will not be found by.    |
+| 349 | The player's left hand on the local lefts near a player the bottles will not be found by.    |
+| 350 | The player's left hand on the local lefts near the player the bottles are not found by       |
+| 351 | The player's left hand on the local lefts near the player the bottles are not found by.      |
+| 352 | The player's left hand on the local lefts near the player the bottles will not be found by   |
+| 353 | The player's left hand on the local lefts near the player the bottles will not be found by   |
+| 354 | The player's left hand on the local lefts, near a player the bottles are not found by        |
+| 355 | The player's left hand on the local lefts, near a player the bottles will not be found by    |
+| 356 | The player's left hand on the local lefts, near a player the bottles will not be found by    |
+| 357 | The player's left hand on the local lefts, near the player the bottles are not found by      |
+| 358 | The player's left hand, on a local left near a player the bottles are not found by           |
+| 359 | The player's left hand, on the local lefts near a player the bottles are not found by        |
+| 360 | The player's left hand, on the local lefts near a player the bottles are not found by.       |
+| 361 | The player's left hand, on the local lefts near a player the bottles were not found by       |
+| 362 | The player's left hand, on the local lefts near a player the bottles will not be found by    |
+| 363 | The player's left hand, on the local lefts near a player the bottles will not be found by    |
+| 364 | The player's left hand, on the local lefts near a player the bottles will not be found by.   |
+| 365 | The player's left hand, on the local lefts near a player the bottles will not be found by.   |
+| 366 | The player's left hand, on the local lefts near the player the bottles are not found by      |
+| 367 | The player's left hands near a player the bottle is not found by on the local lefts.         |
+| 368 | The player's left hands near a player the bottle is not found by, on the local lefts         |
+| 369 | The player's left hands near a player the bottles are not found by on a local left           |
+| 370 | The player's left hands near a player the bottles are not found by on a local left.          |
+| 371 | The player's left hands near a player the bottles are not found by on local lefts            |
+| 372 | The player's left hands near a player the bottles are not found by on local lefts.           |
+| 373 | The player's left hands near a player the bottles are not found by on the local left         |
+| 374 | The player's left hands near a player the bottles are not found by on the local left.        |
+| 375 | The player's left hands near a player the bottles are not found by on the local lefts        |
+| 376 | The player's left hands near a player the bottles are not found by on the local lefts.       |
+| 377 | The player's left hands near a player the bottles are not found by on the local lefts.       |
+| 378 | The player's left hands near a player the bottles are not found by, on a local left          |
+| 379 | The player's left hands near a player the bottles are not found by, on local lefts           |
+| 380 | The player's left hands near a player the bottles are not found by, on the local left        |
+| 381 | The player's left hands near a player the bottles are not found by, on the local lefts       |
+| 382 | The player's left hands near a player the bottles are not found by, on the local lefts       |
+| 383 | The player's left hands near a player the bottles were not found by on a local left          |
+| 384 | The player's left hands near a player the bottles were not found by on a local left.         |
+| 385 | The player's left hands near a player the bottles were not found by on local lefts           |
+| 386 | The player's left hands near a player the bottles were not found by on local lefts.          |
+| 387 | The player's left hands near a player the bottles were not found by on the local lefts       |
+| 388 | The player's left hands near a player the bottles were not found by on the local lefts.      |
+| 389 | The player's left hands near a player the bottles were not found by, on the local lefts      |
+| 390 | The player's left hands near a player the bottles will be not found by on local lefts        |
+| 391 | The player's left hands near a player the bottles will be not found by on the local lefts    |
+| 392 | The player's left hands near a player the bottles will be not found by on the local lefts.   |
+| 393 | The player's left hands near a player the bottles will be not found by, on the local lefts   |
+| 394 | The player's left hands near a player the bottles will not be found by on a local left       |
+| 395 | The player's left hands near a player the bottles will not be found by on a local left       |
+| 396 | The player's left hands near a player the bottles will not be found by on a local left.      |
+| 397 | The player's left hands near a player the bottles will not be found by on a local left.      |
+| 398 | The player's left hands near a player the bottles will not be found by on local lefts        |
+| 399 | The player's left hands near a player the bottles will not be found by on local lefts        |
+| 400 | The player's left hands near a player the bottles will not be found by on local lefts.       |
+| 401 | The player's left hands near a player the bottles will not be found by on local lefts.       |
+| 402 | The player's left hands near a player the bottles will not be found by on the local left.    |
+| 403 | The player's left hands near a player the bottles will not be found by on the local left.    |
+| 404 | The player's left hands near a player the bottles will not be found by on the local lefts    |
+| 405 | The player's left hands near a player the bottles will not be found by on the local lefts    |
+| 406 | The player's left hands near a player the bottles will not be found by on the local lefts.   |
+| 407 | The player's left hands near a player the bottles will not be found by on the local lefts.   |
+| 408 | The player's left hands near a player the bottles will not be found by, on a local left      |
+| 409 | The player's left hands near a player the bottles will not be found by, on a local left      |
+| 410 | The player's left hands near a player the bottles will not be found by, on the local left    |
+| 411 | The player's left hands near a player the bottles will not be found by, on the local left    |
+| 412 | The player's left hands near a player the bottles will not be found by, on the local lefts   |
+| 413 | The player's left hands near a player the bottles will not be found by, on the local lefts   |
+| 414 | The player's left hands near the player the bottles are not found by on a local left         |
+| 415 | The player's left hands near the player the bottles are not found by on a local left.        |
+| 416 | The player's left hands near the player the bottles are not found by on local lefts          |
+| 417 | The player's left hands near the player the bottles are not found by on local lefts.         |
+| 418 | The player's left hands near the player the bottles are not found by on the local lefts      |
+| 419 | The player's left hands near the player the bottles are not found by on the local lefts.     |
+| 420 | The player's left hands near the player the bottles are not found by, on the local left      |
+| 421 | The player's left hands near the player the bottles are not found by, on the local lefts     |
+| 422 | The player's left hands near the player the bottles were not found by, on the local lefts    |
+| 423 | The player's left hands near the player the bottles will not be found by on a local left.    |
+| 424 | The player's left hands near the player the bottles will not be found by on a local left.    |
+| 425 | The player's left hands near the player the bottles will not be found by on local lefts      |
+| 426 | The player's left hands near the player the bottles will not be found by on local lefts      |
+| 427 | The player's left hands near the player the bottles will not be found by on local lefts.     |
+| 428 | The player's left hands near the player the bottles will not be found by on the local lefts  |
+| 429 | The player's left hands near the player the bottles will not be found by on the local lefts  |
+| 430 | The player's left hands near the player the bottles will not be found by on the local lefts. |
+| 431 | The player's left hands near the player the bottles will not be found by on the local lefts. |
+| 432 | The player's left hands near the player the bottles will not be found by, on the local lefts |
+| 433 | The player's left hands near the player the bottles will not be found by, on the local lefts |
+| 434 | The player's left hands on a local left near a player a bottle is not found by               |
+| 435 | The player's left hands on a local left near a player a bottle is not found by.              |
+| 436 | The player's left hands on a local left near a player a bottle was not found by              |
+| 437 | The player's left hands on a local left near a player a bottle will not be found by          |
+| 438 | The player's left hands on a local left near a player a bottle will not be found by          |
+| 439 | The player's left hands on a local left near a player the bottle is not found by             |
+| 440 | The player's left hands on a local left near a player the bottle is not found by             |
+| 441 | The player's left hands on a local left near a player the bottle is not found by.            |
+| 442 | The player's left hands on a local left near a player the bottle is not found by.            |
+| 443 | The player's left hands on a local left near a player the bottle was not found by            |
+| 444 | The player's left hands on a local left near a player the bottle was not found by            |
+| 445 | The player's left hands on a local left near a player the bottle was not found by.           |
+| 446 | The player's left hands on a local left near a player the bottle was not found by.           |
+| 447 | The player's left hands on a local left near a player the bottle will be not found by        |
+| 448 | The player's left hands on a local left near a player the bottle will be not found by.       |
+| 449 | The player's left hands on a local left near a player the bottle will not be found by        |
+| 450 | The player's left hands on a local left near a player the bottle will not be found by        |
+| 451 | The player's left hands on a local left near a player the bottle will not be found by.       |
+| 452 | The player's left hands on a local left near a player the bottle will not be found by.       |
+| 453 | The player's left hands on a local left near a player the bottle won't be found by           |
+| 454 | The player's left hands on a local left near a player the bottles are non found by           |
+| 455 | The player's left hands on a local left near a player the bottles are non found by.          |
+| 456 | The player's left hands on a local left near a player the bottles are not found by           |
+| 457 | The player's left hands on a local left near a player the bottles are not found by           |
+| 458 | The player's left hands on a local left near a player the bottles are not found by.          |
+| 459 | The player's left hands on a local left near a player the bottles are not found by.          |
+| 460 | The player's left hands on a local left near a player the bottles were non found by          |
+| 461 | The player's left hands on a local left near a player the bottles were non found by.         |
+| 462 | The player's left hands on a local left near a player the bottles were not found by          |
+| 463 | The player's left hands on a local left near a player the bottles were not found by          |
+| 464 | The player's left hands on a local left near a player the bottles were not found by.         |
+| 465 | The player's left hands on a local left near a player the bottles were not found by.         |
+| 466 | The player's left hands on a local left near a player the bottles weren't found by           |
+| 467 | The player's left hands on a local left near a player the bottles will be non found by       |
+| 468 | The player's left hands on a local left near a player the bottles will be non found by.      |
+| 469 | The player's left hands on a local left near a player the bottles will be not found by       |
+| 470 | The player's left hands on a local left near a player the bottles will be not found by.      |
+| 471 | The player's left hands on a local left near a player the bottles will not be found by       |
+| 472 | The player's left hands on a local left near a player the bottles will not be found by       |
+| 473 | The player's left hands on a local left near a player the bottles will not be found by.      |
+| 474 | The player's left hands on a local left near a player the bottles will not be found by.      |
+| 475 | The player's left hands on a local left near a player the bottles won't be found by          |
+| 476 | The player's left hands on a local left near a player the bottles won't be found by.         |
+| 477 | The player's left hands on a local left near the player the bottle is not found by           |
+| 478 | The player's left hands on a local left near the player the bottle is not found by.          |
+| 479 | The player's left hands on a local left near the player the bottle was not found by          |
+| 480 | The player's left hands on a local left near the player the bottle was not found by.         |
+| 481 | The player's left hands on a local left near the player the bottle will not be found by      |
+| 482 | The player's left hands on a local left near the player the bottle will not be found by      |
+| 483 | The player's left hands on a local left near the player the bottle will not be found by.     |
+| 484 | The player's left hands on a local left near the player the bottle will not be found by.     |
+| 485 | The player's left hands on a local left near the player the bottles are non found by         |
+| 486 | The player's left hands on a local left near the player the bottles are not found by         |
+| 487 | The player's left hands on a local left near the player the bottles are not found by         |
+| 488 | The player's left hands on a local left near the player the bottles are not found by.        |
+| 489 | The player's left hands on a local left near the player the bottles are not found by.        |
+| 490 | The player's left hands on a local left near the player the bottles were not found by        |
+| 491 | The player's left hands on a local left near the player the bottles were not found by        |
+| 492 | The player's left hands on a local left near the player the bottles were not found by.       |
+| 493 | The player's left hands on a local left near the player the bottles were not found by.       |
+| 494 | The player's left hands on a local left near the player the bottles will be not found by     |
+| 495 | The player's left hands on a local left near the player the bottles will be not found by.    |
+| 496 | The player's left hands on a local left near the player the bottles will not be found by     |
+| 497 | The player's left hands on a local left near the player the bottles will not be found by     |
+| 498 | The player's left hands on a local left near the player the bottles will not be found by.    |
+| 499 | The player's left hands on a local left near the player the bottles will not be found by.    |
+| 500 | The player's left hands on a local left near the player the bottles won't be found by        |
+| 501 | The player's left hands on a local left near the player the bottles won't be found by.       |
+| 502 | The player's left hands on a local left, near a player the bottles are not found by          |
+| 503 | The player's left hands on a local left, near a player the bottles were not found by         |
+| 504 | The player's left hands on a local left, near a player the bottles will not be found by      |
+| 505 | The player's left hands on a local left, near a player the bottles will not be found by      |
+| 506 | The player's left hands on a local left, near the player the bottles are not found by        |
+| 507 | The player's left hands on a local left, near the player the bottles will not be found by    |
+| 508 | The player's left hands on a local left, near the player the bottles will not be found by    |
+| 509 | The player's left hands on local lefts near a player a bottle is not found by                |
+| 510 | The player's left hands on local lefts near a player a bottle is not found by.               |
+| 511 | The player's left hands on local lefts near a player a bottle was not found by               |
+| 512 | The player's left hands on local lefts near a player a bottle was not found by               |
+| 513 | The player's left hands on local lefts near a player a bottle was not found by.              |
+| 514 | The player's left hands on local lefts near a player a bottle will be not found by           |
+| 515 | The player's left hands on local lefts near a player a bottle will not be found by           |
+| 516 | The player's left hands on local lefts near a player a bottle will not be found by           |
+| 517 | The player's left hands on local lefts near a player a bottle will not be found by.          |
+| 518 | The player's left hands on local lefts near a player a bottle will not be found by.          |
+| 519 | The player's left hands on local lefts near a player bottles are not found by                |
+| 520 | The player's left hands on local lefts near a player the bottle is non found by              |
+| 521 | The player's left hands on local lefts near a player the bottle is not found by              |
+| 522 | The player's left hands on local lefts near a player the bottle is not found by              |
+| 523 | The player's left hands on local lefts near a player the bottle is not found by.             |
+| 524 | The player's left hands on local lefts near a player the bottle is not found by.             |
+| 525 | The player's left hands on local lefts near a player the bottle was non found by             |
+| 526 | The player's left hands on local lefts near a player the bottle was non found by.            |
+| 527 | The player's left hands on local lefts near a player the bottle was not found by             |
+| 528 | The player's left hands on local lefts near a player the bottle was not found by             |
+| 529 | The player's left hands on local lefts near a player the bottle was not found by.            |
+| 530 | The player's left hands on local lefts near a player the bottle was not found by.            |
+| 531 | The player's left hands on local lefts near a player the bottle wasn't found by              |
+| 532 | The player's left hands on local lefts near a player the bottle will be non found by         |
+| 533 | The player's left hands on local lefts near a player the bottle will be not found by         |
+| 534 | The player's left hands on local lefts near a player the bottle will be not found by.        |
+| 535 | The player's left hands on local lefts near a player the bottle will not be found by         |
+| 536 | The player's left hands on local lefts near a player the bottle will not be found by         |
+| 537 | The player's left hands on local lefts near a player the bottle will not be found by.        |
+| 538 | The player's left hands on local lefts near a player the bottle will not be found by.        |
+| 539 | The player's left hands on local lefts near a player the bottle won't be found by            |
+| 540 | The player's left hands on local lefts near a player the bottle won't be found by.           |
+| 541 | The player's left hands on local lefts near a player the bottles are non found by            |
+| 542 | The player's left hands on local lefts near a player the bottles are non found by.           |
+| 543 | The player's left hands on local lefts near a player the bottles are not found by            |
+| 544 | The player's left hands on local lefts near a player the bottles are not found by            |
+| 545 | The player's left hands on local lefts near a player the bottles are not found by.           |
+| 546 | The player's left hands on local lefts near a player the bottles are not found by.           |
+| 547 | The player's left hands on local lefts near a player the bottles aren't found by             |
+| 548 | The player's left hands on local lefts near a player the bottles aren't found by.            |
+| 549 | The player's left hands on local lefts near a player the bottles were non found by           |
+| 550 | The player's left hands on local lefts near a player the bottles were non found by.          |
+| 551 | The player's left hands on local lefts near a player the bottles were not found by           |
+| 552 | The player's left hands on local lefts near a player the bottles were not found by           |
+| 553 | The player's left hands on local lefts near a player the bottles were not found by.          |
+| 554 | The player's left hands on local lefts near a player the bottles were not found by.          |
+| 555 | The player's left hands on local lefts near a player the bottles weren't found by            |
+| 556 | The player's left hands on local lefts near a player the bottles weren't found by.           |
+| 557 | The player's left hands on local lefts near a player the bottles will be non found by        |
+| 558 | The player's left hands on local lefts near a player the bottles will be non found by.       |
+| 559 | The player's left hands on local lefts near a player the bottles will be not found by        |
+| 560 | The player's left hands on local lefts near a player the bottles will be not found by.       |
+| 561 | The player's left hands on local lefts near a player the bottles will not be found by        |
+| 562 | The player's left hands on local lefts near a player the bottles will not be found by        |
+| 563 | The player's left hands on local lefts near a player the bottles will not be found by.       |
+| 564 | The player's left hands on local lefts near a player the bottles will not be found by.       |
+| 565 | The player's left hands on local lefts near a player the bottles won't be found by           |
+| 566 | The player's left hands on local lefts near a player the bottles won't be found by.          |
+| 567 | The player's left hands on local lefts near the player a bottle is not found by              |
+| 568 | The player's left hands on local lefts near the player a bottle is not found by.             |
+| 569 | The player's left hands on local lefts near the player a bottle will not be found by         |
+| 570 | The player's left hands on local lefts near the player a bottle will not be found by         |
+| 571 | The player's left hands on local lefts near the player the bottle is not found by            |
+| 572 | The player's left hands on local lefts near the player the bottle is not found by            |
+| 573 | The player's left hands on local lefts near the player the bottle is not found by.           |
+| 574 | The player's left hands on local lefts near the player the bottle was not found by           |
+| 575 | The player's left hands on local lefts near the player the bottle was not found by           |
+| 576 | The player's left hands on local lefts near the player the bottle was not found by.          |
+| 577 | The player's left hands on local lefts near the player the bottle was not found by.          |
+| 578 | The player's left hands on local lefts near the player the bottle will be not found by       |
+| 579 | The player's left hands on local lefts near the player the bottle will be not found by.      |
+| 580 | The player's left hands on local lefts near the player the bottle will not be found by       |
+| 581 | The player's left hands on local lefts near the player the bottle will not be found by       |
+| 582 | The player's left hands on local lefts near the player the bottle will not be found by.      |
+| 583 | The player's left hands on local lefts near the player the bottle will not be found by.      |
+| 584 | The player's left hands on local lefts near the player the bottle won't be found by          |
+| 585 | The player's left hands on local lefts near the player the bottles are non found by          |
+| 586 | The player's left hands on local lefts near the player the bottles are non found by.         |
+| 587 | The player's left hands on local lefts near the player the bottles are not found by          |
+| 588 | The player's left hands on local lefts near the player the bottles are not found by          |
+| 589 | The player's left hands on local lefts near the player the bottles are not found by.         |
+| 590 | The player's left hands on local lefts near the player the bottles are not found by.         |
+| 591 | The player's left hands on local lefts near the player the bottles were non found by         |
+| 592 | The player's left hands on local lefts near the player the bottles were not found by         |
+| 593 | The player's left hands on local lefts near the player the bottles were not found by         |
+| 594 | The player's left hands on local lefts near the player the bottles were not found by.        |
+| 595 | The player's left hands on local lefts near the player the bottles were not found by.        |
+| 596 | The player's left hands on local lefts near the player the bottles will be non found by      |
+| 597 | The player's left hands on local lefts near the player the bottles will be non found by.     |
+| 598 | The player's left hands on local lefts near the player the bottles will be not found by      |
+| 599 | The player's left hands on local lefts near the player the bottles will be not found by.     |
+| 600 | The player's left hands on local lefts near the player the bottles will not be found by      |
+| 601 | The player's left hands on local lefts near the player the bottles will not be found by      |
+| 602 | The player's left hands on local lefts near the player the bottles will not be found by.     |
+| 603 | The player's left hands on local lefts near the player the bottles will not be found by.     |
+| 604 | The player's left hands on local lefts near the player the bottles won't be found by         |
+| 605 | The player's left hands on local lefts near the player the bottles won't be found by.        |
+| 606 | The player's left hands on local lefts, near a player the bottles are not found by           |
+| 607 | The player's left hands on the local left near a player the bottle is not found by           |
+| 608 | The player's left hands on the local left near a player the bottle is not found by.          |
+| 609 | The player's left hands on the local left near a player the bottle was not found by          |
+| 610 | The player's left hands on the local left near a player the bottle was not found by.         |
+| 611 | The player's left hands on the local left near a player the bottle will not be found by      |
+| 612 | The player's left hands on the local left near a player the bottle will not be found by      |
+| 613 | The player's left hands on the local left near a player the bottle will not be found by.     |
+| 614 | The player's left hands on the local left near a player the bottle will not be found by.     |
+| 615 | The player's left hands on the local left near a player the bottles are non found by         |
+| 616 | The player's left hands on the local left near a player the bottles are not found by         |
+| 617 | The player's left hands on the local left near a player the bottles are not found by         |
+| 618 | The player's left hands on the local left near a player the bottles are not found by.        |
+| 619 | The player's left hands on the local left near a player the bottles are not found by.        |
+| 620 | The player's left hands on the local left near a player the bottles were not found by        |
+| 621 | The player's left hands on the local left near a player the bottles were not found by        |
+| 622 | The player's left hands on the local left near a player the bottles were not found by.       |
+| 623 | The player's left hands on the local left near a player the bottles were not found by.       |
+| 624 | The player's left hands on the local left near a player the bottles will be not found by     |
+| 625 | The player's left hands on the local left near a player the bottles will be not found by.    |
+| 626 | The player's left hands on the local left near a player the bottles will not be found by     |
+| 627 | The player's left hands on the local left near a player the bottles will not be found by     |
+| 628 | The player's left hands on the local left near a player the bottles will not be found by.    |
+| 629 | The player's left hands on the local left near a player the bottles will not be found by.    |
+| 630 | The player's left hands on the local left near a player the bottles won't be found by        |
+| 631 | The player's left hands on the local left near a player the bottles won't be found by.       |
+| 632 | The player's left hands on the local left near the player the bottle is not found by         |
+| 633 | The player's left hands on the local left near the player the bottles are not found by       |
+| 634 | The player's left hands on the local left near the player the bottles are not found by       |
+| 635 | The player's left hands on the local left near the player the bottles are not found by.      |
+| 636 | The player's left hands on the local left near the player the bottles were not found by      |
+| 637 | The player's left hands on the local left near the player the bottles were not found by.     |
+| 638 | The player's left hands on the local left near the player the bottles will be not found by   |
+| 639 | The player's left hands on the local left near the player the bottles will be not found by.  |
+| 640 | The player's left hands on the local left near the player the bottles will not be found by   |
+| 641 | The player's left hands on the local left near the player the bottles will not be found by   |
+| 642 | The player's left hands on the local left near the player the bottles will not be found by.  |
+| 643 | The player's left hands on the local left near the player the bottles will not be found by.  |
+| 644 | The player's left hands on the local left, near a player the bottles are not found by        |
+| 645 | The player's left hands on the local lefts near a player a bottle is not found by            |
+| 646 | The player's left hands on the local lefts near a player a bottle is not found by.           |
+| 647 | The player's left hands on the local lefts near a player a bottle was not found by           |
+| 648 | The player's left hands on the local lefts near a player a bottle will not be found by       |
+| 649 | The player's left hands on the local lefts near a player a bottle will not be found by       |
+| 650 | The player's left hands on the local lefts near a player the bottle is not found by          |
+| 651 | The player's left hands on the local lefts near a player the bottle is not found by          |
+| 652 | The player's left hands on the local lefts near a player the bottle is not found by.         |
+| 653 | The player's left hands on the local lefts near a player the bottle is not found by.         |
+| 654 | The player's left hands on the local lefts near a player the bottle was not found by         |
+| 655 | The player's left hands on the local lefts near a player the bottle was not found by         |
+| 656 | The player's left hands on the local lefts near a player the bottle was not found by.        |
+| 657 | The player's left hands on the local lefts near a player the bottle was not found by.        |
+| 658 | The player's left hands on the local lefts near a player the bottle will be not found by     |
+| 659 | The player's left hands on the local lefts near a player the bottle will be not found by.    |
+| 660 | The player's left hands on the local lefts near a player the bottle will not be found by     |
+| 661 | The player's left hands on the local lefts near a player the bottle will not be found by     |
+| 662 | The player's left hands on the local lefts near a player the bottle will not be found by.    |
+| 663 | The player's left hands on the local lefts near a player the bottle will not be found by.    |
+| 664 | The player's left hands on the local lefts near a player the bottle won't be found by        |
+| 665 | The player's left hands on the local lefts near a player the bottles are non found by        |
+| 666 | The player's left hands on the local lefts near a player the bottles are non found by.       |
+| 667 | The player's left hands on the local lefts near a player the bottles are not found by        |
+| 668 | The player's left hands on the local lefts near a player the bottles are not found by        |
+| 669 | The player's left hands on the local lefts near a player the bottles are not found by.       |
+| 670 | The player's left hands on the local lefts near a player the bottles are not found by.       |
+| 671 | The player's left hands on the local lefts near a player the bottles were non found by       |
+| 672 | The player's left hands on the local lefts near a player the bottles were non found by.      |
+| 673 | The player's left hands on the local lefts near a player the bottles were not found by       |
+| 674 | The player's left hands on the local lefts near a player the bottles were not found by       |
+| 675 | The player's left hands on the local lefts near a player the bottles were not found by.      |
+| 676 | The player's left hands on the local lefts near a player the bottles were not found by.      |
+| 677 | The player's left hands on the local lefts near a player the bottles weren't found by        |
+| 678 | The player's left hands on the local lefts near a player the bottles will be non found by    |
+| 679 | The player's left hands on the local lefts near a player the bottles will be non found by.   |
+| 680 | The player's left hands on the local lefts near a player the bottles will be not found by    |
+| 681 | The player's left hands on the local lefts near a player the bottles will be not found by.   |
+| 682 | The player's left hands on the local lefts near a player the bottles will not be found by    |
+| 683 | The player's left hands on the local lefts near a player the bottles will not be found by    |
+| 684 | The player's left hands on the local lefts near a player the bottles will not be found by.   |
+| 685 | The player's left hands on the local lefts near a player the bottles will not be found by.   |
+| 686 | The player's left hands on the local lefts near a player the bottles won't be found by       |
+| 687 | The player's left hands on the local lefts near a player the bottles won't be found by.      |
+| 688 | The player's left hands on the local lefts near the player the bottle is not found by        |
+| 689 | The player's left hands on the local lefts near the player the bottle is not found by.       |
+| 690 | The player's left hands on the local lefts near the player the bottle was not found by       |
+| 691 | The player's left hands on the local lefts near the player the bottle was not found by.      |
+| 692 | The player's left hands on the local lefts near the player the bottle will not be found by   |
+| 693 | The player's left hands on the local lefts near the player the bottle will not be found by   |
+| 694 | The player's left hands on the local lefts near the player the bottle will not be found by.  |
+| 695 | The player's left hands on the local lefts near the player the bottle will not be found by.  |
+| 696 | The player's left hands on the local lefts near the player the bottles are non found by      |
+| 697 | The player's left hands on the local lefts near the player the bottles are not found by      |
+| 698 | The player's left hands on the local lefts near the player the bottles are not found by      |
+| 699 | The player's left hands on the local lefts near the player the bottles are not found by.     |
+| 700 | The player's left hands on the local lefts near the player the bottles are not found by.     |
+| 701 | The player's left hands on the local lefts near the player the bottles were not found by     |
+| 702 | The player's left hands on the local lefts near the player the bottles were not found by     |
+| 703 | The player's left hands on the local lefts near the player the bottles were not found by.    |
+| 704 | The player's left hands on the local lefts near the player the bottles were not found by.    |
+| 705 | The player's left hands on the local lefts near the player the bottles will be not found by  |
+| 706 | The player's left hands on the local lefts near the player the bottles will be not found by. |
+| 707 | The player's left hands on the local lefts near the player the bottles will not be found by  |
+| 708 | The player's left hands on the local lefts near the player the bottles will not be found by  |
+| 709 | The player's left hands on the local lefts near the player the bottles will not be found by. |
+| 710 | The player's left hands on the local lefts near the player the bottles will not be found by. |
+| 711 | The player's left hands on the local lefts near the player the bottles won't be found by     |
+| 712 | The player's left hands on the local lefts near the player the bottles won't be found by.    |
+| 713 | The player's left hands on the local lefts, near a player the bottles are not found by       |
+| 714 | The player's left hands on the local lefts, near a player the bottles will not be found by   |
+| 715 | The player's left hands on the local lefts, near a player the bottles will not be found by   |
+| 716 | The player's left hands on the local lefts, near the player the bottles are not found by     |
+| 717 | The player's left hands, on a local left near a player the bottles are not found by          |
+| 718 | The player's left hands, on a local left near a player the bottles are not found by.         |
+| 719 | The player's left hands, on a local left near a player the bottles will not be found by      |
+| 720 | The player's left hands, on a local left near a player the bottles will not be found by      |
+| 721 | The player's left hands, on local lefts near a player the bottles are not found by           |
+| 722 | The player's left hands, on local lefts near a player the bottles are not found by.          |
+| 723 | The player's left hands, on local lefts near a player the bottles will not be found by       |
+| 724 | The player's left hands, on local lefts near a player the bottles will not be found by       |
+| 725 | The player's left hands, on the local left near a player the bottles are not found by        |
+| 726 | The player's left hands, on the local left near a player the bottles are not found by.       |
+| 727 | The player's left hands, on the local left near a player the bottles will not be found by    |
+| 728 | The player's left hands, on the local left near a player the bottles will not be found by    |
+| 729 | The player's left hands, on the local lefts near a player the bottle is not found by         |
+| 730 | The player's left hands, on the local lefts near a player the bottles are not found by       |
+| 731 | The player's left hands, on the local lefts near a player the bottles are not found by.      |
+| 732 | The player's left hands, on the local lefts near a player the bottles were not found by      |
+| 733 | The player's left hands, on the local lefts near a player the bottles were not found by.     |
+| 734 | The player's left hands, on the local lefts near a player the bottles will be not found by   |
+| 735 | The player's left hands, on the local lefts near a player the bottles will not be found by   |
+| 736 | The player's left hands, on the local lefts near a player the bottles will not be found by   |
+| 737 | The player's left hands, on the local lefts near a player the bottles will not be found by.  |
+| 738 | The player's left hands, on the local lefts near a player the bottles will not be found by.  |
+| 739 | The player's left hands, on the local lefts near the player the bottles are not found by     |
+| 740 | The player's left hands, on the local lefts near the player the bottles are not found by.    |
+| 741 | The player's left hands, on the local lefts near the player the bottles will not be found by |
+| 742 | The player's left hands, on the local lefts near the player the bottles will not be found by |
+| 743 | The players' left hand near a player the bottles are not found by, on the local lefts        |
+| 744 | The players' left hand on a local left near a player the bottles are not found by            |
+| 745 | The players' left hand on a local left near a player the bottles are not found by.           |
+| 746 | The players' left hand on a local left near a player the bottles will not be found by        |
+| 747 | The players' left hand on a local left near a player the bottles will not be found by        |
+| 748 | The players' left hand on a local left, near a player the bottles are not found by           |
+| 749 | The players' left hand on local lefts near a player the bottles are not found by             |
+| 750 | The players' left hand on local lefts near a player the bottles are not found by.            |
+| 751 | The players' left hand on local lefts near a player the bottles were not found by            |
+| 752 | The players' left hand on local lefts near a player the bottles were not found by.           |
+| 753 | The players' left hand on local lefts near a player the bottles will be not found by         |
+| 754 | The players' left hand on local lefts near a player the bottles will not be found by         |
+| 755 | The players' left hand on local lefts near a player the bottles will not be found by         |
+| 756 | The players' left hand on local lefts near a player the bottles will not be found by.        |
+| 757 | The players' left hand on local lefts near a player the bottles will not be found by.        |
+| 758 | The players' left hand on local lefts near the player the bottles are not found by           |
+| 759 | The players' left hand on the local lefts near a player the bottles are not found by         |
+| 760 | The players' left hand on the local lefts near a player the bottles are not found by.        |
+| 761 | The players' left hand on the local lefts near a player the bottles will not be found by     |
+| 762 | The players' left hand on the local lefts near a player the bottles will not be found by     |
+| 763 | The players' left hands near a player the bottles are not found by on a local left.          |
+| 764 | The players' left hands near a player the bottles are not found by on local lefts            |
+| 765 | The players' left hands near a player the bottles are not found by on local lefts.           |
+| 766 | The players' left hands near a player the bottles are not found by on the local lefts        |
+| 767 | The players' left hands near a player the bottles are not found by on the local lefts.       |
+| 768 | The players' left hands near a player the bottles are not found by, on the local lefts       |
+| 769 | The players' left hands near a player the bottles will not be found by on local lefts        |
+| 770 | The players' left hands near a player the bottles will not be found by on the local lefts.   |
+| 771 | The players' left hands near a player the bottles will not be found by on the local lefts.   |
+| 772 | The players' left hands near a player the bottles will not be found by, on the local lefts   |
+| 773 | The players' left hands near a player the bottles will not be found by, on the local lefts   |
+| 774 | The players' left hands near the player the bottles are not found by, on the local lefts     |
+| 775 | The players' left hands on a local left near a player the bottle is not found by             |
+| 776 | The players' left hands on a local left near a player the bottle is not found by.            |
+| 777 | The players' left hands on a local left near a player the bottle was not found by            |
+| 778 | The players' left hands on a local left near a player the bottle was not found by.           |
+| 779 | The players' left hands on a local left near a player the bottle will not be found by        |
+| 780 | The players' left hands on a local left near a player the bottle will not be found by        |
+| 781 | The players' left hands on a local left near a player the bottle will not be found by.       |
+| 782 | The players' left hands on a local left near a player the bottle will not be found by.       |
+| 783 | The players' left hands on a local left near a player the bottles are non found by           |
+| 784 | The players' left hands on a local left near a player the bottles are not found by           |
+| 785 | The players' left hands on a local left near a player the bottles are not found by           |
+| 786 | The players' left hands on a local left near a player the bottles are not found by.          |
+| 787 | The players' left hands on a local left near a player the bottles are not found by.          |
+| 788 | The players' left hands on a local left near a player the bottles were not found by          |
+| 789 | The players' left hands on a local left near a player the bottles were not found by          |
+| 790 | The players' left hands on a local left near a player the bottles were not found by.         |
+| 791 | The players' left hands on a local left near a player the bottles were not found by.         |
+| 792 | The players' left hands on a local left near a player the bottles will be not found by       |
+| 793 | The players' left hands on a local left near a player the bottles will be not found by.      |
+| 794 | The players' left hands on a local left near a player the bottles will not be found by       |
+| 795 | The players' left hands on a local left near a player the bottles will not be found by       |
+| 796 | The players' left hands on a local left near a player the bottles will not be found by.      |
+| 797 | The players' left hands on a local left near a player the bottles will not be found by.      |
+| 798 | The players' left hands on a local left near a player the bottles won't be found by          |
+| 799 | The players' left hands on a local left near a player the bottles won't be found by.         |
+| 800 | The players' left hands on a local left near the player the bottle is not found by           |
+| 801 | The players' left hands on a local left near the player the bottles are not found by         |
+| 802 | The players' left hands on a local left near the player the bottles are not found by         |
+| 803 | The players' left hands on a local left near the player the bottles are not found by.        |
+| 804 | The players' left hands on a local left near the player the bottles were not found by        |
+| 805 | The players' left hands on a local left near the player the bottles were not found by.       |
+| 806 | The players' left hands on a local left near the player the bottles will be not found by     |
+| 807 | The players' left hands on a local left near the player the bottles will be not found by.    |
+| 808 | The players' left hands on a local left near the player the bottles will not be found by     |
+| 809 | The players' left hands on a local left near the player the bottles will not be found by     |
+| 810 | The players' left hands on a local left near the player the bottles will not be found by.    |
+| 811 | The players' left hands on a local left near the player the bottles will not be found by.    |
+| 812 | The players' left hands on a local left, near a player the bottles are not found by          |
+| 813 | The players' left hands on local lefts near a player a bottle is not found by                |
+| 814 | The players' left hands on local lefts near a player a bottle is not found by.               |
+| 815 | The players' left hands on local lefts near a player a bottle will not be found by           |
+| 816 | The players' left hands on local lefts near a player a bottle will not be found by           |
+| 817 | The players' left hands on local lefts near a player the bottle is not found by              |
+| 818 | The players' left hands on local lefts near a player the bottle is not found by              |
+| 819 | The players' left hands on local lefts near a player the bottle is not found by.             |
+| 820 | The players' left hands on local lefts near a player the bottle was not found by             |
+| 821 | The players' left hands on local lefts near a player the bottle was not found by             |
+| 822 | The players' left hands on local lefts near a player the bottle was not found by.            |
+| 823 | The players' left hands on local lefts near a player the bottle was not found by.            |
+| 824 | The players' left hands on local lefts near a player the bottle will be not found by         |
+| 825 | The players' left hands on local lefts near a player the bottle will be not found by.        |
+| 826 | The players' left hands on local lefts near a player the bottle will not be found by         |
+| 827 | The players' left hands on local lefts near a player the bottle will not be found by         |
+| 828 | The players' left hands on local lefts near a player the bottle will not be found by.        |
+| 829 | The players' left hands on local lefts near a player the bottle will not be found by.        |
+| 830 | The players' left hands on local lefts near a player the bottle won't be found by            |
+| 831 | The players' left hands on local lefts near a player the bottles are non found by            |
+| 832 | The players' left hands on local lefts near a player the bottles are non found by.           |
+| 833 | The players' left hands on local lefts near a player the bottles are not found by            |
+| 834 | The players' left hands on local lefts near a player the bottles are not found by            |
+| 835 | The players' left hands on local lefts near a player the bottles are not found by.           |
+| 836 | The players' left hands on local lefts near a player the bottles are not found by.           |
+| 837 | The players' left hands on local lefts near a player the bottles were non found by           |
+| 838 | The players' left hands on local lefts near a player the bottles were not found by           |
+| 839 | The players' left hands on local lefts near a player the bottles were not found by           |
+| 840 | The players' left hands on local lefts near a player the bottles were not found by.          |
+| 841 | The players' left hands on local lefts near a player the bottles were not found by.          |
+| 842 | The players' left hands on local lefts near a player the bottles will be non found by        |
+| 843 | The players' left hands on local lefts near a player the bottles will be non found by.       |
+| 844 | The players' left hands on local lefts near a player the bottles will be not found by        |
+| 845 | The players' left hands on local lefts near a player the bottles will be not found by.       |
+| 846 | The players' left hands on local lefts near a player the bottles will not be found by        |
+| 847 | The players' left hands on local lefts near a player the bottles will not be found by        |
+| 848 | The players' left hands on local lefts near a player the bottles will not be found by.       |
+| 849 | The players' left hands on local lefts near a player the bottles will not be found by.       |
+| 850 | The players' left hands on local lefts near a player the bottles won't be found by           |
+| 851 | The players' left hands on local lefts near a player the bottles won't be found by.          |
+| 852 | The players' left hands on local lefts near the player the bottle is not found by            |
+| 853 | The players' left hands on local lefts near the player the bottle is not found by.           |
+| 854 | The players' left hands on local lefts near the player the bottle was not found by           |
+| 855 | The players' left hands on local lefts near the player the bottle will not be found by       |
+| 856 | The players' left hands on local lefts near the player the bottle will not be found by       |
+| 857 | The players' left hands on local lefts near the player the bottle will not be found by.      |
+| 858 | The players' left hands on local lefts near the player the bottle will not be found by.      |
+| 859 | The players' left hands on local lefts near the player the bottles are not found by          |
+| 860 | The players' left hands on local lefts near the player the bottles are not found by          |
+| 861 | The players' left hands on local lefts near the player the bottles are not found by.         |
+| 862 | The players' left hands on local lefts near the player the bottles are not found by.         |
+| 863 | The players' left hands on local lefts near the player the bottles were not found by         |
+| 864 | The players' left hands on local lefts near the player the bottles were not found by         |
+| 865 | The players' left hands on local lefts near the player the bottles were not found by.        |
+| 866 | The players' left hands on local lefts near the player the bottles were not found by.        |
+| 867 | The players' left hands on local lefts near the player the bottles will be not found by      |
+| 868 | The players' left hands on local lefts near the player the bottles will be not found by.     |
+| 869 | The players' left hands on local lefts near the player the bottles will not be found by      |
+| 870 | The players' left hands on local lefts near the player the bottles will not be found by      |
+| 871 | The players' left hands on local lefts near the player the bottles will not be found by.     |
+| 872 | The players' left hands on local lefts near the player the bottles will not be found by.     |
+| 873 | The players' left hands on local lefts near the player the bottles won't be found by         |
+| 874 | The players' left hands on local lefts near the player the bottles won't be found by.        |
+| 875 | The players' left hands on the local left near a player the bottle is not found by           |
+| 876 | The players' left hands on the local left near a player the bottles are not found by         |
+| 877 | The players' left hands on the local left near a player the bottles are not found by         |
+| 878 | The players' left hands on the local left near a player the bottles are not found by.        |
+| 879 | The players' left hands on the local left near a player the bottles were not found by        |
+| 880 | The players' left hands on the local left near a player the bottles were not found by.       |
+| 881 | The players' left hands on the local left near a player the bottles will be not found by     |
+| 882 | The players' left hands on the local left near a player the bottles will be not found by.    |
+| 883 | The players' left hands on the local left near a player the bottles will not be found by     |
+| 884 | The players' left hands on the local left near a player the bottles will not be found by     |
+| 885 | The players' left hands on the local left near a player the bottles will not be found by.    |
+| 886 | The players' left hands on the local left near a player the bottles will not be found by.    |
+| 887 | The players' left hands on the local left near the player the bottles are not found by       |
+| 888 | The players' left hands on the local left near the player the bottles are not found by.      |
+| 889 | The players' left hands on the local left near the player the bottles will not be found by   |
+| 890 | The players' left hands on the local left near the player the bottles will not be found by   |
+| 891 | The players' left hands on the local lefts near a player the bottle is not found by          |
+| 892 | The players' left hands on the local lefts near a player the bottle is not found by.         |
+| 893 | The players' left hands on the local lefts near a player the bottle was not found by         |
+| 894 | The players' left hands on the local lefts near a player the bottle was not found by.        |
+| 895 | The players' left hands on the local lefts near a player the bottle will not be found by     |
+| 896 | The players' left hands on the local lefts near a player the bottle will not be found by     |
+| 897 | The players' left hands on the local lefts near a player the bottle will not be found by.    |
+| 898 | The players' left hands on the local lefts near a player the bottle will not be found by.    |
+| 899 | The players' left hands on the local lefts near a player the bottles are non found by        |
+| 900 | The players' left hands on the local lefts near a player the bottles are not found by        |
+| 901 | The players' left hands on the local lefts near a player the bottles are not found by        |
+| 902 | The players' left hands on the local lefts near a player the bottles are not found by.       |
+| 903 | The players' left hands on the local lefts near a player the bottles are not found by.       |
+| 904 | The players' left hands on the local lefts near a player the bottles were not found by       |
+| 905 | The players' left hands on the local lefts near a player the bottles were not found by       |
+| 906 | The players' left hands on the local lefts near a player the bottles were not found by.      |
+| 907 | The players' left hands on the local lefts near a player the bottles were not found by.      |
+| 908 | The players' left hands on the local lefts near a player the bottles will be not found by    |
+| 909 | The players' left hands on the local lefts near a player the bottles will be not found by.   |
+| 910 | The players' left hands on the local lefts near a player the bottles will not be found by    |
+| 911 | The players' left hands on the local lefts near a player the bottles will not be found by    |
+| 912 | The players' left hands on the local lefts near a player the bottles will not be found by.   |
+| 913 | The players' left hands on the local lefts near a player the bottles will not be found by.   |
+| 914 | The players' left hands on the local lefts near a player the bottles won't be found by       |
+| 915 | The players' left hands on the local lefts near a player the bottles won't be found by.      |
+| 916 | The players' left hands on the local lefts near the player the bottle is not found by        |
+| 917 | The players' left hands on the local lefts near the player the bottles are not found by      |
+| 918 | The players' left hands on the local lefts near the player the bottles are not found by      |
+| 919 | The players' left hands on the local lefts near the player the bottles are not found by.     |
+| 920 | The players' left hands on the local lefts near the player the bottles were not found by     |
+| 921 | The players' left hands on the local lefts near the player the bottles were not found by.    |
+| 922 | The players' left hands on the local lefts near the player the bottles will be not found by  |
+| 923 | The players' left hands on the local lefts near the player the bottles will be not found by. |
+| 924 | The players' left hands on the local lefts near the player the bottles will not be found by  |
+| 925 | The players' left hands on the local lefts near the player the bottles will not be found by  |
+| 926 | The players' left hands on the local lefts near the player the bottles will not be found by. |
+| 927 | The players' left hands on the local lefts near the player the bottles will not be found by. |
+| 928 | The players' left hands, on the local lefts near a player the bottles are not found by       |
+| 929 | The players' left hands, on the local lefts near a player the bottles are not found by.      |
+| 930 | The players' left hands, on the local lefts near a player the bottles will not be found by   |
+| 931 | The players' left hands, on the local lefts near a player the bottles will not be found by   |
++-----+----------------------------------------------------------------------------------------------+
+

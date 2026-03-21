@@ -1,0 +1,1369 @@
+GRAPH NAME: idMachine1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 1200               |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 4                  |
+| Nodes Covered                   | 3                  |
+| Nodes Included                  | 3                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.75               |
+| Node Inclusion                  | 0.75               |
++---------------------------------+--------------------+
+| Edge Count                      | 3                  |
+| Edges Covered                   | 2                  |
+| Edges Included                  | 2                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.6666666666666666 |
+| Edge Inclusion                  | 0.6666666666666666 |
++---------------------------------+--------------------+
+
++------------------------------------------------------------------------------------+
+|                                    GOLD OUTPUTS                                    |
++-----------------------------------------------------------------------+------------+
+| Gold Output                                                           | Generated? |
++-----------------------------------------------------------------------+------------+
+| the machine with an on switch that is turned off south of the crystal | False      |
++-----------------------------------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+|                                                         NODE METRICS                                                        |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                           | Inclusion Comment                 |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| idMachine1  | True         | True          | Covered                                    | Included                          |
+| off         | True         | True          | Covered                                    | Included                          |
+| idOnSwitch1 | False        | False         | 'idOnSwitch' not in lexicon's node entries | No SEMENT generated for this node |
+| idCrystal1  | True         | True          | Covered                                    | Included                          |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                              EDGE METRICS                                                                              |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| Edge                           | Parent     | Child       | Edge Covered | Edge Included | Coverage Comment                        | Inclusion Comment                 |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| idMachine1_prop_idPowerState   | idMachine1 | off         | True         | True          | Covered                                 | Included                          |
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1 | False        | False         | child of 'idPowerControl' has no SEMENT | No SEMENT generated for this edge |
+| isSouthOf                      | idMachine1 | idCrystal1  | True         | True          | Covered                                 | Included                          |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1087                                                                     |
+|               |   INDEX: x1086                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1108 ARG0: e1105 ARG1: u1106 ARG2: x1107 ]           |
+|               |           [ def_implicit_q LBL: h1119 ARG0: x1116 RSTR: h1117 BODY: h1118 ]      |
+|               |           [ _south_a_1 LBL: h1104 ARG0: i1101 ARG1: x1102 ARG2: u1103 ]          |
+|               |           [ def_udef_a_q LBL: h1114 ARG0: x1111 RSTR: h1112 BODY: h1113 ]        |
+|               |           [ _crystal_n_1 LBL: h1100 ARG0: x1099 ]                                |
+|               |           [ place_n LBL: h1110 ARG0: x1109 ]                                     |
+|               |           [ _turn_v_off LBL: h1098 ARG0: e1095 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1096 ARG2: i1097 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1087 ARG0: x1086 ] >                              |
+|               |   HCONS: < h1112 qeq h1100 h1117 qeq h1110 >                                     |
+|               |   ICONS: < e1095 topic i1097 >                                                   |
+|               |   EQS: < x1111 eq x1099 h1104 eq h1115 u1103 eq x1111 h1104 eq h1110 x1102 eq    |
+|               | x1109 x1116 eq x1109 h1108 eq h1120 x1107 eq x1116 h1098 eq h1087 i1097 eq x1086 |
+|               | h1108 eq h1087 u1106 eq x1086 > ]                                                |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1087                                                                     |
+|               |   INDEX: x1086                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1087 ARG0: e1105 ARG1: x1086 ARG2: x1102 ]           |
+|               |           [ def_implicit_q LBL: h1119 ARG0: x1102 RSTR: h1117 BODY: h1118 ]      |
+|               |           [ _south_a_1 LBL: h1104 ARG0: i1101 ARG1: x1102 ARG2: x1099 ]          |
+|               |           [ def_udef_a_q LBL: h1114 ARG0: x1099 RSTR: h1112 BODY: h1113 ]        |
+|               |           [ _crystal_n_1 LBL: h1100 ARG0: x1099 ]                                |
+|               |           [ place_n LBL: h1104 ARG0: x1102 ]                                     |
+|               |           [ _turn_v_off LBL: h1087 ARG0: e1095 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1096 ARG2: x1086 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1087 ARG0: x1086 ] >                              |
+|               |   HCONS: < h1112 qeq h1100 h1117 qeq h1104 >                                     |
+|               |   ICONS: < e1095 topic x1086 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1129                                                                     |
+|               |   INDEX: e1126                                                                   |
+|               |   RELS: < [ unknown LBL: h1125 ARG: x1086 ARG0: e1126 ]                          |
+|               |           [ def_udef_a_q LBL: h1124 ARG0: x1086 RSTR: h1122 BODY: h1123 ]        |
+|               |           [ loc_nonsp LBL: h1087 ARG0: e1105 ARG1: x1086 ARG2: x1102 ]           |
+|               |           [ def_implicit_q LBL: h1119 ARG0: x1102 RSTR: h1117 BODY: h1118 ]      |
+|               |           [ _south_a_1 LBL: h1104 ARG0: i1101 ARG1: x1102 ARG2: x1099 ]          |
+|               |           [ def_udef_a_q LBL: h1114 ARG0: x1099 RSTR: h1112 BODY: h1113 ]        |
+|               |           [ _crystal_n_1 LBL: h1100 ARG0: x1099 ]                                |
+|               |           [ place_n LBL: h1104 ARG0: x1102 ]                                     |
+|               |           [ _turn_v_off LBL: h1087 ARG0: e1095 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1096 ARG2: x1086 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1087 ARG0: x1086 ] >                              |
+|               |   HCONS: < h1112 qeq h1100 h1117 qeq h1104 h1122 qeq h1087 h1129 qeq h1125 >     |
+|               |   ICONS: < e1095 topic x1086 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                 NODE SEMENTS                                 |
++-------------+----------------------------------------------------------------+
+| Node        | Generated SEMENT                                               |
++-------------+----------------------------------------------------------------+
+| idMachine1  | [ TOP: h1087                                                   |
+|             |   INDEX: x1086                                                 |
+|             |   RELS: < [ _machine_n_1 LBL: h1087 ARG0: x1086 ] > ]          |
++-------------+----------------------------------------------------------------+
+| off         | [ TOP: h1090                                                   |
+|             |   INDEX: e1088                                                 |
+|             |   RELS: < [ _false_a_of LBL: h1090 ARG0: e1088 ARG1: h1089 ] > |
+|             |   SLOTS: < ARG1: h1089 > ]                                     |
++-------------+----------------------------------------------------------------+
+| idOnSwitch1 | None                                                           |
++-------------+----------------------------------------------------------------+
+| idCrystal1  | [ TOP: h1100                                                   |
+|             |   INDEX: x1099                                                 |
+|             |   RELS: < [ _crystal_n_1 LBL: h1100 ARG0: x1099 ] > ]          |
++-------------+----------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                 |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent     | Child       | Generated SEMENT                                                                 |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerState   | idMachine1 | off         | [ TOP: h1087                                                                     |
+|                                |            |             |   INDEX: x1086                                                                   |
+|                                |            |             |   RELS: < [ _turn_v_off LBL: h1098 ARG0: e1095 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |             | i1096 ARG2: i1097 ]                                                              |
+|                                |            |             |           [ _machine_n_1 LBL: h1087 ARG0: x1086 ] >                              |
+|                                |            |             |   ICONS: < e1095 topic i1097 >                                                   |
+|                                |            |             |   EQS: < h1098 eq h1087 i1097 eq x1086 > ]                                       |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1 | None                                                                             |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| isSouthOf                      | idMachine1 | idCrystal1  | [ TOP: h1087                                                                     |
+|                                |            |             |   INDEX: x1086                                                                   |
+|                                |            |             |   RELS: < [ loc_nonsp LBL: h1108 ARG0: e1105 ARG1: u1106 ARG2: x1107 ]           |
+|                                |            |             |           [ def_implicit_q LBL: h1119 ARG0: x1116 RSTR: h1117 BODY: h1118 ]      |
+|                                |            |             |           [ _south_a_1 LBL: h1104 ARG0: i1101 ARG1: x1102 ARG2: u1103 ]          |
+|                                |            |             |           [ def_udef_a_q LBL: h1114 ARG0: x1111 RSTR: h1112 BODY: h1113 ]        |
+|                                |            |             |           [ _crystal_n_1 LBL: h1100 ARG0: x1099 ]                                |
+|                                |            |             |           [ place_n LBL: h1110 ARG0: x1109 ]                                     |
+|                                |            |             |           [ _turn_v_off LBL: h1098 ARG0: e1095 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |             | i1096 ARG2: i1097 ]                                                              |
+|                                |            |             |           [ _machine_n_1 LBL: h1087 ARG0: x1086 ] >                              |
+|                                |            |             |   HCONS: < h1112 qeq h1100 h1117 qeq h1110 >                                     |
+|                                |            |             |   ICONS: < e1095 topic i1097 >                                                   |
+|                                |            |             |   EQS: < x1111 eq x1099 h1104 eq h1115 u1103 eq x1111 h1104 eq h1110 x1102 eq    |
+|                                |            |             | x1109 x1116 eq x1109 h1108 eq h1120 x1107 eq x1116 h1098 eq h1087 i1097 eq x1086 |
+|                                |            |             | h1108 eq h1087 u1106 eq x1086 > ]                                                |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------+
+|                       GENERATED ENGLISH TEXT                      |
++------+------------------------------------------------------------+
+| #    | Generated Text                                             |
++------+------------------------------------------------------------+
+| 1    | A machine south of a crystal that is turned off            |
+| 2    | A machine south of a crystal that is turned off.           |
+| 3    | A machine south of a crystal which is turned off           |
+| 4    | A machine south of a crystal which is turned off.          |
+| 5    | A machine south of a crystal who is turned off             |
+| 6    | A machine south of a crystal who is turned off.            |
+| 7    | A machine south of a crystal, that is turned off           |
+| 8    | A machine south of a crystal, that is turned off.          |
+| 9    | A machine south of a crystal, which is turned off          |
+| 10   | A machine south of a crystal, which is turned off.         |
+| 11   | A machine south of a crystal, who is turned off            |
+| 12   | A machine south of a crystal, who is turned off.           |
+| 13   | A machine south of crystal that is turned off              |
+| 14   | A machine south of crystal that is turned off.             |
+| 15   | A machine south of crystal which is turned off             |
+| 16   | A machine south of crystal which is turned off.            |
+| 17   | A machine south of crystal who is turned off               |
+| 18   | A machine south of crystal who is turned off.              |
+| 19   | A machine south of crystal, that is turned off             |
+| 20   | A machine south of crystal, that is turned off.            |
+| 21   | A machine south of crystal, which is turned off            |
+| 22   | A machine south of crystal, which is turned off.           |
+| 23   | A machine south of crystal, who is turned off              |
+| 24   | A machine south of crystal, who is turned off.             |
+| 25   | A machine south of crystals that is turned off             |
+| 26   | A machine south of crystals that is turned off.            |
+| 27   | A machine south of crystals which is turned off            |
+| 28   | A machine south of crystals which is turned off.           |
+| 29   | A machine south of crystals who is turned off              |
+| 30   | A machine south of crystals who is turned off.             |
+| 31   | A machine south of crystals, that is turned off            |
+| 32   | A machine south of crystals, that is turned off.           |
+| 33   | A machine south of crystals, which is turned off           |
+| 34   | A machine south of crystals, which is turned off.          |
+| 35   | A machine south of crystals, who is turned off             |
+| 36   | A machine south of crystals, who is turned off.            |
+| 37   | A machine south of the crystal that is turned off          |
+| 38   | A machine south of the crystal that is turned off.         |
+| 39   | A machine south of the crystal which is turned off         |
+| 40   | A machine south of the crystal which is turned off.        |
+| 41   | A machine south of the crystal who is turned off           |
+| 42   | A machine south of the crystal who is turned off.          |
+| 43   | A machine south of the crystal, that is turned off         |
+| 44   | A machine south of the crystal, that is turned off.        |
+| 45   | A machine south of the crystal, which is turned off        |
+| 46   | A machine south of the crystal, which is turned off.       |
+| 47   | A machine south of the crystal, who is turned off          |
+| 48   | A machine south of the crystal, who is turned off.         |
+| 49   | A machine south of the crystals that is turned off         |
+| 50   | A machine south of the crystals that is turned off.        |
+| 51   | A machine south of the crystals which is turned off        |
+| 52   | A machine south of the crystals which is turned off.       |
+| 53   | A machine south of the crystals who is turned off          |
+| 54   | A machine south of the crystals who is turned off.         |
+| 55   | A machine south of the crystals, that is turned off        |
+| 56   | A machine south of the crystals, that is turned off.       |
+| 57   | A machine south of the crystals, which is turned off       |
+| 58   | A machine south of the crystals, which is turned off.      |
+| 59   | A machine south of the crystals, who is turned off         |
+| 60   | A machine south of the crystals, who is turned off.        |
+| 61   | A machine that is turned off south of a crystal            |
+| 62   | A machine that is turned off south of a crystal.           |
+| 63   | A machine that is turned off south of crystal              |
+| 64   | A machine that is turned off south of crystal.             |
+| 65   | A machine that is turned off south of crystals             |
+| 66   | A machine that is turned off south of crystals.            |
+| 67   | A machine that is turned off south of the crystal          |
+| 68   | A machine that is turned off south of the crystal.         |
+| 69   | A machine that is turned off south of the crystals         |
+| 70   | A machine that is turned off south of the crystals.        |
+| 71   | A machine that is turned off, south of a crystal           |
+| 72   | A machine that is turned off, south of crystal             |
+| 73   | A machine that is turned off, south of crystals            |
+| 74   | A machine that is turned off, south of the crystal         |
+| 75   | A machine that is turned off, south of the crystals        |
+| 76   | A machine that south of a crystal is turned off            |
+| 77   | A machine that south of a crystal is turned off.           |
+| 78   | A machine that south of crystal is turned off              |
+| 79   | A machine that south of crystal is turned off.             |
+| 80   | A machine that south of crystals is turned off             |
+| 81   | A machine that south of crystals is turned off.            |
+| 82   | A machine that south of the crystal is turned off          |
+| 83   | A machine that south of the crystal is turned off.         |
+| 84   | A machine that south of the crystals is turned off         |
+| 85   | A machine that south of the crystals is turned off.        |
+| 86   | A machine that, south of a crystal is turned off           |
+| 87   | A machine that, south of a crystal is turned off.          |
+| 88   | A machine that, south of crystal is turned off             |
+| 89   | A machine that, south of crystal is turned off.            |
+| 90   | A machine that, south of crystals is turned off            |
+| 91   | A machine that, south of crystals is turned off.           |
+| 92   | A machine that, south of the crystal is turned off         |
+| 93   | A machine that, south of the crystal is turned off.        |
+| 94   | A machine that, south of the crystals is turned off        |
+| 95   | A machine that, south of the crystals is turned off.       |
+| 96   | A machine which is turned off south of a crystal           |
+| 97   | A machine which is turned off south of a crystal.          |
+| 98   | A machine which is turned off south of crystal             |
+| 99   | A machine which is turned off south of crystal.            |
+| 100  | A machine which is turned off south of crystals            |
+| 101  | A machine which is turned off south of crystals.           |
+| 102  | A machine which is turned off south of the crystal         |
+| 103  | A machine which is turned off south of the crystal.        |
+| 104  | A machine which is turned off south of the crystals        |
+| 105  | A machine which is turned off south of the crystals.       |
+| 106  | A machine which is turned off, south of a crystal          |
+| 107  | A machine which is turned off, south of crystal            |
+| 108  | A machine which is turned off, south of crystals           |
+| 109  | A machine which is turned off, south of the crystal        |
+| 110  | A machine which is turned off, south of the crystals       |
+| 111  | A machine which south of a crystal is turned off           |
+| 112  | A machine which south of a crystal is turned off.          |
+| 113  | A machine which south of crystal is turned off             |
+| 114  | A machine which south of crystal is turned off.            |
+| 115  | A machine which south of crystals is turned off            |
+| 116  | A machine which south of crystals is turned off.           |
+| 117  | A machine which south of the crystal is turned off         |
+| 118  | A machine which south of the crystal is turned off.        |
+| 119  | A machine which south of the crystals is turned off        |
+| 120  | A machine which south of the crystals is turned off.       |
+| 121  | A machine which, south of a crystal is turned off          |
+| 122  | A machine which, south of a crystal is turned off.         |
+| 123  | A machine which, south of crystal is turned off            |
+| 124  | A machine which, south of crystal is turned off.           |
+| 125  | A machine which, south of crystals is turned off           |
+| 126  | A machine which, south of crystals is turned off.          |
+| 127  | A machine which, south of the crystal is turned off        |
+| 128  | A machine which, south of the crystal is turned off.       |
+| 129  | A machine which, south of the crystals is turned off       |
+| 130  | A machine which, south of the crystals is turned off.      |
+| 131  | A machine who is turned off south of a crystal             |
+| 132  | A machine who is turned off south of a crystal.            |
+| 133  | A machine who is turned off south of crystal               |
+| 134  | A machine who is turned off south of crystal.              |
+| 135  | A machine who is turned off south of crystals              |
+| 136  | A machine who is turned off south of crystals.             |
+| 137  | A machine who is turned off south of the crystal           |
+| 138  | A machine who is turned off south of the crystal.          |
+| 139  | A machine who is turned off south of the crystals          |
+| 140  | A machine who is turned off south of the crystals.         |
+| 141  | A machine who is turned off, south of a crystal            |
+| 142  | A machine who is turned off, south of crystal              |
+| 143  | A machine who is turned off, south of crystals             |
+| 144  | A machine who is turned off, south of the crystal          |
+| 145  | A machine who is turned off, south of the crystals         |
+| 146  | A machine who south of a crystal is turned off             |
+| 147  | A machine who south of a crystal is turned off.            |
+| 148  | A machine who south of crystal is turned off               |
+| 149  | A machine who south of crystal is turned off.              |
+| 150  | A machine who south of crystals is turned off              |
+| 151  | A machine who south of crystals is turned off.             |
+| 152  | A machine who south of the crystal is turned off           |
+| 153  | A machine who south of the crystal is turned off.          |
+| 154  | A machine who south of the crystals is turned off          |
+| 155  | A machine who south of the crystals is turned off.         |
+| 156  | A machine who, south of a crystal is turned off            |
+| 157  | A machine who, south of a crystal is turned off.           |
+| 158  | A machine who, south of crystal is turned off              |
+| 159  | A machine who, south of crystal is turned off.             |
+| 160  | A machine who, south of crystals is turned off             |
+| 161  | A machine who, south of crystals is turned off.            |
+| 162  | A machine who, south of the crystal is turned off          |
+| 163  | A machine who, south of the crystal is turned off.         |
+| 164  | A machine who, south of the crystals is turned off         |
+| 165  | A machine who, south of the crystals is turned off.        |
+| 166  | A machine, south of a crystal that is turned off           |
+| 167  | A machine, south of a crystal that is turned off.          |
+| 168  | A machine, south of a crystal which is turned off          |
+| 169  | A machine, south of a crystal which is turned off.         |
+| 170  | A machine, south of a crystal who is turned off            |
+| 171  | A machine, south of a crystal who is turned off.           |
+| 172  | A machine, south of crystal that is turned off             |
+| 173  | A machine, south of crystal that is turned off.            |
+| 174  | A machine, south of crystal which is turned off            |
+| 175  | A machine, south of crystal which is turned off.           |
+| 176  | A machine, south of crystal who is turned off              |
+| 177  | A machine, south of crystal who is turned off.             |
+| 178  | A machine, south of crystals that is turned off            |
+| 179  | A machine, south of crystals that is turned off.           |
+| 180  | A machine, south of crystals which is turned off           |
+| 181  | A machine, south of crystals which is turned off.          |
+| 182  | A machine, south of crystals who is turned off             |
+| 183  | A machine, south of crystals who is turned off.            |
+| 184  | A machine, south of the crystal that is turned off         |
+| 185  | A machine, south of the crystal that is turned off.        |
+| 186  | A machine, south of the crystal which is turned off        |
+| 187  | A machine, south of the crystal which is turned off.       |
+| 188  | A machine, south of the crystal who is turned off          |
+| 189  | A machine, south of the crystal who is turned off.         |
+| 190  | A machine, south of the crystals that is turned off        |
+| 191  | A machine, south of the crystals that is turned off.       |
+| 192  | A machine, south of the crystals which is turned off       |
+| 193  | A machine, south of the crystals which is turned off.      |
+| 194  | A machine, south of the crystals who is turned off         |
+| 195  | A machine, south of the crystals who is turned off.        |
+| 196  | A machine, that is turned off, south of a crystal          |
+| 197  | A machine, that is turned off, south of crystal            |
+| 198  | A machine, that is turned off, south of crystals           |
+| 199  | A machine, that is turned off, south of the crystal        |
+| 200  | A machine, that is turned off, south of the crystals       |
+| 201  | A machine, that south of a crystal is turned off.          |
+| 202  | A machine, that south of crystal is turned off.            |
+| 203  | A machine, that south of crystals is turned off.           |
+| 204  | A machine, that south of the crystal is turned off.        |
+| 205  | A machine, that south of the crystals is turned off.       |
+| 206  | A machine, that, south of a crystal is turned off.         |
+| 207  | A machine, that, south of crystal is turned off.           |
+| 208  | A machine, that, south of crystals is turned off.          |
+| 209  | A machine, that, south of the crystal is turned off.       |
+| 210  | A machine, that, south of the crystals is turned off.      |
+| 211  | A machine, which is turned off, south of a crystal         |
+| 212  | A machine, which is turned off, south of crystal           |
+| 213  | A machine, which is turned off, south of crystals          |
+| 214  | A machine, which is turned off, south of the crystal       |
+| 215  | A machine, which is turned off, south of the crystals      |
+| 216  | A machine, which south of a crystal is turned off.         |
+| 217  | A machine, which south of crystal is turned off.           |
+| 218  | A machine, which south of crystals is turned off.          |
+| 219  | A machine, which south of the crystal is turned off.       |
+| 220  | A machine, which south of the crystals is turned off.      |
+| 221  | A machine, which, south of a crystal is turned off.        |
+| 222  | A machine, which, south of crystal is turned off.          |
+| 223  | A machine, which, south of crystals is turned off.         |
+| 224  | A machine, which, south of the crystal is turned off.      |
+| 225  | A machine, which, south of the crystals is turned off.     |
+| 226  | A machine, who is turned off, south of a crystal           |
+| 227  | A machine, who is turned off, south of crystal             |
+| 228  | A machine, who is turned off, south of crystals            |
+| 229  | A machine, who is turned off, south of the crystal         |
+| 230  | A machine, who is turned off, south of the crystals        |
+| 231  | A machine, who south of a crystal is turned off.           |
+| 232  | A machine, who south of crystal is turned off.             |
+| 233  | A machine, who south of crystals is turned off.            |
+| 234  | A machine, who south of the crystal is turned off.         |
+| 235  | A machine, who south of the crystals is turned off.        |
+| 236  | A machine, who, south of a crystal is turned off.          |
+| 237  | A machine, who, south of crystal is turned off.            |
+| 238  | A machine, who, south of crystals is turned off.           |
+| 239  | A machine, who, south of the crystal is turned off.        |
+| 240  | A machine, who, south of the crystals is turned off.       |
+| 241  | Machine south of a crystal that is turned off              |
+| 242  | Machine south of a crystal that is turned off.             |
+| 243  | Machine south of a crystal which is turned off             |
+| 244  | Machine south of a crystal which is turned off.            |
+| 245  | Machine south of a crystal who is turned off               |
+| 246  | Machine south of a crystal who is turned off.              |
+| 247  | Machine south of a crystal, that is turned off             |
+| 248  | Machine south of a crystal, that is turned off.            |
+| 249  | Machine south of a crystal, which is turned off            |
+| 250  | Machine south of a crystal, which is turned off.           |
+| 251  | Machine south of a crystal, who is turned off              |
+| 252  | Machine south of a crystal, who is turned off.             |
+| 253  | Machine south of crystal that is turned off                |
+| 254  | Machine south of crystal that is turned off.               |
+| 255  | Machine south of crystal which is turned off               |
+| 256  | Machine south of crystal which is turned off.              |
+| 257  | Machine south of crystal who is turned off                 |
+| 258  | Machine south of crystal who is turned off.                |
+| 259  | Machine south of crystal, that is turned off               |
+| 260  | Machine south of crystal, that is turned off.              |
+| 261  | Machine south of crystal, which is turned off              |
+| 262  | Machine south of crystal, which is turned off.             |
+| 263  | Machine south of crystal, who is turned off                |
+| 264  | Machine south of crystal, who is turned off.               |
+| 265  | Machine south of crystals that is turned off               |
+| 266  | Machine south of crystals that is turned off.              |
+| 267  | Machine south of crystals which is turned off              |
+| 268  | Machine south of crystals which is turned off.             |
+| 269  | Machine south of crystals who is turned off                |
+| 270  | Machine south of crystals who is turned off.               |
+| 271  | Machine south of crystals, that is turned off              |
+| 272  | Machine south of crystals, that is turned off.             |
+| 273  | Machine south of crystals, which is turned off             |
+| 274  | Machine south of crystals, which is turned off.            |
+| 275  | Machine south of crystals, who is turned off               |
+| 276  | Machine south of crystals, who is turned off.              |
+| 277  | Machine south of the crystal that is turned off            |
+| 278  | Machine south of the crystal that is turned off.           |
+| 279  | Machine south of the crystal which is turned off           |
+| 280  | Machine south of the crystal which is turned off.          |
+| 281  | Machine south of the crystal who is turned off             |
+| 282  | Machine south of the crystal who is turned off.            |
+| 283  | Machine south of the crystal, that is turned off           |
+| 284  | Machine south of the crystal, that is turned off.          |
+| 285  | Machine south of the crystal, which is turned off          |
+| 286  | Machine south of the crystal, which is turned off.         |
+| 287  | Machine south of the crystal, who is turned off            |
+| 288  | Machine south of the crystal, who is turned off.           |
+| 289  | Machine south of the crystals that is turned off           |
+| 290  | Machine south of the crystals that is turned off.          |
+| 291  | Machine south of the crystals which is turned off          |
+| 292  | Machine south of the crystals which is turned off.         |
+| 293  | Machine south of the crystals who is turned off            |
+| 294  | Machine south of the crystals who is turned off.           |
+| 295  | Machine south of the crystals, that is turned off          |
+| 296  | Machine south of the crystals, that is turned off.         |
+| 297  | Machine south of the crystals, which is turned off         |
+| 298  | Machine south of the crystals, which is turned off.        |
+| 299  | Machine south of the crystals, who is turned off           |
+| 300  | Machine south of the crystals, who is turned off.          |
+| 301  | Machine that is turned off south of a crystal              |
+| 302  | Machine that is turned off south of a crystal.             |
+| 303  | Machine that is turned off south of crystal                |
+| 304  | Machine that is turned off south of crystal.               |
+| 305  | Machine that is turned off south of crystals               |
+| 306  | Machine that is turned off south of crystals.              |
+| 307  | Machine that is turned off south of the crystal            |
+| 308  | Machine that is turned off south of the crystal.           |
+| 309  | Machine that is turned off south of the crystals           |
+| 310  | Machine that is turned off south of the crystals.          |
+| 311  | Machine that is turned off, south of a crystal             |
+| 312  | Machine that is turned off, south of crystal               |
+| 313  | Machine that is turned off, south of crystals              |
+| 314  | Machine that is turned off, south of the crystal           |
+| 315  | Machine that is turned off, south of the crystals          |
+| 316  | Machine that south of a crystal is turned off              |
+| 317  | Machine that south of a crystal is turned off.             |
+| 318  | Machine that south of crystal is turned off                |
+| 319  | Machine that south of crystal is turned off.               |
+| 320  | Machine that south of crystals is turned off               |
+| 321  | Machine that south of crystals is turned off.              |
+| 322  | Machine that south of the crystal is turned off            |
+| 323  | Machine that south of the crystal is turned off.           |
+| 324  | Machine that south of the crystals is turned off           |
+| 325  | Machine that south of the crystals is turned off.          |
+| 326  | Machine that, south of a crystal is turned off             |
+| 327  | Machine that, south of a crystal is turned off.            |
+| 328  | Machine that, south of crystal is turned off               |
+| 329  | Machine that, south of crystal is turned off.              |
+| 330  | Machine that, south of crystals is turned off              |
+| 331  | Machine that, south of crystals is turned off.             |
+| 332  | Machine that, south of the crystal is turned off           |
+| 333  | Machine that, south of the crystal is turned off.          |
+| 334  | Machine that, south of the crystals is turned off          |
+| 335  | Machine that, south of the crystals is turned off.         |
+| 336  | Machine which is turned off south of a crystal             |
+| 337  | Machine which is turned off south of a crystal.            |
+| 338  | Machine which is turned off south of crystal               |
+| 339  | Machine which is turned off south of crystal.              |
+| 340  | Machine which is turned off south of crystals              |
+| 341  | Machine which is turned off south of crystals.             |
+| 342  | Machine which is turned off south of the crystal           |
+| 343  | Machine which is turned off south of the crystal.          |
+| 344  | Machine which is turned off south of the crystals          |
+| 345  | Machine which is turned off south of the crystals.         |
+| 346  | Machine which is turned off, south of a crystal            |
+| 347  | Machine which is turned off, south of crystal              |
+| 348  | Machine which is turned off, south of crystals             |
+| 349  | Machine which is turned off, south of the crystal          |
+| 350  | Machine which is turned off, south of the crystals         |
+| 351  | Machine which south of a crystal is turned off             |
+| 352  | Machine which south of a crystal is turned off.            |
+| 353  | Machine which south of crystal is turned off               |
+| 354  | Machine which south of crystal is turned off.              |
+| 355  | Machine which south of crystals is turned off              |
+| 356  | Machine which south of crystals is turned off.             |
+| 357  | Machine which south of the crystal is turned off           |
+| 358  | Machine which south of the crystal is turned off.          |
+| 359  | Machine which south of the crystals is turned off          |
+| 360  | Machine which south of the crystals is turned off.         |
+| 361  | Machine which, south of a crystal is turned off            |
+| 362  | Machine which, south of a crystal is turned off.           |
+| 363  | Machine which, south of crystal is turned off              |
+| 364  | Machine which, south of crystal is turned off.             |
+| 365  | Machine which, south of crystals is turned off             |
+| 366  | Machine which, south of crystals is turned off.            |
+| 367  | Machine which, south of the crystal is turned off          |
+| 368  | Machine which, south of the crystal is turned off.         |
+| 369  | Machine which, south of the crystals is turned off         |
+| 370  | Machine which, south of the crystals is turned off.        |
+| 371  | Machine who is turned off south of a crystal               |
+| 372  | Machine who is turned off south of a crystal.              |
+| 373  | Machine who is turned off south of crystal                 |
+| 374  | Machine who is turned off south of crystal.                |
+| 375  | Machine who is turned off south of crystals                |
+| 376  | Machine who is turned off south of crystals.               |
+| 377  | Machine who is turned off south of the crystal             |
+| 378  | Machine who is turned off south of the crystal.            |
+| 379  | Machine who is turned off south of the crystals            |
+| 380  | Machine who is turned off south of the crystals.           |
+| 381  | Machine who is turned off, south of a crystal              |
+| 382  | Machine who is turned off, south of crystal                |
+| 383  | Machine who is turned off, south of crystals               |
+| 384  | Machine who is turned off, south of the crystal            |
+| 385  | Machine who is turned off, south of the crystals           |
+| 386  | Machine who south of a crystal is turned off               |
+| 387  | Machine who south of a crystal is turned off.              |
+| 388  | Machine who south of crystal is turned off                 |
+| 389  | Machine who south of crystal is turned off.                |
+| 390  | Machine who south of crystals is turned off                |
+| 391  | Machine who south of crystals is turned off.               |
+| 392  | Machine who south of the crystal is turned off             |
+| 393  | Machine who south of the crystal is turned off.            |
+| 394  | Machine who south of the crystals is turned off            |
+| 395  | Machine who south of the crystals is turned off.           |
+| 396  | Machine who, south of a crystal is turned off              |
+| 397  | Machine who, south of a crystal is turned off.             |
+| 398  | Machine who, south of crystal is turned off                |
+| 399  | Machine who, south of crystal is turned off.               |
+| 400  | Machine who, south of crystals is turned off               |
+| 401  | Machine who, south of crystals is turned off.              |
+| 402  | Machine who, south of the crystal is turned off            |
+| 403  | Machine who, south of the crystal is turned off.           |
+| 404  | Machine who, south of the crystals is turned off           |
+| 405  | Machine who, south of the crystals is turned off.          |
+| 406  | Machine, south of a crystal that is turned off             |
+| 407  | Machine, south of a crystal that is turned off.            |
+| 408  | Machine, south of a crystal which is turned off            |
+| 409  | Machine, south of a crystal which is turned off.           |
+| 410  | Machine, south of a crystal who is turned off              |
+| 411  | Machine, south of a crystal who is turned off.             |
+| 412  | Machine, south of crystal that is turned off               |
+| 413  | Machine, south of crystal that is turned off.              |
+| 414  | Machine, south of crystal which is turned off              |
+| 415  | Machine, south of crystal which is turned off.             |
+| 416  | Machine, south of crystal who is turned off                |
+| 417  | Machine, south of crystal who is turned off.               |
+| 418  | Machine, south of crystals that is turned off              |
+| 419  | Machine, south of crystals that is turned off.             |
+| 420  | Machine, south of crystals which is turned off             |
+| 421  | Machine, south of crystals which is turned off.            |
+| 422  | Machine, south of crystals who is turned off               |
+| 423  | Machine, south of crystals who is turned off.              |
+| 424  | Machine, south of the crystal that is turned off           |
+| 425  | Machine, south of the crystal that is turned off.          |
+| 426  | Machine, south of the crystal which is turned off          |
+| 427  | Machine, south of the crystal which is turned off.         |
+| 428  | Machine, south of the crystal who is turned off            |
+| 429  | Machine, south of the crystal who is turned off.           |
+| 430  | Machine, south of the crystals that is turned off          |
+| 431  | Machine, south of the crystals that is turned off.         |
+| 432  | Machine, south of the crystals which is turned off         |
+| 433  | Machine, south of the crystals which is turned off.        |
+| 434  | Machine, south of the crystals who is turned off           |
+| 435  | Machine, south of the crystals who is turned off.          |
+| 436  | Machine, that is turned off, south of a crystal            |
+| 437  | Machine, that is turned off, south of crystal              |
+| 438  | Machine, that is turned off, south of crystals             |
+| 439  | Machine, that is turned off, south of the crystal          |
+| 440  | Machine, that is turned off, south of the crystals         |
+| 441  | Machine, that south of a crystal is turned off.            |
+| 442  | Machine, that south of crystal is turned off.              |
+| 443  | Machine, that south of crystals is turned off.             |
+| 444  | Machine, that south of the crystal is turned off.          |
+| 445  | Machine, that south of the crystals is turned off.         |
+| 446  | Machine, that, south of a crystal is turned off.           |
+| 447  | Machine, that, south of crystal is turned off.             |
+| 448  | Machine, that, south of crystals is turned off.            |
+| 449  | Machine, that, south of the crystal is turned off.         |
+| 450  | Machine, that, south of the crystals is turned off.        |
+| 451  | Machine, which is turned off, south of a crystal           |
+| 452  | Machine, which is turned off, south of crystal             |
+| 453  | Machine, which is turned off, south of crystals            |
+| 454  | Machine, which is turned off, south of the crystal         |
+| 455  | Machine, which is turned off, south of the crystals        |
+| 456  | Machine, which south of a crystal is turned off.           |
+| 457  | Machine, which south of crystal is turned off.             |
+| 458  | Machine, which south of crystals is turned off.            |
+| 459  | Machine, which south of the crystal is turned off.         |
+| 460  | Machine, which south of the crystals is turned off.        |
+| 461  | Machine, which, south of a crystal is turned off.          |
+| 462  | Machine, which, south of crystal is turned off.            |
+| 463  | Machine, which, south of crystals is turned off.           |
+| 464  | Machine, which, south of the crystal is turned off.        |
+| 465  | Machine, which, south of the crystals is turned off.       |
+| 466  | Machine, who is turned off, south of a crystal             |
+| 467  | Machine, who is turned off, south of crystal               |
+| 468  | Machine, who is turned off, south of crystals              |
+| 469  | Machine, who is turned off, south of the crystal           |
+| 470  | Machine, who is turned off, south of the crystals          |
+| 471  | Machine, who south of a crystal is turned off.             |
+| 472  | Machine, who south of crystal is turned off.               |
+| 473  | Machine, who south of crystals is turned off.              |
+| 474  | Machine, who south of the crystal is turned off.           |
+| 475  | Machine, who south of the crystals is turned off.          |
+| 476  | Machine, who, south of a crystal is turned off.            |
+| 477  | Machine, who, south of crystal is turned off.              |
+| 478  | Machine, who, south of crystals is turned off.             |
+| 479  | Machine, who, south of the crystal is turned off.          |
+| 480  | Machine, who, south of the crystals is turned off.         |
+| 481  | Machines south of a crystal that are turned off            |
+| 482  | Machines south of a crystal that are turned off.           |
+| 483  | Machines south of a crystal which are turned off           |
+| 484  | Machines south of a crystal which are turned off.          |
+| 485  | Machines south of a crystal who are turned off             |
+| 486  | Machines south of a crystal who are turned off.            |
+| 487  | Machines south of a crystal, that are turned off           |
+| 488  | Machines south of a crystal, that are turned off.          |
+| 489  | Machines south of a crystal, which are turned off          |
+| 490  | Machines south of a crystal, which are turned off.         |
+| 491  | Machines south of a crystal, who are turned off            |
+| 492  | Machines south of a crystal, who are turned off.           |
+| 493  | Machines south of crystal that are turned off              |
+| 494  | Machines south of crystal that are turned off.             |
+| 495  | Machines south of crystal which are turned off             |
+| 496  | Machines south of crystal which are turned off.            |
+| 497  | Machines south of crystal who are turned off               |
+| 498  | Machines south of crystal who are turned off.              |
+| 499  | Machines south of crystal, that are turned off             |
+| 500  | Machines south of crystal, that are turned off.            |
+| 501  | Machines south of crystal, which are turned off            |
+| 502  | Machines south of crystal, which are turned off.           |
+| 503  | Machines south of crystal, who are turned off              |
+| 504  | Machines south of crystal, who are turned off.             |
+| 505  | Machines south of crystals that are turned off             |
+| 506  | Machines south of crystals that are turned off.            |
+| 507  | Machines south of crystals which are turned off            |
+| 508  | Machines south of crystals which are turned off.           |
+| 509  | Machines south of crystals who are turned off              |
+| 510  | Machines south of crystals who are turned off.             |
+| 511  | Machines south of crystals, that are turned off            |
+| 512  | Machines south of crystals, that are turned off.           |
+| 513  | Machines south of crystals, which are turned off           |
+| 514  | Machines south of crystals, which are turned off.          |
+| 515  | Machines south of crystals, who are turned off             |
+| 516  | Machines south of crystals, who are turned off.            |
+| 517  | Machines south of the crystal that are turned off          |
+| 518  | Machines south of the crystal that are turned off.         |
+| 519  | Machines south of the crystal which are turned off         |
+| 520  | Machines south of the crystal which are turned off.        |
+| 521  | Machines south of the crystal who are turned off           |
+| 522  | Machines south of the crystal who are turned off.          |
+| 523  | Machines south of the crystal, that are turned off         |
+| 524  | Machines south of the crystal, that are turned off.        |
+| 525  | Machines south of the crystal, which are turned off        |
+| 526  | Machines south of the crystal, which are turned off.       |
+| 527  | Machines south of the crystal, who are turned off          |
+| 528  | Machines south of the crystal, who are turned off.         |
+| 529  | Machines south of the crystals that are turned off         |
+| 530  | Machines south of the crystals that are turned off.        |
+| 531  | Machines south of the crystals which are turned off        |
+| 532  | Machines south of the crystals which are turned off.       |
+| 533  | Machines south of the crystals who are turned off          |
+| 534  | Machines south of the crystals who are turned off.         |
+| 535  | Machines south of the crystals, that are turned off        |
+| 536  | Machines south of the crystals, that are turned off.       |
+| 537  | Machines south of the crystals, which are turned off       |
+| 538  | Machines south of the crystals, which are turned off.      |
+| 539  | Machines south of the crystals, who are turned off         |
+| 540  | Machines south of the crystals, who are turned off.        |
+| 541  | Machines that are turned off south of a crystal            |
+| 542  | Machines that are turned off south of a crystal.           |
+| 543  | Machines that are turned off south of crystal              |
+| 544  | Machines that are turned off south of crystal.             |
+| 545  | Machines that are turned off south of crystals             |
+| 546  | Machines that are turned off south of crystals.            |
+| 547  | Machines that are turned off south of the crystal          |
+| 548  | Machines that are turned off south of the crystal.         |
+| 549  | Machines that are turned off south of the crystals         |
+| 550  | Machines that are turned off south of the crystals.        |
+| 551  | Machines that are turned off, south of a crystal           |
+| 552  | Machines that are turned off, south of crystal             |
+| 553  | Machines that are turned off, south of crystals            |
+| 554  | Machines that are turned off, south of the crystal         |
+| 555  | Machines that are turned off, south of the crystals        |
+| 556  | Machines that south of a crystal are turned off            |
+| 557  | Machines that south of a crystal are turned off.           |
+| 558  | Machines that south of crystal are turned off              |
+| 559  | Machines that south of crystal are turned off.             |
+| 560  | Machines that south of crystals are turned off             |
+| 561  | Machines that south of crystals are turned off.            |
+| 562  | Machines that south of the crystal are turned off          |
+| 563  | Machines that south of the crystal are turned off.         |
+| 564  | Machines that south of the crystals are turned off         |
+| 565  | Machines that south of the crystals are turned off.        |
+| 566  | Machines that, south of a crystal are turned off           |
+| 567  | Machines that, south of a crystal are turned off.          |
+| 568  | Machines that, south of crystal are turned off             |
+| 569  | Machines that, south of crystal are turned off.            |
+| 570  | Machines that, south of crystals are turned off            |
+| 571  | Machines that, south of crystals are turned off.           |
+| 572  | Machines that, south of the crystal are turned off         |
+| 573  | Machines that, south of the crystal are turned off.        |
+| 574  | Machines that, south of the crystals are turned off        |
+| 575  | Machines that, south of the crystals are turned off.       |
+| 576  | Machines which are turned off south of a crystal           |
+| 577  | Machines which are turned off south of a crystal.          |
+| 578  | Machines which are turned off south of crystal             |
+| 579  | Machines which are turned off south of crystal.            |
+| 580  | Machines which are turned off south of crystals            |
+| 581  | Machines which are turned off south of crystals.           |
+| 582  | Machines which are turned off south of the crystal         |
+| 583  | Machines which are turned off south of the crystal.        |
+| 584  | Machines which are turned off south of the crystals        |
+| 585  | Machines which are turned off south of the crystals.       |
+| 586  | Machines which are turned off, south of a crystal          |
+| 587  | Machines which are turned off, south of crystal            |
+| 588  | Machines which are turned off, south of crystals           |
+| 589  | Machines which are turned off, south of the crystal        |
+| 590  | Machines which are turned off, south of the crystals       |
+| 591  | Machines which south of a crystal are turned off           |
+| 592  | Machines which south of a crystal are turned off.          |
+| 593  | Machines which south of crystal are turned off             |
+| 594  | Machines which south of crystal are turned off.            |
+| 595  | Machines which south of crystals are turned off            |
+| 596  | Machines which south of crystals are turned off.           |
+| 597  | Machines which south of the crystal are turned off         |
+| 598  | Machines which south of the crystal are turned off.        |
+| 599  | Machines which south of the crystals are turned off        |
+| 600  | Machines which south of the crystals are turned off.       |
+| 601  | Machines which, south of a crystal are turned off          |
+| 602  | Machines which, south of a crystal are turned off.         |
+| 603  | Machines which, south of crystal are turned off            |
+| 604  | Machines which, south of crystal are turned off.           |
+| 605  | Machines which, south of crystals are turned off           |
+| 606  | Machines which, south of crystals are turned off.          |
+| 607  | Machines which, south of the crystal are turned off        |
+| 608  | Machines which, south of the crystal are turned off.       |
+| 609  | Machines which, south of the crystals are turned off       |
+| 610  | Machines which, south of the crystals are turned off.      |
+| 611  | Machines who are turned off south of a crystal             |
+| 612  | Machines who are turned off south of a crystal.            |
+| 613  | Machines who are turned off south of crystal               |
+| 614  | Machines who are turned off south of crystal.              |
+| 615  | Machines who are turned off south of crystals              |
+| 616  | Machines who are turned off south of crystals.             |
+| 617  | Machines who are turned off south of the crystal           |
+| 618  | Machines who are turned off south of the crystal.          |
+| 619  | Machines who are turned off south of the crystals          |
+| 620  | Machines who are turned off south of the crystals.         |
+| 621  | Machines who are turned off, south of a crystal            |
+| 622  | Machines who are turned off, south of crystal              |
+| 623  | Machines who are turned off, south of crystals             |
+| 624  | Machines who are turned off, south of the crystal          |
+| 625  | Machines who are turned off, south of the crystals         |
+| 626  | Machines who south of a crystal are turned off             |
+| 627  | Machines who south of a crystal are turned off.            |
+| 628  | Machines who south of crystal are turned off               |
+| 629  | Machines who south of crystal are turned off.              |
+| 630  | Machines who south of crystals are turned off              |
+| 631  | Machines who south of crystals are turned off.             |
+| 632  | Machines who south of the crystal are turned off           |
+| 633  | Machines who south of the crystal are turned off.          |
+| 634  | Machines who south of the crystals are turned off          |
+| 635  | Machines who south of the crystals are turned off.         |
+| 636  | Machines who, south of a crystal are turned off            |
+| 637  | Machines who, south of a crystal are turned off.           |
+| 638  | Machines who, south of crystal are turned off              |
+| 639  | Machines who, south of crystal are turned off.             |
+| 640  | Machines who, south of crystals are turned off             |
+| 641  | Machines who, south of crystals are turned off.            |
+| 642  | Machines who, south of the crystal are turned off          |
+| 643  | Machines who, south of the crystal are turned off.         |
+| 644  | Machines who, south of the crystals are turned off         |
+| 645  | Machines who, south of the crystals are turned off.        |
+| 646  | Machines, south of a crystal that are turned off           |
+| 647  | Machines, south of a crystal that are turned off.          |
+| 648  | Machines, south of a crystal which are turned off          |
+| 649  | Machines, south of a crystal which are turned off.         |
+| 650  | Machines, south of a crystal who are turned off            |
+| 651  | Machines, south of a crystal who are turned off.           |
+| 652  | Machines, south of crystal that are turned off             |
+| 653  | Machines, south of crystal that are turned off.            |
+| 654  | Machines, south of crystal which are turned off            |
+| 655  | Machines, south of crystal which are turned off.           |
+| 656  | Machines, south of crystal who are turned off              |
+| 657  | Machines, south of crystal who are turned off.             |
+| 658  | Machines, south of crystals that are turned off            |
+| 659  | Machines, south of crystals that are turned off.           |
+| 660  | Machines, south of crystals which are turned off           |
+| 661  | Machines, south of crystals which are turned off.          |
+| 662  | Machines, south of crystals who are turned off             |
+| 663  | Machines, south of crystals who are turned off.            |
+| 664  | Machines, south of the crystal that are turned off         |
+| 665  | Machines, south of the crystal that are turned off.        |
+| 666  | Machines, south of the crystal which are turned off        |
+| 667  | Machines, south of the crystal which are turned off.       |
+| 668  | Machines, south of the crystal who are turned off          |
+| 669  | Machines, south of the crystal who are turned off.         |
+| 670  | Machines, south of the crystals that are turned off        |
+| 671  | Machines, south of the crystals that are turned off.       |
+| 672  | Machines, south of the crystals which are turned off       |
+| 673  | Machines, south of the crystals which are turned off.      |
+| 674  | Machines, south of the crystals who are turned off         |
+| 675  | Machines, south of the crystals who are turned off.        |
+| 676  | Machines, that are turned off, south of a crystal          |
+| 677  | Machines, that are turned off, south of crystal            |
+| 678  | Machines, that are turned off, south of crystals           |
+| 679  | Machines, that are turned off, south of the crystal        |
+| 680  | Machines, that are turned off, south of the crystals       |
+| 681  | Machines, that south of a crystal are turned off.          |
+| 682  | Machines, that south of crystal are turned off.            |
+| 683  | Machines, that south of crystals are turned off.           |
+| 684  | Machines, that south of the crystal are turned off.        |
+| 685  | Machines, that south of the crystals are turned off.       |
+| 686  | Machines, that, south of a crystal are turned off.         |
+| 687  | Machines, that, south of crystal are turned off.           |
+| 688  | Machines, that, south of crystals are turned off.          |
+| 689  | Machines, that, south of the crystal are turned off.       |
+| 690  | Machines, that, south of the crystals are turned off.      |
+| 691  | Machines, which are turned off, south of a crystal         |
+| 692  | Machines, which are turned off, south of crystal           |
+| 693  | Machines, which are turned off, south of crystals          |
+| 694  | Machines, which are turned off, south of the crystal       |
+| 695  | Machines, which are turned off, south of the crystals      |
+| 696  | Machines, which south of a crystal are turned off.         |
+| 697  | Machines, which south of crystal are turned off.           |
+| 698  | Machines, which south of crystals are turned off.          |
+| 699  | Machines, which south of the crystal are turned off.       |
+| 700  | Machines, which south of the crystals are turned off.      |
+| 701  | Machines, which, south of a crystal are turned off.        |
+| 702  | Machines, which, south of crystal are turned off.          |
+| 703  | Machines, which, south of crystals are turned off.         |
+| 704  | Machines, which, south of the crystal are turned off.      |
+| 705  | Machines, which, south of the crystals are turned off.     |
+| 706  | Machines, who are turned off, south of a crystal           |
+| 707  | Machines, who are turned off, south of crystal             |
+| 708  | Machines, who are turned off, south of crystals            |
+| 709  | Machines, who are turned off, south of the crystal         |
+| 710  | Machines, who are turned off, south of the crystals        |
+| 711  | Machines, who south of a crystal are turned off.           |
+| 712  | Machines, who south of crystal are turned off.             |
+| 713  | Machines, who south of crystals are turned off.            |
+| 714  | Machines, who south of the crystal are turned off.         |
+| 715  | Machines, who south of the crystals are turned off.        |
+| 716  | Machines, who, south of a crystal are turned off.          |
+| 717  | Machines, who, south of crystal are turned off.            |
+| 718  | Machines, who, south of crystals are turned off.           |
+| 719  | Machines, who, south of the crystal are turned off.        |
+| 720  | Machines, who, south of the crystals are turned off.       |
+| 721  | The machine south of a crystal that is turned off          |
+| 722  | The machine south of a crystal that is turned off.         |
+| 723  | The machine south of a crystal which is turned off         |
+| 724  | The machine south of a crystal which is turned off.        |
+| 725  | The machine south of a crystal who is turned off           |
+| 726  | The machine south of a crystal who is turned off.          |
+| 727  | The machine south of a crystal, that is turned off         |
+| 728  | The machine south of a crystal, that is turned off.        |
+| 729  | The machine south of a crystal, which is turned off        |
+| 730  | The machine south of a crystal, which is turned off.       |
+| 731  | The machine south of a crystal, who is turned off          |
+| 732  | The machine south of a crystal, who is turned off.         |
+| 733  | The machine south of crystal that is turned off            |
+| 734  | The machine south of crystal that is turned off.           |
+| 735  | The machine south of crystal which is turned off           |
+| 736  | The machine south of crystal which is turned off.          |
+| 737  | The machine south of crystal who is turned off             |
+| 738  | The machine south of crystal who is turned off.            |
+| 739  | The machine south of crystal, that is turned off           |
+| 740  | The machine south of crystal, that is turned off.          |
+| 741  | The machine south of crystal, which is turned off          |
+| 742  | The machine south of crystal, which is turned off.         |
+| 743  | The machine south of crystal, who is turned off            |
+| 744  | The machine south of crystal, who is turned off.           |
+| 745  | The machine south of crystals that is turned off           |
+| 746  | The machine south of crystals that is turned off.          |
+| 747  | The machine south of crystals which is turned off          |
+| 748  | The machine south of crystals which is turned off.         |
+| 749  | The machine south of crystals who is turned off            |
+| 750  | The machine south of crystals who is turned off.           |
+| 751  | The machine south of crystals, that is turned off          |
+| 752  | The machine south of crystals, that is turned off.         |
+| 753  | The machine south of crystals, which is turned off         |
+| 754  | The machine south of crystals, which is turned off.        |
+| 755  | The machine south of crystals, who is turned off           |
+| 756  | The machine south of crystals, who is turned off.          |
+| 757  | The machine south of the crystal that is turned off        |
+| 758  | The machine south of the crystal that is turned off.       |
+| 759  | The machine south of the crystal which is turned off       |
+| 760  | The machine south of the crystal which is turned off.      |
+| 761  | The machine south of the crystal who is turned off         |
+| 762  | The machine south of the crystal who is turned off.        |
+| 763  | The machine south of the crystal, that is turned off       |
+| 764  | The machine south of the crystal, that is turned off.      |
+| 765  | The machine south of the crystal, which is turned off      |
+| 766  | The machine south of the crystal, which is turned off.     |
+| 767  | The machine south of the crystal, who is turned off        |
+| 768  | The machine south of the crystal, who is turned off.       |
+| 769  | The machine south of the crystals that is turned off       |
+| 770  | The machine south of the crystals that is turned off.      |
+| 771  | The machine south of the crystals which is turned off      |
+| 772  | The machine south of the crystals which is turned off.     |
+| 773  | The machine south of the crystals who is turned off        |
+| 774  | The machine south of the crystals who is turned off.       |
+| 775  | The machine south of the crystals, that is turned off      |
+| 776  | The machine south of the crystals, that is turned off.     |
+| 777  | The machine south of the crystals, which is turned off     |
+| 778  | The machine south of the crystals, which is turned off.    |
+| 779  | The machine south of the crystals, who is turned off       |
+| 780  | The machine south of the crystals, who is turned off.      |
+| 781  | The machine that is turned off south of a crystal          |
+| 782  | The machine that is turned off south of a crystal.         |
+| 783  | The machine that is turned off south of crystal            |
+| 784  | The machine that is turned off south of crystal.           |
+| 785  | The machine that is turned off south of crystals           |
+| 786  | The machine that is turned off south of crystals.          |
+| 787  | The machine that is turned off south of the crystal        |
+| 788  | The machine that is turned off south of the crystal.       |
+| 789  | The machine that is turned off south of the crystals       |
+| 790  | The machine that is turned off south of the crystals.      |
+| 791  | The machine that is turned off, south of a crystal         |
+| 792  | The machine that is turned off, south of crystal           |
+| 793  | The machine that is turned off, south of crystals          |
+| 794  | The machine that is turned off, south of the crystal       |
+| 795  | The machine that is turned off, south of the crystals      |
+| 796  | The machine that south of a crystal is turned off          |
+| 797  | The machine that south of a crystal is turned off.         |
+| 798  | The machine that south of crystal is turned off            |
+| 799  | The machine that south of crystal is turned off.           |
+| 800  | The machine that south of crystals is turned off           |
+| 801  | The machine that south of crystals is turned off.          |
+| 802  | The machine that south of the crystal is turned off        |
+| 803  | The machine that south of the crystal is turned off.       |
+| 804  | The machine that south of the crystals is turned off       |
+| 805  | The machine that south of the crystals is turned off.      |
+| 806  | The machine that, south of a crystal is turned off         |
+| 807  | The machine that, south of a crystal is turned off.        |
+| 808  | The machine that, south of crystal is turned off           |
+| 809  | The machine that, south of crystal is turned off.          |
+| 810  | The machine that, south of crystals is turned off          |
+| 811  | The machine that, south of crystals is turned off.         |
+| 812  | The machine that, south of the crystal is turned off       |
+| 813  | The machine that, south of the crystal is turned off.      |
+| 814  | The machine that, south of the crystals is turned off      |
+| 815  | The machine that, south of the crystals is turned off.     |
+| 816  | The machine which is turned off south of a crystal         |
+| 817  | The machine which is turned off south of a crystal.        |
+| 818  | The machine which is turned off south of crystal           |
+| 819  | The machine which is turned off south of crystal.          |
+| 820  | The machine which is turned off south of crystals          |
+| 821  | The machine which is turned off south of crystals.         |
+| 822  | The machine which is turned off south of the crystal       |
+| 823  | The machine which is turned off south of the crystal.      |
+| 824  | The machine which is turned off south of the crystals      |
+| 825  | The machine which is turned off south of the crystals.     |
+| 826  | The machine which is turned off, south of a crystal        |
+| 827  | The machine which is turned off, south of crystal          |
+| 828  | The machine which is turned off, south of crystals         |
+| 829  | The machine which is turned off, south of the crystal      |
+| 830  | The machine which is turned off, south of the crystals     |
+| 831  | The machine which south of a crystal is turned off         |
+| 832  | The machine which south of a crystal is turned off.        |
+| 833  | The machine which south of crystal is turned off           |
+| 834  | The machine which south of crystal is turned off.          |
+| 835  | The machine which south of crystals is turned off          |
+| 836  | The machine which south of crystals is turned off.         |
+| 837  | The machine which south of the crystal is turned off       |
+| 838  | The machine which south of the crystal is turned off.      |
+| 839  | The machine which south of the crystals is turned off      |
+| 840  | The machine which south of the crystals is turned off.     |
+| 841  | The machine which, south of a crystal is turned off        |
+| 842  | The machine which, south of a crystal is turned off.       |
+| 843  | The machine which, south of crystal is turned off          |
+| 844  | The machine which, south of crystal is turned off.         |
+| 845  | The machine which, south of crystals is turned off         |
+| 846  | The machine which, south of crystals is turned off.        |
+| 847  | The machine which, south of the crystal is turned off      |
+| 848  | The machine which, south of the crystal is turned off.     |
+| 849  | The machine which, south of the crystals is turned off     |
+| 850  | The machine which, south of the crystals is turned off.    |
+| 851  | The machine who is turned off south of a crystal           |
+| 852  | The machine who is turned off south of a crystal.          |
+| 853  | The machine who is turned off south of crystal             |
+| 854  | The machine who is turned off south of crystal.            |
+| 855  | The machine who is turned off south of crystals            |
+| 856  | The machine who is turned off south of crystals.           |
+| 857  | The machine who is turned off south of the crystal         |
+| 858  | The machine who is turned off south of the crystal.        |
+| 859  | The machine who is turned off south of the crystals        |
+| 860  | The machine who is turned off south of the crystals.       |
+| 861  | The machine who is turned off, south of a crystal          |
+| 862  | The machine who is turned off, south of crystal            |
+| 863  | The machine who is turned off, south of crystals           |
+| 864  | The machine who is turned off, south of the crystal        |
+| 865  | The machine who is turned off, south of the crystals       |
+| 866  | The machine who south of a crystal is turned off           |
+| 867  | The machine who south of a crystal is turned off.          |
+| 868  | The machine who south of crystal is turned off             |
+| 869  | The machine who south of crystal is turned off.            |
+| 870  | The machine who south of crystals is turned off            |
+| 871  | The machine who south of crystals is turned off.           |
+| 872  | The machine who south of the crystal is turned off         |
+| 873  | The machine who south of the crystal is turned off.        |
+| 874  | The machine who south of the crystals is turned off        |
+| 875  | The machine who south of the crystals is turned off.       |
+| 876  | The machine who, south of a crystal is turned off          |
+| 877  | The machine who, south of a crystal is turned off.         |
+| 878  | The machine who, south of crystal is turned off            |
+| 879  | The machine who, south of crystal is turned off.           |
+| 880  | The machine who, south of crystals is turned off           |
+| 881  | The machine who, south of crystals is turned off.          |
+| 882  | The machine who, south of the crystal is turned off        |
+| 883  | The machine who, south of the crystal is turned off.       |
+| 884  | The machine who, south of the crystals is turned off       |
+| 885  | The machine who, south of the crystals is turned off.      |
+| 886  | The machine, south of a crystal that is turned off         |
+| 887  | The machine, south of a crystal that is turned off.        |
+| 888  | The machine, south of a crystal which is turned off        |
+| 889  | The machine, south of a crystal which is turned off.       |
+| 890  | The machine, south of a crystal who is turned off          |
+| 891  | The machine, south of a crystal who is turned off.         |
+| 892  | The machine, south of crystal that is turned off           |
+| 893  | The machine, south of crystal that is turned off.          |
+| 894  | The machine, south of crystal which is turned off          |
+| 895  | The machine, south of crystal which is turned off.         |
+| 896  | The machine, south of crystal who is turned off            |
+| 897  | The machine, south of crystal who is turned off.           |
+| 898  | The machine, south of crystals that is turned off          |
+| 899  | The machine, south of crystals that is turned off.         |
+| 900  | The machine, south of crystals which is turned off         |
+| 901  | The machine, south of crystals which is turned off.        |
+| 902  | The machine, south of crystals who is turned off           |
+| 903  | The machine, south of crystals who is turned off.          |
+| 904  | The machine, south of the crystal that is turned off       |
+| 905  | The machine, south of the crystal that is turned off.      |
+| 906  | The machine, south of the crystal which is turned off      |
+| 907  | The machine, south of the crystal which is turned off.     |
+| 908  | The machine, south of the crystal who is turned off        |
+| 909  | The machine, south of the crystal who is turned off.       |
+| 910  | The machine, south of the crystals that is turned off      |
+| 911  | The machine, south of the crystals that is turned off.     |
+| 912  | The machine, south of the crystals which is turned off     |
+| 913  | The machine, south of the crystals which is turned off.    |
+| 914  | The machine, south of the crystals who is turned off       |
+| 915  | The machine, south of the crystals who is turned off.      |
+| 916  | The machine, that is turned off, south of a crystal        |
+| 917  | The machine, that is turned off, south of crystal          |
+| 918  | The machine, that is turned off, south of crystals         |
+| 919  | The machine, that is turned off, south of the crystal      |
+| 920  | The machine, that is turned off, south of the crystals     |
+| 921  | The machine, that south of a crystal is turned off.        |
+| 922  | The machine, that south of crystal is turned off.          |
+| 923  | The machine, that south of crystals is turned off.         |
+| 924  | The machine, that south of the crystal is turned off.      |
+| 925  | The machine, that south of the crystals is turned off.     |
+| 926  | The machine, that, south of a crystal is turned off.       |
+| 927  | The machine, that, south of crystal is turned off.         |
+| 928  | The machine, that, south of crystals is turned off.        |
+| 929  | The machine, that, south of the crystal is turned off.     |
+| 930  | The machine, that, south of the crystals is turned off.    |
+| 931  | The machine, which is turned off, south of a crystal       |
+| 932  | The machine, which is turned off, south of crystal         |
+| 933  | The machine, which is turned off, south of crystals        |
+| 934  | The machine, which is turned off, south of the crystal     |
+| 935  | The machine, which is turned off, south of the crystals    |
+| 936  | The machine, which south of a crystal is turned off.       |
+| 937  | The machine, which south of crystal is turned off.         |
+| 938  | The machine, which south of crystals is turned off.        |
+| 939  | The machine, which south of the crystal is turned off.     |
+| 940  | The machine, which south of the crystals is turned off.    |
+| 941  | The machine, which, south of a crystal is turned off.      |
+| 942  | The machine, which, south of crystal is turned off.        |
+| 943  | The machine, which, south of crystals is turned off.       |
+| 944  | The machine, which, south of the crystal is turned off.    |
+| 945  | The machine, which, south of the crystals is turned off.   |
+| 946  | The machine, who is turned off, south of a crystal         |
+| 947  | The machine, who is turned off, south of crystal           |
+| 948  | The machine, who is turned off, south of crystals          |
+| 949  | The machine, who is turned off, south of the crystal       |
+| 950  | The machine, who is turned off, south of the crystals      |
+| 951  | The machine, who south of a crystal is turned off.         |
+| 952  | The machine, who south of crystal is turned off.           |
+| 953  | The machine, who south of crystals is turned off.          |
+| 954  | The machine, who south of the crystal is turned off.       |
+| 955  | The machine, who south of the crystals is turned off.      |
+| 956  | The machine, who, south of a crystal is turned off.        |
+| 957  | The machine, who, south of crystal is turned off.          |
+| 958  | The machine, who, south of crystals is turned off.         |
+| 959  | The machine, who, south of the crystal is turned off.      |
+| 960  | The machine, who, south of the crystals is turned off.     |
+| 961  | The machines south of a crystal that are turned off        |
+| 962  | The machines south of a crystal that are turned off.       |
+| 963  | The machines south of a crystal which are turned off       |
+| 964  | The machines south of a crystal which are turned off.      |
+| 965  | The machines south of a crystal who are turned off         |
+| 966  | The machines south of a crystal who are turned off.        |
+| 967  | The machines south of a crystal, that are turned off       |
+| 968  | The machines south of a crystal, that are turned off.      |
+| 969  | The machines south of a crystal, which are turned off      |
+| 970  | The machines south of a crystal, which are turned off.     |
+| 971  | The machines south of a crystal, who are turned off        |
+| 972  | The machines south of a crystal, who are turned off.       |
+| 973  | The machines south of crystal that are turned off          |
+| 974  | The machines south of crystal that are turned off.         |
+| 975  | The machines south of crystal which are turned off         |
+| 976  | The machines south of crystal which are turned off.        |
+| 977  | The machines south of crystal who are turned off           |
+| 978  | The machines south of crystal who are turned off.          |
+| 979  | The machines south of crystal, that are turned off         |
+| 980  | The machines south of crystal, that are turned off.        |
+| 981  | The machines south of crystal, which are turned off        |
+| 982  | The machines south of crystal, which are turned off.       |
+| 983  | The machines south of crystal, who are turned off          |
+| 984  | The machines south of crystal, who are turned off.         |
+| 985  | The machines south of crystals that are turned off         |
+| 986  | The machines south of crystals that are turned off.        |
+| 987  | The machines south of crystals which are turned off        |
+| 988  | The machines south of crystals which are turned off.       |
+| 989  | The machines south of crystals who are turned off          |
+| 990  | The machines south of crystals who are turned off.         |
+| 991  | The machines south of crystals, that are turned off        |
+| 992  | The machines south of crystals, that are turned off.       |
+| 993  | The machines south of crystals, which are turned off       |
+| 994  | The machines south of crystals, which are turned off.      |
+| 995  | The machines south of crystals, who are turned off         |
+| 996  | The machines south of crystals, who are turned off.        |
+| 997  | The machines south of the crystal that are turned off      |
+| 998  | The machines south of the crystal that are turned off.     |
+| 999  | The machines south of the crystal which are turned off     |
+| 1000 | The machines south of the crystal which are turned off.    |
+| 1001 | The machines south of the crystal who are turned off       |
+| 1002 | The machines south of the crystal who are turned off.      |
+| 1003 | The machines south of the crystal, that are turned off     |
+| 1004 | The machines south of the crystal, that are turned off.    |
+| 1005 | The machines south of the crystal, which are turned off    |
+| 1006 | The machines south of the crystal, which are turned off.   |
+| 1007 | The machines south of the crystal, who are turned off      |
+| 1008 | The machines south of the crystal, who are turned off.     |
+| 1009 | The machines south of the crystals that are turned off     |
+| 1010 | The machines south of the crystals that are turned off.    |
+| 1011 | The machines south of the crystals which are turned off    |
+| 1012 | The machines south of the crystals which are turned off.   |
+| 1013 | The machines south of the crystals who are turned off      |
+| 1014 | The machines south of the crystals who are turned off.     |
+| 1015 | The machines south of the crystals, that are turned off    |
+| 1016 | The machines south of the crystals, that are turned off.   |
+| 1017 | The machines south of the crystals, which are turned off   |
+| 1018 | The machines south of the crystals, which are turned off.  |
+| 1019 | The machines south of the crystals, who are turned off     |
+| 1020 | The machines south of the crystals, who are turned off.    |
+| 1021 | The machines that are turned off south of a crystal        |
+| 1022 | The machines that are turned off south of a crystal.       |
+| 1023 | The machines that are turned off south of crystal          |
+| 1024 | The machines that are turned off south of crystal.         |
+| 1025 | The machines that are turned off south of crystals         |
+| 1026 | The machines that are turned off south of crystals.        |
+| 1027 | The machines that are turned off south of the crystal      |
+| 1028 | The machines that are turned off south of the crystal.     |
+| 1029 | The machines that are turned off south of the crystals     |
+| 1030 | The machines that are turned off south of the crystals.    |
+| 1031 | The machines that are turned off, south of a crystal       |
+| 1032 | The machines that are turned off, south of crystal         |
+| 1033 | The machines that are turned off, south of crystals        |
+| 1034 | The machines that are turned off, south of the crystal     |
+| 1035 | The machines that are turned off, south of the crystals    |
+| 1036 | The machines that south of a crystal are turned off        |
+| 1037 | The machines that south of a crystal are turned off.       |
+| 1038 | The machines that south of crystal are turned off          |
+| 1039 | The machines that south of crystal are turned off.         |
+| 1040 | The machines that south of crystals are turned off         |
+| 1041 | The machines that south of crystals are turned off.        |
+| 1042 | The machines that south of the crystal are turned off      |
+| 1043 | The machines that south of the crystal are turned off.     |
+| 1044 | The machines that south of the crystals are turned off     |
+| 1045 | The machines that south of the crystals are turned off.    |
+| 1046 | The machines that, south of a crystal are turned off       |
+| 1047 | The machines that, south of a crystal are turned off.      |
+| 1048 | The machines that, south of crystal are turned off         |
+| 1049 | The machines that, south of crystal are turned off.        |
+| 1050 | The machines that, south of crystals are turned off        |
+| 1051 | The machines that, south of crystals are turned off.       |
+| 1052 | The machines that, south of the crystal are turned off     |
+| 1053 | The machines that, south of the crystal are turned off.    |
+| 1054 | The machines that, south of the crystals are turned off    |
+| 1055 | The machines that, south of the crystals are turned off.   |
+| 1056 | The machines which are turned off south of a crystal       |
+| 1057 | The machines which are turned off south of a crystal.      |
+| 1058 | The machines which are turned off south of crystal         |
+| 1059 | The machines which are turned off south of crystal.        |
+| 1060 | The machines which are turned off south of crystals        |
+| 1061 | The machines which are turned off south of crystals.       |
+| 1062 | The machines which are turned off south of the crystal     |
+| 1063 | The machines which are turned off south of the crystal.    |
+| 1064 | The machines which are turned off south of the crystals    |
+| 1065 | The machines which are turned off south of the crystals.   |
+| 1066 | The machines which are turned off, south of a crystal      |
+| 1067 | The machines which are turned off, south of crystal        |
+| 1068 | The machines which are turned off, south of crystals       |
+| 1069 | The machines which are turned off, south of the crystal    |
+| 1070 | The machines which are turned off, south of the crystals   |
+| 1071 | The machines which south of a crystal are turned off       |
+| 1072 | The machines which south of a crystal are turned off.      |
+| 1073 | The machines which south of crystal are turned off         |
+| 1074 | The machines which south of crystal are turned off.        |
+| 1075 | The machines which south of crystals are turned off        |
+| 1076 | The machines which south of crystals are turned off.       |
+| 1077 | The machines which south of the crystal are turned off     |
+| 1078 | The machines which south of the crystal are turned off.    |
+| 1079 | The machines which south of the crystals are turned off    |
+| 1080 | The machines which south of the crystals are turned off.   |
+| 1081 | The machines which, south of a crystal are turned off      |
+| 1082 | The machines which, south of a crystal are turned off.     |
+| 1083 | The machines which, south of crystal are turned off        |
+| 1084 | The machines which, south of crystal are turned off.       |
+| 1085 | The machines which, south of crystals are turned off       |
+| 1086 | The machines which, south of crystals are turned off.      |
+| 1087 | The machines which, south of the crystal are turned off    |
+| 1088 | The machines which, south of the crystal are turned off.   |
+| 1089 | The machines which, south of the crystals are turned off   |
+| 1090 | The machines which, south of the crystals are turned off.  |
+| 1091 | The machines who are turned off south of a crystal         |
+| 1092 | The machines who are turned off south of a crystal.        |
+| 1093 | The machines who are turned off south of crystal           |
+| 1094 | The machines who are turned off south of crystal.          |
+| 1095 | The machines who are turned off south of crystals          |
+| 1096 | The machines who are turned off south of crystals.         |
+| 1097 | The machines who are turned off south of the crystal       |
+| 1098 | The machines who are turned off south of the crystal.      |
+| 1099 | The machines who are turned off south of the crystals      |
+| 1100 | The machines who are turned off south of the crystals.     |
+| 1101 | The machines who are turned off, south of a crystal        |
+| 1102 | The machines who are turned off, south of crystal          |
+| 1103 | The machines who are turned off, south of crystals         |
+| 1104 | The machines who are turned off, south of the crystal      |
+| 1105 | The machines who are turned off, south of the crystals     |
+| 1106 | The machines who south of a crystal are turned off         |
+| 1107 | The machines who south of a crystal are turned off.        |
+| 1108 | The machines who south of crystal are turned off           |
+| 1109 | The machines who south of crystal are turned off.          |
+| 1110 | The machines who south of crystals are turned off          |
+| 1111 | The machines who south of crystals are turned off.         |
+| 1112 | The machines who south of the crystal are turned off       |
+| 1113 | The machines who south of the crystal are turned off.      |
+| 1114 | The machines who south of the crystals are turned off      |
+| 1115 | The machines who south of the crystals are turned off.     |
+| 1116 | The machines who, south of a crystal are turned off        |
+| 1117 | The machines who, south of a crystal are turned off.       |
+| 1118 | The machines who, south of crystal are turned off          |
+| 1119 | The machines who, south of crystal are turned off.         |
+| 1120 | The machines who, south of crystals are turned off         |
+| 1121 | The machines who, south of crystals are turned off.        |
+| 1122 | The machines who, south of the crystal are turned off      |
+| 1123 | The machines who, south of the crystal are turned off.     |
+| 1124 | The machines who, south of the crystals are turned off     |
+| 1125 | The machines who, south of the crystals are turned off.    |
+| 1126 | The machines, south of a crystal that are turned off       |
+| 1127 | The machines, south of a crystal that are turned off.      |
+| 1128 | The machines, south of a crystal which are turned off      |
+| 1129 | The machines, south of a crystal which are turned off.     |
+| 1130 | The machines, south of a crystal who are turned off        |
+| 1131 | The machines, south of a crystal who are turned off.       |
+| 1132 | The machines, south of crystal that are turned off         |
+| 1133 | The machines, south of crystal that are turned off.        |
+| 1134 | The machines, south of crystal which are turned off        |
+| 1135 | The machines, south of crystal which are turned off.       |
+| 1136 | The machines, south of crystal who are turned off          |
+| 1137 | The machines, south of crystal who are turned off.         |
+| 1138 | The machines, south of crystals that are turned off        |
+| 1139 | The machines, south of crystals that are turned off.       |
+| 1140 | The machines, south of crystals which are turned off       |
+| 1141 | The machines, south of crystals which are turned off.      |
+| 1142 | The machines, south of crystals who are turned off         |
+| 1143 | The machines, south of crystals who are turned off.        |
+| 1144 | The machines, south of the crystal that are turned off     |
+| 1145 | The machines, south of the crystal that are turned off.    |
+| 1146 | The machines, south of the crystal which are turned off    |
+| 1147 | The machines, south of the crystal which are turned off.   |
+| 1148 | The machines, south of the crystal who are turned off      |
+| 1149 | The machines, south of the crystal who are turned off.     |
+| 1150 | The machines, south of the crystals that are turned off    |
+| 1151 | The machines, south of the crystals that are turned off.   |
+| 1152 | The machines, south of the crystals which are turned off   |
+| 1153 | The machines, south of the crystals which are turned off.  |
+| 1154 | The machines, south of the crystals who are turned off     |
+| 1155 | The machines, south of the crystals who are turned off.    |
+| 1156 | The machines, that are turned off, south of a crystal      |
+| 1157 | The machines, that are turned off, south of crystal        |
+| 1158 | The machines, that are turned off, south of crystals       |
+| 1159 | The machines, that are turned off, south of the crystal    |
+| 1160 | The machines, that are turned off, south of the crystals   |
+| 1161 | The machines, that south of a crystal are turned off.      |
+| 1162 | The machines, that south of crystal are turned off.        |
+| 1163 | The machines, that south of crystals are turned off.       |
+| 1164 | The machines, that south of the crystal are turned off.    |
+| 1165 | The machines, that south of the crystals are turned off.   |
+| 1166 | The machines, that, south of a crystal are turned off.     |
+| 1167 | The machines, that, south of crystal are turned off.       |
+| 1168 | The machines, that, south of crystals are turned off.      |
+| 1169 | The machines, that, south of the crystal are turned off.   |
+| 1170 | The machines, that, south of the crystals are turned off.  |
+| 1171 | The machines, which are turned off, south of a crystal     |
+| 1172 | The machines, which are turned off, south of crystal       |
+| 1173 | The machines, which are turned off, south of crystals      |
+| 1174 | The machines, which are turned off, south of the crystal   |
+| 1175 | The machines, which are turned off, south of the crystals  |
+| 1176 | The machines, which south of a crystal are turned off.     |
+| 1177 | The machines, which south of crystal are turned off.       |
+| 1178 | The machines, which south of crystals are turned off.      |
+| 1179 | The machines, which south of the crystal are turned off.   |
+| 1180 | The machines, which south of the crystals are turned off.  |
+| 1181 | The machines, which, south of a crystal are turned off.    |
+| 1182 | The machines, which, south of crystal are turned off.      |
+| 1183 | The machines, which, south of crystals are turned off.     |
+| 1184 | The machines, which, south of the crystal are turned off.  |
+| 1185 | The machines, which, south of the crystals are turned off. |
+| 1186 | The machines, who are turned off, south of a crystal       |
+| 1187 | The machines, who are turned off, south of crystal         |
+| 1188 | The machines, who are turned off, south of crystals        |
+| 1189 | The machines, who are turned off, south of the crystal     |
+| 1190 | The machines, who are turned off, south of the crystals    |
+| 1191 | The machines, who south of a crystal are turned off.       |
+| 1192 | The machines, who south of crystal are turned off.         |
+| 1193 | The machines, who south of crystals are turned off.        |
+| 1194 | The machines, who south of the crystal are turned off.     |
+| 1195 | The machines, who south of the crystals are turned off.    |
+| 1196 | The machines, who, south of a crystal are turned off.      |
+| 1197 | The machines, who, south of crystal are turned off.        |
+| 1198 | The machines, who, south of crystals are turned off.       |
+| 1199 | The machines, who, south of the crystal are turned off.    |
+| 1200 | The machines, who, south of the crystals are turned off.   |
++------+------------------------------------------------------------+
+

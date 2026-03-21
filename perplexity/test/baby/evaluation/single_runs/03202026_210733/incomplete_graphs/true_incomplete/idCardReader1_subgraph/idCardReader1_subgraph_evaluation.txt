@@ -1,0 +1,884 @@
+GRAPH NAME: idCardReader1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 526                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 6                  |
+| Nodes Covered                   | 6                  |
+| Nodes Included                  | 5                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 1.0                |
+| Node Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+| Edge Count                      | 5                  |
+| Edges Covered                   | 4                  |
+| Edges Included                  | 4                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8                |
+| Edge Inclusion                  | 0.8                |
++---------------------------------+--------------------+
+
++---------------------------------------------------------------------------------------------------------------------+
+|                                                     GOLD OUTPUTS                                                    |
++--------------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                            | Generated? |
++--------------------------------------------------------------------------------------------------------+------------+
+| the unknown locked card reader near the driver side front door in the local front on the driver's side | False      |
++--------------------------------------------------------------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------------------------------+
+|                                              NODE METRICS                                              |
++------------------------+--------------+---------------+------------------+-----------------------------+
+| Node                   | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++------------------------+--------------+---------------+------------------+-----------------------------+
+| idCardReader1          | True         | True          | Covered          | Included                    |
+| locked                 | True         | True          | Covered          | Included                    |
+| true                   | True         | True          | Covered          | Included                    |
+| idDriversSideFrontDoor | True         | True          | Covered          | Included                    |
+| idLocalFront           | True         | True          | Covered          | Included                    |
+| idDriver               | True         | False         | Covered          | Successor of failed element |
++------------------------+--------------+---------------+------------------+-----------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                               EDGE METRICS                                                                                              |
++----------------------------------------+------------------------+------------------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+| Edge                                   | Parent                 | Child                  | Edge Covered | Edge Included | Coverage Comment                          | Inclusion Comment                 |
++----------------------------------------+------------------------+------------------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+| idCardReader1_prop_idLockedState       | idCardReader1          | locked                 | True         | True          | Covered                                   | Included                          |
+| idCardReader1_prop_idUnknownObject     | idCardReader1          | true                   | True         | True          | Covered                                   | Included                          |
+| isNear                                 | idCardReader1          | idDriversSideFrontDoor | True         | True          | Covered                                   | Included                          |
+| idDriversSideFrontDoor_prop_idLocation | idDriversSideFrontDoor | idLocalFront           | True         | True          | Covered                                   | Included                          |
+| idDriversSideFrontDoor_prop_idCarSide  | idDriversSideFrontDoor | idDriver               | False        | False         | 'idCarSide' not in lexicon's edge entries | No SEMENT generated for this edge |
++----------------------------------------+------------------------+------------------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h4118                                                                     |
+|               |   INDEX: x4116                                                                   |
+|               |   RELS: < [ _near_p LBL: h4205 ARG0: e4202 ARG1: u4203 ARG2: i4204 ]             |
+|               |           [ def_udef_a_q LBL: h4209 ARG0: x4206 RSTR: h4207 BODY: h4208 ]        |
+|               |           [ _on_p_loc LBL: h4193 ARG0: e4190 ARG1: u4191 ARG2: u4192 ]           |
+|               |           [ def_udef_a_q LBL: h4197 ARG0: x4194 RSTR: h4195 BODY: h4196 ]        |
+|               |           [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: u4186 ]                      |
+|               |           [ _front_n_1 LBL: h4189 ARG0: x4188 ]                                  |
+|               |           [ compound LBL: h4184 ARG0: e4181 [ e PROG: - ] ARG1: u4182 ARG2:      |
+|               | u4183 ]                                                                          |
+|               |           [ udef_q LBL: h4179 ARG0: x4176 RSTR: h4177 BODY: h4178 ]              |
+|               |           [ compound LBL: h4175 ARG0: e4172 [ e PROG: - ] ARG1: u4173 ARG2:      |
+|               | u4174 ]                                                                          |
+|               |           [ udef_q LBL: h4170 ARG0: x4167 RSTR: h4168 BODY: h4169 ]              |
+|               |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|               |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|               |           [ compound LBL: h4161 ARG0: e4158 [ e PROG: - ] ARG1: u4159 ARG2:      |
+|               | u4160 ]                                                                          |
+|               |           [ udef_q LBL: h4156 ARG0: x4153 RSTR: h4154 BODY: h4155 ]              |
+|               |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|               |           [ _door_n_1 LBL: h4150 ARG0: x4149 ]                                   |
+|               |           [ _un-_a_neg LBL: h4148 ARG0: i4146 ARG1: e4147 ]                      |
+|               |           [ _know_v_1 LBL: h4145 ARG0: e4142 [ e PERF: - ] ARG1: u4143 ARG2:     |
+|               | i4144 ]                                                                          |
+|               |           [ _lock_v_cause LBL: h4133 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|               | i4132 ]                                                                          |
+|               |           [ compound LBL: h4129 ARG0: e4126 [ e PROG: - ] ARG1: u4127 ARG2:      |
+|               | u4128 ]                                                                          |
+|               |           [ udef_q LBL: h4124 ARG0: x4121 RSTR: h4122 BODY: h4123 ]              |
+|               |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|               |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|               |   HCONS: < h4195 qeq h4189 h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 h4207 |
+|               | qeq h4150 h4122 qeq h4120 >                                                      |
+|               |   ICONS: < e4130 topic i4132 e4142 topic i4144 >                                 |
+|               |   EQS: < h4187 eq h4189 u4186 eq x4188 x4194 eq x4188 h4193 eq h4198 u4192 eq    |
+|               | x4194 x4167 eq x4164 h4175 eq h4171 u4174 eq x4167 h4175 eq h4163 u4173 eq x4162 |
+|               | x4176 eq x4162 h4184 eq h4180 u4183 eq x4176 x4153 eq x4151 h4161 eq h4157 u4160 |
+|               | eq x4153 h4161 eq h4150 u4159 eq x4149 h4184 eq h4150 u4182 eq x4149 h4193 eq    |
+|               | h4150 u4191 eq x4149 x4206 eq x4149 h4205 eq h4210 i4204 eq x4206 h4148 eq h4145 |
+|               | e4147 eq e4142 x4121 eq x4119 h4129 eq h4125 u4128 eq x4121 h4129 eq h4118 u4127 |
+|               | eq x4116 h4133 eq h4118 i4132 eq x4116 h4145 eq h4118 i4144 eq x4116 h4205 eq    |
+|               | h4118 u4203 eq x4116 >                                                           |
+|               |   SLOTS: < ARG1: i4117 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h4118                                                                     |
+|               |   INDEX: x4116                                                                   |
+|               |   RELS: < [ _near_p LBL: h4118 ARG0: e4202 ARG1: x4116 ARG2: x4149 ]             |
+|               |           [ def_udef_a_q LBL: h4209 ARG0: x4149 RSTR: h4207 BODY: h4208 ]        |
+|               |           [ _on_p_loc LBL: h4150 ARG0: e4190 ARG1: x4149 ARG2: x4188 ]           |
+|               |           [ def_udef_a_q LBL: h4197 ARG0: x4188 RSTR: h4195 BODY: h4196 ]        |
+|               |           [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: x4188 ]                      |
+|               |           [ _front_n_1 LBL: h4187 ARG0: x4188 ]                                  |
+|               |           [ compound LBL: h4150 ARG0: e4181 [ e PROG: - ] ARG1: x4149 ARG2:      |
+|               | x4162 ]                                                                          |
+|               |           [ udef_q LBL: h4179 ARG0: x4162 RSTR: h4177 BODY: h4178 ]              |
+|               |           [ compound LBL: h4163 ARG0: e4172 [ e PROG: - ] ARG1: x4162 ARG2:      |
+|               | x4164 ]                                                                          |
+|               |           [ udef_q LBL: h4170 ARG0: x4164 RSTR: h4168 BODY: h4169 ]              |
+|               |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|               |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|               |           [ compound LBL: h4150 ARG0: e4158 [ e PROG: - ] ARG1: x4149 ARG2:      |
+|               | x4151 ]                                                                          |
+|               |           [ udef_q LBL: h4156 ARG0: x4151 RSTR: h4154 BODY: h4155 ]              |
+|               |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|               |           [ _door_n_1 LBL: h4150 ARG0: x4149 ]                                   |
+|               |           [ _un-_a_neg LBL: h4118 ARG0: i4146 ARG1: e4142 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4118 ARG0: e4142 ARG1: u4143 ARG2: x4116 ]           |
+|               |           [ _lock_v_cause LBL: h4118 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|               | x4116 ]                                                                          |
+|               |           [ compound LBL: h4118 ARG0: e4126 [ e PROG: - ] ARG1: x4116 ARG2:      |
+|               | x4119 ]                                                                          |
+|               |           [ udef_q LBL: h4124 ARG0: x4119 RSTR: h4122 BODY: h4123 ]              |
+|               |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|               |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|               |   HCONS: < h4195 qeq h4187 h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 h4207 |
+|               | qeq h4150 h4122 qeq h4120 >                                                      |
+|               |   ICONS: < e4130 topic x4116 e4142 topic x4116 >                                 |
+|               |   SLOTS: < ARG1: i4117 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h4219                                                                     |
+|               |   INDEX: e4216                                                                   |
+|               |   RELS: < [ unknown LBL: h4215 ARG: x4116 ARG0: e4216 ]                          |
+|               |           [ def_udef_a_q LBL: h4214 ARG0: x4116 RSTR: h4212 BODY: h4213 ]        |
+|               |           [ _near_p LBL: h4118 ARG0: e4202 ARG1: x4116 ARG2: x4149 ]             |
+|               |           [ def_udef_a_q LBL: h4209 ARG0: x4149 RSTR: h4207 BODY: h4208 ]        |
+|               |           [ _on_p_loc LBL: h4150 ARG0: e4190 ARG1: x4149 ARG2: x4188 ]           |
+|               |           [ def_udef_a_q LBL: h4197 ARG0: x4188 RSTR: h4195 BODY: h4196 ]        |
+|               |           [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: x4188 ]                      |
+|               |           [ _front_n_1 LBL: h4187 ARG0: x4188 ]                                  |
+|               |           [ compound LBL: h4150 ARG0: e4181 [ e PROG: - ] ARG1: x4149 ARG2:      |
+|               | x4162 ]                                                                          |
+|               |           [ udef_q LBL: h4179 ARG0: x4162 RSTR: h4177 BODY: h4178 ]              |
+|               |           [ compound LBL: h4163 ARG0: e4172 [ e PROG: - ] ARG1: x4162 ARG2:      |
+|               | x4164 ]                                                                          |
+|               |           [ udef_q LBL: h4170 ARG0: x4164 RSTR: h4168 BODY: h4169 ]              |
+|               |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|               |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|               |           [ compound LBL: h4150 ARG0: e4158 [ e PROG: - ] ARG1: x4149 ARG2:      |
+|               | x4151 ]                                                                          |
+|               |           [ udef_q LBL: h4156 ARG0: x4151 RSTR: h4154 BODY: h4155 ]              |
+|               |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|               |           [ _door_n_1 LBL: h4150 ARG0: x4149 ]                                   |
+|               |           [ _un-_a_neg LBL: h4118 ARG0: i4146 ARG1: e4142 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4118 ARG0: e4142 ARG1: u4143 ARG2: x4116 ]           |
+|               |           [ _lock_v_cause LBL: h4118 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|               | x4116 ]                                                                          |
+|               |           [ compound LBL: h4118 ARG0: e4126 [ e PROG: - ] ARG1: x4116 ARG2:      |
+|               | x4119 ]                                                                          |
+|               |           [ udef_q LBL: h4124 ARG0: x4119 RSTR: h4122 BODY: h4123 ]              |
+|               |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|               |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|               |   HCONS: < h4195 qeq h4187 h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 h4207 |
+|               | qeq h4150 h4122 qeq h4120 h4212 qeq h4118 h4219 qeq h4215 >                      |
+|               |   ICONS: < e4130 topic x4116 e4142 topic x4116 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                               |
++------------------------+----------------------------------------------------------------------------------+
+| Node                   | Generated SEMENT                                                                 |
++------------------------+----------------------------------------------------------------------------------+
+| idCardReader1          | [ TOP: h4118                                                                     |
+|                        |   INDEX: x4116                                                                   |
+|                        |   RELS: < [ compound LBL: h4129 ARG0: e4126 [ e PROG: - ] ARG1: u4127 ARG2:      |
+|                        | u4128 ]                                                                          |
+|                        |           [ udef_q LBL: h4124 ARG0: x4121 RSTR: h4122 BODY: h4123 ]              |
+|                        |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|                        |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|                        |   HCONS: < h4122 qeq h4120 >                                                     |
+|                        |   EQS: < x4121 eq x4119 h4129 eq h4125 u4128 eq x4121 h4129 eq h4118 u4127 eq    |
+|                        | x4116 >                                                                          |
+|                        |   SLOTS: < ARG1: i4117 > ]                                                       |
++------------------------+----------------------------------------------------------------------------------+
+| locked                 | [ TOP: h4133                                                                     |
+|                        |   INDEX: e4130                                                                   |
+|                        |   RELS: < [ _lock_v_cause LBL: h4133 ARG0: e4130 ARG1: i4131 ARG2: i4132 ] >     |
+|                        |   SLOTS: < ARG1: i4131 ARG2: i4132 > ]                                           |
++------------------------+----------------------------------------------------------------------------------+
+| true                   | [ TOP: h4137                                                                     |
+|                        |   INDEX: e4134                                                                   |
+|                        |   RELS: < [ _true_a_of LBL: h4137 ARG0: e4134 ARG1: u4135 ARG2: u4136 ] >        |
+|                        |   SLOTS: < ARG1: u4135 ARG2: u4136 > ]                                           |
++------------------------+----------------------------------------------------------------------------------+
+| idDriversSideFrontDoor | [ TOP: h4150                                                                     |
+|                        |   INDEX: x4149                                                                   |
+|                        |   RELS: < [ compound LBL: h4184 ARG0: e4181 [ e PROG: - ] ARG1: u4182 ARG2:      |
+|                        | u4183 ]                                                                          |
+|                        |           [ udef_q LBL: h4179 ARG0: x4176 RSTR: h4177 BODY: h4178 ]              |
+|                        |           [ compound LBL: h4175 ARG0: e4172 [ e PROG: - ] ARG1: u4173 ARG2:      |
+|                        | u4174 ]                                                                          |
+|                        |           [ udef_q LBL: h4170 ARG0: x4167 RSTR: h4168 BODY: h4169 ]              |
+|                        |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|                        |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|                        |           [ compound LBL: h4161 ARG0: e4158 [ e PROG: - ] ARG1: u4159 ARG2:      |
+|                        | u4160 ]                                                                          |
+|                        |           [ udef_q LBL: h4156 ARG0: x4153 RSTR: h4154 BODY: h4155 ]              |
+|                        |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|                        |           [ _door_n_1 LBL: h4150 ARG0: x4149 ] >                                 |
+|                        |   HCONS: < h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 >                     |
+|                        |   EQS: < x4167 eq x4164 h4175 eq h4171 u4174 eq x4167 h4175 eq h4163 u4173 eq    |
+|                        | x4162 x4176 eq x4162 h4184 eq h4180 u4183 eq x4176 x4153 eq x4151 h4161 eq h4157 |
+|                        | u4160 eq x4153 h4161 eq h4150 u4159 eq x4149 h4184 eq h4150 u4182 eq x4149 > ]   |
++------------------------+----------------------------------------------------------------------------------+
+| idLocalFront           | [ TOP: h4189                                                                     |
+|                        |   INDEX: x4188                                                                   |
+|                        |   RELS: < [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: u4186 ]                      |
+|                        |           [ _front_n_1 LBL: h4189 ARG0: x4188 ] >                                |
+|                        |   EQS: < h4187 eq h4189 u4186 eq x4188 > ]                                       |
++------------------------+----------------------------------------------------------------------------------+
+| idDriver               | [ TOP: h4201                                                                     |
+|                        |   INDEX: x4199                                                                   |
+|                        |   RELS: < [ _driver_n_of LBL: h4201 ARG0: x4199 ARG1: i4200 ] >                  |
+|                        |   SLOTS: < ARG1: i4200 > ]                                                       |
++------------------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE SEMENTS                                                                                |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| Edge                                   | Parent                 | Child                  | Generated SEMENT                                                                 |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idCardReader1_prop_idLockedState       | idCardReader1          | locked                 | [ TOP: h4118                                                                     |
+|                                        |                        |                        |   INDEX: x4116                                                                   |
+|                                        |                        |                        |   RELS: < [ _lock_v_cause LBL: h4133 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|                                        |                        |                        | i4132 ]                                                                          |
+|                                        |                        |                        |           [ compound LBL: h4129 ARG0: e4126 [ e PROG: - ] ARG1: u4127 ARG2:      |
+|                                        |                        |                        | u4128 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4124 ARG0: x4121 RSTR: h4122 BODY: h4123 ]              |
+|                                        |                        |                        |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|                                        |                        |                        |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|                                        |                        |                        |   HCONS: < h4122 qeq h4120 >                                                     |
+|                                        |                        |                        |   ICONS: < e4130 topic i4132 >                                                   |
+|                                        |                        |                        |   EQS: < x4121 eq x4119 h4129 eq h4125 u4128 eq x4121 h4129 eq h4118 u4127 eq    |
+|                                        |                        |                        | x4116 h4133 eq h4118 i4132 eq x4116 >                                            |
+|                                        |                        |                        |   SLOTS: < ARG1: i4117 > ]                                                       |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idCardReader1_prop_idUnknownObject     | idCardReader1          | true                   | [ TOP: h4118                                                                     |
+|                                        |                        |                        |   INDEX: x4116                                                                   |
+|                                        |                        |                        |   RELS: < [ _un-_a_neg LBL: h4148 ARG0: i4146 ARG1: e4147 ]                      |
+|                                        |                        |                        |           [ _know_v_1 LBL: h4145 ARG0: e4142 [ e PERF: - ] ARG1: u4143 ARG2:     |
+|                                        |                        |                        | i4144 ]                                                                          |
+|                                        |                        |                        |           [ _lock_v_cause LBL: h4133 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|                                        |                        |                        | i4132 ]                                                                          |
+|                                        |                        |                        |           [ compound LBL: h4129 ARG0: e4126 [ e PROG: - ] ARG1: u4127 ARG2:      |
+|                                        |                        |                        | u4128 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4124 ARG0: x4121 RSTR: h4122 BODY: h4123 ]              |
+|                                        |                        |                        |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|                                        |                        |                        |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|                                        |                        |                        |   HCONS: < h4122 qeq h4120 >                                                     |
+|                                        |                        |                        |   ICONS: < e4130 topic i4132 e4142 topic i4144 >                                 |
+|                                        |                        |                        |   EQS: < h4148 eq h4145 e4147 eq e4142 x4121 eq x4119 h4129 eq h4125 u4128 eq    |
+|                                        |                        |                        | x4121 h4129 eq h4118 u4127 eq x4116 h4133 eq h4118 i4132 eq x4116 h4145 eq h4118 |
+|                                        |                        |                        | i4144 eq x4116 >                                                                 |
+|                                        |                        |                        |   SLOTS: < ARG1: i4117 > ]                                                       |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| isNear                                 | idCardReader1          | idDriversSideFrontDoor | [ TOP: h4118                                                                     |
+|                                        |                        |                        |   INDEX: x4116                                                                   |
+|                                        |                        |                        |   RELS: < [ _near_p LBL: h4205 ARG0: e4202 ARG1: u4203 ARG2: i4204 ]             |
+|                                        |                        |                        |           [ def_udef_a_q LBL: h4209 ARG0: x4206 RSTR: h4207 BODY: h4208 ]        |
+|                                        |                        |                        |           [ _on_p_loc LBL: h4193 ARG0: e4190 ARG1: u4191 ARG2: u4192 ]           |
+|                                        |                        |                        |           [ def_udef_a_q LBL: h4197 ARG0: x4194 RSTR: h4195 BODY: h4196 ]        |
+|                                        |                        |                        |           [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: u4186 ]                      |
+|                                        |                        |                        |           [ _front_n_1 LBL: h4189 ARG0: x4188 ]                                  |
+|                                        |                        |                        |           [ compound LBL: h4184 ARG0: e4181 [ e PROG: - ] ARG1: u4182 ARG2:      |
+|                                        |                        |                        | u4183 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4179 ARG0: x4176 RSTR: h4177 BODY: h4178 ]              |
+|                                        |                        |                        |           [ compound LBL: h4175 ARG0: e4172 [ e PROG: - ] ARG1: u4173 ARG2:      |
+|                                        |                        |                        | u4174 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4170 ARG0: x4167 RSTR: h4168 BODY: h4169 ]              |
+|                                        |                        |                        |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|                                        |                        |                        |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|                                        |                        |                        |           [ compound LBL: h4161 ARG0: e4158 [ e PROG: - ] ARG1: u4159 ARG2:      |
+|                                        |                        |                        | u4160 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4156 ARG0: x4153 RSTR: h4154 BODY: h4155 ]              |
+|                                        |                        |                        |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|                                        |                        |                        |           [ _door_n_1 LBL: h4150 ARG0: x4149 ]                                   |
+|                                        |                        |                        |           [ _un-_a_neg LBL: h4148 ARG0: i4146 ARG1: e4147 ]                      |
+|                                        |                        |                        |           [ _know_v_1 LBL: h4145 ARG0: e4142 [ e PERF: - ] ARG1: u4143 ARG2:     |
+|                                        |                        |                        | i4144 ]                                                                          |
+|                                        |                        |                        |           [ _lock_v_cause LBL: h4133 ARG0: e4130 [ e PERF: - ] ARG1: i4131 ARG2: |
+|                                        |                        |                        | i4132 ]                                                                          |
+|                                        |                        |                        |           [ compound LBL: h4129 ARG0: e4126 [ e PROG: - ] ARG1: u4127 ARG2:      |
+|                                        |                        |                        | u4128 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4124 ARG0: x4121 RSTR: h4122 BODY: h4123 ]              |
+|                                        |                        |                        |           [ _card_n_1 LBL: h4120 ARG0: x4119 ]                                   |
+|                                        |                        |                        |           [ _reader_n_of LBL: h4118 ARG0: x4116 ARG1: i4117 ] >                  |
+|                                        |                        |                        |   HCONS: < h4195 qeq h4189 h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 h4207 |
+|                                        |                        |                        | qeq h4150 h4122 qeq h4120 >                                                      |
+|                                        |                        |                        |   ICONS: < e4130 topic i4132 e4142 topic i4144 >                                 |
+|                                        |                        |                        |   EQS: < h4187 eq h4189 u4186 eq x4188 x4194 eq x4188 h4193 eq h4198 u4192 eq    |
+|                                        |                        |                        | x4194 x4167 eq x4164 h4175 eq h4171 u4174 eq x4167 h4175 eq h4163 u4173 eq x4162 |
+|                                        |                        |                        | x4176 eq x4162 h4184 eq h4180 u4183 eq x4176 x4153 eq x4151 h4161 eq h4157 u4160 |
+|                                        |                        |                        | eq x4153 h4161 eq h4150 u4159 eq x4149 h4184 eq h4150 u4182 eq x4149 h4193 eq    |
+|                                        |                        |                        | h4150 u4191 eq x4149 x4206 eq x4149 h4205 eq h4210 i4204 eq x4206 h4148 eq h4145 |
+|                                        |                        |                        | e4147 eq e4142 x4121 eq x4119 h4129 eq h4125 u4128 eq x4121 h4129 eq h4118 u4127 |
+|                                        |                        |                        | eq x4116 h4133 eq h4118 i4132 eq x4116 h4145 eq h4118 i4144 eq x4116 h4205 eq    |
+|                                        |                        |                        | h4118 u4203 eq x4116 >                                                           |
+|                                        |                        |                        |   SLOTS: < ARG1: i4117 > ]                                                       |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idDriversSideFrontDoor_prop_idLocation | idDriversSideFrontDoor | idLocalFront           | [ TOP: h4150                                                                     |
+|                                        |                        |                        |   INDEX: x4149                                                                   |
+|                                        |                        |                        |   RELS: < [ _on_p_loc LBL: h4193 ARG0: e4190 ARG1: u4191 ARG2: u4192 ]           |
+|                                        |                        |                        |           [ def_udef_a_q LBL: h4197 ARG0: x4194 RSTR: h4195 BODY: h4196 ]        |
+|                                        |                        |                        |           [ _local_a_1 LBL: h4187 ARG0: e4185 ARG1: u4186 ]                      |
+|                                        |                        |                        |           [ _front_n_1 LBL: h4189 ARG0: x4188 ]                                  |
+|                                        |                        |                        |           [ compound LBL: h4184 ARG0: e4181 [ e PROG: - ] ARG1: u4182 ARG2:      |
+|                                        |                        |                        | u4183 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4179 ARG0: x4176 RSTR: h4177 BODY: h4178 ]              |
+|                                        |                        |                        |           [ compound LBL: h4175 ARG0: e4172 [ e PROG: - ] ARG1: u4173 ARG2:      |
+|                                        |                        |                        | u4174 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4170 ARG0: x4167 RSTR: h4168 BODY: h4169 ]              |
+|                                        |                        |                        |           [ _driver_n_of LBL: h4166 ARG0: x4164 ARG1: i4165 ]                    |
+|                                        |                        |                        |           [ _side_n_1 LBL: h4163 ARG0: x4162 ]                                   |
+|                                        |                        |                        |           [ compound LBL: h4161 ARG0: e4158 [ e PROG: - ] ARG1: u4159 ARG2:      |
+|                                        |                        |                        | u4160 ]                                                                          |
+|                                        |                        |                        |           [ udef_q LBL: h4156 ARG0: x4153 RSTR: h4154 BODY: h4155 ]              |
+|                                        |                        |                        |           [ _front_n_1 LBL: h4152 ARG0: x4151 ]                                  |
+|                                        |                        |                        |           [ _door_n_1 LBL: h4150 ARG0: x4149 ] >                                 |
+|                                        |                        |                        |   HCONS: < h4195 qeq h4189 h4168 qeq h4166 h4177 qeq h4163 h4154 qeq h4152 >     |
+|                                        |                        |                        |   EQS: < h4187 eq h4189 u4186 eq x4188 x4194 eq x4188 h4193 eq h4198 u4192 eq    |
+|                                        |                        |                        | x4194 x4167 eq x4164 h4175 eq h4171 u4174 eq x4167 h4175 eq h4163 u4173 eq x4162 |
+|                                        |                        |                        | x4176 eq x4162 h4184 eq h4180 u4183 eq x4176 x4153 eq x4151 h4161 eq h4157 u4160 |
+|                                        |                        |                        | eq x4153 h4161 eq h4150 u4159 eq x4149 h4184 eq h4150 u4182 eq x4149 h4193 eq    |
+|                                        |                        |                        | h4150 u4191 eq x4149 > ]                                                         |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idDriversSideFrontDoor_prop_idCarSide  | idDriversSideFrontDoor | idDriver               | None                                                                             |
++----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+|                                    GENERATED ENGLISH TEXT                                    |
++-----+----------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                         |
++-----+----------------------------------------------------------------------------------------+
+| 1   | A locked cards unknown reader near a driver side front door on a local front           |
+| 2   | A locked cards unknown reader near a driver side front door on local fronts            |
+| 3   | A locked cards unknown reader near a driver side front door on the local front         |
+| 4   | A locked cards unknown reader near a driver side front door on the local fronts        |
+| 5   | A locked cards unknown reader near a driver side front door on the local fronts.       |
+| 6   | A locked cards unknown reader near a front driver side door on a local front           |
+| 7   | A locked cards unknown reader near a front driver side door on a local front.          |
+| 8   | A locked cards unknown reader near a front driver side door on local fronts            |
+| 9   | A locked cards unknown reader near a front driver side door on local fronts.           |
+| 10  | A locked cards unknown reader near a front driver side door on the local front         |
+| 11  | A locked cards unknown reader near a front driver side door on the local fronts        |
+| 12  | A locked cards unknown reader near a front driver side door on the local fronts.       |
+| 13  | A locked cards unknown reader near front driver side doors on a local front            |
+| 14  | A locked cards unknown reader near front driver side doors on local fronts             |
+| 15  | A locked cards unknown reader near front driver side doors on the local front          |
+| 16  | A locked cards unknown reader near front driver side doors on the local fronts         |
+| 17  | A locked cards unknown reader near the driver side front door on a local front         |
+| 18  | A locked cards unknown reader near the driver side front door on the local front       |
+| 19  | A locked cards unknown reader near the driver side front door on the local fronts      |
+| 20  | A locked cards unknown reader near the front driver side door on a local front         |
+| 21  | A locked cards unknown reader near the front driver side door on local fronts          |
+| 22  | A locked cards unknown reader near the front driver side door on the local front       |
+| 23  | A locked cards unknown reader near the front driver side door on the local fronts      |
+| 24  | A locked cards unknown reader near the front driver side door on the local fronts.     |
+| 25  | A locked cards unknown reader near the front driver side doors on a local front        |
+| 26  | A locked cards unknown reader near the front driver side doors on local fronts         |
+| 27  | A locked cards unknown reader near the front driver side doors on local fronts.        |
+| 28  | A locked cards unknown reader near the front driver side doors on the local front      |
+| 29  | A locked cards unknown reader near the front driver side doors on the local fronts     |
+| 30  | A locked cards unknown reader near the front driver side doors on the local fronts.    |
+| 31  | A locked unknown card reader near a driver side front door on a local front            |
+| 32  | A locked unknown card reader near a driver side front door on a local front.           |
+| 33  | A locked unknown card reader near a driver side front door on local fronts             |
+| 34  | A locked unknown card reader near a driver side front door on local fronts.            |
+| 35  | A locked unknown card reader near a driver side front door on the local front          |
+| 36  | A locked unknown card reader near a driver side front door on the local front.         |
+| 37  | A locked unknown card reader near a driver side front door on the local fronts         |
+| 38  | A locked unknown card reader near a driver side front door on the local fronts.        |
+| 39  | A locked unknown card reader near a front driver side door on a local front            |
+| 40  | A locked unknown card reader near a front driver side door on a local front.           |
+| 41  | A locked unknown card reader near a front driver side door on local fronts             |
+| 42  | A locked unknown card reader near a front driver side door on local fronts.            |
+| 43  | A locked unknown card reader near a front driver side door on the local front          |
+| 44  | A locked unknown card reader near a front driver side door on the local front.         |
+| 45  | A locked unknown card reader near a front driver side door on the local fronts         |
+| 46  | A locked unknown card reader near a front driver side door on the local fronts.        |
+| 47  | A locked unknown card reader near driver side front doors on a local front             |
+| 48  | A locked unknown card reader near driver side front doors on local fronts              |
+| 49  | A locked unknown card reader near driver side front doors on the local front           |
+| 50  | A locked unknown card reader near driver side front doors on the local fronts          |
+| 51  | A locked unknown card reader near driver side front doors, on a local front            |
+| 52  | A locked unknown card reader near driver side front doors, on the local front          |
+| 53  | A locked unknown card reader near driver side front doors, on the local fronts         |
+| 54  | A locked unknown card reader near front driver side doors on a local front             |
+| 55  | A locked unknown card reader near front driver side doors on a local front.            |
+| 56  | A locked unknown card reader near front driver side doors on local fronts              |
+| 57  | A locked unknown card reader near front driver side doors on local fronts.             |
+| 58  | A locked unknown card reader near front driver side doors on the local front           |
+| 59  | A locked unknown card reader near front driver side doors on the local front.          |
+| 60  | A locked unknown card reader near front driver side doors on the local fronts          |
+| 61  | A locked unknown card reader near front driver side doors on the local fronts.         |
+| 62  | A locked unknown card reader near front driver side doors, on a local front            |
+| 63  | A locked unknown card reader near front driver side doors, on the local front          |
+| 64  | A locked unknown card reader near front driver side doors, on the local fronts         |
+| 65  | A locked unknown card reader near the driver side front door on a local front          |
+| 66  | A locked unknown card reader near the driver side front door on a local front.         |
+| 67  | A locked unknown card reader near the driver side front door on local fronts           |
+| 68  | A locked unknown card reader near the driver side front door on local fronts.          |
+| 69  | A locked unknown card reader near the driver side front door on the local front        |
+| 70  | A locked unknown card reader near the driver side front door on the local front.       |
+| 71  | A locked unknown card reader near the driver side front door on the local fronts       |
+| 72  | A locked unknown card reader near the driver side front door on the local fronts.      |
+| 73  | A locked unknown card reader near the driver side front doors on a local front         |
+| 74  | A locked unknown card reader near the driver side front doors on local fronts          |
+| 75  | A locked unknown card reader near the driver side front doors on the local front       |
+| 76  | A locked unknown card reader near the driver side front doors on the local fronts      |
+| 77  | A locked unknown card reader near the driver side front doors on the local fronts.     |
+| 78  | A locked unknown card reader near the driver side front doors, on the local fronts     |
+| 79  | A locked unknown card reader near the front driver side door on a local front          |
+| 80  | A locked unknown card reader near the front driver side door on a local front.         |
+| 81  | A locked unknown card reader near the front driver side door on local fronts           |
+| 82  | A locked unknown card reader near the front driver side door on local fronts.          |
+| 83  | A locked unknown card reader near the front driver side door on the local front        |
+| 84  | A locked unknown card reader near the front driver side door on the local front.       |
+| 85  | A locked unknown card reader near the front driver side door on the local fronts       |
+| 86  | A locked unknown card reader near the front driver side door on the local fronts.      |
+| 87  | A locked unknown card reader near the front driver side door, on the local fronts      |
+| 88  | A locked unknown card reader near the front driver side doors on a local front         |
+| 89  | A locked unknown card reader near the front driver side doors on a local front.        |
+| 90  | A locked unknown card reader near the front driver side doors on local fronts          |
+| 91  | A locked unknown card reader near the front driver side doors on local fronts.         |
+| 92  | A locked unknown card reader near the front driver side doors on the local front       |
+| 93  | A locked unknown card reader near the front driver side doors on the local front.      |
+| 94  | A locked unknown card reader near the front driver side doors on the local fronts      |
+| 95  | A locked unknown card reader near the front driver side doors on the local fronts.     |
+| 96  | A locked unknown card reader near the front driver side doors, on the local fronts     |
+| 97  | An unknown cards locked reader near a front driver side door on a local front          |
+| 98  | An unknown cards locked reader near a front driver side door on the local front        |
+| 99  | An unknown cards locked reader near a front driver side door on the local fronts       |
+| 100 | An unknown cards locked reader near the front driver side doors on a local front       |
+| 101 | An unknown cards locked reader near the front driver side doors on the local fronts    |
+| 102 | An unknown locked card reader near a driver side front door on a local front           |
+| 103 | An unknown locked card reader near a driver side front door on local fronts            |
+| 104 | An unknown locked card reader near a driver side front door on local fronts.           |
+| 105 | An unknown locked card reader near a driver side front door on the local front         |
+| 106 | An unknown locked card reader near a driver side front door on the local fronts        |
+| 107 | An unknown locked card reader near a driver side front door on the local fronts.       |
+| 108 | An unknown locked card reader near a front driver side door on a local front           |
+| 109 | An unknown locked card reader near a front driver side door on a local front.          |
+| 110 | An unknown locked card reader near a front driver side door on local fronts            |
+| 111 | An unknown locked card reader near a front driver side door on local fronts.           |
+| 112 | An unknown locked card reader near a front driver side door on the local front         |
+| 113 | An unknown locked card reader near a front driver side door on the local front.        |
+| 114 | An unknown locked card reader near a front driver side door on the local fronts        |
+| 115 | An unknown locked card reader near a front driver side door on the local fronts.       |
+| 116 | An unknown locked card reader near front driver side doors on a local front            |
+| 117 | An unknown locked card reader near front driver side doors on local fronts             |
+| 118 | An unknown locked card reader near front driver side doors on the local front          |
+| 119 | An unknown locked card reader near front driver side doors on the local fronts         |
+| 120 | An unknown locked card reader near front driver side doors on the local fronts.        |
+| 121 | An unknown locked card reader near the driver side front door on a local front         |
+| 122 | An unknown locked card reader near the driver side front door on local fronts          |
+| 123 | An unknown locked card reader near the driver side front door on the local front       |
+| 124 | An unknown locked card reader near the driver side front door on the local fronts      |
+| 125 | An unknown locked card reader near the driver side front door on the local fronts.     |
+| 126 | An unknown locked card reader near the front driver side door on a local front         |
+| 127 | An unknown locked card reader near the front driver side door on a local front.        |
+| 128 | An unknown locked card reader near the front driver side door on local fronts          |
+| 129 | An unknown locked card reader near the front driver side door on local fronts.         |
+| 130 | An unknown locked card reader near the front driver side door on the local front       |
+| 131 | An unknown locked card reader near the front driver side door on the local fronts      |
+| 132 | An unknown locked card reader near the front driver side door on the local fronts.     |
+| 133 | An unknown locked card reader near the front driver side doors on a local front        |
+| 134 | An unknown locked card reader near the front driver side doors on a local front.       |
+| 135 | An unknown locked card reader near the front driver side doors on local fronts         |
+| 136 | An unknown locked card reader near the front driver side doors on local fronts.        |
+| 137 | An unknown locked card reader near the front driver side doors on the local front      |
+| 138 | An unknown locked card reader near the front driver side doors on the local fronts     |
+| 139 | An unknown locked card reader near the front driver side doors on the local fronts.    |
+| 140 | Locked cards unknown reader near a front driver side door on a local front             |
+| 141 | Locked cards unknown reader near a front driver side door on the local front           |
+| 142 | Locked cards unknown reader near a front driver side door on the local fronts          |
+| 143 | Locked cards unknown reader near the front driver side doors on a local front          |
+| 144 | Locked cards unknown reader near the front driver side doors on the local fronts       |
+| 145 | Locked cards unknown readers near a driver side front door on a local front            |
+| 146 | Locked cards unknown readers near a front driver side door on a local front            |
+| 147 | Locked cards unknown readers near a front driver side door on local fronts             |
+| 148 | Locked cards unknown readers near a front driver side door on the local front          |
+| 149 | Locked cards unknown readers near a front driver side door on the local fronts         |
+| 150 | Locked cards unknown readers near a front driver side door on the local fronts.        |
+| 151 | Locked cards unknown readers near the front driver side door on a local front          |
+| 152 | Locked cards unknown readers near the front driver side door on the local fronts       |
+| 153 | Locked cards unknown readers near the front driver side doors on a local front         |
+| 154 | Locked cards unknown readers near the front driver side doors on the local front       |
+| 155 | Locked cards unknown readers near the front driver side doors on the local fronts      |
+| 156 | Locked unknown card reader near a driver side front door on a local front              |
+| 157 | Locked unknown card reader near a driver side front door on local fronts               |
+| 158 | Locked unknown card reader near a driver side front door on the local front            |
+| 159 | Locked unknown card reader near a driver side front door on the local fronts           |
+| 160 | Locked unknown card reader near a driver side front door on the local fronts.          |
+| 161 | Locked unknown card reader near a front driver side door on a local front              |
+| 162 | Locked unknown card reader near a front driver side door on a local front.             |
+| 163 | Locked unknown card reader near a front driver side door on local fronts               |
+| 164 | Locked unknown card reader near a front driver side door on local fronts.              |
+| 165 | Locked unknown card reader near a front driver side door on the local front            |
+| 166 | Locked unknown card reader near a front driver side door on the local front.           |
+| 167 | Locked unknown card reader near a front driver side door on the local fronts           |
+| 168 | Locked unknown card reader near a front driver side door on the local fronts.          |
+| 169 | Locked unknown card reader near front driver side doors on a local front               |
+| 170 | Locked unknown card reader near front driver side doors on local fronts                |
+| 171 | Locked unknown card reader near front driver side doors on the local front             |
+| 172 | Locked unknown card reader near front driver side doors on the local fronts            |
+| 173 | Locked unknown card reader near the driver side front door on a local front            |
+| 174 | Locked unknown card reader near the driver side front door on local fronts             |
+| 175 | Locked unknown card reader near the driver side front door on the local front          |
+| 176 | Locked unknown card reader near the driver side front door on the local fronts         |
+| 177 | Locked unknown card reader near the driver side front door on the local fronts.        |
+| 178 | Locked unknown card reader near the front driver side door on a local front            |
+| 179 | Locked unknown card reader near the front driver side door on local fronts             |
+| 180 | Locked unknown card reader near the front driver side door on local fronts.            |
+| 181 | Locked unknown card reader near the front driver side door on the local front          |
+| 182 | Locked unknown card reader near the front driver side door on the local fronts         |
+| 183 | Locked unknown card reader near the front driver side door on the local fronts.        |
+| 184 | Locked unknown card reader near the front driver side doors on a local front           |
+| 185 | Locked unknown card reader near the front driver side doors on a local front.          |
+| 186 | Locked unknown card reader near the front driver side doors on local fronts            |
+| 187 | Locked unknown card reader near the front driver side doors on local fronts.           |
+| 188 | Locked unknown card reader near the front driver side doors on the local front         |
+| 189 | Locked unknown card reader near the front driver side doors on the local fronts        |
+| 190 | Locked unknown card reader near the front driver side doors on the local fronts.       |
+| 191 | Locked unknown card readers near a driver side front door on a local front             |
+| 192 | Locked unknown card readers near a driver side front door on a local front.            |
+| 193 | Locked unknown card readers near a driver side front door on local fronts              |
+| 194 | Locked unknown card readers near a driver side front door on local fronts.             |
+| 195 | Locked unknown card readers near a driver side front door on the local front           |
+| 196 | Locked unknown card readers near a driver side front door on the local fronts          |
+| 197 | Locked unknown card readers near a driver side front door on the local fronts.         |
+| 198 | Locked unknown card readers near a front driver side door on a local front             |
+| 199 | Locked unknown card readers near a front driver side door on a local front.            |
+| 200 | Locked unknown card readers near a front driver side door on local fronts              |
+| 201 | Locked unknown card readers near a front driver side door on local fronts.             |
+| 202 | Locked unknown card readers near a front driver side door on the local front           |
+| 203 | Locked unknown card readers near a front driver side door on the local front.          |
+| 204 | Locked unknown card readers near a front driver side door on the local fronts          |
+| 205 | Locked unknown card readers near a front driver side door on the local fronts.         |
+| 206 | Locked unknown card readers near front driver side doors on a local front              |
+| 207 | Locked unknown card readers near front driver side doors on local fronts               |
+| 208 | Locked unknown card readers near front driver side doors on the local front            |
+| 209 | Locked unknown card readers near front driver side doors on the local fronts           |
+| 210 | Locked unknown card readers near front driver side doors on the local fronts.          |
+| 211 | Locked unknown card readers near the driver side front door on a local front           |
+| 212 | Locked unknown card readers near the driver side front door on local fronts            |
+| 213 | Locked unknown card readers near the driver side front door on the local front         |
+| 214 | Locked unknown card readers near the driver side front door on the local fronts        |
+| 215 | Locked unknown card readers near the driver side front door on the local fronts.       |
+| 216 | Locked unknown card readers near the driver side front doors on a local front          |
+| 217 | Locked unknown card readers near the driver side front doors on the local fronts       |
+| 218 | Locked unknown card readers near the front driver side door on a local front           |
+| 219 | Locked unknown card readers near the front driver side door on a local front.          |
+| 220 | Locked unknown card readers near the front driver side door on local fronts            |
+| 221 | Locked unknown card readers near the front driver side door on local fronts.           |
+| 222 | Locked unknown card readers near the front driver side door on the local front         |
+| 223 | Locked unknown card readers near the front driver side door on the local fronts        |
+| 224 | Locked unknown card readers near the front driver side door on the local fronts.       |
+| 225 | Locked unknown card readers near the front driver side doors on a local front          |
+| 226 | Locked unknown card readers near the front driver side doors on a local front.         |
+| 227 | Locked unknown card readers near the front driver side doors on local fronts           |
+| 228 | Locked unknown card readers near the front driver side doors on local fronts.          |
+| 229 | Locked unknown card readers near the front driver side doors on the local front        |
+| 230 | Locked unknown card readers near the front driver side doors on the local front.       |
+| 231 | Locked unknown card readers near the front driver side doors on the local fronts       |
+| 232 | Locked unknown card readers near the front driver side doors on the local fronts.      |
+| 233 | The cards locked unknown readers near a front driver side door on a local front        |
+| 234 | The locked cards unknown reader near a driver side front door on a local front         |
+| 235 | The locked cards unknown reader near a driver side front door on local fronts          |
+| 236 | The locked cards unknown reader near a driver side front door on the local front       |
+| 237 | The locked cards unknown reader near a driver side front door on the local fronts      |
+| 238 | The locked cards unknown reader near a driver side front door on the local fronts.     |
+| 239 | The locked cards unknown reader near a front driver side door on a local front         |
+| 240 | The locked cards unknown reader near a front driver side door on a local front.        |
+| 241 | The locked cards unknown reader near a front driver side door on local fronts          |
+| 242 | The locked cards unknown reader near a front driver side door on local fronts.         |
+| 243 | The locked cards unknown reader near a front driver side door on the local front       |
+| 244 | The locked cards unknown reader near a front driver side door on the local fronts      |
+| 245 | The locked cards unknown reader near a front driver side door on the local fronts.     |
+| 246 | The locked cards unknown reader near front driver side doors on a local front          |
+| 247 | The locked cards unknown reader near front driver side doors on the local fronts       |
+| 248 | The locked cards unknown reader near the driver side front door on a local front       |
+| 249 | The locked cards unknown reader near the driver side front door on the local front     |
+| 250 | The locked cards unknown reader near the driver side front door on the local fronts    |
+| 251 | The locked cards unknown reader near the front driver side door on a local front       |
+| 252 | The locked cards unknown reader near the front driver side door on local fronts        |
+| 253 | The locked cards unknown reader near the front driver side door on the local front     |
+| 254 | The locked cards unknown reader near the front driver side door on the local fronts    |
+| 255 | The locked cards unknown reader near the front driver side door on the local fronts.   |
+| 256 | The locked cards unknown reader near the front driver side doors on a local front      |
+| 257 | The locked cards unknown reader near the front driver side doors on local fronts       |
+| 258 | The locked cards unknown reader near the front driver side doors on local fronts.      |
+| 259 | The locked cards unknown reader near the front driver side doors on the local front    |
+| 260 | The locked cards unknown reader near the front driver side doors on the local fronts   |
+| 261 | The locked cards unknown reader near the front driver side doors on the local fronts.  |
+| 262 | The locked cards unknown readers near a driver side front door on a local front        |
+| 263 | The locked cards unknown readers near a driver side front door on the local fronts     |
+| 264 | The locked cards unknown readers near a front driver side door on a local front        |
+| 265 | The locked cards unknown readers near a front driver side door on local fronts         |
+| 266 | The locked cards unknown readers near a front driver side door on the local front      |
+| 267 | The locked cards unknown readers near a front driver side door on the local fronts     |
+| 268 | The locked cards unknown readers near a front driver side door on the local fronts.    |
+| 269 | The locked cards unknown readers near the front driver side door on a local front      |
+| 270 | The locked cards unknown readers near the front driver side door on the local front    |
+| 271 | The locked cards unknown readers near the front driver side door on the local fronts   |
+| 272 | The locked cards unknown readers near the front driver side doors on a local front     |
+| 273 | The locked cards unknown readers near the front driver side doors on local fronts      |
+| 274 | The locked cards unknown readers near the front driver side doors on the local front   |
+| 275 | The locked cards unknown readers near the front driver side doors on the local fronts  |
+| 276 | The locked cards unknown readers near the front driver side doors on the local fronts. |
+| 277 | The locked unknown card reader near a driver side front door on a local front          |
+| 278 | The locked unknown card reader near a driver side front door on a local front.         |
+| 279 | The locked unknown card reader near a driver side front door on local fronts           |
+| 280 | The locked unknown card reader near a driver side front door on local fronts.          |
+| 281 | The locked unknown card reader near a driver side front door on the local front        |
+| 282 | The locked unknown card reader near a driver side front door on the local front.       |
+| 283 | The locked unknown card reader near a driver side front door on the local fronts       |
+| 284 | The locked unknown card reader near a driver side front door on the local fronts.      |
+| 285 | The locked unknown card reader near a front driver side door on a local front          |
+| 286 | The locked unknown card reader near a front driver side door on a local front.         |
+| 287 | The locked unknown card reader near a front driver side door on local fronts           |
+| 288 | The locked unknown card reader near a front driver side door on local fronts.          |
+| 289 | The locked unknown card reader near a front driver side door on the local front        |
+| 290 | The locked unknown card reader near a front driver side door on the local front.       |
+| 291 | The locked unknown card reader near a front driver side door on the local fronts       |
+| 292 | The locked unknown card reader near a front driver side door on the local fronts.      |
+| 293 | The locked unknown card reader near driver side front doors on a local front           |
+| 294 | The locked unknown card reader near driver side front doors on local fronts            |
+| 295 | The locked unknown card reader near driver side front doors on the local front         |
+| 296 | The locked unknown card reader near driver side front doors on the local fronts        |
+| 297 | The locked unknown card reader near driver side front doors, on a local front          |
+| 298 | The locked unknown card reader near driver side front doors, on the local front        |
+| 299 | The locked unknown card reader near driver side front doors, on the local fronts       |
+| 300 | The locked unknown card reader near front driver side doors on a local front           |
+| 301 | The locked unknown card reader near front driver side doors on a local front.          |
+| 302 | The locked unknown card reader near front driver side doors on local fronts            |
+| 303 | The locked unknown card reader near front driver side doors on local fronts.           |
+| 304 | The locked unknown card reader near front driver side doors on the local front         |
+| 305 | The locked unknown card reader near front driver side doors on the local front.        |
+| 306 | The locked unknown card reader near front driver side doors on the local fronts        |
+| 307 | The locked unknown card reader near front driver side doors on the local fronts.       |
+| 308 | The locked unknown card reader near front driver side doors, on a local front          |
+| 309 | The locked unknown card reader near front driver side doors, on the local front        |
+| 310 | The locked unknown card reader near front driver side doors, on the local fronts       |
+| 311 | The locked unknown card reader near the driver side front door on a local front        |
+| 312 | The locked unknown card reader near the driver side front door on a local front.       |
+| 313 | The locked unknown card reader near the driver side front door on local fronts         |
+| 314 | The locked unknown card reader near the driver side front door on local fronts.        |
+| 315 | The locked unknown card reader near the driver side front door on the local front      |
+| 316 | The locked unknown card reader near the driver side front door on the local front.     |
+| 317 | The locked unknown card reader near the driver side front door on the local fronts     |
+| 318 | The locked unknown card reader near the driver side front door on the local fronts.    |
+| 319 | The locked unknown card reader near the driver side front doors on a local front       |
+| 320 | The locked unknown card reader near the driver side front doors on local fronts        |
+| 321 | The locked unknown card reader near the driver side front doors on the local front     |
+| 322 | The locked unknown card reader near the driver side front doors on the local fronts    |
+| 323 | The locked unknown card reader near the driver side front doors on the local fronts.   |
+| 324 | The locked unknown card reader near the front driver side door on a local front        |
+| 325 | The locked unknown card reader near the front driver side door on a local front.       |
+| 326 | The locked unknown card reader near the front driver side door on local fronts         |
+| 327 | The locked unknown card reader near the front driver side door on local fronts.        |
+| 328 | The locked unknown card reader near the front driver side door on the local front      |
+| 329 | The locked unknown card reader near the front driver side door on the local front.     |
+| 330 | The locked unknown card reader near the front driver side door on the local fronts     |
+| 331 | The locked unknown card reader near the front driver side door on the local fronts.    |
+| 332 | The locked unknown card reader near the front driver side door, on the local fronts    |
+| 333 | The locked unknown card reader near the front driver side doors on a local front       |
+| 334 | The locked unknown card reader near the front driver side doors on a local front.      |
+| 335 | The locked unknown card reader near the front driver side doors on local fronts        |
+| 336 | The locked unknown card reader near the front driver side doors on local fronts.       |
+| 337 | The locked unknown card reader near the front driver side doors on the local front     |
+| 338 | The locked unknown card reader near the front driver side doors on the local front.    |
+| 339 | The locked unknown card reader near the front driver side doors on the local fronts    |
+| 340 | The locked unknown card reader near the front driver side doors on the local fronts.   |
+| 341 | The locked unknown card reader near the front driver side doors, on the local fronts   |
+| 342 | The locked unknown card readers near a driver side front door on a local front         |
+| 343 | The locked unknown card readers near a driver side front door on a local front.        |
+| 344 | The locked unknown card readers near a driver side front door on local fronts          |
+| 345 | The locked unknown card readers near a driver side front door on local fronts.         |
+| 346 | The locked unknown card readers near a driver side front door on the local front       |
+| 347 | The locked unknown card readers near a driver side front door on the local front.      |
+| 348 | The locked unknown card readers near a driver side front door on the local fronts      |
+| 349 | The locked unknown card readers near a driver side front door on the local fronts.     |
+| 350 | The locked unknown card readers near a front driver side door on a local front         |
+| 351 | The locked unknown card readers near a front driver side door on a local front.        |
+| 352 | The locked unknown card readers near a front driver side door on local fronts          |
+| 353 | The locked unknown card readers near a front driver side door on local fronts.         |
+| 354 | The locked unknown card readers near a front driver side door on the local front       |
+| 355 | The locked unknown card readers near a front driver side door on the local front.      |
+| 356 | The locked unknown card readers near a front driver side door on the local fronts      |
+| 357 | The locked unknown card readers near a front driver side door on the local fronts.     |
+| 358 | The locked unknown card readers near driver side front doors on a local front          |
+| 359 | The locked unknown card readers near front driver side doors on a local front          |
+| 360 | The locked unknown card readers near front driver side doors on a local front.         |
+| 361 | The locked unknown card readers near front driver side doors on local fronts           |
+| 362 | The locked unknown card readers near front driver side doors on local fronts.          |
+| 363 | The locked unknown card readers near front driver side doors on the local front        |
+| 364 | The locked unknown card readers near front driver side doors on the local fronts       |
+| 365 | The locked unknown card readers near front driver side doors on the local fronts.      |
+| 366 | The locked unknown card readers near the driver side front door on a local front       |
+| 367 | The locked unknown card readers near the driver side front door on a local front.      |
+| 368 | The locked unknown card readers near the driver side front door on local fronts        |
+| 369 | The locked unknown card readers near the driver side front door on local fronts.       |
+| 370 | The locked unknown card readers near the driver side front door on the local front     |
+| 371 | The locked unknown card readers near the driver side front door on the local fronts    |
+| 372 | The locked unknown card readers near the driver side front door on the local fronts.   |
+| 373 | The locked unknown card readers near the driver side front doors on a local front      |
+| 374 | The locked unknown card readers near the driver side front doors on local fronts       |
+| 375 | The locked unknown card readers near the driver side front doors on the local front    |
+| 376 | The locked unknown card readers near the driver side front doors on the local fronts   |
+| 377 | The locked unknown card readers near the driver side front doors on the local fronts.  |
+| 378 | The locked unknown card readers near the front driver side door on a local front       |
+| 379 | The locked unknown card readers near the front driver side door on a local front.      |
+| 380 | The locked unknown card readers near the front driver side door on local fronts        |
+| 381 | The locked unknown card readers near the front driver side door on local fronts.       |
+| 382 | The locked unknown card readers near the front driver side door on the local front     |
+| 383 | The locked unknown card readers near the front driver side door on the local front.    |
+| 384 | The locked unknown card readers near the front driver side door on the local fronts    |
+| 385 | The locked unknown card readers near the front driver side door on the local fronts.   |
+| 386 | The locked unknown card readers near the front driver side doors on a local front      |
+| 387 | The locked unknown card readers near the front driver side doors on a local front.     |
+| 388 | The locked unknown card readers near the front driver side doors on local fronts       |
+| 389 | The locked unknown card readers near the front driver side doors on local fronts.      |
+| 390 | The locked unknown card readers near the front driver side doors on the local front    |
+| 391 | The locked unknown card readers near the front driver side doors on the local front.   |
+| 392 | The locked unknown card readers near the front driver side doors on the local fronts   |
+| 393 | The locked unknown card readers near the front driver side doors on the local fronts.  |
+| 394 | The unknown cards locked reader near a front driver side door on a local front         |
+| 395 | The unknown cards locked reader near a front driver side door on the local front       |
+| 396 | The unknown cards locked reader near a front driver side door on the local fronts      |
+| 397 | The unknown cards locked reader near the front driver side door on a local front       |
+| 398 | The unknown cards locked reader near the front driver side doors on a local front      |
+| 399 | The unknown cards locked reader near the front driver side doors on the local front    |
+| 400 | The unknown cards locked reader near the front driver side doors on the local fronts   |
+| 401 | The unknown locked card reader near a driver side front door on a local front          |
+| 402 | The unknown locked card reader near a driver side front door on local fronts           |
+| 403 | The unknown locked card reader near a driver side front door on local fronts.          |
+| 404 | The unknown locked card reader near a driver side front door on the local front        |
+| 405 | The unknown locked card reader near a driver side front door on the local fronts       |
+| 406 | The unknown locked card reader near a driver side front door on the local fronts.      |
+| 407 | The unknown locked card reader near a front driver side door on a local front          |
+| 408 | The unknown locked card reader near a front driver side door on a local front.         |
+| 409 | The unknown locked card reader near a front driver side door on local fronts           |
+| 410 | The unknown locked card reader near a front driver side door on local fronts.          |
+| 411 | The unknown locked card reader near a front driver side door on the local front        |
+| 412 | The unknown locked card reader near a front driver side door on the local front.       |
+| 413 | The unknown locked card reader near a front driver side door on the local fronts       |
+| 414 | The unknown locked card reader near a front driver side door on the local fronts.      |
+| 415 | The unknown locked card reader near front driver side doors on a local front           |
+| 416 | The unknown locked card reader near front driver side doors on local fronts            |
+| 417 | The unknown locked card reader near front driver side doors on the local front         |
+| 418 | The unknown locked card reader near front driver side doors on the local fronts        |
+| 419 | The unknown locked card reader near front driver side doors on the local fronts.       |
+| 420 | The unknown locked card reader near the driver side front door on a local front        |
+| 421 | The unknown locked card reader near the driver side front door on local fronts         |
+| 422 | The unknown locked card reader near the driver side front door on the local front      |
+| 423 | The unknown locked card reader near the driver side front door on the local fronts     |
+| 424 | The unknown locked card reader near the driver side front door on the local fronts.    |
+| 425 | The unknown locked card reader near the driver side front doors on a local front       |
+| 426 | The unknown locked card reader near the front driver side door on a local front        |
+| 427 | The unknown locked card reader near the front driver side door on a local front.       |
+| 428 | The unknown locked card reader near the front driver side door on local fronts         |
+| 429 | The unknown locked card reader near the front driver side door on local fronts.        |
+| 430 | The unknown locked card reader near the front driver side door on the local front      |
+| 431 | The unknown locked card reader near the front driver side door on the local fronts     |
+| 432 | The unknown locked card reader near the front driver side door on the local fronts.    |
+| 433 | The unknown locked card reader near the front driver side doors on a local front       |
+| 434 | The unknown locked card reader near the front driver side doors on a local front.      |
+| 435 | The unknown locked card reader near the front driver side doors on local fronts        |
+| 436 | The unknown locked card reader near the front driver side doors on local fronts.       |
+| 437 | The unknown locked card reader near the front driver side doors on the local front     |
+| 438 | The unknown locked card reader near the front driver side doors on the local front.    |
+| 439 | The unknown locked card reader near the front driver side doors on the local fronts    |
+| 440 | The unknown locked card reader near the front driver side doors on the local fronts.   |
+| 441 | The unknown locked card readers near a driver side front door on a local front         |
+| 442 | The unknown locked card readers near a driver side front door on local fronts          |
+| 443 | The unknown locked card readers near a driver side front door on the local front       |
+| 444 | The unknown locked card readers near a driver side front door on the local fronts      |
+| 445 | The unknown locked card readers near a driver side front door on the local fronts.     |
+| 446 | The unknown locked card readers near a front driver side door on a local front         |
+| 447 | The unknown locked card readers near a front driver side door on a local front.        |
+| 448 | The unknown locked card readers near a front driver side door on local fronts          |
+| 449 | The unknown locked card readers near a front driver side door on local fronts.         |
+| 450 | The unknown locked card readers near a front driver side door on the local front       |
+| 451 | The unknown locked card readers near a front driver side door on the local fronts      |
+| 452 | The unknown locked card readers near a front driver side door on the local fronts.     |
+| 453 | The unknown locked card readers near front driver side doors on a local front          |
+| 454 | The unknown locked card readers near front driver side doors on local fronts           |
+| 455 | The unknown locked card readers near front driver side doors on the local front        |
+| 456 | The unknown locked card readers near front driver side doors on the local fronts       |
+| 457 | The unknown locked card readers near the driver side front door on a local front       |
+| 458 | The unknown locked card readers near the driver side front door on the local front     |
+| 459 | The unknown locked card readers near the driver side front door on the local fronts    |
+| 460 | The unknown locked card readers near the front driver side door on a local front       |
+| 461 | The unknown locked card readers near the front driver side door on local fronts        |
+| 462 | The unknown locked card readers near the front driver side door on local fronts.       |
+| 463 | The unknown locked card readers near the front driver side door on the local front     |
+| 464 | The unknown locked card readers near the front driver side door on the local fronts    |
+| 465 | The unknown locked card readers near the front driver side door on the local fronts.   |
+| 466 | The unknown locked card readers near the front driver side doors on a local front      |
+| 467 | The unknown locked card readers near the front driver side doors on local fronts       |
+| 468 | The unknown locked card readers near the front driver side doors on local fronts.      |
+| 469 | The unknown locked card readers near the front driver side doors on the local front    |
+| 470 | The unknown locked card readers near the front driver side doors on the local fronts   |
+| 471 | The unknown locked card readers near the front driver side doors on the local fronts.  |
+| 472 | Unknown cards locked readers near a front driver side door on a local front            |
+| 473 | Unknown locked card reader near a driver side front door on a local front              |
+| 474 | Unknown locked card reader near a driver side front door on the local front            |
+| 475 | Unknown locked card reader near a driver side front door on the local fronts           |
+| 476 | Unknown locked card reader near a front driver side door on a local front              |
+| 477 | Unknown locked card reader near a front driver side door on local fronts               |
+| 478 | Unknown locked card reader near a front driver side door on local fronts.              |
+| 479 | Unknown locked card reader near a front driver side door on the local front            |
+| 480 | Unknown locked card reader near a front driver side door on the local fronts           |
+| 481 | Unknown locked card reader near a front driver side door on the local fronts.          |
+| 482 | Unknown locked card reader near front driver side doors on a local front               |
+| 483 | Unknown locked card reader near the driver side front door on a local front            |
+| 484 | Unknown locked card reader near the front driver side door on a local front            |
+| 485 | Unknown locked card reader near the front driver side door on local fronts             |
+| 486 | Unknown locked card reader near the front driver side door on the local front          |
+| 487 | Unknown locked card reader near the front driver side door on the local fronts         |
+| 488 | Unknown locked card reader near the front driver side door on the local fronts.        |
+| 489 | Unknown locked card reader near the front driver side doors on a local front           |
+| 490 | Unknown locked card reader near the front driver side doors on local fronts            |
+| 491 | Unknown locked card reader near the front driver side doors on the local front         |
+| 492 | Unknown locked card reader near the front driver side doors on the local fronts        |
+| 493 | Unknown locked card reader near the front driver side doors on the local fronts.       |
+| 494 | Unknown locked card readers near a driver side front door on a local front             |
+| 495 | Unknown locked card readers near a driver side front door on local fronts              |
+| 496 | Unknown locked card readers near a driver side front door on the local front           |
+| 497 | Unknown locked card readers near a driver side front door on the local fronts          |
+| 498 | Unknown locked card readers near a driver side front door on the local fronts.         |
+| 499 | Unknown locked card readers near a front driver side door on a local front             |
+| 500 | Unknown locked card readers near a front driver side door on a local front.            |
+| 501 | Unknown locked card readers near a front driver side door on local fronts              |
+| 502 | Unknown locked card readers near a front driver side door on local fronts.             |
+| 503 | Unknown locked card readers near a front driver side door on the local front           |
+| 504 | Unknown locked card readers near a front driver side door on the local front.          |
+| 505 | Unknown locked card readers near a front driver side door on the local fronts          |
+| 506 | Unknown locked card readers near a front driver side door on the local fronts.         |
+| 507 | Unknown locked card readers near front driver side doors on a local front              |
+| 508 | Unknown locked card readers near front driver side doors on the local fronts           |
+| 509 | Unknown locked card readers near the driver side front door on a local front           |
+| 510 | Unknown locked card readers near the driver side front door on local fronts            |
+| 511 | Unknown locked card readers near the driver side front door on the local front         |
+| 512 | Unknown locked card readers near the driver side front door on the local fronts        |
+| 513 | Unknown locked card readers near the driver side front door on the local fronts.       |
+| 514 | Unknown locked card readers near the front driver side door on a local front           |
+| 515 | Unknown locked card readers near the front driver side door on local fronts            |
+| 516 | Unknown locked card readers near the front driver side door on local fronts.           |
+| 517 | Unknown locked card readers near the front driver side door on the local front         |
+| 518 | Unknown locked card readers near the front driver side door on the local fronts        |
+| 519 | Unknown locked card readers near the front driver side door on the local fronts.       |
+| 520 | Unknown locked card readers near the front driver side doors on a local front          |
+| 521 | Unknown locked card readers near the front driver side doors on a local front.         |
+| 522 | Unknown locked card readers near the front driver side doors on local fronts           |
+| 523 | Unknown locked card readers near the front driver side doors on local fronts.          |
+| 524 | Unknown locked card readers near the front driver side doors on the local front        |
+| 525 | Unknown locked card readers near the front driver side doors on the local fronts       |
+| 526 | Unknown locked card readers near the front driver side doors on the local fronts.      |
++-----+----------------------------------------------------------------------------------------+
+

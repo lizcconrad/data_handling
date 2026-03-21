@@ -1,0 +1,2255 @@
+GRAPH NAME: idPlayer_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 2000               |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 7                  |
+| Nodes Covered                   | 7                  |
+| Nodes Included                  | 6                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 1.0                |
+| Node Inclusion                  | 0.8571428571428571 |
++---------------------------------+--------------------+
+| Edge Count                      | 6                  |
+| Edges Covered                   | 5                  |
+| Edges Included                  | 5                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8333333333333334 |
+| Edge Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+
++------------------------------------------------------------------------------------------------------------+
+|                                                GOLD OUTPUTS                                                |
++-----------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                   | Generated? |
++-----------------------------------------------------------------------------------------------+------------+
+| the player east of the rocky area east of the shiny brown bottle who has not found the bottle | False      |
++-----------------------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                         |
++--------------+--------------+---------------+------------------+-----------------------------+
+| Node         | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++--------------+--------------+---------------+------------------+-----------------------------+
+| idPlayer     | True         | True          | Covered          | Included                    |
+| false        | True         | False         | Covered          | Successor of failed element |
+| idRockyArea1 | True         | True          | Covered          | Included                    |
+| rocky        | True         | True          | Covered          | Included                    |
+| idBottle1    | True         | True          | Covered          | Included                    |
+| shiny        | True         | True          | Covered          | Included                    |
+| brown        | True         | True          | Covered          | Included                    |
++--------------+--------------+---------------+------------------+-----------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                   EDGE METRICS                                                                                  |
++--------------------------------+--------------+--------------+--------------+---------------+-----------------------------------------------+-----------------------------------+
+| Edge                           | Parent       | Child        | Edge Covered | Edge Included | Coverage Comment                              | Inclusion Comment                 |
++--------------------------------+--------------+--------------+--------------+---------------+-----------------------------------------------+-----------------------------------+
+| idPlayer_prop_idBottleFound    | idPlayer     | false        | False        | False         | 'idBottleFound' not in lexicon's edge entries | No SEMENT generated for this edge |
+| isEastOf                       | idPlayer     | idRockyArea1 | True         | True          | Covered                                       | Included                          |
+| isEastOf                       | idPlayer     | idBottle1    | True         | True          | Covered                                       | Included                          |
+| idRockyArea1_prop_idDescriptor | idRockyArea1 | rocky        | True         | True          | Covered                                       | Included                          |
+| idBottle1_prop_idDescriptor_1  | idBottle1    | shiny        | True         | True          | Covered                                       | Included                          |
+| idBottle1_prop_idColor         | idBottle1    | brown        | True         | True          | Covered                                       | Included                          |
++--------------------------------+--------------+--------------+--------------+---------------+-----------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h472                                                                      |
+|               |   INDEX: x470                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h517 ARG0: i514 ARG1: u515 ARG2: u516 ]               |
+|               |           [ def_implicit_q LBL: h528 ARG0: x525 RSTR: h526 BODY: h527 ]          |
+|               |           [ _east_a_1 LBL: h513 ARG0: i510 ARG1: x511 ARG2: u512 ]               |
+|               |           [ def_udef_a_q LBL: h523 ARG0: x520 RSTR: h521 BODY: h522 ]            |
+|               |           [ _brown_a_1 LBL: h509 ARG0: i507 ARG1: i508 ]                         |
+|               |           [ _shiny_a_1 LBL: h506 ARG0: e504 ARG1: u505 ]                         |
+|               |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ]                       |
+|               |           [ place_n LBL: h519 ARG0: x518 ]                                       |
+|               |           [ loc_nonsp LBL: h488 ARG0: i485 ARG1: u486 ARG2: u487 ]               |
+|               |           [ def_implicit_q LBL: h499 ARG0: x496 RSTR: h497 BODY: h498 ]          |
+|               |           [ _east_a_1 LBL: h484 ARG0: i481 ARG1: x482 ARG2: u483 ]               |
+|               |           [ def_udef_a_q LBL: h494 ARG0: x491 RSTR: h492 BODY: h493 ]            |
+|               |           [ _rocky_a_1 LBL: h480 ARG0: e478 ARG1: u479 ]                         |
+|               |           [ _area_n_of LBL: h477 ARG0: x476 ]                                    |
+|               |           [ place_n LBL: h490 ARG0: x489 ]                                       |
+|               |           [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] >                     |
+|               |   HCONS: < h521 qeq h503 h526 qeq h519 h492 qeq h477 h497 qeq h490 >             |
+|               |   EQS: < h506 eq h503 u505 eq x501 h509 eq h503 i508 eq x501 x520 eq x501 h513   |
+|               | eq h524 u512 eq x520 h513 eq h519 x511 eq x518 x525 eq x518 h517 eq h529 u516 eq |
+|               | x525 h480 eq h477 u479 eq x476 x491 eq x476 h484 eq h495 u483 eq x491 h484 eq    |
+|               | h490 x482 eq x489 x496 eq x489 h488 eq h500 u487 eq x496 h488 eq h472 u486 eq    |
+|               | x470 h517 eq h472 u515 eq x470 >                                                 |
+|               |   SLOTS: < ARG1: i471 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h472                                                                      |
+|               |   INDEX: x470                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h472 ARG0: i514 ARG1: x470 ARG2: x511 ]               |
+|               |           [ def_implicit_q LBL: h528 ARG0: x511 RSTR: h526 BODY: h527 ]          |
+|               |           [ _east_a_1 LBL: h513 ARG0: i510 ARG1: x511 ARG2: x501 ]               |
+|               |           [ def_udef_a_q LBL: h523 ARG0: x501 RSTR: h521 BODY: h522 ]            |
+|               |           [ _brown_a_1 LBL: h503 ARG0: i507 ARG1: x501 ]                         |
+|               |           [ _shiny_a_1 LBL: h503 ARG0: e504 ARG1: x501 ]                         |
+|               |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ]                       |
+|               |           [ place_n LBL: h513 ARG0: x511 ]                                       |
+|               |           [ loc_nonsp LBL: h472 ARG0: i485 ARG1: x470 ARG2: x482 ]               |
+|               |           [ def_implicit_q LBL: h499 ARG0: x482 RSTR: h497 BODY: h498 ]          |
+|               |           [ _east_a_1 LBL: h484 ARG0: i481 ARG1: x482 ARG2: x476 ]               |
+|               |           [ def_udef_a_q LBL: h494 ARG0: x476 RSTR: h492 BODY: h493 ]            |
+|               |           [ _rocky_a_1 LBL: h477 ARG0: e478 ARG1: x476 ]                         |
+|               |           [ _area_n_of LBL: h477 ARG0: x476 ]                                    |
+|               |           [ place_n LBL: h484 ARG0: x482 ]                                       |
+|               |           [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] >                     |
+|               |   HCONS: < h521 qeq h503 h526 qeq h513 h492 qeq h477 h497 qeq h484 >             |
+|               |   SLOTS: < ARG1: i471 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h538                                                                      |
+|               |   INDEX: e535                                                                    |
+|               |   RELS: < [ unknown LBL: h534 ARG: x470 ARG0: e535 ]                             |
+|               |           [ def_udef_a_q LBL: h533 ARG0: x470 RSTR: h531 BODY: h532 ]            |
+|               |           [ loc_nonsp LBL: h472 ARG0: i514 ARG1: x470 ARG2: x511 ]               |
+|               |           [ def_implicit_q LBL: h528 ARG0: x511 RSTR: h526 BODY: h527 ]          |
+|               |           [ _east_a_1 LBL: h513 ARG0: i510 ARG1: x511 ARG2: x501 ]               |
+|               |           [ def_udef_a_q LBL: h523 ARG0: x501 RSTR: h521 BODY: h522 ]            |
+|               |           [ _brown_a_1 LBL: h503 ARG0: i507 ARG1: x501 ]                         |
+|               |           [ _shiny_a_1 LBL: h503 ARG0: e504 ARG1: x501 ]                         |
+|               |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ]                       |
+|               |           [ place_n LBL: h513 ARG0: x511 ]                                       |
+|               |           [ loc_nonsp LBL: h472 ARG0: i485 ARG1: x470 ARG2: x482 ]               |
+|               |           [ def_implicit_q LBL: h499 ARG0: x482 RSTR: h497 BODY: h498 ]          |
+|               |           [ _east_a_1 LBL: h484 ARG0: i481 ARG1: x482 ARG2: x476 ]               |
+|               |           [ def_udef_a_q LBL: h494 ARG0: x476 RSTR: h492 BODY: h493 ]            |
+|               |           [ _rocky_a_1 LBL: h477 ARG0: e478 ARG1: x476 ]                         |
+|               |           [ _area_n_of LBL: h477 ARG0: x476 ]                                    |
+|               |           [ place_n LBL: h484 ARG0: x482 ]                                       |
+|               |           [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] >                     |
+|               |   HCONS: < h521 qeq h503 h526 qeq h513 h492 qeq h477 h497 qeq h484 h531 qeq h472 |
+|               | h538 qeq h534 > ]                                                                |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------+
+|                                 NODE SEMENTS                                |
++--------------+--------------------------------------------------------------+
+| Node         | Generated SEMENT                                             |
++--------------+--------------------------------------------------------------+
+| idPlayer     | [ TOP: h472                                                  |
+|              |   INDEX: x470                                                |
+|              |   RELS: < [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] > |
+|              |   SLOTS: < ARG1: i471 > ]                                    |
++--------------+--------------------------------------------------------------+
+| false        | [ TOP: h475                                                  |
+|              |   INDEX: e473                                                |
+|              |   RELS: < [ _false_a_of LBL: h475 ARG0: e473 ARG1: h474 ] >  |
+|              |   SLOTS: < ARG1: h474 > ]                                    |
++--------------+--------------------------------------------------------------+
+| idRockyArea1 | [ TOP: h477                                                  |
+|              |   INDEX: x476                                                |
+|              |   RELS: < [ _area_n_of LBL: h477 ARG0: x476 ] > ]            |
++--------------+--------------------------------------------------------------+
+| rocky        | [ TOP: h480                                                  |
+|              |   INDEX: e478                                                |
+|              |   RELS: < [ _rocky_a_1 LBL: h480 ARG0: e478 ARG1: u479 ] >   |
+|              |   SLOTS: < ARG1: u479 > ]                                    |
++--------------+--------------------------------------------------------------+
+| idBottle1    | [ TOP: h503                                                  |
+|              |   INDEX: x501                                                |
+|              |   RELS: < [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ] > |
+|              |   SLOTS: < ARG1: i502 > ]                                    |
++--------------+--------------------------------------------------------------+
+| shiny        | [ TOP: h506                                                  |
+|              |   INDEX: e504                                                |
+|              |   RELS: < [ _shiny_a_1 LBL: h506 ARG0: e504 ARG1: u505 ] >   |
+|              |   SLOTS: < ARG1: u505 > ]                                    |
++--------------+--------------------------------------------------------------+
+| brown        | [ TOP: h509                                                  |
+|              |   INDEX: i507                                                |
+|              |   RELS: < [ _brown_a_1 LBL: h509 ARG0: i507 ARG1: i508 ] >   |
+|              |   SLOTS: < ARG1: i508 > ]                                    |
++--------------+--------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE SEMENTS                                                                  |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent       | Child        | Generated SEMENT                                                                 |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idPlayer_prop_idBottleFound    | idPlayer     | false        | None                                                                             |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| isEastOf                       | idPlayer     | idRockyArea1 | [ TOP: h472                                                                      |
+|                                |              |              |   INDEX: x470                                                                    |
+|                                |              |              |   RELS: < [ loc_nonsp LBL: h488 ARG0: i485 ARG1: u486 ARG2: u487 ]               |
+|                                |              |              |           [ def_implicit_q LBL: h499 ARG0: x496 RSTR: h497 BODY: h498 ]          |
+|                                |              |              |           [ _east_a_1 LBL: h484 ARG0: i481 ARG1: x482 ARG2: u483 ]               |
+|                                |              |              |           [ def_udef_a_q LBL: h494 ARG0: x491 RSTR: h492 BODY: h493 ]            |
+|                                |              |              |           [ _rocky_a_1 LBL: h480 ARG0: e478 ARG1: u479 ]                         |
+|                                |              |              |           [ _area_n_of LBL: h477 ARG0: x476 ]                                    |
+|                                |              |              |           [ place_n LBL: h490 ARG0: x489 ]                                       |
+|                                |              |              |           [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] >                     |
+|                                |              |              |   HCONS: < h492 qeq h477 h497 qeq h490 >                                         |
+|                                |              |              |   EQS: < h480 eq h477 u479 eq x476 x491 eq x476 h484 eq h495 u483 eq x491 h484   |
+|                                |              |              | eq h490 x482 eq x489 x496 eq x489 h488 eq h500 u487 eq x496 h488 eq h472 u486 eq |
+|                                |              |              | x470 >                                                                           |
+|                                |              |              |   SLOTS: < ARG1: i471 > ]                                                        |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| isEastOf                       | idPlayer     | idBottle1    | [ TOP: h472                                                                      |
+|                                |              |              |   INDEX: x470                                                                    |
+|                                |              |              |   RELS: < [ loc_nonsp LBL: h517 ARG0: i514 ARG1: u515 ARG2: u516 ]               |
+|                                |              |              |           [ def_implicit_q LBL: h528 ARG0: x525 RSTR: h526 BODY: h527 ]          |
+|                                |              |              |           [ _east_a_1 LBL: h513 ARG0: i510 ARG1: x511 ARG2: u512 ]               |
+|                                |              |              |           [ def_udef_a_q LBL: h523 ARG0: x520 RSTR: h521 BODY: h522 ]            |
+|                                |              |              |           [ _brown_a_1 LBL: h509 ARG0: i507 ARG1: i508 ]                         |
+|                                |              |              |           [ _shiny_a_1 LBL: h506 ARG0: e504 ARG1: u505 ]                         |
+|                                |              |              |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ]                       |
+|                                |              |              |           [ place_n LBL: h519 ARG0: x518 ]                                       |
+|                                |              |              |           [ loc_nonsp LBL: h488 ARG0: i485 ARG1: u486 ARG2: u487 ]               |
+|                                |              |              |           [ def_implicit_q LBL: h499 ARG0: x496 RSTR: h497 BODY: h498 ]          |
+|                                |              |              |           [ _east_a_1 LBL: h484 ARG0: i481 ARG1: x482 ARG2: u483 ]               |
+|                                |              |              |           [ def_udef_a_q LBL: h494 ARG0: x491 RSTR: h492 BODY: h493 ]            |
+|                                |              |              |           [ _rocky_a_1 LBL: h480 ARG0: e478 ARG1: u479 ]                         |
+|                                |              |              |           [ _area_n_of LBL: h477 ARG0: x476 ]                                    |
+|                                |              |              |           [ place_n LBL: h490 ARG0: x489 ]                                       |
+|                                |              |              |           [ _player_n_of LBL: h472 ARG0: x470 ARG1: i471 ] >                     |
+|                                |              |              |   HCONS: < h521 qeq h503 h526 qeq h519 h492 qeq h477 h497 qeq h490 >             |
+|                                |              |              |   EQS: < h506 eq h503 u505 eq x501 h509 eq h503 i508 eq x501 x520 eq x501 h513   |
+|                                |              |              | eq h524 u512 eq x520 h513 eq h519 x511 eq x518 x525 eq x518 h517 eq h529 u516 eq |
+|                                |              |              | x525 h480 eq h477 u479 eq x476 x491 eq x476 h484 eq h495 u483 eq x491 h484 eq    |
+|                                |              |              | h490 x482 eq x489 x496 eq x489 h488 eq h500 u487 eq x496 h488 eq h472 u486 eq    |
+|                                |              |              | x470 h517 eq h472 u515 eq x470 >                                                 |
+|                                |              |              |   SLOTS: < ARG1: i471 > ]                                                        |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idRockyArea1_prop_idDescriptor | idRockyArea1 | rocky        | [ TOP: h477                                                                      |
+|                                |              |              |   INDEX: x476                                                                    |
+|                                |              |              |   RELS: < [ _rocky_a_1 LBL: h480 ARG0: e478 ARG1: u479 ]                         |
+|                                |              |              |           [ _area_n_of LBL: h477 ARG0: x476 ] >                                  |
+|                                |              |              |   EQS: < h480 eq h477 u479 eq x476 > ]                                           |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idBottle1_prop_idDescriptor_1  | idBottle1    | shiny        | [ TOP: h503                                                                      |
+|                                |              |              |   INDEX: x501                                                                    |
+|                                |              |              |   RELS: < [ _shiny_a_1 LBL: h506 ARG0: e504 ARG1: u505 ]                         |
+|                                |              |              |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ] >                     |
+|                                |              |              |   EQS: < h506 eq h503 u505 eq x501 >                                             |
+|                                |              |              |   SLOTS: < ARG1: i502 > ]                                                        |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idBottle1_prop_idColor         | idBottle1    | brown        | [ TOP: h503                                                                      |
+|                                |              |              |   INDEX: x501                                                                    |
+|                                |              |              |   RELS: < [ _brown_a_1 LBL: h509 ARG0: i507 ARG1: i508 ]                         |
+|                                |              |              |           [ _shiny_a_1 LBL: h506 ARG0: e504 ARG1: u505 ]                         |
+|                                |              |              |           [ _bottle_n_of LBL: h503 ARG0: x501 ARG1: i502 ] >                     |
+|                                |              |              |   EQS: < h506 eq h503 u505 eq x501 h509 eq h503 i508 eq x501 >                   |
+|                                |              |              |   SLOTS: < ARG1: i502 > ]                                                        |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                            GENERATED ENGLISH TEXT                            |
++------+-----------------------------------------------------------------------+
+| #    | Generated Text                                                        |
++------+-----------------------------------------------------------------------+
+| 1    | A player east of a brown shiny bottle east of a rocky area            |
+| 2    | A player east of a brown shiny bottle east of a rocky area.           |
+| 3    | A player east of a brown shiny bottle east of rocky area              |
+| 4    | A player east of a brown shiny bottle east of rocky area.             |
+| 5    | A player east of a brown shiny bottle east of rocky areas             |
+| 6    | A player east of a brown shiny bottle east of rocky areas.            |
+| 7    | A player east of a brown shiny bottle east of the rocky area          |
+| 8    | A player east of a brown shiny bottle east of the rocky area.         |
+| 9    | A player east of a brown shiny bottle east of the rocky areas         |
+| 10   | A player east of a brown shiny bottle east of the rocky areas.        |
+| 11   | A player east of a brown shiny bottle, east of a rocky area           |
+| 12   | A player east of a brown shiny bottle, east of rocky area             |
+| 13   | A player east of a brown shiny bottle, east of rocky areas            |
+| 14   | A player east of a brown shiny bottle, east of the rocky area         |
+| 15   | A player east of a brown shiny bottle, east of the rocky areas        |
+| 16   | A player east of a rocky area east of a brown shiny bottle            |
+| 17   | A player east of a rocky area east of a brown shiny bottle.           |
+| 18   | A player east of a rocky area east of a shiny brown bottle            |
+| 19   | A player east of a rocky area east of a shiny brown bottle.           |
+| 20   | A player east of a rocky area east of brown shiny bottles             |
+| 21   | A player east of a rocky area east of brown shiny bottles.            |
+| 22   | A player east of a rocky area east of shiny brown bottles             |
+| 23   | A player east of a rocky area east of shiny brown bottles.            |
+| 24   | A player east of a rocky area east of the brown shiny bottle          |
+| 25   | A player east of a rocky area east of the brown shiny bottle.         |
+| 26   | A player east of a rocky area east of the brown shiny bottles         |
+| 27   | A player east of a rocky area east of the brown shiny bottles.        |
+| 28   | A player east of a rocky area east of the shiny brown bottle          |
+| 29   | A player east of a rocky area east of the shiny brown bottle.         |
+| 30   | A player east of a rocky area east of the shiny brown bottles         |
+| 31   | A player east of a rocky area east of the shiny brown bottles.        |
+| 32   | A player east of a rocky area, east of a brown shiny bottle           |
+| 33   | A player east of a rocky area, east of a shiny brown bottle           |
+| 34   | A player east of a rocky area, east of brown shiny bottles            |
+| 35   | A player east of a rocky area, east of shiny brown bottles            |
+| 36   | A player east of a rocky area, east of the brown shiny bottle         |
+| 37   | A player east of a rocky area, east of the brown shiny bottles        |
+| 38   | A player east of a rocky area, east of the shiny brown bottle         |
+| 39   | A player east of a rocky area, east of the shiny brown bottles        |
+| 40   | A player east of a shiny brown bottle east of a rocky area            |
+| 41   | A player east of a shiny brown bottle east of a rocky area.           |
+| 42   | A player east of a shiny brown bottle east of rocky area              |
+| 43   | A player east of a shiny brown bottle east of rocky area.             |
+| 44   | A player east of a shiny brown bottle east of rocky areas             |
+| 45   | A player east of a shiny brown bottle east of rocky areas.            |
+| 46   | A player east of a shiny brown bottle east of the rocky area          |
+| 47   | A player east of a shiny brown bottle east of the rocky area.         |
+| 48   | A player east of a shiny brown bottle east of the rocky areas         |
+| 49   | A player east of a shiny brown bottle east of the rocky areas.        |
+| 50   | A player east of a shiny brown bottle, east of a rocky area           |
+| 51   | A player east of a shiny brown bottle, east of rocky area             |
+| 52   | A player east of a shiny brown bottle, east of rocky areas            |
+| 53   | A player east of a shiny brown bottle, east of the rocky area         |
+| 54   | A player east of a shiny brown bottle, east of the rocky areas        |
+| 55   | A player east of brown shiny bottles east of a rocky area             |
+| 56   | A player east of brown shiny bottles east of a rocky area.            |
+| 57   | A player east of brown shiny bottles east of rocky area               |
+| 58   | A player east of brown shiny bottles east of rocky area.              |
+| 59   | A player east of brown shiny bottles east of rocky areas              |
+| 60   | A player east of brown shiny bottles east of rocky areas.             |
+| 61   | A player east of brown shiny bottles east of the rocky area           |
+| 62   | A player east of brown shiny bottles east of the rocky area.          |
+| 63   | A player east of brown shiny bottles east of the rocky areas          |
+| 64   | A player east of brown shiny bottles east of the rocky areas.         |
+| 65   | A player east of brown shiny bottles, east of a rocky area            |
+| 66   | A player east of brown shiny bottles, east of rocky area              |
+| 67   | A player east of brown shiny bottles, east of rocky areas             |
+| 68   | A player east of brown shiny bottles, east of the rocky area          |
+| 69   | A player east of brown shiny bottles, east of the rocky areas         |
+| 70   | A player east of rocky area east of a brown shiny bottle              |
+| 71   | A player east of rocky area east of a brown shiny bottle.             |
+| 72   | A player east of rocky area east of a shiny brown bottle              |
+| 73   | A player east of rocky area east of a shiny brown bottle.             |
+| 74   | A player east of rocky area east of brown shiny bottles               |
+| 75   | A player east of rocky area east of brown shiny bottles.              |
+| 76   | A player east of rocky area east of shiny brown bottles               |
+| 77   | A player east of rocky area east of shiny brown bottles.              |
+| 78   | A player east of rocky area east of the brown shiny bottle            |
+| 79   | A player east of rocky area east of the brown shiny bottle.           |
+| 80   | A player east of rocky area east of the brown shiny bottles           |
+| 81   | A player east of rocky area east of the brown shiny bottles.          |
+| 82   | A player east of rocky area east of the shiny brown bottle            |
+| 83   | A player east of rocky area east of the shiny brown bottle.           |
+| 84   | A player east of rocky area east of the shiny brown bottles           |
+| 85   | A player east of rocky area east of the shiny brown bottles.          |
+| 86   | A player east of rocky area, east of a brown shiny bottle             |
+| 87   | A player east of rocky area, east of a shiny brown bottle             |
+| 88   | A player east of rocky area, east of brown shiny bottles              |
+| 89   | A player east of rocky area, east of shiny brown bottles              |
+| 90   | A player east of rocky area, east of the brown shiny bottle           |
+| 91   | A player east of rocky area, east of the brown shiny bottles          |
+| 92   | A player east of rocky area, east of the shiny brown bottle           |
+| 93   | A player east of rocky area, east of the shiny brown bottles          |
+| 94   | A player east of rocky areas east of a brown shiny bottle             |
+| 95   | A player east of rocky areas east of a brown shiny bottle.            |
+| 96   | A player east of rocky areas east of a shiny brown bottle             |
+| 97   | A player east of rocky areas east of a shiny brown bottle.            |
+| 98   | A player east of rocky areas east of brown shiny bottles              |
+| 99   | A player east of rocky areas east of brown shiny bottles.             |
+| 100  | A player east of rocky areas east of shiny brown bottles              |
+| 101  | A player east of rocky areas east of shiny brown bottles.             |
+| 102  | A player east of rocky areas east of the brown shiny bottle           |
+| 103  | A player east of rocky areas east of the brown shiny bottle.          |
+| 104  | A player east of rocky areas east of the brown shiny bottles          |
+| 105  | A player east of rocky areas east of the brown shiny bottles.         |
+| 106  | A player east of rocky areas east of the shiny brown bottle           |
+| 107  | A player east of rocky areas east of the shiny brown bottle.          |
+| 108  | A player east of rocky areas east of the shiny brown bottles          |
+| 109  | A player east of rocky areas east of the shiny brown bottles.         |
+| 110  | A player east of rocky areas, east of a brown shiny bottle            |
+| 111  | A player east of rocky areas, east of a shiny brown bottle            |
+| 112  | A player east of rocky areas, east of brown shiny bottles             |
+| 113  | A player east of rocky areas, east of shiny brown bottles             |
+| 114  | A player east of rocky areas, east of the brown shiny bottle          |
+| 115  | A player east of rocky areas, east of the brown shiny bottles         |
+| 116  | A player east of rocky areas, east of the shiny brown bottle          |
+| 117  | A player east of rocky areas, east of the shiny brown bottles         |
+| 118  | A player east of shiny brown bottles east of a rocky area             |
+| 119  | A player east of shiny brown bottles east of a rocky area.            |
+| 120  | A player east of shiny brown bottles east of rocky area               |
+| 121  | A player east of shiny brown bottles east of rocky area.              |
+| 122  | A player east of shiny brown bottles east of rocky areas              |
+| 123  | A player east of shiny brown bottles east of rocky areas.             |
+| 124  | A player east of shiny brown bottles east of the rocky area           |
+| 125  | A player east of shiny brown bottles east of the rocky area.          |
+| 126  | A player east of shiny brown bottles east of the rocky areas          |
+| 127  | A player east of shiny brown bottles east of the rocky areas.         |
+| 128  | A player east of shiny brown bottles, east of a rocky area            |
+| 129  | A player east of shiny brown bottles, east of rocky area              |
+| 130  | A player east of shiny brown bottles, east of rocky areas             |
+| 131  | A player east of shiny brown bottles, east of the rocky area          |
+| 132  | A player east of shiny brown bottles, east of the rocky areas         |
+| 133  | A player east of the brown shiny bottle east of a rocky area          |
+| 134  | A player east of the brown shiny bottle east of a rocky area.         |
+| 135  | A player east of the brown shiny bottle east of rocky area            |
+| 136  | A player east of the brown shiny bottle east of rocky area.           |
+| 137  | A player east of the brown shiny bottle east of rocky areas           |
+| 138  | A player east of the brown shiny bottle east of rocky areas.          |
+| 139  | A player east of the brown shiny bottle east of the rocky area        |
+| 140  | A player east of the brown shiny bottle east of the rocky area.       |
+| 141  | A player east of the brown shiny bottle east of the rocky areas       |
+| 142  | A player east of the brown shiny bottle east of the rocky areas.      |
+| 143  | A player east of the brown shiny bottle, east of a rocky area         |
+| 144  | A player east of the brown shiny bottle, east of rocky area           |
+| 145  | A player east of the brown shiny bottle, east of rocky areas          |
+| 146  | A player east of the brown shiny bottle, east of the rocky area       |
+| 147  | A player east of the brown shiny bottle, east of the rocky areas      |
+| 148  | A player east of the brown shiny bottles east of a rocky area         |
+| 149  | A player east of the brown shiny bottles east of a rocky area.        |
+| 150  | A player east of the brown shiny bottles east of rocky area           |
+| 151  | A player east of the brown shiny bottles east of rocky area.          |
+| 152  | A player east of the brown shiny bottles east of rocky areas          |
+| 153  | A player east of the brown shiny bottles east of rocky areas.         |
+| 154  | A player east of the brown shiny bottles east of the rocky area       |
+| 155  | A player east of the brown shiny bottles east of the rocky area.      |
+| 156  | A player east of the brown shiny bottles east of the rocky areas      |
+| 157  | A player east of the brown shiny bottles east of the rocky areas.     |
+| 158  | A player east of the brown shiny bottles, east of a rocky area        |
+| 159  | A player east of the brown shiny bottles, east of rocky area          |
+| 160  | A player east of the brown shiny bottles, east of rocky areas         |
+| 161  | A player east of the brown shiny bottles, east of the rocky area      |
+| 162  | A player east of the brown shiny bottles, east of the rocky areas     |
+| 163  | A player east of the rocky area east of a brown shiny bottle          |
+| 164  | A player east of the rocky area east of a brown shiny bottle.         |
+| 165  | A player east of the rocky area east of a shiny brown bottle          |
+| 166  | A player east of the rocky area east of a shiny brown bottle.         |
+| 167  | A player east of the rocky area east of brown shiny bottles           |
+| 168  | A player east of the rocky area east of brown shiny bottles.          |
+| 169  | A player east of the rocky area east of shiny brown bottles           |
+| 170  | A player east of the rocky area east of shiny brown bottles.          |
+| 171  | A player east of the rocky area east of the brown shiny bottle        |
+| 172  | A player east of the rocky area east of the brown shiny bottle.       |
+| 173  | A player east of the rocky area east of the brown shiny bottles       |
+| 174  | A player east of the rocky area east of the brown shiny bottles.      |
+| 175  | A player east of the rocky area east of the shiny brown bottle        |
+| 176  | A player east of the rocky area east of the shiny brown bottle.       |
+| 177  | A player east of the rocky area east of the shiny brown bottles       |
+| 178  | A player east of the rocky area east of the shiny brown bottles.      |
+| 179  | A player east of the rocky area, east of a brown shiny bottle         |
+| 180  | A player east of the rocky area, east of a shiny brown bottle         |
+| 181  | A player east of the rocky area, east of brown shiny bottles          |
+| 182  | A player east of the rocky area, east of shiny brown bottles          |
+| 183  | A player east of the rocky area, east of the brown shiny bottle       |
+| 184  | A player east of the rocky area, east of the brown shiny bottles      |
+| 185  | A player east of the rocky area, east of the shiny brown bottle       |
+| 186  | A player east of the rocky area, east of the shiny brown bottles      |
+| 187  | A player east of the rocky areas east of a brown shiny bottle         |
+| 188  | A player east of the rocky areas east of a brown shiny bottle.        |
+| 189  | A player east of the rocky areas east of a shiny brown bottle         |
+| 190  | A player east of the rocky areas east of a shiny brown bottle.        |
+| 191  | A player east of the rocky areas east of brown shiny bottles          |
+| 192  | A player east of the rocky areas east of brown shiny bottles.         |
+| 193  | A player east of the rocky areas east of shiny brown bottles          |
+| 194  | A player east of the rocky areas east of shiny brown bottles.         |
+| 195  | A player east of the rocky areas east of the brown shiny bottle       |
+| 196  | A player east of the rocky areas east of the brown shiny bottle.      |
+| 197  | A player east of the rocky areas east of the brown shiny bottles      |
+| 198  | A player east of the rocky areas east of the brown shiny bottles.     |
+| 199  | A player east of the rocky areas east of the shiny brown bottle       |
+| 200  | A player east of the rocky areas east of the shiny brown bottle.      |
+| 201  | A player east of the rocky areas east of the shiny brown bottles      |
+| 202  | A player east of the rocky areas east of the shiny brown bottles.     |
+| 203  | A player east of the rocky areas, east of a brown shiny bottle        |
+| 204  | A player east of the rocky areas, east of a shiny brown bottle        |
+| 205  | A player east of the rocky areas, east of brown shiny bottles         |
+| 206  | A player east of the rocky areas, east of shiny brown bottles         |
+| 207  | A player east of the rocky areas, east of the brown shiny bottle      |
+| 208  | A player east of the rocky areas, east of the brown shiny bottles     |
+| 209  | A player east of the rocky areas, east of the shiny brown bottle      |
+| 210  | A player east of the rocky areas, east of the shiny brown bottles     |
+| 211  | A player east of the shiny brown bottle east of a rocky area          |
+| 212  | A player east of the shiny brown bottle east of a rocky area.         |
+| 213  | A player east of the shiny brown bottle east of rocky area            |
+| 214  | A player east of the shiny brown bottle east of rocky area.           |
+| 215  | A player east of the shiny brown bottle east of rocky areas           |
+| 216  | A player east of the shiny brown bottle east of rocky areas.          |
+| 217  | A player east of the shiny brown bottle east of the rocky area        |
+| 218  | A player east of the shiny brown bottle east of the rocky area.       |
+| 219  | A player east of the shiny brown bottle east of the rocky areas       |
+| 220  | A player east of the shiny brown bottle east of the rocky areas.      |
+| 221  | A player east of the shiny brown bottle, east of a rocky area         |
+| 222  | A player east of the shiny brown bottle, east of rocky area           |
+| 223  | A player east of the shiny brown bottle, east of rocky areas          |
+| 224  | A player east of the shiny brown bottle, east of the rocky area       |
+| 225  | A player east of the shiny brown bottle, east of the rocky areas      |
+| 226  | A player east of the shiny brown bottles east of a rocky area         |
+| 227  | A player east of the shiny brown bottles east of a rocky area.        |
+| 228  | A player east of the shiny brown bottles east of rocky area           |
+| 229  | A player east of the shiny brown bottles east of rocky area.          |
+| 230  | A player east of the shiny brown bottles east of rocky areas          |
+| 231  | A player east of the shiny brown bottles east of rocky areas.         |
+| 232  | A player east of the shiny brown bottles east of the rocky area       |
+| 233  | A player east of the shiny brown bottles east of the rocky area.      |
+| 234  | A player east of the shiny brown bottles east of the rocky areas      |
+| 235  | A player east of the shiny brown bottles east of the rocky areas.     |
+| 236  | A player east of the shiny brown bottles, east of a rocky area        |
+| 237  | A player east of the shiny brown bottles, east of rocky area          |
+| 238  | A player east of the shiny brown bottles, east of rocky areas         |
+| 239  | A player east of the shiny brown bottles, east of the rocky area      |
+| 240  | A player east of the shiny brown bottles, east of the rocky areas     |
+| 241  | A player, east of a brown shiny bottle east of a rocky area           |
+| 242  | A player, east of a brown shiny bottle east of a rocky area.          |
+| 243  | A player, east of a brown shiny bottle east of rocky area             |
+| 244  | A player, east of a brown shiny bottle east of rocky area.            |
+| 245  | A player, east of a brown shiny bottle east of rocky areas            |
+| 246  | A player, east of a brown shiny bottle east of rocky areas.           |
+| 247  | A player, east of a brown shiny bottle east of the rocky area         |
+| 248  | A player, east of a brown shiny bottle east of the rocky area.        |
+| 249  | A player, east of a brown shiny bottle east of the rocky areas        |
+| 250  | A player, east of a brown shiny bottle east of the rocky areas.       |
+| 251  | A player, east of a rocky area east of a brown shiny bottle           |
+| 252  | A player, east of a rocky area east of a brown shiny bottle.          |
+| 253  | A player, east of a rocky area east of a shiny brown bottle           |
+| 254  | A player, east of a rocky area east of a shiny brown bottle.          |
+| 255  | A player, east of a rocky area east of brown shiny bottles            |
+| 256  | A player, east of a rocky area east of brown shiny bottles.           |
+| 257  | A player, east of a rocky area east of shiny brown bottles            |
+| 258  | A player, east of a rocky area east of shiny brown bottles.           |
+| 259  | A player, east of a rocky area east of the brown shiny bottle         |
+| 260  | A player, east of a rocky area east of the brown shiny bottle.        |
+| 261  | A player, east of a rocky area east of the brown shiny bottles        |
+| 262  | A player, east of a rocky area east of the brown shiny bottles.       |
+| 263  | A player, east of a rocky area east of the shiny brown bottle         |
+| 264  | A player, east of a rocky area east of the shiny brown bottle.        |
+| 265  | A player, east of a rocky area east of the shiny brown bottles        |
+| 266  | A player, east of a rocky area east of the shiny brown bottles.       |
+| 267  | A player, east of a shiny brown bottle east of a rocky area           |
+| 268  | A player, east of a shiny brown bottle east of a rocky area.          |
+| 269  | A player, east of a shiny brown bottle east of rocky area             |
+| 270  | A player, east of a shiny brown bottle east of rocky area.            |
+| 271  | A player, east of a shiny brown bottle east of rocky areas            |
+| 272  | A player, east of a shiny brown bottle east of rocky areas.           |
+| 273  | A player, east of a shiny brown bottle east of the rocky area         |
+| 274  | A player, east of a shiny brown bottle east of the rocky area.        |
+| 275  | A player, east of a shiny brown bottle east of the rocky areas        |
+| 276  | A player, east of a shiny brown bottle east of the rocky areas.       |
+| 277  | A player, east of brown shiny bottles east of a rocky area            |
+| 278  | A player, east of brown shiny bottles east of a rocky area.           |
+| 279  | A player, east of brown shiny bottles east of rocky area              |
+| 280  | A player, east of brown shiny bottles east of rocky area.             |
+| 281  | A player, east of brown shiny bottles east of rocky areas             |
+| 282  | A player, east of brown shiny bottles east of rocky areas.            |
+| 283  | A player, east of brown shiny bottles east of the rocky area          |
+| 284  | A player, east of brown shiny bottles east of the rocky area.         |
+| 285  | A player, east of brown shiny bottles east of the rocky areas         |
+| 286  | A player, east of brown shiny bottles east of the rocky areas.        |
+| 287  | A player, east of rocky area east of a brown shiny bottle             |
+| 288  | A player, east of rocky area east of a brown shiny bottle.            |
+| 289  | A player, east of rocky area east of a shiny brown bottle             |
+| 290  | A player, east of rocky area east of a shiny brown bottle.            |
+| 291  | A player, east of rocky area east of brown shiny bottles              |
+| 292  | A player, east of rocky area east of brown shiny bottles.             |
+| 293  | A player, east of rocky area east of shiny brown bottles              |
+| 294  | A player, east of rocky area east of shiny brown bottles.             |
+| 295  | A player, east of rocky area east of the brown shiny bottle           |
+| 296  | A player, east of rocky area east of the brown shiny bottle.          |
+| 297  | A player, east of rocky area east of the brown shiny bottles          |
+| 298  | A player, east of rocky area east of the brown shiny bottles.         |
+| 299  | A player, east of rocky area east of the shiny brown bottle           |
+| 300  | A player, east of rocky area east of the shiny brown bottle.          |
+| 301  | A player, east of rocky area east of the shiny brown bottles          |
+| 302  | A player, east of rocky area east of the shiny brown bottles.         |
+| 303  | A player, east of rocky areas east of a brown shiny bottle            |
+| 304  | A player, east of rocky areas east of a brown shiny bottle.           |
+| 305  | A player, east of rocky areas east of a shiny brown bottle            |
+| 306  | A player, east of rocky areas east of a shiny brown bottle.           |
+| 307  | A player, east of rocky areas east of brown shiny bottles             |
+| 308  | A player, east of rocky areas east of brown shiny bottles.            |
+| 309  | A player, east of rocky areas east of shiny brown bottles             |
+| 310  | A player, east of rocky areas east of shiny brown bottles.            |
+| 311  | A player, east of rocky areas east of the brown shiny bottle          |
+| 312  | A player, east of rocky areas east of the brown shiny bottle.         |
+| 313  | A player, east of rocky areas east of the brown shiny bottles         |
+| 314  | A player, east of rocky areas east of the brown shiny bottles.        |
+| 315  | A player, east of rocky areas east of the shiny brown bottle          |
+| 316  | A player, east of rocky areas east of the shiny brown bottle.         |
+| 317  | A player, east of rocky areas east of the shiny brown bottles         |
+| 318  | A player, east of rocky areas east of the shiny brown bottles.        |
+| 319  | A player, east of shiny brown bottles east of a rocky area            |
+| 320  | A player, east of shiny brown bottles east of a rocky area.           |
+| 321  | A player, east of shiny brown bottles east of rocky area              |
+| 322  | A player, east of shiny brown bottles east of rocky area.             |
+| 323  | A player, east of shiny brown bottles east of rocky areas             |
+| 324  | A player, east of shiny brown bottles east of rocky areas.            |
+| 325  | A player, east of shiny brown bottles east of the rocky area          |
+| 326  | A player, east of shiny brown bottles east of the rocky area.         |
+| 327  | A player, east of shiny brown bottles east of the rocky areas         |
+| 328  | A player, east of shiny brown bottles east of the rocky areas.        |
+| 329  | A player, east of the brown shiny bottle east of a rocky area         |
+| 330  | A player, east of the brown shiny bottle east of a rocky area.        |
+| 331  | A player, east of the brown shiny bottle east of rocky area           |
+| 332  | A player, east of the brown shiny bottle east of rocky area.          |
+| 333  | A player, east of the brown shiny bottle east of rocky areas          |
+| 334  | A player, east of the brown shiny bottle east of rocky areas.         |
+| 335  | A player, east of the brown shiny bottle east of the rocky area       |
+| 336  | A player, east of the brown shiny bottle east of the rocky area.      |
+| 337  | A player, east of the brown shiny bottle east of the rocky areas      |
+| 338  | A player, east of the brown shiny bottle east of the rocky areas.     |
+| 339  | A player, east of the brown shiny bottles east of a rocky area        |
+| 340  | A player, east of the brown shiny bottles east of a rocky area.       |
+| 341  | A player, east of the brown shiny bottles east of rocky area          |
+| 342  | A player, east of the brown shiny bottles east of rocky area.         |
+| 343  | A player, east of the brown shiny bottles east of rocky areas         |
+| 344  | A player, east of the brown shiny bottles east of rocky areas.        |
+| 345  | A player, east of the brown shiny bottles east of the rocky area      |
+| 346  | A player, east of the brown shiny bottles east of the rocky area.     |
+| 347  | A player, east of the brown shiny bottles east of the rocky areas     |
+| 348  | A player, east of the brown shiny bottles east of the rocky areas.    |
+| 349  | A player, east of the rocky area east of a brown shiny bottle         |
+| 350  | A player, east of the rocky area east of a brown shiny bottle.        |
+| 351  | A player, east of the rocky area east of a shiny brown bottle         |
+| 352  | A player, east of the rocky area east of a shiny brown bottle.        |
+| 353  | A player, east of the rocky area east of brown shiny bottles          |
+| 354  | A player, east of the rocky area east of brown shiny bottles.         |
+| 355  | A player, east of the rocky area east of shiny brown bottles          |
+| 356  | A player, east of the rocky area east of shiny brown bottles.         |
+| 357  | A player, east of the rocky area east of the brown shiny bottle       |
+| 358  | A player, east of the rocky area east of the brown shiny bottle.      |
+| 359  | A player, east of the rocky area east of the brown shiny bottles      |
+| 360  | A player, east of the rocky area east of the brown shiny bottles.     |
+| 361  | A player, east of the rocky area east of the shiny brown bottle       |
+| 362  | A player, east of the rocky area east of the shiny brown bottle.      |
+| 363  | A player, east of the rocky area east of the shiny brown bottles      |
+| 364  | A player, east of the rocky area east of the shiny brown bottles.     |
+| 365  | A player, east of the rocky areas east of a brown shiny bottle        |
+| 366  | A player, east of the rocky areas east of a brown shiny bottle.       |
+| 367  | A player, east of the rocky areas east of a shiny brown bottle        |
+| 368  | A player, east of the rocky areas east of a shiny brown bottle.       |
+| 369  | A player, east of the rocky areas east of brown shiny bottles         |
+| 370  | A player, east of the rocky areas east of brown shiny bottles.        |
+| 371  | A player, east of the rocky areas east of shiny brown bottles         |
+| 372  | A player, east of the rocky areas east of shiny brown bottles.        |
+| 373  | A player, east of the rocky areas east of the brown shiny bottle      |
+| 374  | A player, east of the rocky areas east of the brown shiny bottle.     |
+| 375  | A player, east of the rocky areas east of the brown shiny bottles     |
+| 376  | A player, east of the rocky areas east of the brown shiny bottles.    |
+| 377  | A player, east of the rocky areas east of the shiny brown bottle      |
+| 378  | A player, east of the rocky areas east of the shiny brown bottle.     |
+| 379  | A player, east of the rocky areas east of the shiny brown bottles     |
+| 380  | A player, east of the rocky areas east of the shiny brown bottles.    |
+| 381  | A player, east of the shiny brown bottle east of a rocky area         |
+| 382  | A player, east of the shiny brown bottle east of a rocky area.        |
+| 383  | A player, east of the shiny brown bottle east of rocky area           |
+| 384  | A player, east of the shiny brown bottle east of rocky area.          |
+| 385  | A player, east of the shiny brown bottle east of rocky areas          |
+| 386  | A player, east of the shiny brown bottle east of rocky areas.         |
+| 387  | A player, east of the shiny brown bottle east of the rocky area       |
+| 388  | A player, east of the shiny brown bottle east of the rocky area.      |
+| 389  | A player, east of the shiny brown bottle east of the rocky areas      |
+| 390  | A player, east of the shiny brown bottle east of the rocky areas.     |
+| 391  | A player, east of the shiny brown bottles east of a rocky area        |
+| 392  | A player, east of the shiny brown bottles east of a rocky area.       |
+| 393  | A player, east of the shiny brown bottles east of rocky area          |
+| 394  | A player, east of the shiny brown bottles east of rocky area.         |
+| 395  | A player, east of the shiny brown bottles east of rocky areas         |
+| 396  | A player, east of the shiny brown bottles east of rocky areas.        |
+| 397  | A player, east of the shiny brown bottles east of the rocky area      |
+| 398  | A player, east of the shiny brown bottles east of the rocky area.     |
+| 399  | A player, east of the shiny brown bottles east of the rocky areas     |
+| 400  | A player, east of the shiny brown bottles east of the rocky areas.    |
+| 401  | Player east of a brown shiny bottle east of a rocky area              |
+| 402  | Player east of a brown shiny bottle east of a rocky area.             |
+| 403  | Player east of a brown shiny bottle east of rocky area                |
+| 404  | Player east of a brown shiny bottle east of rocky area.               |
+| 405  | Player east of a brown shiny bottle east of rocky areas               |
+| 406  | Player east of a brown shiny bottle east of rocky areas.              |
+| 407  | Player east of a brown shiny bottle east of the rocky area            |
+| 408  | Player east of a brown shiny bottle east of the rocky area.           |
+| 409  | Player east of a brown shiny bottle east of the rocky areas           |
+| 410  | Player east of a brown shiny bottle east of the rocky areas.          |
+| 411  | Player east of a brown shiny bottle, east of a rocky area             |
+| 412  | Player east of a brown shiny bottle, east of rocky area               |
+| 413  | Player east of a brown shiny bottle, east of rocky areas              |
+| 414  | Player east of a brown shiny bottle, east of the rocky area           |
+| 415  | Player east of a brown shiny bottle, east of the rocky areas          |
+| 416  | Player east of a rocky area east of a brown shiny bottle              |
+| 417  | Player east of a rocky area east of a brown shiny bottle.             |
+| 418  | Player east of a rocky area east of a shiny brown bottle              |
+| 419  | Player east of a rocky area east of a shiny brown bottle.             |
+| 420  | Player east of a rocky area east of brown shiny bottles               |
+| 421  | Player east of a rocky area east of brown shiny bottles.              |
+| 422  | Player east of a rocky area east of shiny brown bottles               |
+| 423  | Player east of a rocky area east of shiny brown bottles.              |
+| 424  | Player east of a rocky area east of the brown shiny bottle            |
+| 425  | Player east of a rocky area east of the brown shiny bottle.           |
+| 426  | Player east of a rocky area east of the brown shiny bottles           |
+| 427  | Player east of a rocky area east of the brown shiny bottles.          |
+| 428  | Player east of a rocky area east of the shiny brown bottle            |
+| 429  | Player east of a rocky area east of the shiny brown bottle.           |
+| 430  | Player east of a rocky area east of the shiny brown bottles           |
+| 431  | Player east of a rocky area east of the shiny brown bottles.          |
+| 432  | Player east of a rocky area, east of a brown shiny bottle             |
+| 433  | Player east of a rocky area, east of a shiny brown bottle             |
+| 434  | Player east of a rocky area, east of brown shiny bottles              |
+| 435  | Player east of a rocky area, east of shiny brown bottles              |
+| 436  | Player east of a rocky area, east of the brown shiny bottle           |
+| 437  | Player east of a rocky area, east of the brown shiny bottles          |
+| 438  | Player east of a rocky area, east of the shiny brown bottle           |
+| 439  | Player east of a rocky area, east of the shiny brown bottles          |
+| 440  | Player east of a shiny brown bottle east of a rocky area              |
+| 441  | Player east of a shiny brown bottle east of a rocky area.             |
+| 442  | Player east of a shiny brown bottle east of rocky area                |
+| 443  | Player east of a shiny brown bottle east of rocky area.               |
+| 444  | Player east of a shiny brown bottle east of rocky areas               |
+| 445  | Player east of a shiny brown bottle east of rocky areas.              |
+| 446  | Player east of a shiny brown bottle east of the rocky area            |
+| 447  | Player east of a shiny brown bottle east of the rocky area.           |
+| 448  | Player east of a shiny brown bottle east of the rocky areas           |
+| 449  | Player east of a shiny brown bottle east of the rocky areas.          |
+| 450  | Player east of a shiny brown bottle, east of a rocky area             |
+| 451  | Player east of a shiny brown bottle, east of rocky area               |
+| 452  | Player east of a shiny brown bottle, east of rocky areas              |
+| 453  | Player east of a shiny brown bottle, east of the rocky area           |
+| 454  | Player east of a shiny brown bottle, east of the rocky areas          |
+| 455  | Player east of brown shiny bottles east of a rocky area               |
+| 456  | Player east of brown shiny bottles east of a rocky area.              |
+| 457  | Player east of brown shiny bottles east of rocky area                 |
+| 458  | Player east of brown shiny bottles east of rocky area.                |
+| 459  | Player east of brown shiny bottles east of rocky areas                |
+| 460  | Player east of brown shiny bottles east of rocky areas.               |
+| 461  | Player east of brown shiny bottles east of the rocky area             |
+| 462  | Player east of brown shiny bottles east of the rocky area.            |
+| 463  | Player east of brown shiny bottles east of the rocky areas            |
+| 464  | Player east of brown shiny bottles east of the rocky areas.           |
+| 465  | Player east of brown shiny bottles, east of a rocky area              |
+| 466  | Player east of brown shiny bottles, east of rocky area                |
+| 467  | Player east of brown shiny bottles, east of rocky areas               |
+| 468  | Player east of brown shiny bottles, east of the rocky area            |
+| 469  | Player east of brown shiny bottles, east of the rocky areas           |
+| 470  | Player east of rocky area east of a brown shiny bottle                |
+| 471  | Player east of rocky area east of a brown shiny bottle.               |
+| 472  | Player east of rocky area east of a shiny brown bottle                |
+| 473  | Player east of rocky area east of a shiny brown bottle.               |
+| 474  | Player east of rocky area east of brown shiny bottles                 |
+| 475  | Player east of rocky area east of brown shiny bottles.                |
+| 476  | Player east of rocky area east of shiny brown bottles                 |
+| 477  | Player east of rocky area east of shiny brown bottles.                |
+| 478  | Player east of rocky area east of the brown shiny bottle              |
+| 479  | Player east of rocky area east of the brown shiny bottle.             |
+| 480  | Player east of rocky area east of the brown shiny bottles             |
+| 481  | Player east of rocky area east of the brown shiny bottles.            |
+| 482  | Player east of rocky area east of the shiny brown bottle              |
+| 483  | Player east of rocky area east of the shiny brown bottle.             |
+| 484  | Player east of rocky area east of the shiny brown bottles             |
+| 485  | Player east of rocky area east of the shiny brown bottles.            |
+| 486  | Player east of rocky area, east of a brown shiny bottle               |
+| 487  | Player east of rocky area, east of a shiny brown bottle               |
+| 488  | Player east of rocky area, east of brown shiny bottles                |
+| 489  | Player east of rocky area, east of shiny brown bottles                |
+| 490  | Player east of rocky area, east of the brown shiny bottle             |
+| 491  | Player east of rocky area, east of the brown shiny bottles            |
+| 492  | Player east of rocky area, east of the shiny brown bottle             |
+| 493  | Player east of rocky area, east of the shiny brown bottles            |
+| 494  | Player east of rocky areas east of a brown shiny bottle               |
+| 495  | Player east of rocky areas east of a brown shiny bottle.              |
+| 496  | Player east of rocky areas east of a shiny brown bottle               |
+| 497  | Player east of rocky areas east of a shiny brown bottle.              |
+| 498  | Player east of rocky areas east of brown shiny bottles                |
+| 499  | Player east of rocky areas east of brown shiny bottles.               |
+| 500  | Player east of rocky areas east of shiny brown bottles                |
+| 501  | Player east of rocky areas east of shiny brown bottles.               |
+| 502  | Player east of rocky areas east of the brown shiny bottle             |
+| 503  | Player east of rocky areas east of the brown shiny bottle.            |
+| 504  | Player east of rocky areas east of the brown shiny bottles            |
+| 505  | Player east of rocky areas east of the brown shiny bottles.           |
+| 506  | Player east of rocky areas east of the shiny brown bottle             |
+| 507  | Player east of rocky areas east of the shiny brown bottle.            |
+| 508  | Player east of rocky areas east of the shiny brown bottles            |
+| 509  | Player east of rocky areas east of the shiny brown bottles.           |
+| 510  | Player east of rocky areas, east of a brown shiny bottle              |
+| 511  | Player east of rocky areas, east of a shiny brown bottle              |
+| 512  | Player east of rocky areas, east of brown shiny bottles               |
+| 513  | Player east of rocky areas, east of shiny brown bottles               |
+| 514  | Player east of rocky areas, east of the brown shiny bottle            |
+| 515  | Player east of rocky areas, east of the brown shiny bottles           |
+| 516  | Player east of rocky areas, east of the shiny brown bottle            |
+| 517  | Player east of rocky areas, east of the shiny brown bottles           |
+| 518  | Player east of shiny brown bottles east of a rocky area               |
+| 519  | Player east of shiny brown bottles east of a rocky area.              |
+| 520  | Player east of shiny brown bottles east of rocky area                 |
+| 521  | Player east of shiny brown bottles east of rocky area.                |
+| 522  | Player east of shiny brown bottles east of rocky areas                |
+| 523  | Player east of shiny brown bottles east of rocky areas.               |
+| 524  | Player east of shiny brown bottles east of the rocky area             |
+| 525  | Player east of shiny brown bottles east of the rocky area.            |
+| 526  | Player east of shiny brown bottles east of the rocky areas            |
+| 527  | Player east of shiny brown bottles east of the rocky areas.           |
+| 528  | Player east of shiny brown bottles, east of a rocky area              |
+| 529  | Player east of shiny brown bottles, east of rocky area                |
+| 530  | Player east of shiny brown bottles, east of rocky areas               |
+| 531  | Player east of shiny brown bottles, east of the rocky area            |
+| 532  | Player east of shiny brown bottles, east of the rocky areas           |
+| 533  | Player east of the brown shiny bottle east of a rocky area            |
+| 534  | Player east of the brown shiny bottle east of a rocky area.           |
+| 535  | Player east of the brown shiny bottle east of rocky area              |
+| 536  | Player east of the brown shiny bottle east of rocky area.             |
+| 537  | Player east of the brown shiny bottle east of rocky areas             |
+| 538  | Player east of the brown shiny bottle east of rocky areas.            |
+| 539  | Player east of the brown shiny bottle east of the rocky area          |
+| 540  | Player east of the brown shiny bottle east of the rocky area.         |
+| 541  | Player east of the brown shiny bottle east of the rocky areas         |
+| 542  | Player east of the brown shiny bottle east of the rocky areas.        |
+| 543  | Player east of the brown shiny bottle, east of a rocky area           |
+| 544  | Player east of the brown shiny bottle, east of rocky area             |
+| 545  | Player east of the brown shiny bottle, east of rocky areas            |
+| 546  | Player east of the brown shiny bottle, east of the rocky area         |
+| 547  | Player east of the brown shiny bottle, east of the rocky areas        |
+| 548  | Player east of the brown shiny bottles east of a rocky area           |
+| 549  | Player east of the brown shiny bottles east of a rocky area.          |
+| 550  | Player east of the brown shiny bottles east of rocky area             |
+| 551  | Player east of the brown shiny bottles east of rocky area.            |
+| 552  | Player east of the brown shiny bottles east of rocky areas            |
+| 553  | Player east of the brown shiny bottles east of rocky areas.           |
+| 554  | Player east of the brown shiny bottles east of the rocky area         |
+| 555  | Player east of the brown shiny bottles east of the rocky area.        |
+| 556  | Player east of the brown shiny bottles east of the rocky areas        |
+| 557  | Player east of the brown shiny bottles east of the rocky areas.       |
+| 558  | Player east of the brown shiny bottles, east of a rocky area          |
+| 559  | Player east of the brown shiny bottles, east of rocky area            |
+| 560  | Player east of the brown shiny bottles, east of rocky areas           |
+| 561  | Player east of the brown shiny bottles, east of the rocky area        |
+| 562  | Player east of the brown shiny bottles, east of the rocky areas       |
+| 563  | Player east of the rocky area east of a brown shiny bottle            |
+| 564  | Player east of the rocky area east of a brown shiny bottle.           |
+| 565  | Player east of the rocky area east of a shiny brown bottle            |
+| 566  | Player east of the rocky area east of a shiny brown bottle.           |
+| 567  | Player east of the rocky area east of brown shiny bottles             |
+| 568  | Player east of the rocky area east of brown shiny bottles.            |
+| 569  | Player east of the rocky area east of shiny brown bottles             |
+| 570  | Player east of the rocky area east of shiny brown bottles.            |
+| 571  | Player east of the rocky area east of the brown shiny bottle          |
+| 572  | Player east of the rocky area east of the brown shiny bottle.         |
+| 573  | Player east of the rocky area east of the brown shiny bottles         |
+| 574  | Player east of the rocky area east of the brown shiny bottles.        |
+| 575  | Player east of the rocky area east of the shiny brown bottle          |
+| 576  | Player east of the rocky area east of the shiny brown bottle.         |
+| 577  | Player east of the rocky area east of the shiny brown bottles         |
+| 578  | Player east of the rocky area east of the shiny brown bottles.        |
+| 579  | Player east of the rocky area, east of a brown shiny bottle           |
+| 580  | Player east of the rocky area, east of a shiny brown bottle           |
+| 581  | Player east of the rocky area, east of brown shiny bottles            |
+| 582  | Player east of the rocky area, east of shiny brown bottles            |
+| 583  | Player east of the rocky area, east of the brown shiny bottle         |
+| 584  | Player east of the rocky area, east of the brown shiny bottles        |
+| 585  | Player east of the rocky area, east of the shiny brown bottle         |
+| 586  | Player east of the rocky area, east of the shiny brown bottles        |
+| 587  | Player east of the rocky areas east of a brown shiny bottle           |
+| 588  | Player east of the rocky areas east of a brown shiny bottle.          |
+| 589  | Player east of the rocky areas east of a shiny brown bottle           |
+| 590  | Player east of the rocky areas east of a shiny brown bottle.          |
+| 591  | Player east of the rocky areas east of brown shiny bottles            |
+| 592  | Player east of the rocky areas east of brown shiny bottles.           |
+| 593  | Player east of the rocky areas east of shiny brown bottles            |
+| 594  | Player east of the rocky areas east of shiny brown bottles.           |
+| 595  | Player east of the rocky areas east of the brown shiny bottle         |
+| 596  | Player east of the rocky areas east of the brown shiny bottle.        |
+| 597  | Player east of the rocky areas east of the brown shiny bottles        |
+| 598  | Player east of the rocky areas east of the brown shiny bottles.       |
+| 599  | Player east of the rocky areas east of the shiny brown bottle         |
+| 600  | Player east of the rocky areas east of the shiny brown bottle.        |
+| 601  | Player east of the rocky areas east of the shiny brown bottles        |
+| 602  | Player east of the rocky areas east of the shiny brown bottles.       |
+| 603  | Player east of the rocky areas, east of a brown shiny bottle          |
+| 604  | Player east of the rocky areas, east of a shiny brown bottle          |
+| 605  | Player east of the rocky areas, east of brown shiny bottles           |
+| 606  | Player east of the rocky areas, east of shiny brown bottles           |
+| 607  | Player east of the rocky areas, east of the brown shiny bottle        |
+| 608  | Player east of the rocky areas, east of the brown shiny bottles       |
+| 609  | Player east of the rocky areas, east of the shiny brown bottle        |
+| 610  | Player east of the rocky areas, east of the shiny brown bottles       |
+| 611  | Player east of the shiny brown bottle east of a rocky area            |
+| 612  | Player east of the shiny brown bottle east of a rocky area.           |
+| 613  | Player east of the shiny brown bottle east of rocky area              |
+| 614  | Player east of the shiny brown bottle east of rocky area.             |
+| 615  | Player east of the shiny brown bottle east of rocky areas             |
+| 616  | Player east of the shiny brown bottle east of rocky areas.            |
+| 617  | Player east of the shiny brown bottle east of the rocky area          |
+| 618  | Player east of the shiny brown bottle east of the rocky area.         |
+| 619  | Player east of the shiny brown bottle east of the rocky areas         |
+| 620  | Player east of the shiny brown bottle east of the rocky areas.        |
+| 621  | Player east of the shiny brown bottle, east of a rocky area           |
+| 622  | Player east of the shiny brown bottle, east of rocky area             |
+| 623  | Player east of the shiny brown bottle, east of rocky areas            |
+| 624  | Player east of the shiny brown bottle, east of the rocky area         |
+| 625  | Player east of the shiny brown bottle, east of the rocky areas        |
+| 626  | Player east of the shiny brown bottles east of a rocky area           |
+| 627  | Player east of the shiny brown bottles east of a rocky area.          |
+| 628  | Player east of the shiny brown bottles east of rocky area             |
+| 629  | Player east of the shiny brown bottles east of rocky area.            |
+| 630  | Player east of the shiny brown bottles east of rocky areas            |
+| 631  | Player east of the shiny brown bottles east of rocky areas.           |
+| 632  | Player east of the shiny brown bottles east of the rocky area         |
+| 633  | Player east of the shiny brown bottles east of the rocky area.        |
+| 634  | Player east of the shiny brown bottles east of the rocky areas        |
+| 635  | Player east of the shiny brown bottles east of the rocky areas.       |
+| 636  | Player east of the shiny brown bottles, east of a rocky area          |
+| 637  | Player east of the shiny brown bottles, east of rocky area            |
+| 638  | Player east of the shiny brown bottles, east of rocky areas           |
+| 639  | Player east of the shiny brown bottles, east of the rocky area        |
+| 640  | Player east of the shiny brown bottles, east of the rocky areas       |
+| 641  | Player, east of a brown shiny bottle east of a rocky area             |
+| 642  | Player, east of a brown shiny bottle east of a rocky area.            |
+| 643  | Player, east of a brown shiny bottle east of rocky area               |
+| 644  | Player, east of a brown shiny bottle east of rocky area.              |
+| 645  | Player, east of a brown shiny bottle east of rocky areas              |
+| 646  | Player, east of a brown shiny bottle east of rocky areas.             |
+| 647  | Player, east of a brown shiny bottle east of the rocky area           |
+| 648  | Player, east of a brown shiny bottle east of the rocky area.          |
+| 649  | Player, east of a brown shiny bottle east of the rocky areas          |
+| 650  | Player, east of a brown shiny bottle east of the rocky areas.         |
+| 651  | Player, east of a rocky area east of a brown shiny bottle             |
+| 652  | Player, east of a rocky area east of a brown shiny bottle.            |
+| 653  | Player, east of a rocky area east of a shiny brown bottle             |
+| 654  | Player, east of a rocky area east of a shiny brown bottle.            |
+| 655  | Player, east of a rocky area east of brown shiny bottles              |
+| 656  | Player, east of a rocky area east of brown shiny bottles.             |
+| 657  | Player, east of a rocky area east of shiny brown bottles              |
+| 658  | Player, east of a rocky area east of shiny brown bottles.             |
+| 659  | Player, east of a rocky area east of the brown shiny bottle           |
+| 660  | Player, east of a rocky area east of the brown shiny bottle.          |
+| 661  | Player, east of a rocky area east of the brown shiny bottles          |
+| 662  | Player, east of a rocky area east of the brown shiny bottles.         |
+| 663  | Player, east of a rocky area east of the shiny brown bottle           |
+| 664  | Player, east of a rocky area east of the shiny brown bottle.          |
+| 665  | Player, east of a rocky area east of the shiny brown bottles          |
+| 666  | Player, east of a rocky area east of the shiny brown bottles.         |
+| 667  | Player, east of a shiny brown bottle east of a rocky area             |
+| 668  | Player, east of a shiny brown bottle east of a rocky area.            |
+| 669  | Player, east of a shiny brown bottle east of rocky area               |
+| 670  | Player, east of a shiny brown bottle east of rocky area.              |
+| 671  | Player, east of a shiny brown bottle east of rocky areas              |
+| 672  | Player, east of a shiny brown bottle east of rocky areas.             |
+| 673  | Player, east of a shiny brown bottle east of the rocky area           |
+| 674  | Player, east of a shiny brown bottle east of the rocky area.          |
+| 675  | Player, east of a shiny brown bottle east of the rocky areas          |
+| 676  | Player, east of a shiny brown bottle east of the rocky areas.         |
+| 677  | Player, east of brown shiny bottles east of a rocky area              |
+| 678  | Player, east of brown shiny bottles east of a rocky area.             |
+| 679  | Player, east of brown shiny bottles east of rocky area                |
+| 680  | Player, east of brown shiny bottles east of rocky area.               |
+| 681  | Player, east of brown shiny bottles east of rocky areas               |
+| 682  | Player, east of brown shiny bottles east of rocky areas.              |
+| 683  | Player, east of brown shiny bottles east of the rocky area            |
+| 684  | Player, east of brown shiny bottles east of the rocky area.           |
+| 685  | Player, east of brown shiny bottles east of the rocky areas           |
+| 686  | Player, east of brown shiny bottles east of the rocky areas.          |
+| 687  | Player, east of rocky area east of a brown shiny bottle               |
+| 688  | Player, east of rocky area east of a brown shiny bottle.              |
+| 689  | Player, east of rocky area east of a shiny brown bottle               |
+| 690  | Player, east of rocky area east of a shiny brown bottle.              |
+| 691  | Player, east of rocky area east of brown shiny bottles                |
+| 692  | Player, east of rocky area east of brown shiny bottles.               |
+| 693  | Player, east of rocky area east of shiny brown bottles                |
+| 694  | Player, east of rocky area east of shiny brown bottles.               |
+| 695  | Player, east of rocky area east of the brown shiny bottle             |
+| 696  | Player, east of rocky area east of the brown shiny bottle.            |
+| 697  | Player, east of rocky area east of the brown shiny bottles            |
+| 698  | Player, east of rocky area east of the brown shiny bottles.           |
+| 699  | Player, east of rocky area east of the shiny brown bottle             |
+| 700  | Player, east of rocky area east of the shiny brown bottle.            |
+| 701  | Player, east of rocky area east of the shiny brown bottles            |
+| 702  | Player, east of rocky area east of the shiny brown bottles.           |
+| 703  | Player, east of rocky areas east of a brown shiny bottle              |
+| 704  | Player, east of rocky areas east of a brown shiny bottle.             |
+| 705  | Player, east of rocky areas east of a shiny brown bottle              |
+| 706  | Player, east of rocky areas east of a shiny brown bottle.             |
+| 707  | Player, east of rocky areas east of brown shiny bottles               |
+| 708  | Player, east of rocky areas east of brown shiny bottles.              |
+| 709  | Player, east of rocky areas east of shiny brown bottles               |
+| 710  | Player, east of rocky areas east of shiny brown bottles.              |
+| 711  | Player, east of rocky areas east of the brown shiny bottle            |
+| 712  | Player, east of rocky areas east of the brown shiny bottle.           |
+| 713  | Player, east of rocky areas east of the brown shiny bottles           |
+| 714  | Player, east of rocky areas east of the brown shiny bottles.          |
+| 715  | Player, east of rocky areas east of the shiny brown bottle            |
+| 716  | Player, east of rocky areas east of the shiny brown bottle.           |
+| 717  | Player, east of rocky areas east of the shiny brown bottles           |
+| 718  | Player, east of rocky areas east of the shiny brown bottles.          |
+| 719  | Player, east of shiny brown bottles east of a rocky area              |
+| 720  | Player, east of shiny brown bottles east of a rocky area.             |
+| 721  | Player, east of shiny brown bottles east of rocky area                |
+| 722  | Player, east of shiny brown bottles east of rocky area.               |
+| 723  | Player, east of shiny brown bottles east of rocky areas               |
+| 724  | Player, east of shiny brown bottles east of rocky areas.              |
+| 725  | Player, east of shiny brown bottles east of the rocky area            |
+| 726  | Player, east of shiny brown bottles east of the rocky area.           |
+| 727  | Player, east of shiny brown bottles east of the rocky areas           |
+| 728  | Player, east of shiny brown bottles east of the rocky areas.          |
+| 729  | Player, east of the brown shiny bottle east of a rocky area           |
+| 730  | Player, east of the brown shiny bottle east of a rocky area.          |
+| 731  | Player, east of the brown shiny bottle east of rocky area             |
+| 732  | Player, east of the brown shiny bottle east of rocky area.            |
+| 733  | Player, east of the brown shiny bottle east of rocky areas            |
+| 734  | Player, east of the brown shiny bottle east of rocky areas.           |
+| 735  | Player, east of the brown shiny bottle east of the rocky area         |
+| 736  | Player, east of the brown shiny bottle east of the rocky area.        |
+| 737  | Player, east of the brown shiny bottle east of the rocky areas        |
+| 738  | Player, east of the brown shiny bottle east of the rocky areas.       |
+| 739  | Player, east of the brown shiny bottles east of a rocky area          |
+| 740  | Player, east of the brown shiny bottles east of a rocky area.         |
+| 741  | Player, east of the brown shiny bottles east of rocky area            |
+| 742  | Player, east of the brown shiny bottles east of rocky area.           |
+| 743  | Player, east of the brown shiny bottles east of rocky areas           |
+| 744  | Player, east of the brown shiny bottles east of rocky areas.          |
+| 745  | Player, east of the brown shiny bottles east of the rocky area        |
+| 746  | Player, east of the brown shiny bottles east of the rocky area.       |
+| 747  | Player, east of the brown shiny bottles east of the rocky areas       |
+| 748  | Player, east of the brown shiny bottles east of the rocky areas.      |
+| 749  | Player, east of the rocky area east of a brown shiny bottle           |
+| 750  | Player, east of the rocky area east of a brown shiny bottle.          |
+| 751  | Player, east of the rocky area east of a shiny brown bottle           |
+| 752  | Player, east of the rocky area east of a shiny brown bottle.          |
+| 753  | Player, east of the rocky area east of brown shiny bottles            |
+| 754  | Player, east of the rocky area east of brown shiny bottles.           |
+| 755  | Player, east of the rocky area east of shiny brown bottles            |
+| 756  | Player, east of the rocky area east of shiny brown bottles.           |
+| 757  | Player, east of the rocky area east of the brown shiny bottle         |
+| 758  | Player, east of the rocky area east of the brown shiny bottle.        |
+| 759  | Player, east of the rocky area east of the brown shiny bottles        |
+| 760  | Player, east of the rocky area east of the brown shiny bottles.       |
+| 761  | Player, east of the rocky area east of the shiny brown bottle         |
+| 762  | Player, east of the rocky area east of the shiny brown bottle.        |
+| 763  | Player, east of the rocky area east of the shiny brown bottles        |
+| 764  | Player, east of the rocky area east of the shiny brown bottles.       |
+| 765  | Player, east of the rocky areas east of a brown shiny bottle          |
+| 766  | Player, east of the rocky areas east of a brown shiny bottle.         |
+| 767  | Player, east of the rocky areas east of a shiny brown bottle          |
+| 768  | Player, east of the rocky areas east of a shiny brown bottle.         |
+| 769  | Player, east of the rocky areas east of brown shiny bottles           |
+| 770  | Player, east of the rocky areas east of brown shiny bottles.          |
+| 771  | Player, east of the rocky areas east of shiny brown bottles           |
+| 772  | Player, east of the rocky areas east of shiny brown bottles.          |
+| 773  | Player, east of the rocky areas east of the brown shiny bottle        |
+| 774  | Player, east of the rocky areas east of the brown shiny bottle.       |
+| 775  | Player, east of the rocky areas east of the brown shiny bottles       |
+| 776  | Player, east of the rocky areas east of the brown shiny bottles.      |
+| 777  | Player, east of the rocky areas east of the shiny brown bottle        |
+| 778  | Player, east of the rocky areas east of the shiny brown bottle.       |
+| 779  | Player, east of the rocky areas east of the shiny brown bottles       |
+| 780  | Player, east of the rocky areas east of the shiny brown bottles.      |
+| 781  | Player, east of the shiny brown bottle east of a rocky area           |
+| 782  | Player, east of the shiny brown bottle east of a rocky area.          |
+| 783  | Player, east of the shiny brown bottle east of rocky area             |
+| 784  | Player, east of the shiny brown bottle east of rocky area.            |
+| 785  | Player, east of the shiny brown bottle east of rocky areas            |
+| 786  | Player, east of the shiny brown bottle east of rocky areas.           |
+| 787  | Player, east of the shiny brown bottle east of the rocky area         |
+| 788  | Player, east of the shiny brown bottle east of the rocky area.        |
+| 789  | Player, east of the shiny brown bottle east of the rocky areas        |
+| 790  | Player, east of the shiny brown bottle east of the rocky areas.       |
+| 791  | Player, east of the shiny brown bottles east of a rocky area          |
+| 792  | Player, east of the shiny brown bottles east of a rocky area.         |
+| 793  | Player, east of the shiny brown bottles east of rocky area            |
+| 794  | Player, east of the shiny brown bottles east of rocky area.           |
+| 795  | Player, east of the shiny brown bottles east of rocky areas           |
+| 796  | Player, east of the shiny brown bottles east of rocky areas.          |
+| 797  | Player, east of the shiny brown bottles east of the rocky area        |
+| 798  | Player, east of the shiny brown bottles east of the rocky area.       |
+| 799  | Player, east of the shiny brown bottles east of the rocky areas       |
+| 800  | Player, east of the shiny brown bottles east of the rocky areas.      |
+| 801  | Players east of a brown shiny bottle east of a rocky area             |
+| 802  | Players east of a brown shiny bottle east of a rocky area.            |
+| 803  | Players east of a brown shiny bottle east of rocky area               |
+| 804  | Players east of a brown shiny bottle east of rocky area.              |
+| 805  | Players east of a brown shiny bottle east of rocky areas              |
+| 806  | Players east of a brown shiny bottle east of rocky areas.             |
+| 807  | Players east of a brown shiny bottle east of the rocky area           |
+| 808  | Players east of a brown shiny bottle east of the rocky area.          |
+| 809  | Players east of a brown shiny bottle east of the rocky areas          |
+| 810  | Players east of a brown shiny bottle east of the rocky areas.         |
+| 811  | Players east of a brown shiny bottle, east of a rocky area            |
+| 812  | Players east of a brown shiny bottle, east of rocky area              |
+| 813  | Players east of a brown shiny bottle, east of rocky areas             |
+| 814  | Players east of a brown shiny bottle, east of the rocky area          |
+| 815  | Players east of a brown shiny bottle, east of the rocky areas         |
+| 816  | Players east of a rocky area east of a brown shiny bottle             |
+| 817  | Players east of a rocky area east of a brown shiny bottle.            |
+| 818  | Players east of a rocky area east of a shiny brown bottle             |
+| 819  | Players east of a rocky area east of a shiny brown bottle.            |
+| 820  | Players east of a rocky area east of brown shiny bottles              |
+| 821  | Players east of a rocky area east of brown shiny bottles.             |
+| 822  | Players east of a rocky area east of shiny brown bottles              |
+| 823  | Players east of a rocky area east of shiny brown bottles.             |
+| 824  | Players east of a rocky area east of the brown shiny bottle           |
+| 825  | Players east of a rocky area east of the brown shiny bottle.          |
+| 826  | Players east of a rocky area east of the brown shiny bottles          |
+| 827  | Players east of a rocky area east of the brown shiny bottles.         |
+| 828  | Players east of a rocky area east of the shiny brown bottle           |
+| 829  | Players east of a rocky area east of the shiny brown bottle.          |
+| 830  | Players east of a rocky area east of the shiny brown bottles          |
+| 831  | Players east of a rocky area east of the shiny brown bottles.         |
+| 832  | Players east of a rocky area, east of a brown shiny bottle            |
+| 833  | Players east of a rocky area, east of a shiny brown bottle            |
+| 834  | Players east of a rocky area, east of brown shiny bottles             |
+| 835  | Players east of a rocky area, east of shiny brown bottles             |
+| 836  | Players east of a rocky area, east of the brown shiny bottle          |
+| 837  | Players east of a rocky area, east of the brown shiny bottles         |
+| 838  | Players east of a rocky area, east of the shiny brown bottle          |
+| 839  | Players east of a rocky area, east of the shiny brown bottles         |
+| 840  | Players east of a shiny brown bottle east of a rocky area             |
+| 841  | Players east of a shiny brown bottle east of a rocky area.            |
+| 842  | Players east of a shiny brown bottle east of rocky area               |
+| 843  | Players east of a shiny brown bottle east of rocky area.              |
+| 844  | Players east of a shiny brown bottle east of rocky areas              |
+| 845  | Players east of a shiny brown bottle east of rocky areas.             |
+| 846  | Players east of a shiny brown bottle east of the rocky area           |
+| 847  | Players east of a shiny brown bottle east of the rocky area.          |
+| 848  | Players east of a shiny brown bottle east of the rocky areas          |
+| 849  | Players east of a shiny brown bottle east of the rocky areas.         |
+| 850  | Players east of a shiny brown bottle, east of a rocky area            |
+| 851  | Players east of a shiny brown bottle, east of rocky area              |
+| 852  | Players east of a shiny brown bottle, east of rocky areas             |
+| 853  | Players east of a shiny brown bottle, east of the rocky area          |
+| 854  | Players east of a shiny brown bottle, east of the rocky areas         |
+| 855  | Players east of brown shiny bottles east of a rocky area              |
+| 856  | Players east of brown shiny bottles east of a rocky area.             |
+| 857  | Players east of brown shiny bottles east of rocky area                |
+| 858  | Players east of brown shiny bottles east of rocky area.               |
+| 859  | Players east of brown shiny bottles east of rocky areas               |
+| 860  | Players east of brown shiny bottles east of rocky areas.              |
+| 861  | Players east of brown shiny bottles east of the rocky area            |
+| 862  | Players east of brown shiny bottles east of the rocky area.           |
+| 863  | Players east of brown shiny bottles east of the rocky areas           |
+| 864  | Players east of brown shiny bottles east of the rocky areas.          |
+| 865  | Players east of brown shiny bottles, east of a rocky area             |
+| 866  | Players east of brown shiny bottles, east of rocky area               |
+| 867  | Players east of brown shiny bottles, east of rocky areas              |
+| 868  | Players east of brown shiny bottles, east of the rocky area           |
+| 869  | Players east of brown shiny bottles, east of the rocky areas          |
+| 870  | Players east of rocky area east of a brown shiny bottle               |
+| 871  | Players east of rocky area east of a brown shiny bottle.              |
+| 872  | Players east of rocky area east of a shiny brown bottle               |
+| 873  | Players east of rocky area east of a shiny brown bottle.              |
+| 874  | Players east of rocky area east of brown shiny bottles                |
+| 875  | Players east of rocky area east of brown shiny bottles.               |
+| 876  | Players east of rocky area east of shiny brown bottles                |
+| 877  | Players east of rocky area east of shiny brown bottles.               |
+| 878  | Players east of rocky area east of the brown shiny bottle             |
+| 879  | Players east of rocky area east of the brown shiny bottle.            |
+| 880  | Players east of rocky area east of the brown shiny bottles            |
+| 881  | Players east of rocky area east of the brown shiny bottles.           |
+| 882  | Players east of rocky area east of the shiny brown bottle             |
+| 883  | Players east of rocky area east of the shiny brown bottle.            |
+| 884  | Players east of rocky area east of the shiny brown bottles            |
+| 885  | Players east of rocky area east of the shiny brown bottles.           |
+| 886  | Players east of rocky area, east of a brown shiny bottle              |
+| 887  | Players east of rocky area, east of a shiny brown bottle              |
+| 888  | Players east of rocky area, east of brown shiny bottles               |
+| 889  | Players east of rocky area, east of shiny brown bottles               |
+| 890  | Players east of rocky area, east of the brown shiny bottle            |
+| 891  | Players east of rocky area, east of the brown shiny bottles           |
+| 892  | Players east of rocky area, east of the shiny brown bottle            |
+| 893  | Players east of rocky area, east of the shiny brown bottles           |
+| 894  | Players east of rocky areas east of a brown shiny bottle              |
+| 895  | Players east of rocky areas east of a brown shiny bottle.             |
+| 896  | Players east of rocky areas east of a shiny brown bottle              |
+| 897  | Players east of rocky areas east of a shiny brown bottle.             |
+| 898  | Players east of rocky areas east of brown shiny bottles               |
+| 899  | Players east of rocky areas east of brown shiny bottles.              |
+| 900  | Players east of rocky areas east of shiny brown bottles               |
+| 901  | Players east of rocky areas east of shiny brown bottles.              |
+| 902  | Players east of rocky areas east of the brown shiny bottle            |
+| 903  | Players east of rocky areas east of the brown shiny bottle.           |
+| 904  | Players east of rocky areas east of the brown shiny bottles           |
+| 905  | Players east of rocky areas east of the brown shiny bottles.          |
+| 906  | Players east of rocky areas east of the shiny brown bottle            |
+| 907  | Players east of rocky areas east of the shiny brown bottle.           |
+| 908  | Players east of rocky areas east of the shiny brown bottles           |
+| 909  | Players east of rocky areas east of the shiny brown bottles.          |
+| 910  | Players east of rocky areas, east of a brown shiny bottle             |
+| 911  | Players east of rocky areas, east of a shiny brown bottle             |
+| 912  | Players east of rocky areas, east of brown shiny bottles              |
+| 913  | Players east of rocky areas, east of shiny brown bottles              |
+| 914  | Players east of rocky areas, east of the brown shiny bottle           |
+| 915  | Players east of rocky areas, east of the brown shiny bottles          |
+| 916  | Players east of rocky areas, east of the shiny brown bottle           |
+| 917  | Players east of rocky areas, east of the shiny brown bottles          |
+| 918  | Players east of shiny brown bottles east of a rocky area              |
+| 919  | Players east of shiny brown bottles east of a rocky area.             |
+| 920  | Players east of shiny brown bottles east of rocky area                |
+| 921  | Players east of shiny brown bottles east of rocky area.               |
+| 922  | Players east of shiny brown bottles east of rocky areas               |
+| 923  | Players east of shiny brown bottles east of rocky areas.              |
+| 924  | Players east of shiny brown bottles east of the rocky area            |
+| 925  | Players east of shiny brown bottles east of the rocky area.           |
+| 926  | Players east of shiny brown bottles east of the rocky areas           |
+| 927  | Players east of shiny brown bottles east of the rocky areas.          |
+| 928  | Players east of shiny brown bottles, east of a rocky area             |
+| 929  | Players east of shiny brown bottles, east of rocky area               |
+| 930  | Players east of shiny brown bottles, east of rocky areas              |
+| 931  | Players east of shiny brown bottles, east of the rocky area           |
+| 932  | Players east of shiny brown bottles, east of the rocky areas          |
+| 933  | Players east of the brown shiny bottle east of a rocky area           |
+| 934  | Players east of the brown shiny bottle east of a rocky area.          |
+| 935  | Players east of the brown shiny bottle east of rocky area             |
+| 936  | Players east of the brown shiny bottle east of rocky area.            |
+| 937  | Players east of the brown shiny bottle east of rocky areas            |
+| 938  | Players east of the brown shiny bottle east of rocky areas.           |
+| 939  | Players east of the brown shiny bottle east of the rocky area         |
+| 940  | Players east of the brown shiny bottle east of the rocky area.        |
+| 941  | Players east of the brown shiny bottle east of the rocky areas        |
+| 942  | Players east of the brown shiny bottle east of the rocky areas.       |
+| 943  | Players east of the brown shiny bottle, east of a rocky area          |
+| 944  | Players east of the brown shiny bottle, east of rocky area            |
+| 945  | Players east of the brown shiny bottle, east of rocky areas           |
+| 946  | Players east of the brown shiny bottle, east of the rocky area        |
+| 947  | Players east of the brown shiny bottle, east of the rocky areas       |
+| 948  | Players east of the brown shiny bottles east of a rocky area          |
+| 949  | Players east of the brown shiny bottles east of a rocky area.         |
+| 950  | Players east of the brown shiny bottles east of rocky area            |
+| 951  | Players east of the brown shiny bottles east of rocky area.           |
+| 952  | Players east of the brown shiny bottles east of rocky areas           |
+| 953  | Players east of the brown shiny bottles east of rocky areas.          |
+| 954  | Players east of the brown shiny bottles east of the rocky area        |
+| 955  | Players east of the brown shiny bottles east of the rocky area.       |
+| 956  | Players east of the brown shiny bottles east of the rocky areas       |
+| 957  | Players east of the brown shiny bottles east of the rocky areas.      |
+| 958  | Players east of the brown shiny bottles, east of a rocky area         |
+| 959  | Players east of the brown shiny bottles, east of rocky area           |
+| 960  | Players east of the brown shiny bottles, east of rocky areas          |
+| 961  | Players east of the brown shiny bottles, east of the rocky area       |
+| 962  | Players east of the brown shiny bottles, east of the rocky areas      |
+| 963  | Players east of the rocky area east of a brown shiny bottle           |
+| 964  | Players east of the rocky area east of a brown shiny bottle.          |
+| 965  | Players east of the rocky area east of a shiny brown bottle           |
+| 966  | Players east of the rocky area east of a shiny brown bottle.          |
+| 967  | Players east of the rocky area east of brown shiny bottles            |
+| 968  | Players east of the rocky area east of brown shiny bottles.           |
+| 969  | Players east of the rocky area east of shiny brown bottles            |
+| 970  | Players east of the rocky area east of shiny brown bottles.           |
+| 971  | Players east of the rocky area east of the brown shiny bottle         |
+| 972  | Players east of the rocky area east of the brown shiny bottle.        |
+| 973  | Players east of the rocky area east of the brown shiny bottles        |
+| 974  | Players east of the rocky area east of the brown shiny bottles.       |
+| 975  | Players east of the rocky area east of the shiny brown bottle         |
+| 976  | Players east of the rocky area east of the shiny brown bottle.        |
+| 977  | Players east of the rocky area east of the shiny brown bottles        |
+| 978  | Players east of the rocky area east of the shiny brown bottles.       |
+| 979  | Players east of the rocky area, east of a brown shiny bottle          |
+| 980  | Players east of the rocky area, east of a shiny brown bottle          |
+| 981  | Players east of the rocky area, east of brown shiny bottles           |
+| 982  | Players east of the rocky area, east of shiny brown bottles           |
+| 983  | Players east of the rocky area, east of the brown shiny bottle        |
+| 984  | Players east of the rocky area, east of the brown shiny bottles       |
+| 985  | Players east of the rocky area, east of the shiny brown bottle        |
+| 986  | Players east of the rocky area, east of the shiny brown bottles       |
+| 987  | Players east of the rocky areas east of a brown shiny bottle          |
+| 988  | Players east of the rocky areas east of a brown shiny bottle.         |
+| 989  | Players east of the rocky areas east of a shiny brown bottle          |
+| 990  | Players east of the rocky areas east of a shiny brown bottle.         |
+| 991  | Players east of the rocky areas east of brown shiny bottles           |
+| 992  | Players east of the rocky areas east of brown shiny bottles.          |
+| 993  | Players east of the rocky areas east of shiny brown bottles           |
+| 994  | Players east of the rocky areas east of shiny brown bottles.          |
+| 995  | Players east of the rocky areas east of the brown shiny bottle        |
+| 996  | Players east of the rocky areas east of the brown shiny bottle.       |
+| 997  | Players east of the rocky areas east of the brown shiny bottles       |
+| 998  | Players east of the rocky areas east of the brown shiny bottles.      |
+| 999  | Players east of the rocky areas east of the shiny brown bottle        |
+| 1000 | Players east of the rocky areas east of the shiny brown bottle.       |
+| 1001 | Players east of the rocky areas east of the shiny brown bottles       |
+| 1002 | Players east of the rocky areas east of the shiny brown bottles.      |
+| 1003 | Players east of the rocky areas, east of a brown shiny bottle         |
+| 1004 | Players east of the rocky areas, east of a shiny brown bottle         |
+| 1005 | Players east of the rocky areas, east of brown shiny bottles          |
+| 1006 | Players east of the rocky areas, east of shiny brown bottles          |
+| 1007 | Players east of the rocky areas, east of the brown shiny bottle       |
+| 1008 | Players east of the rocky areas, east of the brown shiny bottles      |
+| 1009 | Players east of the rocky areas, east of the shiny brown bottle       |
+| 1010 | Players east of the rocky areas, east of the shiny brown bottles      |
+| 1011 | Players east of the shiny brown bottle east of a rocky area           |
+| 1012 | Players east of the shiny brown bottle east of a rocky area.          |
+| 1013 | Players east of the shiny brown bottle east of rocky area             |
+| 1014 | Players east of the shiny brown bottle east of rocky area.            |
+| 1015 | Players east of the shiny brown bottle east of rocky areas            |
+| 1016 | Players east of the shiny brown bottle east of rocky areas.           |
+| 1017 | Players east of the shiny brown bottle east of the rocky area         |
+| 1018 | Players east of the shiny brown bottle east of the rocky area.        |
+| 1019 | Players east of the shiny brown bottle east of the rocky areas        |
+| 1020 | Players east of the shiny brown bottle east of the rocky areas.       |
+| 1021 | Players east of the shiny brown bottle, east of a rocky area          |
+| 1022 | Players east of the shiny brown bottle, east of rocky area            |
+| 1023 | Players east of the shiny brown bottle, east of rocky areas           |
+| 1024 | Players east of the shiny brown bottle, east of the rocky area        |
+| 1025 | Players east of the shiny brown bottle, east of the rocky areas       |
+| 1026 | Players east of the shiny brown bottles east of a rocky area          |
+| 1027 | Players east of the shiny brown bottles east of a rocky area.         |
+| 1028 | Players east of the shiny brown bottles east of rocky area            |
+| 1029 | Players east of the shiny brown bottles east of rocky area.           |
+| 1030 | Players east of the shiny brown bottles east of rocky areas           |
+| 1031 | Players east of the shiny brown bottles east of rocky areas.          |
+| 1032 | Players east of the shiny brown bottles east of the rocky area        |
+| 1033 | Players east of the shiny brown bottles east of the rocky area.       |
+| 1034 | Players east of the shiny brown bottles east of the rocky areas       |
+| 1035 | Players east of the shiny brown bottles east of the rocky areas.      |
+| 1036 | Players east of the shiny brown bottles, east of a rocky area         |
+| 1037 | Players east of the shiny brown bottles, east of rocky area           |
+| 1038 | Players east of the shiny brown bottles, east of rocky areas          |
+| 1039 | Players east of the shiny brown bottles, east of the rocky area       |
+| 1040 | Players east of the shiny brown bottles, east of the rocky areas      |
+| 1041 | Players, east of a brown shiny bottle east of a rocky area            |
+| 1042 | Players, east of a brown shiny bottle east of a rocky area.           |
+| 1043 | Players, east of a brown shiny bottle east of rocky area              |
+| 1044 | Players, east of a brown shiny bottle east of rocky area.             |
+| 1045 | Players, east of a brown shiny bottle east of rocky areas             |
+| 1046 | Players, east of a brown shiny bottle east of rocky areas.            |
+| 1047 | Players, east of a brown shiny bottle east of the rocky area          |
+| 1048 | Players, east of a brown shiny bottle east of the rocky area.         |
+| 1049 | Players, east of a brown shiny bottle east of the rocky areas         |
+| 1050 | Players, east of a brown shiny bottle east of the rocky areas.        |
+| 1051 | Players, east of a rocky area east of a brown shiny bottle            |
+| 1052 | Players, east of a rocky area east of a brown shiny bottle.           |
+| 1053 | Players, east of a rocky area east of a shiny brown bottle            |
+| 1054 | Players, east of a rocky area east of a shiny brown bottle.           |
+| 1055 | Players, east of a rocky area east of brown shiny bottles             |
+| 1056 | Players, east of a rocky area east of brown shiny bottles.            |
+| 1057 | Players, east of a rocky area east of shiny brown bottles             |
+| 1058 | Players, east of a rocky area east of shiny brown bottles.            |
+| 1059 | Players, east of a rocky area east of the brown shiny bottle          |
+| 1060 | Players, east of a rocky area east of the brown shiny bottle.         |
+| 1061 | Players, east of a rocky area east of the brown shiny bottles         |
+| 1062 | Players, east of a rocky area east of the brown shiny bottles.        |
+| 1063 | Players, east of a rocky area east of the shiny brown bottle          |
+| 1064 | Players, east of a rocky area east of the shiny brown bottle.         |
+| 1065 | Players, east of a rocky area east of the shiny brown bottles         |
+| 1066 | Players, east of a rocky area east of the shiny brown bottles.        |
+| 1067 | Players, east of a shiny brown bottle east of a rocky area            |
+| 1068 | Players, east of a shiny brown bottle east of a rocky area.           |
+| 1069 | Players, east of a shiny brown bottle east of rocky area              |
+| 1070 | Players, east of a shiny brown bottle east of rocky area.             |
+| 1071 | Players, east of a shiny brown bottle east of rocky areas             |
+| 1072 | Players, east of a shiny brown bottle east of rocky areas.            |
+| 1073 | Players, east of a shiny brown bottle east of the rocky area          |
+| 1074 | Players, east of a shiny brown bottle east of the rocky area.         |
+| 1075 | Players, east of a shiny brown bottle east of the rocky areas         |
+| 1076 | Players, east of a shiny brown bottle east of the rocky areas.        |
+| 1077 | Players, east of brown shiny bottles east of a rocky area             |
+| 1078 | Players, east of brown shiny bottles east of a rocky area.            |
+| 1079 | Players, east of brown shiny bottles east of rocky area               |
+| 1080 | Players, east of brown shiny bottles east of rocky area.              |
+| 1081 | Players, east of brown shiny bottles east of rocky areas              |
+| 1082 | Players, east of brown shiny bottles east of rocky areas.             |
+| 1083 | Players, east of brown shiny bottles east of the rocky area           |
+| 1084 | Players, east of brown shiny bottles east of the rocky area.          |
+| 1085 | Players, east of brown shiny bottles east of the rocky areas          |
+| 1086 | Players, east of brown shiny bottles east of the rocky areas.         |
+| 1087 | Players, east of rocky area east of a brown shiny bottle              |
+| 1088 | Players, east of rocky area east of a brown shiny bottle.             |
+| 1089 | Players, east of rocky area east of a shiny brown bottle              |
+| 1090 | Players, east of rocky area east of a shiny brown bottle.             |
+| 1091 | Players, east of rocky area east of brown shiny bottles               |
+| 1092 | Players, east of rocky area east of brown shiny bottles.              |
+| 1093 | Players, east of rocky area east of shiny brown bottles               |
+| 1094 | Players, east of rocky area east of shiny brown bottles.              |
+| 1095 | Players, east of rocky area east of the brown shiny bottle            |
+| 1096 | Players, east of rocky area east of the brown shiny bottle.           |
+| 1097 | Players, east of rocky area east of the brown shiny bottles           |
+| 1098 | Players, east of rocky area east of the brown shiny bottles.          |
+| 1099 | Players, east of rocky area east of the shiny brown bottle            |
+| 1100 | Players, east of rocky area east of the shiny brown bottle.           |
+| 1101 | Players, east of rocky area east of the shiny brown bottles           |
+| 1102 | Players, east of rocky area east of the shiny brown bottles.          |
+| 1103 | Players, east of rocky areas east of a brown shiny bottle             |
+| 1104 | Players, east of rocky areas east of a brown shiny bottle.            |
+| 1105 | Players, east of rocky areas east of a shiny brown bottle             |
+| 1106 | Players, east of rocky areas east of a shiny brown bottle.            |
+| 1107 | Players, east of rocky areas east of brown shiny bottles              |
+| 1108 | Players, east of rocky areas east of brown shiny bottles.             |
+| 1109 | Players, east of rocky areas east of shiny brown bottles              |
+| 1110 | Players, east of rocky areas east of shiny brown bottles.             |
+| 1111 | Players, east of rocky areas east of the brown shiny bottle           |
+| 1112 | Players, east of rocky areas east of the brown shiny bottle.          |
+| 1113 | Players, east of rocky areas east of the brown shiny bottles          |
+| 1114 | Players, east of rocky areas east of the brown shiny bottles.         |
+| 1115 | Players, east of rocky areas east of the shiny brown bottle           |
+| 1116 | Players, east of rocky areas east of the shiny brown bottle.          |
+| 1117 | Players, east of rocky areas east of the shiny brown bottles          |
+| 1118 | Players, east of rocky areas east of the shiny brown bottles.         |
+| 1119 | Players, east of shiny brown bottles east of a rocky area             |
+| 1120 | Players, east of shiny brown bottles east of a rocky area.            |
+| 1121 | Players, east of shiny brown bottles east of rocky area               |
+| 1122 | Players, east of shiny brown bottles east of rocky area.              |
+| 1123 | Players, east of shiny brown bottles east of rocky areas              |
+| 1124 | Players, east of shiny brown bottles east of rocky areas.             |
+| 1125 | Players, east of shiny brown bottles east of the rocky area           |
+| 1126 | Players, east of shiny brown bottles east of the rocky area.          |
+| 1127 | Players, east of shiny brown bottles east of the rocky areas          |
+| 1128 | Players, east of shiny brown bottles east of the rocky areas.         |
+| 1129 | Players, east of the brown shiny bottle east of a rocky area          |
+| 1130 | Players, east of the brown shiny bottle east of a rocky area.         |
+| 1131 | Players, east of the brown shiny bottle east of rocky area            |
+| 1132 | Players, east of the brown shiny bottle east of rocky area.           |
+| 1133 | Players, east of the brown shiny bottle east of rocky areas           |
+| 1134 | Players, east of the brown shiny bottle east of rocky areas.          |
+| 1135 | Players, east of the brown shiny bottle east of the rocky area        |
+| 1136 | Players, east of the brown shiny bottle east of the rocky area.       |
+| 1137 | Players, east of the brown shiny bottle east of the rocky areas       |
+| 1138 | Players, east of the brown shiny bottle east of the rocky areas.      |
+| 1139 | Players, east of the brown shiny bottles east of a rocky area         |
+| 1140 | Players, east of the brown shiny bottles east of a rocky area.        |
+| 1141 | Players, east of the brown shiny bottles east of rocky area           |
+| 1142 | Players, east of the brown shiny bottles east of rocky area.          |
+| 1143 | Players, east of the brown shiny bottles east of rocky areas          |
+| 1144 | Players, east of the brown shiny bottles east of rocky areas.         |
+| 1145 | Players, east of the brown shiny bottles east of the rocky area       |
+| 1146 | Players, east of the brown shiny bottles east of the rocky area.      |
+| 1147 | Players, east of the brown shiny bottles east of the rocky areas      |
+| 1148 | Players, east of the brown shiny bottles east of the rocky areas.     |
+| 1149 | Players, east of the rocky area east of a brown shiny bottle          |
+| 1150 | Players, east of the rocky area east of a brown shiny bottle.         |
+| 1151 | Players, east of the rocky area east of a shiny brown bottle          |
+| 1152 | Players, east of the rocky area east of a shiny brown bottle.         |
+| 1153 | Players, east of the rocky area east of brown shiny bottles           |
+| 1154 | Players, east of the rocky area east of brown shiny bottles.          |
+| 1155 | Players, east of the rocky area east of shiny brown bottles           |
+| 1156 | Players, east of the rocky area east of shiny brown bottles.          |
+| 1157 | Players, east of the rocky area east of the brown shiny bottle        |
+| 1158 | Players, east of the rocky area east of the brown shiny bottle.       |
+| 1159 | Players, east of the rocky area east of the brown shiny bottles       |
+| 1160 | Players, east of the rocky area east of the brown shiny bottles.      |
+| 1161 | Players, east of the rocky area east of the shiny brown bottle        |
+| 1162 | Players, east of the rocky area east of the shiny brown bottle.       |
+| 1163 | Players, east of the rocky area east of the shiny brown bottles       |
+| 1164 | Players, east of the rocky area east of the shiny brown bottles.      |
+| 1165 | Players, east of the rocky areas east of a brown shiny bottle         |
+| 1166 | Players, east of the rocky areas east of a brown shiny bottle.        |
+| 1167 | Players, east of the rocky areas east of a shiny brown bottle         |
+| 1168 | Players, east of the rocky areas east of a shiny brown bottle.        |
+| 1169 | Players, east of the rocky areas east of brown shiny bottles          |
+| 1170 | Players, east of the rocky areas east of brown shiny bottles.         |
+| 1171 | Players, east of the rocky areas east of shiny brown bottles          |
+| 1172 | Players, east of the rocky areas east of shiny brown bottles.         |
+| 1173 | Players, east of the rocky areas east of the brown shiny bottle       |
+| 1174 | Players, east of the rocky areas east of the brown shiny bottle.      |
+| 1175 | Players, east of the rocky areas east of the brown shiny bottles      |
+| 1176 | Players, east of the rocky areas east of the brown shiny bottles.     |
+| 1177 | Players, east of the rocky areas east of the shiny brown bottle       |
+| 1178 | Players, east of the rocky areas east of the shiny brown bottle.      |
+| 1179 | Players, east of the rocky areas east of the shiny brown bottles      |
+| 1180 | Players, east of the rocky areas east of the shiny brown bottles.     |
+| 1181 | Players, east of the shiny brown bottle east of a rocky area          |
+| 1182 | Players, east of the shiny brown bottle east of a rocky area.         |
+| 1183 | Players, east of the shiny brown bottle east of rocky area            |
+| 1184 | Players, east of the shiny brown bottle east of rocky area.           |
+| 1185 | Players, east of the shiny brown bottle east of rocky areas           |
+| 1186 | Players, east of the shiny brown bottle east of rocky areas.          |
+| 1187 | Players, east of the shiny brown bottle east of the rocky area        |
+| 1188 | Players, east of the shiny brown bottle east of the rocky area.       |
+| 1189 | Players, east of the shiny brown bottle east of the rocky areas       |
+| 1190 | Players, east of the shiny brown bottle east of the rocky areas.      |
+| 1191 | Players, east of the shiny brown bottles east of a rocky area         |
+| 1192 | Players, east of the shiny brown bottles east of a rocky area.        |
+| 1193 | Players, east of the shiny brown bottles east of rocky area           |
+| 1194 | Players, east of the shiny brown bottles east of rocky area.          |
+| 1195 | Players, east of the shiny brown bottles east of rocky areas          |
+| 1196 | Players, east of the shiny brown bottles east of rocky areas.         |
+| 1197 | Players, east of the shiny brown bottles east of the rocky area       |
+| 1198 | Players, east of the shiny brown bottles east of the rocky area.      |
+| 1199 | Players, east of the shiny brown bottles east of the rocky areas      |
+| 1200 | Players, east of the shiny brown bottles east of the rocky areas.     |
+| 1201 | The player east of a brown shiny bottle east of a rocky area          |
+| 1202 | The player east of a brown shiny bottle east of a rocky area.         |
+| 1203 | The player east of a brown shiny bottle east of rocky area            |
+| 1204 | The player east of a brown shiny bottle east of rocky area.           |
+| 1205 | The player east of a brown shiny bottle east of rocky areas           |
+| 1206 | The player east of a brown shiny bottle east of rocky areas.          |
+| 1207 | The player east of a brown shiny bottle east of the rocky area        |
+| 1208 | The player east of a brown shiny bottle east of the rocky area.       |
+| 1209 | The player east of a brown shiny bottle east of the rocky areas       |
+| 1210 | The player east of a brown shiny bottle east of the rocky areas.      |
+| 1211 | The player east of a brown shiny bottle, east of a rocky area         |
+| 1212 | The player east of a brown shiny bottle, east of rocky area           |
+| 1213 | The player east of a brown shiny bottle, east of rocky areas          |
+| 1214 | The player east of a brown shiny bottle, east of the rocky area       |
+| 1215 | The player east of a brown shiny bottle, east of the rocky areas      |
+| 1216 | The player east of a rocky area east of a brown shiny bottle          |
+| 1217 | The player east of a rocky area east of a brown shiny bottle.         |
+| 1218 | The player east of a rocky area east of a shiny brown bottle          |
+| 1219 | The player east of a rocky area east of a shiny brown bottle.         |
+| 1220 | The player east of a rocky area east of brown shiny bottles           |
+| 1221 | The player east of a rocky area east of brown shiny bottles.          |
+| 1222 | The player east of a rocky area east of shiny brown bottles           |
+| 1223 | The player east of a rocky area east of shiny brown bottles.          |
+| 1224 | The player east of a rocky area east of the brown shiny bottle        |
+| 1225 | The player east of a rocky area east of the brown shiny bottle.       |
+| 1226 | The player east of a rocky area east of the brown shiny bottles       |
+| 1227 | The player east of a rocky area east of the brown shiny bottles.      |
+| 1228 | The player east of a rocky area east of the shiny brown bottle        |
+| 1229 | The player east of a rocky area east of the shiny brown bottle.       |
+| 1230 | The player east of a rocky area east of the shiny brown bottles       |
+| 1231 | The player east of a rocky area east of the shiny brown bottles.      |
+| 1232 | The player east of a rocky area, east of a brown shiny bottle         |
+| 1233 | The player east of a rocky area, east of a shiny brown bottle         |
+| 1234 | The player east of a rocky area, east of brown shiny bottles          |
+| 1235 | The player east of a rocky area, east of shiny brown bottles          |
+| 1236 | The player east of a rocky area, east of the brown shiny bottle       |
+| 1237 | The player east of a rocky area, east of the brown shiny bottles      |
+| 1238 | The player east of a rocky area, east of the shiny brown bottle       |
+| 1239 | The player east of a rocky area, east of the shiny brown bottles      |
+| 1240 | The player east of a shiny brown bottle east of a rocky area          |
+| 1241 | The player east of a shiny brown bottle east of a rocky area.         |
+| 1242 | The player east of a shiny brown bottle east of rocky area            |
+| 1243 | The player east of a shiny brown bottle east of rocky area.           |
+| 1244 | The player east of a shiny brown bottle east of rocky areas           |
+| 1245 | The player east of a shiny brown bottle east of rocky areas.          |
+| 1246 | The player east of a shiny brown bottle east of the rocky area        |
+| 1247 | The player east of a shiny brown bottle east of the rocky area.       |
+| 1248 | The player east of a shiny brown bottle east of the rocky areas       |
+| 1249 | The player east of a shiny brown bottle east of the rocky areas.      |
+| 1250 | The player east of a shiny brown bottle, east of a rocky area         |
+| 1251 | The player east of a shiny brown bottle, east of rocky area           |
+| 1252 | The player east of a shiny brown bottle, east of rocky areas          |
+| 1253 | The player east of a shiny brown bottle, east of the rocky area       |
+| 1254 | The player east of a shiny brown bottle, east of the rocky areas      |
+| 1255 | The player east of brown shiny bottles east of a rocky area           |
+| 1256 | The player east of brown shiny bottles east of a rocky area.          |
+| 1257 | The player east of brown shiny bottles east of rocky area             |
+| 1258 | The player east of brown shiny bottles east of rocky area.            |
+| 1259 | The player east of brown shiny bottles east of rocky areas            |
+| 1260 | The player east of brown shiny bottles east of rocky areas.           |
+| 1261 | The player east of brown shiny bottles east of the rocky area         |
+| 1262 | The player east of brown shiny bottles east of the rocky area.        |
+| 1263 | The player east of brown shiny bottles east of the rocky areas        |
+| 1264 | The player east of brown shiny bottles east of the rocky areas.       |
+| 1265 | The player east of brown shiny bottles, east of a rocky area          |
+| 1266 | The player east of brown shiny bottles, east of rocky area            |
+| 1267 | The player east of brown shiny bottles, east of rocky areas           |
+| 1268 | The player east of brown shiny bottles, east of the rocky area        |
+| 1269 | The player east of brown shiny bottles, east of the rocky areas       |
+| 1270 | The player east of rocky area east of a brown shiny bottle            |
+| 1271 | The player east of rocky area east of a brown shiny bottle.           |
+| 1272 | The player east of rocky area east of a shiny brown bottle            |
+| 1273 | The player east of rocky area east of a shiny brown bottle.           |
+| 1274 | The player east of rocky area east of brown shiny bottles             |
+| 1275 | The player east of rocky area east of brown shiny bottles.            |
+| 1276 | The player east of rocky area east of shiny brown bottles             |
+| 1277 | The player east of rocky area east of shiny brown bottles.            |
+| 1278 | The player east of rocky area east of the brown shiny bottle          |
+| 1279 | The player east of rocky area east of the brown shiny bottle.         |
+| 1280 | The player east of rocky area east of the brown shiny bottles         |
+| 1281 | The player east of rocky area east of the brown shiny bottles.        |
+| 1282 | The player east of rocky area east of the shiny brown bottle          |
+| 1283 | The player east of rocky area east of the shiny brown bottle.         |
+| 1284 | The player east of rocky area east of the shiny brown bottles         |
+| 1285 | The player east of rocky area east of the shiny brown bottles.        |
+| 1286 | The player east of rocky area, east of a brown shiny bottle           |
+| 1287 | The player east of rocky area, east of a shiny brown bottle           |
+| 1288 | The player east of rocky area, east of brown shiny bottles            |
+| 1289 | The player east of rocky area, east of shiny brown bottles            |
+| 1290 | The player east of rocky area, east of the brown shiny bottle         |
+| 1291 | The player east of rocky area, east of the brown shiny bottles        |
+| 1292 | The player east of rocky area, east of the shiny brown bottle         |
+| 1293 | The player east of rocky area, east of the shiny brown bottles        |
+| 1294 | The player east of rocky areas east of a brown shiny bottle           |
+| 1295 | The player east of rocky areas east of a brown shiny bottle.          |
+| 1296 | The player east of rocky areas east of a shiny brown bottle           |
+| 1297 | The player east of rocky areas east of a shiny brown bottle.          |
+| 1298 | The player east of rocky areas east of brown shiny bottles            |
+| 1299 | The player east of rocky areas east of brown shiny bottles.           |
+| 1300 | The player east of rocky areas east of shiny brown bottles            |
+| 1301 | The player east of rocky areas east of shiny brown bottles.           |
+| 1302 | The player east of rocky areas east of the brown shiny bottle         |
+| 1303 | The player east of rocky areas east of the brown shiny bottle.        |
+| 1304 | The player east of rocky areas east of the brown shiny bottles        |
+| 1305 | The player east of rocky areas east of the brown shiny bottles.       |
+| 1306 | The player east of rocky areas east of the shiny brown bottle         |
+| 1307 | The player east of rocky areas east of the shiny brown bottle.        |
+| 1308 | The player east of rocky areas east of the shiny brown bottles        |
+| 1309 | The player east of rocky areas east of the shiny brown bottles.       |
+| 1310 | The player east of rocky areas, east of a brown shiny bottle          |
+| 1311 | The player east of rocky areas, east of a shiny brown bottle          |
+| 1312 | The player east of rocky areas, east of brown shiny bottles           |
+| 1313 | The player east of rocky areas, east of shiny brown bottles           |
+| 1314 | The player east of rocky areas, east of the brown shiny bottle        |
+| 1315 | The player east of rocky areas, east of the brown shiny bottles       |
+| 1316 | The player east of rocky areas, east of the shiny brown bottle        |
+| 1317 | The player east of rocky areas, east of the shiny brown bottles       |
+| 1318 | The player east of shiny brown bottles east of a rocky area           |
+| 1319 | The player east of shiny brown bottles east of a rocky area.          |
+| 1320 | The player east of shiny brown bottles east of rocky area             |
+| 1321 | The player east of shiny brown bottles east of rocky area.            |
+| 1322 | The player east of shiny brown bottles east of rocky areas            |
+| 1323 | The player east of shiny brown bottles east of rocky areas.           |
+| 1324 | The player east of shiny brown bottles east of the rocky area         |
+| 1325 | The player east of shiny brown bottles east of the rocky area.        |
+| 1326 | The player east of shiny brown bottles east of the rocky areas        |
+| 1327 | The player east of shiny brown bottles east of the rocky areas.       |
+| 1328 | The player east of shiny brown bottles, east of a rocky area          |
+| 1329 | The player east of shiny brown bottles, east of rocky area            |
+| 1330 | The player east of shiny brown bottles, east of rocky areas           |
+| 1331 | The player east of shiny brown bottles, east of the rocky area        |
+| 1332 | The player east of shiny brown bottles, east of the rocky areas       |
+| 1333 | The player east of the brown shiny bottle east of a rocky area        |
+| 1334 | The player east of the brown shiny bottle east of a rocky area.       |
+| 1335 | The player east of the brown shiny bottle east of rocky area          |
+| 1336 | The player east of the brown shiny bottle east of rocky area.         |
+| 1337 | The player east of the brown shiny bottle east of rocky areas         |
+| 1338 | The player east of the brown shiny bottle east of rocky areas.        |
+| 1339 | The player east of the brown shiny bottle east of the rocky area      |
+| 1340 | The player east of the brown shiny bottle east of the rocky area.     |
+| 1341 | The player east of the brown shiny bottle east of the rocky areas     |
+| 1342 | The player east of the brown shiny bottle east of the rocky areas.    |
+| 1343 | The player east of the brown shiny bottle, east of a rocky area       |
+| 1344 | The player east of the brown shiny bottle, east of rocky area         |
+| 1345 | The player east of the brown shiny bottle, east of rocky areas        |
+| 1346 | The player east of the brown shiny bottle, east of the rocky area     |
+| 1347 | The player east of the brown shiny bottle, east of the rocky areas    |
+| 1348 | The player east of the brown shiny bottles east of a rocky area       |
+| 1349 | The player east of the brown shiny bottles east of a rocky area.      |
+| 1350 | The player east of the brown shiny bottles east of rocky area         |
+| 1351 | The player east of the brown shiny bottles east of rocky area.        |
+| 1352 | The player east of the brown shiny bottles east of rocky areas        |
+| 1353 | The player east of the brown shiny bottles east of rocky areas.       |
+| 1354 | The player east of the brown shiny bottles east of the rocky area     |
+| 1355 | The player east of the brown shiny bottles east of the rocky area.    |
+| 1356 | The player east of the brown shiny bottles east of the rocky areas    |
+| 1357 | The player east of the brown shiny bottles east of the rocky areas.   |
+| 1358 | The player east of the brown shiny bottles, east of a rocky area      |
+| 1359 | The player east of the brown shiny bottles, east of rocky area        |
+| 1360 | The player east of the brown shiny bottles, east of rocky areas       |
+| 1361 | The player east of the brown shiny bottles, east of the rocky area    |
+| 1362 | The player east of the brown shiny bottles, east of the rocky areas   |
+| 1363 | The player east of the rocky area east of a brown shiny bottle        |
+| 1364 | The player east of the rocky area east of a brown shiny bottle.       |
+| 1365 | The player east of the rocky area east of a shiny brown bottle        |
+| 1366 | The player east of the rocky area east of a shiny brown bottle.       |
+| 1367 | The player east of the rocky area east of brown shiny bottles         |
+| 1368 | The player east of the rocky area east of brown shiny bottles.        |
+| 1369 | The player east of the rocky area east of shiny brown bottles         |
+| 1370 | The player east of the rocky area east of shiny brown bottles.        |
+| 1371 | The player east of the rocky area east of the brown shiny bottle      |
+| 1372 | The player east of the rocky area east of the brown shiny bottle.     |
+| 1373 | The player east of the rocky area east of the brown shiny bottles     |
+| 1374 | The player east of the rocky area east of the brown shiny bottles.    |
+| 1375 | The player east of the rocky area east of the shiny brown bottle      |
+| 1376 | The player east of the rocky area east of the shiny brown bottle.     |
+| 1377 | The player east of the rocky area east of the shiny brown bottles     |
+| 1378 | The player east of the rocky area east of the shiny brown bottles.    |
+| 1379 | The player east of the rocky area, east of a brown shiny bottle       |
+| 1380 | The player east of the rocky area, east of a shiny brown bottle       |
+| 1381 | The player east of the rocky area, east of brown shiny bottles        |
+| 1382 | The player east of the rocky area, east of shiny brown bottles        |
+| 1383 | The player east of the rocky area, east of the brown shiny bottle     |
+| 1384 | The player east of the rocky area, east of the brown shiny bottles    |
+| 1385 | The player east of the rocky area, east of the shiny brown bottle     |
+| 1386 | The player east of the rocky area, east of the shiny brown bottles    |
+| 1387 | The player east of the rocky areas east of a brown shiny bottle       |
+| 1388 | The player east of the rocky areas east of a brown shiny bottle.      |
+| 1389 | The player east of the rocky areas east of a shiny brown bottle       |
+| 1390 | The player east of the rocky areas east of a shiny brown bottle.      |
+| 1391 | The player east of the rocky areas east of brown shiny bottles        |
+| 1392 | The player east of the rocky areas east of brown shiny bottles.       |
+| 1393 | The player east of the rocky areas east of shiny brown bottles        |
+| 1394 | The player east of the rocky areas east of shiny brown bottles.       |
+| 1395 | The player east of the rocky areas east of the brown shiny bottle     |
+| 1396 | The player east of the rocky areas east of the brown shiny bottle.    |
+| 1397 | The player east of the rocky areas east of the brown shiny bottles    |
+| 1398 | The player east of the rocky areas east of the brown shiny bottles.   |
+| 1399 | The player east of the rocky areas east of the shiny brown bottle     |
+| 1400 | The player east of the rocky areas east of the shiny brown bottle.    |
+| 1401 | The player east of the rocky areas east of the shiny brown bottles    |
+| 1402 | The player east of the rocky areas east of the shiny brown bottles.   |
+| 1403 | The player east of the rocky areas, east of a brown shiny bottle      |
+| 1404 | The player east of the rocky areas, east of a shiny brown bottle      |
+| 1405 | The player east of the rocky areas, east of brown shiny bottles       |
+| 1406 | The player east of the rocky areas, east of shiny brown bottles       |
+| 1407 | The player east of the rocky areas, east of the brown shiny bottle    |
+| 1408 | The player east of the rocky areas, east of the brown shiny bottles   |
+| 1409 | The player east of the rocky areas, east of the shiny brown bottle    |
+| 1410 | The player east of the rocky areas, east of the shiny brown bottles   |
+| 1411 | The player east of the shiny brown bottle east of a rocky area        |
+| 1412 | The player east of the shiny brown bottle east of a rocky area.       |
+| 1413 | The player east of the shiny brown bottle east of rocky area          |
+| 1414 | The player east of the shiny brown bottle east of rocky area.         |
+| 1415 | The player east of the shiny brown bottle east of rocky areas         |
+| 1416 | The player east of the shiny brown bottle east of rocky areas.        |
+| 1417 | The player east of the shiny brown bottle east of the rocky area      |
+| 1418 | The player east of the shiny brown bottle east of the rocky area.     |
+| 1419 | The player east of the shiny brown bottle east of the rocky areas     |
+| 1420 | The player east of the shiny brown bottle east of the rocky areas.    |
+| 1421 | The player east of the shiny brown bottle, east of a rocky area       |
+| 1422 | The player east of the shiny brown bottle, east of rocky area         |
+| 1423 | The player east of the shiny brown bottle, east of rocky areas        |
+| 1424 | The player east of the shiny brown bottle, east of the rocky area     |
+| 1425 | The player east of the shiny brown bottle, east of the rocky areas    |
+| 1426 | The player east of the shiny brown bottles east of a rocky area       |
+| 1427 | The player east of the shiny brown bottles east of a rocky area.      |
+| 1428 | The player east of the shiny brown bottles east of rocky area         |
+| 1429 | The player east of the shiny brown bottles east of rocky area.        |
+| 1430 | The player east of the shiny brown bottles east of rocky areas        |
+| 1431 | The player east of the shiny brown bottles east of rocky areas.       |
+| 1432 | The player east of the shiny brown bottles east of the rocky area     |
+| 1433 | The player east of the shiny brown bottles east of the rocky area.    |
+| 1434 | The player east of the shiny brown bottles east of the rocky areas    |
+| 1435 | The player east of the shiny brown bottles east of the rocky areas.   |
+| 1436 | The player east of the shiny brown bottles, east of a rocky area      |
+| 1437 | The player east of the shiny brown bottles, east of rocky area        |
+| 1438 | The player east of the shiny brown bottles, east of rocky areas       |
+| 1439 | The player east of the shiny brown bottles, east of the rocky area    |
+| 1440 | The player east of the shiny brown bottles, east of the rocky areas   |
+| 1441 | The player, east of a brown shiny bottle east of a rocky area         |
+| 1442 | The player, east of a brown shiny bottle east of a rocky area.        |
+| 1443 | The player, east of a brown shiny bottle east of rocky area           |
+| 1444 | The player, east of a brown shiny bottle east of rocky area.          |
+| 1445 | The player, east of a brown shiny bottle east of rocky areas          |
+| 1446 | The player, east of a brown shiny bottle east of rocky areas.         |
+| 1447 | The player, east of a brown shiny bottle east of the rocky area       |
+| 1448 | The player, east of a brown shiny bottle east of the rocky area.      |
+| 1449 | The player, east of a brown shiny bottle east of the rocky areas      |
+| 1450 | The player, east of a brown shiny bottle east of the rocky areas.     |
+| 1451 | The player, east of a rocky area east of a brown shiny bottle         |
+| 1452 | The player, east of a rocky area east of a brown shiny bottle.        |
+| 1453 | The player, east of a rocky area east of a shiny brown bottle         |
+| 1454 | The player, east of a rocky area east of a shiny brown bottle.        |
+| 1455 | The player, east of a rocky area east of brown shiny bottles          |
+| 1456 | The player, east of a rocky area east of brown shiny bottles.         |
+| 1457 | The player, east of a rocky area east of shiny brown bottles          |
+| 1458 | The player, east of a rocky area east of shiny brown bottles.         |
+| 1459 | The player, east of a rocky area east of the brown shiny bottle       |
+| 1460 | The player, east of a rocky area east of the brown shiny bottle.      |
+| 1461 | The player, east of a rocky area east of the brown shiny bottles      |
+| 1462 | The player, east of a rocky area east of the brown shiny bottles.     |
+| 1463 | The player, east of a rocky area east of the shiny brown bottle       |
+| 1464 | The player, east of a rocky area east of the shiny brown bottle.      |
+| 1465 | The player, east of a rocky area east of the shiny brown bottles      |
+| 1466 | The player, east of a rocky area east of the shiny brown bottles.     |
+| 1467 | The player, east of a shiny brown bottle east of a rocky area         |
+| 1468 | The player, east of a shiny brown bottle east of a rocky area.        |
+| 1469 | The player, east of a shiny brown bottle east of rocky area           |
+| 1470 | The player, east of a shiny brown bottle east of rocky area.          |
+| 1471 | The player, east of a shiny brown bottle east of rocky areas          |
+| 1472 | The player, east of a shiny brown bottle east of rocky areas.         |
+| 1473 | The player, east of a shiny brown bottle east of the rocky area       |
+| 1474 | The player, east of a shiny brown bottle east of the rocky area.      |
+| 1475 | The player, east of a shiny brown bottle east of the rocky areas      |
+| 1476 | The player, east of a shiny brown bottle east of the rocky areas.     |
+| 1477 | The player, east of brown shiny bottles east of a rocky area          |
+| 1478 | The player, east of brown shiny bottles east of a rocky area.         |
+| 1479 | The player, east of brown shiny bottles east of rocky area            |
+| 1480 | The player, east of brown shiny bottles east of rocky area.           |
+| 1481 | The player, east of brown shiny bottles east of rocky areas           |
+| 1482 | The player, east of brown shiny bottles east of rocky areas.          |
+| 1483 | The player, east of brown shiny bottles east of the rocky area        |
+| 1484 | The player, east of brown shiny bottles east of the rocky area.       |
+| 1485 | The player, east of brown shiny bottles east of the rocky areas       |
+| 1486 | The player, east of brown shiny bottles east of the rocky areas.      |
+| 1487 | The player, east of rocky area east of a brown shiny bottle           |
+| 1488 | The player, east of rocky area east of a brown shiny bottle.          |
+| 1489 | The player, east of rocky area east of a shiny brown bottle           |
+| 1490 | The player, east of rocky area east of a shiny brown bottle.          |
+| 1491 | The player, east of rocky area east of brown shiny bottles            |
+| 1492 | The player, east of rocky area east of brown shiny bottles.           |
+| 1493 | The player, east of rocky area east of shiny brown bottles            |
+| 1494 | The player, east of rocky area east of shiny brown bottles.           |
+| 1495 | The player, east of rocky area east of the brown shiny bottle         |
+| 1496 | The player, east of rocky area east of the brown shiny bottle.        |
+| 1497 | The player, east of rocky area east of the brown shiny bottles        |
+| 1498 | The player, east of rocky area east of the brown shiny bottles.       |
+| 1499 | The player, east of rocky area east of the shiny brown bottle         |
+| 1500 | The player, east of rocky area east of the shiny brown bottle.        |
+| 1501 | The player, east of rocky area east of the shiny brown bottles        |
+| 1502 | The player, east of rocky area east of the shiny brown bottles.       |
+| 1503 | The player, east of rocky areas east of a brown shiny bottle          |
+| 1504 | The player, east of rocky areas east of a brown shiny bottle.         |
+| 1505 | The player, east of rocky areas east of a shiny brown bottle          |
+| 1506 | The player, east of rocky areas east of a shiny brown bottle.         |
+| 1507 | The player, east of rocky areas east of brown shiny bottles           |
+| 1508 | The player, east of rocky areas east of brown shiny bottles.          |
+| 1509 | The player, east of rocky areas east of shiny brown bottles           |
+| 1510 | The player, east of rocky areas east of shiny brown bottles.          |
+| 1511 | The player, east of rocky areas east of the brown shiny bottle        |
+| 1512 | The player, east of rocky areas east of the brown shiny bottle.       |
+| 1513 | The player, east of rocky areas east of the brown shiny bottles       |
+| 1514 | The player, east of rocky areas east of the brown shiny bottles.      |
+| 1515 | The player, east of rocky areas east of the shiny brown bottle        |
+| 1516 | The player, east of rocky areas east of the shiny brown bottle.       |
+| 1517 | The player, east of rocky areas east of the shiny brown bottles       |
+| 1518 | The player, east of rocky areas east of the shiny brown bottles.      |
+| 1519 | The player, east of shiny brown bottles east of a rocky area          |
+| 1520 | The player, east of shiny brown bottles east of a rocky area.         |
+| 1521 | The player, east of shiny brown bottles east of rocky area            |
+| 1522 | The player, east of shiny brown bottles east of rocky area.           |
+| 1523 | The player, east of shiny brown bottles east of rocky areas           |
+| 1524 | The player, east of shiny brown bottles east of rocky areas.          |
+| 1525 | The player, east of shiny brown bottles east of the rocky area        |
+| 1526 | The player, east of shiny brown bottles east of the rocky area.       |
+| 1527 | The player, east of shiny brown bottles east of the rocky areas       |
+| 1528 | The player, east of shiny brown bottles east of the rocky areas.      |
+| 1529 | The player, east of the brown shiny bottle east of a rocky area       |
+| 1530 | The player, east of the brown shiny bottle east of a rocky area.      |
+| 1531 | The player, east of the brown shiny bottle east of rocky area         |
+| 1532 | The player, east of the brown shiny bottle east of rocky area.        |
+| 1533 | The player, east of the brown shiny bottle east of rocky areas        |
+| 1534 | The player, east of the brown shiny bottle east of rocky areas.       |
+| 1535 | The player, east of the brown shiny bottle east of the rocky area     |
+| 1536 | The player, east of the brown shiny bottle east of the rocky area.    |
+| 1537 | The player, east of the brown shiny bottle east of the rocky areas    |
+| 1538 | The player, east of the brown shiny bottle east of the rocky areas.   |
+| 1539 | The player, east of the brown shiny bottles east of a rocky area      |
+| 1540 | The player, east of the brown shiny bottles east of a rocky area.     |
+| 1541 | The player, east of the brown shiny bottles east of rocky area        |
+| 1542 | The player, east of the brown shiny bottles east of rocky area.       |
+| 1543 | The player, east of the brown shiny bottles east of rocky areas       |
+| 1544 | The player, east of the brown shiny bottles east of rocky areas.      |
+| 1545 | The player, east of the brown shiny bottles east of the rocky area    |
+| 1546 | The player, east of the brown shiny bottles east of the rocky area.   |
+| 1547 | The player, east of the brown shiny bottles east of the rocky areas   |
+| 1548 | The player, east of the brown shiny bottles east of the rocky areas.  |
+| 1549 | The player, east of the rocky area east of a brown shiny bottle       |
+| 1550 | The player, east of the rocky area east of a brown shiny bottle.      |
+| 1551 | The player, east of the rocky area east of a shiny brown bottle       |
+| 1552 | The player, east of the rocky area east of a shiny brown bottle.      |
+| 1553 | The player, east of the rocky area east of brown shiny bottles        |
+| 1554 | The player, east of the rocky area east of brown shiny bottles.       |
+| 1555 | The player, east of the rocky area east of shiny brown bottles        |
+| 1556 | The player, east of the rocky area east of shiny brown bottles.       |
+| 1557 | The player, east of the rocky area east of the brown shiny bottle     |
+| 1558 | The player, east of the rocky area east of the brown shiny bottle.    |
+| 1559 | The player, east of the rocky area east of the brown shiny bottles    |
+| 1560 | The player, east of the rocky area east of the brown shiny bottles.   |
+| 1561 | The player, east of the rocky area east of the shiny brown bottle     |
+| 1562 | The player, east of the rocky area east of the shiny brown bottle.    |
+| 1563 | The player, east of the rocky area east of the shiny brown bottles    |
+| 1564 | The player, east of the rocky area east of the shiny brown bottles.   |
+| 1565 | The player, east of the rocky areas east of a brown shiny bottle      |
+| 1566 | The player, east of the rocky areas east of a brown shiny bottle.     |
+| 1567 | The player, east of the rocky areas east of a shiny brown bottle      |
+| 1568 | The player, east of the rocky areas east of a shiny brown bottle.     |
+| 1569 | The player, east of the rocky areas east of brown shiny bottles       |
+| 1570 | The player, east of the rocky areas east of brown shiny bottles.      |
+| 1571 | The player, east of the rocky areas east of shiny brown bottles       |
+| 1572 | The player, east of the rocky areas east of shiny brown bottles.      |
+| 1573 | The player, east of the rocky areas east of the brown shiny bottle    |
+| 1574 | The player, east of the rocky areas east of the brown shiny bottle.   |
+| 1575 | The player, east of the rocky areas east of the brown shiny bottles   |
+| 1576 | The player, east of the rocky areas east of the brown shiny bottles.  |
+| 1577 | The player, east of the rocky areas east of the shiny brown bottle    |
+| 1578 | The player, east of the rocky areas east of the shiny brown bottle.   |
+| 1579 | The player, east of the rocky areas east of the shiny brown bottles   |
+| 1580 | The player, east of the rocky areas east of the shiny brown bottles.  |
+| 1581 | The player, east of the shiny brown bottle east of a rocky area       |
+| 1582 | The player, east of the shiny brown bottle east of a rocky area.      |
+| 1583 | The player, east of the shiny brown bottle east of rocky area         |
+| 1584 | The player, east of the shiny brown bottle east of rocky area.        |
+| 1585 | The player, east of the shiny brown bottle east of rocky areas        |
+| 1586 | The player, east of the shiny brown bottle east of rocky areas.       |
+| 1587 | The player, east of the shiny brown bottle east of the rocky area     |
+| 1588 | The player, east of the shiny brown bottle east of the rocky area.    |
+| 1589 | The player, east of the shiny brown bottle east of the rocky areas    |
+| 1590 | The player, east of the shiny brown bottle east of the rocky areas.   |
+| 1591 | The player, east of the shiny brown bottles east of a rocky area      |
+| 1592 | The player, east of the shiny brown bottles east of a rocky area.     |
+| 1593 | The player, east of the shiny brown bottles east of rocky area        |
+| 1594 | The player, east of the shiny brown bottles east of rocky area.       |
+| 1595 | The player, east of the shiny brown bottles east of rocky areas       |
+| 1596 | The player, east of the shiny brown bottles east of rocky areas.      |
+| 1597 | The player, east of the shiny brown bottles east of the rocky area    |
+| 1598 | The player, east of the shiny brown bottles east of the rocky area.   |
+| 1599 | The player, east of the shiny brown bottles east of the rocky areas   |
+| 1600 | The player, east of the shiny brown bottles east of the rocky areas.  |
+| 1601 | The players east of a brown shiny bottle east of a rocky area         |
+| 1602 | The players east of a brown shiny bottle east of a rocky area.        |
+| 1603 | The players east of a brown shiny bottle east of rocky area           |
+| 1604 | The players east of a brown shiny bottle east of rocky area.          |
+| 1605 | The players east of a brown shiny bottle east of rocky areas          |
+| 1606 | The players east of a brown shiny bottle east of rocky areas.         |
+| 1607 | The players east of a brown shiny bottle east of the rocky area       |
+| 1608 | The players east of a brown shiny bottle east of the rocky area.      |
+| 1609 | The players east of a brown shiny bottle east of the rocky areas      |
+| 1610 | The players east of a brown shiny bottle east of the rocky areas.     |
+| 1611 | The players east of a brown shiny bottle, east of a rocky area        |
+| 1612 | The players east of a brown shiny bottle, east of rocky area          |
+| 1613 | The players east of a brown shiny bottle, east of rocky areas         |
+| 1614 | The players east of a brown shiny bottle, east of the rocky area      |
+| 1615 | The players east of a brown shiny bottle, east of the rocky areas     |
+| 1616 | The players east of a rocky area east of a brown shiny bottle         |
+| 1617 | The players east of a rocky area east of a brown shiny bottle.        |
+| 1618 | The players east of a rocky area east of a shiny brown bottle         |
+| 1619 | The players east of a rocky area east of a shiny brown bottle.        |
+| 1620 | The players east of a rocky area east of brown shiny bottles          |
+| 1621 | The players east of a rocky area east of brown shiny bottles.         |
+| 1622 | The players east of a rocky area east of shiny brown bottles          |
+| 1623 | The players east of a rocky area east of shiny brown bottles.         |
+| 1624 | The players east of a rocky area east of the brown shiny bottle       |
+| 1625 | The players east of a rocky area east of the brown shiny bottle.      |
+| 1626 | The players east of a rocky area east of the brown shiny bottles      |
+| 1627 | The players east of a rocky area east of the brown shiny bottles.     |
+| 1628 | The players east of a rocky area east of the shiny brown bottle       |
+| 1629 | The players east of a rocky area east of the shiny brown bottle.      |
+| 1630 | The players east of a rocky area east of the shiny brown bottles      |
+| 1631 | The players east of a rocky area east of the shiny brown bottles.     |
+| 1632 | The players east of a rocky area, east of a brown shiny bottle        |
+| 1633 | The players east of a rocky area, east of a shiny brown bottle        |
+| 1634 | The players east of a rocky area, east of brown shiny bottles         |
+| 1635 | The players east of a rocky area, east of shiny brown bottles         |
+| 1636 | The players east of a rocky area, east of the brown shiny bottle      |
+| 1637 | The players east of a rocky area, east of the brown shiny bottles     |
+| 1638 | The players east of a rocky area, east of the shiny brown bottle      |
+| 1639 | The players east of a rocky area, east of the shiny brown bottles     |
+| 1640 | The players east of a shiny brown bottle east of a rocky area         |
+| 1641 | The players east of a shiny brown bottle east of a rocky area.        |
+| 1642 | The players east of a shiny brown bottle east of rocky area           |
+| 1643 | The players east of a shiny brown bottle east of rocky area.          |
+| 1644 | The players east of a shiny brown bottle east of rocky areas          |
+| 1645 | The players east of a shiny brown bottle east of rocky areas.         |
+| 1646 | The players east of a shiny brown bottle east of the rocky area       |
+| 1647 | The players east of a shiny brown bottle east of the rocky area.      |
+| 1648 | The players east of a shiny brown bottle east of the rocky areas      |
+| 1649 | The players east of a shiny brown bottle east of the rocky areas.     |
+| 1650 | The players east of a shiny brown bottle, east of a rocky area        |
+| 1651 | The players east of a shiny brown bottle, east of rocky area          |
+| 1652 | The players east of a shiny brown bottle, east of rocky areas         |
+| 1653 | The players east of a shiny brown bottle, east of the rocky area      |
+| 1654 | The players east of a shiny brown bottle, east of the rocky areas     |
+| 1655 | The players east of brown shiny bottles east of a rocky area          |
+| 1656 | The players east of brown shiny bottles east of a rocky area.         |
+| 1657 | The players east of brown shiny bottles east of rocky area            |
+| 1658 | The players east of brown shiny bottles east of rocky area.           |
+| 1659 | The players east of brown shiny bottles east of rocky areas           |
+| 1660 | The players east of brown shiny bottles east of rocky areas.          |
+| 1661 | The players east of brown shiny bottles east of the rocky area        |
+| 1662 | The players east of brown shiny bottles east of the rocky area.       |
+| 1663 | The players east of brown shiny bottles east of the rocky areas       |
+| 1664 | The players east of brown shiny bottles east of the rocky areas.      |
+| 1665 | The players east of brown shiny bottles, east of a rocky area         |
+| 1666 | The players east of brown shiny bottles, east of rocky area           |
+| 1667 | The players east of brown shiny bottles, east of rocky areas          |
+| 1668 | The players east of brown shiny bottles, east of the rocky area       |
+| 1669 | The players east of brown shiny bottles, east of the rocky areas      |
+| 1670 | The players east of rocky area east of a brown shiny bottle           |
+| 1671 | The players east of rocky area east of a brown shiny bottle.          |
+| 1672 | The players east of rocky area east of a shiny brown bottle           |
+| 1673 | The players east of rocky area east of a shiny brown bottle.          |
+| 1674 | The players east of rocky area east of brown shiny bottles            |
+| 1675 | The players east of rocky area east of brown shiny bottles.           |
+| 1676 | The players east of rocky area east of shiny brown bottles            |
+| 1677 | The players east of rocky area east of shiny brown bottles.           |
+| 1678 | The players east of rocky area east of the brown shiny bottle         |
+| 1679 | The players east of rocky area east of the brown shiny bottle.        |
+| 1680 | The players east of rocky area east of the brown shiny bottles        |
+| 1681 | The players east of rocky area east of the brown shiny bottles.       |
+| 1682 | The players east of rocky area east of the shiny brown bottle         |
+| 1683 | The players east of rocky area east of the shiny brown bottle.        |
+| 1684 | The players east of rocky area east of the shiny brown bottles        |
+| 1685 | The players east of rocky area east of the shiny brown bottles.       |
+| 1686 | The players east of rocky area, east of a brown shiny bottle          |
+| 1687 | The players east of rocky area, east of a shiny brown bottle          |
+| 1688 | The players east of rocky area, east of brown shiny bottles           |
+| 1689 | The players east of rocky area, east of shiny brown bottles           |
+| 1690 | The players east of rocky area, east of the brown shiny bottle        |
+| 1691 | The players east of rocky area, east of the brown shiny bottles       |
+| 1692 | The players east of rocky area, east of the shiny brown bottle        |
+| 1693 | The players east of rocky area, east of the shiny brown bottles       |
+| 1694 | The players east of rocky areas east of a brown shiny bottle          |
+| 1695 | The players east of rocky areas east of a brown shiny bottle.         |
+| 1696 | The players east of rocky areas east of a shiny brown bottle          |
+| 1697 | The players east of rocky areas east of a shiny brown bottle.         |
+| 1698 | The players east of rocky areas east of brown shiny bottles           |
+| 1699 | The players east of rocky areas east of brown shiny bottles.          |
+| 1700 | The players east of rocky areas east of shiny brown bottles           |
+| 1701 | The players east of rocky areas east of shiny brown bottles.          |
+| 1702 | The players east of rocky areas east of the brown shiny bottle        |
+| 1703 | The players east of rocky areas east of the brown shiny bottle.       |
+| 1704 | The players east of rocky areas east of the brown shiny bottles       |
+| 1705 | The players east of rocky areas east of the brown shiny bottles.      |
+| 1706 | The players east of rocky areas east of the shiny brown bottle        |
+| 1707 | The players east of rocky areas east of the shiny brown bottle.       |
+| 1708 | The players east of rocky areas east of the shiny brown bottles       |
+| 1709 | The players east of rocky areas east of the shiny brown bottles.      |
+| 1710 | The players east of rocky areas, east of a brown shiny bottle         |
+| 1711 | The players east of rocky areas, east of a shiny brown bottle         |
+| 1712 | The players east of rocky areas, east of brown shiny bottles          |
+| 1713 | The players east of rocky areas, east of shiny brown bottles          |
+| 1714 | The players east of rocky areas, east of the brown shiny bottle       |
+| 1715 | The players east of rocky areas, east of the brown shiny bottles      |
+| 1716 | The players east of rocky areas, east of the shiny brown bottle       |
+| 1717 | The players east of rocky areas, east of the shiny brown bottles      |
+| 1718 | The players east of shiny brown bottles east of a rocky area          |
+| 1719 | The players east of shiny brown bottles east of a rocky area.         |
+| 1720 | The players east of shiny brown bottles east of rocky area            |
+| 1721 | The players east of shiny brown bottles east of rocky area.           |
+| 1722 | The players east of shiny brown bottles east of rocky areas           |
+| 1723 | The players east of shiny brown bottles east of rocky areas.          |
+| 1724 | The players east of shiny brown bottles east of the rocky area        |
+| 1725 | The players east of shiny brown bottles east of the rocky area.       |
+| 1726 | The players east of shiny brown bottles east of the rocky areas       |
+| 1727 | The players east of shiny brown bottles east of the rocky areas.      |
+| 1728 | The players east of shiny brown bottles, east of a rocky area         |
+| 1729 | The players east of shiny brown bottles, east of rocky area           |
+| 1730 | The players east of shiny brown bottles, east of rocky areas          |
+| 1731 | The players east of shiny brown bottles, east of the rocky area       |
+| 1732 | The players east of shiny brown bottles, east of the rocky areas      |
+| 1733 | The players east of the brown shiny bottle east of a rocky area       |
+| 1734 | The players east of the brown shiny bottle east of a rocky area.      |
+| 1735 | The players east of the brown shiny bottle east of rocky area         |
+| 1736 | The players east of the brown shiny bottle east of rocky area.        |
+| 1737 | The players east of the brown shiny bottle east of rocky areas        |
+| 1738 | The players east of the brown shiny bottle east of rocky areas.       |
+| 1739 | The players east of the brown shiny bottle east of the rocky area     |
+| 1740 | The players east of the brown shiny bottle east of the rocky area.    |
+| 1741 | The players east of the brown shiny bottle east of the rocky areas    |
+| 1742 | The players east of the brown shiny bottle east of the rocky areas.   |
+| 1743 | The players east of the brown shiny bottle, east of a rocky area      |
+| 1744 | The players east of the brown shiny bottle, east of rocky area        |
+| 1745 | The players east of the brown shiny bottle, east of rocky areas       |
+| 1746 | The players east of the brown shiny bottle, east of the rocky area    |
+| 1747 | The players east of the brown shiny bottle, east of the rocky areas   |
+| 1748 | The players east of the brown shiny bottles east of a rocky area      |
+| 1749 | The players east of the brown shiny bottles east of a rocky area.     |
+| 1750 | The players east of the brown shiny bottles east of rocky area        |
+| 1751 | The players east of the brown shiny bottles east of rocky area.       |
+| 1752 | The players east of the brown shiny bottles east of rocky areas       |
+| 1753 | The players east of the brown shiny bottles east of rocky areas.      |
+| 1754 | The players east of the brown shiny bottles east of the rocky area    |
+| 1755 | The players east of the brown shiny bottles east of the rocky area.   |
+| 1756 | The players east of the brown shiny bottles east of the rocky areas   |
+| 1757 | The players east of the brown shiny bottles east of the rocky areas.  |
+| 1758 | The players east of the brown shiny bottles, east of a rocky area     |
+| 1759 | The players east of the brown shiny bottles, east of rocky area       |
+| 1760 | The players east of the brown shiny bottles, east of rocky areas      |
+| 1761 | The players east of the brown shiny bottles, east of the rocky area   |
+| 1762 | The players east of the brown shiny bottles, east of the rocky areas  |
+| 1763 | The players east of the rocky area east of a brown shiny bottle       |
+| 1764 | The players east of the rocky area east of a brown shiny bottle.      |
+| 1765 | The players east of the rocky area east of a shiny brown bottle       |
+| 1766 | The players east of the rocky area east of a shiny brown bottle.      |
+| 1767 | The players east of the rocky area east of brown shiny bottles        |
+| 1768 | The players east of the rocky area east of brown shiny bottles.       |
+| 1769 | The players east of the rocky area east of shiny brown bottles        |
+| 1770 | The players east of the rocky area east of shiny brown bottles.       |
+| 1771 | The players east of the rocky area east of the brown shiny bottle     |
+| 1772 | The players east of the rocky area east of the brown shiny bottle.    |
+| 1773 | The players east of the rocky area east of the brown shiny bottles    |
+| 1774 | The players east of the rocky area east of the brown shiny bottles.   |
+| 1775 | The players east of the rocky area east of the shiny brown bottle     |
+| 1776 | The players east of the rocky area east of the shiny brown bottle.    |
+| 1777 | The players east of the rocky area east of the shiny brown bottles    |
+| 1778 | The players east of the rocky area east of the shiny brown bottles.   |
+| 1779 | The players east of the rocky area, east of a brown shiny bottle      |
+| 1780 | The players east of the rocky area, east of a shiny brown bottle      |
+| 1781 | The players east of the rocky area, east of brown shiny bottles       |
+| 1782 | The players east of the rocky area, east of shiny brown bottles       |
+| 1783 | The players east of the rocky area, east of the brown shiny bottle    |
+| 1784 | The players east of the rocky area, east of the brown shiny bottles   |
+| 1785 | The players east of the rocky area, east of the shiny brown bottle    |
+| 1786 | The players east of the rocky area, east of the shiny brown bottles   |
+| 1787 | The players east of the rocky areas east of a brown shiny bottle      |
+| 1788 | The players east of the rocky areas east of a brown shiny bottle.     |
+| 1789 | The players east of the rocky areas east of a shiny brown bottle      |
+| 1790 | The players east of the rocky areas east of a shiny brown bottle.     |
+| 1791 | The players east of the rocky areas east of brown shiny bottles       |
+| 1792 | The players east of the rocky areas east of brown shiny bottles.      |
+| 1793 | The players east of the rocky areas east of shiny brown bottles       |
+| 1794 | The players east of the rocky areas east of shiny brown bottles.      |
+| 1795 | The players east of the rocky areas east of the brown shiny bottle    |
+| 1796 | The players east of the rocky areas east of the brown shiny bottle.   |
+| 1797 | The players east of the rocky areas east of the brown shiny bottles   |
+| 1798 | The players east of the rocky areas east of the brown shiny bottles.  |
+| 1799 | The players east of the rocky areas east of the shiny brown bottle    |
+| 1800 | The players east of the rocky areas east of the shiny brown bottle.   |
+| 1801 | The players east of the rocky areas east of the shiny brown bottles   |
+| 1802 | The players east of the rocky areas east of the shiny brown bottles.  |
+| 1803 | The players east of the rocky areas, east of a brown shiny bottle     |
+| 1804 | The players east of the rocky areas, east of a shiny brown bottle     |
+| 1805 | The players east of the rocky areas, east of brown shiny bottles      |
+| 1806 | The players east of the rocky areas, east of shiny brown bottles      |
+| 1807 | The players east of the rocky areas, east of the brown shiny bottle   |
+| 1808 | The players east of the rocky areas, east of the brown shiny bottles  |
+| 1809 | The players east of the rocky areas, east of the shiny brown bottle   |
+| 1810 | The players east of the rocky areas, east of the shiny brown bottles  |
+| 1811 | The players east of the shiny brown bottle east of a rocky area       |
+| 1812 | The players east of the shiny brown bottle east of a rocky area.      |
+| 1813 | The players east of the shiny brown bottle east of rocky area         |
+| 1814 | The players east of the shiny brown bottle east of rocky area.        |
+| 1815 | The players east of the shiny brown bottle east of rocky areas        |
+| 1816 | The players east of the shiny brown bottle east of rocky areas.       |
+| 1817 | The players east of the shiny brown bottle east of the rocky area     |
+| 1818 | The players east of the shiny brown bottle east of the rocky area.    |
+| 1819 | The players east of the shiny brown bottle east of the rocky areas    |
+| 1820 | The players east of the shiny brown bottle east of the rocky areas.   |
+| 1821 | The players east of the shiny brown bottle, east of a rocky area      |
+| 1822 | The players east of the shiny brown bottle, east of rocky area        |
+| 1823 | The players east of the shiny brown bottle, east of rocky areas       |
+| 1824 | The players east of the shiny brown bottle, east of the rocky area    |
+| 1825 | The players east of the shiny brown bottle, east of the rocky areas   |
+| 1826 | The players east of the shiny brown bottles east of a rocky area      |
+| 1827 | The players east of the shiny brown bottles east of a rocky area.     |
+| 1828 | The players east of the shiny brown bottles east of rocky area        |
+| 1829 | The players east of the shiny brown bottles east of rocky area.       |
+| 1830 | The players east of the shiny brown bottles east of rocky areas       |
+| 1831 | The players east of the shiny brown bottles east of rocky areas.      |
+| 1832 | The players east of the shiny brown bottles east of the rocky area    |
+| 1833 | The players east of the shiny brown bottles east of the rocky area.   |
+| 1834 | The players east of the shiny brown bottles east of the rocky areas   |
+| 1835 | The players east of the shiny brown bottles east of the rocky areas.  |
+| 1836 | The players east of the shiny brown bottles, east of a rocky area     |
+| 1837 | The players east of the shiny brown bottles, east of rocky area       |
+| 1838 | The players east of the shiny brown bottles, east of rocky areas      |
+| 1839 | The players east of the shiny brown bottles, east of the rocky area   |
+| 1840 | The players east of the shiny brown bottles, east of the rocky areas  |
+| 1841 | The players, east of a brown shiny bottle east of a rocky area        |
+| 1842 | The players, east of a brown shiny bottle east of a rocky area.       |
+| 1843 | The players, east of a brown shiny bottle east of rocky area          |
+| 1844 | The players, east of a brown shiny bottle east of rocky area.         |
+| 1845 | The players, east of a brown shiny bottle east of rocky areas         |
+| 1846 | The players, east of a brown shiny bottle east of rocky areas.        |
+| 1847 | The players, east of a brown shiny bottle east of the rocky area      |
+| 1848 | The players, east of a brown shiny bottle east of the rocky area.     |
+| 1849 | The players, east of a brown shiny bottle east of the rocky areas     |
+| 1850 | The players, east of a brown shiny bottle east of the rocky areas.    |
+| 1851 | The players, east of a rocky area east of a brown shiny bottle        |
+| 1852 | The players, east of a rocky area east of a brown shiny bottle.       |
+| 1853 | The players, east of a rocky area east of a shiny brown bottle        |
+| 1854 | The players, east of a rocky area east of a shiny brown bottle.       |
+| 1855 | The players, east of a rocky area east of brown shiny bottles         |
+| 1856 | The players, east of a rocky area east of brown shiny bottles.        |
+| 1857 | The players, east of a rocky area east of shiny brown bottles         |
+| 1858 | The players, east of a rocky area east of shiny brown bottles.        |
+| 1859 | The players, east of a rocky area east of the brown shiny bottle      |
+| 1860 | The players, east of a rocky area east of the brown shiny bottle.     |
+| 1861 | The players, east of a rocky area east of the brown shiny bottles     |
+| 1862 | The players, east of a rocky area east of the brown shiny bottles.    |
+| 1863 | The players, east of a rocky area east of the shiny brown bottle      |
+| 1864 | The players, east of a rocky area east of the shiny brown bottle.     |
+| 1865 | The players, east of a rocky area east of the shiny brown bottles     |
+| 1866 | The players, east of a rocky area east of the shiny brown bottles.    |
+| 1867 | The players, east of a shiny brown bottle east of a rocky area        |
+| 1868 | The players, east of a shiny brown bottle east of a rocky area.       |
+| 1869 | The players, east of a shiny brown bottle east of rocky area          |
+| 1870 | The players, east of a shiny brown bottle east of rocky area.         |
+| 1871 | The players, east of a shiny brown bottle east of rocky areas         |
+| 1872 | The players, east of a shiny brown bottle east of rocky areas.        |
+| 1873 | The players, east of a shiny brown bottle east of the rocky area      |
+| 1874 | The players, east of a shiny brown bottle east of the rocky area.     |
+| 1875 | The players, east of a shiny brown bottle east of the rocky areas     |
+| 1876 | The players, east of a shiny brown bottle east of the rocky areas.    |
+| 1877 | The players, east of brown shiny bottles east of a rocky area         |
+| 1878 | The players, east of brown shiny bottles east of a rocky area.        |
+| 1879 | The players, east of brown shiny bottles east of rocky area           |
+| 1880 | The players, east of brown shiny bottles east of rocky area.          |
+| 1881 | The players, east of brown shiny bottles east of rocky areas          |
+| 1882 | The players, east of brown shiny bottles east of rocky areas.         |
+| 1883 | The players, east of brown shiny bottles east of the rocky area       |
+| 1884 | The players, east of brown shiny bottles east of the rocky area.      |
+| 1885 | The players, east of brown shiny bottles east of the rocky areas      |
+| 1886 | The players, east of brown shiny bottles east of the rocky areas.     |
+| 1887 | The players, east of rocky area east of a brown shiny bottle          |
+| 1888 | The players, east of rocky area east of a brown shiny bottle.         |
+| 1889 | The players, east of rocky area east of a shiny brown bottle          |
+| 1890 | The players, east of rocky area east of a shiny brown bottle.         |
+| 1891 | The players, east of rocky area east of brown shiny bottles           |
+| 1892 | The players, east of rocky area east of brown shiny bottles.          |
+| 1893 | The players, east of rocky area east of shiny brown bottles           |
+| 1894 | The players, east of rocky area east of shiny brown bottles.          |
+| 1895 | The players, east of rocky area east of the brown shiny bottle        |
+| 1896 | The players, east of rocky area east of the brown shiny bottle.       |
+| 1897 | The players, east of rocky area east of the brown shiny bottles       |
+| 1898 | The players, east of rocky area east of the brown shiny bottles.      |
+| 1899 | The players, east of rocky area east of the shiny brown bottle        |
+| 1900 | The players, east of rocky area east of the shiny brown bottle.       |
+| 1901 | The players, east of rocky area east of the shiny brown bottles       |
+| 1902 | The players, east of rocky area east of the shiny brown bottles.      |
+| 1903 | The players, east of rocky areas east of a brown shiny bottle         |
+| 1904 | The players, east of rocky areas east of a brown shiny bottle.        |
+| 1905 | The players, east of rocky areas east of a shiny brown bottle         |
+| 1906 | The players, east of rocky areas east of a shiny brown bottle.        |
+| 1907 | The players, east of rocky areas east of brown shiny bottles          |
+| 1908 | The players, east of rocky areas east of brown shiny bottles.         |
+| 1909 | The players, east of rocky areas east of shiny brown bottles          |
+| 1910 | The players, east of rocky areas east of shiny brown bottles.         |
+| 1911 | The players, east of rocky areas east of the brown shiny bottle       |
+| 1912 | The players, east of rocky areas east of the brown shiny bottle.      |
+| 1913 | The players, east of rocky areas east of the brown shiny bottles      |
+| 1914 | The players, east of rocky areas east of the brown shiny bottles.     |
+| 1915 | The players, east of rocky areas east of the shiny brown bottle       |
+| 1916 | The players, east of rocky areas east of the shiny brown bottle.      |
+| 1917 | The players, east of rocky areas east of the shiny brown bottles      |
+| 1918 | The players, east of rocky areas east of the shiny brown bottles.     |
+| 1919 | The players, east of shiny brown bottles east of a rocky area         |
+| 1920 | The players, east of shiny brown bottles east of a rocky area.        |
+| 1921 | The players, east of shiny brown bottles east of rocky area           |
+| 1922 | The players, east of shiny brown bottles east of rocky area.          |
+| 1923 | The players, east of shiny brown bottles east of rocky areas          |
+| 1924 | The players, east of shiny brown bottles east of rocky areas.         |
+| 1925 | The players, east of shiny brown bottles east of the rocky area       |
+| 1926 | The players, east of shiny brown bottles east of the rocky area.      |
+| 1927 | The players, east of shiny brown bottles east of the rocky areas      |
+| 1928 | The players, east of shiny brown bottles east of the rocky areas.     |
+| 1929 | The players, east of the brown shiny bottle east of a rocky area      |
+| 1930 | The players, east of the brown shiny bottle east of a rocky area.     |
+| 1931 | The players, east of the brown shiny bottle east of rocky area        |
+| 1932 | The players, east of the brown shiny bottle east of rocky area.       |
+| 1933 | The players, east of the brown shiny bottle east of rocky areas       |
+| 1934 | The players, east of the brown shiny bottle east of rocky areas.      |
+| 1935 | The players, east of the brown shiny bottle east of the rocky area    |
+| 1936 | The players, east of the brown shiny bottle east of the rocky area.   |
+| 1937 | The players, east of the brown shiny bottle east of the rocky areas   |
+| 1938 | The players, east of the brown shiny bottle east of the rocky areas.  |
+| 1939 | The players, east of the brown shiny bottles east of a rocky area     |
+| 1940 | The players, east of the brown shiny bottles east of a rocky area.    |
+| 1941 | The players, east of the brown shiny bottles east of rocky area       |
+| 1942 | The players, east of the brown shiny bottles east of rocky area.      |
+| 1943 | The players, east of the brown shiny bottles east of rocky areas      |
+| 1944 | The players, east of the brown shiny bottles east of rocky areas.     |
+| 1945 | The players, east of the brown shiny bottles east of the rocky area   |
+| 1946 | The players, east of the brown shiny bottles east of the rocky area.  |
+| 1947 | The players, east of the brown shiny bottles east of the rocky areas  |
+| 1948 | The players, east of the brown shiny bottles east of the rocky areas. |
+| 1949 | The players, east of the rocky area east of a brown shiny bottle      |
+| 1950 | The players, east of the rocky area east of a brown shiny bottle.     |
+| 1951 | The players, east of the rocky area east of a shiny brown bottle      |
+| 1952 | The players, east of the rocky area east of a shiny brown bottle.     |
+| 1953 | The players, east of the rocky area east of brown shiny bottles       |
+| 1954 | The players, east of the rocky area east of brown shiny bottles.      |
+| 1955 | The players, east of the rocky area east of shiny brown bottles       |
+| 1956 | The players, east of the rocky area east of shiny brown bottles.      |
+| 1957 | The players, east of the rocky area east of the brown shiny bottle    |
+| 1958 | The players, east of the rocky area east of the brown shiny bottle.   |
+| 1959 | The players, east of the rocky area east of the brown shiny bottles   |
+| 1960 | The players, east of the rocky area east of the brown shiny bottles.  |
+| 1961 | The players, east of the rocky area east of the shiny brown bottle    |
+| 1962 | The players, east of the rocky area east of the shiny brown bottle.   |
+| 1963 | The players, east of the rocky area east of the shiny brown bottles   |
+| 1964 | The players, east of the rocky area east of the shiny brown bottles.  |
+| 1965 | The players, east of the rocky areas east of a brown shiny bottle     |
+| 1966 | The players, east of the rocky areas east of a brown shiny bottle.    |
+| 1967 | The players, east of the rocky areas east of a shiny brown bottle     |
+| 1968 | The players, east of the rocky areas east of a shiny brown bottle.    |
+| 1969 | The players, east of the rocky areas east of brown shiny bottles      |
+| 1970 | The players, east of the rocky areas east of brown shiny bottles.     |
+| 1971 | The players, east of the rocky areas east of shiny brown bottles      |
+| 1972 | The players, east of the rocky areas east of shiny brown bottles.     |
+| 1973 | The players, east of the rocky areas east of the brown shiny bottle   |
+| 1974 | The players, east of the rocky areas east of the brown shiny bottle.  |
+| 1975 | The players, east of the rocky areas east of the brown shiny bottles  |
+| 1976 | The players, east of the rocky areas east of the brown shiny bottles. |
+| 1977 | The players, east of the rocky areas east of the shiny brown bottle   |
+| 1978 | The players, east of the rocky areas east of the shiny brown bottle.  |
+| 1979 | The players, east of the rocky areas east of the shiny brown bottles  |
+| 1980 | The players, east of the rocky areas east of the shiny brown bottles. |
+| 1981 | The players, east of the shiny brown bottle east of a rocky area      |
+| 1982 | The players, east of the shiny brown bottle east of a rocky area.     |
+| 1983 | The players, east of the shiny brown bottle east of rocky area        |
+| 1984 | The players, east of the shiny brown bottle east of rocky area.       |
+| 1985 | The players, east of the shiny brown bottle east of rocky areas       |
+| 1986 | The players, east of the shiny brown bottle east of rocky areas.      |
+| 1987 | The players, east of the shiny brown bottle east of the rocky area    |
+| 1988 | The players, east of the shiny brown bottle east of the rocky area.   |
+| 1989 | The players, east of the shiny brown bottle east of the rocky areas   |
+| 1990 | The players, east of the shiny brown bottle east of the rocky areas.  |
+| 1991 | The players, east of the shiny brown bottles east of a rocky area     |
+| 1992 | The players, east of the shiny brown bottles east of a rocky area.    |
+| 1993 | The players, east of the shiny brown bottles east of rocky area       |
+| 1994 | The players, east of the shiny brown bottles east of rocky area.      |
+| 1995 | The players, east of the shiny brown bottles east of rocky areas      |
+| 1996 | The players, east of the shiny brown bottles east of rocky areas.     |
+| 1997 | The players, east of the shiny brown bottles east of the rocky area   |
+| 1998 | The players, east of the shiny brown bottles east of the rocky area.  |
+| 1999 | The players, east of the shiny brown bottles east of the rocky areas  |
+| 2000 | The players, east of the shiny brown bottles east of the rocky areas. |
++------+-----------------------------------------------------------------------+
+

@@ -1,0 +1,1382 @@
+GRAPH NAME: idTutorialRoom1Door_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1124  |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------------------+
+|                                     GOLD OUTPUTS                                     |
++-------------------------------------------------------------------------+------------+
+| Gold Output                                                             | Generated? |
++-------------------------------------------------------------------------+------------+
+| the closed door to the tutorial room with a lock south of the game room | True       |
++-------------------------------------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------------------+
+|                                          NODE METRICS                                         |
++-------------------------+--------------+---------------+------------------+-------------------+
+| Node                    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------------------+--------------+---------------+------------------+-------------------+
+| idTutorialRoom1Door     | True         | True          | Covered          | Included          |
+| closed                  | True         | True          | Covered          | Included          |
+| idTutorialRoom1DoorLock | True         | True          | Covered          | Included          |
+| idGameRoom1             | True         | True          | Covered          | Included          |
++-------------------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                          EDGE METRICS                                                                          |
++------------------------------------------+---------------------+-------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                     | Parent              | Child                   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------------------+---------------------+-------------------------+--------------+---------------+------------------+-------------------+
+| idTutorialRoom1Door_prop_idOpenState     | idTutorialRoom1Door | closed                  | True         | True          | Covered          | Included          |
+| idTutorialRoom1Door_prop_idLockMechanism | idTutorialRoom1Door | idTutorialRoom1DoorLock | True         | True          | Covered          | Included          |
+| isSouthOf                                | idTutorialRoom1Door | idGameRoom1             | True         | True          | Covered          | Included          |
++------------------------------------------+---------------------+-------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h675                                                                      |
+|               |   INDEX: x674                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h732 ARG0: e729 ARG1: u730 ARG2: x731 ]               |
+|               |           [ def_implicit_q LBL: h743 ARG0: x740 RSTR: h741 BODY: h742 ]          |
+|               |           [ _south_a_1 LBL: h728 ARG0: i725 ARG1: x726 ARG2: u727 ]              |
+|               |           [ def_udef_a_q LBL: h738 ARG0: x735 RSTR: h736 BODY: h737 ]            |
+|               |           [ compound LBL: h724 ARG0: e721 [ e PROG: - ] ARG1: u722 ARG2: u723 ]  |
+|               |           [ udef_q LBL: h719 ARG0: x716 RSTR: h717 BODY: h718 ]                  |
+|               |           [ _game_n_1 LBL: h715 ARG0: x714 ]                                     |
+|               |           [ _room_n_unit LBL: h713 ARG0: x712 ]                                  |
+|               |           [ place_n LBL: h734 ARG0: x733 ]                                       |
+|               |           [ _with_p LBL: h706 ARG0: e703 ARG1: u704 ARG2: i705 ]                 |
+|               |           [ def_udef_a_q LBL: h710 ARG0: x707 RSTR: h708 BODY: h709 ]            |
+|               |           [ _lock_n_1 LBL: h702 ARG0: x701 ]                                     |
+|               |           [ _closed_a_1 LBL: h700 ARG0: e698 ARG1: u699 ]                        |
+|               |           [ _to_p LBL: h692 ARG0: e689 ARG1: u690 ARG2: i691 ]                   |
+|               |           [ def_udef_a_q LBL: h696 ARG0: x693 RSTR: h694 BODY: h695 ]            |
+|               |           [ compound LBL: h688 ARG0: e685 [ e PROG: - ] ARG1: u686 ARG2: u687 ]  |
+|               |           [ udef_q LBL: h683 ARG0: x680 RSTR: h681 BODY: h682 ]                  |
+|               |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|               |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|               |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|               |   HCONS: < h717 qeq h715 h736 qeq h713 h741 qeq h734 h708 qeq h702 h681 qeq h679 |
+|               | h694 qeq h677 >                                                                  |
+|               |   EQS: < x716 eq x714 h724 eq h720 u723 eq x716 h724 eq h713 u722 eq x712 x735   |
+|               | eq x712 h728 eq h739 u727 eq x735 h728 eq h734 x726 eq x733 x740 eq x733 h732 eq |
+|               | h744 x731 eq x740 x707 eq x701 h706 eq h711 i705 eq x707 x680 eq x678 h688 eq    |
+|               | h684 u687 eq x680 h688 eq h677 u686 eq x676 x693 eq x676 h692 eq h697 i691 eq    |
+|               | x693 h692 eq h675 u690 eq x674 h700 eq h675 u699 eq x674 h706 eq h675 u704 eq    |
+|               | x674 h732 eq h675 u730 eq x674 > ]                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h675                                                                      |
+|               |   INDEX: x674                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h675 ARG0: e729 ARG1: x674 ARG2: x726 ]               |
+|               |           [ def_implicit_q LBL: h743 ARG0: x726 RSTR: h741 BODY: h742 ]          |
+|               |           [ _south_a_1 LBL: h728 ARG0: i725 ARG1: x726 ARG2: x712 ]              |
+|               |           [ def_udef_a_q LBL: h738 ARG0: x712 RSTR: h736 BODY: h737 ]            |
+|               |           [ compound LBL: h713 ARG0: e721 [ e PROG: - ] ARG1: x712 ARG2: x714 ]  |
+|               |           [ udef_q LBL: h719 ARG0: x714 RSTR: h717 BODY: h718 ]                  |
+|               |           [ _game_n_1 LBL: h715 ARG0: x714 ]                                     |
+|               |           [ _room_n_unit LBL: h713 ARG0: x712 ]                                  |
+|               |           [ place_n LBL: h728 ARG0: x726 ]                                       |
+|               |           [ _with_p LBL: h675 ARG0: e703 ARG1: x674 ARG2: x701 ]                 |
+|               |           [ def_udef_a_q LBL: h710 ARG0: x701 RSTR: h708 BODY: h709 ]            |
+|               |           [ _lock_n_1 LBL: h702 ARG0: x701 ]                                     |
+|               |           [ _closed_a_1 LBL: h675 ARG0: e698 ARG1: x674 ]                        |
+|               |           [ _to_p LBL: h675 ARG0: e689 ARG1: x674 ARG2: x676 ]                   |
+|               |           [ def_udef_a_q LBL: h696 ARG0: x676 RSTR: h694 BODY: h695 ]            |
+|               |           [ compound LBL: h677 ARG0: e685 [ e PROG: - ] ARG1: x676 ARG2: x678 ]  |
+|               |           [ udef_q LBL: h683 ARG0: x678 RSTR: h681 BODY: h682 ]                  |
+|               |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|               |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|               |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|               |   HCONS: < h717 qeq h715 h736 qeq h713 h741 qeq h728 h708 qeq h702 h681 qeq h679 |
+|               | h694 qeq h677 > ]                                                                |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h753                                                                      |
+|               |   INDEX: e750                                                                    |
+|               |   RELS: < [ unknown LBL: h749 ARG: x674 ARG0: e750 ]                             |
+|               |           [ def_udef_a_q LBL: h748 ARG0: x674 RSTR: h746 BODY: h747 ]            |
+|               |           [ loc_nonsp LBL: h675 ARG0: e729 ARG1: x674 ARG2: x726 ]               |
+|               |           [ def_implicit_q LBL: h743 ARG0: x726 RSTR: h741 BODY: h742 ]          |
+|               |           [ _south_a_1 LBL: h728 ARG0: i725 ARG1: x726 ARG2: x712 ]              |
+|               |           [ def_udef_a_q LBL: h738 ARG0: x712 RSTR: h736 BODY: h737 ]            |
+|               |           [ compound LBL: h713 ARG0: e721 [ e PROG: - ] ARG1: x712 ARG2: x714 ]  |
+|               |           [ udef_q LBL: h719 ARG0: x714 RSTR: h717 BODY: h718 ]                  |
+|               |           [ _game_n_1 LBL: h715 ARG0: x714 ]                                     |
+|               |           [ _room_n_unit LBL: h713 ARG0: x712 ]                                  |
+|               |           [ place_n LBL: h728 ARG0: x726 ]                                       |
+|               |           [ _with_p LBL: h675 ARG0: e703 ARG1: x674 ARG2: x701 ]                 |
+|               |           [ def_udef_a_q LBL: h710 ARG0: x701 RSTR: h708 BODY: h709 ]            |
+|               |           [ _lock_n_1 LBL: h702 ARG0: x701 ]                                     |
+|               |           [ _closed_a_1 LBL: h675 ARG0: e698 ARG1: x674 ]                        |
+|               |           [ _to_p LBL: h675 ARG0: e689 ARG1: x674 ARG2: x676 ]                   |
+|               |           [ def_udef_a_q LBL: h696 ARG0: x676 RSTR: h694 BODY: h695 ]            |
+|               |           [ compound LBL: h677 ARG0: e685 [ e PROG: - ] ARG1: x676 ARG2: x678 ]  |
+|               |           [ udef_q LBL: h683 ARG0: x678 RSTR: h681 BODY: h682 ]                  |
+|               |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|               |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|               |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|               |   HCONS: < h717 qeq h715 h736 qeq h713 h741 qeq h728 h708 qeq h702 h681 qeq h679 |
+|               | h694 qeq h677 h746 qeq h675 h753 qeq h749 > ]                                    |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                                |
++-------------------------+----------------------------------------------------------------------------------+
+| Node                    | Generated SEMENT                                                                 |
++-------------------------+----------------------------------------------------------------------------------+
+| idTutorialRoom1Door     | [ TOP: h675                                                                      |
+|                         |   INDEX: x674                                                                    |
+|                         |   RELS: < [ _to_p LBL: h692 ARG0: e689 ARG1: u690 ARG2: i691 ]                   |
+|                         |           [ def_udef_a_q LBL: h696 ARG0: x693 RSTR: h694 BODY: h695 ]            |
+|                         |           [ compound LBL: h688 ARG0: e685 [ e PROG: - ] ARG1: u686 ARG2: u687 ]  |
+|                         |           [ udef_q LBL: h683 ARG0: x680 RSTR: h681 BODY: h682 ]                  |
+|                         |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|                         |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|                         |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|                         |   HCONS: < h681 qeq h679 h694 qeq h677 >                                         |
+|                         |   EQS: < x680 eq x678 h688 eq h684 u687 eq x680 h688 eq h677 u686 eq x676 x693   |
+|                         | eq x676 h692 eq h697 i691 eq x693 h692 eq h675 u690 eq x674 > ]                  |
++-------------------------+----------------------------------------------------------------------------------+
+| closed                  | [ TOP: h700                                                                      |
+|                         |   INDEX: e698                                                                    |
+|                         |   RELS: < [ _closed_a_1 LBL: h700 ARG0: e698 ARG1: u699 ] >                      |
+|                         |   SLOTS: < ARG1: u699 > ]                                                        |
++-------------------------+----------------------------------------------------------------------------------+
+| idTutorialRoom1DoorLock | [ TOP: h702                                                                      |
+|                         |   INDEX: x701                                                                    |
+|                         |   RELS: < [ _lock_n_1 LBL: h702 ARG0: x701 ] > ]                                 |
++-------------------------+----------------------------------------------------------------------------------+
+| idGameRoom1             | [ TOP: h713                                                                      |
+|                         |   INDEX: x712                                                                    |
+|                         |   RELS: < [ compound LBL: h724 ARG0: e721 [ e PROG: - ] ARG1: u722 ARG2: u723 ]  |
+|                         |           [ udef_q LBL: h719 ARG0: x716 RSTR: h717 BODY: h718 ]                  |
+|                         |           [ _game_n_1 LBL: h715 ARG0: x714 ]                                     |
+|                         |           [ _room_n_unit LBL: h713 ARG0: x712 ] >                                |
+|                         |   HCONS: < h717 qeq h715 >                                                       |
+|                         |   EQS: < x716 eq x714 h724 eq h720 u723 eq x716 h724 eq h713 u722 eq x712 > ]    |
++-------------------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE SEMENTS                                                                                |
++------------------------------------------+---------------------+-------------------------+----------------------------------------------------------------------------------+
+| Edge                                     | Parent              | Child                   | Generated SEMENT                                                                 |
++------------------------------------------+---------------------+-------------------------+----------------------------------------------------------------------------------+
+| idTutorialRoom1Door_prop_idOpenState     | idTutorialRoom1Door | closed                  | [ TOP: h675                                                                      |
+|                                          |                     |                         |   INDEX: x674                                                                    |
+|                                          |                     |                         |   RELS: < [ _closed_a_1 LBL: h700 ARG0: e698 ARG1: u699 ]                        |
+|                                          |                     |                         |           [ _to_p LBL: h692 ARG0: e689 ARG1: u690 ARG2: i691 ]                   |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h696 ARG0: x693 RSTR: h694 BODY: h695 ]            |
+|                                          |                     |                         |           [ compound LBL: h688 ARG0: e685 [ e PROG: - ] ARG1: u686 ARG2: u687 ]  |
+|                                          |                     |                         |           [ udef_q LBL: h683 ARG0: x680 RSTR: h681 BODY: h682 ]                  |
+|                                          |                     |                         |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|                                          |                     |                         |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|                                          |                     |                         |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|                                          |                     |                         |   HCONS: < h681 qeq h679 h694 qeq h677 >                                         |
+|                                          |                     |                         |   EQS: < x680 eq x678 h688 eq h684 u687 eq x680 h688 eq h677 u686 eq x676 x693   |
+|                                          |                     |                         | eq x676 h692 eq h697 i691 eq x693 h692 eq h675 u690 eq x674 h700 eq h675 u699 eq |
+|                                          |                     |                         | x674 > ]                                                                         |
++------------------------------------------+---------------------+-------------------------+----------------------------------------------------------------------------------+
+| idTutorialRoom1Door_prop_idLockMechanism | idTutorialRoom1Door | idTutorialRoom1DoorLock | [ TOP: h675                                                                      |
+|                                          |                     |                         |   INDEX: x674                                                                    |
+|                                          |                     |                         |   RELS: < [ _with_p LBL: h706 ARG0: e703 ARG1: u704 ARG2: i705 ]                 |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h710 ARG0: x707 RSTR: h708 BODY: h709 ]            |
+|                                          |                     |                         |           [ _lock_n_1 LBL: h702 ARG0: x701 ]                                     |
+|                                          |                     |                         |           [ _closed_a_1 LBL: h700 ARG0: e698 ARG1: u699 ]                        |
+|                                          |                     |                         |           [ _to_p LBL: h692 ARG0: e689 ARG1: u690 ARG2: i691 ]                   |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h696 ARG0: x693 RSTR: h694 BODY: h695 ]            |
+|                                          |                     |                         |           [ compound LBL: h688 ARG0: e685 [ e PROG: - ] ARG1: u686 ARG2: u687 ]  |
+|                                          |                     |                         |           [ udef_q LBL: h683 ARG0: x680 RSTR: h681 BODY: h682 ]                  |
+|                                          |                     |                         |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|                                          |                     |                         |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|                                          |                     |                         |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|                                          |                     |                         |   HCONS: < h708 qeq h702 h681 qeq h679 h694 qeq h677 >                           |
+|                                          |                     |                         |   EQS: < x707 eq x701 h706 eq h711 i705 eq x707 x680 eq x678 h688 eq h684 u687   |
+|                                          |                     |                         | eq x680 h688 eq h677 u686 eq x676 x693 eq x676 h692 eq h697 i691 eq x693 h692 eq |
+|                                          |                     |                         | h675 u690 eq x674 h700 eq h675 u699 eq x674 h706 eq h675 u704 eq x674 > ]        |
++------------------------------------------+---------------------+-------------------------+----------------------------------------------------------------------------------+
+| isSouthOf                                | idTutorialRoom1Door | idGameRoom1             | [ TOP: h675                                                                      |
+|                                          |                     |                         |   INDEX: x674                                                                    |
+|                                          |                     |                         |   RELS: < [ loc_nonsp LBL: h732 ARG0: e729 ARG1: u730 ARG2: x731 ]               |
+|                                          |                     |                         |           [ def_implicit_q LBL: h743 ARG0: x740 RSTR: h741 BODY: h742 ]          |
+|                                          |                     |                         |           [ _south_a_1 LBL: h728 ARG0: i725 ARG1: x726 ARG2: u727 ]              |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h738 ARG0: x735 RSTR: h736 BODY: h737 ]            |
+|                                          |                     |                         |           [ compound LBL: h724 ARG0: e721 [ e PROG: - ] ARG1: u722 ARG2: u723 ]  |
+|                                          |                     |                         |           [ udef_q LBL: h719 ARG0: x716 RSTR: h717 BODY: h718 ]                  |
+|                                          |                     |                         |           [ _game_n_1 LBL: h715 ARG0: x714 ]                                     |
+|                                          |                     |                         |           [ _room_n_unit LBL: h713 ARG0: x712 ]                                  |
+|                                          |                     |                         |           [ place_n LBL: h734 ARG0: x733 ]                                       |
+|                                          |                     |                         |           [ _with_p LBL: h706 ARG0: e703 ARG1: u704 ARG2: i705 ]                 |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h710 ARG0: x707 RSTR: h708 BODY: h709 ]            |
+|                                          |                     |                         |           [ _lock_n_1 LBL: h702 ARG0: x701 ]                                     |
+|                                          |                     |                         |           [ _closed_a_1 LBL: h700 ARG0: e698 ARG1: u699 ]                        |
+|                                          |                     |                         |           [ _to_p LBL: h692 ARG0: e689 ARG1: u690 ARG2: i691 ]                   |
+|                                          |                     |                         |           [ def_udef_a_q LBL: h696 ARG0: x693 RSTR: h694 BODY: h695 ]            |
+|                                          |                     |                         |           [ compound LBL: h688 ARG0: e685 [ e PROG: - ] ARG1: u686 ARG2: u687 ]  |
+|                                          |                     |                         |           [ udef_q LBL: h683 ARG0: x680 RSTR: h681 BODY: h682 ]                  |
+|                                          |                     |                         |           [ _tutorial_n_1 LBL: h679 ARG0: x678 ]                                 |
+|                                          |                     |                         |           [ _room_n_unit LBL: h677 ARG0: x676 ]                                  |
+|                                          |                     |                         |           [ _door_n_1 LBL: h675 ARG0: x674 ] >                                   |
+|                                          |                     |                         |   HCONS: < h717 qeq h715 h736 qeq h713 h741 qeq h734 h708 qeq h702 h681 qeq h679 |
+|                                          |                     |                         | h694 qeq h677 >                                                                  |
+|                                          |                     |                         |   EQS: < x716 eq x714 h724 eq h720 u723 eq x716 h724 eq h713 u722 eq x712 x735   |
+|                                          |                     |                         | eq x712 h728 eq h739 u727 eq x735 h728 eq h734 x726 eq x733 x740 eq x733 h732 eq |
+|                                          |                     |                         | h744 x731 eq x740 x707 eq x701 h706 eq h711 i705 eq x707 x680 eq x678 h688 eq    |
+|                                          |                     |                         | h684 u687 eq x680 h688 eq h677 u686 eq x676 x693 eq x676 h692 eq h697 i691 eq    |
+|                                          |                     |                         | x693 h692 eq h675 u690 eq x674 h700 eq h675 u699 eq x674 h706 eq h675 u704 eq    |
+|                                          |                     |                         | x674 h732 eq h675 u730 eq x674 > ]                                               |
++------------------------------------------+---------------------+-------------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                                 GENERATED ENGLISH TEXT                                |
++------+--------------------------------------------------------------------------------+
+| #    | Generated Text                                                                 |
++------+--------------------------------------------------------------------------------+
+| 1    | A closed door south of the game room to a tutorial room with the lock          |
+| 2    | A closed door south of the game room to a tutorial room with the locks         |
+| 3    | A closed door south of the game room to the tutorial room with the lock        |
+| 4    | A closed door south of the game room to the tutorial room with the locks       |
+| 5    | A closed door south of the game room to the tutorial rooms with the lock       |
+| 6    | A closed door south of the game room to the tutorial rooms with the locks      |
+| 7    | A closed door to a tutorial room south of a game room with a lock              |
+| 8    | A closed door to a tutorial room south of a game room with a lock              |
+| 9    | A closed door to a tutorial room south of a game room with a lock.             |
+| 10   | A closed door to a tutorial room south of a game room with locks               |
+| 11   | A closed door to a tutorial room south of a game room with locks               |
+| 12   | A closed door to a tutorial room south of a game room with locks.              |
+| 13   | A closed door to a tutorial room south of a game room with the lock            |
+| 14   | A closed door to a tutorial room south of a game room with the lock            |
+| 15   | A closed door to a tutorial room south of a game room with the lock.           |
+| 16   | A closed door to a tutorial room south of a game room with the locks           |
+| 17   | A closed door to a tutorial room south of a game room with the locks           |
+| 18   | A closed door to a tutorial room south of a game room with the locks.          |
+| 19   | A closed door to a tutorial room south of game rooms with the lock             |
+| 20   | A closed door to a tutorial room south of game rooms with the locks            |
+| 21   | A closed door to a tutorial room south of the game room with a lock            |
+| 22   | A closed door to a tutorial room south of the game room with a lock            |
+| 23   | A closed door to a tutorial room south of the game room with a lock.           |
+| 24   | A closed door to a tutorial room south of the game room with lock.             |
+| 25   | A closed door to a tutorial room south of the game room with locks             |
+| 26   | A closed door to a tutorial room south of the game room with locks             |
+| 27   | A closed door to a tutorial room south of the game room with locks.            |
+| 28   | A closed door to a tutorial room south of the game room with the lock          |
+| 29   | A closed door to a tutorial room south of the game room with the lock          |
+| 30   | A closed door to a tutorial room south of the game room with the lock.         |
+| 31   | A closed door to a tutorial room south of the game room with the locks         |
+| 32   | A closed door to a tutorial room south of the game room with the locks         |
+| 33   | A closed door to a tutorial room south of the game room with the locks.        |
+| 34   | A closed door to a tutorial room south of the game room with the locks.        |
+| 35   | A closed door to a tutorial room south of the game rooms with a lock           |
+| 36   | A closed door to a tutorial room south of the game rooms with a lock           |
+| 37   | A closed door to a tutorial room south of the game rooms with a lock.          |
+| 38   | A closed door to a tutorial room south of the game rooms with a lock.          |
+| 39   | A closed door to a tutorial room south of the game rooms with locks            |
+| 40   | A closed door to a tutorial room south of the game rooms with locks            |
+| 41   | A closed door to a tutorial room south of the game rooms with locks.           |
+| 42   | A closed door to a tutorial room south of the game rooms with locks.           |
+| 43   | A closed door to a tutorial room south of the game rooms with the lock         |
+| 44   | A closed door to a tutorial room south of the game rooms with the lock         |
+| 45   | A closed door to a tutorial room south of the game rooms with the lock.        |
+| 46   | A closed door to a tutorial room south of the game rooms with the lock.        |
+| 47   | A closed door to a tutorial room south of the game rooms with the locks        |
+| 48   | A closed door to a tutorial room south of the game rooms with the locks        |
+| 49   | A closed door to a tutorial room south of the game rooms with the locks.       |
+| 50   | A closed door to a tutorial room south of the game rooms with the locks.       |
+| 51   | A closed door to a tutorial room with a lock south of a game room              |
+| 52   | A closed door to a tutorial room with a lock south of the game room            |
+| 53   | A closed door to a tutorial room with a lock south of the game rooms           |
+| 54   | A closed door to a tutorial room with a lock south of the game rooms           |
+| 55   | A closed door to a tutorial room with locks south of the game room             |
+| 56   | A closed door to a tutorial room with locks south of the game rooms            |
+| 57   | A closed door to a tutorial room with locks south of the game rooms            |
+| 58   | A closed door to a tutorial room with the lock south of a game room            |
+| 59   | A closed door to a tutorial room with the lock south of the game room          |
+| 60   | A closed door to a tutorial room with the lock south of the game room          |
+| 61   | A closed door to a tutorial room with the lock south of the game rooms         |
+| 62   | A closed door to a tutorial room with the lock south of the game rooms         |
+| 63   | A closed door to a tutorial room with the lock south of the game rooms.        |
+| 64   | A closed door to a tutorial room with the lock south of the game rooms.        |
+| 65   | A closed door to a tutorial room with the locks south of the game room         |
+| 66   | A closed door to a tutorial room with the locks south of the game rooms        |
+| 67   | A closed door to the tutorial room south of a game room with a lock            |
+| 68   | A closed door to the tutorial room south of a game room with a lock            |
+| 69   | A closed door to the tutorial room south of a game room with a lock.           |
+| 70   | A closed door to the tutorial room south of a game room with locks             |
+| 71   | A closed door to the tutorial room south of a game room with locks             |
+| 72   | A closed door to the tutorial room south of a game room with locks.            |
+| 73   | A closed door to the tutorial room south of a game room with the lock          |
+| 74   | A closed door to the tutorial room south of a game room with the lock          |
+| 75   | A closed door to the tutorial room south of a game room with the lock.         |
+| 76   | A closed door to the tutorial room south of a game room with the locks         |
+| 77   | A closed door to the tutorial room south of a game room with the locks         |
+| 78   | A closed door to the tutorial room south of a game room with the locks.        |
+| 79   | A closed door to the tutorial room south of a game room with the locks.        |
+| 80   | A closed door to the tutorial room south of game rooms with the lock           |
+| 81   | A closed door to the tutorial room south of game rooms with the locks          |
+| 82   | A closed door to the tutorial room south of the game room with a lock          |
+| 83   | A closed door to the tutorial room south of the game room with a lock          |
+| 84   | A closed door to the tutorial room south of the game room with a lock.         |
+| 85   | A closed door to the tutorial room south of the game room with a lock.         |
+| 86   | A closed door to the tutorial room south of the game room with lock.           |
+| 87   | A closed door to the tutorial room south of the game room with locks           |
+| 88   | A closed door to the tutorial room south of the game room with locks           |
+| 89   | A closed door to the tutorial room south of the game room with locks.          |
+| 90   | A closed door to the tutorial room south of the game room with locks.          |
+| 91   | A closed door to the tutorial room south of the game room with the lock        |
+| 92   | A closed door to the tutorial room south of the game room with the lock        |
+| 93   | A closed door to the tutorial room south of the game room with the lock.       |
+| 94   | A closed door to the tutorial room south of the game room with the locks       |
+| 95   | A closed door to the tutorial room south of the game room with the locks       |
+| 96   | A closed door to the tutorial room south of the game room with the locks.      |
+| 97   | A closed door to the tutorial room south of the game room with the locks.      |
+| 98   | A closed door to the tutorial room south of the game rooms with a lock         |
+| 99   | A closed door to the tutorial room south of the game rooms with a lock         |
+| 100  | A closed door to the tutorial room south of the game rooms with a lock.        |
+| 101  | A closed door to the tutorial room south of the game rooms with a lock.        |
+| 102  | A closed door to the tutorial room south of the game rooms with locks          |
+| 103  | A closed door to the tutorial room south of the game rooms with locks          |
+| 104  | A closed door to the tutorial room south of the game rooms with locks.         |
+| 105  | A closed door to the tutorial room south of the game rooms with locks.         |
+| 106  | A closed door to the tutorial room south of the game rooms with the lock       |
+| 107  | A closed door to the tutorial room south of the game rooms with the lock       |
+| 108  | A closed door to the tutorial room south of the game rooms with the lock.      |
+| 109  | A closed door to the tutorial room south of the game rooms with the lock.      |
+| 110  | A closed door to the tutorial room south of the game rooms with the locks      |
+| 111  | A closed door to the tutorial room south of the game rooms with the locks      |
+| 112  | A closed door to the tutorial room south of the game rooms with the locks.     |
+| 113  | A closed door to the tutorial room south of the game rooms with the locks.     |
+| 114  | A closed door to the tutorial room with a lock south of a game room            |
+| 115  | A closed door to the tutorial room with a lock south of the game room          |
+| 116  | A closed door to the tutorial room with a lock south of the game room          |
+| 117  | A closed door to the tutorial room with a lock south of the game rooms         |
+| 118  | A closed door to the tutorial room with a lock south of the game rooms         |
+| 119  | A closed door to the tutorial room with locks south of a game room             |
+| 120  | A closed door to the tutorial room with locks south of the game room           |
+| 121  | A closed door to the tutorial room with locks south of the game rooms          |
+| 122  | A closed door to the tutorial room with locks south of the game rooms          |
+| 123  | A closed door to the tutorial room with the lock south of a game room          |
+| 124  | A closed door to the tutorial room with the lock south of a game room          |
+| 125  | A closed door to the tutorial room with the lock south of the game room        |
+| 126  | A closed door to the tutorial room with the lock south of the game room        |
+| 127  | A closed door to the tutorial room with the lock south of the game rooms       |
+| 128  | A closed door to the tutorial room with the lock south of the game rooms       |
+| 129  | A closed door to the tutorial room with the lock south of the game rooms.      |
+| 130  | A closed door to the tutorial room with the lock south of the game rooms.      |
+| 131  | A closed door to the tutorial room with the locks south of a game room         |
+| 132  | A closed door to the tutorial room with the locks south of the game room       |
+| 133  | A closed door to the tutorial room with the locks south of the game rooms      |
+| 134  | A closed door to the tutorial room with the locks south of the game rooms      |
+| 135  | A closed door to the tutorial rooms south of a game room with a lock           |
+| 136  | A closed door to the tutorial rooms south of a game room with a lock           |
+| 137  | A closed door to the tutorial rooms south of a game room with a lock.          |
+| 138  | A closed door to the tutorial rooms south of a game room with locks            |
+| 139  | A closed door to the tutorial rooms south of a game room with locks            |
+| 140  | A closed door to the tutorial rooms south of a game room with locks.           |
+| 141  | A closed door to the tutorial rooms south of a game room with the lock         |
+| 142  | A closed door to the tutorial rooms south of a game room with the lock         |
+| 143  | A closed door to the tutorial rooms south of a game room with the lock.        |
+| 144  | A closed door to the tutorial rooms south of a game room with the locks        |
+| 145  | A closed door to the tutorial rooms south of a game room with the locks        |
+| 146  | A closed door to the tutorial rooms south of a game room with the locks.       |
+| 147  | A closed door to the tutorial rooms south of a game room with the locks.       |
+| 148  | A closed door to the tutorial rooms south of game rooms with a lock            |
+| 149  | A closed door to the tutorial rooms south of game rooms with the lock          |
+| 150  | A closed door to the tutorial rooms south of game rooms with the locks         |
+| 151  | A closed door to the tutorial rooms south of the game room with a lock         |
+| 152  | A closed door to the tutorial rooms south of the game room with a lock         |
+| 153  | A closed door to the tutorial rooms south of the game room with a lock.        |
+| 154  | A closed door to the tutorial rooms south of the game room with a lock.        |
+| 155  | A closed door to the tutorial rooms south of the game room with lock.          |
+| 156  | A closed door to the tutorial rooms south of the game room with locks          |
+| 157  | A closed door to the tutorial rooms south of the game room with locks          |
+| 158  | A closed door to the tutorial rooms south of the game room with locks.         |
+| 159  | A closed door to the tutorial rooms south of the game room with locks.         |
+| 160  | A closed door to the tutorial rooms south of the game room with the lock       |
+| 161  | A closed door to the tutorial rooms south of the game room with the lock       |
+| 162  | A closed door to the tutorial rooms south of the game room with the lock.      |
+| 163  | A closed door to the tutorial rooms south of the game room with the locks      |
+| 164  | A closed door to the tutorial rooms south of the game room with the locks      |
+| 165  | A closed door to the tutorial rooms south of the game room with the locks.     |
+| 166  | A closed door to the tutorial rooms south of the game room with the locks.     |
+| 167  | A closed door to the tutorial rooms south of the game rooms with a lock        |
+| 168  | A closed door to the tutorial rooms south of the game rooms with a lock        |
+| 169  | A closed door to the tutorial rooms south of the game rooms with a lock.       |
+| 170  | A closed door to the tutorial rooms south of the game rooms with a lock.       |
+| 171  | A closed door to the tutorial rooms south of the game rooms with locks         |
+| 172  | A closed door to the tutorial rooms south of the game rooms with locks         |
+| 173  | A closed door to the tutorial rooms south of the game rooms with locks.        |
+| 174  | A closed door to the tutorial rooms south of the game rooms with locks.        |
+| 175  | A closed door to the tutorial rooms south of the game rooms with the lock      |
+| 176  | A closed door to the tutorial rooms south of the game rooms with the lock      |
+| 177  | A closed door to the tutorial rooms south of the game rooms with the lock.     |
+| 178  | A closed door to the tutorial rooms south of the game rooms with the lock.     |
+| 179  | A closed door to the tutorial rooms south of the game rooms with the locks     |
+| 180  | A closed door to the tutorial rooms south of the game rooms with the locks     |
+| 181  | A closed door to the tutorial rooms south of the game rooms with the locks.    |
+| 182  | A closed door to the tutorial rooms south of the game rooms with the locks.    |
+| 183  | A closed door to the tutorial rooms with a lock south of a game room           |
+| 184  | A closed door to the tutorial rooms with a lock south of the game room         |
+| 185  | A closed door to the tutorial rooms with a lock south of the game room         |
+| 186  | A closed door to the tutorial rooms with a lock south of the game rooms        |
+| 187  | A closed door to the tutorial rooms with a lock south of the game rooms        |
+| 188  | A closed door to the tutorial rooms with locks south of a game room            |
+| 189  | A closed door to the tutorial rooms with locks south of the game room          |
+| 190  | A closed door to the tutorial rooms with locks south of the game rooms         |
+| 191  | A closed door to the tutorial rooms with locks south of the game rooms         |
+| 192  | A closed door to the tutorial rooms with the lock south of a game room         |
+| 193  | A closed door to the tutorial rooms with the lock south of a game room         |
+| 194  | A closed door to the tutorial rooms with the lock south of the game room       |
+| 195  | A closed door to the tutorial rooms with the lock south of the game room       |
+| 196  | A closed door to the tutorial rooms with the lock south of the game rooms      |
+| 197  | A closed door to the tutorial rooms with the lock south of the game rooms      |
+| 198  | A closed door to the tutorial rooms with the lock south of the game rooms.     |
+| 199  | A closed door to the tutorial rooms with the lock south of the game rooms.     |
+| 200  | A closed door to the tutorial rooms with the locks south of a game room        |
+| 201  | A closed door to the tutorial rooms with the locks south of the game room      |
+| 202  | A closed door to the tutorial rooms with the locks south of the game rooms     |
+| 203  | A closed door to the tutorial rooms with the locks south of the game rooms     |
+| 204  | A closed door to tutorial rooms south of a game room with a lock               |
+| 205  | A closed door to tutorial rooms south of a game room with locks                |
+| 206  | A closed door to tutorial rooms south of a game room with the lock             |
+| 207  | A closed door to tutorial rooms south of a game room with the lock             |
+| 208  | A closed door to tutorial rooms south of a game room with the locks            |
+| 209  | A closed door to tutorial rooms south of a game room with the locks            |
+| 210  | A closed door to tutorial rooms south of a game room with the locks.           |
+| 211  | A closed door to tutorial rooms south of the game room with a lock             |
+| 212  | A closed door to tutorial rooms south of the game room with a lock             |
+| 213  | A closed door to tutorial rooms south of the game room with a lock.            |
+| 214  | A closed door to tutorial rooms south of the game room with locks              |
+| 215  | A closed door to tutorial rooms south of the game room with locks              |
+| 216  | A closed door to tutorial rooms south of the game room with locks.             |
+| 217  | A closed door to tutorial rooms south of the game room with the lock           |
+| 218  | A closed door to tutorial rooms south of the game room with the lock           |
+| 219  | A closed door to tutorial rooms south of the game room with the locks          |
+| 220  | A closed door to tutorial rooms south of the game room with the locks          |
+| 221  | A closed door to tutorial rooms south of the game room with the locks.         |
+| 222  | A closed door to tutorial rooms south of the game rooms with a lock            |
+| 223  | A closed door to tutorial rooms south of the game rooms with a lock            |
+| 224  | A closed door to tutorial rooms south of the game rooms with locks             |
+| 225  | A closed door to tutorial rooms south of the game rooms with locks             |
+| 226  | A closed door to tutorial rooms south of the game rooms with the lock          |
+| 227  | A closed door to tutorial rooms south of the game rooms with the lock          |
+| 228  | A closed door to tutorial rooms south of the game rooms with the locks         |
+| 229  | A closed door to tutorial rooms south of the game rooms with the locks         |
+| 230  | A closed door to tutorial rooms south of the game rooms with the locks.        |
+| 231  | A closed door to tutorial rooms south of the game rooms with the locks.        |
+| 232  | A closed door to tutorial rooms with a lock south of the game room             |
+| 233  | A closed door to tutorial rooms with the lock south of a game room             |
+| 234  | A closed door to tutorial rooms with the lock south of the game room           |
+| 235  | A closed door to tutorial rooms with the lock south of the game rooms          |
+| 236  | A closed door to tutorial rooms with the lock south of the game rooms          |
+| 237  | A closed door with a lock south of a game room to a tutorial room              |
+| 238  | A closed door with a lock south of a game room to the tutorial room            |
+| 239  | A closed door with a lock south of a game room to the tutorial rooms           |
+| 240  | A closed door with a lock south of the game room to a tutorial room            |
+| 241  | A closed door with a lock south of the game room to a tutorial room            |
+| 242  | A closed door with a lock south of the game room to the tutorial room          |
+| 243  | A closed door with a lock south of the game room to the tutorial room          |
+| 244  | A closed door with a lock south of the game room to the tutorial rooms         |
+| 245  | A closed door with a lock south of the game room to the tutorial rooms         |
+| 246  | A closed door with a lock south of the game room to the tutorial rooms.        |
+| 247  | A closed door with a lock south of the game room to tutorial rooms             |
+| 248  | A closed door with a lock south of the game room to tutorial rooms.            |
+| 249  | A closed door with a lock south of the game rooms to a tutorial room           |
+| 250  | A closed door with a lock south of the game rooms to a tutorial room           |
+| 251  | A closed door with a lock south of the game rooms to the tutorial room         |
+| 252  | A closed door with a lock south of the game rooms to the tutorial room         |
+| 253  | A closed door with a lock south of the game rooms to the tutorial rooms        |
+| 254  | A closed door with a lock south of the game rooms to the tutorial rooms        |
+| 255  | A closed door with a lock to a tutorial room south of the game room            |
+| 256  | A closed door with a lock to a tutorial room south of the game rooms           |
+| 257  | A closed door with a lock to a tutorial room south of the game rooms           |
+| 258  | A closed door with a lock to the tutorial room south of a game room            |
+| 259  | A closed door with a lock to the tutorial room south of the game room          |
+| 260  | A closed door with a lock to the tutorial room south of the game rooms         |
+| 261  | A closed door with a lock to the tutorial room south of the game rooms         |
+| 262  | A closed door with a lock to the tutorial rooms south of a game room           |
+| 263  | A closed door with a lock to the tutorial rooms south of the game room         |
+| 264  | A closed door with a lock to the tutorial rooms south of the game rooms        |
+| 265  | A closed door with a lock to the tutorial rooms south of the game rooms        |
+| 266  | A closed door with locks south of a game room to a tutorial room               |
+| 267  | A closed door with locks south of a game room to the tutorial room             |
+| 268  | A closed door with locks south of a game room to the tutorial rooms            |
+| 269  | A closed door with locks south of the game room to a tutorial room             |
+| 270  | A closed door with locks south of the game room to a tutorial room             |
+| 271  | A closed door with locks south of the game room to the tutorial room           |
+| 272  | A closed door with locks south of the game room to the tutorial room           |
+| 273  | A closed door with locks south of the game room to the tutorial rooms          |
+| 274  | A closed door with locks south of the game room to the tutorial rooms          |
+| 275  | A closed door with locks south of the game room to the tutorial rooms.         |
+| 276  | A closed door with locks south of the game room to tutorial rooms              |
+| 277  | A closed door with locks south of the game room to tutorial rooms.             |
+| 278  | A closed door with locks south of the game rooms to a tutorial room            |
+| 279  | A closed door with locks south of the game rooms to a tutorial room            |
+| 280  | A closed door with locks south of the game rooms to the tutorial room          |
+| 281  | A closed door with locks south of the game rooms to the tutorial room          |
+| 282  | A closed door with locks south of the game rooms to the tutorial rooms         |
+| 283  | A closed door with locks south of the game rooms to the tutorial rooms         |
+| 284  | A closed door with locks to a tutorial room south of the game room             |
+| 285  | A closed door with locks to a tutorial room south of the game rooms            |
+| 286  | A closed door with locks to a tutorial room south of the game rooms            |
+| 287  | A closed door with locks to the tutorial room south of a game room             |
+| 288  | A closed door with locks to the tutorial room south of the game room           |
+| 289  | A closed door with locks to the tutorial room south of the game rooms          |
+| 290  | A closed door with locks to the tutorial room south of the game rooms          |
+| 291  | A closed door with locks to the tutorial rooms south of a game room            |
+| 292  | A closed door with locks to the tutorial rooms south of the game room          |
+| 293  | A closed door with locks to the tutorial rooms south of the game rooms         |
+| 294  | A closed door with locks to the tutorial rooms south of the game rooms         |
+| 295  | A closed door with the lock south of a game room to a tutorial room            |
+| 296  | A closed door with the lock south of a game room to a tutorial room            |
+| 297  | A closed door with the lock south of a game room to the tutorial room          |
+| 298  | A closed door with the lock south of a game room to the tutorial room          |
+| 299  | A closed door with the lock south of a game room to the tutorial rooms         |
+| 300  | A closed door with the lock south of a game room to the tutorial rooms         |
+| 301  | A closed door with the lock south of a game room to the tutorial rooms.        |
+| 302  | A closed door with the lock south of a game room to tutorial rooms             |
+| 303  | A closed door with the lock south of a game room to tutorial rooms.            |
+| 304  | A closed door with the lock south of the game room to a tutorial room          |
+| 305  | A closed door with the lock south of the game room to a tutorial room          |
+| 306  | A closed door with the lock south of the game room to a tutorial room.         |
+| 307  | A closed door with the lock south of the game room to the tutorial room        |
+| 308  | A closed door with the lock south of the game room to the tutorial room        |
+| 309  | A closed door with the lock south of the game room to the tutorial room.       |
+| 310  | A closed door with the lock south of the game room to the tutorial rooms       |
+| 311  | A closed door with the lock south of the game room to the tutorial rooms       |
+| 312  | A closed door with the lock south of the game room to the tutorial rooms.      |
+| 313  | A closed door with the lock south of the game room to the tutorial rooms.      |
+| 314  | A closed door with the lock south of the game room to tutorial rooms           |
+| 315  | A closed door with the lock south of the game room to tutorial rooms           |
+| 316  | A closed door with the lock south of the game room to tutorial rooms.          |
+| 317  | A closed door with the lock south of the game rooms to a tutorial room         |
+| 318  | A closed door with the lock south of the game rooms to a tutorial room         |
+| 319  | A closed door with the lock south of the game rooms to the tutorial room       |
+| 320  | A closed door with the lock south of the game rooms to the tutorial room       |
+| 321  | A closed door with the lock south of the game rooms to the tutorial rooms      |
+| 322  | A closed door with the lock south of the game rooms to the tutorial rooms      |
+| 323  | A closed door with the lock south of the game rooms to the tutorial rooms.     |
+| 324  | A closed door with the lock south of the game rooms to the tutorial rooms.     |
+| 325  | A closed door with the lock south of the game rooms to tutorial rooms          |
+| 326  | A closed door with the lock south of the game rooms to tutorial rooms          |
+| 327  | A closed door with the lock south of the game rooms to tutorial rooms.         |
+| 328  | A closed door with the lock south of the game rooms to tutorial rooms.         |
+| 329  | A closed door with the lock to a tutorial room south of a game room            |
+| 330  | A closed door with the lock to a tutorial room south of the game room          |
+| 331  | A closed door with the lock to a tutorial room south of the game room          |
+| 332  | A closed door with the lock to a tutorial room south of the game rooms         |
+| 333  | A closed door with the lock to a tutorial room south of the game rooms         |
+| 334  | A closed door with the lock to the tutorial room south of a game room          |
+| 335  | A closed door with the lock to the tutorial room south of the game room        |
+| 336  | A closed door with the lock to the tutorial room south of the game room        |
+| 337  | A closed door with the lock to the tutorial room south of the game rooms       |
+| 338  | A closed door with the lock to the tutorial room south of the game rooms       |
+| 339  | A closed door with the lock to the tutorial room south of the game rooms.      |
+| 340  | A closed door with the lock to the tutorial room south of the game rooms.      |
+| 341  | A closed door with the lock to the tutorial rooms south of a game room         |
+| 342  | A closed door with the lock to the tutorial rooms south of the game room       |
+| 343  | A closed door with the lock to the tutorial rooms south of the game room       |
+| 344  | A closed door with the lock to the tutorial rooms south of the game rooms      |
+| 345  | A closed door with the lock to the tutorial rooms south of the game rooms      |
+| 346  | A closed door with the lock to the tutorial rooms south of the game rooms.     |
+| 347  | A closed door with the lock to the tutorial rooms south of the game rooms.     |
+| 348  | A closed door with the lock to tutorial rooms south of a game room             |
+| 349  | A closed door with the lock to tutorial rooms south of the game room           |
+| 350  | A closed door with the lock to tutorial rooms south of the game rooms          |
+| 351  | A closed door with the lock to tutorial rooms south of the game rooms          |
+| 352  | A closed door with the locks south of a game room to a tutorial room           |
+| 353  | A closed door with the locks south of a game room to the tutorial room         |
+| 354  | A closed door with the locks south of a game room to the tutorial rooms        |
+| 355  | A closed door with the locks south of the game room to a tutorial room         |
+| 356  | A closed door with the locks south of the game room to the tutorial room       |
+| 357  | A closed door with the locks south of the game room to the tutorial rooms      |
+| 358  | A closed door with the locks south of the game rooms to a tutorial room        |
+| 359  | A closed door with the locks south of the game rooms to a tutorial room        |
+| 360  | A closed door with the locks south of the game rooms to the tutorial room      |
+| 361  | A closed door with the locks south of the game rooms to the tutorial room      |
+| 362  | A closed door with the locks south of the game rooms to the tutorial rooms     |
+| 363  | A closed door with the locks south of the game rooms to the tutorial rooms     |
+| 364  | A closed door with the locks to a tutorial room south of the game room         |
+| 365  | A closed door with the locks to the tutorial room south of the game room       |
+| 366  | A closed door with the locks to the tutorial room south of the game rooms      |
+| 367  | A closed door with the locks to the tutorial rooms south of the game room      |
+| 368  | A closed door with the locks to the tutorial rooms south of the game rooms     |
+| 369  | Closed doors to a tutorial room south of a game room with the locks            |
+| 370  | Closed doors to a tutorial room south of the game room with the locks          |
+| 371  | Closed doors to a tutorial room south of the game rooms with the locks         |
+| 372  | Closed doors to a tutorial room south of the game rooms with the locks         |
+| 373  | Closed doors to a tutorial room with a lock south of a game room               |
+| 374  | Closed doors to a tutorial room with a lock south of the game room             |
+| 375  | Closed doors to a tutorial room with a lock south of the game room             |
+| 376  | Closed doors to a tutorial room with a lock south of the game rooms            |
+| 377  | Closed doors to a tutorial room with a lock south of the game rooms            |
+| 378  | Closed doors to a tutorial room with locks south of a game room                |
+| 379  | Closed doors to a tutorial room with locks south of the game room              |
+| 380  | Closed doors to a tutorial room with locks south of the game room              |
+| 381  | Closed doors to a tutorial room with locks south of the game rooms             |
+| 382  | Closed doors to a tutorial room with locks south of the game rooms             |
+| 383  | Closed doors to a tutorial room with the lock south of a game room             |
+| 384  | Closed doors to a tutorial room with the lock south of a game room             |
+| 385  | Closed doors to a tutorial room with the lock south of the game room           |
+| 386  | Closed doors to a tutorial room with the lock south of the game room           |
+| 387  | Closed doors to a tutorial room with the lock south of the game rooms          |
+| 388  | Closed doors to a tutorial room with the lock south of the game rooms          |
+| 389  | Closed doors to a tutorial room with the lock south of the game rooms.         |
+| 390  | Closed doors to a tutorial room with the lock south of the game rooms.         |
+| 391  | Closed doors to a tutorial room with the locks south of a game room            |
+| 392  | Closed doors to a tutorial room with the locks south of the game room          |
+| 393  | Closed doors to a tutorial room with the locks south of the game room          |
+| 394  | Closed doors to a tutorial room with the locks south of the game rooms         |
+| 395  | Closed doors to a tutorial room with the locks south of the game rooms         |
+| 396  | Closed doors to the tutorial room south of a game room with the locks          |
+| 397  | Closed doors to the tutorial room south of the game room with the lock         |
+| 398  | Closed doors to the tutorial room south of the game room with the locks        |
+| 399  | Closed doors to the tutorial room south of the game room with the locks.       |
+| 400  | Closed doors to the tutorial room south of the game rooms with the locks       |
+| 401  | Closed doors to the tutorial room south of the game rooms with the locks       |
+| 402  | Closed doors to the tutorial room with a lock south of a game room             |
+| 403  | Closed doors to the tutorial room with a lock south of a game room             |
+| 404  | Closed doors to the tutorial room with a lock south of the game room           |
+| 405  | Closed doors to the tutorial room with a lock south of the game room           |
+| 406  | Closed doors to the tutorial room with a lock south of the game rooms          |
+| 407  | Closed doors to the tutorial room with a lock south of the game rooms          |
+| 408  | Closed doors to the tutorial room with a lock south of the game rooms.         |
+| 409  | Closed doors to the tutorial room with a lock south of the game rooms.         |
+| 410  | Closed doors to the tutorial room with locks south of a game room              |
+| 411  | Closed doors to the tutorial room with locks south of the game room            |
+| 412  | Closed doors to the tutorial room with locks south of the game room            |
+| 413  | Closed doors to the tutorial room with locks south of the game rooms           |
+| 414  | Closed doors to the tutorial room with locks south of the game rooms           |
+| 415  | Closed doors to the tutorial room with the lock south of a game room           |
+| 416  | Closed doors to the tutorial room with the lock south of a game room           |
+| 417  | Closed doors to the tutorial room with the lock south of game rooms            |
+| 418  | Closed doors to the tutorial room with the lock south of the game room         |
+| 419  | Closed doors to the tutorial room with the lock south of the game room         |
+| 420  | Closed doors to the tutorial room with the lock south of the game room.        |
+| 421  | Closed doors to the tutorial room with the lock south of the game room.        |
+| 422  | Closed doors to the tutorial room with the lock south of the game rooms        |
+| 423  | Closed doors to the tutorial room with the lock south of the game rooms        |
+| 424  | Closed doors to the tutorial room with the lock south of the game rooms.       |
+| 425  | Closed doors to the tutorial room with the lock south of the game rooms.       |
+| 426  | Closed doors to the tutorial room with the locks south of a game room          |
+| 427  | Closed doors to the tutorial room with the locks south of the game room        |
+| 428  | Closed doors to the tutorial room with the locks south of the game room        |
+| 429  | Closed doors to the tutorial room with the locks south of the game rooms       |
+| 430  | Closed doors to the tutorial room with the locks south of the game rooms       |
+| 431  | Closed doors to the tutorial rooms south of a game room with the locks         |
+| 432  | Closed doors to the tutorial rooms south of the game room with the lock        |
+| 433  | Closed doors to the tutorial rooms south of the game room with the locks       |
+| 434  | Closed doors to the tutorial rooms south of the game room with the locks       |
+| 435  | Closed doors to the tutorial rooms south of the game room with the locks.      |
+| 436  | Closed doors to the tutorial rooms south of the game rooms with the locks      |
+| 437  | Closed doors to the tutorial rooms south of the game rooms with the locks      |
+| 438  | Closed doors to the tutorial rooms with a lock south of a game room            |
+| 439  | Closed doors to the tutorial rooms with a lock south of a game room            |
+| 440  | Closed doors to the tutorial rooms with a lock south of the game room          |
+| 441  | Closed doors to the tutorial rooms with a lock south of the game room          |
+| 442  | Closed doors to the tutorial rooms with a lock south of the game rooms         |
+| 443  | Closed doors to the tutorial rooms with a lock south of the game rooms         |
+| 444  | Closed doors to the tutorial rooms with a lock south of the game rooms.        |
+| 445  | Closed doors to the tutorial rooms with a lock south of the game rooms.        |
+| 446  | Closed doors to the tutorial rooms with locks south of a game room             |
+| 447  | Closed doors to the tutorial rooms with locks south of the game room           |
+| 448  | Closed doors to the tutorial rooms with locks south of the game room           |
+| 449  | Closed doors to the tutorial rooms with locks south of the game rooms          |
+| 450  | Closed doors to the tutorial rooms with locks south of the game rooms          |
+| 451  | Closed doors to the tutorial rooms with the lock south of a game room          |
+| 452  | Closed doors to the tutorial rooms with the lock south of a game room          |
+| 453  | Closed doors to the tutorial rooms with the lock south of game rooms           |
+| 454  | Closed doors to the tutorial rooms with the lock south of the game room        |
+| 455  | Closed doors to the tutorial rooms with the lock south of the game room        |
+| 456  | Closed doors to the tutorial rooms with the lock south of the game room.       |
+| 457  | Closed doors to the tutorial rooms with the lock south of the game room.       |
+| 458  | Closed doors to the tutorial rooms with the lock south of the game rooms       |
+| 459  | Closed doors to the tutorial rooms with the lock south of the game rooms       |
+| 460  | Closed doors to the tutorial rooms with the lock south of the game rooms.      |
+| 461  | Closed doors to the tutorial rooms with the lock south of the game rooms.      |
+| 462  | Closed doors to the tutorial rooms with the locks south of a game room         |
+| 463  | Closed doors to the tutorial rooms with the locks south of the game room       |
+| 464  | Closed doors to the tutorial rooms with the locks south of the game room       |
+| 465  | Closed doors to the tutorial rooms with the locks south of the game rooms      |
+| 466  | Closed doors to the tutorial rooms with the locks south of the game rooms      |
+| 467  | Closed doors to tutorial rooms south of the game room with the locks           |
+| 468  | Closed doors to tutorial rooms with a lock south of a game room                |
+| 469  | Closed doors to tutorial rooms with a lock south of the game room              |
+| 470  | Closed doors to tutorial rooms with a lock south of the game rooms             |
+| 471  | Closed doors to tutorial rooms with a lock south of the game rooms             |
+| 472  | Closed doors to tutorial rooms with locks south of the game room               |
+| 473  | Closed doors to tutorial rooms with the lock south of a game room              |
+| 474  | Closed doors to tutorial rooms with the lock south of the game room            |
+| 475  | Closed doors to tutorial rooms with the lock south of the game room            |
+| 476  | Closed doors to tutorial rooms with the lock south of the game rooms           |
+| 477  | Closed doors to tutorial rooms with the lock south of the game rooms           |
+| 478  | Closed doors to tutorial rooms with the lock south of the game rooms.          |
+| 479  | Closed doors to tutorial rooms with the locks south of the game room           |
+| 480  | Closed doors with a lock to a tutorial room south of a game room               |
+| 481  | Closed doors with a lock to a tutorial room south of the game room             |
+| 482  | Closed doors with a lock to a tutorial room south of the game room             |
+| 483  | Closed doors with a lock to a tutorial room south of the game rooms            |
+| 484  | Closed doors with a lock to a tutorial room south of the game rooms            |
+| 485  | Closed doors with a lock to the tutorial room south of a game room             |
+| 486  | Closed doors with a lock to the tutorial room south of the game room           |
+| 487  | Closed doors with a lock to the tutorial room south of the game room           |
+| 488  | Closed doors with a lock to the tutorial room south of the game rooms          |
+| 489  | Closed doors with a lock to the tutorial room south of the game rooms          |
+| 490  | Closed doors with a lock to the tutorial rooms south of a game room            |
+| 491  | Closed doors with a lock to the tutorial rooms south of the game room          |
+| 492  | Closed doors with a lock to the tutorial rooms south of the game room          |
+| 493  | Closed doors with a lock to the tutorial rooms south of the game rooms         |
+| 494  | Closed doors with a lock to the tutorial rooms south of the game rooms         |
+| 495  | Closed doors with a lock to tutorial rooms south of the game room              |
+| 496  | Closed doors with locks to a tutorial room south of a game room                |
+| 497  | Closed doors with locks to a tutorial room south of the game room              |
+| 498  | Closed doors with locks to a tutorial room south of the game room              |
+| 499  | Closed doors with locks to a tutorial room south of the game rooms             |
+| 500  | Closed doors with locks to a tutorial room south of the game rooms             |
+| 501  | Closed doors with locks to the tutorial room south of a game room              |
+| 502  | Closed doors with locks to the tutorial room south of the game room            |
+| 503  | Closed doors with locks to the tutorial room south of the game room            |
+| 504  | Closed doors with locks to the tutorial room south of the game rooms           |
+| 505  | Closed doors with locks to the tutorial room south of the game rooms           |
+| 506  | Closed doors with locks to the tutorial rooms south of a game room             |
+| 507  | Closed doors with locks to the tutorial rooms south of the game room           |
+| 508  | Closed doors with locks to the tutorial rooms south of the game room           |
+| 509  | Closed doors with locks to the tutorial rooms south of the game rooms          |
+| 510  | Closed doors with locks to the tutorial rooms south of the game rooms          |
+| 511  | Closed doors with locks to tutorial rooms south of the game room               |
+| 512  | Closed doors with locks, to a tutorial room south of the game room             |
+| 513  | Closed doors with locks, to the tutorial rooms south of the game room          |
+| 514  | Closed doors with the lock south of the game room to a tutorial room           |
+| 515  | Closed doors with the lock to a tutorial room south of a game room             |
+| 516  | Closed doors with the lock to a tutorial room south of a game room             |
+| 517  | Closed doors with the lock to a tutorial room south of the game room           |
+| 518  | Closed doors with the lock to a tutorial room south of the game room           |
+| 519  | Closed doors with the lock to a tutorial room south of the game rooms          |
+| 520  | Closed doors with the lock to a tutorial room south of the game rooms          |
+| 521  | Closed doors with the lock to a tutorial room south of the game rooms.         |
+| 522  | Closed doors with the lock to a tutorial room south of the game rooms.         |
+| 523  | Closed doors with the lock to the tutorial room south of a game room           |
+| 524  | Closed doors with the lock to the tutorial room south of a game room           |
+| 525  | Closed doors with the lock to the tutorial room south of the game room         |
+| 526  | Closed doors with the lock to the tutorial room south of the game room         |
+| 527  | Closed doors with the lock to the tutorial room south of the game rooms        |
+| 528  | Closed doors with the lock to the tutorial room south of the game rooms        |
+| 529  | Closed doors with the lock to the tutorial room south of the game rooms.       |
+| 530  | Closed doors with the lock to the tutorial room south of the game rooms.       |
+| 531  | Closed doors with the lock to the tutorial rooms south of a game room          |
+| 532  | Closed doors with the lock to the tutorial rooms south of a game room          |
+| 533  | Closed doors with the lock to the tutorial rooms south of the game room        |
+| 534  | Closed doors with the lock to the tutorial rooms south of the game room        |
+| 535  | Closed doors with the lock to the tutorial rooms south of the game rooms       |
+| 536  | Closed doors with the lock to the tutorial rooms south of the game rooms       |
+| 537  | Closed doors with the lock to the tutorial rooms south of the game rooms.      |
+| 538  | Closed doors with the lock to the tutorial rooms south of the game rooms.      |
+| 539  | Closed doors with the lock to tutorial rooms south of a game room              |
+| 540  | Closed doors with the lock to tutorial rooms south of the game room            |
+| 541  | Closed doors with the lock to tutorial rooms south of the game room            |
+| 542  | Closed doors with the lock to tutorial rooms south of the game rooms           |
+| 543  | Closed doors with the lock to tutorial rooms south of the game rooms           |
+| 544  | Closed doors with the locks to a tutorial room south of the game room          |
+| 545  | Closed doors with the locks to a tutorial room south of the game rooms         |
+| 546  | Closed doors with the locks to a tutorial room south of the game rooms         |
+| 547  | Closed doors with the locks to the tutorial room south of a game room          |
+| 548  | Closed doors with the locks to the tutorial room south of the game room        |
+| 549  | Closed doors with the locks to the tutorial room south of the game rooms       |
+| 550  | Closed doors with the locks to the tutorial room south of the game rooms       |
+| 551  | Closed doors with the locks to the tutorial rooms south of a game room         |
+| 552  | Closed doors with the locks to the tutorial rooms south of the game room       |
+| 553  | Closed doors with the locks to the tutorial rooms south of the game rooms      |
+| 554  | Closed doors with the locks to the tutorial rooms south of the game rooms      |
+| 555  | The closed door south of the game room to a tutorial room with the locks       |
+| 556  | The closed door south of the game room to the tutorial room with the lock      |
+| 557  | The closed door south of the game room to the tutorial room with the locks     |
+| 558  | The closed door south of the game room to the tutorial rooms with the lock     |
+| 559  | The closed door south of the game room to the tutorial rooms with the locks    |
+| 560  | The closed door to a tutorial room south of a game room with a lock            |
+| 561  | The closed door to a tutorial room south of a game room with a lock            |
+| 562  | The closed door to a tutorial room south of a game room with a lock.           |
+| 563  | The closed door to a tutorial room south of a game room with locks             |
+| 564  | The closed door to a tutorial room south of a game room with locks             |
+| 565  | The closed door to a tutorial room south of a game room with locks.            |
+| 566  | The closed door to a tutorial room south of a game room with the lock          |
+| 567  | The closed door to a tutorial room south of a game room with the lock          |
+| 568  | The closed door to a tutorial room south of a game room with the lock.         |
+| 569  | The closed door to a tutorial room south of a game room with the locks         |
+| 570  | The closed door to a tutorial room south of a game room with the locks         |
+| 571  | The closed door to a tutorial room south of a game room with the locks.        |
+| 572  | The closed door to a tutorial room south of game rooms with the lock           |
+| 573  | The closed door to a tutorial room south of game rooms with the locks          |
+| 574  | The closed door to a tutorial room south of the game room with a lock          |
+| 575  | The closed door to a tutorial room south of the game room with a lock          |
+| 576  | The closed door to a tutorial room south of the game room with a lock.         |
+| 577  | The closed door to a tutorial room south of the game room with locks           |
+| 578  | The closed door to a tutorial room south of the game room with locks           |
+| 579  | The closed door to a tutorial room south of the game room with locks.          |
+| 580  | The closed door to a tutorial room south of the game room with the lock        |
+| 581  | The closed door to a tutorial room south of the game room with the lock        |
+| 582  | The closed door to a tutorial room south of the game room with the lock.       |
+| 583  | The closed door to a tutorial room south of the game room with the locks       |
+| 584  | The closed door to a tutorial room south of the game room with the locks       |
+| 585  | The closed door to a tutorial room south of the game room with the locks.      |
+| 586  | The closed door to a tutorial room south of the game room with the locks.      |
+| 587  | The closed door to a tutorial room south of the game rooms with a lock         |
+| 588  | The closed door to a tutorial room south of the game rooms with a lock         |
+| 589  | The closed door to a tutorial room south of the game rooms with a lock.        |
+| 590  | The closed door to a tutorial room south of the game rooms with a lock.        |
+| 591  | The closed door to a tutorial room south of the game rooms with locks          |
+| 592  | The closed door to a tutorial room south of the game rooms with locks          |
+| 593  | The closed door to a tutorial room south of the game rooms with locks.         |
+| 594  | The closed door to a tutorial room south of the game rooms with locks.         |
+| 595  | The closed door to a tutorial room south of the game rooms with the lock       |
+| 596  | The closed door to a tutorial room south of the game rooms with the lock       |
+| 597  | The closed door to a tutorial room south of the game rooms with the lock.      |
+| 598  | The closed door to a tutorial room south of the game rooms with the lock.      |
+| 599  | The closed door to a tutorial room south of the game rooms with the locks      |
+| 600  | The closed door to a tutorial room south of the game rooms with the locks      |
+| 601  | The closed door to a tutorial room south of the game rooms with the locks.     |
+| 602  | The closed door to a tutorial room south of the game rooms with the locks.     |
+| 603  | The closed door to a tutorial room with a lock south of a game room            |
+| 604  | The closed door to a tutorial room with a lock south of the game room          |
+| 605  | The closed door to a tutorial room with a lock south of the game rooms         |
+| 606  | The closed door to a tutorial room with a lock south of the game rooms         |
+| 607  | The closed door to a tutorial room with locks south of the game room           |
+| 608  | The closed door to a tutorial room with locks south of the game rooms          |
+| 609  | The closed door to a tutorial room with locks south of the game rooms          |
+| 610  | The closed door to a tutorial room with the lock south of a game room          |
+| 611  | The closed door to a tutorial room with the lock south of the game room        |
+| 612  | The closed door to a tutorial room with the lock south of the game room        |
+| 613  | The closed door to a tutorial room with the lock south of the game rooms       |
+| 614  | The closed door to a tutorial room with the lock south of the game rooms       |
+| 615  | The closed door to a tutorial room with the lock south of the game rooms.      |
+| 616  | The closed door to a tutorial room with the lock south of the game rooms.      |
+| 617  | The closed door to a tutorial room with the locks south of the game room       |
+| 618  | The closed door to a tutorial room with the locks south of the game rooms      |
+| 619  | The closed door to the tutorial room south of a game room with a lock          |
+| 620  | The closed door to the tutorial room south of a game room with a lock          |
+| 621  | The closed door to the tutorial room south of a game room with a lock.         |
+| 622  | The closed door to the tutorial room south of a game room with locks           |
+| 623  | The closed door to the tutorial room south of a game room with locks           |
+| 624  | The closed door to the tutorial room south of a game room with locks.          |
+| 625  | The closed door to the tutorial room south of a game room with the lock        |
+| 626  | The closed door to the tutorial room south of a game room with the lock        |
+| 627  | The closed door to the tutorial room south of a game room with the lock.       |
+| 628  | The closed door to the tutorial room south of a game room with the locks       |
+| 629  | The closed door to the tutorial room south of a game room with the locks       |
+| 630  | The closed door to the tutorial room south of a game room with the locks.      |
+| 631  | The closed door to the tutorial room south of a game room with the locks.      |
+| 632  | The closed door to the tutorial room south of game rooms with the lock         |
+| 633  | The closed door to the tutorial room south of game rooms with the locks        |
+| 634  | The closed door to the tutorial room south of the game room with a lock        |
+| 635  | The closed door to the tutorial room south of the game room with a lock        |
+| 636  | The closed door to the tutorial room south of the game room with a lock.       |
+| 637  | The closed door to the tutorial room south of the game room with a lock.       |
+| 638  | The closed door to the tutorial room south of the game room with lock.         |
+| 639  | The closed door to the tutorial room south of the game room with locks         |
+| 640  | The closed door to the tutorial room south of the game room with locks         |
+| 641  | The closed door to the tutorial room south of the game room with locks.        |
+| 642  | The closed door to the tutorial room south of the game room with locks.        |
+| 643  | The closed door to the tutorial room south of the game room with the lock      |
+| 644  | The closed door to the tutorial room south of the game room with the lock      |
+| 645  | The closed door to the tutorial room south of the game room with the lock.     |
+| 646  | The closed door to the tutorial room south of the game room with the locks     |
+| 647  | The closed door to the tutorial room south of the game room with the locks     |
+| 648  | The closed door to the tutorial room south of the game room with the locks.    |
+| 649  | The closed door to the tutorial room south of the game room with the locks.    |
+| 650  | The closed door to the tutorial room south of the game rooms with a lock       |
+| 651  | The closed door to the tutorial room south of the game rooms with a lock       |
+| 652  | The closed door to the tutorial room south of the game rooms with a lock.      |
+| 653  | The closed door to the tutorial room south of the game rooms with a lock.      |
+| 654  | The closed door to the tutorial room south of the game rooms with locks        |
+| 655  | The closed door to the tutorial room south of the game rooms with locks        |
+| 656  | The closed door to the tutorial room south of the game rooms with locks.       |
+| 657  | The closed door to the tutorial room south of the game rooms with locks.       |
+| 658  | The closed door to the tutorial room south of the game rooms with the lock     |
+| 659  | The closed door to the tutorial room south of the game rooms with the lock     |
+| 660  | The closed door to the tutorial room south of the game rooms with the lock.    |
+| 661  | The closed door to the tutorial room south of the game rooms with the lock.    |
+| 662  | The closed door to the tutorial room south of the game rooms with the locks    |
+| 663  | The closed door to the tutorial room south of the game rooms with the locks    |
+| 664  | The closed door to the tutorial room south of the game rooms with the locks.   |
+| 665  | The closed door to the tutorial room south of the game rooms with the locks.   |
+| 666  | The closed door to the tutorial room with a lock south of a game room          |
+| 667  | The closed door to the tutorial room with a lock south of the game room        |
+| 668  | The closed door to the tutorial room with a lock south of the game room        |
+| 669  | The closed door to the tutorial room with a lock south of the game rooms       |
+| 670  | The closed door to the tutorial room with a lock south of the game rooms       |
+| 671  | The closed door to the tutorial room with locks south of a game room           |
+| 672  | The closed door to the tutorial room with locks south of the game room         |
+| 673  | The closed door to the tutorial room with locks south of the game rooms        |
+| 674  | The closed door to the tutorial room with locks south of the game rooms        |
+| 675  | The closed door to the tutorial room with the lock south of a game room        |
+| 676  | The closed door to the tutorial room with the lock south of a game room        |
+| 677  | The closed door to the tutorial room with the lock south of the game room      |
+| 678  | The closed door to the tutorial room with the lock south of the game room      |
+| 679  | The closed door to the tutorial room with the lock south of the game rooms     |
+| 680  | The closed door to the tutorial room with the lock south of the game rooms     |
+| 681  | The closed door to the tutorial room with the lock south of the game rooms.    |
+| 682  | The closed door to the tutorial room with the lock south of the game rooms.    |
+| 683  | The closed door to the tutorial room with the locks south of a game room       |
+| 684  | The closed door to the tutorial room with the locks south of the game room     |
+| 685  | The closed door to the tutorial room with the locks south of the game rooms    |
+| 686  | The closed door to the tutorial room with the locks south of the game rooms    |
+| 687  | The closed door to the tutorial rooms south of a game room with a lock         |
+| 688  | The closed door to the tutorial rooms south of a game room with a lock         |
+| 689  | The closed door to the tutorial rooms south of a game room with a lock.        |
+| 690  | The closed door to the tutorial rooms south of a game room with locks          |
+| 691  | The closed door to the tutorial rooms south of a game room with locks          |
+| 692  | The closed door to the tutorial rooms south of a game room with locks.         |
+| 693  | The closed door to the tutorial rooms south of a game room with the lock       |
+| 694  | The closed door to the tutorial rooms south of a game room with the lock       |
+| 695  | The closed door to the tutorial rooms south of a game room with the lock.      |
+| 696  | The closed door to the tutorial rooms south of a game room with the locks      |
+| 697  | The closed door to the tutorial rooms south of a game room with the locks      |
+| 698  | The closed door to the tutorial rooms south of a game room with the locks.     |
+| 699  | The closed door to the tutorial rooms south of a game room with the locks.     |
+| 700  | The closed door to the tutorial rooms south of game rooms with the lock        |
+| 701  | The closed door to the tutorial rooms south of game rooms with the locks       |
+| 702  | The closed door to the tutorial rooms south of the game room with a lock       |
+| 703  | The closed door to the tutorial rooms south of the game room with a lock       |
+| 704  | The closed door to the tutorial rooms south of the game room with a lock.      |
+| 705  | The closed door to the tutorial rooms south of the game room with a lock.      |
+| 706  | The closed door to the tutorial rooms south of the game room with lock.        |
+| 707  | The closed door to the tutorial rooms south of the game room with locks        |
+| 708  | The closed door to the tutorial rooms south of the game room with locks        |
+| 709  | The closed door to the tutorial rooms south of the game room with locks.       |
+| 710  | The closed door to the tutorial rooms south of the game room with locks.       |
+| 711  | The closed door to the tutorial rooms south of the game room with the lock     |
+| 712  | The closed door to the tutorial rooms south of the game room with the lock     |
+| 713  | The closed door to the tutorial rooms south of the game room with the lock.    |
+| 714  | The closed door to the tutorial rooms south of the game room with the locks    |
+| 715  | The closed door to the tutorial rooms south of the game room with the locks    |
+| 716  | The closed door to the tutorial rooms south of the game room with the locks.   |
+| 717  | The closed door to the tutorial rooms south of the game room with the locks.   |
+| 718  | The closed door to the tutorial rooms south of the game rooms with a lock      |
+| 719  | The closed door to the tutorial rooms south of the game rooms with a lock      |
+| 720  | The closed door to the tutorial rooms south of the game rooms with a lock.     |
+| 721  | The closed door to the tutorial rooms south of the game rooms with a lock.     |
+| 722  | The closed door to the tutorial rooms south of the game rooms with locks       |
+| 723  | The closed door to the tutorial rooms south of the game rooms with locks       |
+| 724  | The closed door to the tutorial rooms south of the game rooms with locks.      |
+| 725  | The closed door to the tutorial rooms south of the game rooms with locks.      |
+| 726  | The closed door to the tutorial rooms south of the game rooms with the lock    |
+| 727  | The closed door to the tutorial rooms south of the game rooms with the lock    |
+| 728  | The closed door to the tutorial rooms south of the game rooms with the lock.   |
+| 729  | The closed door to the tutorial rooms south of the game rooms with the lock.   |
+| 730  | The closed door to the tutorial rooms south of the game rooms with the locks   |
+| 731  | The closed door to the tutorial rooms south of the game rooms with the locks   |
+| 732  | The closed door to the tutorial rooms south of the game rooms with the locks.  |
+| 733  | The closed door to the tutorial rooms south of the game rooms with the locks.  |
+| 734  | The closed door to the tutorial rooms with a lock south of a game room         |
+| 735  | The closed door to the tutorial rooms with a lock south of the game room       |
+| 736  | The closed door to the tutorial rooms with a lock south of the game room       |
+| 737  | The closed door to the tutorial rooms with a lock south of the game rooms      |
+| 738  | The closed door to the tutorial rooms with a lock south of the game rooms      |
+| 739  | The closed door to the tutorial rooms with locks south of a game room          |
+| 740  | The closed door to the tutorial rooms with locks south of the game room        |
+| 741  | The closed door to the tutorial rooms with locks south of the game rooms       |
+| 742  | The closed door to the tutorial rooms with locks south of the game rooms       |
+| 743  | The closed door to the tutorial rooms with the lock south of a game room       |
+| 744  | The closed door to the tutorial rooms with the lock south of a game room       |
+| 745  | The closed door to the tutorial rooms with the lock south of the game room     |
+| 746  | The closed door to the tutorial rooms with the lock south of the game room     |
+| 747  | The closed door to the tutorial rooms with the lock south of the game rooms    |
+| 748  | The closed door to the tutorial rooms with the lock south of the game rooms    |
+| 749  | The closed door to the tutorial rooms with the lock south of the game rooms.   |
+| 750  | The closed door to the tutorial rooms with the lock south of the game rooms.   |
+| 751  | The closed door to the tutorial rooms with the locks south of a game room      |
+| 752  | The closed door to the tutorial rooms with the locks south of the game room    |
+| 753  | The closed door to the tutorial rooms with the locks south of the game rooms   |
+| 754  | The closed door to the tutorial rooms with the locks south of the game rooms   |
+| 755  | The closed door to tutorial rooms south of a game room with a lock             |
+| 756  | The closed door to tutorial rooms south of a game room with locks              |
+| 757  | The closed door to tutorial rooms south of a game room with the lock           |
+| 758  | The closed door to tutorial rooms south of a game room with the lock           |
+| 759  | The closed door to tutorial rooms south of a game room with the locks          |
+| 760  | The closed door to tutorial rooms south of a game room with the locks          |
+| 761  | The closed door to tutorial rooms south of a game room with the locks.         |
+| 762  | The closed door to tutorial rooms south of the game room with a lock           |
+| 763  | The closed door to tutorial rooms south of the game room with a lock           |
+| 764  | The closed door to tutorial rooms south of the game room with a lock.          |
+| 765  | The closed door to tutorial rooms south of the game room with locks            |
+| 766  | The closed door to tutorial rooms south of the game room with locks            |
+| 767  | The closed door to tutorial rooms south of the game room with locks.           |
+| 768  | The closed door to tutorial rooms south of the game room with the lock         |
+| 769  | The closed door to tutorial rooms south of the game room with the lock         |
+| 770  | The closed door to tutorial rooms south of the game room with the locks        |
+| 771  | The closed door to tutorial rooms south of the game room with the locks        |
+| 772  | The closed door to tutorial rooms south of the game room with the locks.       |
+| 773  | The closed door to tutorial rooms south of the game rooms with a lock          |
+| 774  | The closed door to tutorial rooms south of the game rooms with a lock          |
+| 775  | The closed door to tutorial rooms south of the game rooms with locks           |
+| 776  | The closed door to tutorial rooms south of the game rooms with locks           |
+| 777  | The closed door to tutorial rooms south of the game rooms with the lock        |
+| 778  | The closed door to tutorial rooms south of the game rooms with the lock        |
+| 779  | The closed door to tutorial rooms south of the game rooms with the locks       |
+| 780  | The closed door to tutorial rooms south of the game rooms with the locks       |
+| 781  | The closed door to tutorial rooms south of the game rooms with the locks.      |
+| 782  | The closed door to tutorial rooms south of the game rooms with the locks.      |
+| 783  | The closed door to tutorial rooms with a lock south of the game room           |
+| 784  | The closed door to tutorial rooms with the lock south of a game room           |
+| 785  | The closed door to tutorial rooms with the lock south of the game room         |
+| 786  | The closed door to tutorial rooms with the lock south of the game rooms        |
+| 787  | The closed door to tutorial rooms with the lock south of the game rooms        |
+| 788  | The closed door with a lock south of a game room to a tutorial room            |
+| 789  | The closed door with a lock south of a game room to the tutorial room          |
+| 790  | The closed door with a lock south of a game room to the tutorial rooms         |
+| 791  | The closed door with a lock south of the game room to a tutorial room          |
+| 792  | The closed door with a lock south of the game room to a tutorial room          |
+| 793  | The closed door with a lock south of the game room to the tutorial room        |
+| 794  | The closed door with a lock south of the game room to the tutorial room        |
+| 795  | The closed door with a lock south of the game room to the tutorial rooms       |
+| 796  | The closed door with a lock south of the game room to the tutorial rooms       |
+| 797  | The closed door with a lock south of the game room to the tutorial rooms.      |
+| 798  | The closed door with a lock south of the game room to tutorial rooms           |
+| 799  | The closed door with a lock south of the game room to tutorial rooms.          |
+| 800  | The closed door with a lock south of the game rooms to a tutorial room         |
+| 801  | The closed door with a lock south of the game rooms to a tutorial room         |
+| 802  | The closed door with a lock south of the game rooms to the tutorial room       |
+| 803  | The closed door with a lock south of the game rooms to the tutorial room       |
+| 804  | The closed door with a lock south of the game rooms to the tutorial rooms      |
+| 805  | The closed door with a lock south of the game rooms to the tutorial rooms      |
+| 806  | The closed door with a lock to a tutorial room south of the game room          |
+| 807  | The closed door with a lock to a tutorial room south of the game rooms         |
+| 808  | The closed door with a lock to a tutorial room south of the game rooms         |
+| 809  | The closed door with a lock to the tutorial room south of a game room          |
+| 810  | The closed door with a lock to the tutorial room south of the game room        |
+| 811  | The closed door with a lock to the tutorial room south of the game rooms       |
+| 812  | The closed door with a lock to the tutorial room south of the game rooms       |
+| 813  | The closed door with a lock to the tutorial rooms south of a game room         |
+| 814  | The closed door with a lock to the tutorial rooms south of the game room       |
+| 815  | The closed door with a lock to the tutorial rooms south of the game rooms      |
+| 816  | The closed door with a lock to the tutorial rooms south of the game rooms      |
+| 817  | The closed door with locks south of a game room to a tutorial room             |
+| 818  | The closed door with locks south of a game room to the tutorial room           |
+| 819  | The closed door with locks south of a game room to the tutorial rooms          |
+| 820  | The closed door with locks south of the game room to a tutorial room           |
+| 821  | The closed door with locks south of the game room to a tutorial room           |
+| 822  | The closed door with locks south of the game room to the tutorial room         |
+| 823  | The closed door with locks south of the game room to the tutorial room         |
+| 824  | The closed door with locks south of the game room to the tutorial rooms        |
+| 825  | The closed door with locks south of the game room to the tutorial rooms        |
+| 826  | The closed door with locks south of the game room to the tutorial rooms.       |
+| 827  | The closed door with locks south of the game room to tutorial rooms            |
+| 828  | The closed door with locks south of the game room to tutorial rooms.           |
+| 829  | The closed door with locks south of the game rooms to a tutorial room          |
+| 830  | The closed door with locks south of the game rooms to a tutorial room          |
+| 831  | The closed door with locks south of the game rooms to the tutorial room        |
+| 832  | The closed door with locks south of the game rooms to the tutorial room        |
+| 833  | The closed door with locks south of the game rooms to the tutorial rooms       |
+| 834  | The closed door with locks south of the game rooms to the tutorial rooms       |
+| 835  | The closed door with locks to a tutorial room south of the game room           |
+| 836  | The closed door with locks to a tutorial room south of the game rooms          |
+| 837  | The closed door with locks to a tutorial room south of the game rooms          |
+| 838  | The closed door with locks to the tutorial room south of a game room           |
+| 839  | The closed door with locks to the tutorial room south of the game room         |
+| 840  | The closed door with locks to the tutorial room south of the game rooms        |
+| 841  | The closed door with locks to the tutorial room south of the game rooms        |
+| 842  | The closed door with locks to the tutorial rooms south of a game room          |
+| 843  | The closed door with locks to the tutorial rooms south of the game room        |
+| 844  | The closed door with locks to the tutorial rooms south of the game rooms       |
+| 845  | The closed door with locks to the tutorial rooms south of the game rooms       |
+| 846  | The closed door with the lock south of a game room to a tutorial room          |
+| 847  | The closed door with the lock south of a game room to a tutorial room          |
+| 848  | The closed door with the lock south of a game room to the tutorial room        |
+| 849  | The closed door with the lock south of a game room to the tutorial room        |
+| 850  | The closed door with the lock south of a game room to the tutorial rooms       |
+| 851  | The closed door with the lock south of a game room to the tutorial rooms       |
+| 852  | The closed door with the lock south of a game room to the tutorial rooms.      |
+| 853  | The closed door with the lock south of a game room to tutorial rooms           |
+| 854  | The closed door with the lock south of a game room to tutorial rooms.          |
+| 855  | The closed door with the lock south of the game room to a tutorial room        |
+| 856  | The closed door with the lock south of the game room to a tutorial room        |
+| 857  | The closed door with the lock south of the game room to a tutorial room.       |
+| 858  | The closed door with the lock south of the game room to the tutorial room      |
+| 859  | The closed door with the lock south of the game room to the tutorial room      |
+| 860  | The closed door with the lock south of the game room to the tutorial room.     |
+| 861  | The closed door with the lock south of the game room to the tutorial rooms     |
+| 862  | The closed door with the lock south of the game room to the tutorial rooms     |
+| 863  | The closed door with the lock south of the game room to the tutorial rooms.    |
+| 864  | The closed door with the lock south of the game room to the tutorial rooms.    |
+| 865  | The closed door with the lock south of the game room to tutorial rooms         |
+| 866  | The closed door with the lock south of the game room to tutorial rooms         |
+| 867  | The closed door with the lock south of the game room to tutorial rooms.        |
+| 868  | The closed door with the lock south of the game rooms to a tutorial room       |
+| 869  | The closed door with the lock south of the game rooms to a tutorial room       |
+| 870  | The closed door with the lock south of the game rooms to the tutorial room     |
+| 871  | The closed door with the lock south of the game rooms to the tutorial room     |
+| 872  | The closed door with the lock south of the game rooms to the tutorial rooms    |
+| 873  | The closed door with the lock south of the game rooms to the tutorial rooms    |
+| 874  | The closed door with the lock south of the game rooms to the tutorial rooms.   |
+| 875  | The closed door with the lock south of the game rooms to the tutorial rooms.   |
+| 876  | The closed door with the lock south of the game rooms to tutorial rooms        |
+| 877  | The closed door with the lock south of the game rooms to tutorial rooms        |
+| 878  | The closed door with the lock south of the game rooms to tutorial rooms.       |
+| 879  | The closed door with the lock south of the game rooms to tutorial rooms.       |
+| 880  | The closed door with the lock to a tutorial room south of a game room          |
+| 881  | The closed door with the lock to a tutorial room south of the game room        |
+| 882  | The closed door with the lock to a tutorial room south of the game room        |
+| 883  | The closed door with the lock to a tutorial room south of the game rooms       |
+| 884  | The closed door with the lock to a tutorial room south of the game rooms       |
+| 885  | The closed door with the lock to the tutorial room south of a game room        |
+| 886  | The closed door with the lock to the tutorial room south of the game room      |
+| 887  | The closed door with the lock to the tutorial room south of the game room      |
+| 888  | The closed door with the lock to the tutorial room south of the game rooms     |
+| 889  | The closed door with the lock to the tutorial room south of the game rooms     |
+| 890  | The closed door with the lock to the tutorial room south of the game rooms.    |
+| 891  | The closed door with the lock to the tutorial room south of the game rooms.    |
+| 892  | The closed door with the lock to the tutorial rooms south of a game room       |
+| 893  | The closed door with the lock to the tutorial rooms south of the game room     |
+| 894  | The closed door with the lock to the tutorial rooms south of the game room     |
+| 895  | The closed door with the lock to the tutorial rooms south of the game rooms    |
+| 896  | The closed door with the lock to the tutorial rooms south of the game rooms    |
+| 897  | The closed door with the lock to the tutorial rooms south of the game rooms.   |
+| 898  | The closed door with the lock to the tutorial rooms south of the game rooms.   |
+| 899  | The closed door with the lock to tutorial rooms south of the game room         |
+| 900  | The closed door with the lock to tutorial rooms south of the game rooms        |
+| 901  | The closed door with the lock to tutorial rooms south of the game rooms        |
+| 902  | The closed door with the locks south of a game room to a tutorial room         |
+| 903  | The closed door with the locks south of a game room to the tutorial room       |
+| 904  | The closed door with the locks south of a game room to the tutorial rooms      |
+| 905  | The closed door with the locks south of the game room to a tutorial room       |
+| 906  | The closed door with the locks south of the game room to the tutorial room     |
+| 907  | The closed door with the locks south of the game room to the tutorial rooms    |
+| 908  | The closed door with the locks south of the game rooms to a tutorial room      |
+| 909  | The closed door with the locks south of the game rooms to a tutorial room      |
+| 910  | The closed door with the locks south of the game rooms to the tutorial room    |
+| 911  | The closed door with the locks south of the game rooms to the tutorial room    |
+| 912  | The closed door with the locks south of the game rooms to the tutorial rooms   |
+| 913  | The closed door with the locks south of the game rooms to the tutorial rooms   |
+| 914  | The closed door with the locks to a tutorial room south of the game room       |
+| 915  | The closed door with the locks to the tutorial room south of the game room     |
+| 916  | The closed door with the locks to the tutorial room south of the game rooms    |
+| 917  | The closed door with the locks to the tutorial rooms south of the game room    |
+| 918  | The closed door with the locks to the tutorial rooms south of the game rooms   |
+| 919  | The closed doors to a tutorial room south of a game room with a lock           |
+| 920  | The closed doors to a tutorial room south of a game room with locks            |
+| 921  | The closed doors to a tutorial room south of a game room with the lock         |
+| 922  | The closed doors to a tutorial room south of a game room with the lock         |
+| 923  | The closed doors to a tutorial room south of a game room with the locks        |
+| 924  | The closed doors to a tutorial room south of a game room with the locks        |
+| 925  | The closed doors to a tutorial room south of a game room with the locks.       |
+| 926  | The closed doors to a tutorial room south of the game room with a lock         |
+| 927  | The closed doors to a tutorial room south of the game room with a lock         |
+| 928  | The closed doors to a tutorial room south of the game room with a lock.        |
+| 929  | The closed doors to a tutorial room south of the game room with locks          |
+| 930  | The closed doors to a tutorial room south of the game room with locks          |
+| 931  | The closed doors to a tutorial room south of the game room with locks.         |
+| 932  | The closed doors to a tutorial room south of the game room with the lock       |
+| 933  | The closed doors to a tutorial room south of the game room with the lock       |
+| 934  | The closed doors to a tutorial room south of the game room with the lock.      |
+| 935  | The closed doors to a tutorial room south of the game room with the locks      |
+| 936  | The closed doors to a tutorial room south of the game room with the locks      |
+| 937  | The closed doors to a tutorial room south of the game room with the locks.     |
+| 938  | The closed doors to a tutorial room south of the game room with the locks.     |
+| 939  | The closed doors to a tutorial room south of the game rooms with a lock        |
+| 940  | The closed doors to a tutorial room south of the game rooms with a lock        |
+| 941  | The closed doors to a tutorial room south of the game rooms with locks         |
+| 942  | The closed doors to a tutorial room south of the game rooms with locks         |
+| 943  | The closed doors to a tutorial room south of the game rooms with the lock      |
+| 944  | The closed doors to a tutorial room south of the game rooms with the lock      |
+| 945  | The closed doors to a tutorial room south of the game rooms with the locks     |
+| 946  | The closed doors to a tutorial room south of the game rooms with the locks     |
+| 947  | The closed doors to a tutorial room south of the game rooms with the locks.    |
+| 948  | The closed doors to a tutorial room south of the game rooms with the locks.    |
+| 949  | The closed doors to a tutorial room with a lock south of the game room         |
+| 950  | The closed doors to a tutorial room with locks south of the game room          |
+| 951  | The closed doors to a tutorial room with the lock south of a game room         |
+| 952  | The closed doors to a tutorial room with the lock south of the game room       |
+| 953  | The closed doors to a tutorial room with the lock south of the game room       |
+| 954  | The closed doors to a tutorial room with the lock south of the game rooms      |
+| 955  | The closed doors to a tutorial room with the lock south of the game rooms      |
+| 956  | The closed doors to the tutorial room south of a game room with a lock         |
+| 957  | The closed doors to the tutorial room south of a game room with locks          |
+| 958  | The closed doors to the tutorial room south of a game room with the lock       |
+| 959  | The closed doors to the tutorial room south of a game room with the lock       |
+| 960  | The closed doors to the tutorial room south of a game room with the locks      |
+| 961  | The closed doors to the tutorial room south of a game room with the locks      |
+| 962  | The closed doors to the tutorial room south of a game room with the locks.     |
+| 963  | The closed doors to the tutorial room south of the game room with a lock       |
+| 964  | The closed doors to the tutorial room south of the game room with a lock       |
+| 965  | The closed doors to the tutorial room south of the game room with a lock.      |
+| 966  | The closed doors to the tutorial room south of the game room with locks        |
+| 967  | The closed doors to the tutorial room south of the game room with locks        |
+| 968  | The closed doors to the tutorial room south of the game room with locks.       |
+| 969  | The closed doors to the tutorial room south of the game room with the lock     |
+| 970  | The closed doors to the tutorial room south of the game room with the lock     |
+| 971  | The closed doors to the tutorial room south of the game room with the lock.    |
+| 972  | The closed doors to the tutorial room south of the game room with the locks    |
+| 973  | The closed doors to the tutorial room south of the game room with the locks    |
+| 974  | The closed doors to the tutorial room south of the game room with the locks.   |
+| 975  | The closed doors to the tutorial room south of the game room with the locks.   |
+| 976  | The closed doors to the tutorial room south of the game rooms with a lock      |
+| 977  | The closed doors to the tutorial room south of the game rooms with a lock      |
+| 978  | The closed doors to the tutorial room south of the game rooms with a lock.     |
+| 979  | The closed doors to the tutorial room south of the game rooms with a lock.     |
+| 980  | The closed doors to the tutorial room south of the game rooms with locks       |
+| 981  | The closed doors to the tutorial room south of the game rooms with locks       |
+| 982  | The closed doors to the tutorial room south of the game rooms with locks.      |
+| 983  | The closed doors to the tutorial room south of the game rooms with locks.      |
+| 984  | The closed doors to the tutorial room south of the game rooms with the lock    |
+| 985  | The closed doors to the tutorial room south of the game rooms with the lock    |
+| 986  | The closed doors to the tutorial room south of the game rooms with the locks   |
+| 987  | The closed doors to the tutorial room south of the game rooms with the locks   |
+| 988  | The closed doors to the tutorial room south of the game rooms with the locks.  |
+| 989  | The closed doors to the tutorial room south of the game rooms with the locks.  |
+| 990  | The closed doors to the tutorial room with a lock south of the game room       |
+| 991  | The closed doors to the tutorial room with a lock south of the game rooms      |
+| 992  | The closed doors to the tutorial room with a lock south of the game rooms      |
+| 993  | The closed doors to the tutorial room with locks south of the game room        |
+| 994  | The closed doors to the tutorial room with the lock south of a game room       |
+| 995  | The closed doors to the tutorial room with the lock south of the game room     |
+| 996  | The closed doors to the tutorial room with the lock south of the game room     |
+| 997  | The closed doors to the tutorial room with the lock south of the game rooms    |
+| 998  | The closed doors to the tutorial room with the lock south of the game rooms    |
+| 999  | The closed doors to the tutorial room with the locks south of the game room    |
+| 1000 | The closed doors to the tutorial rooms south of a game room with a lock        |
+| 1001 | The closed doors to the tutorial rooms south of a game room with locks         |
+| 1002 | The closed doors to the tutorial rooms south of a game room with the lock      |
+| 1003 | The closed doors to the tutorial rooms south of a game room with the lock      |
+| 1004 | The closed doors to the tutorial rooms south of a game room with the locks     |
+| 1005 | The closed doors to the tutorial rooms south of a game room with the locks     |
+| 1006 | The closed doors to the tutorial rooms south of a game room with the locks.    |
+| 1007 | The closed doors to the tutorial rooms south of the game room with a lock      |
+| 1008 | The closed doors to the tutorial rooms south of the game room with a lock      |
+| 1009 | The closed doors to the tutorial rooms south of the game room with a lock.     |
+| 1010 | The closed doors to the tutorial rooms south of the game room with locks       |
+| 1011 | The closed doors to the tutorial rooms south of the game room with locks       |
+| 1012 | The closed doors to the tutorial rooms south of the game room with locks.      |
+| 1013 | The closed doors to the tutorial rooms south of the game room with the lock    |
+| 1014 | The closed doors to the tutorial rooms south of the game room with the lock    |
+| 1015 | The closed doors to the tutorial rooms south of the game room with the lock.   |
+| 1016 | The closed doors to the tutorial rooms south of the game room with the locks   |
+| 1017 | The closed doors to the tutorial rooms south of the game room with the locks   |
+| 1018 | The closed doors to the tutorial rooms south of the game room with the locks.  |
+| 1019 | The closed doors to the tutorial rooms south of the game room with the locks.  |
+| 1020 | The closed doors to the tutorial rooms south of the game rooms with a lock     |
+| 1021 | The closed doors to the tutorial rooms south of the game rooms with a lock     |
+| 1022 | The closed doors to the tutorial rooms south of the game rooms with a lock.    |
+| 1023 | The closed doors to the tutorial rooms south of the game rooms with a lock.    |
+| 1024 | The closed doors to the tutorial rooms south of the game rooms with locks      |
+| 1025 | The closed doors to the tutorial rooms south of the game rooms with locks      |
+| 1026 | The closed doors to the tutorial rooms south of the game rooms with locks.     |
+| 1027 | The closed doors to the tutorial rooms south of the game rooms with locks.     |
+| 1028 | The closed doors to the tutorial rooms south of the game rooms with the lock   |
+| 1029 | The closed doors to the tutorial rooms south of the game rooms with the lock   |
+| 1030 | The closed doors to the tutorial rooms south of the game rooms with the locks  |
+| 1031 | The closed doors to the tutorial rooms south of the game rooms with the locks  |
+| 1032 | The closed doors to the tutorial rooms south of the game rooms with the locks. |
+| 1033 | The closed doors to the tutorial rooms south of the game rooms with the locks. |
+| 1034 | The closed doors to the tutorial rooms with a lock south of the game room      |
+| 1035 | The closed doors to the tutorial rooms with a lock south of the game rooms     |
+| 1036 | The closed doors to the tutorial rooms with a lock south of the game rooms     |
+| 1037 | The closed doors to the tutorial rooms with locks south of the game room       |
+| 1038 | The closed doors to the tutorial rooms with the lock south of a game room      |
+| 1039 | The closed doors to the tutorial rooms with the lock south of the game room    |
+| 1040 | The closed doors to the tutorial rooms with the lock south of the game room    |
+| 1041 | The closed doors to the tutorial rooms with the lock south of the game rooms   |
+| 1042 | The closed doors to the tutorial rooms with the lock south of the game rooms   |
+| 1043 | The closed doors to the tutorial rooms with the locks south of the game room   |
+| 1044 | The closed doors to tutorial rooms south of a game room with a lock            |
+| 1045 | The closed doors to tutorial rooms south of a game room with the lock          |
+| 1046 | The closed doors to tutorial rooms south of a game room with the locks         |
+| 1047 | The closed doors to tutorial rooms south of the game room with a lock          |
+| 1048 | The closed doors to tutorial rooms south of the game room with locks           |
+| 1049 | The closed doors to tutorial rooms south of the game room with the lock        |
+| 1050 | The closed doors to tutorial rooms south of the game room with the lock        |
+| 1051 | The closed doors to tutorial rooms south of the game room with the locks       |
+| 1052 | The closed doors to tutorial rooms south of the game room with the locks       |
+| 1053 | The closed doors to tutorial rooms south of the game room with the locks.      |
+| 1054 | The closed doors to tutorial rooms south of the game rooms with a lock         |
+| 1055 | The closed doors to tutorial rooms south of the game rooms with a lock         |
+| 1056 | The closed doors to tutorial rooms south of the game rooms with locks          |
+| 1057 | The closed doors to tutorial rooms south of the game rooms with the lock       |
+| 1058 | The closed doors to tutorial rooms south of the game rooms with the lock       |
+| 1059 | The closed doors to tutorial rooms south of the game rooms with the locks      |
+| 1060 | The closed doors to tutorial rooms south of the game rooms with the locks      |
+| 1061 | The closed doors to tutorial rooms with the lock south of the game room        |
+| 1062 | The closed doors with a lock south of the game room to a tutorial room         |
+| 1063 | The closed doors with a lock south of the game room to the tutorial room       |
+| 1064 | The closed doors with a lock south of the game room to the tutorial rooms      |
+| 1065 | The closed doors with a lock south of the game rooms to a tutorial room        |
+| 1066 | The closed doors with a lock south of the game rooms to a tutorial room        |
+| 1067 | The closed doors with a lock south of the game rooms to the tutorial room      |
+| 1068 | The closed doors with a lock south of the game rooms to the tutorial room      |
+| 1069 | The closed doors with a lock south of the game rooms to the tutorial rooms     |
+| 1070 | The closed doors with a lock south of the game rooms to the tutorial rooms     |
+| 1071 | The closed doors with a lock to a tutorial room south of the game room         |
+| 1072 | The closed doors with a lock to the tutorial room south of the game room       |
+| 1073 | The closed doors with a lock to the tutorial rooms south of the game room      |
+| 1074 | The closed doors with locks south of the game room to a tutorial room          |
+| 1075 | The closed doors with locks south of the game room to the tutorial room        |
+| 1076 | The closed doors with locks south of the game room to the tutorial rooms       |
+| 1077 | The closed doors with locks south of the game rooms to a tutorial room         |
+| 1078 | The closed doors with locks south of the game rooms to a tutorial room         |
+| 1079 | The closed doors with locks south of the game rooms to the tutorial room       |
+| 1080 | The closed doors with locks south of the game rooms to the tutorial room       |
+| 1081 | The closed doors with locks south of the game rooms to the tutorial rooms      |
+| 1082 | The closed doors with locks south of the game rooms to the tutorial rooms      |
+| 1083 | The closed doors with locks to a tutorial room south of the game room          |
+| 1084 | The closed doors with locks to the tutorial room south of the game room        |
+| 1085 | The closed doors with locks to the tutorial rooms south of the game room       |
+| 1086 | The closed doors with the lock south of a game room to a tutorial room         |
+| 1087 | The closed doors with the lock south of a game room to the tutorial room       |
+| 1088 | The closed doors with the lock south of a game room to the tutorial rooms      |
+| 1089 | The closed doors with the lock south of the game room to a tutorial room       |
+| 1090 | The closed doors with the lock south of the game room to a tutorial room       |
+| 1091 | The closed doors with the lock south of the game room to the tutorial room     |
+| 1092 | The closed doors with the lock south of the game room to the tutorial room     |
+| 1093 | The closed doors with the lock south of the game room to the tutorial rooms    |
+| 1094 | The closed doors with the lock south of the game room to the tutorial rooms    |
+| 1095 | The closed doors with the lock south of the game room to the tutorial rooms.   |
+| 1096 | The closed doors with the lock south of the game room to tutorial rooms        |
+| 1097 | The closed doors with the lock south of the game room to tutorial rooms.       |
+| 1098 | The closed doors with the lock south of the game rooms to a tutorial room      |
+| 1099 | The closed doors with the lock south of the game rooms to a tutorial room      |
+| 1100 | The closed doors with the lock south of the game rooms to the tutorial room    |
+| 1101 | The closed doors with the lock south of the game rooms to the tutorial room    |
+| 1102 | The closed doors with the lock south of the game rooms to the tutorial rooms   |
+| 1103 | The closed doors with the lock south of the game rooms to the tutorial rooms   |
+| 1104 | The closed doors with the lock south of the game rooms to the tutorial rooms.  |
+| 1105 | The closed doors with the lock south of the game rooms to tutorial rooms       |
+| 1106 | The closed doors with the lock south of the game rooms to tutorial rooms.      |
+| 1107 | The closed doors with the lock to a tutorial room south of a game room         |
+| 1108 | The closed doors with the lock to a tutorial room south of the game room       |
+| 1109 | The closed doors with the lock to a tutorial room south of the game rooms      |
+| 1110 | The closed doors with the lock to a tutorial room south of the game rooms      |
+| 1111 | The closed doors with the lock to the tutorial room south of a game room       |
+| 1112 | The closed doors with the lock to the tutorial room south of the game room     |
+| 1113 | The closed doors with the lock to the tutorial room south of the game room     |
+| 1114 | The closed doors with the lock to the tutorial room south of the game rooms    |
+| 1115 | The closed doors with the lock to the tutorial room south of the game rooms    |
+| 1116 | The closed doors with the lock to the tutorial rooms south of a game room      |
+| 1117 | The closed doors with the lock to the tutorial rooms south of the game room    |
+| 1118 | The closed doors with the lock to the tutorial rooms south of the game room    |
+| 1119 | The closed doors with the lock to the tutorial rooms south of the game rooms   |
+| 1120 | The closed doors with the lock to the tutorial rooms south of the game rooms   |
+| 1121 | The closed doors with the lock to tutorial rooms south of the game room        |
+| 1122 | The closed doors with the locks south of the game room to a tutorial room      |
+| 1123 | The closed doors with the locks south of the game room to the tutorial room    |
+| 1124 | The closed doors with the locks south of the game room to the tutorial rooms   |
++------+--------------------------------------------------------------------------------+
+

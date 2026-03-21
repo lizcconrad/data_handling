@@ -1,0 +1,256 @@
+GRAPH NAME: idTire1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 75    |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++-------------------------------------------------------------+
+|                         GOLD OUTPUTS                        |
++------------------------------------------------+------------+
+| Gold Output                                    | Generated? |
++------------------------------------------------+------------+
+| the black tire south of the stumpy logged area | False      |
++------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------------------------------+
+|                                                     NODE METRICS                                                    |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Node    | Node Covered | Node Included | Coverage Comment                       | Inclusion Comment                 |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idTire1 | True         | True          | Covered                                | Included                          |
+| black   | True         | True          | Covered                                | Included                          |
+| idArea1 | True         | True          | Covered                                | Included                          |
+| logged  | True         | True          | Covered                                | Included                          |
+| stumpy  | False        | False         | 'stumpy' not in lexicon's node entries | No SEMENT generated for this node |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                         EDGE METRICS                                                                        |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Edge                        | Parent  | Child   | Edge Covered | Edge Included | Coverage Comment                       | Inclusion Comment                 |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idTire1_prop_idColor        | idTire1 | black   | True         | True          | Covered                                | Included                          |
+| isSouthOf                   | idTire1 | idArea1 | True         | True          | Covered                                | Included                          |
+| idArea1_prop_idDescriptor   | idArea1 | logged  | True         | True          | Covered                                | Included                          |
+| idArea1_prop_idDescriptor_1 | idArea1 | stumpy  | False        | False         | child of 'idDescriptor_' has no SEMENT | No SEMENT generated for this edge |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h400                                                                      |
+|               |   INDEX: x399                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h417 ARG0: e414 ARG1: u415 ARG2: x416 ]               |
+|               |           [ def_implicit_q LBL: h428 ARG0: x425 RSTR: h426 BODY: h427 ]          |
+|               |           [ _south_a_1 LBL: h413 ARG0: i410 ARG1: x411 ARG2: u412 ]              |
+|               |           [ def_udef_a_q LBL: h423 ARG0: x420 RSTR: h421 BODY: h422 ]            |
+|               |           [ _log_v_1 LBL: h409 ARG0: e406 [ e PERF: - ] ARG1: i407 ARG2: i408 ]  |
+|               |           [ _area_n_of LBL: h405 ARG0: x404 ]                                    |
+|               |           [ place_n LBL: h419 ARG0: x418 ]                                       |
+|               |           [ _black_a_1 LBL: h403 ARG0: i401 ARG1: i402 ]                         |
+|               |           [ _tire_n_1 LBL: h400 ARG0: x399 ] >                                   |
+|               |   HCONS: < h421 qeq h405 h426 qeq h419 >                                         |
+|               |   ICONS: < e406 topic i408 >                                                     |
+|               |   EQS: < h409 eq h405 i408 eq x404 x420 eq x404 h413 eq h424 u412 eq x420 h413   |
+|               | eq h419 x411 eq x418 x425 eq x418 h417 eq h429 x416 eq x425 h403 eq h400 i402 eq |
+|               | x399 h417 eq h400 u415 eq x399 > ]                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h400                                                                      |
+|               |   INDEX: x399                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h400 ARG0: e414 ARG1: x399 ARG2: x411 ]               |
+|               |           [ def_implicit_q LBL: h428 ARG0: x411 RSTR: h426 BODY: h427 ]          |
+|               |           [ _south_a_1 LBL: h413 ARG0: i410 ARG1: x411 ARG2: x404 ]              |
+|               |           [ def_udef_a_q LBL: h423 ARG0: x404 RSTR: h421 BODY: h422 ]            |
+|               |           [ _log_v_1 LBL: h405 ARG0: e406 [ e PERF: - ] ARG1: i407 ARG2: x404 ]  |
+|               |           [ _area_n_of LBL: h405 ARG0: x404 ]                                    |
+|               |           [ place_n LBL: h413 ARG0: x411 ]                                       |
+|               |           [ _black_a_1 LBL: h400 ARG0: i401 ARG1: x399 ]                         |
+|               |           [ _tire_n_1 LBL: h400 ARG0: x399 ] >                                   |
+|               |   HCONS: < h421 qeq h405 h426 qeq h413 >                                         |
+|               |   ICONS: < e406 topic x404 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h438                                                                      |
+|               |   INDEX: e435                                                                    |
+|               |   RELS: < [ unknown LBL: h434 ARG: x399 ARG0: e435 ]                             |
+|               |           [ def_udef_a_q LBL: h433 ARG0: x399 RSTR: h431 BODY: h432 ]            |
+|               |           [ loc_nonsp LBL: h400 ARG0: e414 ARG1: x399 ARG2: x411 ]               |
+|               |           [ def_implicit_q LBL: h428 ARG0: x411 RSTR: h426 BODY: h427 ]          |
+|               |           [ _south_a_1 LBL: h413 ARG0: i410 ARG1: x411 ARG2: x404 ]              |
+|               |           [ def_udef_a_q LBL: h423 ARG0: x404 RSTR: h421 BODY: h422 ]            |
+|               |           [ _log_v_1 LBL: h405 ARG0: e406 [ e PERF: - ] ARG1: i407 ARG2: x404 ]  |
+|               |           [ _area_n_of LBL: h405 ARG0: x404 ]                                    |
+|               |           [ place_n LBL: h413 ARG0: x411 ]                                       |
+|               |           [ _black_a_1 LBL: h400 ARG0: i401 ARG1: x399 ]                         |
+|               |           [ _tire_n_1 LBL: h400 ARG0: x399 ] >                                   |
+|               |   HCONS: < h421 qeq h405 h426 qeq h413 h431 qeq h400 h438 qeq h434 >             |
+|               |   ICONS: < e406 topic x404 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE SEMENTS                                 |
++---------+---------------------------------------------------------------------+
+| Node    | Generated SEMENT                                                    |
++---------+---------------------------------------------------------------------+
+| idTire1 | [ TOP: h400                                                         |
+|         |   INDEX: x399                                                       |
+|         |   RELS: < [ _tire_n_1 LBL: h400 ARG0: x399 ] > ]                    |
++---------+---------------------------------------------------------------------+
+| black   | [ TOP: h403                                                         |
+|         |   INDEX: i401                                                       |
+|         |   RELS: < [ _black_a_1 LBL: h403 ARG0: i401 ARG1: i402 ] >          |
+|         |   SLOTS: < ARG1: i402 > ]                                           |
++---------+---------------------------------------------------------------------+
+| idArea1 | [ TOP: h405                                                         |
+|         |   INDEX: x404                                                       |
+|         |   RELS: < [ _area_n_of LBL: h405 ARG0: x404 ] > ]                   |
++---------+---------------------------------------------------------------------+
+| logged  | [ TOP: h409                                                         |
+|         |   INDEX: e406                                                       |
+|         |   RELS: < [ _log_v_1 LBL: h409 ARG0: e406 ARG1: i407 ARG2: i408 ] > |
+|         |   SLOTS: < ARG1: i407 ARG2: i408 > ]                                |
++---------+---------------------------------------------------------------------+
+| stumpy  | None                                                                |
++---------+---------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                            |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| Edge                        | Parent  | Child   | Generated SEMENT                                                                 |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idTire1_prop_idColor        | idTire1 | black   | [ TOP: h400                                                                      |
+|                             |         |         |   INDEX: x399                                                                    |
+|                             |         |         |   RELS: < [ _black_a_1 LBL: h403 ARG0: i401 ARG1: i402 ]                         |
+|                             |         |         |           [ _tire_n_1 LBL: h400 ARG0: x399 ] >                                   |
+|                             |         |         |   EQS: < h403 eq h400 i402 eq x399 > ]                                           |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| isSouthOf                   | idTire1 | idArea1 | [ TOP: h400                                                                      |
+|                             |         |         |   INDEX: x399                                                                    |
+|                             |         |         |   RELS: < [ loc_nonsp LBL: h417 ARG0: e414 ARG1: u415 ARG2: x416 ]               |
+|                             |         |         |           [ def_implicit_q LBL: h428 ARG0: x425 RSTR: h426 BODY: h427 ]          |
+|                             |         |         |           [ _south_a_1 LBL: h413 ARG0: i410 ARG1: x411 ARG2: u412 ]              |
+|                             |         |         |           [ def_udef_a_q LBL: h423 ARG0: x420 RSTR: h421 BODY: h422 ]            |
+|                             |         |         |           [ _log_v_1 LBL: h409 ARG0: e406 [ e PERF: - ] ARG1: i407 ARG2: i408 ]  |
+|                             |         |         |           [ _area_n_of LBL: h405 ARG0: x404 ]                                    |
+|                             |         |         |           [ place_n LBL: h419 ARG0: x418 ]                                       |
+|                             |         |         |           [ _black_a_1 LBL: h403 ARG0: i401 ARG1: i402 ]                         |
+|                             |         |         |           [ _tire_n_1 LBL: h400 ARG0: x399 ] >                                   |
+|                             |         |         |   HCONS: < h421 qeq h405 h426 qeq h419 >                                         |
+|                             |         |         |   ICONS: < e406 topic i408 >                                                     |
+|                             |         |         |   EQS: < h409 eq h405 i408 eq x404 x420 eq x404 h413 eq h424 u412 eq x420 h413   |
+|                             |         |         | eq h419 x411 eq x418 x425 eq x418 h417 eq h429 x416 eq x425 h403 eq h400 i402 eq |
+|                             |         |         | x399 h417 eq h400 u415 eq x399 > ]                                               |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idArea1_prop_idDescriptor   | idArea1 | logged  | [ TOP: h405                                                                      |
+|                             |         |         |   INDEX: x404                                                                    |
+|                             |         |         |   RELS: < [ _log_v_1 LBL: h409 ARG0: e406 [ e PERF: - ] ARG1: i407 ARG2: i408 ]  |
+|                             |         |         |           [ _area_n_of LBL: h405 ARG0: x404 ] >                                  |
+|                             |         |         |   ICONS: < e406 topic i408 >                                                     |
+|                             |         |         |   EQS: < h409 eq h405 i408 eq x404 > ]                                           |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idArea1_prop_idDescriptor_1 | idArea1 | stumpy  | None                                                                             |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------+
+|              GENERATED ENGLISH TEXT             |
++----+--------------------------------------------+
+| #  | Generated Text                             |
++----+--------------------------------------------+
+| 1  | A black tire south of a logged area        |
+| 2  | A black tire south of a logged area.       |
+| 3  | A black tire south of logged area          |
+| 4  | A black tire south of logged area.         |
+| 5  | A black tire south of logged areas         |
+| 6  | A black tire south of logged areas.        |
+| 7  | A black tire south of the logged area      |
+| 8  | A black tire south of the logged area.     |
+| 9  | A black tire south of the logged areas     |
+| 10 | A black tire south of the logged areas.    |
+| 11 | A black tire, south of a logged area       |
+| 12 | A black tire, south of logged area         |
+| 13 | A black tire, south of logged areas        |
+| 14 | A black tire, south of the logged area     |
+| 15 | A black tire, south of the logged areas    |
+| 16 | Black tire south of a logged area          |
+| 17 | Black tire south of a logged area.         |
+| 18 | Black tire south of logged area            |
+| 19 | Black tire south of logged area.           |
+| 20 | Black tire south of logged areas           |
+| 21 | Black tire south of logged areas.          |
+| 22 | Black tire south of the logged area        |
+| 23 | Black tire south of the logged area.       |
+| 24 | Black tire south of the logged areas       |
+| 25 | Black tire south of the logged areas.      |
+| 26 | Black tire, south of a logged area         |
+| 27 | Black tire, south of logged area           |
+| 28 | Black tire, south of logged areas          |
+| 29 | Black tire, south of the logged area       |
+| 30 | Black tire, south of the logged areas      |
+| 31 | Black tires south of a logged area         |
+| 32 | Black tires south of a logged area.        |
+| 33 | Black tires south of logged area           |
+| 34 | Black tires south of logged area.          |
+| 35 | Black tires south of logged areas          |
+| 36 | Black tires south of logged areas.         |
+| 37 | Black tires south of the logged area       |
+| 38 | Black tires south of the logged area.      |
+| 39 | Black tires south of the logged areas      |
+| 40 | Black tires south of the logged areas.     |
+| 41 | Black tires, south of a logged area        |
+| 42 | Black tires, south of logged area          |
+| 43 | Black tires, south of logged areas         |
+| 44 | Black tires, south of the logged area      |
+| 45 | Black tires, south of the logged areas     |
+| 46 | The black tire south of a logged area      |
+| 47 | The black tire south of a logged area.     |
+| 48 | The black tire south of logged area        |
+| 49 | The black tire south of logged area.       |
+| 50 | The black tire south of logged areas       |
+| 51 | The black tire south of logged areas.      |
+| 52 | The black tire south of the logged area    |
+| 53 | The black tire south of the logged area.   |
+| 54 | The black tire south of the logged areas   |
+| 55 | The black tire south of the logged areas.  |
+| 56 | The black tire, south of a logged area     |
+| 57 | The black tire, south of logged area       |
+| 58 | The black tire, south of logged areas      |
+| 59 | The black tire, south of the logged area   |
+| 60 | The black tire, south of the logged areas  |
+| 61 | The black tires south of a logged area     |
+| 62 | The black tires south of a logged area.    |
+| 63 | The black tires south of logged area       |
+| 64 | The black tires south of logged area.      |
+| 65 | The black tires south of logged areas      |
+| 66 | The black tires south of logged areas.     |
+| 67 | The black tires south of the logged area   |
+| 68 | The black tires south of the logged area.  |
+| 69 | The black tires south of the logged areas  |
+| 70 | The black tires south of the logged areas. |
+| 71 | The black tires, south of a logged area    |
+| 72 | The black tires, south of logged area      |
+| 73 | The black tires, south of logged areas     |
+| 74 | The black tires, south of the logged area  |
+| 75 | The black tires, south of the logged areas |
++----+--------------------------------------------+
+

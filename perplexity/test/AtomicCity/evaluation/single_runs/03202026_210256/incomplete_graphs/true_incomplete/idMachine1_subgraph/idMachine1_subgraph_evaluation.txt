@@ -1,0 +1,1556 @@
+GRAPH NAME: idMachine1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1305  |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++------------------------------------------------------------------------------------------------------------------------+
+|                                                      GOLD OUTPUTS                                                      |
++-----------------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                               | Generated? |
++-----------------------------------------------------------------------------------------------------------+------------+
+| the immovable machine that's off with an on switch south of the outside of the atomic city's back opening | False      |
++-----------------------------------------------------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   NODE METRICS                                                                  |
++---------------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| Node                            | Node Covered | Node Included | Coverage Comment                           | Inclusion Comment                 |
++---------------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| idMachine1                      | True         | True          | Covered                                    | Included                          |
+| idOnSwitch1                     | False        | False         | 'idOnSwitch' not in lexicon's node entries | No SEMENT generated for this node |
+| yes                             | True         | True          | Covered                                    | Included                          |
+| off                             | True         | True          | Covered                                    | Included                          |
+| idAtomicCityOutside1BackOpening | True         | True          | Covered                                    | Included                          |
++---------------------------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                        EDGE METRICS                                                                                        |
++--------------------------------+------------+---------------------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| Edge                           | Parent     | Child                           | Edge Covered | Edge Included | Coverage Comment                        | Inclusion Comment                 |
++--------------------------------+------------+---------------------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1                     | False        | False         | child of 'idPowerControl' has no SEMENT | No SEMENT generated for this edge |
+| idMachine1_prop_idImmovable    | idMachine1 | yes                             | True         | True          | Covered                                 | Included                          |
+| idMachine1_prop_idPowerState   | idMachine1 | off                             | True         | True          | Covered                                 | Included                          |
+| isSouthOf                      | idMachine1 | idAtomicCityOutside1BackOpening | True         | True          | Covered                                 | Included                          |
++--------------------------------+------------+---------------------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1996                                                                     |
+|               |   INDEX: x1995                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2060 ARG0: e2057 ARG1: u2058 ARG2: x2059 ]           |
+|               |           [ def_implicit_q LBL: h2071 ARG0: x2068 RSTR: h2069 BODY: h2070 ]      |
+|               |           [ _south_a_1 LBL: h2056 ARG0: i2053 ARG1: x2054 ARG2: u2055 ]          |
+|               |           [ def_udef_a_q LBL: h2066 ARG0: x2063 RSTR: h2064 BODY: h2065 ]        |
+|               |           [ poss LBL: h2052 ARG0: e2049 ARG1: x2050 ARG2: i2051 ]                |
+|               |           [ def_udef_a_q LBL: h2047 ARG0: x2044 RSTR: h2045 BODY: h2046 ]        |
+|               |           [ _outside_n_of LBL: h2020 ARG0: x2018 ARG1: i2019 ]                   |
+|               |           [ def_udef_a_q LBL: h2029 ARG0: x2026 RSTR: h2027 BODY: h2028 ]        |
+|               |           [ _atomic_a_1 LBL: h2023 ARG0: e2021 ARG1: u2022 ]                     |
+|               |           [ _city_n_1 LBL: h2025 ARG0: x2024 ]                                   |
+|               |           [ compound LBL: h2043 ARG0: e2040 [ e PROG: - ] ARG1: u2041 ARG2:      |
+|               | u2042 ]                                                                          |
+|               |           [ udef_q LBL: h2038 ARG0: x2035 RSTR: h2036 BODY: h2037 ]              |
+|               |           [ _back_n_1 LBL: h2034 ARG0: x2033 ]                                   |
+|               |           [ _opening_n_1 LBL: h2032 ARG0: x2031 ]                                |
+|               |           [ place_n LBL: h2062 ARG0: x2061 ]                                     |
+|               |           [ _turn_v_off LBL: h2017 ARG0: e2014 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i2015 ARG2: i2016 ]                                                              |
+|               |           [ _immovable_a_1 LBL: h2006 ARG0: e2004 ARG1: u2005 ]                  |
+|               |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|               |   HCONS: < h2027 qeq h2025 h2045 qeq h2020 h2036 qeq h2034 h2064 qeq h2032 h2069 |
+|               | qeq h2062 >                                                                      |
+|               |   ICONS: < e2014 topic i2016 >                                                   |
+|               |   EQS: < h2023 eq h2025 u2022 eq x2024 x2026 eq x2024 h2020 eq h2030 i2019 eq    |
+|               | x2026 x2044 eq x2018 h2052 eq h2048 i2051 eq x2044 x2035 eq x2033 h2043 eq h2039 |
+|               | u2042 eq x2035 h2043 eq h2032 u2041 eq x2031 h2052 eq h2032 x2050 eq x2031 x2063 |
+|               | eq x2031 h2056 eq h2067 u2055 eq x2063 h2056 eq h2062 x2054 eq x2061 x2068 eq    |
+|               | x2061 h2060 eq h2072 x2059 eq x2068 h2006 eq h1996 u2005 eq x1995 h2017 eq h1996 |
+|               | i2016 eq x1995 h2060 eq h1996 u2058 eq x1995 > ]                                 |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1996                                                                     |
+|               |   INDEX: x1995                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1996 ARG0: e2057 ARG1: x1995 ARG2: x2054 ]           |
+|               |           [ def_implicit_q LBL: h2071 ARG0: x2054 RSTR: h2069 BODY: h2070 ]      |
+|               |           [ _south_a_1 LBL: h2056 ARG0: i2053 ARG1: x2054 ARG2: x2031 ]          |
+|               |           [ def_udef_a_q LBL: h2066 ARG0: x2031 RSTR: h2064 BODY: h2065 ]        |
+|               |           [ poss LBL: h2032 ARG0: e2049 ARG1: x2031 ARG2: x2018 ]                |
+|               |           [ def_udef_a_q LBL: h2047 ARG0: x2018 RSTR: h2045 BODY: h2046 ]        |
+|               |           [ _outside_n_of LBL: h2020 ARG0: x2018 ARG1: x2024 ]                   |
+|               |           [ def_udef_a_q LBL: h2029 ARG0: x2024 RSTR: h2027 BODY: h2028 ]        |
+|               |           [ _atomic_a_1 LBL: h2023 ARG0: e2021 ARG1: x2024 ]                     |
+|               |           [ _city_n_1 LBL: h2023 ARG0: x2024 ]                                   |
+|               |           [ compound LBL: h2032 ARG0: e2040 [ e PROG: - ] ARG1: x2031 ARG2:      |
+|               | x2033 ]                                                                          |
+|               |           [ udef_q LBL: h2038 ARG0: x2033 RSTR: h2036 BODY: h2037 ]              |
+|               |           [ _back_n_1 LBL: h2034 ARG0: x2033 ]                                   |
+|               |           [ _opening_n_1 LBL: h2032 ARG0: x2031 ]                                |
+|               |           [ place_n LBL: h2056 ARG0: x2054 ]                                     |
+|               |           [ _turn_v_off LBL: h1996 ARG0: e2014 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i2015 ARG2: x1995 ]                                                              |
+|               |           [ _immovable_a_1 LBL: h1996 ARG0: e2004 ARG1: x1995 ]                  |
+|               |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|               |   HCONS: < h2027 qeq h2023 h2045 qeq h2020 h2036 qeq h2034 h2064 qeq h2032 h2069 |
+|               | qeq h2056 >                                                                      |
+|               |   ICONS: < e2014 topic x1995 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2081                                                                     |
+|               |   INDEX: e2078                                                                   |
+|               |   RELS: < [ unknown LBL: h2077 ARG: x1995 ARG0: e2078 ]                          |
+|               |           [ def_udef_a_q LBL: h2076 ARG0: x1995 RSTR: h2074 BODY: h2075 ]        |
+|               |           [ loc_nonsp LBL: h1996 ARG0: e2057 ARG1: x1995 ARG2: x2054 ]           |
+|               |           [ def_implicit_q LBL: h2071 ARG0: x2054 RSTR: h2069 BODY: h2070 ]      |
+|               |           [ _south_a_1 LBL: h2056 ARG0: i2053 ARG1: x2054 ARG2: x2031 ]          |
+|               |           [ def_udef_a_q LBL: h2066 ARG0: x2031 RSTR: h2064 BODY: h2065 ]        |
+|               |           [ poss LBL: h2032 ARG0: e2049 ARG1: x2031 ARG2: x2018 ]                |
+|               |           [ def_udef_a_q LBL: h2047 ARG0: x2018 RSTR: h2045 BODY: h2046 ]        |
+|               |           [ _outside_n_of LBL: h2020 ARG0: x2018 ARG1: x2024 ]                   |
+|               |           [ def_udef_a_q LBL: h2029 ARG0: x2024 RSTR: h2027 BODY: h2028 ]        |
+|               |           [ _atomic_a_1 LBL: h2023 ARG0: e2021 ARG1: x2024 ]                     |
+|               |           [ _city_n_1 LBL: h2023 ARG0: x2024 ]                                   |
+|               |           [ compound LBL: h2032 ARG0: e2040 [ e PROG: - ] ARG1: x2031 ARG2:      |
+|               | x2033 ]                                                                          |
+|               |           [ udef_q LBL: h2038 ARG0: x2033 RSTR: h2036 BODY: h2037 ]              |
+|               |           [ _back_n_1 LBL: h2034 ARG0: x2033 ]                                   |
+|               |           [ _opening_n_1 LBL: h2032 ARG0: x2031 ]                                |
+|               |           [ place_n LBL: h2056 ARG0: x2054 ]                                     |
+|               |           [ _turn_v_off LBL: h1996 ARG0: e2014 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i2015 ARG2: x1995 ]                                                              |
+|               |           [ _immovable_a_1 LBL: h1996 ARG0: e2004 ARG1: x1995 ]                  |
+|               |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|               |   HCONS: < h2027 qeq h2023 h2045 qeq h2020 h2036 qeq h2034 h2064 qeq h2032 h2069 |
+|               | qeq h2056 h2074 qeq h1996 h2081 qeq h2077 >                                      |
+|               |   ICONS: < e2014 topic x1995 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------+
+|                                                    NODE SEMENTS                                                    |
++---------------------------------+----------------------------------------------------------------------------------+
+| Node                            | Generated SEMENT                                                                 |
++---------------------------------+----------------------------------------------------------------------------------+
+| idMachine1                      | [ TOP: h1996                                                                     |
+|                                 |   INDEX: x1995                                                                   |
+|                                 |   RELS: < [ _machine_n_1 LBL: h1996 ARG0: x1995 ] > ]                            |
++---------------------------------+----------------------------------------------------------------------------------+
+| idOnSwitch1                     | None                                                                             |
++---------------------------------+----------------------------------------------------------------------------------+
+| yes                             | [ TOP: h2000                                                                     |
+|                                 |   INDEX: e1997                                                                   |
+|                                 |   RELS: < [ _true_a_of LBL: h2000 ARG0: e1997 ARG1: u1998 ARG2: u1999 ] >        |
+|                                 |   SLOTS: < ARG1: u1998 ARG2: u1999 > ]                                           |
++---------------------------------+----------------------------------------------------------------------------------+
+| off                             | [ TOP: h2009                                                                     |
+|                                 |   INDEX: e2007                                                                   |
+|                                 |   RELS: < [ _off_a_1 LBL: h2009 ARG0: e2007 ARG1: u2008 ] >                      |
+|                                 |   SLOTS: < ARG1: u2008 > ]                                                       |
++---------------------------------+----------------------------------------------------------------------------------+
+| idAtomicCityOutside1BackOpening | [ TOP: h2032                                                                     |
+|                                 |   INDEX: x2031                                                                   |
+|                                 |   RELS: < [ poss LBL: h2052 ARG0: e2049 ARG1: x2050 ARG2: i2051 ]                |
+|                                 |           [ def_udef_a_q LBL: h2047 ARG0: x2044 RSTR: h2045 BODY: h2046 ]        |
+|                                 |           [ _outside_n_of LBL: h2020 ARG0: x2018 ARG1: i2019 ]                   |
+|                                 |           [ def_udef_a_q LBL: h2029 ARG0: x2026 RSTR: h2027 BODY: h2028 ]        |
+|                                 |           [ _atomic_a_1 LBL: h2023 ARG0: e2021 ARG1: u2022 ]                     |
+|                                 |           [ _city_n_1 LBL: h2025 ARG0: x2024 ]                                   |
+|                                 |           [ compound LBL: h2043 ARG0: e2040 [ e PROG: - ] ARG1: u2041 ARG2:      |
+|                                 | u2042 ]                                                                          |
+|                                 |           [ udef_q LBL: h2038 ARG0: x2035 RSTR: h2036 BODY: h2037 ]              |
+|                                 |           [ _back_n_1 LBL: h2034 ARG0: x2033 ]                                   |
+|                                 |           [ _opening_n_1 LBL: h2032 ARG0: x2031 ] >                              |
+|                                 |   HCONS: < h2027 qeq h2025 h2045 qeq h2020 h2036 qeq h2034 >                     |
+|                                 |   EQS: < h2023 eq h2025 u2022 eq x2024 x2026 eq x2024 h2020 eq h2030 i2019 eq    |
+|                                 | x2026 x2044 eq x2018 h2052 eq h2048 i2051 eq x2044 x2035 eq x2033 h2043 eq h2039 |
+|                                 | u2042 eq x2035 h2043 eq h2032 u2041 eq x2031 h2052 eq h2032 x2050 eq x2031 > ]   |
++---------------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                           EDGE SEMENTS                                                                           |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent     | Child                           | Generated SEMENT                                                                 |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1                     | None                                                                             |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idImmovable    | idMachine1 | yes                             | [ TOP: h1996                                                                     |
+|                                |            |                                 |   INDEX: x1995                                                                   |
+|                                |            |                                 |   RELS: < [ _immovable_a_1 LBL: h2006 ARG0: e2004 ARG1: u2005 ]                  |
+|                                |            |                                 |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|                                |            |                                 |   EQS: < h2006 eq h1996 u2005 eq x1995 > ]                                       |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerState   | idMachine1 | off                             | [ TOP: h1996                                                                     |
+|                                |            |                                 |   INDEX: x1995                                                                   |
+|                                |            |                                 |   RELS: < [ _turn_v_off LBL: h2017 ARG0: e2014 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |                                 | i2015 ARG2: i2016 ]                                                              |
+|                                |            |                                 |           [ _immovable_a_1 LBL: h2006 ARG0: e2004 ARG1: u2005 ]                  |
+|                                |            |                                 |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|                                |            |                                 |   ICONS: < e2014 topic i2016 >                                                   |
+|                                |            |                                 |   EQS: < h2006 eq h1996 u2005 eq x1995 h2017 eq h1996 i2016 eq x1995 > ]         |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+| isSouthOf                      | idMachine1 | idAtomicCityOutside1BackOpening | [ TOP: h1996                                                                     |
+|                                |            |                                 |   INDEX: x1995                                                                   |
+|                                |            |                                 |   RELS: < [ loc_nonsp LBL: h2060 ARG0: e2057 ARG1: u2058 ARG2: x2059 ]           |
+|                                |            |                                 |           [ def_implicit_q LBL: h2071 ARG0: x2068 RSTR: h2069 BODY: h2070 ]      |
+|                                |            |                                 |           [ _south_a_1 LBL: h2056 ARG0: i2053 ARG1: x2054 ARG2: u2055 ]          |
+|                                |            |                                 |           [ def_udef_a_q LBL: h2066 ARG0: x2063 RSTR: h2064 BODY: h2065 ]        |
+|                                |            |                                 |           [ poss LBL: h2052 ARG0: e2049 ARG1: x2050 ARG2: i2051 ]                |
+|                                |            |                                 |           [ def_udef_a_q LBL: h2047 ARG0: x2044 RSTR: h2045 BODY: h2046 ]        |
+|                                |            |                                 |           [ _outside_n_of LBL: h2020 ARG0: x2018 ARG1: i2019 ]                   |
+|                                |            |                                 |           [ def_udef_a_q LBL: h2029 ARG0: x2026 RSTR: h2027 BODY: h2028 ]        |
+|                                |            |                                 |           [ _atomic_a_1 LBL: h2023 ARG0: e2021 ARG1: u2022 ]                     |
+|                                |            |                                 |           [ _city_n_1 LBL: h2025 ARG0: x2024 ]                                   |
+|                                |            |                                 |           [ compound LBL: h2043 ARG0: e2040 [ e PROG: - ] ARG1: u2041 ARG2:      |
+|                                |            |                                 | u2042 ]                                                                          |
+|                                |            |                                 |           [ udef_q LBL: h2038 ARG0: x2035 RSTR: h2036 BODY: h2037 ]              |
+|                                |            |                                 |           [ _back_n_1 LBL: h2034 ARG0: x2033 ]                                   |
+|                                |            |                                 |           [ _opening_n_1 LBL: h2032 ARG0: x2031 ]                                |
+|                                |            |                                 |           [ place_n LBL: h2062 ARG0: x2061 ]                                     |
+|                                |            |                                 |           [ _turn_v_off LBL: h2017 ARG0: e2014 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |                                 | i2015 ARG2: i2016 ]                                                              |
+|                                |            |                                 |           [ _immovable_a_1 LBL: h2006 ARG0: e2004 ARG1: u2005 ]                  |
+|                                |            |                                 |           [ _machine_n_1 LBL: h1996 ARG0: x1995 ] >                              |
+|                                |            |                                 |   HCONS: < h2027 qeq h2025 h2045 qeq h2020 h2036 qeq h2034 h2064 qeq h2032 h2069 |
+|                                |            |                                 | qeq h2062 >                                                                      |
+|                                |            |                                 |   ICONS: < e2014 topic i2016 >                                                   |
+|                                |            |                                 |   EQS: < h2023 eq h2025 u2022 eq x2024 x2026 eq x2024 h2020 eq h2030 i2019 eq    |
+|                                |            |                                 | x2026 x2044 eq x2018 h2052 eq h2048 i2051 eq x2044 x2035 eq x2033 h2043 eq h2039 |
+|                                |            |                                 | u2042 eq x2035 h2043 eq h2032 u2041 eq x2031 h2052 eq h2032 x2050 eq x2031 x2063 |
+|                                |            |                                 | eq x2031 h2056 eq h2067 u2055 eq x2063 h2056 eq h2062 x2054 eq x2061 x2068 eq    |
+|                                |            |                                 | x2061 h2060 eq h2072 x2059 eq x2068 h2006 eq h1996 u2005 eq x1995 h2017 eq h1996 |
+|                                |            |                                 | i2016 eq x1995 h2060 eq h1996 u2058 eq x1995 > ]                                 |
++--------------------------------+------------+---------------------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------+
+|                                             GENERATED ENGLISH TEXT                                            |
++------+--------------------------------------------------------------------------------------------------------+
+| #    | Generated Text                                                                                         |
++------+--------------------------------------------------------------------------------------------------------+
+| 1    | An immovable machine south of an outside of an atomic city's back opening that is turned off           |
+| 2    | An immovable machine south of an outside of an atomic city's back opening that is turned off.          |
+| 3    | An immovable machine south of an outside of an atomic city's back opening which is turned off          |
+| 4    | An immovable machine south of an outside of an atomic city's back opening which is turned off.         |
+| 5    | An immovable machine south of an outside of an atomic city's back opening who is turned off            |
+| 6    | An immovable machine south of an outside of an atomic city's back opening who is turned off.           |
+| 7    | An immovable machine south of an outside of an atomic city's back opening, which is turned off         |
+| 8    | An immovable machine south of an outside of an atomic city's back opening, which is turned off.        |
+| 9    | An immovable machine south of an outside of an atomic city's back opening, who is turned off           |
+| 10   | An immovable machine south of an outside of an atomic city's back opening, who is turned off.          |
+| 11   | An immovable machine south of an outside of an atomic city's back openings that is turned off          |
+| 12   | An immovable machine south of an outside of an atomic city's back openings that is turned off.         |
+| 13   | An immovable machine south of an outside of an atomic city's back openings which is turned off         |
+| 14   | An immovable machine south of an outside of an atomic city's back openings which is turned off.        |
+| 15   | An immovable machine south of an outside of an atomic city's back openings who is turned off           |
+| 16   | An immovable machine south of an outside of an atomic city's back openings who is turned off.          |
+| 17   | An immovable machine south of an outside of an atomic city's back openings, which is turned off        |
+| 18   | An immovable machine south of an outside of an atomic city's back openings, which is turned off.       |
+| 19   | An immovable machine south of an outside of an atomic city's back openings, who is turned off          |
+| 20   | An immovable machine south of an outside of an atomic city's back openings, who is turned off.         |
+| 21   | An immovable machine south of an outside of atomic cities's back opening that is turned off            |
+| 22   | An immovable machine south of an outside of atomic cities's back opening that is turned off.           |
+| 23   | An immovable machine south of an outside of atomic cities's back opening which is turned off           |
+| 24   | An immovable machine south of an outside of atomic cities's back opening which is turned off.          |
+| 25   | An immovable machine south of an outside of atomic cities's back opening who is turned off             |
+| 26   | An immovable machine south of an outside of atomic cities's back opening who is turned off.            |
+| 27   | An immovable machine south of an outside of atomic cities's back opening, which is turned off          |
+| 28   | An immovable machine south of an outside of atomic cities's back opening, which is turned off.         |
+| 29   | An immovable machine south of an outside of atomic cities's back openings that is turned off           |
+| 30   | An immovable machine south of an outside of atomic cities's back openings that is turned off.          |
+| 31   | An immovable machine south of an outside of atomic cities's back openings which is turned off          |
+| 32   | An immovable machine south of an outside of atomic cities's back openings which is turned off.         |
+| 33   | An immovable machine south of an outside of atomic cities's back openings who is turned off            |
+| 34   | An immovable machine south of an outside of atomic cities's back openings who is turned off.           |
+| 35   | An immovable machine south of an outside of atomic cities's back openings, which is turned off         |
+| 36   | An immovable machine south of an outside of atomic cities's back openings, which is turned off.        |
+| 37   | An immovable machine south of an outside of the atomic cities's back opening that is turned off        |
+| 38   | An immovable machine south of an outside of the atomic cities's back opening that is turned off.       |
+| 39   | An immovable machine south of an outside of the atomic cities's back opening which is turned off       |
+| 40   | An immovable machine south of an outside of the atomic cities's back opening which is turned off.      |
+| 41   | An immovable machine south of an outside of the atomic cities's back opening who is turned off         |
+| 42   | An immovable machine south of an outside of the atomic cities's back opening who is turned off.        |
+| 43   | An immovable machine south of an outside of the atomic cities's back opening, which is turned off      |
+| 44   | An immovable machine south of an outside of the atomic cities's back opening, which is turned off.     |
+| 45   | An immovable machine south of an outside of the atomic cities's back openings that is turned off       |
+| 46   | An immovable machine south of an outside of the atomic cities's back openings that is turned off.      |
+| 47   | An immovable machine south of an outside of the atomic cities's back openings which is turned off      |
+| 48   | An immovable machine south of an outside of the atomic cities's back openings which is turned off.     |
+| 49   | An immovable machine south of an outside of the atomic cities's back openings who is turned off        |
+| 50   | An immovable machine south of an outside of the atomic cities's back openings who is turned off.       |
+| 51   | An immovable machine south of an outside of the atomic cities's back openings, which is turned off     |
+| 52   | An immovable machine south of an outside of the atomic cities's back openings, which is turned off.    |
+| 53   | An immovable machine south of an outside of the atomic city's back opening that is turned off          |
+| 54   | An immovable machine south of an outside of the atomic city's back opening that is turned off.         |
+| 55   | An immovable machine south of an outside of the atomic city's back opening which is turned off         |
+| 56   | An immovable machine south of an outside of the atomic city's back opening which is turned off.        |
+| 57   | An immovable machine south of an outside of the atomic city's back opening who is turned off           |
+| 58   | An immovable machine south of an outside of the atomic city's back opening who is turned off.          |
+| 59   | An immovable machine south of an outside of the atomic city's back opening, which is turned off        |
+| 60   | An immovable machine south of an outside of the atomic city's back opening, which is turned off.       |
+| 61   | An immovable machine south of an outside of the atomic city's back openings that is turned off         |
+| 62   | An immovable machine south of an outside of the atomic city's back openings that is turned off.        |
+| 63   | An immovable machine south of an outside of the atomic city's back openings which is turned off        |
+| 64   | An immovable machine south of an outside of the atomic city's back openings which is turned off.       |
+| 65   | An immovable machine south of an outside of the atomic city's back openings who is turned off          |
+| 66   | An immovable machine south of an outside of the atomic city's back openings who is turned off.         |
+| 67   | An immovable machine south of an outside of the atomic city's back openings, which is turned off       |
+| 68   | An immovable machine south of an outside of the atomic city's back openings, which is turned off.      |
+| 69   | An immovable machine south of the outside of an atomic city's back opening that is turned off          |
+| 70   | An immovable machine south of the outside of an atomic city's back opening that is turned off.         |
+| 71   | An immovable machine south of the outside of an atomic city's back opening which is turned off         |
+| 72   | An immovable machine south of the outside of an atomic city's back opening which is turned off.        |
+| 73   | An immovable machine south of the outside of an atomic city's back opening who is turned off           |
+| 74   | An immovable machine south of the outside of an atomic city's back opening who is turned off.          |
+| 75   | An immovable machine south of the outside of an atomic city's back openings that is turned off         |
+| 76   | An immovable machine south of the outside of an atomic city's back openings that is turned off.        |
+| 77   | An immovable machine south of the outside of an atomic city's back openings which is turned off        |
+| 78   | An immovable machine south of the outside of an atomic city's back openings which is turned off.       |
+| 79   | An immovable machine south of the outside of an atomic city's back openings who is turned off          |
+| 80   | An immovable machine south of the outside of an atomic city's back openings who is turned off.         |
+| 81   | An immovable machine south of the outside of atomic cities's back opening that is turned off           |
+| 82   | An immovable machine south of the outside of atomic cities's back opening that is turned off.          |
+| 83   | An immovable machine south of the outside of atomic cities's back opening which is turned off          |
+| 84   | An immovable machine south of the outside of atomic cities's back opening which is turned off.         |
+| 85   | An immovable machine south of the outside of atomic cities's back opening who is turned off            |
+| 86   | An immovable machine south of the outside of atomic cities's back opening who is turned off.           |
+| 87   | An immovable machine south of the outside of atomic cities's back openings that is turned off          |
+| 88   | An immovable machine south of the outside of atomic cities's back openings that is turned off.         |
+| 89   | An immovable machine south of the outside of atomic cities's back openings which is turned off         |
+| 90   | An immovable machine south of the outside of atomic cities's back openings which is turned off.        |
+| 91   | An immovable machine south of the outside of atomic cities's back openings who is turned off           |
+| 92   | An immovable machine south of the outside of atomic cities's back openings who is turned off.          |
+| 93   | An immovable machine south of the outside of the atomic cities's back opening that is turned off       |
+| 94   | An immovable machine south of the outside of the atomic cities's back opening that is turned off.      |
+| 95   | An immovable machine south of the outside of the atomic cities's back opening which is turned off      |
+| 96   | An immovable machine south of the outside of the atomic cities's back opening which is turned off.     |
+| 97   | An immovable machine south of the outside of the atomic cities's back opening who is turned off        |
+| 98   | An immovable machine south of the outside of the atomic cities's back opening who is turned off.       |
+| 99   | An immovable machine south of the outside of the atomic cities's back openings that is turned off      |
+| 100  | An immovable machine south of the outside of the atomic cities's back openings that is turned off.     |
+| 101  | An immovable machine south of the outside of the atomic cities's back openings which is turned off     |
+| 102  | An immovable machine south of the outside of the atomic cities's back openings which is turned off.    |
+| 103  | An immovable machine south of the outside of the atomic cities's back openings who is turned off       |
+| 104  | An immovable machine south of the outside of the atomic cities's back openings who is turned off.      |
+| 105  | An immovable machine south of the outside of the atomic city's back opening that is turned off         |
+| 106  | An immovable machine south of the outside of the atomic city's back opening that is turned off.        |
+| 107  | An immovable machine south of the outside of the atomic city's back opening which is turned off        |
+| 108  | An immovable machine south of the outside of the atomic city's back opening which is turned off.       |
+| 109  | An immovable machine south of the outside of the atomic city's back opening who is turned off          |
+| 110  | An immovable machine south of the outside of the atomic city's back opening who is turned off.         |
+| 111  | An immovable machine south of the outside of the atomic city's back openings that is turned off        |
+| 112  | An immovable machine south of the outside of the atomic city's back openings that is turned off.       |
+| 113  | An immovable machine south of the outside of the atomic city's back openings which is turned off       |
+| 114  | An immovable machine south of the outside of the atomic city's back openings which is turned off.      |
+| 115  | An immovable machine south of the outside of the atomic city's back openings who is turned off         |
+| 116  | An immovable machine south of the outside of the atomic city's back openings who is turned off.        |
+| 117  | An immovable machine south of the outsides of an atomic city' back opening that is turned off          |
+| 118  | An immovable machine south of the outsides of an atomic city' back opening that is turned off.         |
+| 119  | An immovable machine south of the outsides of an atomic city' back opening which is turned off         |
+| 120  | An immovable machine south of the outsides of an atomic city' back opening which is turned off.        |
+| 121  | An immovable machine south of the outsides of an atomic city' back opening who is turned off           |
+| 122  | An immovable machine south of the outsides of an atomic city' back opening who is turned off.          |
+| 123  | An immovable machine south of the outsides of an atomic city' back openings that is turned off         |
+| 124  | An immovable machine south of the outsides of an atomic city' back openings that is turned off.        |
+| 125  | An immovable machine south of the outsides of an atomic city' back openings which is turned off        |
+| 126  | An immovable machine south of the outsides of an atomic city' back openings which is turned off.       |
+| 127  | An immovable machine south of the outsides of an atomic city' back openings who is turned off          |
+| 128  | An immovable machine south of the outsides of an atomic city' back openings who is turned off.         |
+| 129  | An immovable machine south of the outsides of atomic cities' back opening that is turned off           |
+| 130  | An immovable machine south of the outsides of atomic cities' back opening that is turned off.          |
+| 131  | An immovable machine south of the outsides of atomic cities' back opening which is turned off          |
+| 132  | An immovable machine south of the outsides of atomic cities' back opening which is turned off.         |
+| 133  | An immovable machine south of the outsides of atomic cities' back opening who is turned off            |
+| 134  | An immovable machine south of the outsides of atomic cities' back opening who is turned off.           |
+| 135  | An immovable machine south of the outsides of atomic cities' back openings that is turned off          |
+| 136  | An immovable machine south of the outsides of atomic cities' back openings that is turned off.         |
+| 137  | An immovable machine south of the outsides of atomic cities' back openings which is turned off         |
+| 138  | An immovable machine south of the outsides of atomic cities' back openings which is turned off.        |
+| 139  | An immovable machine south of the outsides of atomic cities' back openings who is turned off           |
+| 140  | An immovable machine south of the outsides of atomic cities' back openings who is turned off.          |
+| 141  | An immovable machine south of the outsides of the atomic cities' back opening that is turned off       |
+| 142  | An immovable machine south of the outsides of the atomic cities' back opening that is turned off.      |
+| 143  | An immovable machine south of the outsides of the atomic cities' back opening which is turned off      |
+| 144  | An immovable machine south of the outsides of the atomic cities' back opening which is turned off.     |
+| 145  | An immovable machine south of the outsides of the atomic cities' back opening who is turned off        |
+| 146  | An immovable machine south of the outsides of the atomic cities' back opening who is turned off.       |
+| 147  | An immovable machine south of the outsides of the atomic cities' back openings that is turned off      |
+| 148  | An immovable machine south of the outsides of the atomic cities' back openings that is turned off.     |
+| 149  | An immovable machine south of the outsides of the atomic cities' back openings which is turned off     |
+| 150  | An immovable machine south of the outsides of the atomic cities' back openings which is turned off.    |
+| 151  | An immovable machine south of the outsides of the atomic cities' back openings who is turned off       |
+| 152  | An immovable machine south of the outsides of the atomic cities' back openings who is turned off.      |
+| 153  | An immovable machine south of the outsides of the atomic city' back opening that is turned off         |
+| 154  | An immovable machine south of the outsides of the atomic city' back opening that is turned off.        |
+| 155  | An immovable machine south of the outsides of the atomic city' back opening which is turned off        |
+| 156  | An immovable machine south of the outsides of the atomic city' back opening which is turned off.       |
+| 157  | An immovable machine south of the outsides of the atomic city' back opening who is turned off          |
+| 158  | An immovable machine south of the outsides of the atomic city' back opening who is turned off.         |
+| 159  | An immovable machine south of the outsides of the atomic city' back openings that is turned off        |
+| 160  | An immovable machine south of the outsides of the atomic city' back openings that is turned off.       |
+| 161  | An immovable machine south of the outsides of the atomic city' back openings which is turned off       |
+| 162  | An immovable machine south of the outsides of the atomic city' back openings which is turned off.      |
+| 163  | An immovable machine south of the outsides of the atomic city' back openings who is turned off         |
+| 164  | An immovable machine south of the outsides of the atomic city' back openings who is turned off.        |
+| 165  | An immovable machine that south of an outside of an atomic city's back opening is turned off           |
+| 166  | An immovable machine that south of an outside of an atomic city's back opening is turned off.          |
+| 167  | An immovable machine that south of an outside of an atomic city's back openings is turned off          |
+| 168  | An immovable machine that south of an outside of an atomic city's back openings is turned off.         |
+| 169  | An immovable machine that south of an outside of atomic cities's back opening is turned off            |
+| 170  | An immovable machine that south of an outside of atomic cities's back opening is turned off.           |
+| 171  | An immovable machine that south of an outside of atomic cities's back openings is turned off           |
+| 172  | An immovable machine that south of an outside of atomic cities's back openings is turned off.          |
+| 173  | An immovable machine that south of an outside of the atomic cities's back opening is turned off        |
+| 174  | An immovable machine that south of an outside of the atomic cities's back opening is turned off.       |
+| 175  | An immovable machine that south of an outside of the atomic cities's back openings is turned off       |
+| 176  | An immovable machine that south of an outside of the atomic cities's back openings is turned off.      |
+| 177  | An immovable machine that south of an outside of the atomic city's back opening is turned off          |
+| 178  | An immovable machine that south of an outside of the atomic city's back opening is turned off.         |
+| 179  | An immovable machine that south of an outside of the atomic city's back openings is turned off         |
+| 180  | An immovable machine that south of an outside of the atomic city's back openings is turned off.        |
+| 181  | An immovable machine that south of the outside of an atomic city's back opening is turned off          |
+| 182  | An immovable machine that south of the outside of an atomic city's back opening is turned off.         |
+| 183  | An immovable machine that south of the outside of an atomic city's back openings is turned off         |
+| 184  | An immovable machine that south of the outside of an atomic city's back openings is turned off.        |
+| 185  | An immovable machine that south of the outside of atomic cities's back opening is turned off           |
+| 186  | An immovable machine that south of the outside of atomic cities's back opening is turned off.          |
+| 187  | An immovable machine that south of the outside of atomic cities's back openings is turned off          |
+| 188  | An immovable machine that south of the outside of atomic cities's back openings is turned off.         |
+| 189  | An immovable machine that south of the outside of the atomic cities's back opening is turned off       |
+| 190  | An immovable machine that south of the outside of the atomic cities's back opening is turned off.      |
+| 191  | An immovable machine that south of the outside of the atomic cities's back openings is turned off      |
+| 192  | An immovable machine that south of the outside of the atomic cities's back openings is turned off.     |
+| 193  | An immovable machine that south of the outside of the atomic city's back opening is turned off         |
+| 194  | An immovable machine that south of the outside of the atomic city's back opening is turned off.        |
+| 195  | An immovable machine that south of the outside of the atomic city's back openings is turned off        |
+| 196  | An immovable machine that south of the outside of the atomic city's back openings is turned off.       |
+| 197  | An immovable machine that south of the outsides of an atomic city' back opening is turned off          |
+| 198  | An immovable machine that south of the outsides of an atomic city' back opening is turned off.         |
+| 199  | An immovable machine that south of the outsides of an atomic city' back openings is turned off         |
+| 200  | An immovable machine that south of the outsides of an atomic city' back openings is turned off.        |
+| 201  | An immovable machine that south of the outsides of atomic cities' back opening is turned off           |
+| 202  | An immovable machine that south of the outsides of atomic cities' back opening is turned off.          |
+| 203  | An immovable machine that south of the outsides of atomic cities' back openings is turned off          |
+| 204  | An immovable machine that south of the outsides of atomic cities' back openings is turned off.         |
+| 205  | An immovable machine that south of the outsides of the atomic cities' back opening is turned off       |
+| 206  | An immovable machine that south of the outsides of the atomic cities' back opening is turned off.      |
+| 207  | An immovable machine that south of the outsides of the atomic cities' back openings is turned off      |
+| 208  | An immovable machine that south of the outsides of the atomic cities' back openings is turned off.     |
+| 209  | An immovable machine that south of the outsides of the atomic city' back opening is turned off         |
+| 210  | An immovable machine that south of the outsides of the atomic city' back opening is turned off.        |
+| 211  | An immovable machine that south of the outsides of the atomic city' back openings is turned off        |
+| 212  | An immovable machine that south of the outsides of the atomic city' back openings is turned off.       |
+| 213  | An immovable machine that, south of an outside of an atomic city's back opening is turned off          |
+| 214  | An immovable machine that, south of an outside of an atomic city's back opening is turned off.         |
+| 215  | An immovable machine that, south of an outside of an atomic city's back openings is turned off         |
+| 216  | An immovable machine that, south of an outside of an atomic city's back openings is turned off.        |
+| 217  | An immovable machine that, south of an outside of atomic cities's back openings is turned off.         |
+| 218  | An immovable machine that, south of an outside of the atomic cities's back opening is turned off       |
+| 219  | An immovable machine that, south of an outside of the atomic cities's back opening is turned off.      |
+| 220  | An immovable machine that, south of an outside of the atomic cities's back openings is turned off      |
+| 221  | An immovable machine that, south of an outside of the atomic cities's back openings is turned off.     |
+| 222  | An immovable machine that, south of an outside of the atomic city's back opening is turned off.        |
+| 223  | An immovable machine that, south of an outside of the atomic city's back openings is turned off        |
+| 224  | An immovable machine that, south of an outside of the atomic city's back openings is turned off.       |
+| 225  | An immovable machine which south of an outside of an atomic city's back opening is turned off          |
+| 226  | An immovable machine which south of an outside of an atomic city's back opening is turned off.         |
+| 227  | An immovable machine which south of an outside of an atomic city's back openings is turned off         |
+| 228  | An immovable machine which south of an outside of an atomic city's back openings is turned off.        |
+| 229  | An immovable machine which south of an outside of atomic cities's back opening is turned off           |
+| 230  | An immovable machine which south of an outside of atomic cities's back opening is turned off.          |
+| 231  | An immovable machine which south of an outside of atomic cities's back openings is turned off          |
+| 232  | An immovable machine which south of an outside of atomic cities's back openings is turned off.         |
+| 233  | An immovable machine which south of an outside of the atomic cities's back opening is turned off       |
+| 234  | An immovable machine which south of an outside of the atomic cities's back opening is turned off.      |
+| 235  | An immovable machine which south of an outside of the atomic cities's back openings is turned off      |
+| 236  | An immovable machine which south of an outside of the atomic cities's back openings is turned off.     |
+| 237  | An immovable machine which south of an outside of the atomic city's back opening is turned off         |
+| 238  | An immovable machine which south of an outside of the atomic city's back opening is turned off.        |
+| 239  | An immovable machine which south of an outside of the atomic city's back openings is turned off        |
+| 240  | An immovable machine which south of an outside of the atomic city's back openings is turned off.       |
+| 241  | An immovable machine which south of the outside of an atomic city's back opening is turned off         |
+| 242  | An immovable machine which south of the outside of an atomic city's back opening is turned off.        |
+| 243  | An immovable machine which south of the outside of an atomic city's back openings is turned off        |
+| 244  | An immovable machine which south of the outside of an atomic city's back openings is turned off.       |
+| 245  | An immovable machine which south of the outsides of an atomic city' back openings is turned off.       |
+| 246  | An immovable machine which, south of an outside of an atomic city's back opening is turned off         |
+| 247  | An immovable machine which, south of an outside of an atomic city's back opening is turned off.        |
+| 248  | An immovable machine which, south of an outside of an atomic city's back openings is turned off        |
+| 249  | An immovable machine which, south of an outside of an atomic city's back openings is turned off.       |
+| 250  | An immovable machine which, south of an outside of atomic cities's back openings is turned off.        |
+| 251  | An immovable machine which, south of an outside of the atomic cities's back opening is turned off      |
+| 252  | An immovable machine which, south of an outside of the atomic cities's back opening is turned off.     |
+| 253  | An immovable machine which, south of an outside of the atomic cities's back openings is turned off     |
+| 254  | An immovable machine which, south of an outside of the atomic cities's back openings is turned off.    |
+| 255  | An immovable machine which, south of an outside of the atomic city's back opening is turned off.       |
+| 256  | An immovable machine which, south of an outside of the atomic city's back openings is turned off       |
+| 257  | An immovable machine which, south of an outside of the atomic city's back openings is turned off.      |
+| 258  | An immovable machine who south of an outside of an atomic city's back opening is turned off            |
+| 259  | An immovable machine who south of an outside of an atomic city's back opening is turned off.           |
+| 260  | An immovable machine who south of an outside of an atomic city's back openings is turned off           |
+| 261  | An immovable machine who south of an outside of an atomic city's back openings is turned off.          |
+| 262  | An immovable machine who south of an outside of atomic cities's back opening is turned off             |
+| 263  | An immovable machine who south of an outside of atomic cities's back opening is turned off.            |
+| 264  | An immovable machine who south of an outside of atomic cities's back openings is turned off            |
+| 265  | An immovable machine who south of an outside of atomic cities's back openings is turned off.           |
+| 266  | An immovable machine who south of an outside of the atomic cities's back opening is turned off         |
+| 267  | An immovable machine who south of an outside of the atomic cities's back opening is turned off.        |
+| 268  | An immovable machine who south of an outside of the atomic cities's back openings is turned off        |
+| 269  | An immovable machine who south of an outside of the atomic cities's back openings is turned off.       |
+| 270  | An immovable machine who south of an outside of the atomic city's back opening is turned off           |
+| 271  | An immovable machine who south of an outside of the atomic city's back opening is turned off.          |
+| 272  | An immovable machine who south of an outside of the atomic city's back openings is turned off          |
+| 273  | An immovable machine who south of an outside of the atomic city's back openings is turned off.         |
+| 274  | An immovable machine who south of the outside of an atomic city's back opening is turned off           |
+| 275  | An immovable machine who south of the outside of an atomic city's back opening is turned off.          |
+| 276  | An immovable machine who south of the outside of an atomic city's back openings is turned off          |
+| 277  | An immovable machine who south of the outside of an atomic city's back openings is turned off.         |
+| 278  | An immovable machine who south of the outsides of an atomic city' back openings is turned off          |
+| 279  | An immovable machine who south of the outsides of an atomic city' back openings is turned off.         |
+| 280  | An immovable machine who, south of an outside of an atomic city's back opening is turned off           |
+| 281  | An immovable machine who, south of an outside of an atomic city's back opening is turned off.          |
+| 282  | An immovable machine who, south of an outside of an atomic city's back openings is turned off          |
+| 283  | An immovable machine who, south of an outside of an atomic city's back openings is turned off.         |
+| 284  | An immovable machine who, south of an outside of atomic cities's back openings is turned off.          |
+| 285  | An immovable machine who, south of an outside of the atomic cities's back opening is turned off        |
+| 286  | An immovable machine who, south of an outside of the atomic cities's back opening is turned off.       |
+| 287  | An immovable machine who, south of an outside of the atomic cities's back openings is turned off       |
+| 288  | An immovable machine who, south of an outside of the atomic cities's back openings is turned off.      |
+| 289  | An immovable machine who, south of an outside of the atomic city's back opening is turned off.         |
+| 290  | An immovable machine who, south of an outside of the atomic city's back openings is turned off         |
+| 291  | An immovable machine who, south of an outside of the atomic city's back openings is turned off.        |
+| 292  | An immovable machine, that south of an outside of an atomic city's back opening is turned off.         |
+| 293  | An immovable machine, that south of an outside of an atomic city's back openings is turned off.        |
+| 294  | Immovable machine south of an outside of an atomic city's back opening that is turned off              |
+| 295  | Immovable machine south of an outside of an atomic city's back opening that is turned off.             |
+| 296  | Immovable machine south of an outside of an atomic city's back opening which is turned off             |
+| 297  | Immovable machine south of an outside of an atomic city's back opening which is turned off.            |
+| 298  | Immovable machine south of an outside of an atomic city's back opening who is turned off               |
+| 299  | Immovable machine south of an outside of an atomic city's back opening who is turned off.              |
+| 300  | Immovable machine south of an outside of an atomic city's back openings that is turned off             |
+| 301  | Immovable machine south of an outside of an atomic city's back openings that is turned off.            |
+| 302  | Immovable machine south of an outside of an atomic city's back openings which is turned off            |
+| 303  | Immovable machine south of an outside of an atomic city's back openings which is turned off.           |
+| 304  | Immovable machine south of an outside of an atomic city's back openings who is turned off              |
+| 305  | Immovable machine south of an outside of an atomic city's back openings who is turned off.             |
+| 306  | Immovable machine south of an outside of atomic cities's back opening that is turned off.              |
+| 307  | Immovable machine south of an outside of atomic cities's back opening which is turned off.             |
+| 308  | Immovable machine south of an outside of atomic cities's back opening who is turned off                |
+| 309  | Immovable machine south of an outside of atomic cities's back opening who is turned off.               |
+| 310  | Immovable machine south of an outside of atomic cities's back openings that is turned off              |
+| 311  | Immovable machine south of an outside of atomic cities's back openings that is turned off.             |
+| 312  | Immovable machine south of an outside of atomic cities's back openings which is turned off             |
+| 313  | Immovable machine south of an outside of atomic cities's back openings which is turned off.            |
+| 314  | Immovable machine south of an outside of atomic cities's back openings who is turned off               |
+| 315  | Immovable machine south of an outside of atomic cities's back openings who is turned off.              |
+| 316  | Immovable machine south of an outside of the atomic cities's back opening that is turned off           |
+| 317  | Immovable machine south of an outside of the atomic cities's back opening that is turned off.          |
+| 318  | Immovable machine south of an outside of the atomic cities's back opening which is turned off          |
+| 319  | Immovable machine south of an outside of the atomic cities's back opening which is turned off.         |
+| 320  | Immovable machine south of an outside of the atomic cities's back opening who is turned off            |
+| 321  | Immovable machine south of an outside of the atomic cities's back opening who is turned off.           |
+| 322  | Immovable machine south of an outside of the atomic cities's back openings that is turned off          |
+| 323  | Immovable machine south of an outside of the atomic cities's back openings that is turned off.         |
+| 324  | Immovable machine south of an outside of the atomic cities's back openings which is turned off         |
+| 325  | Immovable machine south of an outside of the atomic cities's back openings which is turned off.        |
+| 326  | Immovable machine south of an outside of the atomic cities's back openings who is turned off           |
+| 327  | Immovable machine south of an outside of the atomic cities's back openings who is turned off.          |
+| 328  | Immovable machine south of an outside of the atomic city's back opening that is turned off             |
+| 329  | Immovable machine south of an outside of the atomic city's back opening that is turned off.            |
+| 330  | Immovable machine south of an outside of the atomic city's back opening which is turned off            |
+| 331  | Immovable machine south of an outside of the atomic city's back opening which is turned off.           |
+| 332  | Immovable machine south of an outside of the atomic city's back opening who is turned off              |
+| 333  | Immovable machine south of an outside of the atomic city's back opening who is turned off.             |
+| 334  | Immovable machine south of an outside of the atomic city's back openings that is turned off            |
+| 335  | Immovable machine south of an outside of the atomic city's back openings that is turned off.           |
+| 336  | Immovable machine south of an outside of the atomic city's back openings which is turned off           |
+| 337  | Immovable machine south of an outside of the atomic city's back openings which is turned off.          |
+| 338  | Immovable machine south of an outside of the atomic city's back openings who is turned off             |
+| 339  | Immovable machine south of an outside of the atomic city's back openings who is turned off.            |
+| 340  | Immovable machine that south of an outside of an atomic city's back opening is turned off              |
+| 341  | Immovable machine that south of an outside of an atomic city's back opening is turned off.             |
+| 342  | Immovable machine that south of an outside of an atomic city's back openings is turned off             |
+| 343  | Immovable machine that south of an outside of an atomic city's back openings is turned off.            |
+| 344  | Immovable machine that south of an outside of atomic cities's back opening is turned off               |
+| 345  | Immovable machine that south of an outside of atomic cities's back opening is turned off.              |
+| 346  | Immovable machine that south of an outside of atomic cities's back openings is turned off              |
+| 347  | Immovable machine that south of an outside of atomic cities's back openings is turned off.             |
+| 348  | Immovable machine that south of an outside of the atomic cities's back opening is turned off           |
+| 349  | Immovable machine that south of an outside of the atomic cities's back opening is turned off.          |
+| 350  | Immovable machine that south of an outside of the atomic cities's back openings is turned off          |
+| 351  | Immovable machine that south of an outside of the atomic cities's back openings is turned off.         |
+| 352  | Immovable machine that south of an outside of the atomic city's back opening is turned off             |
+| 353  | Immovable machine that south of an outside of the atomic city's back opening is turned off.            |
+| 354  | Immovable machine that south of an outside of the atomic city's back openings is turned off            |
+| 355  | Immovable machine that south of an outside of the atomic city's back openings is turned off.           |
+| 356  | Immovable machine that south of the outside of an atomic city's back opening is turned off             |
+| 357  | Immovable machine that south of the outside of an atomic city's back opening is turned off.            |
+| 358  | Immovable machine that south of the outside of an atomic city's back openings is turned off            |
+| 359  | Immovable machine that south of the outside of an atomic city's back openings is turned off.           |
+| 360  | Immovable machine that south of the outside of atomic cities's back openings is turned off.            |
+| 361  | Immovable machine that south of the outside of the atomic cities's back opening is turned off          |
+| 362  | Immovable machine that south of the outside of the atomic cities's back opening is turned off.         |
+| 363  | Immovable machine that south of the outside of the atomic cities's back openings is turned off         |
+| 364  | Immovable machine that south of the outside of the atomic cities's back openings is turned off.        |
+| 365  | Immovable machine that south of the outside of the atomic city's back opening is turned off.           |
+| 366  | Immovable machine that south of the outside of the atomic city's back openings is turned off           |
+| 367  | Immovable machine that south of the outside of the atomic city's back openings is turned off.          |
+| 368  | Immovable machine that south of the outsides of an atomic city' back opening is turned off             |
+| 369  | Immovable machine that south of the outsides of an atomic city' back opening is turned off.            |
+| 370  | Immovable machine that south of the outsides of an atomic city' back openings is turned off            |
+| 371  | Immovable machine that south of the outsides of an atomic city' back openings is turned off.           |
+| 372  | Immovable machine that south of the outsides of the atomic cities' back openings is turned off.        |
+| 373  | Immovable machine which south of an outside of an atomic city's back opening is turned off             |
+| 374  | Immovable machine which south of an outside of an atomic city's back opening is turned off.            |
+| 375  | Immovable machine which south of an outside of an atomic city's back openings is turned off            |
+| 376  | Immovable machine which south of an outside of an atomic city's back openings is turned off.           |
+| 377  | Immovable machine which south of an outside of atomic cities's back opening is turned off              |
+| 378  | Immovable machine which south of an outside of atomic cities's back opening is turned off.             |
+| 379  | Immovable machine which south of an outside of atomic cities's back openings is turned off             |
+| 380  | Immovable machine which south of an outside of atomic cities's back openings is turned off.            |
+| 381  | Immovable machine which south of an outside of the atomic cities's back opening is turned off          |
+| 382  | Immovable machine which south of an outside of the atomic cities's back opening is turned off.         |
+| 383  | Immovable machine which south of an outside of the atomic cities's back openings is turned off         |
+| 384  | Immovable machine which south of an outside of the atomic cities's back openings is turned off.        |
+| 385  | Immovable machine which south of an outside of the atomic city's back opening is turned off            |
+| 386  | Immovable machine which south of an outside of the atomic city's back opening is turned off.           |
+| 387  | Immovable machine which south of an outside of the atomic city's back openings is turned off           |
+| 388  | Immovable machine which south of an outside of the atomic city's back openings is turned off.          |
+| 389  | Immovable machine who south of an outside of an atomic city's back opening is turned off               |
+| 390  | Immovable machine who south of an outside of an atomic city's back opening is turned off.              |
+| 391  | Immovable machine who south of an outside of an atomic city's back openings is turned off              |
+| 392  | Immovable machine who south of an outside of an atomic city's back openings is turned off.             |
+| 393  | Immovable machine who south of an outside of atomic cities's back opening is turned off                |
+| 394  | Immovable machine who south of an outside of atomic cities's back opening is turned off.               |
+| 395  | Immovable machine who south of an outside of atomic cities's back openings is turned off               |
+| 396  | Immovable machine who south of an outside of atomic cities's back openings is turned off.              |
+| 397  | Immovable machine who south of an outside of the atomic cities's back opening is turned off            |
+| 398  | Immovable machine who south of an outside of the atomic cities's back opening is turned off.           |
+| 399  | Immovable machine who south of an outside of the atomic cities's back openings is turned off           |
+| 400  | Immovable machine who south of an outside of the atomic cities's back openings is turned off.          |
+| 401  | Immovable machine who south of an outside of the atomic city's back opening is turned off              |
+| 402  | Immovable machine who south of an outside of the atomic city's back opening is turned off.             |
+| 403  | Immovable machine who south of an outside of the atomic city's back openings is turned off             |
+| 404  | Immovable machine who south of an outside of the atomic city's back openings is turned off.            |
+| 405  | Immovable machines south of an outside of an atomic city's back opening that are turned off            |
+| 406  | Immovable machines south of an outside of an atomic city's back opening that are turned off.           |
+| 407  | Immovable machines south of an outside of an atomic city's back opening which are turned off           |
+| 408  | Immovable machines south of an outside of an atomic city's back opening which are turned off.          |
+| 409  | Immovable machines south of an outside of an atomic city's back opening who are turned off             |
+| 410  | Immovable machines south of an outside of an atomic city's back opening who are turned off.            |
+| 411  | Immovable machines south of an outside of an atomic city's back opening, who are turned off            |
+| 412  | Immovable machines south of an outside of an atomic city's back opening, who are turned off.           |
+| 413  | Immovable machines south of an outside of an atomic city's back openings that are turned off           |
+| 414  | Immovable machines south of an outside of an atomic city's back openings that are turned off.          |
+| 415  | Immovable machines south of an outside of an atomic city's back openings which are turned off          |
+| 416  | Immovable machines south of an outside of an atomic city's back openings which are turned off.         |
+| 417  | Immovable machines south of an outside of an atomic city's back openings who are turned off            |
+| 418  | Immovable machines south of an outside of an atomic city's back openings who are turned off.           |
+| 419  | Immovable machines south of an outside of an atomic city's back openings, who are turned off           |
+| 420  | Immovable machines south of an outside of an atomic city's back openings, who are turned off.          |
+| 421  | Immovable machines south of an outside of atomic cities's back opening that are turned off             |
+| 422  | Immovable machines south of an outside of atomic cities's back opening that are turned off.            |
+| 423  | Immovable machines south of an outside of atomic cities's back opening which are turned off            |
+| 424  | Immovable machines south of an outside of atomic cities's back opening which are turned off.           |
+| 425  | Immovable machines south of an outside of atomic cities's back opening who are turned off              |
+| 426  | Immovable machines south of an outside of atomic cities's back opening who are turned off.             |
+| 427  | Immovable machines south of an outside of atomic cities's back openings that are turned off            |
+| 428  | Immovable machines south of an outside of atomic cities's back openings that are turned off.           |
+| 429  | Immovable machines south of an outside of atomic cities's back openings which are turned off           |
+| 430  | Immovable machines south of an outside of atomic cities's back openings which are turned off.          |
+| 431  | Immovable machines south of an outside of atomic cities's back openings who are turned off             |
+| 432  | Immovable machines south of an outside of atomic cities's back openings who are turned off.            |
+| 433  | Immovable machines south of an outside of the atomic cities's back opening that are turned off         |
+| 434  | Immovable machines south of an outside of the atomic cities's back opening that are turned off.        |
+| 435  | Immovable machines south of an outside of the atomic cities's back opening which are turned off        |
+| 436  | Immovable machines south of an outside of the atomic cities's back opening which are turned off.       |
+| 437  | Immovable machines south of an outside of the atomic cities's back opening who are turned off          |
+| 438  | Immovable machines south of an outside of the atomic cities's back opening who are turned off.         |
+| 439  | Immovable machines south of an outside of the atomic cities's back opening, who are turned off.        |
+| 440  | Immovable machines south of an outside of the atomic cities's back openings that are turned off        |
+| 441  | Immovable machines south of an outside of the atomic cities's back openings that are turned off.       |
+| 442  | Immovable machines south of an outside of the atomic cities's back openings which are turned off       |
+| 443  | Immovable machines south of an outside of the atomic cities's back openings which are turned off.      |
+| 444  | Immovable machines south of an outside of the atomic cities's back openings who are turned off         |
+| 445  | Immovable machines south of an outside of the atomic cities's back openings who are turned off.        |
+| 446  | Immovable machines south of an outside of the atomic cities's back openings, who are turned off.       |
+| 447  | Immovable machines south of an outside of the atomic city's back opening that are turned off           |
+| 448  | Immovable machines south of an outside of the atomic city's back opening that are turned off.          |
+| 449  | Immovable machines south of an outside of the atomic city's back opening which are turned off          |
+| 450  | Immovable machines south of an outside of the atomic city's back opening which are turned off.         |
+| 451  | Immovable machines south of an outside of the atomic city's back opening who are turned off            |
+| 452  | Immovable machines south of an outside of the atomic city's back opening who are turned off.           |
+| 453  | Immovable machines south of an outside of the atomic city's back openings that are turned off          |
+| 454  | Immovable machines south of an outside of the atomic city's back openings that are turned off.         |
+| 455  | Immovable machines south of an outside of the atomic city's back openings which are turned off         |
+| 456  | Immovable machines south of an outside of the atomic city's back openings which are turned off.        |
+| 457  | Immovable machines south of an outside of the atomic city's back openings who are turned off           |
+| 458  | Immovable machines south of an outside of the atomic city's back openings who are turned off.          |
+| 459  | Immovable machines south of the outside of an atomic city's back opening which are turned off          |
+| 460  | Immovable machines south of the outside of an atomic city's back opening which are turned off.         |
+| 461  | Immovable machines south of the outside of an atomic city's back opening who are turned off.           |
+| 462  | Immovable machines south of the outside of an atomic city's back openings which are turned off         |
+| 463  | Immovable machines south of the outside of an atomic city's back openings which are turned off.        |
+| 464  | Immovable machines south of the outside of an atomic city's back openings who are turned off           |
+| 465  | Immovable machines south of the outside of an atomic city's back openings who are turned off.          |
+| 466  | Immovable machines south of the outsides of an atomic city' back openings which are turned off.        |
+| 467  | Immovable machines south of the outsides of an atomic city' back openings who are turned off.          |
+| 468  | Immovable machines that are turned off south of an outside of an atomic city's back opening            |
+| 469  | Immovable machines that are turned off south of an outside of an atomic city's back opening.           |
+| 470  | Immovable machines that are turned off south of an outside of an atomic city's back openings           |
+| 471  | Immovable machines that are turned off south of an outside of an atomic city's back openings.          |
+| 472  | Immovable machines that are turned off south of an outside of atomic cities's back opening             |
+| 473  | Immovable machines that are turned off south of an outside of atomic cities's back opening.            |
+| 474  | Immovable machines that are turned off south of an outside of atomic cities's back openings            |
+| 475  | Immovable machines that are turned off south of an outside of atomic cities's back openings.           |
+| 476  | Immovable machines that are turned off south of an outside of the atomic cities's back opening         |
+| 477  | Immovable machines that are turned off south of an outside of the atomic cities's back opening.        |
+| 478  | Immovable machines that are turned off south of an outside of the atomic cities's back openings        |
+| 479  | Immovable machines that are turned off south of an outside of the atomic cities's back openings.       |
+| 480  | Immovable machines that are turned off south of an outside of the atomic city's back opening           |
+| 481  | Immovable machines that are turned off south of an outside of the atomic city's back opening.          |
+| 482  | Immovable machines that are turned off south of an outside of the atomic city's back openings          |
+| 483  | Immovable machines that are turned off south of an outside of the atomic city's back openings.         |
+| 484  | Immovable machines that are turned off south of the outside of an atomic city's back opening           |
+| 485  | Immovable machines that are turned off south of the outside of an atomic city's back openings          |
+| 486  | Immovable machines that are turned off south of the outside of an atomic city's back openings.         |
+| 487  | Immovable machines that are turned off south of the outside of atomic cities's back opening            |
+| 488  | Immovable machines that are turned off south of the outside of atomic cities's back openings           |
+| 489  | Immovable machines that are turned off south of the outside of atomic cities's back openings.          |
+| 490  | Immovable machines that are turned off south of the outside of the atomic cities's back opening        |
+| 491  | Immovable machines that are turned off south of the outside of the atomic cities's back openings       |
+| 492  | Immovable machines that are turned off south of the outside of the atomic cities's back openings.      |
+| 493  | Immovable machines that are turned off south of the outside of the atomic city's back opening          |
+| 494  | Immovable machines that are turned off south of the outside of the atomic city's back openings         |
+| 495  | Immovable machines that are turned off south of the outside of the atomic city's back openings.        |
+| 496  | Immovable machines that are turned off south of the outsides of an atomic city' back opening           |
+| 497  | Immovable machines that are turned off south of the outsides of an atomic city' back openings          |
+| 498  | Immovable machines that are turned off south of the outsides of an atomic city' back openings.         |
+| 499  | Immovable machines that are turned off south of the outsides of atomic cities' back opening            |
+| 500  | Immovable machines that are turned off south of the outsides of atomic cities' back openings           |
+| 501  | Immovable machines that are turned off south of the outsides of the atomic cities' back opening        |
+| 502  | Immovable machines that are turned off south of the outsides of the atomic cities' back openings       |
+| 503  | Immovable machines that are turned off south of the outsides of the atomic city' back opening          |
+| 504  | Immovable machines that are turned off south of the outsides of the atomic city' back openings         |
+| 505  | Immovable machines that south of an outside of an atomic city's back opening are turned off            |
+| 506  | Immovable machines that south of an outside of an atomic city's back opening are turned off.           |
+| 507  | Immovable machines that south of an outside of an atomic city's back openings are turned off           |
+| 508  | Immovable machines that south of an outside of an atomic city's back openings are turned off.          |
+| 509  | Immovable machines that south of an outside of atomic cities's back openings are turned off.           |
+| 510  | Immovable machines that south of an outside of the atomic cities's back opening are turned off.        |
+| 511  | Immovable machines that south of an outside of the atomic cities's back openings are turned off        |
+| 512  | Immovable machines that south of an outside of the atomic cities's back openings are turned off.       |
+| 513  | Immovable machines that south of an outside of the atomic city's back openings are turned off.         |
+| 514  | Immovable machines which are turned off south of an outside of an atomic city's back opening           |
+| 515  | Immovable machines which are turned off south of an outside of an atomic city's back opening.          |
+| 516  | Immovable machines which are turned off south of an outside of an atomic city's back openings          |
+| 517  | Immovable machines which are turned off south of an outside of an atomic city's back openings.         |
+| 518  | Immovable machines which are turned off south of an outside of atomic cities's back opening            |
+| 519  | Immovable machines which are turned off south of an outside of atomic cities's back opening.           |
+| 520  | Immovable machines which are turned off south of an outside of atomic cities's back openings           |
+| 521  | Immovable machines which are turned off south of an outside of atomic cities's back openings.          |
+| 522  | Immovable machines which are turned off south of an outside of the atomic cities's back opening        |
+| 523  | Immovable machines which are turned off south of an outside of the atomic cities's back opening.       |
+| 524  | Immovable machines which are turned off south of an outside of the atomic cities's back openings       |
+| 525  | Immovable machines which are turned off south of an outside of the atomic cities's back openings.      |
+| 526  | Immovable machines which are turned off south of an outside of the atomic city's back opening          |
+| 527  | Immovable machines which are turned off south of an outside of the atomic city's back opening.         |
+| 528  | Immovable machines which are turned off south of an outside of the atomic city's back openings         |
+| 529  | Immovable machines which are turned off south of an outside of the atomic city's back openings.        |
+| 530  | Immovable machines which are turned off south of outsides of the atomic cities' back opening           |
+| 531  | Immovable machines which are turned off south of outsides of the atomic cities' back openings          |
+| 532  | Immovable machines which are turned off south of outsides of the atomic city' back openings            |
+| 533  | Immovable machines which are turned off south of the outside of an atomic city's back opening          |
+| 534  | Immovable machines which are turned off south of the outside of an atomic city's back opening.         |
+| 535  | Immovable machines which are turned off south of the outside of an atomic city's back openings         |
+| 536  | Immovable machines which are turned off south of the outside of an atomic city's back openings.        |
+| 537  | Immovable machines which are turned off south of the outside of atomic cities's back opening           |
+| 538  | Immovable machines which are turned off south of the outside of atomic cities's back opening.          |
+| 539  | Immovable machines which are turned off south of the outside of atomic cities's back openings          |
+| 540  | Immovable machines which are turned off south of the outside of atomic cities's back openings.         |
+| 541  | Immovable machines which are turned off south of the outside of the atomic cities's back opening       |
+| 542  | Immovable machines which are turned off south of the outside of the atomic cities's back opening.      |
+| 543  | Immovable machines which are turned off south of the outside of the atomic cities's back openings      |
+| 544  | Immovable machines which are turned off south of the outside of the atomic cities's back openings.     |
+| 545  | Immovable machines which are turned off south of the outside of the atomic city's back opening         |
+| 546  | Immovable machines which are turned off south of the outside of the atomic city's back opening.        |
+| 547  | Immovable machines which are turned off south of the outside of the atomic city's back openings        |
+| 548  | Immovable machines which are turned off south of the outside of the atomic city's back openings.       |
+| 549  | Immovable machines which are turned off south of the outsides of an atomic city' back opening          |
+| 550  | Immovable machines which are turned off south of the outsides of an atomic city' back opening.         |
+| 551  | Immovable machines which are turned off south of the outsides of an atomic city' back openings         |
+| 552  | Immovable machines which are turned off south of the outsides of an atomic city' back openings.        |
+| 553  | Immovable machines which are turned off south of the outsides of atomic cities' back opening           |
+| 554  | Immovable machines which are turned off south of the outsides of atomic cities' back openings          |
+| 555  | Immovable machines which are turned off south of the outsides of atomic cities' back openings.         |
+| 556  | Immovable machines which are turned off south of the outsides of the atomic cities' back opening       |
+| 557  | Immovable machines which are turned off south of the outsides of the atomic cities' back openings      |
+| 558  | Immovable machines which are turned off south of the outsides of the atomic cities' back openings.     |
+| 559  | Immovable machines which are turned off south of the outsides of the atomic city' back opening         |
+| 560  | Immovable machines which are turned off south of the outsides of the atomic city' back openings        |
+| 561  | Immovable machines which are turned off south of the outsides of the atomic city' back openings.       |
+| 562  | Immovable machines who are turned off south of an outside of an atomic city's back opening             |
+| 563  | Immovable machines who are turned off south of an outside of an atomic city's back opening.            |
+| 564  | Immovable machines who are turned off south of an outside of an atomic city's back openings            |
+| 565  | Immovable machines who are turned off south of an outside of an atomic city's back openings.           |
+| 566  | Immovable machines who are turned off south of an outside of atomic cities's back opening              |
+| 567  | Immovable machines who are turned off south of an outside of atomic cities's back opening.             |
+| 568  | Immovable machines who are turned off south of an outside of atomic cities's back openings             |
+| 569  | Immovable machines who are turned off south of an outside of atomic cities's back openings.            |
+| 570  | Immovable machines who are turned off south of an outside of the atomic cities's back opening          |
+| 571  | Immovable machines who are turned off south of an outside of the atomic cities's back opening.         |
+| 572  | Immovable machines who are turned off south of an outside of the atomic cities's back openings         |
+| 573  | Immovable machines who are turned off south of an outside of the atomic cities's back openings.        |
+| 574  | Immovable machines who are turned off south of an outside of the atomic city's back opening            |
+| 575  | Immovable machines who are turned off south of an outside of the atomic city's back opening.           |
+| 576  | Immovable machines who are turned off south of an outside of the atomic city's back openings           |
+| 577  | Immovable machines who are turned off south of an outside of the atomic city's back openings.          |
+| 578  | Immovable machines who are turned off south of the outside of an atomic city's back opening            |
+| 579  | Immovable machines who are turned off south of the outside of an atomic city's back opening.           |
+| 580  | Immovable machines who are turned off south of the outside of an atomic city's back openings           |
+| 581  | Immovable machines who are turned off south of the outside of an atomic city's back openings.          |
+| 582  | Immovable machines who are turned off south of the outside of atomic cities's back opening             |
+| 583  | Immovable machines who are turned off south of the outside of atomic cities's back openings            |
+| 584  | Immovable machines who are turned off south of the outside of atomic cities's back openings.           |
+| 585  | Immovable machines who are turned off south of the outside of the atomic cities's back opening         |
+| 586  | Immovable machines who are turned off south of the outside of the atomic cities's back openings        |
+| 587  | Immovable machines who are turned off south of the outside of the atomic cities's back openings.       |
+| 588  | Immovable machines who are turned off south of the outside of the atomic city's back opening           |
+| 589  | Immovable machines who are turned off south of the outside of the atomic city's back openings          |
+| 590  | Immovable machines who are turned off south of the outside of the atomic city's back openings.         |
+| 591  | Immovable machines who are turned off south of the outsides of an atomic city' back opening            |
+| 592  | Immovable machines who are turned off south of the outsides of an atomic city' back opening.           |
+| 593  | Immovable machines who are turned off south of the outsides of an atomic city' back openings           |
+| 594  | Immovable machines who are turned off south of the outsides of an atomic city' back openings.          |
+| 595  | Immovable machines who are turned off south of the outsides of atomic cities' back opening             |
+| 596  | Immovable machines who are turned off south of the outsides of atomic cities' back openings            |
+| 597  | Immovable machines who are turned off south of the outsides of atomic cities' back openings.           |
+| 598  | Immovable machines who are turned off south of the outsides of the atomic cities' back opening         |
+| 599  | Immovable machines who are turned off south of the outsides of the atomic cities' back openings        |
+| 600  | Immovable machines who are turned off south of the outsides of the atomic cities' back openings.       |
+| 601  | Immovable machines who are turned off south of the outsides of the atomic city' back opening           |
+| 602  | Immovable machines who are turned off south of the outsides of the atomic city' back openings          |
+| 603  | Immovable machines who are turned off south of the outsides of the atomic city' back openings.         |
+| 604  | Immovable machines, that south of an outside of an atomic city's back opening are turned off.          |
+| 605  | Immovable machines, that south of an outside of an atomic city's back openings are turned off.         |
+| 606  | Immovable machines, that south of an outside of atomic cities's back openings are turned off.          |
+| 607  | Immovable machines, that south of an outside of the atomic cities's back opening are turned off.       |
+| 608  | Immovable machines, that south of an outside of the atomic cities's back openings are turned off.      |
+| 609  | Immovable machines, that south of an outside of the atomic city's back openings are turned off.        |
+| 610  | The immovable machine south of an outside of an atomic city's back opening that is turned off          |
+| 611  | The immovable machine south of an outside of an atomic city's back opening that is turned off.         |
+| 612  | The immovable machine south of an outside of an atomic city's back opening which is turned off         |
+| 613  | The immovable machine south of an outside of an atomic city's back opening which is turned off.        |
+| 614  | The immovable machine south of an outside of an atomic city's back opening who is turned off           |
+| 615  | The immovable machine south of an outside of an atomic city's back opening who is turned off.          |
+| 616  | The immovable machine south of an outside of an atomic city's back opening, which is turned off        |
+| 617  | The immovable machine south of an outside of an atomic city's back opening, which is turned off.       |
+| 618  | The immovable machine south of an outside of an atomic city's back opening, who is turned off.         |
+| 619  | The immovable machine south of an outside of an atomic city's back openings that is turned off         |
+| 620  | The immovable machine south of an outside of an atomic city's back openings that is turned off.        |
+| 621  | The immovable machine south of an outside of an atomic city's back openings which is turned off        |
+| 622  | The immovable machine south of an outside of an atomic city's back openings which is turned off.       |
+| 623  | The immovable machine south of an outside of an atomic city's back openings who is turned off          |
+| 624  | The immovable machine south of an outside of an atomic city's back openings who is turned off.         |
+| 625  | The immovable machine south of an outside of an atomic city's back openings, which is turned off       |
+| 626  | The immovable machine south of an outside of an atomic city's back openings, which is turned off.      |
+| 627  | The immovable machine south of an outside of an atomic city's back openings, who is turned off.        |
+| 628  | The immovable machine south of an outside of atomic cities's back opening that is turned off           |
+| 629  | The immovable machine south of an outside of atomic cities's back opening that is turned off.          |
+| 630  | The immovable machine south of an outside of atomic cities's back opening which is turned off          |
+| 631  | The immovable machine south of an outside of atomic cities's back opening which is turned off.         |
+| 632  | The immovable machine south of an outside of atomic cities's back opening who is turned off            |
+| 633  | The immovable machine south of an outside of atomic cities's back opening who is turned off.           |
+| 634  | The immovable machine south of an outside of atomic cities's back opening, which is turned off         |
+| 635  | The immovable machine south of an outside of atomic cities's back opening, which is turned off.        |
+| 636  | The immovable machine south of an outside of atomic cities's back openings that is turned off          |
+| 637  | The immovable machine south of an outside of atomic cities's back openings that is turned off.         |
+| 638  | The immovable machine south of an outside of atomic cities's back openings which is turned off         |
+| 639  | The immovable machine south of an outside of atomic cities's back openings which is turned off.        |
+| 640  | The immovable machine south of an outside of atomic cities's back openings who is turned off           |
+| 641  | The immovable machine south of an outside of atomic cities's back openings who is turned off.          |
+| 642  | The immovable machine south of an outside of atomic cities's back openings, which is turned off        |
+| 643  | The immovable machine south of an outside of atomic cities's back openings, which is turned off.       |
+| 644  | The immovable machine south of an outside of the atomic cities's back opening that is turned off       |
+| 645  | The immovable machine south of an outside of the atomic cities's back opening that is turned off.      |
+| 646  | The immovable machine south of an outside of the atomic cities's back opening which is turned off      |
+| 647  | The immovable machine south of an outside of the atomic cities's back opening which is turned off.     |
+| 648  | The immovable machine south of an outside of the atomic cities's back opening who is turned off        |
+| 649  | The immovable machine south of an outside of the atomic cities's back opening who is turned off.       |
+| 650  | The immovable machine south of an outside of the atomic cities's back opening, which is turned off     |
+| 651  | The immovable machine south of an outside of the atomic cities's back opening, which is turned off.    |
+| 652  | The immovable machine south of an outside of the atomic cities's back openings that is turned off      |
+| 653  | The immovable machine south of an outside of the atomic cities's back openings that is turned off.     |
+| 654  | The immovable machine south of an outside of the atomic cities's back openings which is turned off     |
+| 655  | The immovable machine south of an outside of the atomic cities's back openings which is turned off.    |
+| 656  | The immovable machine south of an outside of the atomic cities's back openings who is turned off       |
+| 657  | The immovable machine south of an outside of the atomic cities's back openings who is turned off.      |
+| 658  | The immovable machine south of an outside of the atomic cities's back openings, which is turned off    |
+| 659  | The immovable machine south of an outside of the atomic cities's back openings, which is turned off.   |
+| 660  | The immovable machine south of an outside of the atomic city's back opening that is turned off         |
+| 661  | The immovable machine south of an outside of the atomic city's back opening that is turned off.        |
+| 662  | The immovable machine south of an outside of the atomic city's back opening which is turned off        |
+| 663  | The immovable machine south of an outside of the atomic city's back opening which is turned off.       |
+| 664  | The immovable machine south of an outside of the atomic city's back opening who is turned off          |
+| 665  | The immovable machine south of an outside of the atomic city's back opening who is turned off.         |
+| 666  | The immovable machine south of an outside of the atomic city's back opening, which is turned off       |
+| 667  | The immovable machine south of an outside of the atomic city's back opening, which is turned off.      |
+| 668  | The immovable machine south of an outside of the atomic city's back openings that is turned off        |
+| 669  | The immovable machine south of an outside of the atomic city's back openings that is turned off.       |
+| 670  | The immovable machine south of an outside of the atomic city's back openings which is turned off       |
+| 671  | The immovable machine south of an outside of the atomic city's back openings which is turned off.      |
+| 672  | The immovable machine south of an outside of the atomic city's back openings who is turned off         |
+| 673  | The immovable machine south of an outside of the atomic city's back openings who is turned off.        |
+| 674  | The immovable machine south of an outside of the atomic city's back openings, which is turned off      |
+| 675  | The immovable machine south of an outside of the atomic city's back openings, which is turned off.     |
+| 676  | The immovable machine south of the outside of an atomic city's back opening that is turned off         |
+| 677  | The immovable machine south of the outside of an atomic city's back opening that is turned off.        |
+| 678  | The immovable machine south of the outside of an atomic city's back opening which is turned off        |
+| 679  | The immovable machine south of the outside of an atomic city's back opening which is turned off.       |
+| 680  | The immovable machine south of the outside of an atomic city's back opening who is turned off          |
+| 681  | The immovable machine south of the outside of an atomic city's back opening who is turned off.         |
+| 682  | The immovable machine south of the outside of an atomic city's back openings that is turned off        |
+| 683  | The immovable machine south of the outside of an atomic city's back openings that is turned off.       |
+| 684  | The immovable machine south of the outside of an atomic city's back openings which is turned off       |
+| 685  | The immovable machine south of the outside of an atomic city's back openings which is turned off.      |
+| 686  | The immovable machine south of the outside of an atomic city's back openings who is turned off         |
+| 687  | The immovable machine south of the outside of an atomic city's back openings who is turned off.        |
+| 688  | The immovable machine south of the outside of atomic cities's back opening that is turned off          |
+| 689  | The immovable machine south of the outside of atomic cities's back opening that is turned off.         |
+| 690  | The immovable machine south of the outside of atomic cities's back opening which is turned off         |
+| 691  | The immovable machine south of the outside of atomic cities's back opening which is turned off.        |
+| 692  | The immovable machine south of the outside of atomic cities's back opening who is turned off           |
+| 693  | The immovable machine south of the outside of atomic cities's back opening who is turned off.          |
+| 694  | The immovable machine south of the outside of atomic cities's back openings that is turned off         |
+| 695  | The immovable machine south of the outside of atomic cities's back openings that is turned off.        |
+| 696  | The immovable machine south of the outside of atomic cities's back openings which is turned off        |
+| 697  | The immovable machine south of the outside of atomic cities's back openings which is turned off.       |
+| 698  | The immovable machine south of the outside of atomic cities's back openings who is turned off          |
+| 699  | The immovable machine south of the outside of atomic cities's back openings who is turned off.         |
+| 700  | The immovable machine south of the outside of the atomic cities's back opening that is turned off      |
+| 701  | The immovable machine south of the outside of the atomic cities's back opening that is turned off.     |
+| 702  | The immovable machine south of the outside of the atomic cities's back opening which is turned off     |
+| 703  | The immovable machine south of the outside of the atomic cities's back opening which is turned off.    |
+| 704  | The immovable machine south of the outside of the atomic cities's back opening who is turned off       |
+| 705  | The immovable machine south of the outside of the atomic cities's back opening who is turned off.      |
+| 706  | The immovable machine south of the outside of the atomic cities's back openings that is turned off     |
+| 707  | The immovable machine south of the outside of the atomic cities's back openings that is turned off.    |
+| 708  | The immovable machine south of the outside of the atomic cities's back openings which is turned off    |
+| 709  | The immovable machine south of the outside of the atomic cities's back openings which is turned off.   |
+| 710  | The immovable machine south of the outside of the atomic cities's back openings who is turned off      |
+| 711  | The immovable machine south of the outside of the atomic cities's back openings who is turned off.     |
+| 712  | The immovable machine south of the outside of the atomic city's back opening that is turned off        |
+| 713  | The immovable machine south of the outside of the atomic city's back opening that is turned off.       |
+| 714  | The immovable machine south of the outside of the atomic city's back opening which is turned off       |
+| 715  | The immovable machine south of the outside of the atomic city's back opening which is turned off.      |
+| 716  | The immovable machine south of the outside of the atomic city's back opening who is turned off         |
+| 717  | The immovable machine south of the outside of the atomic city's back opening who is turned off.        |
+| 718  | The immovable machine south of the outside of the atomic city's back openings that is turned off       |
+| 719  | The immovable machine south of the outside of the atomic city's back openings that is turned off.      |
+| 720  | The immovable machine south of the outside of the atomic city's back openings which is turned off      |
+| 721  | The immovable machine south of the outside of the atomic city's back openings which is turned off.     |
+| 722  | The immovable machine south of the outside of the atomic city's back openings who is turned off        |
+| 723  | The immovable machine south of the outside of the atomic city's back openings who is turned off.       |
+| 724  | The immovable machine south of the outsides of an atomic city' back opening that is turned off         |
+| 725  | The immovable machine south of the outsides of an atomic city' back opening that is turned off.        |
+| 726  | The immovable machine south of the outsides of an atomic city' back opening which is turned off        |
+| 727  | The immovable machine south of the outsides of an atomic city' back opening which is turned off.       |
+| 728  | The immovable machine south of the outsides of an atomic city' back opening who is turned off          |
+| 729  | The immovable machine south of the outsides of an atomic city' back opening who is turned off.         |
+| 730  | The immovable machine south of the outsides of an atomic city' back openings that is turned off        |
+| 731  | The immovable machine south of the outsides of an atomic city' back openings that is turned off.       |
+| 732  | The immovable machine south of the outsides of an atomic city' back openings which is turned off       |
+| 733  | The immovable machine south of the outsides of an atomic city' back openings which is turned off.      |
+| 734  | The immovable machine south of the outsides of an atomic city' back openings who is turned off         |
+| 735  | The immovable machine south of the outsides of an atomic city' back openings who is turned off.        |
+| 736  | The immovable machine south of the outsides of atomic cities' back opening that is turned off          |
+| 737  | The immovable machine south of the outsides of atomic cities' back opening that is turned off.         |
+| 738  | The immovable machine south of the outsides of atomic cities' back opening which is turned off         |
+| 739  | The immovable machine south of the outsides of atomic cities' back opening which is turned off.        |
+| 740  | The immovable machine south of the outsides of atomic cities' back opening who is turned off           |
+| 741  | The immovable machine south of the outsides of atomic cities' back opening who is turned off.          |
+| 742  | The immovable machine south of the outsides of atomic cities' back openings that is turned off         |
+| 743  | The immovable machine south of the outsides of atomic cities' back openings that is turned off.        |
+| 744  | The immovable machine south of the outsides of atomic cities' back openings which is turned off        |
+| 745  | The immovable machine south of the outsides of atomic cities' back openings which is turned off.       |
+| 746  | The immovable machine south of the outsides of atomic cities' back openings who is turned off          |
+| 747  | The immovable machine south of the outsides of atomic cities' back openings who is turned off.         |
+| 748  | The immovable machine south of the outsides of the atomic cities' back opening that is turned off      |
+| 749  | The immovable machine south of the outsides of the atomic cities' back opening that is turned off.     |
+| 750  | The immovable machine south of the outsides of the atomic cities' back opening which is turned off     |
+| 751  | The immovable machine south of the outsides of the atomic cities' back opening which is turned off.    |
+| 752  | The immovable machine south of the outsides of the atomic cities' back opening who is turned off       |
+| 753  | The immovable machine south of the outsides of the atomic cities' back opening who is turned off.      |
+| 754  | The immovable machine south of the outsides of the atomic cities' back openings that is turned off     |
+| 755  | The immovable machine south of the outsides of the atomic cities' back openings that is turned off.    |
+| 756  | The immovable machine south of the outsides of the atomic cities' back openings which is turned off    |
+| 757  | The immovable machine south of the outsides of the atomic cities' back openings which is turned off.   |
+| 758  | The immovable machine south of the outsides of the atomic cities' back openings who is turned off      |
+| 759  | The immovable machine south of the outsides of the atomic cities' back openings who is turned off.     |
+| 760  | The immovable machine south of the outsides of the atomic city' back opening that is turned off        |
+| 761  | The immovable machine south of the outsides of the atomic city' back opening that is turned off.       |
+| 762  | The immovable machine south of the outsides of the atomic city' back opening which is turned off       |
+| 763  | The immovable machine south of the outsides of the atomic city' back opening which is turned off.      |
+| 764  | The immovable machine south of the outsides of the atomic city' back opening who is turned off         |
+| 765  | The immovable machine south of the outsides of the atomic city' back opening who is turned off.        |
+| 766  | The immovable machine south of the outsides of the atomic city' back openings that is turned off       |
+| 767  | The immovable machine south of the outsides of the atomic city' back openings that is turned off.      |
+| 768  | The immovable machine south of the outsides of the atomic city' back openings which is turned off      |
+| 769  | The immovable machine south of the outsides of the atomic city' back openings which is turned off.     |
+| 770  | The immovable machine south of the outsides of the atomic city' back openings who is turned off        |
+| 771  | The immovable machine south of the outsides of the atomic city' back openings who is turned off.       |
+| 772  | The immovable machine that south of an outside of an atomic city's back opening is turned off          |
+| 773  | The immovable machine that south of an outside of an atomic city's back opening is turned off.         |
+| 774  | The immovable machine that south of an outside of an atomic city's back openings is turned off         |
+| 775  | The immovable machine that south of an outside of an atomic city's back openings is turned off.        |
+| 776  | The immovable machine that south of an outside of atomic cities's back opening is turned off           |
+| 777  | The immovable machine that south of an outside of atomic cities's back opening is turned off.          |
+| 778  | The immovable machine that south of an outside of atomic cities's back openings is turned off          |
+| 779  | The immovable machine that south of an outside of atomic cities's back openings is turned off.         |
+| 780  | The immovable machine that south of an outside of the atomic cities's back opening is turned off       |
+| 781  | The immovable machine that south of an outside of the atomic cities's back opening is turned off.      |
+| 782  | The immovable machine that south of an outside of the atomic cities's back openings is turned off      |
+| 783  | The immovable machine that south of an outside of the atomic cities's back openings is turned off.     |
+| 784  | The immovable machine that south of an outside of the atomic city's back opening is turned off         |
+| 785  | The immovable machine that south of an outside of the atomic city's back opening is turned off.        |
+| 786  | The immovable machine that south of an outside of the atomic city's back openings is turned off        |
+| 787  | The immovable machine that south of an outside of the atomic city's back openings is turned off.       |
+| 788  | The immovable machine that south of the outside of an atomic city's back opening is turned off         |
+| 789  | The immovable machine that south of the outside of an atomic city's back opening is turned off.        |
+| 790  | The immovable machine that south of the outside of an atomic city's back openings is turned off        |
+| 791  | The immovable machine that south of the outside of an atomic city's back openings is turned off.       |
+| 792  | The immovable machine that south of the outside of atomic cities's back opening is turned off          |
+| 793  | The immovable machine that south of the outside of atomic cities's back opening is turned off.         |
+| 794  | The immovable machine that south of the outside of atomic cities's back openings is turned off         |
+| 795  | The immovable machine that south of the outside of atomic cities's back openings is turned off.        |
+| 796  | The immovable machine that south of the outside of the atomic cities's back opening is turned off      |
+| 797  | The immovable machine that south of the outside of the atomic cities's back opening is turned off.     |
+| 798  | The immovable machine that south of the outside of the atomic cities's back openings is turned off     |
+| 799  | The immovable machine that south of the outside of the atomic cities's back openings is turned off.    |
+| 800  | The immovable machine that south of the outside of the atomic city's back opening is turned off        |
+| 801  | The immovable machine that south of the outside of the atomic city's back opening is turned off.       |
+| 802  | The immovable machine that south of the outside of the atomic city's back openings is turned off       |
+| 803  | The immovable machine that south of the outside of the atomic city's back openings is turned off.      |
+| 804  | The immovable machine that south of the outsides of an atomic city' back opening is turned off         |
+| 805  | The immovable machine that south of the outsides of an atomic city' back opening is turned off.        |
+| 806  | The immovable machine that south of the outsides of an atomic city' back openings is turned off        |
+| 807  | The immovable machine that south of the outsides of an atomic city' back openings is turned off.       |
+| 808  | The immovable machine that south of the outsides of atomic cities' back opening is turned off          |
+| 809  | The immovable machine that south of the outsides of atomic cities' back opening is turned off.         |
+| 810  | The immovable machine that south of the outsides of atomic cities' back openings is turned off         |
+| 811  | The immovable machine that south of the outsides of atomic cities' back openings is turned off.        |
+| 812  | The immovable machine that south of the outsides of the atomic cities' back opening is turned off      |
+| 813  | The immovable machine that south of the outsides of the atomic cities' back opening is turned off.     |
+| 814  | The immovable machine that south of the outsides of the atomic cities' back openings is turned off     |
+| 815  | The immovable machine that south of the outsides of the atomic cities' back openings is turned off.    |
+| 816  | The immovable machine that south of the outsides of the atomic city' back opening is turned off        |
+| 817  | The immovable machine that south of the outsides of the atomic city' back opening is turned off.       |
+| 818  | The immovable machine that south of the outsides of the atomic city' back openings is turned off       |
+| 819  | The immovable machine that south of the outsides of the atomic city' back openings is turned off.      |
+| 820  | The immovable machine that, south of an outside of an atomic city's back opening is turned off         |
+| 821  | The immovable machine that, south of an outside of an atomic city's back opening is turned off.        |
+| 822  | The immovable machine that, south of an outside of an atomic city's back openings is turned off        |
+| 823  | The immovable machine that, south of an outside of an atomic city's back openings is turned off.       |
+| 824  | The immovable machine that, south of an outside of the atomic cities's back opening is turned off.     |
+| 825  | The immovable machine that, south of an outside of the atomic cities's back openings is turned off     |
+| 826  | The immovable machine that, south of an outside of the atomic cities's back openings is turned off.    |
+| 827  | The immovable machine that, south of an outside of the atomic city's back openings is turned off.      |
+| 828  | The immovable machine which is turned off south of an outside of an atomic city's back opening         |
+| 829  | The immovable machine which is turned off south of an outside of an atomic city's back openings        |
+| 830  | The immovable machine which south of an outside of an atomic city's back opening is turned off         |
+| 831  | The immovable machine which south of an outside of an atomic city's back opening is turned off.        |
+| 832  | The immovable machine which south of an outside of an atomic city's back openings is turned off        |
+| 833  | The immovable machine which south of an outside of an atomic city's back openings is turned off.       |
+| 834  | The immovable machine which south of an outside of atomic cities's back opening is turned off          |
+| 835  | The immovable machine which south of an outside of atomic cities's back opening is turned off.         |
+| 836  | The immovable machine which south of an outside of atomic cities's back openings is turned off         |
+| 837  | The immovable machine which south of an outside of atomic cities's back openings is turned off.        |
+| 838  | The immovable machine which south of an outside of the atomic cities's back opening is turned off      |
+| 839  | The immovable machine which south of an outside of the atomic cities's back opening is turned off.     |
+| 840  | The immovable machine which south of an outside of the atomic cities's back openings is turned off     |
+| 841  | The immovable machine which south of an outside of the atomic cities's back openings is turned off.    |
+| 842  | The immovable machine which south of an outside of the atomic city's back opening is turned off        |
+| 843  | The immovable machine which south of an outside of the atomic city's back opening is turned off.       |
+| 844  | The immovable machine which south of an outside of the atomic city's back openings is turned off       |
+| 845  | The immovable machine which south of an outside of the atomic city's back openings is turned off.      |
+| 846  | The immovable machine which south of the outside of an atomic city's back opening is turned off.       |
+| 847  | The immovable machine which south of the outside of an atomic city's back openings is turned off       |
+| 848  | The immovable machine which south of the outside of an atomic city's back openings is turned off.      |
+| 849  | The immovable machine which, south of an outside of an atomic city's back opening is turned off        |
+| 850  | The immovable machine which, south of an outside of an atomic city's back opening is turned off.       |
+| 851  | The immovable machine which, south of an outside of an atomic city's back openings is turned off       |
+| 852  | The immovable machine which, south of an outside of an atomic city's back openings is turned off.      |
+| 853  | The immovable machine which, south of an outside of the atomic cities's back opening is turned off.    |
+| 854  | The immovable machine which, south of an outside of the atomic cities's back openings is turned off    |
+| 855  | The immovable machine which, south of an outside of the atomic cities's back openings is turned off.   |
+| 856  | The immovable machine which, south of an outside of the atomic city's back openings is turned off.     |
+| 857  | The immovable machine who is turned off south of an outside of an atomic city's back opening           |
+| 858  | The immovable machine who is turned off south of an outside of an atomic city's back openings          |
+| 859  | The immovable machine who south of an outside of an atomic city's back opening is turned off           |
+| 860  | The immovable machine who south of an outside of an atomic city's back opening is turned off.          |
+| 861  | The immovable machine who south of an outside of an atomic city's back openings is turned off          |
+| 862  | The immovable machine who south of an outside of an atomic city's back openings is turned off.         |
+| 863  | The immovable machine who south of an outside of atomic cities's back opening is turned off            |
+| 864  | The immovable machine who south of an outside of atomic cities's back opening is turned off.           |
+| 865  | The immovable machine who south of an outside of atomic cities's back openings is turned off           |
+| 866  | The immovable machine who south of an outside of atomic cities's back openings is turned off.          |
+| 867  | The immovable machine who south of an outside of the atomic cities's back opening is turned off        |
+| 868  | The immovable machine who south of an outside of the atomic cities's back opening is turned off.       |
+| 869  | The immovable machine who south of an outside of the atomic cities's back openings is turned off       |
+| 870  | The immovable machine who south of an outside of the atomic cities's back openings is turned off.      |
+| 871  | The immovable machine who south of an outside of the atomic city's back opening is turned off          |
+| 872  | The immovable machine who south of an outside of the atomic city's back opening is turned off.         |
+| 873  | The immovable machine who south of an outside of the atomic city's back openings is turned off         |
+| 874  | The immovable machine who south of an outside of the atomic city's back openings is turned off.        |
+| 875  | The immovable machine who south of the outside of an atomic city's back opening is turned off.         |
+| 876  | The immovable machine who south of the outside of an atomic city's back openings is turned off         |
+| 877  | The immovable machine who south of the outside of an atomic city's back openings is turned off.        |
+| 878  | The immovable machine who south of the outsides of an atomic city' back openings is turned off.        |
+| 879  | The immovable machine who, south of an outside of an atomic city's back opening is turned off          |
+| 880  | The immovable machine who, south of an outside of an atomic city's back opening is turned off.         |
+| 881  | The immovable machine who, south of an outside of an atomic city's back openings is turned off         |
+| 882  | The immovable machine who, south of an outside of an atomic city's back openings is turned off.        |
+| 883  | The immovable machine who, south of an outside of the atomic cities's back opening is turned off.      |
+| 884  | The immovable machine who, south of an outside of the atomic cities's back openings is turned off      |
+| 885  | The immovable machine who, south of an outside of the atomic cities's back openings is turned off.     |
+| 886  | The immovable machine who, south of an outside of the atomic city's back openings is turned off.       |
+| 887  | The immovable machine, that south of an outside of an atomic city's back openings is turned off.       |
+| 888  | The immovable machines south of an outside of an atomic city's back opening that are turned off        |
+| 889  | The immovable machines south of an outside of an atomic city's back opening that are turned off.       |
+| 890  | The immovable machines south of an outside of an atomic city's back opening which are turned off       |
+| 891  | The immovable machines south of an outside of an atomic city's back opening which are turned off.      |
+| 892  | The immovable machines south of an outside of an atomic city's back opening who are turned off         |
+| 893  | The immovable machines south of an outside of an atomic city's back opening who are turned off.        |
+| 894  | The immovable machines south of an outside of an atomic city's back openings that are turned off       |
+| 895  | The immovable machines south of an outside of an atomic city's back openings that are turned off.      |
+| 896  | The immovable machines south of an outside of an atomic city's back openings which are turned off      |
+| 897  | The immovable machines south of an outside of an atomic city's back openings which are turned off.     |
+| 898  | The immovable machines south of an outside of an atomic city's back openings who are turned off        |
+| 899  | The immovable machines south of an outside of an atomic city's back openings who are turned off.       |
+| 900  | The immovable machines south of an outside of atomic cities's back opening that are turned off         |
+| 901  | The immovable machines south of an outside of atomic cities's back opening that are turned off.        |
+| 902  | The immovable machines south of an outside of atomic cities's back opening which are turned off        |
+| 903  | The immovable machines south of an outside of atomic cities's back opening which are turned off.       |
+| 904  | The immovable machines south of an outside of atomic cities's back opening who are turned off          |
+| 905  | The immovable machines south of an outside of atomic cities's back opening who are turned off.         |
+| 906  | The immovable machines south of an outside of atomic cities's back openings that are turned off        |
+| 907  | The immovable machines south of an outside of atomic cities's back openings that are turned off.       |
+| 908  | The immovable machines south of an outside of atomic cities's back openings which are turned off       |
+| 909  | The immovable machines south of an outside of atomic cities's back openings which are turned off.      |
+| 910  | The immovable machines south of an outside of atomic cities's back openings who are turned off         |
+| 911  | The immovable machines south of an outside of atomic cities's back openings who are turned off.        |
+| 912  | The immovable machines south of an outside of the atomic cities's back opening that are turned off     |
+| 913  | The immovable machines south of an outside of the atomic cities's back opening that are turned off.    |
+| 914  | The immovable machines south of an outside of the atomic cities's back opening which are turned off    |
+| 915  | The immovable machines south of an outside of the atomic cities's back opening which are turned off.   |
+| 916  | The immovable machines south of an outside of the atomic cities's back opening who are turned off      |
+| 917  | The immovable machines south of an outside of the atomic cities's back opening who are turned off.     |
+| 918  | The immovable machines south of an outside of the atomic cities's back openings that are turned off    |
+| 919  | The immovable machines south of an outside of the atomic cities's back openings that are turned off.   |
+| 920  | The immovable machines south of an outside of the atomic cities's back openings which are turned off   |
+| 921  | The immovable machines south of an outside of the atomic cities's back openings which are turned off.  |
+| 922  | The immovable machines south of an outside of the atomic cities's back openings who are turned off     |
+| 923  | The immovable machines south of an outside of the atomic cities's back openings who are turned off.    |
+| 924  | The immovable machines south of an outside of the atomic city's back opening that are turned off       |
+| 925  | The immovable machines south of an outside of the atomic city's back opening that are turned off.      |
+| 926  | The immovable machines south of an outside of the atomic city's back opening which are turned off      |
+| 927  | The immovable machines south of an outside of the atomic city's back opening which are turned off.     |
+| 928  | The immovable machines south of an outside of the atomic city's back opening who are turned off        |
+| 929  | The immovable machines south of an outside of the atomic city's back opening who are turned off.       |
+| 930  | The immovable machines south of an outside of the atomic city's back openings that are turned off      |
+| 931  | The immovable machines south of an outside of the atomic city's back openings that are turned off.     |
+| 932  | The immovable machines south of an outside of the atomic city's back openings which are turned off     |
+| 933  | The immovable machines south of an outside of the atomic city's back openings which are turned off.    |
+| 934  | The immovable machines south of an outside of the atomic city's back openings who are turned off       |
+| 935  | The immovable machines south of an outside of the atomic city's back openings who are turned off.      |
+| 936  | The immovable machines south of outsides of the atomic cities' back opening that are turned off        |
+| 937  | The immovable machines south of outsides of the atomic cities' back opening that are turned off.       |
+| 938  | The immovable machines south of outsides of the atomic cities' back opening which are turned off.      |
+| 939  | The immovable machines south of outsides of the atomic cities' back opening who are turned off         |
+| 940  | The immovable machines south of outsides of the atomic cities' back opening who are turned off.        |
+| 941  | The immovable machines south of outsides of the atomic cities' back openings that are turned off       |
+| 942  | The immovable machines south of outsides of the atomic cities' back openings that are turned off.      |
+| 943  | The immovable machines south of outsides of the atomic cities' back openings which are turned off      |
+| 944  | The immovable machines south of outsides of the atomic cities' back openings which are turned off.     |
+| 945  | The immovable machines south of outsides of the atomic cities' back openings who are turned off        |
+| 946  | The immovable machines south of outsides of the atomic cities' back openings who are turned off.       |
+| 947  | The immovable machines south of outsides of the atomic city' back opening that are turned off          |
+| 948  | The immovable machines south of outsides of the atomic city' back opening that are turned off.         |
+| 949  | The immovable machines south of outsides of the atomic city' back opening who are turned off           |
+| 950  | The immovable machines south of outsides of the atomic city' back opening who are turned off.          |
+| 951  | The immovable machines south of outsides of the atomic city' back openings that are turned off         |
+| 952  | The immovable machines south of outsides of the atomic city' back openings that are turned off.        |
+| 953  | The immovable machines south of outsides of the atomic city' back openings which are turned off.       |
+| 954  | The immovable machines south of outsides of the atomic city' back openings who are turned off          |
+| 955  | The immovable machines south of outsides of the atomic city' back openings who are turned off.         |
+| 956  | The immovable machines south of the outside of an atomic city's back opening that are turned off       |
+| 957  | The immovable machines south of the outside of an atomic city's back opening that are turned off.      |
+| 958  | The immovable machines south of the outside of an atomic city's back opening which are turned off      |
+| 959  | The immovable machines south of the outside of an atomic city's back opening which are turned off.     |
+| 960  | The immovable machines south of the outside of an atomic city's back opening who are turned off        |
+| 961  | The immovable machines south of the outside of an atomic city's back opening who are turned off.       |
+| 962  | The immovable machines south of the outside of an atomic city's back openings that are turned off      |
+| 963  | The immovable machines south of the outside of an atomic city's back openings that are turned off.     |
+| 964  | The immovable machines south of the outside of an atomic city's back openings which are turned off     |
+| 965  | The immovable machines south of the outside of an atomic city's back openings which are turned off.    |
+| 966  | The immovable machines south of the outside of an atomic city's back openings who are turned off       |
+| 967  | The immovable machines south of the outside of an atomic city's back openings who are turned off.      |
+| 968  | The immovable machines south of the outside of atomic cities's back opening that are turned off        |
+| 969  | The immovable machines south of the outside of atomic cities's back opening that are turned off.       |
+| 970  | The immovable machines south of the outside of atomic cities's back opening which are turned off       |
+| 971  | The immovable machines south of the outside of atomic cities's back opening which are turned off.      |
+| 972  | The immovable machines south of the outside of atomic cities's back opening who are turned off         |
+| 973  | The immovable machines south of the outside of atomic cities's back opening who are turned off.        |
+| 974  | The immovable machines south of the outside of atomic cities's back openings that are turned off       |
+| 975  | The immovable machines south of the outside of atomic cities's back openings that are turned off.      |
+| 976  | The immovable machines south of the outside of atomic cities's back openings which are turned off      |
+| 977  | The immovable machines south of the outside of atomic cities's back openings which are turned off.     |
+| 978  | The immovable machines south of the outside of atomic cities's back openings who are turned off        |
+| 979  | The immovable machines south of the outside of atomic cities's back openings who are turned off.       |
+| 980  | The immovable machines south of the outside of the atomic cities's back opening that are turned off    |
+| 981  | The immovable machines south of the outside of the atomic cities's back opening that are turned off.   |
+| 982  | The immovable machines south of the outside of the atomic cities's back opening which are turned off   |
+| 983  | The immovable machines south of the outside of the atomic cities's back opening which are turned off.  |
+| 984  | The immovable machines south of the outside of the atomic cities's back opening who are turned off     |
+| 985  | The immovable machines south of the outside of the atomic cities's back opening who are turned off.    |
+| 986  | The immovable machines south of the outside of the atomic cities's back openings that are turned off   |
+| 987  | The immovable machines south of the outside of the atomic cities's back openings that are turned off.  |
+| 988  | The immovable machines south of the outside of the atomic cities's back openings which are turned off  |
+| 989  | The immovable machines south of the outside of the atomic cities's back openings which are turned off. |
+| 990  | The immovable machines south of the outside of the atomic cities's back openings who are turned off    |
+| 991  | The immovable machines south of the outside of the atomic cities's back openings who are turned off.   |
+| 992  | The immovable machines south of the outside of the atomic city's back opening that are turned off      |
+| 993  | The immovable machines south of the outside of the atomic city's back opening that are turned off.     |
+| 994  | The immovable machines south of the outside of the atomic city's back opening which are turned off     |
+| 995  | The immovable machines south of the outside of the atomic city's back opening which are turned off.    |
+| 996  | The immovable machines south of the outside of the atomic city's back opening who are turned off       |
+| 997  | The immovable machines south of the outside of the atomic city's back opening who are turned off.      |
+| 998  | The immovable machines south of the outside of the atomic city's back openings that are turned off     |
+| 999  | The immovable machines south of the outside of the atomic city's back openings that are turned off.    |
+| 1000 | The immovable machines south of the outside of the atomic city's back openings which are turned off    |
+| 1001 | The immovable machines south of the outside of the atomic city's back openings which are turned off.   |
+| 1002 | The immovable machines south of the outside of the atomic city's back openings who are turned off      |
+| 1003 | The immovable machines south of the outside of the atomic city's back openings who are turned off.     |
+| 1004 | The immovable machines south of the outsides of an atomic city' back opening that are turned off       |
+| 1005 | The immovable machines south of the outsides of an atomic city' back opening that are turned off.      |
+| 1006 | The immovable machines south of the outsides of an atomic city' back opening which are turned off      |
+| 1007 | The immovable machines south of the outsides of an atomic city' back opening which are turned off.     |
+| 1008 | The immovable machines south of the outsides of an atomic city' back opening who are turned off        |
+| 1009 | The immovable machines south of the outsides of an atomic city' back opening who are turned off.       |
+| 1010 | The immovable machines south of the outsides of an atomic city' back openings that are turned off      |
+| 1011 | The immovable machines south of the outsides of an atomic city' back openings that are turned off.     |
+| 1012 | The immovable machines south of the outsides of an atomic city' back openings which are turned off     |
+| 1013 | The immovable machines south of the outsides of an atomic city' back openings which are turned off.    |
+| 1014 | The immovable machines south of the outsides of an atomic city' back openings who are turned off       |
+| 1015 | The immovable machines south of the outsides of an atomic city' back openings who are turned off.      |
+| 1016 | The immovable machines south of the outsides of atomic cities' back opening that are turned off        |
+| 1017 | The immovable machines south of the outsides of atomic cities' back opening that are turned off.       |
+| 1018 | The immovable machines south of the outsides of atomic cities' back opening which are turned off       |
+| 1019 | The immovable machines south of the outsides of atomic cities' back opening which are turned off.      |
+| 1020 | The immovable machines south of the outsides of atomic cities' back opening who are turned off         |
+| 1021 | The immovable machines south of the outsides of atomic cities' back opening who are turned off.        |
+| 1022 | The immovable machines south of the outsides of atomic cities' back openings that are turned off       |
+| 1023 | The immovable machines south of the outsides of atomic cities' back openings that are turned off.      |
+| 1024 | The immovable machines south of the outsides of atomic cities' back openings which are turned off      |
+| 1025 | The immovable machines south of the outsides of atomic cities' back openings which are turned off.     |
+| 1026 | The immovable machines south of the outsides of atomic cities' back openings who are turned off        |
+| 1027 | The immovable machines south of the outsides of atomic cities' back openings who are turned off.       |
+| 1028 | The immovable machines south of the outsides of the atomic cities' back opening that are turned off    |
+| 1029 | The immovable machines south of the outsides of the atomic cities' back opening that are turned off.   |
+| 1030 | The immovable machines south of the outsides of the atomic cities' back opening which are turned off   |
+| 1031 | The immovable machines south of the outsides of the atomic cities' back opening which are turned off.  |
+| 1032 | The immovable machines south of the outsides of the atomic cities' back opening who are turned off     |
+| 1033 | The immovable machines south of the outsides of the atomic cities' back opening who are turned off.    |
+| 1034 | The immovable machines south of the outsides of the atomic cities' back openings that are turned off   |
+| 1035 | The immovable machines south of the outsides of the atomic cities' back openings that are turned off.  |
+| 1036 | The immovable machines south of the outsides of the atomic cities' back openings which are turned off  |
+| 1037 | The immovable machines south of the outsides of the atomic cities' back openings which are turned off. |
+| 1038 | The immovable machines south of the outsides of the atomic cities' back openings who are turned off    |
+| 1039 | The immovable machines south of the outsides of the atomic cities' back openings who are turned off.   |
+| 1040 | The immovable machines south of the outsides of the atomic city' back opening that are turned off      |
+| 1041 | The immovable machines south of the outsides of the atomic city' back opening that are turned off.     |
+| 1042 | The immovable machines south of the outsides of the atomic city' back opening which are turned off     |
+| 1043 | The immovable machines south of the outsides of the atomic city' back opening which are turned off.    |
+| 1044 | The immovable machines south of the outsides of the atomic city' back opening who are turned off       |
+| 1045 | The immovable machines south of the outsides of the atomic city' back opening who are turned off.      |
+| 1046 | The immovable machines south of the outsides of the atomic city' back openings that are turned off     |
+| 1047 | The immovable machines south of the outsides of the atomic city' back openings that are turned off.    |
+| 1048 | The immovable machines south of the outsides of the atomic city' back openings which are turned off    |
+| 1049 | The immovable machines south of the outsides of the atomic city' back openings which are turned off.   |
+| 1050 | The immovable machines south of the outsides of the atomic city' back openings who are turned off      |
+| 1051 | The immovable machines south of the outsides of the atomic city' back openings who are turned off.     |
+| 1052 | The immovable machines that are turned off south of an outside of an atomic city's back opening        |
+| 1053 | The immovable machines that are turned off south of an outside of an atomic city's back openings       |
+| 1054 | The immovable machines that are turned off south of an outside of an atomic city's back openings.      |
+| 1055 | The immovable machines that are turned off south of an outside of atomic cities's back opening         |
+| 1056 | The immovable machines that are turned off south of an outside of atomic cities's back openings        |
+| 1057 | The immovable machines that are turned off south of an outside of the atomic cities's back opening     |
+| 1058 | The immovable machines that are turned off south of an outside of the atomic cities's back openings    |
+| 1059 | The immovable machines that are turned off south of an outside of the atomic cities's back openings.   |
+| 1060 | The immovable machines that are turned off south of an outside of the atomic city's back opening       |
+| 1061 | The immovable machines that are turned off south of an outside of the atomic city's back openings      |
+| 1062 | The immovable machines that south of an outside of an atomic city's back opening are turned off        |
+| 1063 | The immovable machines that south of an outside of an atomic city's back opening are turned off.       |
+| 1064 | The immovable machines that south of an outside of an atomic city's back openings are turned off       |
+| 1065 | The immovable machines that south of an outside of an atomic city's back openings are turned off.      |
+| 1066 | The immovable machines that south of an outside of atomic cities's back opening are turned off         |
+| 1067 | The immovable machines that south of an outside of atomic cities's back opening are turned off.        |
+| 1068 | The immovable machines that south of an outside of atomic cities's back openings are turned off        |
+| 1069 | The immovable machines that south of an outside of atomic cities's back openings are turned off.       |
+| 1070 | The immovable machines that south of an outside of the atomic cities's back opening are turned off     |
+| 1071 | The immovable machines that south of an outside of the atomic cities's back opening are turned off.    |
+| 1072 | The immovable machines that south of an outside of the atomic cities's back openings are turned off    |
+| 1073 | The immovable machines that south of an outside of the atomic cities's back openings are turned off.   |
+| 1074 | The immovable machines that south of an outside of the atomic city's back opening are turned off       |
+| 1075 | The immovable machines that south of an outside of the atomic city's back opening are turned off.      |
+| 1076 | The immovable machines that south of an outside of the atomic city's back openings are turned off      |
+| 1077 | The immovable machines that south of an outside of the atomic city's back openings are turned off.     |
+| 1078 | The immovable machines that south of the outside of an atomic city's back opening are turned off       |
+| 1079 | The immovable machines that south of the outside of an atomic city's back opening are turned off.      |
+| 1080 | The immovable machines that south of the outside of an atomic city's back openings are turned off      |
+| 1081 | The immovable machines that south of the outside of an atomic city's back openings are turned off.     |
+| 1082 | The immovable machines that south of the outside of atomic cities's back opening are turned off        |
+| 1083 | The immovable machines that south of the outside of atomic cities's back opening are turned off.       |
+| 1084 | The immovable machines that south of the outside of atomic cities's back openings are turned off       |
+| 1085 | The immovable machines that south of the outside of atomic cities's back openings are turned off.      |
+| 1086 | The immovable machines that south of the outside of the atomic cities's back opening are turned off    |
+| 1087 | The immovable machines that south of the outside of the atomic cities's back opening are turned off.   |
+| 1088 | The immovable machines that south of the outside of the atomic cities's back openings are turned off   |
+| 1089 | The immovable machines that south of the outside of the atomic cities's back openings are turned off.  |
+| 1090 | The immovable machines that south of the outside of the atomic city's back opening are turned off      |
+| 1091 | The immovable machines that south of the outside of the atomic city's back opening are turned off.     |
+| 1092 | The immovable machines that south of the outside of the atomic city's back openings are turned off     |
+| 1093 | The immovable machines that south of the outside of the atomic city's back openings are turned off.    |
+| 1094 | The immovable machines that south of the outsides of an atomic city' back opening are turned off       |
+| 1095 | The immovable machines that south of the outsides of an atomic city' back opening are turned off.      |
+| 1096 | The immovable machines that south of the outsides of an atomic city' back openings are turned off      |
+| 1097 | The immovable machines that south of the outsides of an atomic city' back openings are turned off.     |
+| 1098 | The immovable machines that south of the outsides of atomic cities' back opening are turned off        |
+| 1099 | The immovable machines that south of the outsides of atomic cities' back opening are turned off.       |
+| 1100 | The immovable machines that south of the outsides of atomic cities' back openings are turned off       |
+| 1101 | The immovable machines that south of the outsides of atomic cities' back openings are turned off.      |
+| 1102 | The immovable machines that south of the outsides of the atomic cities' back opening are turned off    |
+| 1103 | The immovable machines that south of the outsides of the atomic cities' back opening are turned off.   |
+| 1104 | The immovable machines that south of the outsides of the atomic cities' back openings are turned off   |
+| 1105 | The immovable machines that south of the outsides of the atomic cities' back openings are turned off.  |
+| 1106 | The immovable machines that south of the outsides of the atomic city' back opening are turned off      |
+| 1107 | The immovable machines that south of the outsides of the atomic city' back opening are turned off.     |
+| 1108 | The immovable machines that south of the outsides of the atomic city' back openings are turned off     |
+| 1109 | The immovable machines that south of the outsides of the atomic city' back openings are turned off.    |
+| 1110 | The immovable machines that, south of an outside of an atomic city's back opening are turned off       |
+| 1111 | The immovable machines that, south of an outside of an atomic city's back opening are turned off.      |
+| 1112 | The immovable machines that, south of an outside of an atomic city's back openings are turned off      |
+| 1113 | The immovable machines that, south of an outside of an atomic city's back openings are turned off.     |
+| 1114 | The immovable machines that, south of an outside of atomic cities's back opening are turned off        |
+| 1115 | The immovable machines that, south of an outside of atomic cities's back opening are turned off.       |
+| 1116 | The immovable machines that, south of an outside of atomic cities's back openings are turned off       |
+| 1117 | The immovable machines that, south of an outside of atomic cities's back openings are turned off.      |
+| 1118 | The immovable machines that, south of an outside of the atomic cities's back opening are turned off    |
+| 1119 | The immovable machines that, south of an outside of the atomic cities's back opening are turned off.   |
+| 1120 | The immovable machines that, south of an outside of the atomic cities's back openings are turned off   |
+| 1121 | The immovable machines that, south of an outside of the atomic cities's back openings are turned off.  |
+| 1122 | The immovable machines that, south of an outside of the atomic city's back opening are turned off      |
+| 1123 | The immovable machines that, south of an outside of the atomic city's back opening are turned off.     |
+| 1124 | The immovable machines that, south of an outside of the atomic city's back openings are turned off     |
+| 1125 | The immovable machines that, south of an outside of the atomic city's back openings are turned off.    |
+| 1126 | The immovable machines which are turned off south of an outside of an atomic city's back opening       |
+| 1127 | The immovable machines which are turned off south of an outside of an atomic city's back opening.      |
+| 1128 | The immovable machines which are turned off south of an outside of an atomic city's back openings      |
+| 1129 | The immovable machines which are turned off south of an outside of an atomic city's back openings.     |
+| 1130 | The immovable machines which are turned off south of an outside of atomic cities's back opening        |
+| 1131 | The immovable machines which are turned off south of an outside of atomic cities's back openings       |
+| 1132 | The immovable machines which are turned off south of an outside of atomic cities's back openings.      |
+| 1133 | The immovable machines which are turned off south of an outside of the atomic cities's back opening    |
+| 1134 | The immovable machines which are turned off south of an outside of the atomic cities's back openings   |
+| 1135 | The immovable machines which are turned off south of an outside of the atomic cities's back openings.  |
+| 1136 | The immovable machines which are turned off south of an outside of the atomic city's back opening      |
+| 1137 | The immovable machines which are turned off south of an outside of the atomic city's back openings     |
+| 1138 | The immovable machines which are turned off south of an outside of the atomic city's back openings.    |
+| 1139 | The immovable machines which are turned off south of the outside of an atomic city's back opening      |
+| 1140 | The immovable machines which are turned off south of the outside of an atomic city's back openings     |
+| 1141 | The immovable machines which are turned off south of the outside of atomic cities's back openings      |
+| 1142 | The immovable machines which are turned off south of the outside of the atomic cities's back opening   |
+| 1143 | The immovable machines which are turned off south of the outside of the atomic cities's back openings  |
+| 1144 | The immovable machines which are turned off south of the outside of the atomic city's back opening     |
+| 1145 | The immovable machines which are turned off south of the outside of the atomic city's back openings    |
+| 1146 | The immovable machines which are turned off south of the outsides of an atomic city' back opening      |
+| 1147 | The immovable machines which are turned off south of the outsides of an atomic city' back openings     |
+| 1148 | The immovable machines which are turned off south of the outsides of the atomic cities' back openings  |
+| 1149 | The immovable machines which south of an outside of an atomic city's back opening are turned off       |
+| 1150 | The immovable machines which south of an outside of an atomic city's back opening are turned off.      |
+| 1151 | The immovable machines which south of an outside of an atomic city's back openings are turned off      |
+| 1152 | The immovable machines which south of an outside of an atomic city's back openings are turned off.     |
+| 1153 | The immovable machines which south of an outside of atomic cities's back opening are turned off        |
+| 1154 | The immovable machines which south of an outside of atomic cities's back opening are turned off.       |
+| 1155 | The immovable machines which south of an outside of atomic cities's back openings are turned off       |
+| 1156 | The immovable machines which south of an outside of atomic cities's back openings are turned off.      |
+| 1157 | The immovable machines which south of an outside of the atomic cities's back opening are turned off    |
+| 1158 | The immovable machines which south of an outside of the atomic cities's back opening are turned off.   |
+| 1159 | The immovable machines which south of an outside of the atomic cities's back openings are turned off   |
+| 1160 | The immovable machines which south of an outside of the atomic cities's back openings are turned off.  |
+| 1161 | The immovable machines which south of an outside of the atomic city's back opening are turned off      |
+| 1162 | The immovable machines which south of an outside of the atomic city's back opening are turned off.     |
+| 1163 | The immovable machines which south of an outside of the atomic city's back openings are turned off     |
+| 1164 | The immovable machines which south of an outside of the atomic city's back openings are turned off.    |
+| 1165 | The immovable machines which south of the outside of an atomic city's back opening are turned off      |
+| 1166 | The immovable machines which south of the outside of an atomic city's back opening are turned off.     |
+| 1167 | The immovable machines which south of the outside of an atomic city's back openings are turned off     |
+| 1168 | The immovable machines which south of the outside of an atomic city's back openings are turned off.    |
+| 1169 | The immovable machines which south of the outside of atomic cities's back opening are turned off       |
+| 1170 | The immovable machines which south of the outside of atomic cities's back opening are turned off.      |
+| 1171 | The immovable machines which south of the outside of atomic cities's back openings are turned off      |
+| 1172 | The immovable machines which south of the outside of atomic cities's back openings are turned off.     |
+| 1173 | The immovable machines which south of the outside of the atomic cities's back opening are turned off   |
+| 1174 | The immovable machines which south of the outside of the atomic cities's back opening are turned off.  |
+| 1175 | The immovable machines which south of the outside of the atomic cities's back openings are turned off  |
+| 1176 | The immovable machines which south of the outside of the atomic cities's back openings are turned off. |
+| 1177 | The immovable machines which south of the outside of the atomic city's back opening are turned off     |
+| 1178 | The immovable machines which south of the outside of the atomic city's back opening are turned off.    |
+| 1179 | The immovable machines which south of the outside of the atomic city's back openings are turned off    |
+| 1180 | The immovable machines which south of the outside of the atomic city's back openings are turned off.   |
+| 1181 | The immovable machines which south of the outsides of an atomic city' back opening are turned off      |
+| 1182 | The immovable machines which south of the outsides of an atomic city' back opening are turned off.     |
+| 1183 | The immovable machines which south of the outsides of an atomic city' back openings are turned off     |
+| 1184 | The immovable machines which south of the outsides of an atomic city' back openings are turned off.    |
+| 1185 | The immovable machines which south of the outsides of atomic cities' back opening are turned off       |
+| 1186 | The immovable machines which south of the outsides of atomic cities' back opening are turned off.      |
+| 1187 | The immovable machines which south of the outsides of atomic cities' back openings are turned off      |
+| 1188 | The immovable machines which south of the outsides of atomic cities' back openings are turned off.     |
+| 1189 | The immovable machines which south of the outsides of the atomic cities' back opening are turned off   |
+| 1190 | The immovable machines which south of the outsides of the atomic cities' back opening are turned off.  |
+| 1191 | The immovable machines which south of the outsides of the atomic cities' back openings are turned off  |
+| 1192 | The immovable machines which south of the outsides of the atomic cities' back openings are turned off. |
+| 1193 | The immovable machines which south of the outsides of the atomic city' back opening are turned off     |
+| 1194 | The immovable machines which south of the outsides of the atomic city' back opening are turned off.    |
+| 1195 | The immovable machines which south of the outsides of the atomic city' back openings are turned off    |
+| 1196 | The immovable machines which south of the outsides of the atomic city' back openings are turned off.   |
+| 1197 | The immovable machines which, south of an outside of an atomic city's back opening are turned off      |
+| 1198 | The immovable machines which, south of an outside of an atomic city's back opening are turned off.     |
+| 1199 | The immovable machines which, south of an outside of an atomic city's back openings are turned off     |
+| 1200 | The immovable machines which, south of an outside of an atomic city's back openings are turned off.    |
+| 1201 | The immovable machines which, south of an outside of atomic cities's back opening are turned off       |
+| 1202 | The immovable machines which, south of an outside of atomic cities's back opening are turned off.      |
+| 1203 | The immovable machines which, south of an outside of atomic cities's back openings are turned off      |
+| 1204 | The immovable machines which, south of an outside of atomic cities's back openings are turned off.     |
+| 1205 | The immovable machines which, south of an outside of the atomic cities's back opening are turned off   |
+| 1206 | The immovable machines which, south of an outside of the atomic cities's back opening are turned off.  |
+| 1207 | The immovable machines which, south of an outside of the atomic cities's back openings are turned off  |
+| 1208 | The immovable machines which, south of an outside of the atomic cities's back openings are turned off. |
+| 1209 | The immovable machines which, south of an outside of the atomic city's back opening are turned off     |
+| 1210 | The immovable machines which, south of an outside of the atomic city's back opening are turned off.    |
+| 1211 | The immovable machines which, south of an outside of the atomic city's back openings are turned off    |
+| 1212 | The immovable machines which, south of an outside of the atomic city's back openings are turned off.   |
+| 1213 | The immovable machines who are turned off south of an outside of an atomic city's back opening         |
+| 1214 | The immovable machines who are turned off south of an outside of an atomic city's back opening.        |
+| 1215 | The immovable machines who are turned off south of an outside of an atomic city's back openings        |
+| 1216 | The immovable machines who are turned off south of an outside of an atomic city's back openings.       |
+| 1217 | The immovable machines who are turned off south of an outside of atomic cities's back opening          |
+| 1218 | The immovable machines who are turned off south of an outside of atomic cities's back openings         |
+| 1219 | The immovable machines who are turned off south of an outside of atomic cities's back openings.        |
+| 1220 | The immovable machines who are turned off south of an outside of the atomic cities's back opening      |
+| 1221 | The immovable machines who are turned off south of an outside of the atomic cities's back openings     |
+| 1222 | The immovable machines who are turned off south of an outside of the atomic cities's back openings.    |
+| 1223 | The immovable machines who are turned off south of an outside of the atomic city's back opening        |
+| 1224 | The immovable machines who are turned off south of an outside of the atomic city's back openings       |
+| 1225 | The immovable machines who are turned off south of an outside of the atomic city's back openings.      |
+| 1226 | The immovable machines who are turned off south of the outside of an atomic city's back opening        |
+| 1227 | The immovable machines who are turned off south of the outside of an atomic city's back openings       |
+| 1228 | The immovable machines who are turned off south of the outside of atomic cities's back openings        |
+| 1229 | The immovable machines who are turned off south of the outside of the atomic cities's back opening     |
+| 1230 | The immovable machines who are turned off south of the outside of the atomic cities's back openings    |
+| 1231 | The immovable machines who are turned off south of the outside of the atomic city's back opening       |
+| 1232 | The immovable machines who are turned off south of the outside of the atomic city's back openings      |
+| 1233 | The immovable machines who are turned off south of the outsides of an atomic city' back opening        |
+| 1234 | The immovable machines who are turned off south of the outsides of an atomic city' back openings       |
+| 1235 | The immovable machines who are turned off south of the outsides of the atomic cities' back openings    |
+| 1236 | The immovable machines who are turned off, south of an outside of an atomic city's back openings       |
+| 1237 | The immovable machines who south of an outside of an atomic city's back opening are turned off         |
+| 1238 | The immovable machines who south of an outside of an atomic city's back opening are turned off.        |
+| 1239 | The immovable machines who south of an outside of an atomic city's back openings are turned off        |
+| 1240 | The immovable machines who south of an outside of an atomic city's back openings are turned off.       |
+| 1241 | The immovable machines who south of an outside of atomic cities's back opening are turned off          |
+| 1242 | The immovable machines who south of an outside of atomic cities's back opening are turned off.         |
+| 1243 | The immovable machines who south of an outside of atomic cities's back openings are turned off         |
+| 1244 | The immovable machines who south of an outside of atomic cities's back openings are turned off.        |
+| 1245 | The immovable machines who south of an outside of the atomic cities's back opening are turned off      |
+| 1246 | The immovable machines who south of an outside of the atomic cities's back opening are turned off.     |
+| 1247 | The immovable machines who south of an outside of the atomic cities's back openings are turned off     |
+| 1248 | The immovable machines who south of an outside of the atomic cities's back openings are turned off.    |
+| 1249 | The immovable machines who south of an outside of the atomic city's back opening are turned off        |
+| 1250 | The immovable machines who south of an outside of the atomic city's back opening are turned off.       |
+| 1251 | The immovable machines who south of an outside of the atomic city's back openings are turned off       |
+| 1252 | The immovable machines who south of an outside of the atomic city's back openings are turned off.      |
+| 1253 | The immovable machines who south of the outside of an atomic city's back opening are turned off        |
+| 1254 | The immovable machines who south of the outside of an atomic city's back opening are turned off.       |
+| 1255 | The immovable machines who south of the outside of an atomic city's back openings are turned off       |
+| 1256 | The immovable machines who south of the outside of an atomic city's back openings are turned off.      |
+| 1257 | The immovable machines who south of the outside of atomic cities's back opening are turned off         |
+| 1258 | The immovable machines who south of the outside of atomic cities's back opening are turned off.        |
+| 1259 | The immovable machines who south of the outside of atomic cities's back openings are turned off        |
+| 1260 | The immovable machines who south of the outside of atomic cities's back openings are turned off.       |
+| 1261 | The immovable machines who south of the outside of the atomic cities's back opening are turned off     |
+| 1262 | The immovable machines who south of the outside of the atomic cities's back opening are turned off.    |
+| 1263 | The immovable machines who south of the outside of the atomic cities's back openings are turned off    |
+| 1264 | The immovable machines who south of the outside of the atomic cities's back openings are turned off.   |
+| 1265 | The immovable machines who south of the outside of the atomic city's back opening are turned off       |
+| 1266 | The immovable machines who south of the outside of the atomic city's back opening are turned off.      |
+| 1267 | The immovable machines who south of the outside of the atomic city's back openings are turned off      |
+| 1268 | The immovable machines who south of the outside of the atomic city's back openings are turned off.     |
+| 1269 | The immovable machines who south of the outsides of an atomic city' back opening are turned off        |
+| 1270 | The immovable machines who south of the outsides of an atomic city' back opening are turned off.       |
+| 1271 | The immovable machines who south of the outsides of an atomic city' back openings are turned off       |
+| 1272 | The immovable machines who south of the outsides of an atomic city' back openings are turned off.      |
+| 1273 | The immovable machines who south of the outsides of atomic cities' back opening are turned off         |
+| 1274 | The immovable machines who south of the outsides of atomic cities' back opening are turned off.        |
+| 1275 | The immovable machines who south of the outsides of atomic cities' back openings are turned off        |
+| 1276 | The immovable machines who south of the outsides of atomic cities' back openings are turned off.       |
+| 1277 | The immovable machines who south of the outsides of the atomic cities' back opening are turned off     |
+| 1278 | The immovable machines who south of the outsides of the atomic cities' back opening are turned off.    |
+| 1279 | The immovable machines who south of the outsides of the atomic cities' back openings are turned off    |
+| 1280 | The immovable machines who south of the outsides of the atomic cities' back openings are turned off.   |
+| 1281 | The immovable machines who south of the outsides of the atomic city' back opening are turned off       |
+| 1282 | The immovable machines who south of the outsides of the atomic city' back opening are turned off.      |
+| 1283 | The immovable machines who south of the outsides of the atomic city' back openings are turned off      |
+| 1284 | The immovable machines who south of the outsides of the atomic city' back openings are turned off.     |
+| 1285 | The immovable machines who, south of an outside of an atomic city's back opening are turned off        |
+| 1286 | The immovable machines who, south of an outside of an atomic city's back opening are turned off.       |
+| 1287 | The immovable machines who, south of an outside of an atomic city's back openings are turned off       |
+| 1288 | The immovable machines who, south of an outside of an atomic city's back openings are turned off.      |
+| 1289 | The immovable machines who, south of an outside of atomic cities's back opening are turned off         |
+| 1290 | The immovable machines who, south of an outside of atomic cities's back opening are turned off.        |
+| 1291 | The immovable machines who, south of an outside of atomic cities's back openings are turned off        |
+| 1292 | The immovable machines who, south of an outside of atomic cities's back openings are turned off.       |
+| 1293 | The immovable machines who, south of an outside of the atomic cities's back opening are turned off     |
+| 1294 | The immovable machines who, south of an outside of the atomic cities's back opening are turned off.    |
+| 1295 | The immovable machines who, south of an outside of the atomic cities's back openings are turned off    |
+| 1296 | The immovable machines who, south of an outside of the atomic cities's back openings are turned off.   |
+| 1297 | The immovable machines who, south of an outside of the atomic city's back opening are turned off       |
+| 1298 | The immovable machines who, south of an outside of the atomic city's back opening are turned off.      |
+| 1299 | The immovable machines who, south of an outside of the atomic city's back openings are turned off      |
+| 1300 | The immovable machines who, south of an outside of the atomic city's back openings are turned off.     |
+| 1301 | The immovable machines, that south of an outside of an atomic city's back opening are turned off.      |
+| 1302 | The immovable machines, that south of an outside of an atomic city's back openings are turned off.     |
+| 1303 | The immovable machines, that south of an outside of the atomic cities's back opening are turned off.   |
+| 1304 | The immovable machines, that south of an outside of the atomic cities's back openings are turned off.  |
+| 1305 | The immovable machines, that south of an outside of the atomic city's back openings are turned off.    |
++------+--------------------------------------------------------------------------------------------------------+
+

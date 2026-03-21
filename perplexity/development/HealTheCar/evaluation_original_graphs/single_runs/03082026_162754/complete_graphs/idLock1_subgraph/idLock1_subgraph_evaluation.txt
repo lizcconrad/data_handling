@@ -1,0 +1,318 @@
+GRAPH NAME: idLock1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++---------------------------------------------------------------+
+|                          GOLD OUTPUTS                         |
++--------------------------------------------------+------------+
+| Gold Output                                      | Generated? |
++--------------------------------------------------+------------+
+| the locked lock west of the immovable green bush | True       |
++--------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE METRICS                                 |
++---------+--------------+---------------+------------------+-------------------+
+| Node    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------+--------------+---------------+------------------+-------------------+
+| idLock1 | True         | True          | Covered          | Included          |
+| locked  | True         | True          | Covered          | Included          |
+| idBush1 | True         | True          | Covered          | Included          |
+| green   | True         | True          | Covered          | Included          |
+| yes     | True         | True          | Covered          | Included          |
++---------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent  | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | True         | True          | Covered          | Included          |
+| isWestOf                   | idLock1 | idBush1 | True         | True          | Covered          | Included          |
+| idBush1_prop_idColor       | idBush1 | green   | True         | True          | Covered          | Included          |
+| idBush1_prop_idImmovable   | idBush1 | yes     | True         | True          | Covered          | Included          |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h551                                                                      |
+|               |   INDEX: x550                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h578 ARG0: i575 ARG1: u576 ARG2: u577 ]               |
+|               |           [ def_implicit_q LBL: h589 ARG0: x586 RSTR: h587 BODY: h588 ]          |
+|               |           [ _west_a_1 LBL: h574 ARG0: i571 ARG1: x572 ARG2: u573 ]               |
+|               |           [ def_udef_a_q LBL: h584 ARG0: x581 RSTR: h582 BODY: h583 ]            |
+|               |           [ _immovable_a_1 LBL: h570 ARG0: e568 ARG1: u569 ]                     |
+|               |           [ _green_a_2 LBL: h560 ARG0: i558 ARG1: i559 ]                         |
+|               |           [ _bush_n_1 LBL: h557 ARG0: x556 ]                                     |
+|               |           [ place_n LBL: h580 ARG0: x579 ]                                       |
+|               |           [ _lock_v_cause LBL: h555 ARG0: e552 [ e PERF: - ] ARG1: i553 ARG2:    |
+|               | i554 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h551 ARG0: x550 ] >                                   |
+|               |   HCONS: < h582 qeq h557 h587 qeq h580 >                                         |
+|               |   ICONS: < e552 topic i554 >                                                     |
+|               |   EQS: < h560 eq h557 i559 eq x556 h570 eq h557 u569 eq x556 x581 eq x556 h574   |
+|               | eq h585 u573 eq x581 h574 eq h580 x572 eq x579 x586 eq x579 h578 eq h590 u577 eq |
+|               | x586 h555 eq h551 i554 eq x550 h578 eq h551 u576 eq x550 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h551                                                                      |
+|               |   INDEX: x550                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h551 ARG0: i575 ARG1: x550 ARG2: x572 ]               |
+|               |           [ def_implicit_q LBL: h589 ARG0: x572 RSTR: h587 BODY: h588 ]          |
+|               |           [ _west_a_1 LBL: h574 ARG0: i571 ARG1: x572 ARG2: x556 ]               |
+|               |           [ def_udef_a_q LBL: h584 ARG0: x556 RSTR: h582 BODY: h583 ]            |
+|               |           [ _immovable_a_1 LBL: h557 ARG0: e568 ARG1: x556 ]                     |
+|               |           [ _green_a_2 LBL: h557 ARG0: i558 ARG1: x556 ]                         |
+|               |           [ _bush_n_1 LBL: h557 ARG0: x556 ]                                     |
+|               |           [ place_n LBL: h574 ARG0: x572 ]                                       |
+|               |           [ _lock_v_cause LBL: h551 ARG0: e552 [ e PERF: - ] ARG1: i553 ARG2:    |
+|               | x550 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h551 ARG0: x550 ] >                                   |
+|               |   HCONS: < h582 qeq h557 h587 qeq h574 >                                         |
+|               |   ICONS: < e552 topic x550 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h599                                                                      |
+|               |   INDEX: e596                                                                    |
+|               |   RELS: < [ unknown LBL: h595 ARG: x550 ARG0: e596 ]                             |
+|               |           [ def_udef_a_q LBL: h594 ARG0: x550 RSTR: h592 BODY: h593 ]            |
+|               |           [ loc_nonsp LBL: h551 ARG0: i575 ARG1: x550 ARG2: x572 ]               |
+|               |           [ def_implicit_q LBL: h589 ARG0: x572 RSTR: h587 BODY: h588 ]          |
+|               |           [ _west_a_1 LBL: h574 ARG0: i571 ARG1: x572 ARG2: x556 ]               |
+|               |           [ def_udef_a_q LBL: h584 ARG0: x556 RSTR: h582 BODY: h583 ]            |
+|               |           [ _immovable_a_1 LBL: h557 ARG0: e568 ARG1: x556 ]                     |
+|               |           [ _green_a_2 LBL: h557 ARG0: i558 ARG1: x556 ]                         |
+|               |           [ _bush_n_1 LBL: h557 ARG0: x556 ]                                     |
+|               |           [ place_n LBL: h574 ARG0: x572 ]                                       |
+|               |           [ _lock_v_cause LBL: h551 ARG0: e552 [ e PERF: - ] ARG1: i553 ARG2:    |
+|               | x550 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h551 ARG0: x550 ] >                                   |
+|               |   HCONS: < h582 qeq h557 h587 qeq h574 h592 qeq h551 h599 qeq h595 >             |
+|               |   ICONS: < e552 topic x550 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                    |
++---------+--------------------------------------------------------------------------+
+| Node    | Generated SEMENT                                                         |
++---------+--------------------------------------------------------------------------+
+| idLock1 | [ TOP: h551                                                              |
+|         |   INDEX: x550                                                            |
+|         |   RELS: < [ _lock_n_1 LBL: h551 ARG0: x550 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| locked  | [ TOP: h555                                                              |
+|         |   INDEX: e552                                                            |
+|         |   RELS: < [ _lock_v_cause LBL: h555 ARG0: e552 ARG1: i553 ARG2: i554 ] > |
+|         |   SLOTS: < ARG1: i553 ARG2: i554 > ]                                     |
++---------+--------------------------------------------------------------------------+
+| idBush1 | [ TOP: h557                                                              |
+|         |   INDEX: x556                                                            |
+|         |   RELS: < [ _bush_n_1 LBL: h557 ARG0: x556 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| green   | [ TOP: h560                                                              |
+|         |   INDEX: i558                                                            |
+|         |   RELS: < [ _green_a_2 LBL: h560 ARG0: i558 ARG1: i559 ] >               |
+|         |   SLOTS: < ARG1: i559 > ]                                                |
++---------+--------------------------------------------------------------------------+
+| yes     | [ TOP: h564                                                              |
+|         |   INDEX: e561                                                            |
+|         |   RELS: < [ _true_a_of LBL: h564 ARG0: e561 ARG1: u562 ARG2: u563 ] >    |
+|         |   SLOTS: < ARG1: u562 ARG2: u563 > ]                                     |
++---------+--------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| Edge                       | Parent  | Child   | Generated SEMENT                                                                 |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | [ TOP: h551                                                                      |
+|                            |         |         |   INDEX: x550                                                                    |
+|                            |         |         |   RELS: < [ _lock_v_cause LBL: h555 ARG0: e552 [ e PERF: - ] ARG1: i553 ARG2:    |
+|                            |         |         | i554 ]                                                                           |
+|                            |         |         |           [ _lock_n_1 LBL: h551 ARG0: x550 ] >                                   |
+|                            |         |         |   ICONS: < e552 topic i554 >                                                     |
+|                            |         |         |   EQS: < h555 eq h551 i554 eq x550 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| isWestOf                   | idLock1 | idBush1 | [ TOP: h551                                                                      |
+|                            |         |         |   INDEX: x550                                                                    |
+|                            |         |         |   RELS: < [ loc_nonsp LBL: h578 ARG0: i575 ARG1: u576 ARG2: u577 ]               |
+|                            |         |         |           [ def_implicit_q LBL: h589 ARG0: x586 RSTR: h587 BODY: h588 ]          |
+|                            |         |         |           [ _west_a_1 LBL: h574 ARG0: i571 ARG1: x572 ARG2: u573 ]               |
+|                            |         |         |           [ def_udef_a_q LBL: h584 ARG0: x581 RSTR: h582 BODY: h583 ]            |
+|                            |         |         |           [ _immovable_a_1 LBL: h570 ARG0: e568 ARG1: u569 ]                     |
+|                            |         |         |           [ _green_a_2 LBL: h560 ARG0: i558 ARG1: i559 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h557 ARG0: x556 ]                                     |
+|                            |         |         |           [ place_n LBL: h580 ARG0: x579 ]                                       |
+|                            |         |         |           [ _lock_v_cause LBL: h555 ARG0: e552 [ e PERF: - ] ARG1: i553 ARG2:    |
+|                            |         |         | i554 ]                                                                           |
+|                            |         |         |           [ _lock_n_1 LBL: h551 ARG0: x550 ] >                                   |
+|                            |         |         |   HCONS: < h582 qeq h557 h587 qeq h580 >                                         |
+|                            |         |         |   ICONS: < e552 topic i554 >                                                     |
+|                            |         |         |   EQS: < h560 eq h557 i559 eq x556 h570 eq h557 u569 eq x556 x581 eq x556 h574   |
+|                            |         |         | eq h585 u573 eq x581 h574 eq h580 x572 eq x579 x586 eq x579 h578 eq h590 u577 eq |
+|                            |         |         | x586 h555 eq h551 i554 eq x550 h578 eq h551 u576 eq x550 > ]                     |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idBush1_prop_idColor       | idBush1 | green   | [ TOP: h557                                                                      |
+|                            |         |         |   INDEX: x556                                                                    |
+|                            |         |         |   RELS: < [ _green_a_2 LBL: h560 ARG0: i558 ARG1: i559 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h557 ARG0: x556 ] >                                   |
+|                            |         |         |   EQS: < h560 eq h557 i559 eq x556 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idBush1_prop_idImmovable   | idBush1 | yes     | [ TOP: h557                                                                      |
+|                            |         |         |   INDEX: x556                                                                    |
+|                            |         |         |   RELS: < [ _immovable_a_1 LBL: h570 ARG0: e568 ARG1: u569 ]                     |
+|                            |         |         |           [ _green_a_2 LBL: h560 ARG0: i558 ARG1: i559 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h557 ARG0: x556 ] >                                   |
+|                            |         |         |   EQS: < h560 eq h557 i559 eq x556 h570 eq h557 u569 eq x556 > ]                 |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------+
+|                   GENERATED ENGLISH TEXT                   |
++-----+------------------------------------------------------+
+| #   | Generated Text                                       |
++-----+------------------------------------------------------+
+| 1   | A locked lock west of a green immovable bush         |
+| 2   | A locked lock west of a green immovable bush.        |
+| 3   | A locked lock west of an immovable green bush        |
+| 4   | A locked lock west of an immovable green bush.       |
+| 5   | A locked lock west of green immovable bushes         |
+| 6   | A locked lock west of green immovable bushes.        |
+| 7   | A locked lock west of immovable green bushes         |
+| 8   | A locked lock west of immovable green bushes.        |
+| 9   | A locked lock west of the green immovable bush       |
+| 10  | A locked lock west of the green immovable bush.      |
+| 11  | A locked lock west of the green immovable bushes     |
+| 12  | A locked lock west of the green immovable bushes.    |
+| 13  | A locked lock west of the immovable green bush       |
+| 14  | A locked lock west of the immovable green bush.      |
+| 15  | A locked lock west of the immovable green bushes     |
+| 16  | A locked lock west of the immovable green bushes.    |
+| 17  | A locked lock, west of a green immovable bush        |
+| 18  | A locked lock, west of an immovable green bush       |
+| 19  | A locked lock, west of green immovable bushes        |
+| 20  | A locked lock, west of immovable green bushes        |
+| 21  | A locked lock, west of the green immovable bush      |
+| 22  | A locked lock, west of the green immovable bushes    |
+| 23  | A locked lock, west of the immovable green bush      |
+| 24  | A locked lock, west of the immovable green bushes    |
+| 25  | Locked lock west of a green immovable bush           |
+| 26  | Locked lock west of a green immovable bush.          |
+| 27  | Locked lock west of an immovable green bush          |
+| 28  | Locked lock west of an immovable green bush.         |
+| 29  | Locked lock west of green immovable bushes           |
+| 30  | Locked lock west of green immovable bushes.          |
+| 31  | Locked lock west of immovable green bushes           |
+| 32  | Locked lock west of immovable green bushes.          |
+| 33  | Locked lock west of the green immovable bush         |
+| 34  | Locked lock west of the green immovable bush.        |
+| 35  | Locked lock west of the green immovable bushes       |
+| 36  | Locked lock west of the green immovable bushes.      |
+| 37  | Locked lock west of the immovable green bush         |
+| 38  | Locked lock west of the immovable green bush.        |
+| 39  | Locked lock west of the immovable green bushes       |
+| 40  | Locked lock west of the immovable green bushes.      |
+| 41  | Locked lock, west of a green immovable bush          |
+| 42  | Locked lock, west of an immovable green bush         |
+| 43  | Locked lock, west of green immovable bushes          |
+| 44  | Locked lock, west of immovable green bushes          |
+| 45  | Locked lock, west of the green immovable bush        |
+| 46  | Locked lock, west of the green immovable bushes      |
+| 47  | Locked lock, west of the immovable green bush        |
+| 48  | Locked lock, west of the immovable green bushes      |
+| 49  | Locked locks west of a green immovable bush          |
+| 50  | Locked locks west of a green immovable bush.         |
+| 51  | Locked locks west of an immovable green bush         |
+| 52  | Locked locks west of an immovable green bush.        |
+| 53  | Locked locks west of green immovable bushes          |
+| 54  | Locked locks west of green immovable bushes.         |
+| 55  | Locked locks west of immovable green bushes          |
+| 56  | Locked locks west of immovable green bushes.         |
+| 57  | Locked locks west of the green immovable bush        |
+| 58  | Locked locks west of the green immovable bush.       |
+| 59  | Locked locks west of the green immovable bushes      |
+| 60  | Locked locks west of the green immovable bushes.     |
+| 61  | Locked locks west of the immovable green bush        |
+| 62  | Locked locks west of the immovable green bush.       |
+| 63  | Locked locks west of the immovable green bushes      |
+| 64  | Locked locks west of the immovable green bushes.     |
+| 65  | Locked locks, west of a green immovable bush         |
+| 66  | Locked locks, west of an immovable green bush        |
+| 67  | Locked locks, west of green immovable bushes         |
+| 68  | Locked locks, west of immovable green bushes         |
+| 69  | Locked locks, west of the green immovable bush       |
+| 70  | Locked locks, west of the green immovable bushes     |
+| 71  | Locked locks, west of the immovable green bush       |
+| 72  | Locked locks, west of the immovable green bushes     |
+| 73  | The locked lock west of a green immovable bush       |
+| 74  | The locked lock west of a green immovable bush.      |
+| 75  | The locked lock west of an immovable green bush      |
+| 76  | The locked lock west of an immovable green bush.     |
+| 77  | The locked lock west of green immovable bushes       |
+| 78  | The locked lock west of green immovable bushes.      |
+| 79  | The locked lock west of immovable green bushes       |
+| 80  | The locked lock west of immovable green bushes.      |
+| 81  | The locked lock west of the green immovable bush     |
+| 82  | The locked lock west of the green immovable bush.    |
+| 83  | The locked lock west of the green immovable bushes   |
+| 84  | The locked lock west of the green immovable bushes.  |
+| 85  | The locked lock west of the immovable green bush     |
+| 86  | The locked lock west of the immovable green bush.    |
+| 87  | The locked lock west of the immovable green bushes   |
+| 88  | The locked lock west of the immovable green bushes.  |
+| 89  | The locked lock, west of a green immovable bush      |
+| 90  | The locked lock, west of an immovable green bush     |
+| 91  | The locked lock, west of green immovable bushes      |
+| 92  | The locked lock, west of immovable green bushes      |
+| 93  | The locked lock, west of the green immovable bush    |
+| 94  | The locked lock, west of the green immovable bushes  |
+| 95  | The locked lock, west of the immovable green bush    |
+| 96  | The locked lock, west of the immovable green bushes  |
+| 97  | The locked locks west of a green immovable bush      |
+| 98  | The locked locks west of a green immovable bush.     |
+| 99  | The locked locks west of an immovable green bush     |
+| 100 | The locked locks west of an immovable green bush.    |
+| 101 | The locked locks west of green immovable bushes      |
+| 102 | The locked locks west of green immovable bushes.     |
+| 103 | The locked locks west of immovable green bushes      |
+| 104 | The locked locks west of immovable green bushes.     |
+| 105 | The locked locks west of the green immovable bush    |
+| 106 | The locked locks west of the green immovable bush.   |
+| 107 | The locked locks west of the green immovable bushes  |
+| 108 | The locked locks west of the green immovable bushes. |
+| 109 | The locked locks west of the immovable green bush    |
+| 110 | The locked locks west of the immovable green bush.   |
+| 111 | The locked locks west of the immovable green bushes  |
+| 112 | The locked locks west of the immovable green bushes. |
+| 113 | The locked locks, west of a green immovable bush     |
+| 114 | The locked locks, west of an immovable green bush    |
+| 115 | The locked locks, west of green immovable bushes     |
+| 116 | The locked locks, west of immovable green bushes     |
+| 117 | The locked locks, west of the green immovable bush   |
+| 118 | The locked locks, west of the green immovable bushes |
+| 119 | The locked locks, west of the immovable green bush   |
+| 120 | The locked locks, west of the immovable green bushes |
++-----+------------------------------------------------------+
+

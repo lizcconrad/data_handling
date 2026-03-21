@@ -1,0 +1,1459 @@
+GRAPH NAME: idMachineDoor_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1215  |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------+
+|                                     GOLD OUTPUTS                                    |
++------------------------------------------------------------------------+------------+
+| Gold Output                                                            | Generated? |
++------------------------------------------------------------------------+------------+
+| the closed locked machine door north of the machine that is turned off | True       |
++------------------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------+
+|                                     NODE METRICS                                    |
++---------------+--------------+---------------+------------------+-------------------+
+| Node          | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------+--------------+---------------+------------------+-------------------+
+| idMachineDoor | True         | True          | Covered          | Included          |
+| closed        | True         | True          | Covered          | Included          |
+| locked        | True         | True          | Covered          | Included          |
+| idMachine1    | True         | True          | Covered          | Included          |
+| off           | True         | True          | Covered          | Included          |
++---------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+|                                                             EDGE METRICS                                                            |
++----------------------------------+---------------+------------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent        | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+---------------+------------+--------------+---------------+------------------+-------------------+
+| idMachineDoor_prop_idOpenState   | idMachineDoor | closed     | True         | True          | Covered          | Included          |
+| idMachineDoor_prop_idLockedState | idMachineDoor | locked     | True         | True          | Covered          | Included          |
+| isNorthOf                        | idMachineDoor | idMachine1 | True         | True          | Covered          | Included          |
+| idMachine1_prop_idPowerState     | idMachine1    | off        | True         | True          | Covered          | Included          |
++----------------------------------+---------------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h4235                                                                     |
+|               |   INDEX: x4234                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4267 ARG0: e4264 ARG1: u4265 ARG2: x4266 ]           |
+|               |           [ def_implicit_q LBL: h4278 ARG0: x4275 RSTR: h4276 BODY: h4277 ]      |
+|               |           [ _north_a_1 LBL: h4263 ARG0: i4260 ARG1: x4261 ARG2: u4262 ]          |
+|               |           [ def_udef_a_q LBL: h4273 ARG0: x4270 RSTR: h4271 BODY: h4272 ]        |
+|               |           [ _turn_v_off LBL: h4259 ARG0: e4256 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i4257 ARG2: i4258 ]                                                              |
+|               |           [ _machine_n_1 LBL: h4255 ARG0: x4254 ]                                |
+|               |           [ place_n LBL: h4269 ARG0: x4268 ]                                     |
+|               |           [ _lock_v_cause LBL: h4253 ARG0: e4250 [ e PERF: - ] ARG1: i4251 ARG2: |
+|               | i4252 ]                                                                          |
+|               |           [ _closed_a_1 LBL: h4249 ARG0: e4247 ARG1: u4248 ]                     |
+|               |           [ compound LBL: h4246 ARG0: e4243 [ e PROG: - ] ARG1: u4244 ARG2:      |
+|               | u4245 ]                                                                          |
+|               |           [ udef_q LBL: h4241 ARG0: x4238 RSTR: h4239 BODY: h4240 ]              |
+|               |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|               |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|               |   HCONS: < h4271 qeq h4255 h4276 qeq h4269 h4239 qeq h4237 >                     |
+|               |   ICONS: < e4256 topic i4258 e4250 topic i4252 >                                 |
+|               |   EQS: < h4259 eq h4255 i4258 eq x4254 x4270 eq x4254 h4263 eq h4274 u4262 eq    |
+|               | x4270 h4263 eq h4269 x4261 eq x4268 x4275 eq x4268 h4267 eq h4279 x4266 eq x4275 |
+|               | x4238 eq x4236 h4246 eq h4242 u4245 eq x4238 h4246 eq h4235 u4244 eq x4234 h4249 |
+|               | eq h4235 u4248 eq x4234 h4253 eq h4235 i4252 eq x4234 h4267 eq h4235 u4265 eq    |
+|               | x4234 > ]                                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h4235                                                                     |
+|               |   INDEX: x4234                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4235 ARG0: e4264 ARG1: x4234 ARG2: x4261 ]           |
+|               |           [ def_implicit_q LBL: h4278 ARG0: x4261 RSTR: h4276 BODY: h4277 ]      |
+|               |           [ _north_a_1 LBL: h4263 ARG0: i4260 ARG1: x4261 ARG2: x4254 ]          |
+|               |           [ def_udef_a_q LBL: h4273 ARG0: x4254 RSTR: h4271 BODY: h4272 ]        |
+|               |           [ _turn_v_off LBL: h4255 ARG0: e4256 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i4257 ARG2: x4254 ]                                                              |
+|               |           [ _machine_n_1 LBL: h4255 ARG0: x4254 ]                                |
+|               |           [ place_n LBL: h4263 ARG0: x4261 ]                                     |
+|               |           [ _lock_v_cause LBL: h4235 ARG0: e4250 [ e PERF: - ] ARG1: i4251 ARG2: |
+|               | x4234 ]                                                                          |
+|               |           [ _closed_a_1 LBL: h4235 ARG0: e4247 ARG1: x4234 ]                     |
+|               |           [ compound LBL: h4235 ARG0: e4243 [ e PROG: - ] ARG1: x4234 ARG2:      |
+|               | x4236 ]                                                                          |
+|               |           [ udef_q LBL: h4241 ARG0: x4236 RSTR: h4239 BODY: h4240 ]              |
+|               |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|               |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|               |   HCONS: < h4271 qeq h4255 h4276 qeq h4263 h4239 qeq h4237 >                     |
+|               |   ICONS: < e4256 topic x4254 e4250 topic x4234 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h4288                                                                     |
+|               |   INDEX: e4285                                                                   |
+|               |   RELS: < [ unknown LBL: h4284 ARG: x4234 ARG0: e4285 ]                          |
+|               |           [ def_udef_a_q LBL: h4283 ARG0: x4234 RSTR: h4281 BODY: h4282 ]        |
+|               |           [ loc_nonsp LBL: h4235 ARG0: e4264 ARG1: x4234 ARG2: x4261 ]           |
+|               |           [ def_implicit_q LBL: h4278 ARG0: x4261 RSTR: h4276 BODY: h4277 ]      |
+|               |           [ _north_a_1 LBL: h4263 ARG0: i4260 ARG1: x4261 ARG2: x4254 ]          |
+|               |           [ def_udef_a_q LBL: h4273 ARG0: x4254 RSTR: h4271 BODY: h4272 ]        |
+|               |           [ _turn_v_off LBL: h4255 ARG0: e4256 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i4257 ARG2: x4254 ]                                                              |
+|               |           [ _machine_n_1 LBL: h4255 ARG0: x4254 ]                                |
+|               |           [ place_n LBL: h4263 ARG0: x4261 ]                                     |
+|               |           [ _lock_v_cause LBL: h4235 ARG0: e4250 [ e PERF: - ] ARG1: i4251 ARG2: |
+|               | x4234 ]                                                                          |
+|               |           [ _closed_a_1 LBL: h4235 ARG0: e4247 ARG1: x4234 ]                     |
+|               |           [ compound LBL: h4235 ARG0: e4243 [ e PROG: - ] ARG1: x4234 ARG2:      |
+|               | x4236 ]                                                                          |
+|               |           [ udef_q LBL: h4241 ARG0: x4236 RSTR: h4239 BODY: h4240 ]              |
+|               |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|               |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|               |   HCONS: < h4271 qeq h4255 h4276 qeq h4263 h4239 qeq h4237 h4281 qeq h4235 h4288 |
+|               | qeq h4284 >                                                                      |
+|               |   ICONS: < e4256 topic x4254 e4250 topic x4234 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                           NODE SEMENTS                                           |
++---------------+----------------------------------------------------------------------------------+
+| Node          | Generated SEMENT                                                                 |
++---------------+----------------------------------------------------------------------------------+
+| idMachineDoor | [ TOP: h4235                                                                     |
+|               |   INDEX: x4234                                                                   |
+|               |   RELS: < [ compound LBL: h4246 ARG0: e4243 [ e PROG: - ] ARG1: u4244 ARG2:      |
+|               | u4245 ]                                                                          |
+|               |           [ udef_q LBL: h4241 ARG0: x4238 RSTR: h4239 BODY: h4240 ]              |
+|               |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|               |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|               |   HCONS: < h4239 qeq h4237 >                                                     |
+|               |   EQS: < x4238 eq x4236 h4246 eq h4242 u4245 eq x4238 h4246 eq h4235 u4244 eq    |
+|               | x4234 > ]                                                                        |
++---------------+----------------------------------------------------------------------------------+
+| closed        | [ TOP: h4249                                                                     |
+|               |   INDEX: e4247                                                                   |
+|               |   RELS: < [ _closed_a_1 LBL: h4249 ARG0: e4247 ARG1: u4248 ] >                   |
+|               |   SLOTS: < ARG1: u4248 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| locked        | [ TOP: h4253                                                                     |
+|               |   INDEX: e4250                                                                   |
+|               |   RELS: < [ _lock_v_cause LBL: h4253 ARG0: e4250 ARG1: i4251 ARG2: i4252 ] >     |
+|               |   SLOTS: < ARG1: i4251 ARG2: i4252 > ]                                           |
++---------------+----------------------------------------------------------------------------------+
+| idMachine1    | [ TOP: h4255                                                                     |
+|               |   INDEX: x4254                                                                   |
+|               |   RELS: < [ _machine_n_1 LBL: h4255 ARG0: x4254 ] > ]                            |
++---------------+----------------------------------------------------------------------------------+
+| off           | [ TOP: h4259                                                                     |
+|               |   INDEX: e4256 [ e TENSE: pres ]                                                 |
+|               |   RELS: < [ _turn_v_off LBL: h4259 ARG0: e4256 ARG1: i4257 ARG2: i4258 ] >       |
+|               |   SLOTS: < ARG1: i4257 ARG2: i4258 > ]                                           |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE SEMENTS                                                                   |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| Edge                             | Parent        | Child      | Generated SEMENT                                                                 |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idMachineDoor_prop_idOpenState   | idMachineDoor | closed     | [ TOP: h4235                                                                     |
+|                                  |               |            |   INDEX: x4234                                                                   |
+|                                  |               |            |   RELS: < [ _closed_a_1 LBL: h4249 ARG0: e4247 ARG1: u4248 ]                     |
+|                                  |               |            |           [ compound LBL: h4246 ARG0: e4243 [ e PROG: - ] ARG1: u4244 ARG2:      |
+|                                  |               |            | u4245 ]                                                                          |
+|                                  |               |            |           [ udef_q LBL: h4241 ARG0: x4238 RSTR: h4239 BODY: h4240 ]              |
+|                                  |               |            |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|                                  |               |            |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|                                  |               |            |   HCONS: < h4239 qeq h4237 >                                                     |
+|                                  |               |            |   EQS: < x4238 eq x4236 h4246 eq h4242 u4245 eq x4238 h4246 eq h4235 u4244 eq    |
+|                                  |               |            | x4234 h4249 eq h4235 u4248 eq x4234 > ]                                          |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idMachineDoor_prop_idLockedState | idMachineDoor | locked     | [ TOP: h4235                                                                     |
+|                                  |               |            |   INDEX: x4234                                                                   |
+|                                  |               |            |   RELS: < [ _lock_v_cause LBL: h4253 ARG0: e4250 [ e PERF: - ] ARG1: i4251 ARG2: |
+|                                  |               |            | i4252 ]                                                                          |
+|                                  |               |            |           [ _closed_a_1 LBL: h4249 ARG0: e4247 ARG1: u4248 ]                     |
+|                                  |               |            |           [ compound LBL: h4246 ARG0: e4243 [ e PROG: - ] ARG1: u4244 ARG2:      |
+|                                  |               |            | u4245 ]                                                                          |
+|                                  |               |            |           [ udef_q LBL: h4241 ARG0: x4238 RSTR: h4239 BODY: h4240 ]              |
+|                                  |               |            |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|                                  |               |            |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|                                  |               |            |   HCONS: < h4239 qeq h4237 >                                                     |
+|                                  |               |            |   ICONS: < e4250 topic i4252 >                                                   |
+|                                  |               |            |   EQS: < x4238 eq x4236 h4246 eq h4242 u4245 eq x4238 h4246 eq h4235 u4244 eq    |
+|                                  |               |            | x4234 h4249 eq h4235 u4248 eq x4234 h4253 eq h4235 i4252 eq x4234 > ]            |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| isNorthOf                        | idMachineDoor | idMachine1 | [ TOP: h4235                                                                     |
+|                                  |               |            |   INDEX: x4234                                                                   |
+|                                  |               |            |   RELS: < [ loc_nonsp LBL: h4267 ARG0: e4264 ARG1: u4265 ARG2: x4266 ]           |
+|                                  |               |            |           [ def_implicit_q LBL: h4278 ARG0: x4275 RSTR: h4276 BODY: h4277 ]      |
+|                                  |               |            |           [ _north_a_1 LBL: h4263 ARG0: i4260 ARG1: x4261 ARG2: u4262 ]          |
+|                                  |               |            |           [ def_udef_a_q LBL: h4273 ARG0: x4270 RSTR: h4271 BODY: h4272 ]        |
+|                                  |               |            |           [ _turn_v_off LBL: h4259 ARG0: e4256 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                  |               |            | i4257 ARG2: i4258 ]                                                              |
+|                                  |               |            |           [ _machine_n_1 LBL: h4255 ARG0: x4254 ]                                |
+|                                  |               |            |           [ place_n LBL: h4269 ARG0: x4268 ]                                     |
+|                                  |               |            |           [ _lock_v_cause LBL: h4253 ARG0: e4250 [ e PERF: - ] ARG1: i4251 ARG2: |
+|                                  |               |            | i4252 ]                                                                          |
+|                                  |               |            |           [ _closed_a_1 LBL: h4249 ARG0: e4247 ARG1: u4248 ]                     |
+|                                  |               |            |           [ compound LBL: h4246 ARG0: e4243 [ e PROG: - ] ARG1: u4244 ARG2:      |
+|                                  |               |            | u4245 ]                                                                          |
+|                                  |               |            |           [ udef_q LBL: h4241 ARG0: x4238 RSTR: h4239 BODY: h4240 ]              |
+|                                  |               |            |           [ _machine_n_1 LBL: h4237 ARG0: x4236 ]                                |
+|                                  |               |            |           [ _door_n_1 LBL: h4235 ARG0: x4234 ] >                                 |
+|                                  |               |            |   HCONS: < h4271 qeq h4255 h4276 qeq h4269 h4239 qeq h4237 >                     |
+|                                  |               |            |   ICONS: < e4256 topic i4258 e4250 topic i4252 >                                 |
+|                                  |               |            |   EQS: < h4259 eq h4255 i4258 eq x4254 x4270 eq x4254 h4263 eq h4274 u4262 eq    |
+|                                  |               |            | x4270 h4263 eq h4269 x4261 eq x4268 x4275 eq x4268 h4267 eq h4279 x4266 eq x4275 |
+|                                  |               |            | x4238 eq x4236 h4246 eq h4242 u4245 eq x4238 h4246 eq h4235 u4244 eq x4234 h4249 |
+|                                  |               |            | eq h4235 u4248 eq x4234 h4253 eq h4235 i4252 eq x4234 h4267 eq h4235 u4265 eq    |
+|                                  |               |            | x4234 > ]                                                                        |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerState     | idMachine1    | off        | [ TOP: h4255                                                                     |
+|                                  |               |            |   INDEX: x4254                                                                   |
+|                                  |               |            |   RELS: < [ _turn_v_off LBL: h4259 ARG0: e4256 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                  |               |            | i4257 ARG2: i4258 ]                                                              |
+|                                  |               |            |           [ _machine_n_1 LBL: h4255 ARG0: x4254 ] >                              |
+|                                  |               |            |   ICONS: < e4256 topic i4258 >                                                   |
+|                                  |               |            |   EQS: < h4259 eq h4255 i4258 eq x4254 > ]                                       |
++----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------+
+|                                GENERATED ENGLISH TEXT                                |
++------+-------------------------------------------------------------------------------+
+| #    | Generated Text                                                                |
++------+-------------------------------------------------------------------------------+
+| 1    | A closed locked machine door north of a machine that is turned off            |
+| 2    | A closed locked machine door north of a machine that is turned off.           |
+| 3    | A closed locked machine door north of a machine which is turned off           |
+| 4    | A closed locked machine door north of a machine which is turned off.          |
+| 5    | A closed locked machine door north of a machine who is turned off             |
+| 6    | A closed locked machine door north of a machine who is turned off.            |
+| 7    | A closed locked machine door north of a machine, that is turned off.          |
+| 8    | A closed locked machine door north of a machine, which is turned off.         |
+| 9    | A closed locked machine door north of a machine, who is turned off.           |
+| 10   | A closed locked machine door north of machines that are turned off            |
+| 11   | A closed locked machine door north of machines that are turned off.           |
+| 12   | A closed locked machine door north of machines which are turned off           |
+| 13   | A closed locked machine door north of machines which are turned off.          |
+| 14   | A closed locked machine door north of machines who are turned off             |
+| 15   | A closed locked machine door north of machines who are turned off.            |
+| 16   | A closed locked machine door north of machines, which are turned off.         |
+| 17   | A closed locked machine door north of machines, who are turned off.           |
+| 18   | A closed locked machine door north of the machine that is turned off          |
+| 19   | A closed locked machine door north of the machine that is turned off.         |
+| 20   | A closed locked machine door north of the machine which is turned off         |
+| 21   | A closed locked machine door north of the machine which is turned off.        |
+| 22   | A closed locked machine door north of the machine who is turned off           |
+| 23   | A closed locked machine door north of the machine who is turned off.          |
+| 24   | A closed locked machine door north of the machine, that is turned off.        |
+| 25   | A closed locked machine door north of the machine, which is turned off.       |
+| 26   | A closed locked machine door north of the machine, who is turned off.         |
+| 27   | A closed locked machine door north of the machines that are turned off        |
+| 28   | A closed locked machine door north of the machines that are turned off.       |
+| 29   | A closed locked machine door north of the machines which are turned off       |
+| 30   | A closed locked machine door north of the machines which are turned off.      |
+| 31   | A closed locked machine door north of the machines who are turned off         |
+| 32   | A closed locked machine door north of the machines who are turned off.        |
+| 33   | A closed locked machine door north of the machines, that are turned off.      |
+| 34   | A closed locked machine door north of the machines, which are turned off.     |
+| 35   | A closed locked machine door north of the machines, who are turned off.       |
+| 36   | A closed locked machine door, north of a machine that is turned off           |
+| 37   | A closed locked machine door, north of a machine which is turned off          |
+| 38   | A closed locked machine door, north of a machine who is turned off            |
+| 39   | A closed locked machine door, north of the machine that is turned off         |
+| 40   | A closed locked machine door, north of the machine which is turned off        |
+| 41   | A closed locked machine door, north of the machine who is turned off          |
+| 42   | A closed locked machine door, north of the machines that are turned off       |
+| 43   | A closed locked machine door, north of the machines which are turned off      |
+| 44   | A closed locked machine door, north of the machines who are turned off        |
+| 45   | A closed machines locked door north of a machine that is turned off           |
+| 46   | A closed machines locked door north of a machine that is turned off.          |
+| 47   | A closed machines locked door north of a machine which is turned off          |
+| 48   | A closed machines locked door north of a machine which is turned off.         |
+| 49   | A closed machines locked door north of a machine who is turned off            |
+| 50   | A closed machines locked door north of a machine who is turned off.           |
+| 51   | A closed machines locked door north of a machine, which is turned off.        |
+| 52   | A closed machines locked door north of a machine, who is turned off.          |
+| 53   | A closed machines locked door north of machines which are turned off          |
+| 54   | A closed machines locked door north of machines which are turned off.         |
+| 55   | A closed machines locked door north of machines who are turned off            |
+| 56   | A closed machines locked door north of machines who are turned off.           |
+| 57   | A closed machines locked door north of the machine that is turned off         |
+| 58   | A closed machines locked door north of the machine that is turned off.        |
+| 59   | A closed machines locked door north of the machine which is turned off        |
+| 60   | A closed machines locked door north of the machine which is turned off.       |
+| 61   | A closed machines locked door north of the machine who is turned off          |
+| 62   | A closed machines locked door north of the machine who is turned off.         |
+| 63   | A closed machines locked door north of the machine, which is turned off.      |
+| 64   | A closed machines locked door north of the machine, who is turned off.        |
+| 65   | A closed machines locked door north of the machines that are turned off       |
+| 66   | A closed machines locked door north of the machines that are turned off.      |
+| 67   | A closed machines locked door north of the machines which are turned off      |
+| 68   | A closed machines locked door north of the machines which are turned off.     |
+| 69   | A closed machines locked door north of the machines who are turned off        |
+| 70   | A closed machines locked door north of the machines who are turned off.       |
+| 71   | A closed machines locked door north of the machines, that are turned off.     |
+| 72   | A closed machines locked door north of the machines, which are turned off.    |
+| 73   | A closed machines locked door north of the machines, who are turned off.      |
+| 74   | A locked closed machine door north of a machine that is turned off            |
+| 75   | A locked closed machine door north of a machine that is turned off.           |
+| 76   | A locked closed machine door north of a machine which is turned off           |
+| 77   | A locked closed machine door north of a machine which is turned off.          |
+| 78   | A locked closed machine door north of a machine who is turned off             |
+| 79   | A locked closed machine door north of a machine who is turned off.            |
+| 80   | A locked closed machine door north of a machine, that is turned off.          |
+| 81   | A locked closed machine door north of a machine, which is turned off.         |
+| 82   | A locked closed machine door north of a machine, who is turned off.           |
+| 83   | A locked closed machine door north of machines that are turned off            |
+| 84   | A locked closed machine door north of machines that are turned off.           |
+| 85   | A locked closed machine door north of machines which are turned off           |
+| 86   | A locked closed machine door north of machines which are turned off.          |
+| 87   | A locked closed machine door north of machines who are turned off             |
+| 88   | A locked closed machine door north of machines who are turned off.            |
+| 89   | A locked closed machine door north of machines, that are turned off.          |
+| 90   | A locked closed machine door north of machines, which are turned off.         |
+| 91   | A locked closed machine door north of machines, who are turned off.           |
+| 92   | A locked closed machine door north of the machine that is turned off          |
+| 93   | A locked closed machine door north of the machine that is turned off.         |
+| 94   | A locked closed machine door north of the machine which is turned off         |
+| 95   | A locked closed machine door north of the machine which is turned off.        |
+| 96   | A locked closed machine door north of the machine who is turned off           |
+| 97   | A locked closed machine door north of the machine who is turned off.          |
+| 98   | A locked closed machine door north of the machine, that is turned off.        |
+| 99   | A locked closed machine door north of the machine, which is turned off.       |
+| 100  | A locked closed machine door north of the machine, who is turned off.         |
+| 101  | A locked closed machine door north of the machines that are turned off        |
+| 102  | A locked closed machine door north of the machines that are turned off.       |
+| 103  | A locked closed machine door north of the machines which are turned off       |
+| 104  | A locked closed machine door north of the machines which are turned off.      |
+| 105  | A locked closed machine door north of the machines who are turned off         |
+| 106  | A locked closed machine door north of the machines who are turned off.        |
+| 107  | A locked closed machine door north of the machines, that are turned off.      |
+| 108  | A locked closed machine door north of the machines, which are turned off.     |
+| 109  | A locked closed machine door north of the machines, who are turned off.       |
+| 110  | A locked closed machine door, north of a machine that is turned off           |
+| 111  | A locked closed machine door, north of a machine which is turned off          |
+| 112  | A locked closed machine door, north of a machine who is turned off            |
+| 113  | A locked closed machine door, north of the machine that is turned off         |
+| 114  | A locked closed machine door, north of the machine which is turned off        |
+| 115  | A locked closed machine door, north of the machine who is turned off          |
+| 116  | A locked closed machine door, north of the machines that are turned off       |
+| 117  | A locked closed machine door, north of the machines which are turned off      |
+| 118  | A locked closed machine door, north of the machines who are turned off        |
+| 119  | A locked machines closed door north of a machine that is turned off           |
+| 120  | A locked machines closed door north of a machine that is turned off.          |
+| 121  | A locked machines closed door north of a machine which is turned off          |
+| 122  | A locked machines closed door north of a machine which is turned off.         |
+| 123  | A locked machines closed door north of a machine who is turned off            |
+| 124  | A locked machines closed door north of a machine who is turned off.           |
+| 125  | A locked machines closed door north of a machine, that is turned off.         |
+| 126  | A locked machines closed door north of a machine, which is turned off.        |
+| 127  | A locked machines closed door north of a machine, who is turned off.          |
+| 128  | A locked machines closed door north of machines that are turned off           |
+| 129  | A locked machines closed door north of machines that are turned off.          |
+| 130  | A locked machines closed door north of machines which are turned off          |
+| 131  | A locked machines closed door north of machines which are turned off.         |
+| 132  | A locked machines closed door north of machines who are turned off            |
+| 133  | A locked machines closed door north of machines who are turned off.           |
+| 134  | A locked machines closed door north of machines, that are turned off.         |
+| 135  | A locked machines closed door north of machines, which are turned off.        |
+| 136  | A locked machines closed door north of machines, who are turned off.          |
+| 137  | A locked machines closed door north of the machine that is turned off         |
+| 138  | A locked machines closed door north of the machine that is turned off.        |
+| 139  | A locked machines closed door north of the machine which is turned off        |
+| 140  | A locked machines closed door north of the machine which is turned off.       |
+| 141  | A locked machines closed door north of the machine who is turned off          |
+| 142  | A locked machines closed door north of the machine who is turned off.         |
+| 143  | A locked machines closed door north of the machine, that is turned off.       |
+| 144  | A locked machines closed door north of the machine, which is turned off.      |
+| 145  | A locked machines closed door north of the machine, who is turned off.        |
+| 146  | A locked machines closed door north of the machines that are turned off       |
+| 147  | A locked machines closed door north of the machines that are turned off.      |
+| 148  | A locked machines closed door north of the machines which are turned off      |
+| 149  | A locked machines closed door north of the machines which are turned off.     |
+| 150  | A locked machines closed door north of the machines who are turned off        |
+| 151  | A locked machines closed door north of the machines who are turned off.       |
+| 152  | A locked machines closed door north of the machines, that are turned off.     |
+| 153  | A locked machines closed door north of the machines, which are turned off.    |
+| 154  | A locked machines closed door north of the machines, who are turned off.      |
+| 155  | A locked machines closed door, north of a machine who is turned off           |
+| 156  | A locked machines closed door, north of the machines who are turned off       |
+| 157  | A machines closed locked door north of a machine that is turned off           |
+| 158  | A machines closed locked door north of a machine that is turned off.          |
+| 159  | A machines closed locked door north of a machine which is turned off          |
+| 160  | A machines closed locked door north of a machine which is turned off.         |
+| 161  | A machines closed locked door north of a machine who is turned off            |
+| 162  | A machines closed locked door north of a machine who is turned off.           |
+| 163  | A machines closed locked door north of a machine, that is turned off.         |
+| 164  | A machines closed locked door north of a machine, which is turned off.        |
+| 165  | A machines closed locked door north of a machine, who is turned off.          |
+| 166  | A machines closed locked door north of machines that are turned off           |
+| 167  | A machines closed locked door north of machines that are turned off.          |
+| 168  | A machines closed locked door north of machines which are turned off          |
+| 169  | A machines closed locked door north of machines which are turned off.         |
+| 170  | A machines closed locked door north of machines who are turned off            |
+| 171  | A machines closed locked door north of machines who are turned off.           |
+| 172  | A machines closed locked door north of machines, that are turned off.         |
+| 173  | A machines closed locked door north of machines, which are turned off.        |
+| 174  | A machines closed locked door north of machines, who are turned off.          |
+| 175  | A machines closed locked door north of the machine that is turned off         |
+| 176  | A machines closed locked door north of the machine that is turned off.        |
+| 177  | A machines closed locked door north of the machine which is turned off        |
+| 178  | A machines closed locked door north of the machine which is turned off.       |
+| 179  | A machines closed locked door north of the machine who is turned off          |
+| 180  | A machines closed locked door north of the machine who is turned off.         |
+| 181  | A machines closed locked door north of the machine, that is turned off.       |
+| 182  | A machines closed locked door north of the machine, which is turned off.      |
+| 183  | A machines closed locked door north of the machine, who is turned off.        |
+| 184  | A machines closed locked door north of the machines that are turned off       |
+| 185  | A machines closed locked door north of the machines that are turned off.      |
+| 186  | A machines closed locked door north of the machines which are turned off      |
+| 187  | A machines closed locked door north of the machines which are turned off.     |
+| 188  | A machines closed locked door north of the machines who are turned off        |
+| 189  | A machines closed locked door north of the machines who are turned off.       |
+| 190  | A machines closed locked door north of the machines, that are turned off.     |
+| 191  | A machines closed locked door north of the machines, which are turned off.    |
+| 192  | A machines closed locked door north of the machines, who are turned off.      |
+| 193  | A machines closed locked door, north of a machine that is turned off          |
+| 194  | A machines closed locked door, north of a machine which is turned off         |
+| 195  | A machines closed locked door, north of a machine who is turned off           |
+| 196  | A machines closed locked door, north of the machine that is turned off        |
+| 197  | A machines closed locked door, north of the machine who is turned off         |
+| 198  | A machines closed locked door, north of the machines that are turned off      |
+| 199  | A machines closed locked door, north of the machines which are turned off     |
+| 200  | A machines closed locked door, north of the machines who are turned off       |
+| 201  | A machines locked closed door north of a machine that is turned off           |
+| 202  | A machines locked closed door north of a machine that is turned off.          |
+| 203  | A machines locked closed door north of a machine which is turned off          |
+| 204  | A machines locked closed door north of a machine which is turned off.         |
+| 205  | A machines locked closed door north of a machine who is turned off            |
+| 206  | A machines locked closed door north of a machine who is turned off.           |
+| 207  | A machines locked closed door north of a machine, that is turned off.         |
+| 208  | A machines locked closed door north of a machine, which is turned off.        |
+| 209  | A machines locked closed door north of a machine, who is turned off.          |
+| 210  | A machines locked closed door north of machines that are turned off           |
+| 211  | A machines locked closed door north of machines that are turned off.          |
+| 212  | A machines locked closed door north of machines which are turned off          |
+| 213  | A machines locked closed door north of machines which are turned off.         |
+| 214  | A machines locked closed door north of machines who are turned off            |
+| 215  | A machines locked closed door north of machines who are turned off.           |
+| 216  | A machines locked closed door north of machines, that are turned off.         |
+| 217  | A machines locked closed door north of machines, which are turned off.        |
+| 218  | A machines locked closed door north of machines, who are turned off.          |
+| 219  | A machines locked closed door north of the machine that is turned off         |
+| 220  | A machines locked closed door north of the machine that is turned off.        |
+| 221  | A machines locked closed door north of the machine which is turned off        |
+| 222  | A machines locked closed door north of the machine which is turned off.       |
+| 223  | A machines locked closed door north of the machine who is turned off          |
+| 224  | A machines locked closed door north of the machine who is turned off.         |
+| 225  | A machines locked closed door north of the machine, that is turned off.       |
+| 226  | A machines locked closed door north of the machine, which is turned off.      |
+| 227  | A machines locked closed door north of the machine, who is turned off.        |
+| 228  | A machines locked closed door north of the machines that are turned off       |
+| 229  | A machines locked closed door north of the machines that are turned off.      |
+| 230  | A machines locked closed door north of the machines which are turned off      |
+| 231  | A machines locked closed door north of the machines which are turned off.     |
+| 232  | A machines locked closed door north of the machines who are turned off        |
+| 233  | A machines locked closed door north of the machines who are turned off.       |
+| 234  | A machines locked closed door north of the machines, that are turned off.     |
+| 235  | A machines locked closed door north of the machines, which are turned off.    |
+| 236  | A machines locked closed door north of the machines, who are turned off.      |
+| 237  | A machines locked closed door, north of a machine that is turned off          |
+| 238  | A machines locked closed door, north of a machine which is turned off         |
+| 239  | A machines locked closed door, north of a machine who is turned off           |
+| 240  | A machines locked closed door, north of the machine who is turned off         |
+| 241  | A machines locked closed door, north of the machines that are turned off      |
+| 242  | A machines locked closed door, north of the machines which are turned off     |
+| 243  | A machines locked closed door, north of the machines who are turned off       |
+| 244  | Closed locked machine door north of a machine that is turned off              |
+| 245  | Closed locked machine door north of a machine that is turned off.             |
+| 246  | Closed locked machine door north of a machine which is turned off             |
+| 247  | Closed locked machine door north of a machine which is turned off.            |
+| 248  | Closed locked machine door north of a machine who is turned off               |
+| 249  | Closed locked machine door north of a machine who is turned off.              |
+| 250  | Closed locked machine door north of a machine, which is turned off.           |
+| 251  | Closed locked machine door north of a machine, who is turned off.             |
+| 252  | Closed locked machine door north of machines which are turned off             |
+| 253  | Closed locked machine door north of machines which are turned off.            |
+| 254  | Closed locked machine door north of machines who are turned off               |
+| 255  | Closed locked machine door north of machines who are turned off.              |
+| 256  | Closed locked machine door north of the machine that is turned off            |
+| 257  | Closed locked machine door north of the machine that is turned off.           |
+| 258  | Closed locked machine door north of the machine which is turned off           |
+| 259  | Closed locked machine door north of the machine which is turned off.          |
+| 260  | Closed locked machine door north of the machine who is turned off             |
+| 261  | Closed locked machine door north of the machine who is turned off.            |
+| 262  | Closed locked machine door north of the machine, which is turned off.         |
+| 263  | Closed locked machine door north of the machine, who is turned off.           |
+| 264  | Closed locked machine door north of the machines that are turned off          |
+| 265  | Closed locked machine door north of the machines that are turned off.         |
+| 266  | Closed locked machine door north of the machines which are turned off         |
+| 267  | Closed locked machine door north of the machines which are turned off.        |
+| 268  | Closed locked machine door north of the machines who are turned off           |
+| 269  | Closed locked machine door north of the machines who are turned off.          |
+| 270  | Closed locked machine door north of the machines, that are turned off.        |
+| 271  | Closed locked machine door north of the machines, which are turned off.       |
+| 272  | Closed locked machine door north of the machines, who are turned off.         |
+| 273  | Closed locked machine door, north of a machine that is turned off             |
+| 274  | Closed locked machine door, north of a machine which is turned off            |
+| 275  | Closed locked machine door, north of a machine who is turned off              |
+| 276  | Closed locked machine door, north of the machine that is turned off           |
+| 277  | Closed locked machine door, north of the machine which is turned off          |
+| 278  | Closed locked machine door, north of the machine who is turned off            |
+| 279  | Closed locked machine door, north of the machines that are turned off         |
+| 280  | Closed locked machine door, north of the machines which are turned off        |
+| 281  | Closed locked machine door, north of the machines who are turned off          |
+| 282  | Closed locked machine doors north of a machine that is turned off             |
+| 283  | Closed locked machine doors north of a machine that is turned off.            |
+| 284  | Closed locked machine doors north of a machine which is turned off            |
+| 285  | Closed locked machine doors north of a machine which is turned off.           |
+| 286  | Closed locked machine doors north of a machine who is turned off              |
+| 287  | Closed locked machine doors north of a machine who is turned off.             |
+| 288  | Closed locked machine doors north of a machine, that is turned off.           |
+| 289  | Closed locked machine doors north of a machine, which is turned off.          |
+| 290  | Closed locked machine doors north of a machine, who is turned off.            |
+| 291  | Closed locked machine doors north of machines that are turned off             |
+| 292  | Closed locked machine doors north of machines that are turned off.            |
+| 293  | Closed locked machine doors north of machines which are turned off            |
+| 294  | Closed locked machine doors north of machines which are turned off.           |
+| 295  | Closed locked machine doors north of machines who are turned off              |
+| 296  | Closed locked machine doors north of machines who are turned off.             |
+| 297  | Closed locked machine doors north of machines, that are turned off.           |
+| 298  | Closed locked machine doors north of machines, which are turned off.          |
+| 299  | Closed locked machine doors north of machines, who are turned off.            |
+| 300  | Closed locked machine doors north of the machine that is turned off           |
+| 301  | Closed locked machine doors north of the machine that is turned off.          |
+| 302  | Closed locked machine doors north of the machine which is turned off          |
+| 303  | Closed locked machine doors north of the machine which is turned off.         |
+| 304  | Closed locked machine doors north of the machine who is turned off            |
+| 305  | Closed locked machine doors north of the machine who is turned off.           |
+| 306  | Closed locked machine doors north of the machine, that is turned off.         |
+| 307  | Closed locked machine doors north of the machine, which is turned off.        |
+| 308  | Closed locked machine doors north of the machine, who is turned off.          |
+| 309  | Closed locked machine doors north of the machines that are turned off         |
+| 310  | Closed locked machine doors north of the machines that are turned off.        |
+| 311  | Closed locked machine doors north of the machines which are turned off        |
+| 312  | Closed locked machine doors north of the machines which are turned off.       |
+| 313  | Closed locked machine doors north of the machines who are turned off          |
+| 314  | Closed locked machine doors north of the machines who are turned off.         |
+| 315  | Closed locked machine doors north of the machines, that are turned off.       |
+| 316  | Closed locked machine doors north of the machines, which are turned off.      |
+| 317  | Closed locked machine doors north of the machines, who are turned off.        |
+| 318  | Closed locked machine doors, north of a machine that is turned off            |
+| 319  | Closed locked machine doors, north of a machine which is turned off           |
+| 320  | Closed locked machine doors, north of a machine who is turned off             |
+| 321  | Closed locked machine doors, north of the machine that is turned off          |
+| 322  | Closed locked machine doors, north of the machine which is turned off         |
+| 323  | Closed locked machine doors, north of the machine who is turned off           |
+| 324  | Closed locked machine doors, north of the machines that are turned off        |
+| 325  | Closed locked machine doors, north of the machines which are turned off       |
+| 326  | Closed locked machine doors, north of the machines who are turned off         |
+| 327  | Closed machines locked door north of a machine that is turned off             |
+| 328  | Closed machines locked door north of a machine that is turned off.            |
+| 329  | Closed machines locked door north of a machine which is turned off            |
+| 330  | Closed machines locked door north of a machine which is turned off.           |
+| 331  | Closed machines locked door north of a machine who is turned off              |
+| 332  | Closed machines locked door north of a machine who is turned off.             |
+| 333  | Closed machines locked door north of the machine who is turned off            |
+| 334  | Closed machines locked door north of the machine who is turned off.           |
+| 335  | Closed machines locked door north of the machines that are turned off         |
+| 336  | Closed machines locked door north of the machines that are turned off.        |
+| 337  | Closed machines locked door north of the machines which are turned off        |
+| 338  | Closed machines locked door north of the machines which are turned off.       |
+| 339  | Closed machines locked door north of the machines who are turned off          |
+| 340  | Closed machines locked door north of the machines who are turned off.         |
+| 341  | Closed machines locked door north of the machines, which are turned off.      |
+| 342  | Closed machines locked door, north of the machines who are turned off         |
+| 343  | Closed machines locked doors north of a machine that is turned off            |
+| 344  | Closed machines locked doors north of a machine that is turned off.           |
+| 345  | Closed machines locked doors north of a machine which is turned off           |
+| 346  | Closed machines locked doors north of a machine which is turned off.          |
+| 347  | Closed machines locked doors north of a machine who is turned off             |
+| 348  | Closed machines locked doors north of a machine who is turned off.            |
+| 349  | Closed machines locked doors north of a machine, which is turned off.         |
+| 350  | Closed machines locked doors north of a machine, who is turned off.           |
+| 351  | Closed machines locked doors north of machines that are turned off            |
+| 352  | Closed machines locked doors north of machines that are turned off.           |
+| 353  | Closed machines locked doors north of machines which are turned off           |
+| 354  | Closed machines locked doors north of machines which are turned off.          |
+| 355  | Closed machines locked doors north of machines who are turned off             |
+| 356  | Closed machines locked doors north of machines who are turned off.            |
+| 357  | Closed machines locked doors north of the machine that is turned off          |
+| 358  | Closed machines locked doors north of the machine that is turned off.         |
+| 359  | Closed machines locked doors north of the machine which is turned off         |
+| 360  | Closed machines locked doors north of the machine which is turned off.        |
+| 361  | Closed machines locked doors north of the machine who is turned off           |
+| 362  | Closed machines locked doors north of the machine who is turned off.          |
+| 363  | Closed machines locked doors north of the machine, that is turned off.        |
+| 364  | Closed machines locked doors north of the machine, which is turned off.       |
+| 365  | Closed machines locked doors north of the machine, who is turned off.         |
+| 366  | Closed machines locked doors north of the machines that are turned off        |
+| 367  | Closed machines locked doors north of the machines that are turned off.       |
+| 368  | Closed machines locked doors north of the machines which are turned off       |
+| 369  | Closed machines locked doors north of the machines which are turned off.      |
+| 370  | Closed machines locked doors north of the machines who are turned off         |
+| 371  | Closed machines locked doors north of the machines who are turned off.        |
+| 372  | Closed machines locked doors north of the machines, that are turned off.      |
+| 373  | Closed machines locked doors north of the machines, which are turned off.     |
+| 374  | Closed machines locked doors north of the machines, who are turned off.       |
+| 375  | Closed machines locked doors, north of a machine who is turned off            |
+| 376  | Closed machines locked doors, north of the machines who are turned off        |
+| 377  | Locked closed machine door north of a machine that is turned off              |
+| 378  | Locked closed machine door north of a machine that is turned off.             |
+| 379  | Locked closed machine door north of a machine which is turned off             |
+| 380  | Locked closed machine door north of a machine which is turned off.            |
+| 381  | Locked closed machine door north of a machine who is turned off               |
+| 382  | Locked closed machine door north of a machine who is turned off.              |
+| 383  | Locked closed machine door north of a machine, that is turned off.            |
+| 384  | Locked closed machine door north of a machine, which is turned off.           |
+| 385  | Locked closed machine door north of a machine, who is turned off.             |
+| 386  | Locked closed machine door north of machines that are turned off              |
+| 387  | Locked closed machine door north of machines that are turned off.             |
+| 388  | Locked closed machine door north of machines which are turned off             |
+| 389  | Locked closed machine door north of machines which are turned off.            |
+| 390  | Locked closed machine door north of machines who are turned off               |
+| 391  | Locked closed machine door north of machines who are turned off.              |
+| 392  | Locked closed machine door north of machines, which are turned off.           |
+| 393  | Locked closed machine door north of machines, who are turned off.             |
+| 394  | Locked closed machine door north of the machine that is turned off            |
+| 395  | Locked closed machine door north of the machine that is turned off.           |
+| 396  | Locked closed machine door north of the machine which is turned off           |
+| 397  | Locked closed machine door north of the machine which is turned off.          |
+| 398  | Locked closed machine door north of the machine who is turned off             |
+| 399  | Locked closed machine door north of the machine who is turned off.            |
+| 400  | Locked closed machine door north of the machine, that is turned off.          |
+| 401  | Locked closed machine door north of the machine, which is turned off.         |
+| 402  | Locked closed machine door north of the machine, who is turned off.           |
+| 403  | Locked closed machine door north of the machines that are turned off          |
+| 404  | Locked closed machine door north of the machines that are turned off.         |
+| 405  | Locked closed machine door north of the machines which are turned off         |
+| 406  | Locked closed machine door north of the machines which are turned off.        |
+| 407  | Locked closed machine door north of the machines who are turned off           |
+| 408  | Locked closed machine door north of the machines who are turned off.          |
+| 409  | Locked closed machine door north of the machines, that are turned off.        |
+| 410  | Locked closed machine door north of the machines, which are turned off.       |
+| 411  | Locked closed machine door north of the machines, who are turned off.         |
+| 412  | Locked closed machine door, north of a machine that is turned off             |
+| 413  | Locked closed machine door, north of a machine which is turned off            |
+| 414  | Locked closed machine door, north of a machine who is turned off              |
+| 415  | Locked closed machine door, north of the machine that is turned off           |
+| 416  | Locked closed machine door, north of the machine which is turned off          |
+| 417  | Locked closed machine door, north of the machine who is turned off            |
+| 418  | Locked closed machine door, north of the machines that are turned off         |
+| 419  | Locked closed machine door, north of the machines which are turned off        |
+| 420  | Locked closed machine door, north of the machines who are turned off          |
+| 421  | Locked closed machine doors north of a machine that is turned off             |
+| 422  | Locked closed machine doors north of a machine that is turned off.            |
+| 423  | Locked closed machine doors north of a machine which is turned off            |
+| 424  | Locked closed machine doors north of a machine which is turned off.           |
+| 425  | Locked closed machine doors north of a machine who is turned off              |
+| 426  | Locked closed machine doors north of a machine who is turned off.             |
+| 427  | Locked closed machine doors north of a machine, that is turned off.           |
+| 428  | Locked closed machine doors north of a machine, which is turned off.          |
+| 429  | Locked closed machine doors north of a machine, who is turned off.            |
+| 430  | Locked closed machine doors north of machines that are turned off             |
+| 431  | Locked closed machine doors north of machines that are turned off.            |
+| 432  | Locked closed machine doors north of machines which are turned off            |
+| 433  | Locked closed machine doors north of machines which are turned off.           |
+| 434  | Locked closed machine doors north of machines who are turned off              |
+| 435  | Locked closed machine doors north of machines who are turned off.             |
+| 436  | Locked closed machine doors north of machines, that are turned off.           |
+| 437  | Locked closed machine doors north of machines, which are turned off.          |
+| 438  | Locked closed machine doors north of machines, who are turned off.            |
+| 439  | Locked closed machine doors north of the machine that is turned off           |
+| 440  | Locked closed machine doors north of the machine that is turned off.          |
+| 441  | Locked closed machine doors north of the machine which is turned off          |
+| 442  | Locked closed machine doors north of the machine which is turned off.         |
+| 443  | Locked closed machine doors north of the machine who is turned off            |
+| 444  | Locked closed machine doors north of the machine who is turned off.           |
+| 445  | Locked closed machine doors north of the machine, that is turned off.         |
+| 446  | Locked closed machine doors north of the machine, which is turned off.        |
+| 447  | Locked closed machine doors north of the machine, who is turned off.          |
+| 448  | Locked closed machine doors north of the machines that are turned off         |
+| 449  | Locked closed machine doors north of the machines that are turned off.        |
+| 450  | Locked closed machine doors north of the machines which are turned off        |
+| 451  | Locked closed machine doors north of the machines which are turned off.       |
+| 452  | Locked closed machine doors north of the machines who are turned off          |
+| 453  | Locked closed machine doors north of the machines who are turned off.         |
+| 454  | Locked closed machine doors north of the machines, that are turned off.       |
+| 455  | Locked closed machine doors north of the machines, which are turned off.      |
+| 456  | Locked closed machine doors north of the machines, who are turned off.        |
+| 457  | Locked closed machine doors, north of a machine that is turned off            |
+| 458  | Locked closed machine doors, north of a machine which is turned off           |
+| 459  | Locked closed machine doors, north of a machine who is turned off             |
+| 460  | Locked closed machine doors, north of machines who are turned off             |
+| 461  | Locked closed machine doors, north of the machine that is turned off          |
+| 462  | Locked closed machine doors, north of the machine which is turned off         |
+| 463  | Locked closed machine doors, north of the machine who is turned off           |
+| 464  | Locked closed machine doors, north of the machines that are turned off        |
+| 465  | Locked closed machine doors, north of the machines which are turned off       |
+| 466  | Locked closed machine doors, north of the machines who are turned off         |
+| 467  | Locked machines closed door north of a machine that is turned off             |
+| 468  | Locked machines closed door north of a machine that is turned off.            |
+| 469  | Locked machines closed door north of a machine which is turned off            |
+| 470  | Locked machines closed door north of a machine which is turned off.           |
+| 471  | Locked machines closed door north of a machine who is turned off              |
+| 472  | Locked machines closed door north of a machine who is turned off.             |
+| 473  | Locked machines closed door north of a machine, which is turned off.          |
+| 474  | Locked machines closed door north of a machine, who is turned off.            |
+| 475  | Locked machines closed door north of machines that are turned off             |
+| 476  | Locked machines closed door north of machines that are turned off.            |
+| 477  | Locked machines closed door north of machines which are turned off            |
+| 478  | Locked machines closed door north of machines which are turned off.           |
+| 479  | Locked machines closed door north of machines who are turned off              |
+| 480  | Locked machines closed door north of machines who are turned off.             |
+| 481  | Locked machines closed door north of the machine that is turned off           |
+| 482  | Locked machines closed door north of the machine that is turned off.          |
+| 483  | Locked machines closed door north of the machine which is turned off          |
+| 484  | Locked machines closed door north of the machine which is turned off.         |
+| 485  | Locked machines closed door north of the machine who is turned off            |
+| 486  | Locked machines closed door north of the machine who is turned off.           |
+| 487  | Locked machines closed door north of the machine, that is turned off.         |
+| 488  | Locked machines closed door north of the machine, which is turned off.        |
+| 489  | Locked machines closed door north of the machine, who is turned off.          |
+| 490  | Locked machines closed door north of the machines that are turned off         |
+| 491  | Locked machines closed door north of the machines that are turned off.        |
+| 492  | Locked machines closed door north of the machines which are turned off        |
+| 493  | Locked machines closed door north of the machines which are turned off.       |
+| 494  | Locked machines closed door north of the machines who are turned off          |
+| 495  | Locked machines closed door north of the machines who are turned off.         |
+| 496  | Locked machines closed door north of the machines, that are turned off.       |
+| 497  | Locked machines closed door north of the machines, which are turned off.      |
+| 498  | Locked machines closed door north of the machines, who are turned off.        |
+| 499  | Locked machines closed door, north of a machine who is turned off             |
+| 500  | Locked machines closed door, north of the machines who are turned off         |
+| 501  | Locked machines closed doors north of a machine that is turned off            |
+| 502  | Locked machines closed doors north of a machine that is turned off.           |
+| 503  | Locked machines closed doors north of a machine which is turned off           |
+| 504  | Locked machines closed doors north of a machine which is turned off.          |
+| 505  | Locked machines closed doors north of a machine who is turned off             |
+| 506  | Locked machines closed doors north of a machine who is turned off.            |
+| 507  | Locked machines closed doors north of a machine, that is turned off.          |
+| 508  | Locked machines closed doors north of a machine, which is turned off.         |
+| 509  | Locked machines closed doors north of a machine, who is turned off.           |
+| 510  | Locked machines closed doors north of machines that are turned off            |
+| 511  | Locked machines closed doors north of machines that are turned off.           |
+| 512  | Locked machines closed doors north of machines which are turned off           |
+| 513  | Locked machines closed doors north of machines which are turned off.          |
+| 514  | Locked machines closed doors north of machines who are turned off             |
+| 515  | Locked machines closed doors north of machines who are turned off.            |
+| 516  | Locked machines closed doors north of machines, which are turned off.         |
+| 517  | Locked machines closed doors north of machines, who are turned off.           |
+| 518  | Locked machines closed doors north of the machine that is turned off          |
+| 519  | Locked machines closed doors north of the machine that is turned off.         |
+| 520  | Locked machines closed doors north of the machine which is turned off         |
+| 521  | Locked machines closed doors north of the machine which is turned off.        |
+| 522  | Locked machines closed doors north of the machine who is turned off           |
+| 523  | Locked machines closed doors north of the machine who is turned off.          |
+| 524  | Locked machines closed doors north of the machine, that is turned off.        |
+| 525  | Locked machines closed doors north of the machine, which is turned off.       |
+| 526  | Locked machines closed doors north of the machine, who is turned off.         |
+| 527  | Locked machines closed doors north of the machines that are turned off        |
+| 528  | Locked machines closed doors north of the machines that are turned off.       |
+| 529  | Locked machines closed doors north of the machines which are turned off       |
+| 530  | Locked machines closed doors north of the machines which are turned off.      |
+| 531  | Locked machines closed doors north of the machines who are turned off         |
+| 532  | Locked machines closed doors north of the machines who are turned off.        |
+| 533  | Locked machines closed doors north of the machines, that are turned off.      |
+| 534  | Locked machines closed doors north of the machines, which are turned off.     |
+| 535  | Locked machines closed doors north of the machines, who are turned off.       |
+| 536  | Locked machines closed doors, north of a machine that is turned off           |
+| 537  | Locked machines closed doors, north of a machine who is turned off            |
+| 538  | Locked machines closed doors, north of the machines that are turned off       |
+| 539  | Locked machines closed doors, north of the machines which are turned off      |
+| 540  | Locked machines closed doors, north of the machines who are turned off        |
+| 541  | Machines closed locked door north of a machine that is turned off             |
+| 542  | Machines closed locked door north of a machine that is turned off.            |
+| 543  | Machines closed locked door north of a machine which is turned off            |
+| 544  | Machines closed locked door north of a machine which is turned off.           |
+| 545  | Machines closed locked door north of a machine who is turned off              |
+| 546  | Machines closed locked door north of a machine who is turned off.             |
+| 547  | Machines closed locked door north of a machine, which is turned off.          |
+| 548  | Machines closed locked door north of a machine, who is turned off.            |
+| 549  | Machines closed locked door north of machines which are turned off            |
+| 550  | Machines closed locked door north of machines which are turned off.           |
+| 551  | Machines closed locked door north of machines who are turned off              |
+| 552  | Machines closed locked door north of machines who are turned off.             |
+| 553  | Machines closed locked door north of the machine that is turned off           |
+| 554  | Machines closed locked door north of the machine that is turned off.          |
+| 555  | Machines closed locked door north of the machine which is turned off          |
+| 556  | Machines closed locked door north of the machine which is turned off.         |
+| 557  | Machines closed locked door north of the machine who is turned off            |
+| 558  | Machines closed locked door north of the machine who is turned off.           |
+| 559  | Machines closed locked door north of the machine, which is turned off.        |
+| 560  | Machines closed locked door north of the machine, who is turned off.          |
+| 561  | Machines closed locked door north of the machines that are turned off         |
+| 562  | Machines closed locked door north of the machines that are turned off.        |
+| 563  | Machines closed locked door north of the machines which are turned off        |
+| 564  | Machines closed locked door north of the machines which are turned off.       |
+| 565  | Machines closed locked door north of the machines who are turned off          |
+| 566  | Machines closed locked door north of the machines who are turned off.         |
+| 567  | Machines closed locked door north of the machines, that are turned off.       |
+| 568  | Machines closed locked door north of the machines, which are turned off.      |
+| 569  | Machines closed locked door north of the machines, who are turned off.        |
+| 570  | Machines closed locked door, north of a machine that is turned off            |
+| 571  | Machines closed locked door, north of a machine which is turned off           |
+| 572  | Machines closed locked door, north of a machine who is turned off             |
+| 573  | Machines closed locked door, north of the machine that is turned off          |
+| 574  | Machines closed locked door, north of the machine who is turned off           |
+| 575  | Machines closed locked door, north of the machines that are turned off        |
+| 576  | Machines closed locked door, north of the machines which are turned off       |
+| 577  | Machines closed locked door, north of the machines who are turned off         |
+| 578  | Machines closed locked doors north of a machine that is turned off            |
+| 579  | Machines closed locked doors north of a machine that is turned off.           |
+| 580  | Machines closed locked doors north of a machine which is turned off           |
+| 581  | Machines closed locked doors north of a machine which is turned off.          |
+| 582  | Machines closed locked doors north of a machine who is turned off             |
+| 583  | Machines closed locked doors north of a machine who is turned off.            |
+| 584  | Machines closed locked doors north of a machine, that is turned off.          |
+| 585  | Machines closed locked doors north of a machine, which is turned off.         |
+| 586  | Machines closed locked doors north of a machine, who is turned off.           |
+| 587  | Machines closed locked doors north of machines that are turned off            |
+| 588  | Machines closed locked doors north of machines that are turned off.           |
+| 589  | Machines closed locked doors north of machines which are turned off           |
+| 590  | Machines closed locked doors north of machines which are turned off.          |
+| 591  | Machines closed locked doors north of machines who are turned off             |
+| 592  | Machines closed locked doors north of machines who are turned off.            |
+| 593  | Machines closed locked doors north of machines, that are turned off.          |
+| 594  | Machines closed locked doors north of machines, which are turned off.         |
+| 595  | Machines closed locked doors north of machines, who are turned off.           |
+| 596  | Machines closed locked doors north of the machine that is turned off          |
+| 597  | Machines closed locked doors north of the machine that is turned off.         |
+| 598  | Machines closed locked doors north of the machine which is turned off         |
+| 599  | Machines closed locked doors north of the machine which is turned off.        |
+| 600  | Machines closed locked doors north of the machine who is turned off           |
+| 601  | Machines closed locked doors north of the machine who is turned off.          |
+| 602  | Machines closed locked doors north of the machine, that is turned off.        |
+| 603  | Machines closed locked doors north of the machine, which is turned off.       |
+| 604  | Machines closed locked doors north of the machine, who is turned off.         |
+| 605  | Machines closed locked doors north of the machines that are turned off        |
+| 606  | Machines closed locked doors north of the machines that are turned off.       |
+| 607  | Machines closed locked doors north of the machines which are turned off       |
+| 608  | Machines closed locked doors north of the machines which are turned off.      |
+| 609  | Machines closed locked doors north of the machines who are turned off         |
+| 610  | Machines closed locked doors north of the machines who are turned off.        |
+| 611  | Machines closed locked doors north of the machines, that are turned off.      |
+| 612  | Machines closed locked doors north of the machines, which are turned off.     |
+| 613  | Machines closed locked doors north of the machines, who are turned off.       |
+| 614  | Machines closed locked doors, north of a machine that is turned off           |
+| 615  | Machines closed locked doors, north of a machine which is turned off          |
+| 616  | Machines closed locked doors, north of a machine who is turned off            |
+| 617  | Machines closed locked doors, north of the machine that is turned off         |
+| 618  | Machines closed locked doors, north of the machine which is turned off        |
+| 619  | Machines closed locked doors, north of the machine who is turned off          |
+| 620  | Machines closed locked doors, north of the machines that are turned off       |
+| 621  | Machines closed locked doors, north of the machines which are turned off      |
+| 622  | Machines closed locked doors, north of the machines who are turned off        |
+| 623  | Machines locked closed door north of a machine that is turned off             |
+| 624  | Machines locked closed door north of a machine that is turned off.            |
+| 625  | Machines locked closed door north of a machine which is turned off            |
+| 626  | Machines locked closed door north of a machine which is turned off.           |
+| 627  | Machines locked closed door north of a machine who is turned off              |
+| 628  | Machines locked closed door north of a machine who is turned off.             |
+| 629  | Machines locked closed door north of a machine, which is turned off.          |
+| 630  | Machines locked closed door north of a machine, who is turned off.            |
+| 631  | Machines locked closed door north of machines that are turned off             |
+| 632  | Machines locked closed door north of machines that are turned off.            |
+| 633  | Machines locked closed door north of machines which are turned off            |
+| 634  | Machines locked closed door north of machines which are turned off.           |
+| 635  | Machines locked closed door north of machines who are turned off              |
+| 636  | Machines locked closed door north of machines who are turned off.             |
+| 637  | Machines locked closed door north of the machine that is turned off           |
+| 638  | Machines locked closed door north of the machine that is turned off.          |
+| 639  | Machines locked closed door north of the machine which is turned off          |
+| 640  | Machines locked closed door north of the machine which is turned off.         |
+| 641  | Machines locked closed door north of the machine who is turned off            |
+| 642  | Machines locked closed door north of the machine who is turned off.           |
+| 643  | Machines locked closed door north of the machine, that is turned off.         |
+| 644  | Machines locked closed door north of the machine, which is turned off.        |
+| 645  | Machines locked closed door north of the machine, who is turned off.          |
+| 646  | Machines locked closed door north of the machines that are turned off         |
+| 647  | Machines locked closed door north of the machines that are turned off.        |
+| 648  | Machines locked closed door north of the machines which are turned off        |
+| 649  | Machines locked closed door north of the machines which are turned off.       |
+| 650  | Machines locked closed door north of the machines who are turned off          |
+| 651  | Machines locked closed door north of the machines who are turned off.         |
+| 652  | Machines locked closed door north of the machines, that are turned off.       |
+| 653  | Machines locked closed door north of the machines, which are turned off.      |
+| 654  | Machines locked closed door north of the machines, who are turned off.        |
+| 655  | Machines locked closed door, north of a machine that is turned off            |
+| 656  | Machines locked closed door, north of a machine which is turned off           |
+| 657  | Machines locked closed door, north of a machine who is turned off             |
+| 658  | Machines locked closed door, north of the machine who is turned off           |
+| 659  | Machines locked closed door, north of the machines that are turned off        |
+| 660  | Machines locked closed door, north of the machines which are turned off       |
+| 661  | Machines locked closed door, north of the machines who are turned off         |
+| 662  | Machines locked closed doors north of a machine that is turned off            |
+| 663  | Machines locked closed doors north of a machine that is turned off.           |
+| 664  | Machines locked closed doors north of a machine which is turned off           |
+| 665  | Machines locked closed doors north of a machine which is turned off.          |
+| 666  | Machines locked closed doors north of a machine who is turned off             |
+| 667  | Machines locked closed doors north of a machine who is turned off.            |
+| 668  | Machines locked closed doors north of a machine, that is turned off.          |
+| 669  | Machines locked closed doors north of a machine, which is turned off.         |
+| 670  | Machines locked closed doors north of a machine, who is turned off.           |
+| 671  | Machines locked closed doors north of machines that are turned off            |
+| 672  | Machines locked closed doors north of machines that are turned off.           |
+| 673  | Machines locked closed doors north of machines which are turned off           |
+| 674  | Machines locked closed doors north of machines which are turned off.          |
+| 675  | Machines locked closed doors north of machines who are turned off             |
+| 676  | Machines locked closed doors north of machines who are turned off.            |
+| 677  | Machines locked closed doors north of machines, that are turned off.          |
+| 678  | Machines locked closed doors north of machines, which are turned off.         |
+| 679  | Machines locked closed doors north of machines, who are turned off.           |
+| 680  | Machines locked closed doors north of the machine that is turned off          |
+| 681  | Machines locked closed doors north of the machine that is turned off.         |
+| 682  | Machines locked closed doors north of the machine which is turned off         |
+| 683  | Machines locked closed doors north of the machine which is turned off.        |
+| 684  | Machines locked closed doors north of the machine who is turned off           |
+| 685  | Machines locked closed doors north of the machine who is turned off.          |
+| 686  | Machines locked closed doors north of the machine, that is turned off.        |
+| 687  | Machines locked closed doors north of the machine, which is turned off.       |
+| 688  | Machines locked closed doors north of the machine, who is turned off.         |
+| 689  | Machines locked closed doors north of the machines that are turned off        |
+| 690  | Machines locked closed doors north of the machines that are turned off.       |
+| 691  | Machines locked closed doors north of the machines which are turned off       |
+| 692  | Machines locked closed doors north of the machines which are turned off.      |
+| 693  | Machines locked closed doors north of the machines who are turned off         |
+| 694  | Machines locked closed doors north of the machines who are turned off.        |
+| 695  | Machines locked closed doors north of the machines, that are turned off.      |
+| 696  | Machines locked closed doors north of the machines, which are turned off.     |
+| 697  | Machines locked closed doors north of the machines, who are turned off.       |
+| 698  | Machines locked closed doors, north of a machine that is turned off           |
+| 699  | Machines locked closed doors, north of a machine which is turned off          |
+| 700  | Machines locked closed doors, north of a machine who is turned off            |
+| 701  | Machines locked closed doors, north of the machine who is turned off          |
+| 702  | Machines locked closed doors, north of the machines that are turned off       |
+| 703  | Machines locked closed doors, north of the machines which are turned off      |
+| 704  | Machines locked closed doors, north of the machines who are turned off        |
+| 705  | The closed locked machine door north of a machine that is turned off          |
+| 706  | The closed locked machine door north of a machine that is turned off.         |
+| 707  | The closed locked machine door north of a machine which is turned off         |
+| 708  | The closed locked machine door north of a machine which is turned off.        |
+| 709  | The closed locked machine door north of a machine who is turned off           |
+| 710  | The closed locked machine door north of a machine who is turned off.          |
+| 711  | The closed locked machine door north of a machine, that is turned off.        |
+| 712  | The closed locked machine door north of a machine, which is turned off.       |
+| 713  | The closed locked machine door north of a machine, who is turned off.         |
+| 714  | The closed locked machine door north of machines that are turned off          |
+| 715  | The closed locked machine door north of machines that are turned off.         |
+| 716  | The closed locked machine door north of machines which are turned off         |
+| 717  | The closed locked machine door north of machines which are turned off.        |
+| 718  | The closed locked machine door north of machines who are turned off           |
+| 719  | The closed locked machine door north of machines who are turned off.          |
+| 720  | The closed locked machine door north of machines, which are turned off.       |
+| 721  | The closed locked machine door north of machines, who are turned off.         |
+| 722  | The closed locked machine door north of the machine that is turned off        |
+| 723  | The closed locked machine door north of the machine that is turned off.       |
+| 724  | The closed locked machine door north of the machine which is turned off       |
+| 725  | The closed locked machine door north of the machine which is turned off.      |
+| 726  | The closed locked machine door north of the machine who is turned off         |
+| 727  | The closed locked machine door north of the machine who is turned off.        |
+| 728  | The closed locked machine door north of the machine, that is turned off.      |
+| 729  | The closed locked machine door north of the machine, which is turned off.     |
+| 730  | The closed locked machine door north of the machine, who is turned off.       |
+| 731  | The closed locked machine door north of the machines that are turned off      |
+| 732  | The closed locked machine door north of the machines that are turned off.     |
+| 733  | The closed locked machine door north of the machines which are turned off     |
+| 734  | The closed locked machine door north of the machines which are turned off.    |
+| 735  | The closed locked machine door north of the machines who are turned off       |
+| 736  | The closed locked machine door north of the machines who are turned off.      |
+| 737  | The closed locked machine door north of the machines, that are turned off.    |
+| 738  | The closed locked machine door north of the machines, which are turned off.   |
+| 739  | The closed locked machine door north of the machines, who are turned off.     |
+| 740  | The closed locked machine door, north of a machine that is turned off         |
+| 741  | The closed locked machine door, north of a machine which is turned off        |
+| 742  | The closed locked machine door, north of a machine who is turned off          |
+| 743  | The closed locked machine door, north of machines who are turned off          |
+| 744  | The closed locked machine door, north of the machine that is turned off       |
+| 745  | The closed locked machine door, north of the machine which is turned off      |
+| 746  | The closed locked machine door, north of the machine who is turned off        |
+| 747  | The closed locked machine door, north of the machines that are turned off     |
+| 748  | The closed locked machine door, north of the machines which are turned off    |
+| 749  | The closed locked machine door, north of the machines who are turned off      |
+| 750  | The closed locked machine doors north of a machine that is turned off         |
+| 751  | The closed locked machine doors north of a machine that is turned off.        |
+| 752  | The closed locked machine doors north of a machine which is turned off        |
+| 753  | The closed locked machine doors north of a machine which is turned off.       |
+| 754  | The closed locked machine doors north of a machine who is turned off          |
+| 755  | The closed locked machine doors north of a machine who is turned off.         |
+| 756  | The closed locked machine doors north of a machine, that is turned off.       |
+| 757  | The closed locked machine doors north of a machine, which is turned off.      |
+| 758  | The closed locked machine doors north of a machine, who is turned off.        |
+| 759  | The closed locked machine doors north of machines that are turned off         |
+| 760  | The closed locked machine doors north of machines that are turned off.        |
+| 761  | The closed locked machine doors north of machines which are turned off        |
+| 762  | The closed locked machine doors north of machines which are turned off.       |
+| 763  | The closed locked machine doors north of machines who are turned off          |
+| 764  | The closed locked machine doors north of machines who are turned off.         |
+| 765  | The closed locked machine doors north of machines, that are turned off.       |
+| 766  | The closed locked machine doors north of machines, which are turned off.      |
+| 767  | The closed locked machine doors north of machines, who are turned off.        |
+| 768  | The closed locked machine doors north of the machine that is turned off       |
+| 769  | The closed locked machine doors north of the machine that is turned off.      |
+| 770  | The closed locked machine doors north of the machine which is turned off      |
+| 771  | The closed locked machine doors north of the machine which is turned off.     |
+| 772  | The closed locked machine doors north of the machine who is turned off        |
+| 773  | The closed locked machine doors north of the machine who is turned off.       |
+| 774  | The closed locked machine doors north of the machine, that is turned off.     |
+| 775  | The closed locked machine doors north of the machine, which is turned off.    |
+| 776  | The closed locked machine doors north of the machine, who is turned off.      |
+| 777  | The closed locked machine doors north of the machines that are turned off     |
+| 778  | The closed locked machine doors north of the machines that are turned off.    |
+| 779  | The closed locked machine doors north of the machines which are turned off    |
+| 780  | The closed locked machine doors north of the machines which are turned off.   |
+| 781  | The closed locked machine doors north of the machines who are turned off      |
+| 782  | The closed locked machine doors north of the machines who are turned off.     |
+| 783  | The closed locked machine doors north of the machines, that are turned off.   |
+| 784  | The closed locked machine doors north of the machines, which are turned off.  |
+| 785  | The closed locked machine doors north of the machines, who are turned off.    |
+| 786  | The closed locked machine doors, north of a machine that is turned off        |
+| 787  | The closed locked machine doors, north of a machine which is turned off       |
+| 788  | The closed locked machine doors, north of a machine who is turned off         |
+| 789  | The closed locked machine doors, north of machines who are turned off         |
+| 790  | The closed locked machine doors, north of the machine that is turned off      |
+| 791  | The closed locked machine doors, north of the machine which is turned off     |
+| 792  | The closed locked machine doors, north of the machine who is turned off       |
+| 793  | The closed locked machine doors, north of the machines that are turned off    |
+| 794  | The closed locked machine doors, north of the machines which are turned off   |
+| 795  | The closed locked machine doors, north of the machines who are turned off     |
+| 796  | The closed machines locked door north of a machine that is turned off         |
+| 797  | The closed machines locked door north of a machine that is turned off.        |
+| 798  | The closed machines locked door north of a machine which is turned off        |
+| 799  | The closed machines locked door north of a machine which is turned off.       |
+| 800  | The closed machines locked door north of a machine who is turned off          |
+| 801  | The closed machines locked door north of a machine who is turned off.         |
+| 802  | The closed machines locked door north of a machine, which is turned off.      |
+| 803  | The closed machines locked door north of a machine, who is turned off.        |
+| 804  | The closed machines locked door north of machines which are turned off        |
+| 805  | The closed machines locked door north of machines which are turned off.       |
+| 806  | The closed machines locked door north of machines who are turned off          |
+| 807  | The closed machines locked door north of machines who are turned off.         |
+| 808  | The closed machines locked door north of the machine that is turned off       |
+| 809  | The closed machines locked door north of the machine that is turned off.      |
+| 810  | The closed machines locked door north of the machine which is turned off      |
+| 811  | The closed machines locked door north of the machine which is turned off.     |
+| 812  | The closed machines locked door north of the machine who is turned off        |
+| 813  | The closed machines locked door north of the machine who is turned off.       |
+| 814  | The closed machines locked door north of the machine, which is turned off.    |
+| 815  | The closed machines locked door north of the machine, who is turned off.      |
+| 816  | The closed machines locked door north of the machines that are turned off     |
+| 817  | The closed machines locked door north of the machines that are turned off.    |
+| 818  | The closed machines locked door north of the machines which are turned off    |
+| 819  | The closed machines locked door north of the machines which are turned off.   |
+| 820  | The closed machines locked door north of the machines who are turned off      |
+| 821  | The closed machines locked door north of the machines who are turned off.     |
+| 822  | The closed machines locked door north of the machines, that are turned off.   |
+| 823  | The closed machines locked door north of the machines, which are turned off.  |
+| 824  | The closed machines locked door north of the machines, who are turned off.    |
+| 825  | The closed machines locked door, north of a machine who is turned off         |
+| 826  | The closed machines locked door, north of the machines who are turned off     |
+| 827  | The closed machines locked doors north of a machine that is turned off        |
+| 828  | The closed machines locked doors north of a machine that is turned off.       |
+| 829  | The closed machines locked doors north of a machine which is turned off       |
+| 830  | The closed machines locked doors north of a machine which is turned off.      |
+| 831  | The closed machines locked doors north of a machine who is turned off         |
+| 832  | The closed machines locked doors north of a machine who is turned off.        |
+| 833  | The closed machines locked doors north of a machine, which is turned off.     |
+| 834  | The closed machines locked doors north of a machine, who is turned off.       |
+| 835  | The closed machines locked doors north of machines that are turned off.       |
+| 836  | The closed machines locked doors north of machines which are turned off       |
+| 837  | The closed machines locked doors north of machines which are turned off.      |
+| 838  | The closed machines locked doors north of machines who are turned off         |
+| 839  | The closed machines locked doors north of machines who are turned off.        |
+| 840  | The closed machines locked doors north of the machine that is turned off      |
+| 841  | The closed machines locked doors north of the machine that is turned off.     |
+| 842  | The closed machines locked doors north of the machine which is turned off     |
+| 843  | The closed machines locked doors north of the machine which is turned off.    |
+| 844  | The closed machines locked doors north of the machine who is turned off       |
+| 845  | The closed machines locked doors north of the machine who is turned off.      |
+| 846  | The closed machines locked doors north of the machine, that is turned off.    |
+| 847  | The closed machines locked doors north of the machine, which is turned off.   |
+| 848  | The closed machines locked doors north of the machine, who is turned off.     |
+| 849  | The closed machines locked doors north of the machines that are turned off    |
+| 850  | The closed machines locked doors north of the machines that are turned off.   |
+| 851  | The closed machines locked doors north of the machines which are turned off   |
+| 852  | The closed machines locked doors north of the machines which are turned off.  |
+| 853  | The closed machines locked doors north of the machines who are turned off     |
+| 854  | The closed machines locked doors north of the machines who are turned off.    |
+| 855  | The closed machines locked doors north of the machines, that are turned off.  |
+| 856  | The closed machines locked doors north of the machines, which are turned off. |
+| 857  | The closed machines locked doors north of the machines, who are turned off.   |
+| 858  | The closed machines locked doors, north of a machine who is turned off        |
+| 859  | The closed machines locked doors, north of the machines who are turned off    |
+| 860  | The locked closed machine door north of a machine that is turned off          |
+| 861  | The locked closed machine door north of a machine that is turned off.         |
+| 862  | The locked closed machine door north of a machine which is turned off         |
+| 863  | The locked closed machine door north of a machine which is turned off.        |
+| 864  | The locked closed machine door north of a machine who is turned off           |
+| 865  | The locked closed machine door north of a machine who is turned off.          |
+| 866  | The locked closed machine door north of a machine, that is turned off.        |
+| 867  | The locked closed machine door north of a machine, which is turned off.       |
+| 868  | The locked closed machine door north of a machine, who is turned off.         |
+| 869  | The locked closed machine door north of machines that are turned off          |
+| 870  | The locked closed machine door north of machines that are turned off.         |
+| 871  | The locked closed machine door north of machines which are turned off         |
+| 872  | The locked closed machine door north of machines which are turned off.        |
+| 873  | The locked closed machine door north of machines who are turned off           |
+| 874  | The locked closed machine door north of machines who are turned off.          |
+| 875  | The locked closed machine door north of machines, that are turned off.        |
+| 876  | The locked closed machine door north of machines, which are turned off.       |
+| 877  | The locked closed machine door north of machines, who are turned off.         |
+| 878  | The locked closed machine door north of the machine that is turned off        |
+| 879  | The locked closed machine door north of the machine that is turned off.       |
+| 880  | The locked closed machine door north of the machine which is turned off       |
+| 881  | The locked closed machine door north of the machine which is turned off.      |
+| 882  | The locked closed machine door north of the machine who is turned off         |
+| 883  | The locked closed machine door north of the machine who is turned off.        |
+| 884  | The locked closed machine door north of the machine, that is turned off.      |
+| 885  | The locked closed machine door north of the machine, which is turned off.     |
+| 886  | The locked closed machine door north of the machine, who is turned off.       |
+| 887  | The locked closed machine door north of the machines that are turned off      |
+| 888  | The locked closed machine door north of the machines that are turned off.     |
+| 889  | The locked closed machine door north of the machines which are turned off     |
+| 890  | The locked closed machine door north of the machines which are turned off.    |
+| 891  | The locked closed machine door north of the machines who are turned off       |
+| 892  | The locked closed machine door north of the machines who are turned off.      |
+| 893  | The locked closed machine door north of the machines, that are turned off.    |
+| 894  | The locked closed machine door north of the machines, which are turned off.   |
+| 895  | The locked closed machine door north of the machines, who are turned off.     |
+| 896  | The locked closed machine door, north of a machine that is turned off         |
+| 897  | The locked closed machine door, north of a machine which is turned off        |
+| 898  | The locked closed machine door, north of a machine who is turned off          |
+| 899  | The locked closed machine door, north of machines which are turned off        |
+| 900  | The locked closed machine door, north of machines who are turned off          |
+| 901  | The locked closed machine door, north of the machine that is turned off       |
+| 902  | The locked closed machine door, north of the machine which is turned off      |
+| 903  | The locked closed machine door, north of the machine who is turned off        |
+| 904  | The locked closed machine door, north of the machines that are turned off     |
+| 905  | The locked closed machine door, north of the machines which are turned off    |
+| 906  | The locked closed machine door, north of the machines who are turned off      |
+| 907  | The locked closed machine doors north of a machine that is turned off         |
+| 908  | The locked closed machine doors north of a machine that is turned off.        |
+| 909  | The locked closed machine doors north of a machine which is turned off        |
+| 910  | The locked closed machine doors north of a machine which is turned off.       |
+| 911  | The locked closed machine doors north of a machine who is turned off          |
+| 912  | The locked closed machine doors north of a machine who is turned off.         |
+| 913  | The locked closed machine doors north of a machine, that is turned off.       |
+| 914  | The locked closed machine doors north of a machine, which is turned off.      |
+| 915  | The locked closed machine doors north of a machine, who is turned off.        |
+| 916  | The locked closed machine doors north of machines that are turned off         |
+| 917  | The locked closed machine doors north of machines that are turned off.        |
+| 918  | The locked closed machine doors north of machines which are turned off        |
+| 919  | The locked closed machine doors north of machines which are turned off.       |
+| 920  | The locked closed machine doors north of machines who are turned off          |
+| 921  | The locked closed machine doors north of machines who are turned off.         |
+| 922  | The locked closed machine doors north of machines, that are turned off.       |
+| 923  | The locked closed machine doors north of machines, which are turned off.      |
+| 924  | The locked closed machine doors north of machines, who are turned off.        |
+| 925  | The locked closed machine doors north of the machine that is turned off       |
+| 926  | The locked closed machine doors north of the machine that is turned off.      |
+| 927  | The locked closed machine doors north of the machine which is turned off      |
+| 928  | The locked closed machine doors north of the machine which is turned off.     |
+| 929  | The locked closed machine doors north of the machine who is turned off        |
+| 930  | The locked closed machine doors north of the machine who is turned off.       |
+| 931  | The locked closed machine doors north of the machine, that is turned off.     |
+| 932  | The locked closed machine doors north of the machine, which is turned off.    |
+| 933  | The locked closed machine doors north of the machine, who is turned off.      |
+| 934  | The locked closed machine doors north of the machines that are turned off     |
+| 935  | The locked closed machine doors north of the machines that are turned off.    |
+| 936  | The locked closed machine doors north of the machines which are turned off    |
+| 937  | The locked closed machine doors north of the machines which are turned off.   |
+| 938  | The locked closed machine doors north of the machines who are turned off      |
+| 939  | The locked closed machine doors north of the machines who are turned off.     |
+| 940  | The locked closed machine doors north of the machines, that are turned off.   |
+| 941  | The locked closed machine doors north of the machines, which are turned off.  |
+| 942  | The locked closed machine doors north of the machines, who are turned off.    |
+| 943  | The locked closed machine doors, north of a machine that is turned off        |
+| 944  | The locked closed machine doors, north of a machine which is turned off       |
+| 945  | The locked closed machine doors, north of a machine who is turned off         |
+| 946  | The locked closed machine doors, north of machines which are turned off       |
+| 947  | The locked closed machine doors, north of machines who are turned off         |
+| 948  | The locked closed machine doors, north of the machine that is turned off      |
+| 949  | The locked closed machine doors, north of the machine which is turned off     |
+| 950  | The locked closed machine doors, north of the machine who is turned off       |
+| 951  | The locked closed machine doors, north of the machines that are turned off    |
+| 952  | The locked closed machine doors, north of the machines which are turned off   |
+| 953  | The locked closed machine doors, north of the machines who are turned off     |
+| 954  | The locked machines closed door north of a machine that is turned off         |
+| 955  | The locked machines closed door north of a machine that is turned off.        |
+| 956  | The locked machines closed door north of a machine which is turned off        |
+| 957  | The locked machines closed door north of a machine which is turned off.       |
+| 958  | The locked machines closed door north of a machine who is turned off          |
+| 959  | The locked machines closed door north of a machine who is turned off.         |
+| 960  | The locked machines closed door north of a machine, that is turned off.       |
+| 961  | The locked machines closed door north of a machine, which is turned off.      |
+| 962  | The locked machines closed door north of a machine, who is turned off.        |
+| 963  | The locked machines closed door north of machines that are turned off         |
+| 964  | The locked machines closed door north of machines that are turned off.        |
+| 965  | The locked machines closed door north of machines which are turned off        |
+| 966  | The locked machines closed door north of machines which are turned off.       |
+| 967  | The locked machines closed door north of machines who are turned off          |
+| 968  | The locked machines closed door north of machines who are turned off.         |
+| 969  | The locked machines closed door north of machines, that are turned off.       |
+| 970  | The locked machines closed door north of machines, which are turned off.      |
+| 971  | The locked machines closed door north of machines, who are turned off.        |
+| 972  | The locked machines closed door north of the machine that is turned off       |
+| 973  | The locked machines closed door north of the machine that is turned off.      |
+| 974  | The locked machines closed door north of the machine which is turned off      |
+| 975  | The locked machines closed door north of the machine which is turned off.     |
+| 976  | The locked machines closed door north of the machine who is turned off        |
+| 977  | The locked machines closed door north of the machine who is turned off.       |
+| 978  | The locked machines closed door north of the machine, that is turned off.     |
+| 979  | The locked machines closed door north of the machine, which is turned off.    |
+| 980  | The locked machines closed door north of the machine, who is turned off.      |
+| 981  | The locked machines closed door north of the machines that are turned off     |
+| 982  | The locked machines closed door north of the machines that are turned off.    |
+| 983  | The locked machines closed door north of the machines which are turned off    |
+| 984  | The locked machines closed door north of the machines which are turned off.   |
+| 985  | The locked machines closed door north of the machines who are turned off      |
+| 986  | The locked machines closed door north of the machines who are turned off.     |
+| 987  | The locked machines closed door north of the machines, that are turned off.   |
+| 988  | The locked machines closed door north of the machines, which are turned off.  |
+| 989  | The locked machines closed door north of the machines, who are turned off.    |
+| 990  | The locked machines closed door, north of a machine that is turned off        |
+| 991  | The locked machines closed door, north of a machine which is turned off       |
+| 992  | The locked machines closed door, north of a machine who is turned off         |
+| 993  | The locked machines closed door, north of the machine who is turned off       |
+| 994  | The locked machines closed door, north of the machines that are turned off    |
+| 995  | The locked machines closed door, north of the machines which are turned off   |
+| 996  | The locked machines closed door, north of the machines who are turned off     |
+| 997  | The locked machines closed doors north of a machine that is turned off        |
+| 998  | The locked machines closed doors north of a machine that is turned off.       |
+| 999  | The locked machines closed doors north of a machine which is turned off       |
+| 1000 | The locked machines closed doors north of a machine which is turned off.      |
+| 1001 | The locked machines closed doors north of a machine who is turned off         |
+| 1002 | The locked machines closed doors north of a machine who is turned off.        |
+| 1003 | The locked machines closed doors north of a machine, that is turned off.      |
+| 1004 | The locked machines closed doors north of a machine, which is turned off.     |
+| 1005 | The locked machines closed doors north of a machine, who is turned off.       |
+| 1006 | The locked machines closed doors north of machines that are turned off        |
+| 1007 | The locked machines closed doors north of machines that are turned off.       |
+| 1008 | The locked machines closed doors north of machines which are turned off       |
+| 1009 | The locked machines closed doors north of machines which are turned off.      |
+| 1010 | The locked machines closed doors north of machines who are turned off         |
+| 1011 | The locked machines closed doors north of machines who are turned off.        |
+| 1012 | The locked machines closed doors north of machines, which are turned off.     |
+| 1013 | The locked machines closed doors north of machines, who are turned off.       |
+| 1014 | The locked machines closed doors north of the machine that is turned off      |
+| 1015 | The locked machines closed doors north of the machine that is turned off.     |
+| 1016 | The locked machines closed doors north of the machine which is turned off     |
+| 1017 | The locked machines closed doors north of the machine which is turned off.    |
+| 1018 | The locked machines closed doors north of the machine who is turned off       |
+| 1019 | The locked machines closed doors north of the machine who is turned off.      |
+| 1020 | The locked machines closed doors north of the machine, that is turned off.    |
+| 1021 | The locked machines closed doors north of the machine, which is turned off.   |
+| 1022 | The locked machines closed doors north of the machine, who is turned off.     |
+| 1023 | The locked machines closed doors north of the machines that are turned off    |
+| 1024 | The locked machines closed doors north of the machines that are turned off.   |
+| 1025 | The locked machines closed doors north of the machines which are turned off   |
+| 1026 | The locked machines closed doors north of the machines which are turned off.  |
+| 1027 | The locked machines closed doors north of the machines who are turned off     |
+| 1028 | The locked machines closed doors north of the machines who are turned off.    |
+| 1029 | The locked machines closed doors north of the machines, that are turned off.  |
+| 1030 | The locked machines closed doors north of the machines, which are turned off. |
+| 1031 | The locked machines closed doors north of the machines, who are turned off.   |
+| 1032 | The locked machines closed doors, north of a machine that is turned off       |
+| 1033 | The locked machines closed doors, north of a machine which is turned off      |
+| 1034 | The locked machines closed doors, north of a machine who is turned off        |
+| 1035 | The locked machines closed doors, north of the machine who is turned off      |
+| 1036 | The locked machines closed doors, north of the machines that are turned off   |
+| 1037 | The locked machines closed doors, north of the machines which are turned off  |
+| 1038 | The locked machines closed doors, north of the machines who are turned off    |
+| 1039 | The machines closed locked door north of a machine that is turned off         |
+| 1040 | The machines closed locked door north of a machine that is turned off.        |
+| 1041 | The machines closed locked door north of a machine which is turned off        |
+| 1042 | The machines closed locked door north of a machine which is turned off.       |
+| 1043 | The machines closed locked door north of a machine who is turned off          |
+| 1044 | The machines closed locked door north of a machine who is turned off.         |
+| 1045 | The machines closed locked door north of a machine, that is turned off.       |
+| 1046 | The machines closed locked door north of a machine, which is turned off.      |
+| 1047 | The machines closed locked door north of a machine, who is turned off.        |
+| 1048 | The machines closed locked door north of machines that are turned off         |
+| 1049 | The machines closed locked door north of machines that are turned off.        |
+| 1050 | The machines closed locked door north of machines which are turned off        |
+| 1051 | The machines closed locked door north of machines which are turned off.       |
+| 1052 | The machines closed locked door north of machines who are turned off          |
+| 1053 | The machines closed locked door north of machines who are turned off.         |
+| 1054 | The machines closed locked door north of machines, that are turned off.       |
+| 1055 | The machines closed locked door north of machines, which are turned off.      |
+| 1056 | The machines closed locked door north of machines, who are turned off.        |
+| 1057 | The machines closed locked door north of the machine that is turned off       |
+| 1058 | The machines closed locked door north of the machine that is turned off.      |
+| 1059 | The machines closed locked door north of the machine which is turned off      |
+| 1060 | The machines closed locked door north of the machine which is turned off.     |
+| 1061 | The machines closed locked door north of the machine who is turned off        |
+| 1062 | The machines closed locked door north of the machine who is turned off.       |
+| 1063 | The machines closed locked door north of the machine, that is turned off.     |
+| 1064 | The machines closed locked door north of the machine, which is turned off.    |
+| 1065 | The machines closed locked door north of the machine, who is turned off.      |
+| 1066 | The machines closed locked door north of the machines that are turned off     |
+| 1067 | The machines closed locked door north of the machines that are turned off.    |
+| 1068 | The machines closed locked door north of the machines which are turned off    |
+| 1069 | The machines closed locked door north of the machines which are turned off.   |
+| 1070 | The machines closed locked door north of the machines who are turned off      |
+| 1071 | The machines closed locked door north of the machines who are turned off.     |
+| 1072 | The machines closed locked door north of the machines, that are turned off.   |
+| 1073 | The machines closed locked door north of the machines, which are turned off.  |
+| 1074 | The machines closed locked door north of the machines, who are turned off.    |
+| 1075 | The machines closed locked door, north of a machine that is turned off        |
+| 1076 | The machines closed locked door, north of a machine which is turned off       |
+| 1077 | The machines closed locked door, north of a machine who is turned off         |
+| 1078 | The machines closed locked door, north of the machine that is turned off      |
+| 1079 | The machines closed locked door, north of the machine which is turned off     |
+| 1080 | The machines closed locked door, north of the machine who is turned off       |
+| 1081 | The machines closed locked door, north of the machines that are turned off    |
+| 1082 | The machines closed locked door, north of the machines which are turned off   |
+| 1083 | The machines closed locked door, north of the machines who are turned off     |
+| 1084 | The machines closed locked doors north of a machine that is turned off        |
+| 1085 | The machines closed locked doors north of a machine that is turned off.       |
+| 1086 | The machines closed locked doors north of a machine which is turned off       |
+| 1087 | The machines closed locked doors north of a machine which is turned off.      |
+| 1088 | The machines closed locked doors north of a machine who is turned off         |
+| 1089 | The machines closed locked doors north of a machine who is turned off.        |
+| 1090 | The machines closed locked doors north of a machine, that is turned off.      |
+| 1091 | The machines closed locked doors north of a machine, which is turned off.     |
+| 1092 | The machines closed locked doors north of a machine, who is turned off.       |
+| 1093 | The machines closed locked doors north of machines that are turned off        |
+| 1094 | The machines closed locked doors north of machines that are turned off.       |
+| 1095 | The machines closed locked doors north of machines which are turned off       |
+| 1096 | The machines closed locked doors north of machines which are turned off.      |
+| 1097 | The machines closed locked doors north of machines who are turned off         |
+| 1098 | The machines closed locked doors north of machines who are turned off.        |
+| 1099 | The machines closed locked doors north of machines, that are turned off.      |
+| 1100 | The machines closed locked doors north of machines, which are turned off.     |
+| 1101 | The machines closed locked doors north of machines, who are turned off.       |
+| 1102 | The machines closed locked doors north of the machine that is turned off      |
+| 1103 | The machines closed locked doors north of the machine that is turned off.     |
+| 1104 | The machines closed locked doors north of the machine which is turned off     |
+| 1105 | The machines closed locked doors north of the machine which is turned off.    |
+| 1106 | The machines closed locked doors north of the machine who is turned off       |
+| 1107 | The machines closed locked doors north of the machine who is turned off.      |
+| 1108 | The machines closed locked doors north of the machine, that is turned off.    |
+| 1109 | The machines closed locked doors north of the machine, which is turned off.   |
+| 1110 | The machines closed locked doors north of the machine, who is turned off.     |
+| 1111 | The machines closed locked doors north of the machines that are turned off    |
+| 1112 | The machines closed locked doors north of the machines that are turned off.   |
+| 1113 | The machines closed locked doors north of the machines which are turned off   |
+| 1114 | The machines closed locked doors north of the machines which are turned off.  |
+| 1115 | The machines closed locked doors north of the machines who are turned off     |
+| 1116 | The machines closed locked doors north of the machines who are turned off.    |
+| 1117 | The machines closed locked doors north of the machines, that are turned off.  |
+| 1118 | The machines closed locked doors north of the machines, which are turned off. |
+| 1119 | The machines closed locked doors north of the machines, who are turned off.   |
+| 1120 | The machines closed locked doors, north of a machine that is turned off       |
+| 1121 | The machines closed locked doors, north of a machine which is turned off      |
+| 1122 | The machines closed locked doors, north of a machine who is turned off        |
+| 1123 | The machines closed locked doors, north of the machine that is turned off     |
+| 1124 | The machines closed locked doors, north of the machine which is turned off    |
+| 1125 | The machines closed locked doors, north of the machine who is turned off      |
+| 1126 | The machines closed locked doors, north of the machines that are turned off   |
+| 1127 | The machines closed locked doors, north of the machines which are turned off  |
+| 1128 | The machines closed locked doors, north of the machines who are turned off    |
+| 1129 | The machines locked closed door north of a machine that is turned off         |
+| 1130 | The machines locked closed door north of a machine that is turned off.        |
+| 1131 | The machines locked closed door north of a machine which is turned off        |
+| 1132 | The machines locked closed door north of a machine which is turned off.       |
+| 1133 | The machines locked closed door north of a machine who is turned off          |
+| 1134 | The machines locked closed door north of a machine who is turned off.         |
+| 1135 | The machines locked closed door north of a machine, that is turned off.       |
+| 1136 | The machines locked closed door north of a machine, which is turned off.      |
+| 1137 | The machines locked closed door north of a machine, who is turned off.        |
+| 1138 | The machines locked closed door north of machines that are turned off         |
+| 1139 | The machines locked closed door north of machines that are turned off.        |
+| 1140 | The machines locked closed door north of machines which are turned off        |
+| 1141 | The machines locked closed door north of machines which are turned off.       |
+| 1142 | The machines locked closed door north of machines who are turned off          |
+| 1143 | The machines locked closed door north of machines who are turned off.         |
+| 1144 | The machines locked closed door north of machines, that are turned off.       |
+| 1145 | The machines locked closed door north of machines, which are turned off.      |
+| 1146 | The machines locked closed door north of machines, who are turned off.        |
+| 1147 | The machines locked closed door north of the machine that is turned off       |
+| 1148 | The machines locked closed door north of the machine that is turned off.      |
+| 1149 | The machines locked closed door north of the machine which is turned off      |
+| 1150 | The machines locked closed door north of the machine which is turned off.     |
+| 1151 | The machines locked closed door north of the machine who is turned off        |
+| 1152 | The machines locked closed door north of the machine who is turned off.       |
+| 1153 | The machines locked closed door north of the machine, that is turned off.     |
+| 1154 | The machines locked closed door north of the machine, which is turned off.    |
+| 1155 | The machines locked closed door north of the machine, who is turned off.      |
+| 1156 | The machines locked closed door north of the machines that are turned off     |
+| 1157 | The machines locked closed door north of the machines that are turned off.    |
+| 1158 | The machines locked closed door north of the machines which are turned off    |
+| 1159 | The machines locked closed door north of the machines which are turned off.   |
+| 1160 | The machines locked closed door north of the machines who are turned off      |
+| 1161 | The machines locked closed door north of the machines who are turned off.     |
+| 1162 | The machines locked closed door north of the machines, that are turned off.   |
+| 1163 | The machines locked closed door north of the machines, which are turned off.  |
+| 1164 | The machines locked closed door north of the machines, who are turned off.    |
+| 1165 | The machines locked closed door, north of a machine that is turned off        |
+| 1166 | The machines locked closed door, north of a machine which is turned off       |
+| 1167 | The machines locked closed door, north of a machine who is turned off         |
+| 1168 | The machines locked closed door, north of the machine that is turned off      |
+| 1169 | The machines locked closed door, north of the machine who is turned off       |
+| 1170 | The machines locked closed door, north of the machines that are turned off    |
+| 1171 | The machines locked closed door, north of the machines which are turned off   |
+| 1172 | The machines locked closed door, north of the machines who are turned off     |
+| 1173 | The machines locked closed doors north of a machine that is turned off        |
+| 1174 | The machines locked closed doors north of a machine that is turned off.       |
+| 1175 | The machines locked closed doors north of a machine which is turned off       |
+| 1176 | The machines locked closed doors north of a machine which is turned off.      |
+| 1177 | The machines locked closed doors north of a machine who is turned off         |
+| 1178 | The machines locked closed doors north of a machine who is turned off.        |
+| 1179 | The machines locked closed doors north of a machine, that is turned off.      |
+| 1180 | The machines locked closed doors north of a machine, which is turned off.     |
+| 1181 | The machines locked closed doors north of a machine, who is turned off.       |
+| 1182 | The machines locked closed doors north of machines that are turned off        |
+| 1183 | The machines locked closed doors north of machines that are turned off.       |
+| 1184 | The machines locked closed doors north of machines which are turned off       |
+| 1185 | The machines locked closed doors north of machines which are turned off.      |
+| 1186 | The machines locked closed doors north of machines who are turned off         |
+| 1187 | The machines locked closed doors north of machines who are turned off.        |
+| 1188 | The machines locked closed doors north of machines, which are turned off.     |
+| 1189 | The machines locked closed doors north of machines, who are turned off.       |
+| 1190 | The machines locked closed doors north of the machine that is turned off      |
+| 1191 | The machines locked closed doors north of the machine that is turned off.     |
+| 1192 | The machines locked closed doors north of the machine which is turned off     |
+| 1193 | The machines locked closed doors north of the machine which is turned off.    |
+| 1194 | The machines locked closed doors north of the machine who is turned off       |
+| 1195 | The machines locked closed doors north of the machine who is turned off.      |
+| 1196 | The machines locked closed doors north of the machine, that is turned off.    |
+| 1197 | The machines locked closed doors north of the machine, which is turned off.   |
+| 1198 | The machines locked closed doors north of the machine, who is turned off.     |
+| 1199 | The machines locked closed doors north of the machines that are turned off    |
+| 1200 | The machines locked closed doors north of the machines that are turned off.   |
+| 1201 | The machines locked closed doors north of the machines which are turned off   |
+| 1202 | The machines locked closed doors north of the machines which are turned off.  |
+| 1203 | The machines locked closed doors north of the machines who are turned off     |
+| 1204 | The machines locked closed doors north of the machines who are turned off.    |
+| 1205 | The machines locked closed doors north of the machines, that are turned off.  |
+| 1206 | The machines locked closed doors north of the machines, which are turned off. |
+| 1207 | The machines locked closed doors north of the machines, who are turned off.   |
+| 1208 | The machines locked closed doors, north of a machine that is turned off       |
+| 1209 | The machines locked closed doors, north of a machine which is turned off      |
+| 1210 | The machines locked closed doors, north of a machine who is turned off        |
+| 1211 | The machines locked closed doors, north of the machine that is turned off     |
+| 1212 | The machines locked closed doors, north of the machine who is turned off      |
+| 1213 | The machines locked closed doors, north of the machines that are turned off   |
+| 1214 | The machines locked closed doors, north of the machines which are turned off  |
+| 1215 | The machines locked closed doors, north of the machines who are turned off    |
++------+-------------------------------------------------------------------------------+
+

@@ -1,0 +1,951 @@
+GRAPH NAME: idFlashlight1Switch_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 765                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 6                  |
+| Nodes Covered                   | 5                  |
+| Nodes Included                  | 3                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.8333333333333334 |
+| Node Inclusion                  | 0.5                |
++---------------------------------+--------------------+
+| Edge Count                      | 5                  |
+| Edges Covered                   | 2                  |
+| Edges Included                  | 2                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.4                |
+| Edge Inclusion                  | 0.4                |
++---------------------------------+--------------------+
+
++---------------------------------------------------------------------------------------------------------------+
+|                                                  GOLD OUTPUTS                                                 |
++--------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                      | Generated? |
++--------------------------------------------------------------------------------------------------+------------+
+| the yellow flashlight switch that is turned off south of page three of the book which is unknown | False      |
++--------------------------------------------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              NODE METRICS                                                             |
++---------------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+| Node                | Node Covered | Node Included | Coverage Comment                             | Inclusion Comment                 |
++---------------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+| idFlashlight1Switch | True         | True          | Covered                                      | Included                          |
+| yellow              | True         | True          | Covered                                      | Included                          |
+| off                 | True         | True          | Covered                                      | Included                          |
+| idBook1Page3        | False        | False         | 'idBook1Page3' not in lexicon's node entries | No SEMENT generated for this node |
+| 3                   | True         | False         | Covered                                      | Successor of failed element       |
+| true                | True         | False         | Covered                                      | Successor of failed element       |
++---------------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                        EDGE METRICS                                                                                       |
++---------------------------------------+---------------------+--------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+| Edge                                  | Parent              | Child        | Edge Covered | Edge Included | Coverage Comment                          | Inclusion Comment                 |
++---------------------------------------+---------------------+--------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+| idFlashlight1Switch_prop_idColor      | idFlashlight1Switch | yellow       | True         | True          | Covered                                   | Included                          |
+| idFlashlight1Switch_prop_idPowerState | idFlashlight1Switch | off          | True         | True          | Covered                                   | Included                          |
+| isSouthOf                             | idFlashlight1Switch | idBook1Page3 | False        | False         | child of 'isSouthOf' has no SEMENT        | No SEMENT generated for this edge |
+| idBook1Page3_prop_idCardinality       | idBook1Page3        | 3            | False        | False         | parent of 'idCardinality' has no SEMENT   | No SEMENT generated for this edge |
+| idBook1Page3_prop_idUnknownObject     | idBook1Page3        | true         | False        | False         | parent of 'idUnknownObject' has no SEMENT | No SEMENT generated for this edge |
++---------------------------------------+---------------------+--------------+--------------+---------------+-------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h400                                                                      |
+|               |   INDEX: x399                                                                    |
+|               |   RELS: < [ _turn_v_off LBL: h425 ARG0: e422 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i423 ARG2: i424 ]                                                                |
+|               |           [ _yellow_a_1 LBL: h414 ARG0: i412 ARG1: i413 ]                        |
+|               |           [ compound LBL: h411 ARG0: e408 [ e PROG: - ] ARG1: u409 ARG2: u410 ]  |
+|               |           [ udef_q LBL: h406 ARG0: x403 RSTR: h404 BODY: h405 ]                  |
+|               |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                               |
+|               |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                 |
+|               |   HCONS: < h404 qeq h402 >                                                       |
+|               |   ICONS: < e422 topic i424 >                                                     |
+|               |   EQS: < x403 eq x401 h411 eq h407 u410 eq x403 h411 eq h400 u409 eq x399 h414   |
+|               | eq h400 i413 eq x399 h425 eq h400 i424 eq x399 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h400                                                                      |
+|               |   INDEX: x399                                                                    |
+|               |   RELS: < [ _turn_v_off LBL: h400 ARG0: e422 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i423 ARG2: x399 ]                                                                |
+|               |           [ _yellow_a_1 LBL: h400 ARG0: i412 ARG1: x399 ]                        |
+|               |           [ compound LBL: h400 ARG0: e408 [ e PROG: - ] ARG1: x399 ARG2: x401 ]  |
+|               |           [ udef_q LBL: h406 ARG0: x401 RSTR: h404 BODY: h405 ]                  |
+|               |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                               |
+|               |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                 |
+|               |   HCONS: < h404 qeq h402 >                                                       |
+|               |   ICONS: < e422 topic x399 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h441                                                                      |
+|               |   INDEX: e438                                                                    |
+|               |   RELS: < [ unknown LBL: h437 ARG: x399 ARG0: e438 ]                             |
+|               |           [ def_udef_a_q LBL: h436 ARG0: x399 RSTR: h434 BODY: h435 ]            |
+|               |           [ _turn_v_off LBL: h400 ARG0: e422 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i423 ARG2: x399 ]                                                                |
+|               |           [ _yellow_a_1 LBL: h400 ARG0: i412 ARG1: x399 ]                        |
+|               |           [ compound LBL: h400 ARG0: e408 [ e PROG: - ] ARG1: x399 ARG2: x401 ]  |
+|               |           [ udef_q LBL: h406 ARG0: x401 RSTR: h404 BODY: h405 ]                  |
+|               |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                               |
+|               |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                 |
+|               |   HCONS: < h404 qeq h402 h434 qeq h400 h441 qeq h437 >                           |
+|               |   ICONS: < e422 topic x399 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------+
+|                                              NODE SEMENTS                                             |
++---------------------+---------------------------------------------------------------------------------+
+| Node                | Generated SEMENT                                                                |
++---------------------+---------------------------------------------------------------------------------+
+| idFlashlight1Switch | [ TOP: h400                                                                     |
+|                     |   INDEX: x399                                                                   |
+|                     |   RELS: < [ compound LBL: h411 ARG0: e408 [ e PROG: - ] ARG1: u409 ARG2: u410 ] |
+|                     |           [ udef_q LBL: h406 ARG0: x403 RSTR: h404 BODY: h405 ]                 |
+|                     |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                              |
+|                     |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                |
+|                     |   HCONS: < h404 qeq h402 >                                                      |
+|                     |   EQS: < x403 eq x401 h411 eq h407 u410 eq x403 h411 eq h400 u409 eq x399 > ]   |
++---------------------+---------------------------------------------------------------------------------+
+| yellow              | [ TOP: h414                                                                     |
+|                     |   INDEX: i412                                                                   |
+|                     |   RELS: < [ _yellow_a_1 LBL: h414 ARG0: i412 ARG1: i413 ] >                     |
+|                     |   SLOTS: < ARG1: i413 > ]                                                       |
++---------------------+---------------------------------------------------------------------------------+
+| off                 | [ TOP: h417                                                                     |
+|                     |   INDEX: e415                                                                   |
+|                     |   RELS: < [ _false_a_of LBL: h417 ARG0: e415 ARG1: h416 ] >                     |
+|                     |   SLOTS: < ARG1: h416 > ]                                                       |
++---------------------+---------------------------------------------------------------------------------+
+| idBook1Page3        | None                                                                            |
++---------------------+---------------------------------------------------------------------------------+
+| 3                   | [ TOP: h428                                                                     |
+|                     |   INDEX: i426                                                                   |
+|                     |   RELS: < [ card LBL: h428 ARG0: i426 ARG1: u427 CARG: "3" ] >                  |
+|                     |   SLOTS: < ARG1: u427 > ]                                                       |
++---------------------+---------------------------------------------------------------------------------+
+| true                | [ TOP: h432                                                                     |
+|                     |   INDEX: e429                                                                   |
+|                     |   RELS: < [ _true_a_of LBL: h432 ARG0: e429 ARG1: u430 ARG2: u431 ] >           |
+|                     |   SLOTS: < ARG1: u430 ARG2: u431 > ]                                            |
++---------------------+---------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                          EDGE SEMENTS                                                                         |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| Edge                                  | Parent              | Child        | Generated SEMENT                                                                 |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| idFlashlight1Switch_prop_idColor      | idFlashlight1Switch | yellow       | [ TOP: h400                                                                      |
+|                                       |                     |              |   INDEX: x399                                                                    |
+|                                       |                     |              |   RELS: < [ _yellow_a_1 LBL: h414 ARG0: i412 ARG1: i413 ]                        |
+|                                       |                     |              |           [ compound LBL: h411 ARG0: e408 [ e PROG: - ] ARG1: u409 ARG2: u410 ]  |
+|                                       |                     |              |           [ udef_q LBL: h406 ARG0: x403 RSTR: h404 BODY: h405 ]                  |
+|                                       |                     |              |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                               |
+|                                       |                     |              |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                 |
+|                                       |                     |              |   HCONS: < h404 qeq h402 >                                                       |
+|                                       |                     |              |   EQS: < x403 eq x401 h411 eq h407 u410 eq x403 h411 eq h400 u409 eq x399 h414   |
+|                                       |                     |              | eq h400 i413 eq x399 > ]                                                         |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| idFlashlight1Switch_prop_idPowerState | idFlashlight1Switch | off          | [ TOP: h400                                                                      |
+|                                       |                     |              |   INDEX: x399                                                                    |
+|                                       |                     |              |   RELS: < [ _turn_v_off LBL: h425 ARG0: e422 [ e TENSE: pres PERF: - ] ARG1:     |
+|                                       |                     |              | i423 ARG2: i424 ]                                                                |
+|                                       |                     |              |           [ _yellow_a_1 LBL: h414 ARG0: i412 ARG1: i413 ]                        |
+|                                       |                     |              |           [ compound LBL: h411 ARG0: e408 [ e PROG: - ] ARG1: u409 ARG2: u410 ]  |
+|                                       |                     |              |           [ udef_q LBL: h406 ARG0: x403 RSTR: h404 BODY: h405 ]                  |
+|                                       |                     |              |           [ _flashlight_n_1 LBL: h402 ARG0: x401 ]                               |
+|                                       |                     |              |           [ _switch_n_1 LBL: h400 ARG0: x399 ] >                                 |
+|                                       |                     |              |   HCONS: < h404 qeq h402 >                                                       |
+|                                       |                     |              |   ICONS: < e422 topic i424 >                                                     |
+|                                       |                     |              |   EQS: < x403 eq x401 h411 eq h407 u410 eq x403 h411 eq h400 u409 eq x399 h414   |
+|                                       |                     |              | eq h400 i413 eq x399 h425 eq h400 i424 eq x399 > ]                               |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| isSouthOf                             | idFlashlight1Switch | idBook1Page3 | None                                                                             |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| idBook1Page3_prop_idCardinality       | idBook1Page3        | 3            | None                                                                             |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+| idBook1Page3_prop_idUnknownObject     | idBook1Page3        | true         | None                                                                             |
++---------------------------------------+---------------------+--------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------+
+|                          GENERATED ENGLISH TEXT                         |
++-----+-------------------------------------------------------------------+
+| #   | Generated Text                                                    |
++-----+-------------------------------------------------------------------+
+| 1   | A flashlight switch that is turned off that is yellow             |
+| 2   | A flashlight switch that is turned off that is yellow.            |
+| 3   | A flashlight switch that is turned off which is yellow            |
+| 4   | A flashlight switch that is turned off which is yellow.           |
+| 5   | A flashlight switch that is turned off who is yellow              |
+| 6   | A flashlight switch that is turned off who is yellow.             |
+| 7   | A flashlight switch that is turned off, that is yellow            |
+| 8   | A flashlight switch that is turned off, that is yellow.           |
+| 9   | A flashlight switch that is turned off, which is yellow           |
+| 10  | A flashlight switch that is turned off, which is yellow.          |
+| 11  | A flashlight switch that is turned off, who is yellow             |
+| 12  | A flashlight switch that is turned off, who is yellow.            |
+| 13  | A flashlight switch that is yellow that is turned off             |
+| 14  | A flashlight switch that is yellow that is turned off.            |
+| 15  | A flashlight switch that is yellow which is turned off            |
+| 16  | A flashlight switch that is yellow which is turned off.           |
+| 17  | A flashlight switch that is yellow who is turned off              |
+| 18  | A flashlight switch that is yellow who is turned off.             |
+| 19  | A flashlight switch that is yellow, that is turned off            |
+| 20  | A flashlight switch that is yellow, that is turned off.           |
+| 21  | A flashlight switch that is yellow, which is turned off           |
+| 22  | A flashlight switch that is yellow, which is turned off.          |
+| 23  | A flashlight switch that is yellow, who is turned off             |
+| 24  | A flashlight switch that is yellow, who is turned off.            |
+| 25  | A flashlight switch which is turned off that is yellow            |
+| 26  | A flashlight switch which is turned off that is yellow.           |
+| 27  | A flashlight switch which is turned off which is yellow           |
+| 28  | A flashlight switch which is turned off which is yellow.          |
+| 29  | A flashlight switch which is turned off who is yellow             |
+| 30  | A flashlight switch which is turned off who is yellow.            |
+| 31  | A flashlight switch which is turned off, that is yellow           |
+| 32  | A flashlight switch which is turned off, that is yellow.          |
+| 33  | A flashlight switch which is turned off, which is yellow          |
+| 34  | A flashlight switch which is turned off, which is yellow.         |
+| 35  | A flashlight switch which is turned off, who is yellow            |
+| 36  | A flashlight switch which is turned off, who is yellow.           |
+| 37  | A flashlight switch which is yellow that is turned off            |
+| 38  | A flashlight switch which is yellow that is turned off.           |
+| 39  | A flashlight switch which is yellow which is turned off           |
+| 40  | A flashlight switch which is yellow which is turned off.          |
+| 41  | A flashlight switch which is yellow who is turned off             |
+| 42  | A flashlight switch which is yellow who is turned off.            |
+| 43  | A flashlight switch which is yellow, that is turned off           |
+| 44  | A flashlight switch which is yellow, that is turned off.          |
+| 45  | A flashlight switch which is yellow, which is turned off          |
+| 46  | A flashlight switch which is yellow, which is turned off.         |
+| 47  | A flashlight switch which is yellow, who is turned off            |
+| 48  | A flashlight switch which is yellow, who is turned off.           |
+| 49  | A flashlight switch which, that is turned off, is yellow          |
+| 50  | A flashlight switch which, that is turned off, is yellow.         |
+| 51  | A flashlight switch which, that is yellow, is turned off          |
+| 52  | A flashlight switch which, that is yellow, is turned off.         |
+| 53  | A flashlight switch which, which is turned off, is yellow         |
+| 54  | A flashlight switch which, which is turned off, is yellow.        |
+| 55  | A flashlight switch which, which is yellow, is turned off         |
+| 56  | A flashlight switch which, which is yellow, is turned off.        |
+| 57  | A flashlight switch which, who is turned off, is yellow           |
+| 58  | A flashlight switch which, who is turned off, is yellow.          |
+| 59  | A flashlight switch which, who is yellow, is turned off           |
+| 60  | A flashlight switch which, who is yellow, is turned off.          |
+| 61  | A flashlight switch who is turned off that is yellow              |
+| 62  | A flashlight switch who is turned off that is yellow.             |
+| 63  | A flashlight switch who is turned off which is yellow             |
+| 64  | A flashlight switch who is turned off which is yellow.            |
+| 65  | A flashlight switch who is turned off who is yellow               |
+| 66  | A flashlight switch who is turned off who is yellow.              |
+| 67  | A flashlight switch who is turned off, that is yellow             |
+| 68  | A flashlight switch who is turned off, that is yellow.            |
+| 69  | A flashlight switch who is turned off, which is yellow            |
+| 70  | A flashlight switch who is turned off, which is yellow.           |
+| 71  | A flashlight switch who is turned off, who is yellow              |
+| 72  | A flashlight switch who is turned off, who is yellow.             |
+| 73  | A flashlight switch who is yellow that is turned off              |
+| 74  | A flashlight switch who is yellow that is turned off.             |
+| 75  | A flashlight switch who is yellow which is turned off             |
+| 76  | A flashlight switch who is yellow which is turned off.            |
+| 77  | A flashlight switch who is yellow who is turned off               |
+| 78  | A flashlight switch who is yellow who is turned off.              |
+| 79  | A flashlight switch who is yellow, that is turned off             |
+| 80  | A flashlight switch who is yellow, that is turned off.            |
+| 81  | A flashlight switch who is yellow, which is turned off            |
+| 82  | A flashlight switch who is yellow, which is turned off.           |
+| 83  | A flashlight switch who is yellow, who is turned off              |
+| 84  | A flashlight switch who is yellow, who is turned off.             |
+| 85  | A flashlight switch who, that is turned off, is yellow            |
+| 86  | A flashlight switch who, that is turned off, is yellow.           |
+| 87  | A flashlight switch who, that is yellow, is turned off            |
+| 88  | A flashlight switch who, that is yellow, is turned off.           |
+| 89  | A flashlight switch who, which is turned off, is yellow           |
+| 90  | A flashlight switch who, which is turned off, is yellow.          |
+| 91  | A flashlight switch who, which is yellow, is turned off           |
+| 92  | A flashlight switch who, which is yellow, is turned off.          |
+| 93  | A flashlight switch who, who is turned off, is yellow             |
+| 94  | A flashlight switch who, who is turned off, is yellow.            |
+| 95  | A flashlight switch who, who is yellow, is turned off             |
+| 96  | A flashlight switch who, who is yellow, is turned off.            |
+| 97  | A flashlight switch, that is turned off, that is yellow.          |
+| 98  | A flashlight switch, that is turned off, which is yellow.         |
+| 99  | A flashlight switch, that is turned off, who is yellow.           |
+| 100 | A flashlight switch, that is yellow, that is turned off.          |
+| 101 | A flashlight switch, that is yellow, which is turned off.         |
+| 102 | A flashlight switch, that is yellow, who is turned off.           |
+| 103 | A flashlight switch, which is turned off, that is yellow.         |
+| 104 | A flashlight switch, which is turned off, which is yellow.        |
+| 105 | A flashlight switch, which is turned off, who is yellow.          |
+| 106 | A flashlight switch, which is yellow, that is turned off.         |
+| 107 | A flashlight switch, which is yellow, which is turned off.        |
+| 108 | A flashlight switch, which is yellow, who is turned off.          |
+| 109 | A flashlight switch, which, that is turned off, is yellow.        |
+| 110 | A flashlight switch, which, that is yellow, is turned off.        |
+| 111 | A flashlight switch, which, which is turned off, is yellow.       |
+| 112 | A flashlight switch, which, which is yellow, is turned off.       |
+| 113 | A flashlight switch, which, who is turned off, is yellow.         |
+| 114 | A flashlight switch, which, who is yellow, is turned off.         |
+| 115 | A flashlight switch, who is turned off, that is yellow.           |
+| 116 | A flashlight switch, who is turned off, which is yellow.          |
+| 117 | A flashlight switch, who is turned off, who is yellow.            |
+| 118 | A flashlight switch, who is yellow, that is turned off.           |
+| 119 | A flashlight switch, who is yellow, which is turned off.          |
+| 120 | A flashlight switch, who is yellow, who is turned off.            |
+| 121 | A flashlight switch, who, that is turned off, is yellow.          |
+| 122 | A flashlight switch, who, that is yellow, is turned off.          |
+| 123 | A flashlight switch, who, which is turned off, is yellow.         |
+| 124 | A flashlight switch, who, which is yellow, is turned off.         |
+| 125 | A flashlight switch, who, who is turned off, is yellow.           |
+| 126 | A flashlight switch, who, who is yellow, is turned off.           |
+| 127 | A flashlight yellow switch that is turned off                     |
+| 128 | A flashlight yellow switch that is turned off.                    |
+| 129 | A flashlight yellow switch which is turned off                    |
+| 130 | A flashlight yellow switch which is turned off.                   |
+| 131 | A flashlight yellow switch who is turned off                      |
+| 132 | A flashlight yellow switch who is turned off.                     |
+| 133 | A flashlight yellow switch, that is turned off.                   |
+| 134 | A flashlight yellow switch, which is turned off.                  |
+| 135 | A flashlight yellow switch, who is turned off.                    |
+| 136 | A flashlights yellow switch that is turned off                    |
+| 137 | A flashlights yellow switch that is turned off.                   |
+| 138 | A flashlights yellow switch which is turned off                   |
+| 139 | A flashlights yellow switch which is turned off.                  |
+| 140 | A flashlights yellow switch who is turned off                     |
+| 141 | A flashlights yellow switch who is turned off.                    |
+| 142 | A flashlights yellow switch, that is turned off.                  |
+| 143 | A flashlights yellow switch, which is turned off.                 |
+| 144 | A flashlights yellow switch, who is turned off.                   |
+| 145 | A yellow flashlight switch that is turned off                     |
+| 146 | A yellow flashlight switch that is turned off.                    |
+| 147 | A yellow flashlight switch which is turned off                    |
+| 148 | A yellow flashlight switch which is turned off.                   |
+| 149 | A yellow flashlight switch who is turned off                      |
+| 150 | A yellow flashlight switch who is turned off.                     |
+| 151 | A yellow flashlight switch, that is turned off.                   |
+| 152 | A yellow flashlight switch, which is turned off.                  |
+| 153 | A yellow flashlight switch, who is turned off.                    |
+| 154 | Flashlight switch that is turned off that is yellow               |
+| 155 | Flashlight switch that is turned off that is yellow.              |
+| 156 | Flashlight switch that is turned off which is yellow              |
+| 157 | Flashlight switch that is turned off which is yellow.             |
+| 158 | Flashlight switch that is turned off who is yellow                |
+| 159 | Flashlight switch that is turned off who is yellow.               |
+| 160 | Flashlight switch that is turned off, that is yellow              |
+| 161 | Flashlight switch that is turned off, that is yellow.             |
+| 162 | Flashlight switch that is turned off, which is yellow             |
+| 163 | Flashlight switch that is turned off, which is yellow.            |
+| 164 | Flashlight switch that is turned off, who is yellow               |
+| 165 | Flashlight switch that is turned off, who is yellow.              |
+| 166 | Flashlight switch that is yellow that is turned off               |
+| 167 | Flashlight switch that is yellow that is turned off.              |
+| 168 | Flashlight switch that is yellow which is turned off              |
+| 169 | Flashlight switch that is yellow which is turned off.             |
+| 170 | Flashlight switch that is yellow who is turned off                |
+| 171 | Flashlight switch that is yellow who is turned off.               |
+| 172 | Flashlight switch that is yellow, that is turned off              |
+| 173 | Flashlight switch that is yellow, that is turned off.             |
+| 174 | Flashlight switch that is yellow, which is turned off             |
+| 175 | Flashlight switch that is yellow, which is turned off.            |
+| 176 | Flashlight switch that is yellow, who is turned off               |
+| 177 | Flashlight switch that is yellow, who is turned off.              |
+| 178 | Flashlight switch which is turned off that is yellow              |
+| 179 | Flashlight switch which is turned off that is yellow.             |
+| 180 | Flashlight switch which is turned off which is yellow             |
+| 181 | Flashlight switch which is turned off which is yellow.            |
+| 182 | Flashlight switch which is turned off who is yellow               |
+| 183 | Flashlight switch which is turned off who is yellow.              |
+| 184 | Flashlight switch which is turned off, that is yellow             |
+| 185 | Flashlight switch which is turned off, that is yellow.            |
+| 186 | Flashlight switch which is turned off, which is yellow            |
+| 187 | Flashlight switch which is turned off, which is yellow.           |
+| 188 | Flashlight switch which is turned off, who is yellow              |
+| 189 | Flashlight switch which is turned off, who is yellow.             |
+| 190 | Flashlight switch which is yellow that is turned off              |
+| 191 | Flashlight switch which is yellow that is turned off.             |
+| 192 | Flashlight switch which is yellow which is turned off             |
+| 193 | Flashlight switch which is yellow which is turned off.            |
+| 194 | Flashlight switch which is yellow who is turned off               |
+| 195 | Flashlight switch which is yellow who is turned off.              |
+| 196 | Flashlight switch which is yellow, that is turned off             |
+| 197 | Flashlight switch which is yellow, that is turned off.            |
+| 198 | Flashlight switch which is yellow, which is turned off            |
+| 199 | Flashlight switch which is yellow, which is turned off.           |
+| 200 | Flashlight switch which is yellow, who is turned off              |
+| 201 | Flashlight switch which is yellow, who is turned off.             |
+| 202 | Flashlight switch which, that is turned off, is yellow            |
+| 203 | Flashlight switch which, that is turned off, is yellow.           |
+| 204 | Flashlight switch which, that is yellow, is turned off            |
+| 205 | Flashlight switch which, that is yellow, is turned off.           |
+| 206 | Flashlight switch which, which is turned off, is yellow           |
+| 207 | Flashlight switch which, which is turned off, is yellow.          |
+| 208 | Flashlight switch which, which is yellow, is turned off           |
+| 209 | Flashlight switch which, which is yellow, is turned off.          |
+| 210 | Flashlight switch which, who is turned off, is yellow             |
+| 211 | Flashlight switch which, who is turned off, is yellow.            |
+| 212 | Flashlight switch which, who is yellow, is turned off             |
+| 213 | Flashlight switch which, who is yellow, is turned off.            |
+| 214 | Flashlight switch who is turned off that is yellow                |
+| 215 | Flashlight switch who is turned off that is yellow.               |
+| 216 | Flashlight switch who is turned off which is yellow               |
+| 217 | Flashlight switch who is turned off which is yellow.              |
+| 218 | Flashlight switch who is turned off who is yellow                 |
+| 219 | Flashlight switch who is turned off who is yellow.                |
+| 220 | Flashlight switch who is turned off, that is yellow               |
+| 221 | Flashlight switch who is turned off, that is yellow.              |
+| 222 | Flashlight switch who is turned off, which is yellow              |
+| 223 | Flashlight switch who is turned off, which is yellow.             |
+| 224 | Flashlight switch who is turned off, who is yellow                |
+| 225 | Flashlight switch who is turned off, who is yellow.               |
+| 226 | Flashlight switch who is yellow that is turned off                |
+| 227 | Flashlight switch who is yellow that is turned off.               |
+| 228 | Flashlight switch who is yellow which is turned off               |
+| 229 | Flashlight switch who is yellow which is turned off.              |
+| 230 | Flashlight switch who is yellow who is turned off                 |
+| 231 | Flashlight switch who is yellow who is turned off.                |
+| 232 | Flashlight switch who is yellow, that is turned off               |
+| 233 | Flashlight switch who is yellow, that is turned off.              |
+| 234 | Flashlight switch who is yellow, which is turned off              |
+| 235 | Flashlight switch who is yellow, which is turned off.             |
+| 236 | Flashlight switch who is yellow, who is turned off                |
+| 237 | Flashlight switch who is yellow, who is turned off.               |
+| 238 | Flashlight switch who, that is turned off, is yellow              |
+| 239 | Flashlight switch who, that is turned off, is yellow.             |
+| 240 | Flashlight switch who, that is yellow, is turned off              |
+| 241 | Flashlight switch who, that is yellow, is turned off.             |
+| 242 | Flashlight switch who, which is turned off, is yellow             |
+| 243 | Flashlight switch who, which is turned off, is yellow.            |
+| 244 | Flashlight switch who, which is yellow, is turned off             |
+| 245 | Flashlight switch who, which is yellow, is turned off.            |
+| 246 | Flashlight switch who, who is turned off, is yellow               |
+| 247 | Flashlight switch who, who is turned off, is yellow.              |
+| 248 | Flashlight switch who, who is yellow, is turned off               |
+| 249 | Flashlight switch who, who is yellow, is turned off.              |
+| 250 | Flashlight switch, that is turned off, that is yellow.            |
+| 251 | Flashlight switch, that is turned off, which is yellow.           |
+| 252 | Flashlight switch, that is turned off, who is yellow.             |
+| 253 | Flashlight switch, that is yellow, that is turned off.            |
+| 254 | Flashlight switch, that is yellow, which is turned off.           |
+| 255 | Flashlight switch, that is yellow, who is turned off.             |
+| 256 | Flashlight switch, which is turned off, that is yellow.           |
+| 257 | Flashlight switch, which is turned off, which is yellow.          |
+| 258 | Flashlight switch, which is turned off, who is yellow.            |
+| 259 | Flashlight switch, which is yellow, that is turned off.           |
+| 260 | Flashlight switch, which is yellow, which is turned off.          |
+| 261 | Flashlight switch, which is yellow, who is turned off.            |
+| 262 | Flashlight switch, which, that is turned off, is yellow.          |
+| 263 | Flashlight switch, which, that is yellow, is turned off.          |
+| 264 | Flashlight switch, which, which is turned off, is yellow.         |
+| 265 | Flashlight switch, which, which is yellow, is turned off.         |
+| 266 | Flashlight switch, which, who is turned off, is yellow.           |
+| 267 | Flashlight switch, which, who is yellow, is turned off.           |
+| 268 | Flashlight switch, who is turned off, that is yellow.             |
+| 269 | Flashlight switch, who is turned off, which is yellow.            |
+| 270 | Flashlight switch, who is turned off, who is yellow.              |
+| 271 | Flashlight switch, who is yellow, that is turned off.             |
+| 272 | Flashlight switch, who is yellow, which is turned off.            |
+| 273 | Flashlight switch, who is yellow, who is turned off.              |
+| 274 | Flashlight switch, who, that is turned off, is yellow.            |
+| 275 | Flashlight switch, who, that is yellow, is turned off.            |
+| 276 | Flashlight switch, who, which is turned off, is yellow.           |
+| 277 | Flashlight switch, who, which is yellow, is turned off.           |
+| 278 | Flashlight switch, who, who is turned off, is yellow.             |
+| 279 | Flashlight switch, who, who is yellow, is turned off.             |
+| 280 | Flashlight switches that are turned off that are yellow           |
+| 281 | Flashlight switches that are turned off that are yellow.          |
+| 282 | Flashlight switches that are turned off which are yellow          |
+| 283 | Flashlight switches that are turned off which are yellow.         |
+| 284 | Flashlight switches that are turned off who are yellow            |
+| 285 | Flashlight switches that are turned off who are yellow.           |
+| 286 | Flashlight switches that are turned off, that are yellow          |
+| 287 | Flashlight switches that are turned off, that are yellow.         |
+| 288 | Flashlight switches that are turned off, which are yellow         |
+| 289 | Flashlight switches that are turned off, which are yellow.        |
+| 290 | Flashlight switches that are turned off, who are yellow           |
+| 291 | Flashlight switches that are turned off, who are yellow.          |
+| 292 | Flashlight switches that are yellow that are turned off           |
+| 293 | Flashlight switches that are yellow that are turned off.          |
+| 294 | Flashlight switches that are yellow which are turned off          |
+| 295 | Flashlight switches that are yellow which are turned off.         |
+| 296 | Flashlight switches that are yellow who are turned off            |
+| 297 | Flashlight switches that are yellow who are turned off.           |
+| 298 | Flashlight switches that are yellow, that are turned off          |
+| 299 | Flashlight switches that are yellow, that are turned off.         |
+| 300 | Flashlight switches that are yellow, which are turned off         |
+| 301 | Flashlight switches that are yellow, which are turned off.        |
+| 302 | Flashlight switches that are yellow, who are turned off           |
+| 303 | Flashlight switches that are yellow, who are turned off.          |
+| 304 | Flashlight switches which are turned off that are yellow          |
+| 305 | Flashlight switches which are turned off that are yellow.         |
+| 306 | Flashlight switches which are turned off which are yellow         |
+| 307 | Flashlight switches which are turned off which are yellow.        |
+| 308 | Flashlight switches which are turned off who are yellow           |
+| 309 | Flashlight switches which are turned off who are yellow.          |
+| 310 | Flashlight switches which are turned off, that are yellow         |
+| 311 | Flashlight switches which are turned off, that are yellow.        |
+| 312 | Flashlight switches which are turned off, which are yellow        |
+| 313 | Flashlight switches which are turned off, which are yellow.       |
+| 314 | Flashlight switches which are turned off, who are yellow          |
+| 315 | Flashlight switches which are turned off, who are yellow.         |
+| 316 | Flashlight switches which are yellow that are turned off          |
+| 317 | Flashlight switches which are yellow that are turned off.         |
+| 318 | Flashlight switches which are yellow which are turned off         |
+| 319 | Flashlight switches which are yellow which are turned off.        |
+| 320 | Flashlight switches which are yellow who are turned off           |
+| 321 | Flashlight switches which are yellow who are turned off.          |
+| 322 | Flashlight switches which are yellow, that are turned off         |
+| 323 | Flashlight switches which are yellow, that are turned off.        |
+| 324 | Flashlight switches which are yellow, which are turned off        |
+| 325 | Flashlight switches which are yellow, which are turned off.       |
+| 326 | Flashlight switches which are yellow, who are turned off          |
+| 327 | Flashlight switches which are yellow, who are turned off.         |
+| 328 | Flashlight switches which, that are turned off, are yellow        |
+| 329 | Flashlight switches which, that are turned off, are yellow.       |
+| 330 | Flashlight switches which, that are yellow, are turned off        |
+| 331 | Flashlight switches which, that are yellow, are turned off.       |
+| 332 | Flashlight switches which, which are turned off, are yellow       |
+| 333 | Flashlight switches which, which are turned off, are yellow.      |
+| 334 | Flashlight switches which, which are yellow, are turned off       |
+| 335 | Flashlight switches which, which are yellow, are turned off.      |
+| 336 | Flashlight switches which, who are turned off, are yellow         |
+| 337 | Flashlight switches which, who are turned off, are yellow.        |
+| 338 | Flashlight switches which, who are yellow, are turned off         |
+| 339 | Flashlight switches which, who are yellow, are turned off.        |
+| 340 | Flashlight switches who are turned off that are yellow            |
+| 341 | Flashlight switches who are turned off that are yellow.           |
+| 342 | Flashlight switches who are turned off which are yellow           |
+| 343 | Flashlight switches who are turned off which are yellow.          |
+| 344 | Flashlight switches who are turned off who are yellow             |
+| 345 | Flashlight switches who are turned off who are yellow.            |
+| 346 | Flashlight switches who are turned off, that are yellow           |
+| 347 | Flashlight switches who are turned off, that are yellow.          |
+| 348 | Flashlight switches who are turned off, which are yellow          |
+| 349 | Flashlight switches who are turned off, which are yellow.         |
+| 350 | Flashlight switches who are turned off, who are yellow            |
+| 351 | Flashlight switches who are turned off, who are yellow.           |
+| 352 | Flashlight switches who are yellow that are turned off            |
+| 353 | Flashlight switches who are yellow that are turned off.           |
+| 354 | Flashlight switches who are yellow which are turned off           |
+| 355 | Flashlight switches who are yellow which are turned off.          |
+| 356 | Flashlight switches who are yellow who are turned off             |
+| 357 | Flashlight switches who are yellow who are turned off.            |
+| 358 | Flashlight switches who are yellow, that are turned off           |
+| 359 | Flashlight switches who are yellow, that are turned off.          |
+| 360 | Flashlight switches who are yellow, which are turned off          |
+| 361 | Flashlight switches who are yellow, which are turned off.         |
+| 362 | Flashlight switches who are yellow, who are turned off            |
+| 363 | Flashlight switches who are yellow, who are turned off.           |
+| 364 | Flashlight switches who, that are turned off, are yellow          |
+| 365 | Flashlight switches who, that are turned off, are yellow.         |
+| 366 | Flashlight switches who, that are yellow, are turned off          |
+| 367 | Flashlight switches who, that are yellow, are turned off.         |
+| 368 | Flashlight switches who, which are turned off, are yellow         |
+| 369 | Flashlight switches who, which are turned off, are yellow.        |
+| 370 | Flashlight switches who, which are yellow, are turned off         |
+| 371 | Flashlight switches who, which are yellow, are turned off.        |
+| 372 | Flashlight switches who, who are turned off, are yellow           |
+| 373 | Flashlight switches who, who are turned off, are yellow.          |
+| 374 | Flashlight switches who, who are yellow, are turned off           |
+| 375 | Flashlight switches who, who are yellow, are turned off.          |
+| 376 | Flashlight switches, that are turned off, that are yellow.        |
+| 377 | Flashlight switches, that are turned off, which are yellow.       |
+| 378 | Flashlight switches, that are turned off, who are yellow.         |
+| 379 | Flashlight switches, that are yellow, that are turned off.        |
+| 380 | Flashlight switches, that are yellow, which are turned off.       |
+| 381 | Flashlight switches, that are yellow, who are turned off.         |
+| 382 | Flashlight switches, which are turned off, that are yellow.       |
+| 383 | Flashlight switches, which are turned off, which are yellow.      |
+| 384 | Flashlight switches, which are turned off, who are yellow.        |
+| 385 | Flashlight switches, which are yellow, that are turned off.       |
+| 386 | Flashlight switches, which are yellow, which are turned off.      |
+| 387 | Flashlight switches, which are yellow, who are turned off.        |
+| 388 | Flashlight switches, which, that are turned off, are yellow.      |
+| 389 | Flashlight switches, which, that are yellow, are turned off.      |
+| 390 | Flashlight switches, which, which are turned off, are yellow.     |
+| 391 | Flashlight switches, which, which are yellow, are turned off.     |
+| 392 | Flashlight switches, which, who are turned off, are yellow.       |
+| 393 | Flashlight switches, which, who are yellow, are turned off.       |
+| 394 | Flashlight switches, who are turned off, that are yellow.         |
+| 395 | Flashlight switches, who are turned off, which are yellow.        |
+| 396 | Flashlight switches, who are turned off, who are yellow.          |
+| 397 | Flashlight switches, who are yellow, that are turned off.         |
+| 398 | Flashlight switches, who are yellow, which are turned off.        |
+| 399 | Flashlight switches, who are yellow, who are turned off.          |
+| 400 | Flashlight switches, who, that are turned off, are yellow.        |
+| 401 | Flashlight switches, who, that are yellow, are turned off.        |
+| 402 | Flashlight switches, who, which are turned off, are yellow.       |
+| 403 | Flashlight switches, who, which are yellow, are turned off.       |
+| 404 | Flashlight switches, who, who are turned off, are yellow.         |
+| 405 | Flashlight switches, who, who are yellow, are turned off.         |
+| 406 | Flashlight yellow switch that is turned off                       |
+| 407 | Flashlight yellow switch that is turned off.                      |
+| 408 | Flashlight yellow switch which is turned off                      |
+| 409 | Flashlight yellow switch which is turned off.                     |
+| 410 | Flashlight yellow switch who is turned off                        |
+| 411 | Flashlight yellow switch who is turned off.                       |
+| 412 | Flashlight yellow switch, that is turned off.                     |
+| 413 | Flashlight yellow switch, which is turned off.                    |
+| 414 | Flashlight yellow switch, who is turned off.                      |
+| 415 | Flashlight yellow switches that are turned off                    |
+| 416 | Flashlight yellow switches that are turned off.                   |
+| 417 | Flashlight yellow switches which are turned off                   |
+| 418 | Flashlight yellow switches which are turned off.                  |
+| 419 | Flashlight yellow switches who are turned off                     |
+| 420 | Flashlight yellow switches who are turned off.                    |
+| 421 | Flashlight yellow switches, that are turned off.                  |
+| 422 | Flashlight yellow switches, which are turned off.                 |
+| 423 | Flashlight yellow switches, who are turned off.                   |
+| 424 | Flashlights yellow switch that is turned off                      |
+| 425 | Flashlights yellow switch that is turned off.                     |
+| 426 | Flashlights yellow switch which is turned off                     |
+| 427 | Flashlights yellow switch which is turned off.                    |
+| 428 | Flashlights yellow switch who is turned off                       |
+| 429 | Flashlights yellow switch who is turned off.                      |
+| 430 | Flashlights yellow switch, that is turned off.                    |
+| 431 | Flashlights yellow switch, which is turned off.                   |
+| 432 | Flashlights yellow switch, who is turned off.                     |
+| 433 | Flashlights yellow switches that are turned off                   |
+| 434 | Flashlights yellow switches that are turned off.                  |
+| 435 | Flashlights yellow switches which are turned off                  |
+| 436 | Flashlights yellow switches which are turned off.                 |
+| 437 | Flashlights yellow switches who are turned off                    |
+| 438 | Flashlights yellow switches who are turned off.                   |
+| 439 | Flashlights yellow switches, that are turned off.                 |
+| 440 | Flashlights yellow switches, which are turned off.                |
+| 441 | Flashlights yellow switches, who are turned off.                  |
+| 442 | The flashlight switch that is turned off that is yellow           |
+| 443 | The flashlight switch that is turned off that is yellow.          |
+| 444 | The flashlight switch that is turned off which is yellow          |
+| 445 | The flashlight switch that is turned off which is yellow.         |
+| 446 | The flashlight switch that is turned off who is yellow            |
+| 447 | The flashlight switch that is turned off who is yellow.           |
+| 448 | The flashlight switch that is turned off, that is yellow          |
+| 449 | The flashlight switch that is turned off, that is yellow.         |
+| 450 | The flashlight switch that is turned off, which is yellow         |
+| 451 | The flashlight switch that is turned off, which is yellow.        |
+| 452 | The flashlight switch that is turned off, who is yellow           |
+| 453 | The flashlight switch that is turned off, who is yellow.          |
+| 454 | The flashlight switch that is yellow that is turned off           |
+| 455 | The flashlight switch that is yellow that is turned off.          |
+| 456 | The flashlight switch that is yellow which is turned off          |
+| 457 | The flashlight switch that is yellow which is turned off.         |
+| 458 | The flashlight switch that is yellow who is turned off            |
+| 459 | The flashlight switch that is yellow who is turned off.           |
+| 460 | The flashlight switch that is yellow, that is turned off          |
+| 461 | The flashlight switch that is yellow, that is turned off.         |
+| 462 | The flashlight switch that is yellow, which is turned off         |
+| 463 | The flashlight switch that is yellow, which is turned off.        |
+| 464 | The flashlight switch that is yellow, who is turned off           |
+| 465 | The flashlight switch that is yellow, who is turned off.          |
+| 466 | The flashlight switch which is turned off that is yellow          |
+| 467 | The flashlight switch which is turned off that is yellow.         |
+| 468 | The flashlight switch which is turned off which is yellow         |
+| 469 | The flashlight switch which is turned off which is yellow.        |
+| 470 | The flashlight switch which is turned off who is yellow           |
+| 471 | The flashlight switch which is turned off who is yellow.          |
+| 472 | The flashlight switch which is turned off, that is yellow         |
+| 473 | The flashlight switch which is turned off, that is yellow.        |
+| 474 | The flashlight switch which is turned off, which is yellow        |
+| 475 | The flashlight switch which is turned off, which is yellow.       |
+| 476 | The flashlight switch which is turned off, who is yellow          |
+| 477 | The flashlight switch which is turned off, who is yellow.         |
+| 478 | The flashlight switch which is yellow that is turned off          |
+| 479 | The flashlight switch which is yellow that is turned off.         |
+| 480 | The flashlight switch which is yellow which is turned off         |
+| 481 | The flashlight switch which is yellow which is turned off.        |
+| 482 | The flashlight switch which is yellow who is turned off           |
+| 483 | The flashlight switch which is yellow who is turned off.          |
+| 484 | The flashlight switch which is yellow, that is turned off         |
+| 485 | The flashlight switch which is yellow, that is turned off.        |
+| 486 | The flashlight switch which is yellow, which is turned off        |
+| 487 | The flashlight switch which is yellow, which is turned off.       |
+| 488 | The flashlight switch which is yellow, who is turned off          |
+| 489 | The flashlight switch which is yellow, who is turned off.         |
+| 490 | The flashlight switch which, that is turned off, is yellow        |
+| 491 | The flashlight switch which, that is turned off, is yellow.       |
+| 492 | The flashlight switch which, that is yellow, is turned off        |
+| 493 | The flashlight switch which, that is yellow, is turned off.       |
+| 494 | The flashlight switch which, which is turned off, is yellow       |
+| 495 | The flashlight switch which, which is turned off, is yellow.      |
+| 496 | The flashlight switch which, which is yellow, is turned off       |
+| 497 | The flashlight switch which, which is yellow, is turned off.      |
+| 498 | The flashlight switch which, who is turned off, is yellow         |
+| 499 | The flashlight switch which, who is turned off, is yellow.        |
+| 500 | The flashlight switch which, who is yellow, is turned off         |
+| 501 | The flashlight switch which, who is yellow, is turned off.        |
+| 502 | The flashlight switch who is turned off that is yellow            |
+| 503 | The flashlight switch who is turned off that is yellow.           |
+| 504 | The flashlight switch who is turned off which is yellow           |
+| 505 | The flashlight switch who is turned off which is yellow.          |
+| 506 | The flashlight switch who is turned off who is yellow             |
+| 507 | The flashlight switch who is turned off who is yellow.            |
+| 508 | The flashlight switch who is turned off, that is yellow           |
+| 509 | The flashlight switch who is turned off, that is yellow.          |
+| 510 | The flashlight switch who is turned off, which is yellow          |
+| 511 | The flashlight switch who is turned off, which is yellow.         |
+| 512 | The flashlight switch who is turned off, who is yellow            |
+| 513 | The flashlight switch who is turned off, who is yellow.           |
+| 514 | The flashlight switch who is yellow that is turned off            |
+| 515 | The flashlight switch who is yellow that is turned off.           |
+| 516 | The flashlight switch who is yellow which is turned off           |
+| 517 | The flashlight switch who is yellow which is turned off.          |
+| 518 | The flashlight switch who is yellow who is turned off             |
+| 519 | The flashlight switch who is yellow who is turned off.            |
+| 520 | The flashlight switch who is yellow, that is turned off           |
+| 521 | The flashlight switch who is yellow, that is turned off.          |
+| 522 | The flashlight switch who is yellow, which is turned off          |
+| 523 | The flashlight switch who is yellow, which is turned off.         |
+| 524 | The flashlight switch who is yellow, who is turned off            |
+| 525 | The flashlight switch who is yellow, who is turned off.           |
+| 526 | The flashlight switch who, that is turned off, is yellow          |
+| 527 | The flashlight switch who, that is turned off, is yellow.         |
+| 528 | The flashlight switch who, that is yellow, is turned off          |
+| 529 | The flashlight switch who, that is yellow, is turned off.         |
+| 530 | The flashlight switch who, which is turned off, is yellow         |
+| 531 | The flashlight switch who, which is turned off, is yellow.        |
+| 532 | The flashlight switch who, which is yellow, is turned off         |
+| 533 | The flashlight switch who, which is yellow, is turned off.        |
+| 534 | The flashlight switch who, who is turned off, is yellow           |
+| 535 | The flashlight switch who, who is turned off, is yellow.          |
+| 536 | The flashlight switch who, who is yellow, is turned off           |
+| 537 | The flashlight switch who, who is yellow, is turned off.          |
+| 538 | The flashlight switch, that is turned off, that is yellow.        |
+| 539 | The flashlight switch, that is turned off, which is yellow.       |
+| 540 | The flashlight switch, that is turned off, who is yellow.         |
+| 541 | The flashlight switch, that is yellow, that is turned off.        |
+| 542 | The flashlight switch, that is yellow, which is turned off.       |
+| 543 | The flashlight switch, that is yellow, who is turned off.         |
+| 544 | The flashlight switch, which is turned off, that is yellow.       |
+| 545 | The flashlight switch, which is turned off, which is yellow.      |
+| 546 | The flashlight switch, which is turned off, who is yellow.        |
+| 547 | The flashlight switch, which is yellow, that is turned off.       |
+| 548 | The flashlight switch, which is yellow, which is turned off.      |
+| 549 | The flashlight switch, which is yellow, who is turned off.        |
+| 550 | The flashlight switch, which, that is turned off, is yellow.      |
+| 551 | The flashlight switch, which, that is yellow, is turned off.      |
+| 552 | The flashlight switch, which, which is turned off, is yellow.     |
+| 553 | The flashlight switch, which, which is yellow, is turned off.     |
+| 554 | The flashlight switch, which, who is turned off, is yellow.       |
+| 555 | The flashlight switch, which, who is yellow, is turned off.       |
+| 556 | The flashlight switch, who is turned off, that is yellow.         |
+| 557 | The flashlight switch, who is turned off, which is yellow.        |
+| 558 | The flashlight switch, who is turned off, who is yellow.          |
+| 559 | The flashlight switch, who is yellow, that is turned off.         |
+| 560 | The flashlight switch, who is yellow, which is turned off.        |
+| 561 | The flashlight switch, who is yellow, who is turned off.          |
+| 562 | The flashlight switch, who, that is turned off, is yellow.        |
+| 563 | The flashlight switch, who, that is yellow, is turned off.        |
+| 564 | The flashlight switch, who, which is turned off, is yellow.       |
+| 565 | The flashlight switch, who, which is yellow, is turned off.       |
+| 566 | The flashlight switch, who, who is turned off, is yellow.         |
+| 567 | The flashlight switch, who, who is yellow, is turned off.         |
+| 568 | The flashlight switches that are turned off that are yellow       |
+| 569 | The flashlight switches that are turned off that are yellow.      |
+| 570 | The flashlight switches that are turned off which are yellow      |
+| 571 | The flashlight switches that are turned off which are yellow.     |
+| 572 | The flashlight switches that are turned off who are yellow        |
+| 573 | The flashlight switches that are turned off who are yellow.       |
+| 574 | The flashlight switches that are turned off, that are yellow      |
+| 575 | The flashlight switches that are turned off, that are yellow.     |
+| 576 | The flashlight switches that are turned off, which are yellow     |
+| 577 | The flashlight switches that are turned off, which are yellow.    |
+| 578 | The flashlight switches that are turned off, who are yellow       |
+| 579 | The flashlight switches that are turned off, who are yellow.      |
+| 580 | The flashlight switches that are yellow that are turned off       |
+| 581 | The flashlight switches that are yellow that are turned off.      |
+| 582 | The flashlight switches that are yellow which are turned off      |
+| 583 | The flashlight switches that are yellow which are turned off.     |
+| 584 | The flashlight switches that are yellow who are turned off        |
+| 585 | The flashlight switches that are yellow who are turned off.       |
+| 586 | The flashlight switches that are yellow, that are turned off      |
+| 587 | The flashlight switches that are yellow, that are turned off.     |
+| 588 | The flashlight switches that are yellow, which are turned off     |
+| 589 | The flashlight switches that are yellow, which are turned off.    |
+| 590 | The flashlight switches that are yellow, who are turned off       |
+| 591 | The flashlight switches that are yellow, who are turned off.      |
+| 592 | The flashlight switches which are turned off that are yellow      |
+| 593 | The flashlight switches which are turned off that are yellow.     |
+| 594 | The flashlight switches which are turned off which are yellow     |
+| 595 | The flashlight switches which are turned off which are yellow.    |
+| 596 | The flashlight switches which are turned off who are yellow       |
+| 597 | The flashlight switches which are turned off who are yellow.      |
+| 598 | The flashlight switches which are turned off, that are yellow     |
+| 599 | The flashlight switches which are turned off, that are yellow.    |
+| 600 | The flashlight switches which are turned off, which are yellow    |
+| 601 | The flashlight switches which are turned off, which are yellow.   |
+| 602 | The flashlight switches which are turned off, who are yellow      |
+| 603 | The flashlight switches which are turned off, who are yellow.     |
+| 604 | The flashlight switches which are yellow that are turned off      |
+| 605 | The flashlight switches which are yellow that are turned off.     |
+| 606 | The flashlight switches which are yellow which are turned off     |
+| 607 | The flashlight switches which are yellow which are turned off.    |
+| 608 | The flashlight switches which are yellow who are turned off       |
+| 609 | The flashlight switches which are yellow who are turned off.      |
+| 610 | The flashlight switches which are yellow, that are turned off     |
+| 611 | The flashlight switches which are yellow, that are turned off.    |
+| 612 | The flashlight switches which are yellow, which are turned off    |
+| 613 | The flashlight switches which are yellow, which are turned off.   |
+| 614 | The flashlight switches which are yellow, who are turned off      |
+| 615 | The flashlight switches which are yellow, who are turned off.     |
+| 616 | The flashlight switches which, that are turned off, are yellow    |
+| 617 | The flashlight switches which, that are turned off, are yellow.   |
+| 618 | The flashlight switches which, that are yellow, are turned off    |
+| 619 | The flashlight switches which, that are yellow, are turned off.   |
+| 620 | The flashlight switches which, which are turned off, are yellow   |
+| 621 | The flashlight switches which, which are turned off, are yellow.  |
+| 622 | The flashlight switches which, which are yellow, are turned off   |
+| 623 | The flashlight switches which, which are yellow, are turned off.  |
+| 624 | The flashlight switches which, who are turned off, are yellow     |
+| 625 | The flashlight switches which, who are turned off, are yellow.    |
+| 626 | The flashlight switches which, who are yellow, are turned off     |
+| 627 | The flashlight switches which, who are yellow, are turned off.    |
+| 628 | The flashlight switches who are turned off that are yellow        |
+| 629 | The flashlight switches who are turned off that are yellow.       |
+| 630 | The flashlight switches who are turned off which are yellow       |
+| 631 | The flashlight switches who are turned off which are yellow.      |
+| 632 | The flashlight switches who are turned off who are yellow         |
+| 633 | The flashlight switches who are turned off who are yellow.        |
+| 634 | The flashlight switches who are turned off, that are yellow       |
+| 635 | The flashlight switches who are turned off, that are yellow.      |
+| 636 | The flashlight switches who are turned off, which are yellow      |
+| 637 | The flashlight switches who are turned off, which are yellow.     |
+| 638 | The flashlight switches who are turned off, who are yellow        |
+| 639 | The flashlight switches who are turned off, who are yellow.       |
+| 640 | The flashlight switches who are yellow that are turned off        |
+| 641 | The flashlight switches who are yellow that are turned off.       |
+| 642 | The flashlight switches who are yellow which are turned off       |
+| 643 | The flashlight switches who are yellow which are turned off.      |
+| 644 | The flashlight switches who are yellow who are turned off         |
+| 645 | The flashlight switches who are yellow who are turned off.        |
+| 646 | The flashlight switches who are yellow, that are turned off       |
+| 647 | The flashlight switches who are yellow, that are turned off.      |
+| 648 | The flashlight switches who are yellow, which are turned off      |
+| 649 | The flashlight switches who are yellow, which are turned off.     |
+| 650 | The flashlight switches who are yellow, who are turned off        |
+| 651 | The flashlight switches who are yellow, who are turned off.       |
+| 652 | The flashlight switches who, that are turned off, are yellow      |
+| 653 | The flashlight switches who, that are turned off, are yellow.     |
+| 654 | The flashlight switches who, that are yellow, are turned off      |
+| 655 | The flashlight switches who, that are yellow, are turned off.     |
+| 656 | The flashlight switches who, which are turned off, are yellow     |
+| 657 | The flashlight switches who, which are turned off, are yellow.    |
+| 658 | The flashlight switches who, which are yellow, are turned off     |
+| 659 | The flashlight switches who, which are yellow, are turned off.    |
+| 660 | The flashlight switches who, who are turned off, are yellow       |
+| 661 | The flashlight switches who, who are turned off, are yellow.      |
+| 662 | The flashlight switches who, who are yellow, are turned off       |
+| 663 | The flashlight switches who, who are yellow, are turned off.      |
+| 664 | The flashlight switches, that are turned off, that are yellow.    |
+| 665 | The flashlight switches, that are turned off, which are yellow.   |
+| 666 | The flashlight switches, that are turned off, who are yellow.     |
+| 667 | The flashlight switches, that are yellow, that are turned off.    |
+| 668 | The flashlight switches, that are yellow, which are turned off.   |
+| 669 | The flashlight switches, that are yellow, who are turned off.     |
+| 670 | The flashlight switches, which are turned off, that are yellow.   |
+| 671 | The flashlight switches, which are turned off, which are yellow.  |
+| 672 | The flashlight switches, which are turned off, who are yellow.    |
+| 673 | The flashlight switches, which are yellow, that are turned off.   |
+| 674 | The flashlight switches, which are yellow, which are turned off.  |
+| 675 | The flashlight switches, which are yellow, who are turned off.    |
+| 676 | The flashlight switches, which, that are turned off, are yellow.  |
+| 677 | The flashlight switches, which, that are yellow, are turned off.  |
+| 678 | The flashlight switches, which, which are turned off, are yellow. |
+| 679 | The flashlight switches, which, which are yellow, are turned off. |
+| 680 | The flashlight switches, which, who are turned off, are yellow.   |
+| 681 | The flashlight switches, which, who are yellow, are turned off.   |
+| 682 | The flashlight switches, who are turned off, that are yellow.     |
+| 683 | The flashlight switches, who are turned off, which are yellow.    |
+| 684 | The flashlight switches, who are turned off, who are yellow.      |
+| 685 | The flashlight switches, who are yellow, that are turned off.     |
+| 686 | The flashlight switches, who are yellow, which are turned off.    |
+| 687 | The flashlight switches, who are yellow, who are turned off.      |
+| 688 | The flashlight switches, who, that are turned off, are yellow.    |
+| 689 | The flashlight switches, who, that are yellow, are turned off.    |
+| 690 | The flashlight switches, who, which are turned off, are yellow.   |
+| 691 | The flashlight switches, who, which are yellow, are turned off.   |
+| 692 | The flashlight switches, who, who are turned off, are yellow.     |
+| 693 | The flashlight switches, who, who are yellow, are turned off.     |
+| 694 | The flashlight yellow switch that is turned off                   |
+| 695 | The flashlight yellow switch that is turned off.                  |
+| 696 | The flashlight yellow switch which is turned off                  |
+| 697 | The flashlight yellow switch which is turned off.                 |
+| 698 | The flashlight yellow switch who is turned off                    |
+| 699 | The flashlight yellow switch who is turned off.                   |
+| 700 | The flashlight yellow switch, that is turned off.                 |
+| 701 | The flashlight yellow switch, which is turned off.                |
+| 702 | The flashlight yellow switch, who is turned off.                  |
+| 703 | The flashlight yellow switches that are turned off                |
+| 704 | The flashlight yellow switches that are turned off.               |
+| 705 | The flashlight yellow switches which are turned off               |
+| 706 | The flashlight yellow switches which are turned off.              |
+| 707 | The flashlight yellow switches who are turned off                 |
+| 708 | The flashlight yellow switches who are turned off.                |
+| 709 | The flashlight yellow switches, that are turned off.              |
+| 710 | The flashlight yellow switches, which are turned off.             |
+| 711 | The flashlight yellow switches, who are turned off.               |
+| 712 | The flashlights yellow switch that is turned off                  |
+| 713 | The flashlights yellow switch that is turned off.                 |
+| 714 | The flashlights yellow switch which is turned off                 |
+| 715 | The flashlights yellow switch which is turned off.                |
+| 716 | The flashlights yellow switch who is turned off                   |
+| 717 | The flashlights yellow switch who is turned off.                  |
+| 718 | The flashlights yellow switch, that is turned off.                |
+| 719 | The flashlights yellow switch, which is turned off.               |
+| 720 | The flashlights yellow switch, who is turned off.                 |
+| 721 | The flashlights yellow switches that are turned off               |
+| 722 | The flashlights yellow switches that are turned off.              |
+| 723 | The flashlights yellow switches which are turned off              |
+| 724 | The flashlights yellow switches which are turned off.             |
+| 725 | The flashlights yellow switches who are turned off                |
+| 726 | The flashlights yellow switches who are turned off.               |
+| 727 | The flashlights yellow switches, that are turned off.             |
+| 728 | The flashlights yellow switches, which are turned off.            |
+| 729 | The flashlights yellow switches, who are turned off.              |
+| 730 | The yellow flashlight switch that is turned off                   |
+| 731 | The yellow flashlight switch that is turned off.                  |
+| 732 | The yellow flashlight switch which is turned off                  |
+| 733 | The yellow flashlight switch which is turned off.                 |
+| 734 | The yellow flashlight switch who is turned off                    |
+| 735 | The yellow flashlight switch who is turned off.                   |
+| 736 | The yellow flashlight switch, that is turned off.                 |
+| 737 | The yellow flashlight switch, which is turned off.                |
+| 738 | The yellow flashlight switch, who is turned off.                  |
+| 739 | The yellow flashlight switches that are turned off                |
+| 740 | The yellow flashlight switches that are turned off.               |
+| 741 | The yellow flashlight switches which are turned off               |
+| 742 | The yellow flashlight switches which are turned off.              |
+| 743 | The yellow flashlight switches who are turned off                 |
+| 744 | The yellow flashlight switches who are turned off.                |
+| 745 | The yellow flashlight switches, that are turned off.              |
+| 746 | The yellow flashlight switches, which are turned off.             |
+| 747 | The yellow flashlight switches, who are turned off.               |
+| 748 | Yellow flashlight switch that is turned off                       |
+| 749 | Yellow flashlight switch that is turned off.                      |
+| 750 | Yellow flashlight switch which is turned off                      |
+| 751 | Yellow flashlight switch which is turned off.                     |
+| 752 | Yellow flashlight switch who is turned off                        |
+| 753 | Yellow flashlight switch who is turned off.                       |
+| 754 | Yellow flashlight switch, that is turned off.                     |
+| 755 | Yellow flashlight switch, which is turned off.                    |
+| 756 | Yellow flashlight switch, who is turned off.                      |
+| 757 | Yellow flashlight switches that are turned off                    |
+| 758 | Yellow flashlight switches that are turned off.                   |
+| 759 | Yellow flashlight switches which are turned off                   |
+| 760 | Yellow flashlight switches which are turned off.                  |
+| 761 | Yellow flashlight switches who are turned off                     |
+| 762 | Yellow flashlight switches who are turned off.                    |
+| 763 | Yellow flashlight switches, that are turned off.                  |
+| 764 | Yellow flashlight switches, which are turned off.                 |
+| 765 | Yellow flashlight switches, who are turned off.                   |
++-----+-------------------------------------------------------------------+
+

@@ -1,0 +1,379 @@
+GRAPH NAME: idSpiderWeb1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 180                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 4                  |
+| Nodes Covered                   | 4                  |
+| Nodes Included                  | 3                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 1.0                |
+| Node Inclusion                  | 0.75               |
++---------------------------------+--------------------+
+| Edge Count                      | 3                  |
+| Edges Covered                   | 2                  |
+| Edges Included                  | 2                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.6666666666666666 |
+| Edge Inclusion                  | 0.6666666666666666 |
++---------------------------------+--------------------+
+
++--------------------------------------------------------------------------------+
+|                                  GOLD OUTPUTS                                  |
++-------------------------------------------------------------------+------------+
+| Gold Output                                                       | Generated? |
++-------------------------------------------------------------------+------------+
+| the white spider that has not touched the web west of the boulder | False      |
++-------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                         |
++--------------+--------------+---------------+------------------+-----------------------------+
+| Node         | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++--------------+--------------+---------------+------------------+-----------------------------+
+| idSpiderWeb1 | True         | True          | Covered          | Included                    |
+| white        | True         | True          | Covered          | Included                    |
+| false        | True         | False         | Covered          | Successor of failed element |
+| idBoulder1   | True         | True          | Covered          | Included                    |
++--------------+--------------+---------------+------------------+-----------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE METRICS                                                                                 |
++--------------------------------+--------------+------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+| Edge                           | Parent       | Child      | Edge Covered | Edge Included | Coverage Comment                             | Inclusion Comment                 |
++--------------------------------+--------------+------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+| idSpiderWeb1_prop_idColor      | idSpiderWeb1 | white      | True         | True          | Covered                                      | Included                          |
+| idSpiderWeb1_prop_idWebTouched | idSpiderWeb1 | false      | False        | False         | 'idWebTouched' not in lexicon's edge entries | No SEMENT generated for this edge |
+| isWestOf                       | idSpiderWeb1 | idBoulder1 | True         | True          | Covered                                      | Included                          |
++--------------------------------+--------------+------------+--------------+---------------+----------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1047                                                                     |
+|               |   INDEX: x1045                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1074 ARG0: e1071 ARG1: u1072 ARG2: x1073 ]           |
+|               |           [ def_implicit_q LBL: h1085 ARG0: x1082 RSTR: h1083 BODY: h1084 ]      |
+|               |           [ _west_a_1 LBL: h1070 ARG0: i1067 ARG1: x1068 ARG2: u1069 ]           |
+|               |           [ def_udef_a_q LBL: h1080 ARG0: x1077 RSTR: h1078 BODY: h1079 ]        |
+|               |           [ _boulder_n_1 LBL: h1066 ARG0: x1065 ]                                |
+|               |           [ place_n LBL: h1076 ARG0: x1075 ]                                     |
+|               |           [ _white_a_1 LBL: h1061 ARG0: i1059 ARG1: i1060 ]                      |
+|               |           [ compound LBL: h1058 ARG0: e1055 [ e PROG: - ] ARG1: u1056 ARG2:      |
+|               | u1057 ]                                                                          |
+|               |           [ udef_q LBL: h1053 ARG0: x1050 RSTR: h1051 BODY: h1052 ]              |
+|               |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|               |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|               |   HCONS: < h1078 qeq h1066 h1083 qeq h1076 h1051 qeq h1049 >                     |
+|               |   EQS: < x1077 eq x1065 h1070 eq h1081 u1069 eq x1077 h1070 eq h1076 x1068 eq    |
+|               | x1075 x1082 eq x1075 h1074 eq h1086 x1073 eq x1082 x1050 eq x1048 h1058 eq h1054 |
+|               | u1057 eq x1050 h1058 eq h1047 u1056 eq x1045 h1061 eq h1047 i1060 eq x1045 h1074 |
+|               | eq h1047 u1072 eq x1045 >                                                        |
+|               |   SLOTS: < ARG1: i1046 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1047                                                                     |
+|               |   INDEX: x1045                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1047 ARG0: e1071 ARG1: x1045 ARG2: x1068 ]           |
+|               |           [ def_implicit_q LBL: h1085 ARG0: x1068 RSTR: h1083 BODY: h1084 ]      |
+|               |           [ _west_a_1 LBL: h1070 ARG0: i1067 ARG1: x1068 ARG2: x1065 ]           |
+|               |           [ def_udef_a_q LBL: h1080 ARG0: x1065 RSTR: h1078 BODY: h1079 ]        |
+|               |           [ _boulder_n_1 LBL: h1066 ARG0: x1065 ]                                |
+|               |           [ place_n LBL: h1070 ARG0: x1068 ]                                     |
+|               |           [ _white_a_1 LBL: h1047 ARG0: i1059 ARG1: x1045 ]                      |
+|               |           [ compound LBL: h1047 ARG0: e1055 [ e PROG: - ] ARG1: x1045 ARG2:      |
+|               | x1048 ]                                                                          |
+|               |           [ udef_q LBL: h1053 ARG0: x1048 RSTR: h1051 BODY: h1052 ]              |
+|               |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|               |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|               |   HCONS: < h1078 qeq h1066 h1083 qeq h1070 h1051 qeq h1049 >                     |
+|               |   SLOTS: < ARG1: i1046 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1095                                                                     |
+|               |   INDEX: e1092                                                                   |
+|               |   RELS: < [ unknown LBL: h1091 ARG: x1045 ARG0: e1092 ]                          |
+|               |           [ def_udef_a_q LBL: h1090 ARG0: x1045 RSTR: h1088 BODY: h1089 ]        |
+|               |           [ loc_nonsp LBL: h1047 ARG0: e1071 ARG1: x1045 ARG2: x1068 ]           |
+|               |           [ def_implicit_q LBL: h1085 ARG0: x1068 RSTR: h1083 BODY: h1084 ]      |
+|               |           [ _west_a_1 LBL: h1070 ARG0: i1067 ARG1: x1068 ARG2: x1065 ]           |
+|               |           [ def_udef_a_q LBL: h1080 ARG0: x1065 RSTR: h1078 BODY: h1079 ]        |
+|               |           [ _boulder_n_1 LBL: h1066 ARG0: x1065 ]                                |
+|               |           [ place_n LBL: h1070 ARG0: x1068 ]                                     |
+|               |           [ _white_a_1 LBL: h1047 ARG0: i1059 ARG1: x1045 ]                      |
+|               |           [ compound LBL: h1047 ARG0: e1055 [ e PROG: - ] ARG1: x1045 ARG2:      |
+|               | x1048 ]                                                                          |
+|               |           [ udef_q LBL: h1053 ARG0: x1048 RSTR: h1051 BODY: h1052 ]              |
+|               |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|               |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|               |   HCONS: < h1078 qeq h1066 h1083 qeq h1070 h1051 qeq h1049 h1088 qeq h1047 h1095 |
+|               | qeq h1091 > ]                                                                    |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           NODE SEMENTS                                          |
++--------------+----------------------------------------------------------------------------------+
+| Node         | Generated SEMENT                                                                 |
++--------------+----------------------------------------------------------------------------------+
+| idSpiderWeb1 | [ TOP: h1047                                                                     |
+|              |   INDEX: x1045                                                                   |
+|              |   RELS: < [ compound LBL: h1058 ARG0: e1055 [ e PROG: - ] ARG1: u1056 ARG2:      |
+|              | u1057 ]                                                                          |
+|              |           [ udef_q LBL: h1053 ARG0: x1050 RSTR: h1051 BODY: h1052 ]              |
+|              |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|              |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|              |   HCONS: < h1051 qeq h1049 >                                                     |
+|              |   EQS: < x1050 eq x1048 h1058 eq h1054 u1057 eq x1050 h1058 eq h1047 u1056 eq    |
+|              | x1045 >                                                                          |
+|              |   SLOTS: < ARG1: i1046 > ]                                                       |
++--------------+----------------------------------------------------------------------------------+
+| white        | [ TOP: h1061                                                                     |
+|              |   INDEX: i1059                                                                   |
+|              |   RELS: < [ _white_a_1 LBL: h1061 ARG0: i1059 ARG1: i1060 ] >                    |
+|              |   SLOTS: < ARG1: i1060 > ]                                                       |
++--------------+----------------------------------------------------------------------------------+
+| false        | [ TOP: h1064                                                                     |
+|              |   INDEX: e1062                                                                   |
+|              |   RELS: < [ _false_a_of LBL: h1064 ARG0: e1062 ARG1: h1063 ] >                   |
+|              |   SLOTS: < ARG1: h1063 > ]                                                       |
++--------------+----------------------------------------------------------------------------------+
+| idBoulder1   | [ TOP: h1066                                                                     |
+|              |   INDEX: x1065                                                                   |
+|              |   RELS: < [ _boulder_n_1 LBL: h1066 ARG0: x1065 ] > ]                            |
++--------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE SEMENTS                                                                 |
++--------------------------------+--------------+------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent       | Child      | Generated SEMENT                                                                 |
++--------------------------------+--------------+------------+----------------------------------------------------------------------------------+
+| idSpiderWeb1_prop_idColor      | idSpiderWeb1 | white      | [ TOP: h1047                                                                     |
+|                                |              |            |   INDEX: x1045                                                                   |
+|                                |              |            |   RELS: < [ _white_a_1 LBL: h1061 ARG0: i1059 ARG1: i1060 ]                      |
+|                                |              |            |           [ compound LBL: h1058 ARG0: e1055 [ e PROG: - ] ARG1: u1056 ARG2:      |
+|                                |              |            | u1057 ]                                                                          |
+|                                |              |            |           [ udef_q LBL: h1053 ARG0: x1050 RSTR: h1051 BODY: h1052 ]              |
+|                                |              |            |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|                                |              |            |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|                                |              |            |   HCONS: < h1051 qeq h1049 >                                                     |
+|                                |              |            |   EQS: < x1050 eq x1048 h1058 eq h1054 u1057 eq x1050 h1058 eq h1047 u1056 eq    |
+|                                |              |            | x1045 h1061 eq h1047 i1060 eq x1045 >                                            |
+|                                |              |            |   SLOTS: < ARG1: i1046 > ]                                                       |
++--------------------------------+--------------+------------+----------------------------------------------------------------------------------+
+| idSpiderWeb1_prop_idWebTouched | idSpiderWeb1 | false      | None                                                                             |
++--------------------------------+--------------+------------+----------------------------------------------------------------------------------+
+| isWestOf                       | idSpiderWeb1 | idBoulder1 | [ TOP: h1047                                                                     |
+|                                |              |            |   INDEX: x1045                                                                   |
+|                                |              |            |   RELS: < [ loc_nonsp LBL: h1074 ARG0: e1071 ARG1: u1072 ARG2: x1073 ]           |
+|                                |              |            |           [ def_implicit_q LBL: h1085 ARG0: x1082 RSTR: h1083 BODY: h1084 ]      |
+|                                |              |            |           [ _west_a_1 LBL: h1070 ARG0: i1067 ARG1: x1068 ARG2: u1069 ]           |
+|                                |              |            |           [ def_udef_a_q LBL: h1080 ARG0: x1077 RSTR: h1078 BODY: h1079 ]        |
+|                                |              |            |           [ _boulder_n_1 LBL: h1066 ARG0: x1065 ]                                |
+|                                |              |            |           [ place_n LBL: h1076 ARG0: x1075 ]                                     |
+|                                |              |            |           [ _white_a_1 LBL: h1061 ARG0: i1059 ARG1: i1060 ]                      |
+|                                |              |            |           [ compound LBL: h1058 ARG0: e1055 [ e PROG: - ] ARG1: u1056 ARG2:      |
+|                                |              |            | u1057 ]                                                                          |
+|                                |              |            |           [ udef_q LBL: h1053 ARG0: x1050 RSTR: h1051 BODY: h1052 ]              |
+|                                |              |            |           [ _spider_n_1 LBL: h1049 ARG0: x1048 ]                                 |
+|                                |              |            |           [ _web_n_of LBL: h1047 ARG0: x1045 ARG1: i1046 ] >                     |
+|                                |              |            |   HCONS: < h1078 qeq h1066 h1083 qeq h1076 h1051 qeq h1049 >                     |
+|                                |              |            |   EQS: < x1077 eq x1065 h1070 eq h1081 u1069 eq x1077 h1070 eq h1076 x1068 eq    |
+|                                |              |            | x1075 x1082 eq x1075 h1074 eq h1086 x1073 eq x1082 x1050 eq x1048 h1058 eq h1054 |
+|                                |              |            | u1057 eq x1050 h1058 eq h1047 u1056 eq x1045 h1061 eq h1047 i1060 eq x1045 h1074 |
+|                                |              |            | eq h1047 u1072 eq x1045 >                                                        |
+|                                |              |            |   SLOTS: < ARG1: i1046 > ]                                                       |
++--------------------------------+--------------+------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------+
+|               GENERATED ENGLISH TEXT               |
++-----+----------------------------------------------+
+| #   | Generated Text                               |
++-----+----------------------------------------------+
+| 1   | A spider white web west of a boulder         |
+| 2   | A spider white web west of a boulder.        |
+| 3   | A spider white web west of boulders          |
+| 4   | A spider white web west of boulders.         |
+| 5   | A spider white web west of the boulder       |
+| 6   | A spider white web west of the boulder.      |
+| 7   | A spider white web west of the boulders      |
+| 8   | A spider white web west of the boulders.     |
+| 9   | A spider white web, west of a boulder        |
+| 10  | A spider white web, west of boulders         |
+| 11  | A spider white web, west of the boulder      |
+| 12  | A spider white web, west of the boulders     |
+| 13  | A spiders white web west of a boulder        |
+| 14  | A spiders white web west of a boulder.       |
+| 15  | A spiders white web west of boulders         |
+| 16  | A spiders white web west of boulders.        |
+| 17  | A spiders white web west of the boulder      |
+| 18  | A spiders white web west of the boulder.     |
+| 19  | A spiders white web west of the boulders     |
+| 20  | A spiders white web west of the boulders.    |
+| 21  | A spiders white web, west of a boulder       |
+| 22  | A spiders white web, west of boulders        |
+| 23  | A spiders white web, west of the boulder     |
+| 24  | A spiders white web, west of the boulders    |
+| 25  | A white spider web west of a boulder         |
+| 26  | A white spider web west of a boulder.        |
+| 27  | A white spider web west of boulders          |
+| 28  | A white spider web west of boulders.         |
+| 29  | A white spider web west of the boulder       |
+| 30  | A white spider web west of the boulder.      |
+| 31  | A white spider web west of the boulders      |
+| 32  | A white spider web west of the boulders.     |
+| 33  | A white spider web, west of a boulder        |
+| 34  | A white spider web, west of boulders         |
+| 35  | A white spider web, west of the boulder      |
+| 36  | A white spider web, west of the boulders     |
+| 37  | Spider white web west of a boulder           |
+| 38  | Spider white web west of a boulder.          |
+| 39  | Spider white web west of boulders            |
+| 40  | Spider white web west of boulders.           |
+| 41  | Spider white web west of the boulder         |
+| 42  | Spider white web west of the boulder.        |
+| 43  | Spider white web west of the boulders        |
+| 44  | Spider white web west of the boulders.       |
+| 45  | Spider white web, west of a boulder          |
+| 46  | Spider white web, west of boulders           |
+| 47  | Spider white web, west of the boulder        |
+| 48  | Spider white web, west of the boulders       |
+| 49  | Spider white webs west of a boulder          |
+| 50  | Spider white webs west of a boulder.         |
+| 51  | Spider white webs west of boulders           |
+| 52  | Spider white webs west of boulders.          |
+| 53  | Spider white webs west of the boulder        |
+| 54  | Spider white webs west of the boulder.       |
+| 55  | Spider white webs west of the boulders       |
+| 56  | Spider white webs west of the boulders.      |
+| 57  | Spider white webs, west of a boulder         |
+| 58  | Spider white webs, west of boulders          |
+| 59  | Spider white webs, west of the boulder       |
+| 60  | Spider white webs, west of the boulders      |
+| 61  | Spiders white web west of a boulder          |
+| 62  | Spiders white web west of a boulder.         |
+| 63  | Spiders white web west of boulders           |
+| 64  | Spiders white web west of boulders.          |
+| 65  | Spiders white web west of the boulder        |
+| 66  | Spiders white web west of the boulder.       |
+| 67  | Spiders white web west of the boulders       |
+| 68  | Spiders white web west of the boulders.      |
+| 69  | Spiders white web, west of a boulder         |
+| 70  | Spiders white web, west of boulders          |
+| 71  | Spiders white web, west of the boulder       |
+| 72  | Spiders white web, west of the boulders      |
+| 73  | Spiders white webs west of a boulder         |
+| 74  | Spiders white webs west of a boulder.        |
+| 75  | Spiders white webs west of boulders          |
+| 76  | Spiders white webs west of boulders.         |
+| 77  | Spiders white webs west of the boulder       |
+| 78  | Spiders white webs west of the boulder.      |
+| 79  | Spiders white webs west of the boulders      |
+| 80  | Spiders white webs west of the boulders.     |
+| 81  | Spiders white webs, west of a boulder        |
+| 82  | Spiders white webs, west of boulders         |
+| 83  | Spiders white webs, west of the boulder      |
+| 84  | Spiders white webs, west of the boulders     |
+| 85  | The spider white web west of a boulder       |
+| 86  | The spider white web west of a boulder.      |
+| 87  | The spider white web west of boulders        |
+| 88  | The spider white web west of boulders.       |
+| 89  | The spider white web west of the boulder     |
+| 90  | The spider white web west of the boulder.    |
+| 91  | The spider white web west of the boulders    |
+| 92  | The spider white web west of the boulders.   |
+| 93  | The spider white web, west of a boulder      |
+| 94  | The spider white web, west of boulders       |
+| 95  | The spider white web, west of the boulder    |
+| 96  | The spider white web, west of the boulders   |
+| 97  | The spider white webs west of a boulder      |
+| 98  | The spider white webs west of a boulder.     |
+| 99  | The spider white webs west of boulders       |
+| 100 | The spider white webs west of boulders.      |
+| 101 | The spider white webs west of the boulder    |
+| 102 | The spider white webs west of the boulder.   |
+| 103 | The spider white webs west of the boulders   |
+| 104 | The spider white webs west of the boulders.  |
+| 105 | The spider white webs, west of a boulder     |
+| 106 | The spider white webs, west of boulders      |
+| 107 | The spider white webs, west of the boulder   |
+| 108 | The spider white webs, west of the boulders  |
+| 109 | The spiders white web west of a boulder      |
+| 110 | The spiders white web west of a boulder.     |
+| 111 | The spiders white web west of boulders       |
+| 112 | The spiders white web west of boulders.      |
+| 113 | The spiders white web west of the boulder    |
+| 114 | The spiders white web west of the boulder.   |
+| 115 | The spiders white web west of the boulders   |
+| 116 | The spiders white web west of the boulders.  |
+| 117 | The spiders white web, west of a boulder     |
+| 118 | The spiders white web, west of boulders      |
+| 119 | The spiders white web, west of the boulder   |
+| 120 | The spiders white web, west of the boulders  |
+| 121 | The spiders white webs west of a boulder     |
+| 122 | The spiders white webs west of a boulder.    |
+| 123 | The spiders white webs west of boulders      |
+| 124 | The spiders white webs west of boulders.     |
+| 125 | The spiders white webs west of the boulder   |
+| 126 | The spiders white webs west of the boulder.  |
+| 127 | The spiders white webs west of the boulders  |
+| 128 | The spiders white webs west of the boulders. |
+| 129 | The spiders white webs, west of a boulder    |
+| 130 | The spiders white webs, west of boulders     |
+| 131 | The spiders white webs, west of the boulder  |
+| 132 | The spiders white webs, west of the boulders |
+| 133 | The white spider web west of a boulder       |
+| 134 | The white spider web west of a boulder.      |
+| 135 | The white spider web west of boulders        |
+| 136 | The white spider web west of boulders.       |
+| 137 | The white spider web west of the boulder     |
+| 138 | The white spider web west of the boulder.    |
+| 139 | The white spider web west of the boulders    |
+| 140 | The white spider web west of the boulders.   |
+| 141 | The white spider web, west of a boulder      |
+| 142 | The white spider web, west of boulders       |
+| 143 | The white spider web, west of the boulder    |
+| 144 | The white spider web, west of the boulders   |
+| 145 | The white spider webs west of a boulder      |
+| 146 | The white spider webs west of a boulder.     |
+| 147 | The white spider webs west of boulders       |
+| 148 | The white spider webs west of boulders.      |
+| 149 | The white spider webs west of the boulder    |
+| 150 | The white spider webs west of the boulder.   |
+| 151 | The white spider webs west of the boulders   |
+| 152 | The white spider webs west of the boulders.  |
+| 153 | The white spider webs, west of a boulder     |
+| 154 | The white spider webs, west of boulders      |
+| 155 | The white spider webs, west of the boulder   |
+| 156 | The white spider webs, west of the boulders  |
+| 157 | White spider web west of a boulder           |
+| 158 | White spider web west of a boulder.          |
+| 159 | White spider web west of boulders            |
+| 160 | White spider web west of boulders.           |
+| 161 | White spider web west of the boulder         |
+| 162 | White spider web west of the boulder.        |
+| 163 | White spider web west of the boulders        |
+| 164 | White spider web west of the boulders.       |
+| 165 | White spider web, west of a boulder          |
+| 166 | White spider web, west of boulders           |
+| 167 | White spider web, west of the boulder        |
+| 168 | White spider web, west of the boulders       |
+| 169 | White spider webs west of a boulder          |
+| 170 | White spider webs west of a boulder.         |
+| 171 | White spider webs west of boulders           |
+| 172 | White spider webs west of boulders.          |
+| 173 | White spider webs west of the boulder        |
+| 174 | White spider webs west of the boulder.       |
+| 175 | White spider webs west of the boulders       |
+| 176 | White spider webs west of the boulders.      |
+| 177 | White spider webs, west of a boulder         |
+| 178 | White spider webs, west of boulders          |
+| 179 | White spider webs, west of the boulder       |
+| 180 | White spider webs, west of the boulders      |
++-----+----------------------------------------------+
+

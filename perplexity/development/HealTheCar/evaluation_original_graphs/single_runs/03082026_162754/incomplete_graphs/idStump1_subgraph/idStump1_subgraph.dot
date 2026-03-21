@@ -1,0 +1,21 @@
+strict digraph {
+idStump1 [node_type="entity_node", root=root, lexicon_key=idStump];
+hollow [lexicon_key=hollow];
+chopped [lexicon_key=chopped];
+yes [lexicon_key=yes];
+idSideMirror1 [lexicon_key=idSideMirror];
+shiny [lexicon_key=shiny];
+idFace [lexicon_key=idFace];
+idTire1 [lexicon_key=idTire];
+black [lexicon_key=black];
+idBush1 [lexicon_key=idBush];
+idStump1 -> hollow [label="idStump1_prop_idDescriptor_1", edge_type=property, lexicon_key="idDescriptor_"];
+idStump1 -> chopped [label="idStump1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idStump1 -> yes [label="idStump1_prop_idImmovable", edge_type=property, lexicon_key=idImmovable];
+idStump1 -> idSideMirror1 [label=isWestOf, edge_type=relationship, lexicon_key=isWestOf];
+idStump1 -> idTire1 [label=isNorthOf, edge_type=relationship, lexicon_key=isNorthOf];
+idSideMirror1 -> shiny [label="idSideMirror1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idSideMirror1 -> idFace [label="idSideMirror1_prop_idDescriptor_1", edge_type=property, lexicon_key="idDescriptor_"];
+idSideMirror1 -> idBush1 [label=isNear, edge_type=relationship, lexicon_key=isNear];
+idTire1 -> black [label="idTire1_prop_idColor", edge_type=property, lexicon_key=idColor];
+}

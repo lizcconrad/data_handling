@@ -1,0 +1,678 @@
+GRAPH NAME: idElevatorSlotFacePlate_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 414   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------------+
+|                                 GOLD OUTPUTS                                 |
++-----------------------------------------------------------------+------------+
+| Gold Output                                                     | Generated? |
++-----------------------------------------------------------------+------------+
+| the elevator slot's locked face plate near the red machine room | True       |
++-----------------------------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------------------+
+|                                          NODE METRICS                                         |
++-------------------------+--------------+---------------+------------------+-------------------+
+| Node                    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------------------+--------------+---------------+------------------+-------------------+
+| idElevatorSlotFacePlate | True         | True          | Covered          | Included          |
+| locked                  | True         | True          | Covered          | Included          |
+| idMachineRoom           | True         | True          | Covered          | Included          |
+| red                     | True         | True          | Covered          | Included          |
++-------------------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                        EDGE METRICS                                                                        |
++--------------------------------------------+-------------------------+---------------+--------------+---------------+------------------+-------------------+
+| Edge                                       | Parent                  | Child         | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------------------+-------------------------+---------------+--------------+---------------+------------------+-------------------+
+| idElevatorSlotFacePlate_prop_idLockedState | idElevatorSlotFacePlate | locked        | True         | True          | Covered          | Included          |
+| isNear                                     | idElevatorSlotFacePlate | idMachineRoom | True         | True          | Covered          | Included          |
+| idMachineRoom_prop_idColor                 | idMachineRoom           | red           | True         | True          | Covered          | Included          |
++--------------------------------------------+-------------------------+---------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h398                                                                      |
+|               |   INDEX: x396                                                                    |
+|               |   RELS: < [ _near_p LBL: h442 ARG0: e439 ARG1: u440 ARG2: i441 ]                 |
+|               |           [ def_udef_a_q LBL: h446 ARG0: x443 RSTR: h444 BODY: h445 ]            |
+|               |           [ _red_a_1 LBL: h438 ARG0: i436 ARG1: i437 ]                           |
+|               |           [ compound LBL: h435 ARG0: e432 [ e PROG: - ] ARG1: u433 ARG2: u434 ]  |
+|               |           [ udef_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]                  |
+|               |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|               |           [ _room_n_unit LBL: h424 ARG0: x423 ]                                  |
+|               |           [ _lock_v_cause LBL: h422 ARG0: e419 [ e PERF: - ] ARG1: i420 ARG2:    |
+|               | i421 ]                                                                           |
+|               |           [ poss LBL: h418 ARG0: e415 ARG1: x416 ARG2: i417 ]                    |
+|               |           [ def_udef_a_q LBL: h413 ARG0: x410 RSTR: h411 BODY: h412 ]            |
+|               |           [ compound LBL: h395 ARG0: e392 [ e PROG: - ] ARG1: u393 ARG2: u394 ]  |
+|               |           [ udef_q LBL: h390 ARG0: x387 RSTR: h388 BODY: h389 ]                  |
+|               |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|               |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|               |           [ compound LBL: h409 ARG0: e406 [ e PROG: - ] ARG1: u407 ARG2: u408 ]  |
+|               |           [ udef_q LBL: h404 ARG0: x401 RSTR: h402 BODY: h403 ]                  |
+|               |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|               |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|               |   HCONS: < h428 qeq h426 h444 qeq h424 h388 qeq h386 h411 qeq h384 h402 qeq h400 |
+|               | >                                                                                |
+|               |   ICONS: < e419 topic i421 >                                                     |
+|               |   EQS: < x427 eq x425 h435 eq h431 u434 eq x427 h435 eq h424 u433 eq x423 h438   |
+|               | eq h424 i437 eq x423 x443 eq x423 h442 eq h447 i441 eq x443 x387 eq x385 h395 eq |
+|               | h391 u394 eq x387 h395 eq h384 u393 eq x383 x410 eq x383 h418 eq h414 i417 eq    |
+|               | x410 x401 eq x399 h409 eq h405 u408 eq x401 h409 eq h398 u407 eq x396 h418 eq    |
+|               | h398 x416 eq x396 h422 eq h398 i421 eq x396 h442 eq h398 u440 eq x396 >          |
+|               |   SLOTS: < ARG1: i397 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h398                                                                      |
+|               |   INDEX: x396                                                                    |
+|               |   RELS: < [ _near_p LBL: h398 ARG0: e439 ARG1: x396 ARG2: x423 ]                 |
+|               |           [ def_udef_a_q LBL: h446 ARG0: x423 RSTR: h444 BODY: h445 ]            |
+|               |           [ _red_a_1 LBL: h424 ARG0: i436 ARG1: x423 ]                           |
+|               |           [ compound LBL: h424 ARG0: e432 [ e PROG: - ] ARG1: x423 ARG2: x425 ]  |
+|               |           [ udef_q LBL: h430 ARG0: x425 RSTR: h428 BODY: h429 ]                  |
+|               |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|               |           [ _room_n_unit LBL: h424 ARG0: x423 ]                                  |
+|               |           [ _lock_v_cause LBL: h398 ARG0: e419 [ e PERF: - ] ARG1: i420 ARG2:    |
+|               | x396 ]                                                                           |
+|               |           [ poss LBL: h398 ARG0: e415 ARG1: x396 ARG2: x383 ]                    |
+|               |           [ def_udef_a_q LBL: h413 ARG0: x383 RSTR: h411 BODY: h412 ]            |
+|               |           [ compound LBL: h384 ARG0: e392 [ e PROG: - ] ARG1: x383 ARG2: x385 ]  |
+|               |           [ udef_q LBL: h390 ARG0: x385 RSTR: h388 BODY: h389 ]                  |
+|               |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|               |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|               |           [ compound LBL: h398 ARG0: e406 [ e PROG: - ] ARG1: x396 ARG2: x399 ]  |
+|               |           [ udef_q LBL: h404 ARG0: x399 RSTR: h402 BODY: h403 ]                  |
+|               |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|               |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|               |   HCONS: < h428 qeq h426 h444 qeq h424 h388 qeq h386 h411 qeq h384 h402 qeq h400 |
+|               | >                                                                                |
+|               |   ICONS: < e419 topic x396 >                                                     |
+|               |   SLOTS: < ARG1: i397 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h456                                                                      |
+|               |   INDEX: e453                                                                    |
+|               |   RELS: < [ unknown LBL: h452 ARG: x396 ARG0: e453 ]                             |
+|               |           [ def_udef_a_q LBL: h451 ARG0: x396 RSTR: h449 BODY: h450 ]            |
+|               |           [ _near_p LBL: h398 ARG0: e439 ARG1: x396 ARG2: x423 ]                 |
+|               |           [ def_udef_a_q LBL: h446 ARG0: x423 RSTR: h444 BODY: h445 ]            |
+|               |           [ _red_a_1 LBL: h424 ARG0: i436 ARG1: x423 ]                           |
+|               |           [ compound LBL: h424 ARG0: e432 [ e PROG: - ] ARG1: x423 ARG2: x425 ]  |
+|               |           [ udef_q LBL: h430 ARG0: x425 RSTR: h428 BODY: h429 ]                  |
+|               |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|               |           [ _room_n_unit LBL: h424 ARG0: x423 ]                                  |
+|               |           [ _lock_v_cause LBL: h398 ARG0: e419 [ e PERF: - ] ARG1: i420 ARG2:    |
+|               | x396 ]                                                                           |
+|               |           [ poss LBL: h398 ARG0: e415 ARG1: x396 ARG2: x383 ]                    |
+|               |           [ def_udef_a_q LBL: h413 ARG0: x383 RSTR: h411 BODY: h412 ]            |
+|               |           [ compound LBL: h384 ARG0: e392 [ e PROG: - ] ARG1: x383 ARG2: x385 ]  |
+|               |           [ udef_q LBL: h390 ARG0: x385 RSTR: h388 BODY: h389 ]                  |
+|               |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|               |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|               |           [ compound LBL: h398 ARG0: e406 [ e PROG: - ] ARG1: x396 ARG2: x399 ]  |
+|               |           [ udef_q LBL: h404 ARG0: x399 RSTR: h402 BODY: h403 ]                  |
+|               |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|               |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|               |   HCONS: < h428 qeq h426 h444 qeq h424 h388 qeq h386 h411 qeq h384 h402 qeq h400 |
+|               | h449 qeq h398 h456 qeq h452 >                                                    |
+|               |   ICONS: < e419 topic x396 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                                |
++-------------------------+----------------------------------------------------------------------------------+
+| Node                    | Generated SEMENT                                                                 |
++-------------------------+----------------------------------------------------------------------------------+
+| idElevatorSlotFacePlate | [ TOP: h398                                                                      |
+|                         |   INDEX: x396                                                                    |
+|                         |   RELS: < [ poss LBL: h418 ARG0: e415 ARG1: x416 ARG2: i417 ]                    |
+|                         |           [ def_udef_a_q LBL: h413 ARG0: x410 RSTR: h411 BODY: h412 ]            |
+|                         |           [ compound LBL: h395 ARG0: e392 [ e PROG: - ] ARG1: u393 ARG2: u394 ]  |
+|                         |           [ udef_q LBL: h390 ARG0: x387 RSTR: h388 BODY: h389 ]                  |
+|                         |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|                         |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|                         |           [ compound LBL: h409 ARG0: e406 [ e PROG: - ] ARG1: u407 ARG2: u408 ]  |
+|                         |           [ udef_q LBL: h404 ARG0: x401 RSTR: h402 BODY: h403 ]                  |
+|                         |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|                         |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|                         |   HCONS: < h388 qeq h386 h411 qeq h384 h402 qeq h400 >                           |
+|                         |   EQS: < x387 eq x385 h395 eq h391 u394 eq x387 h395 eq h384 u393 eq x383 x410   |
+|                         | eq x383 h418 eq h414 i417 eq x410 x401 eq x399 h409 eq h405 u408 eq x401 h409 eq |
+|                         | h398 u407 eq x396 h418 eq h398 x416 eq x396 >                                    |
+|                         |   SLOTS: < ARG1: i397 > ]                                                        |
++-------------------------+----------------------------------------------------------------------------------+
+| locked                  | [ TOP: h422                                                                      |
+|                         |   INDEX: e419                                                                    |
+|                         |   RELS: < [ _lock_v_cause LBL: h422 ARG0: e419 ARG1: i420 ARG2: i421 ] >         |
+|                         |   SLOTS: < ARG1: i420 ARG2: i421 > ]                                             |
++-------------------------+----------------------------------------------------------------------------------+
+| idMachineRoom           | [ TOP: h424                                                                      |
+|                         |   INDEX: x423                                                                    |
+|                         |   RELS: < [ compound LBL: h435 ARG0: e432 [ e PROG: - ] ARG1: u433 ARG2: u434 ]  |
+|                         |           [ udef_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]                  |
+|                         |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|                         |           [ _room_n_unit LBL: h424 ARG0: x423 ] >                                |
+|                         |   HCONS: < h428 qeq h426 >                                                       |
+|                         |   EQS: < x427 eq x425 h435 eq h431 u434 eq x427 h435 eq h424 u433 eq x423 > ]    |
++-------------------------+----------------------------------------------------------------------------------+
+| red                     | [ TOP: h438                                                                      |
+|                         |   INDEX: i436                                                                    |
+|                         |   RELS: < [ _red_a_1 LBL: h438 ARG0: i436 ARG1: i437 ] >                         |
+|                         |   SLOTS: < ARG1: i437 > ]                                                        |
++-------------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                               EDGE SEMENTS                                                                              |
++--------------------------------------------+-------------------------+---------------+----------------------------------------------------------------------------------+
+| Edge                                       | Parent                  | Child         | Generated SEMENT                                                                 |
++--------------------------------------------+-------------------------+---------------+----------------------------------------------------------------------------------+
+| idElevatorSlotFacePlate_prop_idLockedState | idElevatorSlotFacePlate | locked        | [ TOP: h398                                                                      |
+|                                            |                         |               |   INDEX: x396                                                                    |
+|                                            |                         |               |   RELS: < [ _lock_v_cause LBL: h422 ARG0: e419 [ e PERF: - ] ARG1: i420 ARG2:    |
+|                                            |                         |               | i421 ]                                                                           |
+|                                            |                         |               |           [ poss LBL: h418 ARG0: e415 ARG1: x416 ARG2: i417 ]                    |
+|                                            |                         |               |           [ def_udef_a_q LBL: h413 ARG0: x410 RSTR: h411 BODY: h412 ]            |
+|                                            |                         |               |           [ compound LBL: h395 ARG0: e392 [ e PROG: - ] ARG1: u393 ARG2: u394 ]  |
+|                                            |                         |               |           [ udef_q LBL: h390 ARG0: x387 RSTR: h388 BODY: h389 ]                  |
+|                                            |                         |               |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|                                            |                         |               |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|                                            |                         |               |           [ compound LBL: h409 ARG0: e406 [ e PROG: - ] ARG1: u407 ARG2: u408 ]  |
+|                                            |                         |               |           [ udef_q LBL: h404 ARG0: x401 RSTR: h402 BODY: h403 ]                  |
+|                                            |                         |               |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|                                            |                         |               |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|                                            |                         |               |   HCONS: < h388 qeq h386 h411 qeq h384 h402 qeq h400 >                           |
+|                                            |                         |               |   ICONS: < e419 topic i421 >                                                     |
+|                                            |                         |               |   EQS: < x387 eq x385 h395 eq h391 u394 eq x387 h395 eq h384 u393 eq x383 x410   |
+|                                            |                         |               | eq x383 h418 eq h414 i417 eq x410 x401 eq x399 h409 eq h405 u408 eq x401 h409 eq |
+|                                            |                         |               | h398 u407 eq x396 h418 eq h398 x416 eq x396 h422 eq h398 i421 eq x396 >          |
+|                                            |                         |               |   SLOTS: < ARG1: i397 > ]                                                        |
++--------------------------------------------+-------------------------+---------------+----------------------------------------------------------------------------------+
+| isNear                                     | idElevatorSlotFacePlate | idMachineRoom | [ TOP: h398                                                                      |
+|                                            |                         |               |   INDEX: x396                                                                    |
+|                                            |                         |               |   RELS: < [ _near_p LBL: h442 ARG0: e439 ARG1: u440 ARG2: i441 ]                 |
+|                                            |                         |               |           [ def_udef_a_q LBL: h446 ARG0: x443 RSTR: h444 BODY: h445 ]            |
+|                                            |                         |               |           [ _red_a_1 LBL: h438 ARG0: i436 ARG1: i437 ]                           |
+|                                            |                         |               |           [ compound LBL: h435 ARG0: e432 [ e PROG: - ] ARG1: u433 ARG2: u434 ]  |
+|                                            |                         |               |           [ udef_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]                  |
+|                                            |                         |               |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|                                            |                         |               |           [ _room_n_unit LBL: h424 ARG0: x423 ]                                  |
+|                                            |                         |               |           [ _lock_v_cause LBL: h422 ARG0: e419 [ e PERF: - ] ARG1: i420 ARG2:    |
+|                                            |                         |               | i421 ]                                                                           |
+|                                            |                         |               |           [ poss LBL: h418 ARG0: e415 ARG1: x416 ARG2: i417 ]                    |
+|                                            |                         |               |           [ def_udef_a_q LBL: h413 ARG0: x410 RSTR: h411 BODY: h412 ]            |
+|                                            |                         |               |           [ compound LBL: h395 ARG0: e392 [ e PROG: - ] ARG1: u393 ARG2: u394 ]  |
+|                                            |                         |               |           [ udef_q LBL: h390 ARG0: x387 RSTR: h388 BODY: h389 ]                  |
+|                                            |                         |               |           [ _elevator_n_1 LBL: h386 ARG0: x385 ]                                 |
+|                                            |                         |               |           [ _slot_n_1 LBL: h384 ARG0: x383 ]                                     |
+|                                            |                         |               |           [ compound LBL: h409 ARG0: e406 [ e PROG: - ] ARG1: u407 ARG2: u408 ]  |
+|                                            |                         |               |           [ udef_q LBL: h404 ARG0: x401 RSTR: h402 BODY: h403 ]                  |
+|                                            |                         |               |           [ _face_n_1 LBL: h400 ARG0: x399 ]                                     |
+|                                            |                         |               |           [ _plate_n_of LBL: h398 ARG0: x396 ARG1: i397 ] >                      |
+|                                            |                         |               |   HCONS: < h428 qeq h426 h444 qeq h424 h388 qeq h386 h411 qeq h384 h402 qeq h400 |
+|                                            |                         |               | >                                                                                |
+|                                            |                         |               |   ICONS: < e419 topic i421 >                                                     |
+|                                            |                         |               |   EQS: < x427 eq x425 h435 eq h431 u434 eq x427 h435 eq h424 u433 eq x423 h438   |
+|                                            |                         |               | eq h424 i437 eq x423 x443 eq x423 h442 eq h447 i441 eq x443 x387 eq x385 h395 eq |
+|                                            |                         |               | h391 u394 eq x387 h395 eq h384 u393 eq x383 x410 eq x383 h418 eq h414 i417 eq    |
+|                                            |                         |               | x410 x401 eq x399 h409 eq h405 u408 eq x401 h409 eq h398 u407 eq x396 h418 eq    |
+|                                            |                         |               | h398 x416 eq x396 h422 eq h398 i421 eq x396 h442 eq h398 u440 eq x396 >          |
+|                                            |                         |               |   SLOTS: < ARG1: i397 > ]                                                        |
++--------------------------------------------+-------------------------+---------------+----------------------------------------------------------------------------------+
+| idMachineRoom_prop_idColor                 | idMachineRoom           | red           | [ TOP: h424                                                                      |
+|                                            |                         |               |   INDEX: x423                                                                    |
+|                                            |                         |               |   RELS: < [ _red_a_1 LBL: h438 ARG0: i436 ARG1: i437 ]                           |
+|                                            |                         |               |           [ compound LBL: h435 ARG0: e432 [ e PROG: - ] ARG1: u433 ARG2: u434 ]  |
+|                                            |                         |               |           [ udef_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]                  |
+|                                            |                         |               |           [ _machine_n_1 LBL: h426 ARG0: x425 ]                                  |
+|                                            |                         |               |           [ _room_n_unit LBL: h424 ARG0: x423 ] >                                |
+|                                            |                         |               |   HCONS: < h428 qeq h426 >                                                       |
+|                                            |                         |               |   EQS: < x427 eq x425 h435 eq h431 u434 eq x427 h435 eq h424 u433 eq x423 h438   |
+|                                            |                         |               | eq h424 i437 eq x423 > ]                                                         |
++--------------------------------------------+-------------------------+---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                           GENERATED ENGLISH TEXT                           |
++-----+----------------------------------------------------------------------+
+| #   | Generated Text                                                       |
++-----+----------------------------------------------------------------------+
+| 1   | An elevator slot's faces locked plate near a machine red room        |
+| 2   | An elevator slot's faces locked plate near a red machine room        |
+| 3   | An elevator slot's faces locked plate near a red machine room.       |
+| 4   | An elevator slot's faces locked plate near machine red rooms         |
+| 5   | An elevator slot's faces locked plate near machine red rooms.        |
+| 6   | An elevator slot's faces locked plate near red machine rooms         |
+| 7   | An elevator slot's faces locked plate near red machine rooms.        |
+| 8   | An elevator slot's faces locked plate near the machine red room      |
+| 9   | An elevator slot's faces locked plate near the machine red rooms     |
+| 10  | An elevator slot's faces locked plate near the machine red rooms.    |
+| 11  | An elevator slot's faces locked plate near the machines red rooms    |
+| 12  | An elevator slot's faces locked plate near the red machine room      |
+| 13  | An elevator slot's faces locked plate near the red machine room.     |
+| 14  | An elevator slot's faces locked plate near the red machine rooms     |
+| 15  | An elevator slot's faces locked plate near the red machine rooms.    |
+| 16  | An elevator slot's faces locked plate, near a machine red room       |
+| 17  | An elevator slot's faces locked plate, near a red machine room       |
+| 18  | An elevator slot's faces locked plate, near red machine rooms        |
+| 19  | An elevator slot's faces locked plate, near the machine red room     |
+| 20  | An elevator slot's faces locked plate, near the red machine room     |
+| 21  | An elevator slot's faces locked plate, near the red machine rooms    |
+| 22  | An elevator slot's faces locked plates near a machine red room       |
+| 23  | An elevator slot's faces locked plates near a red machine room       |
+| 24  | An elevator slot's faces locked plates near a red machine room.      |
+| 25  | An elevator slot's faces locked plates near machine red rooms        |
+| 26  | An elevator slot's faces locked plates near machine red rooms.       |
+| 27  | An elevator slot's faces locked plates near red machine rooms        |
+| 28  | An elevator slot's faces locked plates near red machine rooms.       |
+| 29  | An elevator slot's faces locked plates near the machine red room     |
+| 30  | An elevator slot's faces locked plates near the machine red rooms    |
+| 31  | An elevator slot's faces locked plates near the machine red rooms.   |
+| 32  | An elevator slot's faces locked plates near the machines red rooms   |
+| 33  | An elevator slot's faces locked plates near the red machine room     |
+| 34  | An elevator slot's faces locked plates near the red machine room.    |
+| 35  | An elevator slot's faces locked plates near the red machine rooms    |
+| 36  | An elevator slot's faces locked plates near the red machine rooms.   |
+| 37  | An elevator slot's faces locked plates, near a machine red room      |
+| 38  | An elevator slot's faces locked plates, near a red machine room      |
+| 39  | An elevator slot's faces locked plates, near machine red rooms       |
+| 40  | An elevator slot's faces locked plates, near red machine rooms       |
+| 41  | An elevator slot's faces locked plates, near the machine red room    |
+| 42  | An elevator slot's faces locked plates, near the machine red rooms   |
+| 43  | An elevator slot's faces locked plates, near the machines red rooms  |
+| 44  | An elevator slot's faces locked plates, near the red machine room    |
+| 45  | An elevator slot's faces locked plates, near the red machine rooms   |
+| 46  | An elevator slot's locked face plate near a machine red room         |
+| 47  | An elevator slot's locked face plate near a machine red room.        |
+| 48  | An elevator slot's locked face plate near a machines red room        |
+| 49  | An elevator slot's locked face plate near a machines red room.       |
+| 50  | An elevator slot's locked face plate near a red machine room         |
+| 51  | An elevator slot's locked face plate near a red machine room.        |
+| 52  | An elevator slot's locked face plate near machine red rooms          |
+| 53  | An elevator slot's locked face plate near machine red rooms.         |
+| 54  | An elevator slot's locked face plate near machines red rooms         |
+| 55  | An elevator slot's locked face plate near machines red rooms.        |
+| 56  | An elevator slot's locked face plate near red machine rooms          |
+| 57  | An elevator slot's locked face plate near red machine rooms.         |
+| 58  | An elevator slot's locked face plate near the machine red room       |
+| 59  | An elevator slot's locked face plate near the machine red room.      |
+| 60  | An elevator slot's locked face plate near the machine red rooms      |
+| 61  | An elevator slot's locked face plate near the machine red rooms.     |
+| 62  | An elevator slot's locked face plate near the machines red room      |
+| 63  | An elevator slot's locked face plate near the machines red room.     |
+| 64  | An elevator slot's locked face plate near the machines red rooms     |
+| 65  | An elevator slot's locked face plate near the machines red rooms.    |
+| 66  | An elevator slot's locked face plate near the red machine room       |
+| 67  | An elevator slot's locked face plate near the red machine room.      |
+| 68  | An elevator slot's locked face plate near the red machine rooms      |
+| 69  | An elevator slot's locked face plate near the red machine rooms.     |
+| 70  | An elevator slot's locked face plate, near a machine red room        |
+| 71  | An elevator slot's locked face plate, near a red machine room        |
+| 72  | An elevator slot's locked face plate, near red machine rooms         |
+| 73  | An elevator slot's locked face plate, near the machine red room      |
+| 74  | An elevator slot's locked face plate, near the red machine room      |
+| 75  | An elevator slot's locked face plate, near the red machine rooms     |
+| 76  | An elevator slot's locked face plates near a machine red room        |
+| 77  | An elevator slot's locked face plates near a machine red room.       |
+| 78  | An elevator slot's locked face plates near a machines red room       |
+| 79  | An elevator slot's locked face plates near a machines red room.      |
+| 80  | An elevator slot's locked face plates near a red machine room        |
+| 81  | An elevator slot's locked face plates near a red machine room.       |
+| 82  | An elevator slot's locked face plates near machine red rooms         |
+| 83  | An elevator slot's locked face plates near machine red rooms.        |
+| 84  | An elevator slot's locked face plates near machines red rooms        |
+| 85  | An elevator slot's locked face plates near machines red rooms.       |
+| 86  | An elevator slot's locked face plates near red machine rooms         |
+| 87  | An elevator slot's locked face plates near red machine rooms.        |
+| 88  | An elevator slot's locked face plates near the machine red room      |
+| 89  | An elevator slot's locked face plates near the machine red room.     |
+| 90  | An elevator slot's locked face plates near the machine red rooms     |
+| 91  | An elevator slot's locked face plates near the machine red rooms.    |
+| 92  | An elevator slot's locked face plates near the machines red room     |
+| 93  | An elevator slot's locked face plates near the machines red room.    |
+| 94  | An elevator slot's locked face plates near the machines red rooms    |
+| 95  | An elevator slot's locked face plates near the machines red rooms.   |
+| 96  | An elevator slot's locked face plates near the red machine room      |
+| 97  | An elevator slot's locked face plates near the red machine room.     |
+| 98  | An elevator slot's locked face plates near the red machine rooms     |
+| 99  | An elevator slot's locked face plates near the red machine rooms.    |
+| 100 | An elevator slot's locked face plates, near a machine red room       |
+| 101 | An elevator slot's locked face plates, near a red machine room       |
+| 102 | An elevator slot's locked face plates, near machine red rooms        |
+| 103 | An elevator slot's locked face plates, near red machine rooms        |
+| 104 | An elevator slot's locked face plates, near the machine red room     |
+| 105 | An elevator slot's locked face plates, near the machine red rooms    |
+| 106 | An elevator slot's locked face plates, near the red machine room     |
+| 107 | An elevator slot's locked face plates, near the red machine rooms    |
+| 108 | Elevator slots' faces locked plate near a machine red room           |
+| 109 | Elevator slots' faces locked plate near a red machine room           |
+| 110 | Elevator slots' faces locked plate near a red machine room.          |
+| 111 | Elevator slots' faces locked plate near machine red rooms            |
+| 112 | Elevator slots' faces locked plate near machine red rooms.           |
+| 113 | Elevator slots' faces locked plate near red machine rooms            |
+| 114 | Elevator slots' faces locked plate near red machine rooms.           |
+| 115 | Elevator slots' faces locked plate near the machine red room         |
+| 116 | Elevator slots' faces locked plate near the machine red rooms        |
+| 117 | Elevator slots' faces locked plate near the red machine room         |
+| 118 | Elevator slots' faces locked plate near the red machine room.        |
+| 119 | Elevator slots' faces locked plate near the red machine rooms        |
+| 120 | Elevator slots' faces locked plate near the red machine rooms.       |
+| 121 | Elevator slots' faces locked plate, near a red machine room          |
+| 122 | Elevator slots' faces locked plate, near red machine rooms           |
+| 123 | Elevator slots' faces locked plate, near the red machine room        |
+| 124 | Elevator slots' faces locked plate, near the red machine rooms       |
+| 125 | Elevator slots' faces locked plates near a machine red room          |
+| 126 | Elevator slots' faces locked plates near a red machine room          |
+| 127 | Elevator slots' faces locked plates near a red machine room.         |
+| 128 | Elevator slots' faces locked plates near machine red rooms           |
+| 129 | Elevator slots' faces locked plates near machine red rooms.          |
+| 130 | Elevator slots' faces locked plates near red machine rooms           |
+| 131 | Elevator slots' faces locked plates near red machine rooms.          |
+| 132 | Elevator slots' faces locked plates near the machine red room        |
+| 133 | Elevator slots' faces locked plates near the machine red rooms       |
+| 134 | Elevator slots' faces locked plates near the red machine room        |
+| 135 | Elevator slots' faces locked plates near the red machine room.       |
+| 136 | Elevator slots' faces locked plates near the red machine rooms       |
+| 137 | Elevator slots' faces locked plates near the red machine rooms.      |
+| 138 | Elevator slots' faces locked plates, near a machine red room         |
+| 139 | Elevator slots' faces locked plates, near a red machine room         |
+| 140 | Elevator slots' faces locked plates, near red machine rooms          |
+| 141 | Elevator slots' faces locked plates, near the machine red room       |
+| 142 | Elevator slots' faces locked plates, near the red machine room       |
+| 143 | Elevator slots' faces locked plates, near the red machine rooms      |
+| 144 | Elevator slots' locked face plate near a machine red room            |
+| 145 | Elevator slots' locked face plate near a machine red room.           |
+| 146 | Elevator slots' locked face plate near a machines red room           |
+| 147 | Elevator slots' locked face plate near a machines red room.          |
+| 148 | Elevator slots' locked face plate near a red machine room            |
+| 149 | Elevator slots' locked face plate near a red machine room.           |
+| 150 | Elevator slots' locked face plate near machine red rooms             |
+| 151 | Elevator slots' locked face plate near machine red rooms.            |
+| 152 | Elevator slots' locked face plate near machines red rooms            |
+| 153 | Elevator slots' locked face plate near machines red rooms.           |
+| 154 | Elevator slots' locked face plate near red machine rooms             |
+| 155 | Elevator slots' locked face plate near red machine rooms.            |
+| 156 | Elevator slots' locked face plate near the machine red room          |
+| 157 | Elevator slots' locked face plate near the machine red room.         |
+| 158 | Elevator slots' locked face plate near the machine red rooms         |
+| 159 | Elevator slots' locked face plate near the machine red rooms.        |
+| 160 | Elevator slots' locked face plate near the machines red room         |
+| 161 | Elevator slots' locked face plate near the machines red room.        |
+| 162 | Elevator slots' locked face plate near the machines red rooms        |
+| 163 | Elevator slots' locked face plate near the machines red rooms.       |
+| 164 | Elevator slots' locked face plate near the red machine room          |
+| 165 | Elevator slots' locked face plate near the red machine room.         |
+| 166 | Elevator slots' locked face plate near the red machine rooms         |
+| 167 | Elevator slots' locked face plate near the red machine rooms.        |
+| 168 | Elevator slots' locked face plate, near a red machine room           |
+| 169 | Elevator slots' locked face plate, near red machine rooms            |
+| 170 | Elevator slots' locked face plate, near the red machine room         |
+| 171 | Elevator slots' locked face plate, near the red machine rooms        |
+| 172 | Elevator slots' locked face plates near a machine red room           |
+| 173 | Elevator slots' locked face plates near a machine red room.          |
+| 174 | Elevator slots' locked face plates near a machines red room          |
+| 175 | Elevator slots' locked face plates near a machines red room.         |
+| 176 | Elevator slots' locked face plates near a red machine room           |
+| 177 | Elevator slots' locked face plates near a red machine room.          |
+| 178 | Elevator slots' locked face plates near machine red rooms            |
+| 179 | Elevator slots' locked face plates near machine red rooms.           |
+| 180 | Elevator slots' locked face plates near machines red rooms           |
+| 181 | Elevator slots' locked face plates near machines red rooms.          |
+| 182 | Elevator slots' locked face plates near red machine rooms            |
+| 183 | Elevator slots' locked face plates near red machine rooms.           |
+| 184 | Elevator slots' locked face plates near the machine red room         |
+| 185 | Elevator slots' locked face plates near the machine red room.        |
+| 186 | Elevator slots' locked face plates near the machine red rooms        |
+| 187 | Elevator slots' locked face plates near the machine red rooms.       |
+| 188 | Elevator slots' locked face plates near the machines red room        |
+| 189 | Elevator slots' locked face plates near the machines red room.       |
+| 190 | Elevator slots' locked face plates near the machines red rooms       |
+| 191 | Elevator slots' locked face plates near the machines red rooms.      |
+| 192 | Elevator slots' locked face plates near the red machine room         |
+| 193 | Elevator slots' locked face plates near the red machine room.        |
+| 194 | Elevator slots' locked face plates near the red machine rooms        |
+| 195 | Elevator slots' locked face plates near the red machine rooms.       |
+| 196 | Elevator slots' locked face plates, near a machine red room          |
+| 197 | Elevator slots' locked face plates, near a red machine room          |
+| 198 | Elevator slots' locked face plates, near red machine rooms           |
+| 199 | Elevator slots' locked face plates, near the red machine room        |
+| 200 | Elevator slots' locked face plates, near the red machine rooms       |
+| 201 | The elevator slot's faces locked plate near a machine red room       |
+| 202 | The elevator slot's faces locked plate near a red machine room       |
+| 203 | The elevator slot's faces locked plate near a red machine room.      |
+| 204 | The elevator slot's faces locked plate near machine red rooms        |
+| 205 | The elevator slot's faces locked plate near machine red rooms.       |
+| 206 | The elevator slot's faces locked plate near red machine rooms        |
+| 207 | The elevator slot's faces locked plate near red machine rooms.       |
+| 208 | The elevator slot's faces locked plate near the machine red room     |
+| 209 | The elevator slot's faces locked plate near the machine red rooms    |
+| 210 | The elevator slot's faces locked plate near the machine red rooms.   |
+| 211 | The elevator slot's faces locked plate near the machines red rooms   |
+| 212 | The elevator slot's faces locked plate near the red machine room     |
+| 213 | The elevator slot's faces locked plate near the red machine room.    |
+| 214 | The elevator slot's faces locked plate near the red machine rooms    |
+| 215 | The elevator slot's faces locked plate near the red machine rooms.   |
+| 216 | The elevator slot's faces locked plate, near a machine red room      |
+| 217 | The elevator slot's faces locked plate, near a red machine room      |
+| 218 | The elevator slot's faces locked plate, near red machine rooms       |
+| 219 | The elevator slot's faces locked plate, near the machine red room    |
+| 220 | The elevator slot's faces locked plate, near the red machine room    |
+| 221 | The elevator slot's faces locked plate, near the red machine rooms   |
+| 222 | The elevator slot's faces locked plates near a machine red room      |
+| 223 | The elevator slot's faces locked plates near a red machine room      |
+| 224 | The elevator slot's faces locked plates near a red machine room.     |
+| 225 | The elevator slot's faces locked plates near machine red rooms       |
+| 226 | The elevator slot's faces locked plates near machine red rooms.      |
+| 227 | The elevator slot's faces locked plates near red machine rooms       |
+| 228 | The elevator slot's faces locked plates near red machine rooms.      |
+| 229 | The elevator slot's faces locked plates near the machine red room    |
+| 230 | The elevator slot's faces locked plates near the machine red rooms   |
+| 231 | The elevator slot's faces locked plates near the machine red rooms.  |
+| 232 | The elevator slot's faces locked plates near the machines red rooms  |
+| 233 | The elevator slot's faces locked plates near the red machine room    |
+| 234 | The elevator slot's faces locked plates near the red machine room.   |
+| 235 | The elevator slot's faces locked plates near the red machine rooms   |
+| 236 | The elevator slot's faces locked plates near the red machine rooms.  |
+| 237 | The elevator slot's faces locked plates, near a machine red room     |
+| 238 | The elevator slot's faces locked plates, near a red machine room     |
+| 239 | The elevator slot's faces locked plates, near machine red rooms      |
+| 240 | The elevator slot's faces locked plates, near red machine rooms      |
+| 241 | The elevator slot's faces locked plates, near the machine red room   |
+| 242 | The elevator slot's faces locked plates, near the machine red rooms  |
+| 243 | The elevator slot's faces locked plates, near the red machine room   |
+| 244 | The elevator slot's faces locked plates, near the red machine rooms  |
+| 245 | The elevator slot's locked face plate near a machine red room        |
+| 246 | The elevator slot's locked face plate near a machine red room.       |
+| 247 | The elevator slot's locked face plate near a machines red room       |
+| 248 | The elevator slot's locked face plate near a machines red room.      |
+| 249 | The elevator slot's locked face plate near a red machine room        |
+| 250 | The elevator slot's locked face plate near a red machine room.       |
+| 251 | The elevator slot's locked face plate near machine red rooms         |
+| 252 | The elevator slot's locked face plate near machine red rooms.        |
+| 253 | The elevator slot's locked face plate near machines red rooms        |
+| 254 | The elevator slot's locked face plate near machines red rooms.       |
+| 255 | The elevator slot's locked face plate near red machine rooms         |
+| 256 | The elevator slot's locked face plate near red machine rooms.        |
+| 257 | The elevator slot's locked face plate near the machine red room      |
+| 258 | The elevator slot's locked face plate near the machine red room.     |
+| 259 | The elevator slot's locked face plate near the machine red rooms     |
+| 260 | The elevator slot's locked face plate near the machine red rooms.    |
+| 261 | The elevator slot's locked face plate near the machines red room     |
+| 262 | The elevator slot's locked face plate near the machines red room.    |
+| 263 | The elevator slot's locked face plate near the machines red rooms    |
+| 264 | The elevator slot's locked face plate near the machines red rooms.   |
+| 265 | The elevator slot's locked face plate near the red machine room      |
+| 266 | The elevator slot's locked face plate near the red machine room.     |
+| 267 | The elevator slot's locked face plate near the red machine rooms     |
+| 268 | The elevator slot's locked face plate near the red machine rooms.    |
+| 269 | The elevator slot's locked face plate, near a machine red room       |
+| 270 | The elevator slot's locked face plate, near a red machine room       |
+| 271 | The elevator slot's locked face plate, near red machine rooms        |
+| 272 | The elevator slot's locked face plate, near the red machine room     |
+| 273 | The elevator slot's locked face plate, near the red machine rooms    |
+| 274 | The elevator slot's locked face plates near a machine red room       |
+| 275 | The elevator slot's locked face plates near a machine red room.      |
+| 276 | The elevator slot's locked face plates near a machines red room      |
+| 277 | The elevator slot's locked face plates near a machines red room.     |
+| 278 | The elevator slot's locked face plates near a red machine room       |
+| 279 | The elevator slot's locked face plates near a red machine room.      |
+| 280 | The elevator slot's locked face plates near machine red rooms        |
+| 281 | The elevator slot's locked face plates near machine red rooms.       |
+| 282 | The elevator slot's locked face plates near machines red rooms       |
+| 283 | The elevator slot's locked face plates near machines red rooms.      |
+| 284 | The elevator slot's locked face plates near red machine rooms        |
+| 285 | The elevator slot's locked face plates near red machine rooms.       |
+| 286 | The elevator slot's locked face plates near the machine red room     |
+| 287 | The elevator slot's locked face plates near the machine red room.    |
+| 288 | The elevator slot's locked face plates near the machine red rooms    |
+| 289 | The elevator slot's locked face plates near the machine red rooms.   |
+| 290 | The elevator slot's locked face plates near the machines red room    |
+| 291 | The elevator slot's locked face plates near the machines red room.   |
+| 292 | The elevator slot's locked face plates near the machines red rooms   |
+| 293 | The elevator slot's locked face plates near the machines red rooms.  |
+| 294 | The elevator slot's locked face plates near the red machine room     |
+| 295 | The elevator slot's locked face plates near the red machine room.    |
+| 296 | The elevator slot's locked face plates near the red machine rooms    |
+| 297 | The elevator slot's locked face plates near the red machine rooms.   |
+| 298 | The elevator slot's locked face plates, near a machine red room      |
+| 299 | The elevator slot's locked face plates, near a red machine room      |
+| 300 | The elevator slot's locked face plates, near red machine rooms       |
+| 301 | The elevator slot's locked face plates, near the machine red room    |
+| 302 | The elevator slot's locked face plates, near the red machine room    |
+| 303 | The elevator slot's locked face plates, near the red machine rooms   |
+| 304 | The elevator slots' faces locked plate near a machine red room       |
+| 305 | The elevator slots' faces locked plate near a red machine room       |
+| 306 | The elevator slots' faces locked plate near a red machine room.      |
+| 307 | The elevator slots' faces locked plate near machine red rooms        |
+| 308 | The elevator slots' faces locked plate near machine red rooms.       |
+| 309 | The elevator slots' faces locked plate near red machine rooms        |
+| 310 | The elevator slots' faces locked plate near red machine rooms.       |
+| 311 | The elevator slots' faces locked plate near the machine red room     |
+| 312 | The elevator slots' faces locked plate near the machine red rooms    |
+| 313 | The elevator slots' faces locked plate near the machine red rooms.   |
+| 314 | The elevator slots' faces locked plate near the machines red room    |
+| 315 | The elevator slots' faces locked plate near the machines red rooms   |
+| 316 | The elevator slots' faces locked plate near the machines red rooms.  |
+| 317 | The elevator slots' faces locked plate near the red machine room     |
+| 318 | The elevator slots' faces locked plate near the red machine room.    |
+| 319 | The elevator slots' faces locked plate near the red machine rooms    |
+| 320 | The elevator slots' faces locked plate near the red machine rooms.   |
+| 321 | The elevator slots' faces locked plate, near a machine red room      |
+| 322 | The elevator slots' faces locked plate, near a red machine room      |
+| 323 | The elevator slots' faces locked plate, near red machine rooms       |
+| 324 | The elevator slots' faces locked plate, near the machine red room    |
+| 325 | The elevator slots' faces locked plate, near the red machine room    |
+| 326 | The elevator slots' faces locked plate, near the red machine rooms   |
+| 327 | The elevator slots' faces locked plates near a machine red room      |
+| 328 | The elevator slots' faces locked plates near a red machine room      |
+| 329 | The elevator slots' faces locked plates near a red machine room.     |
+| 330 | The elevator slots' faces locked plates near machine red rooms       |
+| 331 | The elevator slots' faces locked plates near machine red rooms.      |
+| 332 | The elevator slots' faces locked plates near red machine rooms       |
+| 333 | The elevator slots' faces locked plates near red machine rooms.      |
+| 334 | The elevator slots' faces locked plates near the machine red room    |
+| 335 | The elevator slots' faces locked plates near the machine red rooms   |
+| 336 | The elevator slots' faces locked plates near the machine red rooms.  |
+| 337 | The elevator slots' faces locked plates near the machines red room   |
+| 338 | The elevator slots' faces locked plates near the machines red rooms  |
+| 339 | The elevator slots' faces locked plates near the machines red rooms. |
+| 340 | The elevator slots' faces locked plates near the red machine room    |
+| 341 | The elevator slots' faces locked plates near the red machine room.   |
+| 342 | The elevator slots' faces locked plates near the red machine rooms   |
+| 343 | The elevator slots' faces locked plates near the red machine rooms.  |
+| 344 | The elevator slots' faces locked plates, near a machine red room     |
+| 345 | The elevator slots' faces locked plates, near a red machine room     |
+| 346 | The elevator slots' faces locked plates, near machine red rooms      |
+| 347 | The elevator slots' faces locked plates, near red machine rooms      |
+| 348 | The elevator slots' faces locked plates, near the machine red room   |
+| 349 | The elevator slots' faces locked plates, near the machine red rooms  |
+| 350 | The elevator slots' faces locked plates, near the machines red rooms |
+| 351 | The elevator slots' faces locked plates, near the red machine room   |
+| 352 | The elevator slots' faces locked plates, near the red machine rooms  |
+| 353 | The elevator slots' locked face plate near a machine red room        |
+| 354 | The elevator slots' locked face plate near a machine red room.       |
+| 355 | The elevator slots' locked face plate near a machines red room       |
+| 356 | The elevator slots' locked face plate near a machines red room.      |
+| 357 | The elevator slots' locked face plate near a red machine room        |
+| 358 | The elevator slots' locked face plate near a red machine room.       |
+| 359 | The elevator slots' locked face plate near machine red rooms         |
+| 360 | The elevator slots' locked face plate near machine red rooms.        |
+| 361 | The elevator slots' locked face plate near machines red rooms        |
+| 362 | The elevator slots' locked face plate near machines red rooms.       |
+| 363 | The elevator slots' locked face plate near red machine rooms         |
+| 364 | The elevator slots' locked face plate near red machine rooms.        |
+| 365 | The elevator slots' locked face plate near the machine red room      |
+| 366 | The elevator slots' locked face plate near the machine red room.     |
+| 367 | The elevator slots' locked face plate near the machine red rooms     |
+| 368 | The elevator slots' locked face plate near the machine red rooms.    |
+| 369 | The elevator slots' locked face plate near the machines red room     |
+| 370 | The elevator slots' locked face plate near the machines red room.    |
+| 371 | The elevator slots' locked face plate near the machines red rooms    |
+| 372 | The elevator slots' locked face plate near the machines red rooms.   |
+| 373 | The elevator slots' locked face plate near the red machine room      |
+| 374 | The elevator slots' locked face plate near the red machine room.     |
+| 375 | The elevator slots' locked face plate near the red machine rooms     |
+| 376 | The elevator slots' locked face plate near the red machine rooms.    |
+| 377 | The elevator slots' locked face plate, near a machine red room       |
+| 378 | The elevator slots' locked face plate, near a red machine room       |
+| 379 | The elevator slots' locked face plate, near red machine rooms        |
+| 380 | The elevator slots' locked face plate, near the machine red room     |
+| 381 | The elevator slots' locked face plate, near the red machine room     |
+| 382 | The elevator slots' locked face plate, near the red machine rooms    |
+| 383 | The elevator slots' locked face plates near a machine red room       |
+| 384 | The elevator slots' locked face plates near a machine red room.      |
+| 385 | The elevator slots' locked face plates near a machines red room      |
+| 386 | The elevator slots' locked face plates near a machines red room.     |
+| 387 | The elevator slots' locked face plates near a red machine room       |
+| 388 | The elevator slots' locked face plates near a red machine room.      |
+| 389 | The elevator slots' locked face plates near machine red rooms        |
+| 390 | The elevator slots' locked face plates near machine red rooms.       |
+| 391 | The elevator slots' locked face plates near machines red rooms       |
+| 392 | The elevator slots' locked face plates near machines red rooms.      |
+| 393 | The elevator slots' locked face plates near red machine rooms        |
+| 394 | The elevator slots' locked face plates near red machine rooms.       |
+| 395 | The elevator slots' locked face plates near the machine red room     |
+| 396 | The elevator slots' locked face plates near the machine red room.    |
+| 397 | The elevator slots' locked face plates near the machine red rooms    |
+| 398 | The elevator slots' locked face plates near the machine red rooms.   |
+| 399 | The elevator slots' locked face plates near the machines red room    |
+| 400 | The elevator slots' locked face plates near the machines red room.   |
+| 401 | The elevator slots' locked face plates near the machines red rooms   |
+| 402 | The elevator slots' locked face plates near the machines red rooms.  |
+| 403 | The elevator slots' locked face plates near the red machine room     |
+| 404 | The elevator slots' locked face plates near the red machine room.    |
+| 405 | The elevator slots' locked face plates near the red machine rooms    |
+| 406 | The elevator slots' locked face plates near the red machine rooms.   |
+| 407 | The elevator slots' locked face plates, near a machine red room      |
+| 408 | The elevator slots' locked face plates, near a red machine room      |
+| 409 | The elevator slots' locked face plates, near machine red rooms       |
+| 410 | The elevator slots' locked face plates, near red machine rooms       |
+| 411 | The elevator slots' locked face plates, near the machine red room    |
+| 412 | The elevator slots' locked face plates, near the machine red rooms   |
+| 413 | The elevator slots' locked face plates, near the red machine room    |
+| 414 | The elevator slots' locked face plates, near the red machine rooms   |
++-----+----------------------------------------------------------------------+
+

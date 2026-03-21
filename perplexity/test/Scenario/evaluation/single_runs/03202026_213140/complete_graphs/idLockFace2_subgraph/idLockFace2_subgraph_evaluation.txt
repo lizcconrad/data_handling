@@ -1,0 +1,254 @@
+GRAPH NAME: idLockFace2_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------+
+|                      GOLD OUTPUTS                     |
++------------------------------------------+------------+
+| Gold Output                              | Generated? |
++------------------------------------------+------------+
+| the lock face south of the unlocked lock | True       |
++------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idLockFace2 | True         | True          | Covered          | Included          |
+| idLock1     | True         | True          | Covered          | Included          |
+| unlocked    | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                       |
++----------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent      | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+| isSouthOf                  | idLockFace2 | idLock1  | True         | True          | Covered          | Included          |
+| idLock1_prop_idLockedState | idLock1     | unlocked | True         | True          | Covered          | Included          |
++----------------------------+-------------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1573                                                                     |
+|               |   INDEX: x1572                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1601 ARG0: e1598 ARG1: u1599 ARG2: x1600 ]           |
+|               |           [ def_implicit_q LBL: h1612 ARG0: x1609 RSTR: h1610 BODY: h1611 ]      |
+|               |           [ _south_a_1 LBL: h1597 ARG0: i1594 ARG1: x1595 ARG2: u1596 ]          |
+|               |           [ def_udef_a_q LBL: h1607 ARG0: x1604 RSTR: h1605 BODY: h1606 ]        |
+|               |           [ _un-_a_neg LBL: h1593 ARG0: i1591 ARG1: e1592 ]                      |
+|               |           [ _lock_v_cause LBL: h1590 ARG0: e1587 [ e PERF: - ] ARG1: i1588 ARG2: |
+|               | i1589 ]                                                                          |
+|               |           [ _lock_n_1 LBL: h1586 ARG0: x1585 ]                                   |
+|               |           [ place_n LBL: h1603 ARG0: x1602 ]                                     |
+|               |           [ compound LBL: h1584 ARG0: e1581 [ e PROG: - ] ARG1: u1582 ARG2:      |
+|               | u1583 ]                                                                          |
+|               |           [ udef_q LBL: h1579 ARG0: x1576 RSTR: h1577 BODY: h1578 ]              |
+|               |           [ _lock_n_1 LBL: h1575 ARG0: x1574 ]                                   |
+|               |           [ _face_n_1 LBL: h1573 ARG0: x1572 ] >                                 |
+|               |   HCONS: < h1605 qeq h1586 h1610 qeq h1603 h1577 qeq h1575 >                     |
+|               |   ICONS: < e1587 topic i1589 >                                                   |
+|               |   EQS: < h1593 eq h1590 e1592 eq e1587 h1590 eq h1586 i1589 eq x1585 x1604 eq    |
+|               | x1585 h1597 eq h1608 u1596 eq x1604 h1597 eq h1603 x1595 eq x1602 x1609 eq x1602 |
+|               | h1601 eq h1613 x1600 eq x1609 x1576 eq x1574 h1584 eq h1580 u1583 eq x1576 h1584 |
+|               | eq h1573 u1582 eq x1572 h1601 eq h1573 u1599 eq x1572 > ]                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1573                                                                     |
+|               |   INDEX: x1572                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1573 ARG0: e1598 ARG1: x1572 ARG2: x1595 ]           |
+|               |           [ def_implicit_q LBL: h1612 ARG0: x1595 RSTR: h1610 BODY: h1611 ]      |
+|               |           [ _south_a_1 LBL: h1597 ARG0: i1594 ARG1: x1595 ARG2: x1585 ]          |
+|               |           [ def_udef_a_q LBL: h1607 ARG0: x1585 RSTR: h1605 BODY: h1606 ]        |
+|               |           [ _un-_a_neg LBL: h1586 ARG0: i1591 ARG1: e1587 [ e PERF: - ] ]        |
+|               |           [ _lock_v_cause LBL: h1586 ARG0: e1587 ARG1: i1588 ARG2: x1585 ]       |
+|               |           [ _lock_n_1 LBL: h1586 ARG0: x1585 ]                                   |
+|               |           [ place_n LBL: h1597 ARG0: x1595 ]                                     |
+|               |           [ compound LBL: h1573 ARG0: e1581 [ e PROG: - ] ARG1: x1572 ARG2:      |
+|               | x1574 ]                                                                          |
+|               |           [ udef_q LBL: h1579 ARG0: x1574 RSTR: h1577 BODY: h1578 ]              |
+|               |           [ _lock_n_1 LBL: h1575 ARG0: x1574 ]                                   |
+|               |           [ _face_n_1 LBL: h1573 ARG0: x1572 ] >                                 |
+|               |   HCONS: < h1605 qeq h1586 h1610 qeq h1597 h1577 qeq h1575 >                     |
+|               |   ICONS: < e1587 topic x1585 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1622                                                                     |
+|               |   INDEX: e1619                                                                   |
+|               |   RELS: < [ unknown LBL: h1618 ARG: x1572 ARG0: e1619 ]                          |
+|               |           [ def_udef_a_q LBL: h1617 ARG0: x1572 RSTR: h1615 BODY: h1616 ]        |
+|               |           [ loc_nonsp LBL: h1573 ARG0: e1598 ARG1: x1572 ARG2: x1595 ]           |
+|               |           [ def_implicit_q LBL: h1612 ARG0: x1595 RSTR: h1610 BODY: h1611 ]      |
+|               |           [ _south_a_1 LBL: h1597 ARG0: i1594 ARG1: x1595 ARG2: x1585 ]          |
+|               |           [ def_udef_a_q LBL: h1607 ARG0: x1585 RSTR: h1605 BODY: h1606 ]        |
+|               |           [ _un-_a_neg LBL: h1586 ARG0: i1591 ARG1: e1587 [ e PERF: - ] ]        |
+|               |           [ _lock_v_cause LBL: h1586 ARG0: e1587 ARG1: i1588 ARG2: x1585 ]       |
+|               |           [ _lock_n_1 LBL: h1586 ARG0: x1585 ]                                   |
+|               |           [ place_n LBL: h1597 ARG0: x1595 ]                                     |
+|               |           [ compound LBL: h1573 ARG0: e1581 [ e PROG: - ] ARG1: x1572 ARG2:      |
+|               | x1574 ]                                                                          |
+|               |           [ udef_q LBL: h1579 ARG0: x1574 RSTR: h1577 BODY: h1578 ]              |
+|               |           [ _lock_n_1 LBL: h1575 ARG0: x1574 ]                                   |
+|               |           [ _face_n_1 LBL: h1573 ARG0: x1572 ] >                                 |
+|               |   HCONS: < h1605 qeq h1586 h1610 qeq h1597 h1577 qeq h1575 h1615 qeq h1573 h1622 |
+|               | qeq h1618 >                                                                      |
+|               |   ICONS: < e1587 topic x1585 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------+
+|                                          NODE SEMENTS                                          |
++-------------+----------------------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                                 |
++-------------+----------------------------------------------------------------------------------+
+| idLockFace2 | [ TOP: h1573                                                                     |
+|             |   INDEX: x1572                                                                   |
+|             |   RELS: < [ compound LBL: h1584 ARG0: e1581 [ e PROG: - ] ARG1: u1582 ARG2:      |
+|             | u1583 ]                                                                          |
+|             |           [ udef_q LBL: h1579 ARG0: x1576 RSTR: h1577 BODY: h1578 ]              |
+|             |           [ _lock_n_1 LBL: h1575 ARG0: x1574 ]                                   |
+|             |           [ _face_n_1 LBL: h1573 ARG0: x1572 ] >                                 |
+|             |   HCONS: < h1577 qeq h1575 >                                                     |
+|             |   EQS: < x1576 eq x1574 h1584 eq h1580 u1583 eq x1576 h1584 eq h1573 u1582 eq    |
+|             | x1572 > ]                                                                        |
++-------------+----------------------------------------------------------------------------------+
+| idLock1     | [ TOP: h1586                                                                     |
+|             |   INDEX: x1585                                                                   |
+|             |   RELS: < [ _lock_n_1 LBL: h1586 ARG0: x1585 ] > ]                               |
++-------------+----------------------------------------------------------------------------------+
+| unlocked    | [ TOP: h1590                                                                     |
+|             |   INDEX: e1587                                                                   |
+|             |   RELS: < [ _un-_a_neg LBL: h1593 ARG0: i1591 ARG1: e1592 ]                      |
+|             |           [ _lock_v_cause LBL: h1590 ARG0: e1587 ARG1: i1588 ARG2: i1589 ] >     |
+|             |   EQS: < h1593 eq h1590 e1592 eq e1587 >                                         |
+|             |   SLOTS: < ARG1: i1588 ARG2: i1589 > ]                                           |
++-------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE SEMENTS                                                              |
++----------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| Edge                       | Parent      | Child    | Generated SEMENT                                                                 |
++----------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| isSouthOf                  | idLockFace2 | idLock1  | [ TOP: h1573                                                                     |
+|                            |             |          |   INDEX: x1572                                                                   |
+|                            |             |          |   RELS: < [ loc_nonsp LBL: h1601 ARG0: e1598 ARG1: u1599 ARG2: x1600 ]           |
+|                            |             |          |           [ def_implicit_q LBL: h1612 ARG0: x1609 RSTR: h1610 BODY: h1611 ]      |
+|                            |             |          |           [ _south_a_1 LBL: h1597 ARG0: i1594 ARG1: x1595 ARG2: u1596 ]          |
+|                            |             |          |           [ def_udef_a_q LBL: h1607 ARG0: x1604 RSTR: h1605 BODY: h1606 ]        |
+|                            |             |          |           [ _un-_a_neg LBL: h1593 ARG0: i1591 ARG1: e1592 ]                      |
+|                            |             |          |           [ _lock_v_cause LBL: h1590 ARG0: e1587 [ e PERF: - ] ARG1: i1588 ARG2: |
+|                            |             |          | i1589 ]                                                                          |
+|                            |             |          |           [ _lock_n_1 LBL: h1586 ARG0: x1585 ]                                   |
+|                            |             |          |           [ place_n LBL: h1603 ARG0: x1602 ]                                     |
+|                            |             |          |           [ compound LBL: h1584 ARG0: e1581 [ e PROG: - ] ARG1: u1582 ARG2:      |
+|                            |             |          | u1583 ]                                                                          |
+|                            |             |          |           [ udef_q LBL: h1579 ARG0: x1576 RSTR: h1577 BODY: h1578 ]              |
+|                            |             |          |           [ _lock_n_1 LBL: h1575 ARG0: x1574 ]                                   |
+|                            |             |          |           [ _face_n_1 LBL: h1573 ARG0: x1572 ] >                                 |
+|                            |             |          |   HCONS: < h1605 qeq h1586 h1610 qeq h1603 h1577 qeq h1575 >                     |
+|                            |             |          |   ICONS: < e1587 topic i1589 >                                                   |
+|                            |             |          |   EQS: < h1593 eq h1590 e1592 eq e1587 h1590 eq h1586 i1589 eq x1585 x1604 eq    |
+|                            |             |          | x1585 h1597 eq h1608 u1596 eq x1604 h1597 eq h1603 x1595 eq x1602 x1609 eq x1602 |
+|                            |             |          | h1601 eq h1613 x1600 eq x1609 x1576 eq x1574 h1584 eq h1580 u1583 eq x1576 h1584 |
+|                            |             |          | eq h1573 u1582 eq x1572 h1601 eq h1573 u1599 eq x1572 > ]                        |
++----------------------------+-------------+----------+----------------------------------------------------------------------------------+
+| idLock1_prop_idLockedState | idLock1     | unlocked | [ TOP: h1586                                                                     |
+|                            |             |          |   INDEX: x1585                                                                   |
+|                            |             |          |   RELS: < [ _un-_a_neg LBL: h1593 ARG0: i1591 ARG1: e1592 ]                      |
+|                            |             |          |           [ _lock_v_cause LBL: h1590 ARG0: e1587 [ e PERF: - ] ARG1: i1588 ARG2: |
+|                            |             |          | i1589 ]                                                                          |
+|                            |             |          |           [ _lock_n_1 LBL: h1586 ARG0: x1585 ] >                                 |
+|                            |             |          |   ICONS: < e1587 topic i1589 >                                                   |
+|                            |             |          |   EQS: < h1593 eq h1590 e1592 eq e1587 h1590 eq h1586 i1589 eq x1585 > ]         |
++----------------------------+-------------+----------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------+
+|              GENERATED ENGLISH TEXT              |
++----+---------------------------------------------+
+| #  | Generated Text                              |
++----+---------------------------------------------+
+| 1  | A lock face south of an unlocked lock       |
+| 2  | A lock face south of an unlocked lock.      |
+| 3  | A lock face south of the unlocked lock      |
+| 4  | A lock face south of the unlocked lock.     |
+| 5  | A lock face south of the unlocked locks     |
+| 6  | A lock face south of the unlocked locks.    |
+| 7  | A lock face south of unlocked locks         |
+| 8  | A lock face south of unlocked locks.        |
+| 9  | A lock face, south of an unlocked lock      |
+| 10 | A lock face, south of the unlocked lock     |
+| 11 | A lock face, south of the unlocked locks    |
+| 12 | A lock face, south of unlocked locks        |
+| 13 | Lock face south of an unlocked lock         |
+| 14 | Lock face south of an unlocked lock.        |
+| 15 | Lock face south of the unlocked lock        |
+| 16 | Lock face south of the unlocked lock.       |
+| 17 | Lock face south of the unlocked locks       |
+| 18 | Lock face south of the unlocked locks.      |
+| 19 | Lock face south of unlocked locks           |
+| 20 | Lock face south of unlocked locks.          |
+| 21 | Lock face, south of an unlocked lock        |
+| 22 | Lock face, south of the unlocked lock       |
+| 23 | Lock face, south of the unlocked locks      |
+| 24 | Lock face, south of unlocked locks          |
+| 25 | Lock faces south of an unlocked lock        |
+| 26 | Lock faces south of an unlocked lock.       |
+| 27 | Lock faces south of the unlocked lock       |
+| 28 | Lock faces south of the unlocked lock.      |
+| 29 | Lock faces south of the unlocked locks      |
+| 30 | Lock faces south of the unlocked locks.     |
+| 31 | Lock faces south of unlocked locks          |
+| 32 | Lock faces south of unlocked locks.         |
+| 33 | Lock faces, south of an unlocked lock       |
+| 34 | Lock faces, south of the unlocked lock      |
+| 35 | Lock faces, south of the unlocked locks     |
+| 36 | Lock faces, south of unlocked locks         |
+| 37 | The lock face south of an unlocked lock     |
+| 38 | The lock face south of an unlocked lock.    |
+| 39 | The lock face south of the unlocked lock    |
+| 40 | The lock face south of the unlocked lock.   |
+| 41 | The lock face south of the unlocked locks   |
+| 42 | The lock face south of the unlocked locks.  |
+| 43 | The lock face south of unlocked locks       |
+| 44 | The lock face south of unlocked locks.      |
+| 45 | The lock face, south of an unlocked lock    |
+| 46 | The lock face, south of the unlocked lock   |
+| 47 | The lock face, south of the unlocked locks  |
+| 48 | The lock face, south of unlocked locks      |
+| 49 | The lock faces south of an unlocked lock    |
+| 50 | The lock faces south of an unlocked lock.   |
+| 51 | The lock faces south of the unlocked lock   |
+| 52 | The lock faces south of the unlocked lock.  |
+| 53 | The lock faces south of the unlocked locks  |
+| 54 | The lock faces south of the unlocked locks. |
+| 55 | The lock faces south of unlocked locks      |
+| 56 | The lock faces south of unlocked locks.     |
+| 57 | The lock faces, south of an unlocked lock   |
+| 58 | The lock faces, south of the unlocked lock  |
+| 59 | The lock faces, south of the unlocked locks |
+| 60 | The lock faces, south of unlocked locks     |
++----+---------------------------------------------+
+

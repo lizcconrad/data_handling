@@ -1,0 +1,210 @@
+GRAPH NAME: idLab1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 30    |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------+
+|                       GOLD OUTPUTS                       |
++---------------------------------------------+------------+
+| Gold Output                                 | Generated? |
++---------------------------------------------+------------+
+| the white lab north of Kelly who is unknown | False      |
++---------------------------------------------+------------+
+
++--------------------------------------------------------------------------------+
+|                                  NODE METRICS                                  |
++----------+--------------+---------------+------------------+-------------------+
+| Node     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------+--------------+---------------+------------------+-------------------+
+| idLab1   | True         | True          | Covered          | Included          |
+| white    | True         | True          | Covered          | Included          |
+| idKelly1 | True         | True          | Covered          | Included          |
+| true     | True         | True          | Covered          | Included          |
++----------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                       |
++-------------------------------+----------+----------+--------------+---------------+------------------+-------------------+
+| Edge                          | Parent   | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-------------------------------+----------+----------+--------------+---------------+------------------+-------------------+
+| idLab1_prop_idColor           | idLab1   | white    | True         | True          | Covered          | Included          |
+| isNorthOf                     | idLab1   | idKelly1 | True         | True          | Covered          | Included          |
+| idKelly1_prop_idUnknownObject | idKelly1 | true     | True         | True          | Covered          | Included          |
++-------------------------------+----------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2                                                                        |
+|               |   INDEX: x1                                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h30 ARG0: e27 ARG1: u28 ARG2: x29 ]                   |
+|               |           [ def_implicit_q LBL: h41 ARG0: x38 RSTR: h39 BODY: h40 ]              |
+|               |           [ _north_a_1 LBL: h26 ARG0: i23 ARG1: x24 ARG2: u25 ]                  |
+|               |           [ def_udef_a_q LBL: h36 ARG0: x33 RSTR: h34 BODY: h35 ]                |
+|               |           [ _un-_a_neg LBL: h22 ARG0: i20 ARG1: e21 ]                            |
+|               |           [ _know_v_1 LBL: h19 ARG0: e16 [ e PERF: - ] ARG1: u17 ARG2: i18 ]     |
+|               |           [ named LBL: h7 ARG0: x6 [ x NUM: sg ] CARG: "Kelly" ]                 |
+|               |           [ place_n LBL: h32 ARG0: x31 ]                                         |
+|               |           [ _white_a_1 LBL: h5 ARG0: i3 ARG1: i4 ]                               |
+|               |           [ _lab_n_1 LBL: h2 ARG0: x1 ] >                                        |
+|               |   HCONS: < h34 qeq h7 h39 qeq h32 >                                              |
+|               |   ICONS: < e16 topic i18 >                                                       |
+|               |   EQS: < h22 eq h19 e21 eq e16 h19 eq h7 i18 eq x6 x33 eq x6 h26 eq h37 u25 eq   |
+|               | x33 h26 eq h32 x24 eq x31 x38 eq x31 h30 eq h42 x29 eq x38 h5 eq h2 i4 eq x1 h30 |
+|               | eq h2 u28 eq x1 > ]                                                              |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2                                                                        |
+|               |   INDEX: x1                                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h2 ARG0: e27 ARG1: x1 ARG2: x24 ]                     |
+|               |           [ def_implicit_q LBL: h41 ARG0: x24 RSTR: h39 BODY: h40 ]              |
+|               |           [ _north_a_1 LBL: h26 ARG0: i23 ARG1: x24 ARG2: x33 [ x NUM: sg ] ]    |
+|               |           [ def_udef_a_q LBL: h36 ARG0: x33 RSTR: h34 BODY: h35 ]                |
+|               |           [ _un-_a_neg LBL: h19 ARG0: i20 ARG1: e16 [ e PERF: - ] ]              |
+|               |           [ _know_v_1 LBL: h19 ARG0: e16 ARG1: u17 ARG2: x33 ]                   |
+|               |           [ named LBL: h19 ARG0: x33 CARG: "Kelly" ]                             |
+|               |           [ place_n LBL: h26 ARG0: x24 ]                                         |
+|               |           [ _white_a_1 LBL: h2 ARG0: i3 ARG1: x1 ]                               |
+|               |           [ _lab_n_1 LBL: h2 ARG0: x1 ] >                                        |
+|               |   HCONS: < h34 qeq h19 h39 qeq h26 >                                             |
+|               |   ICONS: < e16 topic x33 > ]                                                     |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h51                                                                       |
+|               |   INDEX: e48                                                                     |
+|               |   RELS: < [ unknown LBL: h47 ARG: x1 ARG0: e48 ]                                 |
+|               |           [ def_udef_a_q LBL: h46 ARG0: x1 RSTR: h44 BODY: h45 ]                 |
+|               |           [ loc_nonsp LBL: h2 ARG0: e27 ARG1: x1 ARG2: x24 ]                     |
+|               |           [ def_implicit_q LBL: h41 ARG0: x24 RSTR: h39 BODY: h40 ]              |
+|               |           [ _north_a_1 LBL: h26 ARG0: i23 ARG1: x24 ARG2: x33 [ x NUM: sg ] ]    |
+|               |           [ def_udef_a_q LBL: h36 ARG0: x33 RSTR: h34 BODY: h35 ]                |
+|               |           [ _un-_a_neg LBL: h19 ARG0: i20 ARG1: e16 [ e PERF: - ] ]              |
+|               |           [ _know_v_1 LBL: h19 ARG0: e16 ARG1: u17 ARG2: x33 ]                   |
+|               |           [ named LBL: h19 ARG0: x33 CARG: "Kelly" ]                             |
+|               |           [ place_n LBL: h26 ARG0: x24 ]                                         |
+|               |           [ _white_a_1 LBL: h2 ARG0: i3 ARG1: x1 ]                               |
+|               |           [ _lab_n_1 LBL: h2 ARG0: x1 ] >                                        |
+|               |   HCONS: < h34 qeq h19 h39 qeq h26 h44 qeq h2 h51 qeq h47 >                      |
+|               |   ICONS: < e16 topic x33 > ]                                                     |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                                NODE SEMENTS                                |
++----------+-----------------------------------------------------------------+
+| Node     | Generated SEMENT                                                |
++----------+-----------------------------------------------------------------+
+| idLab1   | [ TOP: h2                                                       |
+|          |   INDEX: x1                                                     |
+|          |   RELS: < [ _lab_n_1 LBL: h2 ARG0: x1 ] > ]                     |
++----------+-----------------------------------------------------------------+
+| white    | [ TOP: h5                                                       |
+|          |   INDEX: i3                                                     |
+|          |   RELS: < [ _white_a_1 LBL: h5 ARG0: i3 ARG1: i4 ] >            |
+|          |   SLOTS: < ARG1: i4 > ]                                         |
++----------+-----------------------------------------------------------------+
+| idKelly1 | [ TOP: h7                                                       |
+|          |   INDEX: x6 [ x NUM: sg ]                                       |
+|          |   RELS: < [ named LBL: h7 ARG0: x6 CARG: "Kelly" ] > ]          |
++----------+-----------------------------------------------------------------+
+| true     | [ TOP: h11                                                      |
+|          |   INDEX: e8                                                     |
+|          |   RELS: < [ _true_a_of LBL: h11 ARG0: e8 ARG1: u9 ARG2: u10 ] > |
+|          |   SLOTS: < ARG1: u9 ARG2: u10 > ]                               |
++----------+-----------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE SEMENTS                                                              |
++-------------------------------+----------+----------+----------------------------------------------------------------------------------+
+| Edge                          | Parent   | Child    | Generated SEMENT                                                                 |
++-------------------------------+----------+----------+----------------------------------------------------------------------------------+
+| idLab1_prop_idColor           | idLab1   | white    | [ TOP: h2                                                                        |
+|                               |          |          |   INDEX: x1                                                                      |
+|                               |          |          |   RELS: < [ _white_a_1 LBL: h5 ARG0: i3 ARG1: i4 ]                               |
+|                               |          |          |           [ _lab_n_1 LBL: h2 ARG0: x1 ] >                                        |
+|                               |          |          |   EQS: < h5 eq h2 i4 eq x1 > ]                                                   |
++-------------------------------+----------+----------+----------------------------------------------------------------------------------+
+| isNorthOf                     | idLab1   | idKelly1 | [ TOP: h2                                                                        |
+|                               |          |          |   INDEX: x1                                                                      |
+|                               |          |          |   RELS: < [ loc_nonsp LBL: h30 ARG0: e27 ARG1: u28 ARG2: x29 ]                   |
+|                               |          |          |           [ def_implicit_q LBL: h41 ARG0: x38 RSTR: h39 BODY: h40 ]              |
+|                               |          |          |           [ _north_a_1 LBL: h26 ARG0: i23 ARG1: x24 ARG2: u25 ]                  |
+|                               |          |          |           [ def_udef_a_q LBL: h36 ARG0: x33 RSTR: h34 BODY: h35 ]                |
+|                               |          |          |           [ _un-_a_neg LBL: h22 ARG0: i20 ARG1: e21 ]                            |
+|                               |          |          |           [ _know_v_1 LBL: h19 ARG0: e16 [ e PERF: - ] ARG1: u17 ARG2: i18 ]     |
+|                               |          |          |           [ named LBL: h7 ARG0: x6 [ x NUM: sg ] CARG: "Kelly" ]                 |
+|                               |          |          |           [ place_n LBL: h32 ARG0: x31 ]                                         |
+|                               |          |          |           [ _white_a_1 LBL: h5 ARG0: i3 ARG1: i4 ]                               |
+|                               |          |          |           [ _lab_n_1 LBL: h2 ARG0: x1 ] >                                        |
+|                               |          |          |   HCONS: < h34 qeq h7 h39 qeq h32 >                                              |
+|                               |          |          |   ICONS: < e16 topic i18 >                                                       |
+|                               |          |          |   EQS: < h22 eq h19 e21 eq e16 h19 eq h7 i18 eq x6 x33 eq x6 h26 eq h37 u25 eq   |
+|                               |          |          | x33 h26 eq h32 x24 eq x31 x38 eq x31 h30 eq h42 x29 eq x38 h5 eq h2 i4 eq x1 h30 |
+|                               |          |          | eq h2 u28 eq x1 > ]                                                              |
++-------------------------------+----------+----------+----------------------------------------------------------------------------------+
+| idKelly1_prop_idUnknownObject | idKelly1 | true     | [ TOP: h7                                                                        |
+|                               |          |          |   INDEX: x6 [ x NUM: sg ]                                                        |
+|                               |          |          |   RELS: < [ _un-_a_neg LBL: h22 ARG0: i20 ARG1: e21 ]                            |
+|                               |          |          |           [ _know_v_1 LBL: h19 ARG0: e16 [ e PERF: - ] ARG1: u17 ARG2: i18 ]     |
+|                               |          |          |           [ named LBL: h7 ARG0: x6 CARG: "Kelly" ] >                             |
+|                               |          |          |   ICONS: < e16 topic i18 >                                                       |
+|                               |          |          |   EQS: < h22 eq h19 e21 eq e16 h19 eq h7 i18 eq x6 > ]                           |
++-------------------------------+----------+----------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------+
+|              GENERATED ENGLISH TEXT             |
++----+--------------------------------------------+
+| #  | Generated Text                             |
++----+--------------------------------------------+
+| 1  | A white lab north of an unknown Kelly      |
+| 2  | A white lab north of an unknown Kelly.     |
+| 3  | A white lab north of the unknown Kelly     |
+| 4  | A white lab north of the unknown Kelly.    |
+| 5  | A white lab, north of an unknown Kelly     |
+| 6  | A white lab, north of the unknown Kelly    |
+| 7  | The white lab north of an unknown Kelly    |
+| 8  | The white lab north of an unknown Kelly.   |
+| 9  | The white lab north of the unknown Kelly   |
+| 10 | The white lab north of the unknown Kelly.  |
+| 11 | The white lab, north of an unknown Kelly   |
+| 12 | The white lab, north of the unknown Kelly  |
+| 13 | The white labs north of an unknown Kelly   |
+| 14 | The white labs north of an unknown Kelly.  |
+| 15 | The white labs north of the unknown Kelly  |
+| 16 | The white labs north of the unknown Kelly. |
+| 17 | The white labs, north of an unknown Kelly  |
+| 18 | The white labs, north of the unknown Kelly |
+| 19 | White lab north of an unknown Kelly        |
+| 20 | White lab north of an unknown Kelly.       |
+| 21 | White lab north of the unknown Kelly       |
+| 22 | White lab north of the unknown Kelly.      |
+| 23 | White lab, north of an unknown Kelly       |
+| 24 | White lab, north of the unknown Kelly      |
+| 25 | White labs north of an unknown Kelly       |
+| 26 | White labs north of an unknown Kelly.      |
+| 27 | White labs north of the unknown Kelly      |
+| 28 | White labs north of the unknown Kelly.     |
+| 29 | White labs, north of an unknown Kelly      |
+| 30 | White labs, north of the unknown Kelly     |
++----+--------------------------------------------+
+

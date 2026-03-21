@@ -1,0 +1,919 @@
+GRAPH NAME: idLivingroom1BackOpening_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 640   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------------------------+
+|                                              GOLD OUTPUTS                                             |
++------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                              | Generated? |
++------------------------------------------------------------------------------------------+------------+
+| the living room's back opening east of the open door from the living room to the bedroom | True       |
++------------------------------------------------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                           NODE METRICS                                           |
++----------------------------+--------------+---------------+------------------+-------------------+
+| Node                       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------------------------+--------------+---------------+------------------+-------------------+
+| idLivingroom1BackOpening   | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor1 | True         | True          | Covered          | Included          |
+| open                       | True         | True          | Covered          | Included          |
++----------------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE METRICS                                                                                |
++---------------------------------------------+----------------------------+----------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                        | Parent                     | Child                      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------------------+----------------------------+----------------------------+--------------+---------------+------------------+-------------------+
+| isEastOf                                    | idLivingroom1BackOpening   | idLivingRoomToBedroomDoor1 | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor1_prop_idOpenState | idLivingRoomToBedroomDoor1 | open                       | True         | True          | Covered          | Included          |
++---------------------------------------------+----------------------------+----------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h929                                                                      |
+|               |   INDEX: x928                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h996 ARG0: e993 ARG1: u994 ARG2: x995 ]               |
+|               |           [ def_implicit_q LBL: h1007 ARG0: x1004 RSTR: h1005 BODY: h1006 ]      |
+|               |           [ _east_a_1 LBL: h992 ARG0: i989 ARG1: x990 ARG2: u991 ]               |
+|               |           [ def_udef_a_q LBL: h1002 ARG0: x999 RSTR: h1000 BODY: h1001 ]         |
+|               |           [ _open_a_to LBL: h988 ARG0: e985 ARG1: u986 ARG2: u987 ]              |
+|               |           [ _to_p LBL: h979 ARG0: e976 ARG1: u977 ARG2: i978 ]                   |
+|               |           [ def_udef_a_q LBL: h983 ARG0: x980 RSTR: h981 BODY: h982 ]            |
+|               |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|               |           [ _from_p LBL: h968 ARG0: e965 ARG1: u966 ARG2: u967 ]                 |
+|               |           [ def_udef_a_q LBL: h972 ARG0: x969 RSTR: h970 BODY: h971 ]            |
+|               |           [ compound LBL: h964 ARG0: e961 [ e PROG: - ] ARG1: u962 ARG2: u963 ]  |
+|               |           [ udef_q LBL: h959 ARG0: x956 RSTR: h957 BODY: h958 ]                  |
+|               |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|               |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|               |           [ _door_n_1 LBL: h951 ARG0: x950 ]                                     |
+|               |           [ place_n LBL: h998 ARG0: x997 ]                                       |
+|               |           [ poss LBL: h949 ARG0: e946 ARG1: x947 ARG2: i948 ]                    |
+|               |           [ def_udef_a_q LBL: h944 ARG0: x941 RSTR: h942 BODY: h943 ]            |
+|               |           [ compound LBL: h927 ARG0: e924 [ e PROG: - ] ARG1: u925 ARG2: u926 ]  |
+|               |           [ udef_q LBL: h922 ARG0: x919 RSTR: h920 BODY: h921 ]                  |
+|               |           [ _living_n_1 LBL: h918 ARG0: x917 ]                                   |
+|               |           [ _room_n_unit LBL: h916 ARG0: x915 ]                                  |
+|               |           [ compound LBL: h940 ARG0: e937 [ e PROG: - ] ARG1: u938 ARG2: u939 ]  |
+|               |           [ udef_q LBL: h935 ARG0: x932 RSTR: h933 BODY: h934 ]                  |
+|               |           [ _back_n_1 LBL: h931 ARG0: x930 ]                                     |
+|               |           [ _opening_n_1 LBL: h929 ARG0: x928 ] >                                |
+|               |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 h1000 qeq h951 h1005 qeq    |
+|               | h998 h920 qeq h918 h942 qeq h916 h933 qeq h931 >                                 |
+|               |   EQS: < x980 eq x974 h979 eq h984 i978 eq x980 x956 eq x954 h964 eq h960 u963   |
+|               | eq x956 h964 eq h953 u962 eq x952 x969 eq x952 h968 eq h973 u967 eq x969 h968 eq |
+|               | h951 u966 eq x950 h979 eq h951 u977 eq x950 h988 eq h951 u986 eq x950 x999 eq    |
+|               | x950 h992 eq h1003 u991 eq x999 h992 eq h998 x990 eq x997 x1004 eq x997 h996 eq  |
+|               | h1008 x995 eq x1004 x919 eq x917 h927 eq h923 u926 eq x919 h927 eq h916 u925 eq  |
+|               | x915 x941 eq x915 h949 eq h945 i948 eq x941 x932 eq x930 h940 eq h936 u939 eq    |
+|               | x932 h940 eq h929 u938 eq x928 h949 eq h929 x947 eq x928 h996 eq h929 u994 eq    |
+|               | x928 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1008                                                                     |
+|               |   INDEX: x928                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h1008 ARG0: e993 ARG1: x928 ARG2: x1004 ]             |
+|               |           [ def_implicit_q LBL: h1007 ARG0: x1004 RSTR: h1005 BODY: h1006 ]      |
+|               |           [ _east_a_1 LBL: h1003 ARG0: i989 ARG1: x1004 ARG2: x950 ]             |
+|               |           [ def_udef_a_q LBL: h1002 ARG0: x950 RSTR: h1000 BODY: h1001 ]         |
+|               |           [ _open_a_to LBL: h951 ARG0: e985 ARG1: x950 ARG2: u987 ]              |
+|               |           [ _to_p LBL: h951 ARG0: e976 ARG1: x950 ARG2: x974 ]                   |
+|               |           [ def_udef_a_q LBL: h983 ARG0: x974 RSTR: h981 BODY: h982 ]            |
+|               |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|               |           [ _from_p LBL: h951 ARG0: e965 ARG1: x950 ARG2: x952 ]                 |
+|               |           [ def_udef_a_q LBL: h972 ARG0: x952 RSTR: h970 BODY: h971 ]            |
+|               |           [ compound LBL: h953 ARG0: e961 [ e PROG: - ] ARG1: x952 ARG2: x954 ]  |
+|               |           [ udef_q LBL: h959 ARG0: x954 RSTR: h957 BODY: h958 ]                  |
+|               |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|               |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|               |           [ _door_n_1 LBL: h951 ARG0: x950 ]                                     |
+|               |           [ place_n LBL: h1003 ARG0: x1004 ]                                     |
+|               |           [ poss LBL: h1008 ARG0: e946 ARG1: x928 ARG2: x915 ]                   |
+|               |           [ def_udef_a_q LBL: h944 ARG0: x915 RSTR: h942 BODY: h943 ]            |
+|               |           [ compound LBL: h916 ARG0: e924 [ e PROG: - ] ARG1: x915 ARG2: x917 ]  |
+|               |           [ udef_q LBL: h922 ARG0: x917 RSTR: h920 BODY: h921 ]                  |
+|               |           [ _living_n_1 LBL: h918 ARG0: x917 ]                                   |
+|               |           [ _room_n_unit LBL: h916 ARG0: x915 ]                                  |
+|               |           [ compound LBL: h1008 ARG0: e937 [ e PROG: - ] ARG1: x928 ARG2: x930 ] |
+|               |           [ udef_q LBL: h935 ARG0: x930 RSTR: h933 BODY: h934 ]                  |
+|               |           [ _back_n_1 LBL: h931 ARG0: x930 ]                                     |
+|               |           [ _opening_n_1 LBL: h1008 ARG0: x928 ] >                               |
+|               |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 h1000 qeq h951 h1005 qeq    |
+|               | h1003 h920 qeq h918 h942 qeq h916 h933 qeq h931 > ]                              |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1017                                                                     |
+|               |   INDEX: e1014                                                                   |
+|               |   RELS: < [ unknown LBL: h1013 ARG: x1009 ARG0: e1014 ]                          |
+|               |           [ def_udef_a_q LBL: h1012 ARG0: x1009 RSTR: h1010 BODY: h1011 ]        |
+|               |           [ loc_nonsp LBL: h1008 ARG0: e993 ARG1: x1009 ARG2: x1004 ]            |
+|               |           [ def_implicit_q LBL: h1007 ARG0: x1004 RSTR: h1005 BODY: h1006 ]      |
+|               |           [ _east_a_1 LBL: h1003 ARG0: i989 ARG1: x1004 ARG2: x950 ]             |
+|               |           [ def_udef_a_q LBL: h1002 ARG0: x950 RSTR: h1000 BODY: h1001 ]         |
+|               |           [ _open_a_to LBL: h951 ARG0: e985 ARG1: x950 ARG2: u987 ]              |
+|               |           [ _to_p LBL: h951 ARG0: e976 ARG1: x950 ARG2: x974 ]                   |
+|               |           [ def_udef_a_q LBL: h983 ARG0: x974 RSTR: h981 BODY: h982 ]            |
+|               |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|               |           [ _from_p LBL: h951 ARG0: e965 ARG1: x950 ARG2: x952 ]                 |
+|               |           [ def_udef_a_q LBL: h972 ARG0: x952 RSTR: h970 BODY: h971 ]            |
+|               |           [ compound LBL: h953 ARG0: e961 [ e PROG: - ] ARG1: x952 ARG2: x954 ]  |
+|               |           [ udef_q LBL: h959 ARG0: x954 RSTR: h957 BODY: h958 ]                  |
+|               |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|               |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|               |           [ _door_n_1 LBL: h951 ARG0: x950 ]                                     |
+|               |           [ place_n LBL: h1003 ARG0: x1004 ]                                     |
+|               |           [ poss LBL: h1008 ARG0: e946 ARG1: x1009 ARG2: x915 ]                  |
+|               |           [ def_udef_a_q LBL: h944 ARG0: x915 RSTR: h942 BODY: h943 ]            |
+|               |           [ compound LBL: h916 ARG0: e924 [ e PROG: - ] ARG1: x915 ARG2: x917 ]  |
+|               |           [ udef_q LBL: h922 ARG0: x917 RSTR: h920 BODY: h921 ]                  |
+|               |           [ _living_n_1 LBL: h918 ARG0: x917 ]                                   |
+|               |           [ _room_n_unit LBL: h916 ARG0: x915 ]                                  |
+|               |           [ compound LBL: h1008 ARG0: e937 [ e PROG: - ] ARG1: x1009 ARG2: x930  |
+|               | ]                                                                                |
+|               |           [ udef_q LBL: h935 ARG0: x930 RSTR: h933 BODY: h934 ]                  |
+|               |           [ _back_n_1 LBL: h931 ARG0: x930 ]                                     |
+|               |           [ _opening_n_1 LBL: h1008 ARG0: x1009 ] >                              |
+|               |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 h1000 qeq h951 h1005 qeq    |
+|               | h1003 h920 qeq h918 h942 qeq h916 h933 qeq h931 h1010 qeq h1008 h1017 qeq h1013  |
+|               | > ]                                                                              |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------+
+|                                                  NODE SEMENTS                                                 |
++----------------------------+----------------------------------------------------------------------------------+
+| Node                       | Generated SEMENT                                                                 |
++----------------------------+----------------------------------------------------------------------------------+
+| idLivingroom1BackOpening   | [ TOP: h929                                                                      |
+|                            |   INDEX: x928                                                                    |
+|                            |   RELS: < [ poss LBL: h949 ARG0: e946 ARG1: x947 ARG2: i948 ]                    |
+|                            |           [ def_udef_a_q LBL: h944 ARG0: x941 RSTR: h942 BODY: h943 ]            |
+|                            |           [ compound LBL: h927 ARG0: e924 [ e PROG: - ] ARG1: u925 ARG2: u926 ]  |
+|                            |           [ udef_q LBL: h922 ARG0: x919 RSTR: h920 BODY: h921 ]                  |
+|                            |           [ _living_n_1 LBL: h918 ARG0: x917 ]                                   |
+|                            |           [ _room_n_unit LBL: h916 ARG0: x915 ]                                  |
+|                            |           [ compound LBL: h940 ARG0: e937 [ e PROG: - ] ARG1: u938 ARG2: u939 ]  |
+|                            |           [ udef_q LBL: h935 ARG0: x932 RSTR: h933 BODY: h934 ]                  |
+|                            |           [ _back_n_1 LBL: h931 ARG0: x930 ]                                     |
+|                            |           [ _opening_n_1 LBL: h929 ARG0: x928 ] >                                |
+|                            |   HCONS: < h920 qeq h918 h942 qeq h916 h933 qeq h931 >                           |
+|                            |   EQS: < x919 eq x917 h927 eq h923 u926 eq x919 h927 eq h916 u925 eq x915 x941   |
+|                            | eq x915 h949 eq h945 i948 eq x941 x932 eq x930 h940 eq h936 u939 eq x932 h940 eq |
+|                            | h929 u938 eq x928 h949 eq h929 x947 eq x928 > ]                                  |
++----------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor1 | [ TOP: h951                                                                      |
+|                            |   INDEX: x950                                                                    |
+|                            |   RELS: < [ _to_p LBL: h979 ARG0: e976 ARG1: u977 ARG2: i978 ]                   |
+|                            |           [ def_udef_a_q LBL: h983 ARG0: x980 RSTR: h981 BODY: h982 ]            |
+|                            |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|                            |           [ _from_p LBL: h968 ARG0: e965 ARG1: u966 ARG2: u967 ]                 |
+|                            |           [ def_udef_a_q LBL: h972 ARG0: x969 RSTR: h970 BODY: h971 ]            |
+|                            |           [ compound LBL: h964 ARG0: e961 [ e PROG: - ] ARG1: u962 ARG2: u963 ]  |
+|                            |           [ udef_q LBL: h959 ARG0: x956 RSTR: h957 BODY: h958 ]                  |
+|                            |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|                            |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|                            |           [ _door_n_1 LBL: h951 ARG0: x950 ] >                                   |
+|                            |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 >                           |
+|                            |   EQS: < x980 eq x974 h979 eq h984 i978 eq x980 x956 eq x954 h964 eq h960 u963   |
+|                            | eq x956 h964 eq h953 u962 eq x952 x969 eq x952 h968 eq h973 u967 eq x969 h968 eq |
+|                            | h951 u966 eq x950 h979 eq h951 u977 eq x950 > ]                                  |
++----------------------------+----------------------------------------------------------------------------------+
+| open                       | [ TOP: h988                                                                      |
+|                            |   INDEX: e985                                                                    |
+|                            |   RELS: < [ _open_a_to LBL: h988 ARG0: e985 ARG1: u986 ARG2: u987 ] >            |
+|                            |   SLOTS: < ARG1: u986 ARG2: u987 > ]                                             |
++----------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                       EDGE SEMENTS                                                                                       |
++---------------------------------------------+----------------------------+----------------------------+----------------------------------------------------------------------------------+
+| Edge                                        | Parent                     | Child                      | Generated SEMENT                                                                 |
++---------------------------------------------+----------------------------+----------------------------+----------------------------------------------------------------------------------+
+| isEastOf                                    | idLivingroom1BackOpening   | idLivingRoomToBedroomDoor1 | [ TOP: h929                                                                      |
+|                                             |                            |                            |   INDEX: x928                                                                    |
+|                                             |                            |                            |   RELS: < [ loc_nonsp LBL: h996 ARG0: e993 ARG1: u994 ARG2: x995 ]               |
+|                                             |                            |                            |           [ def_implicit_q LBL: h1007 ARG0: x1004 RSTR: h1005 BODY: h1006 ]      |
+|                                             |                            |                            |           [ _east_a_1 LBL: h992 ARG0: i989 ARG1: x990 ARG2: u991 ]               |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h1002 ARG0: x999 RSTR: h1000 BODY: h1001 ]         |
+|                                             |                            |                            |           [ _open_a_to LBL: h988 ARG0: e985 ARG1: u986 ARG2: u987 ]              |
+|                                             |                            |                            |           [ _to_p LBL: h979 ARG0: e976 ARG1: u977 ARG2: i978 ]                   |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h983 ARG0: x980 RSTR: h981 BODY: h982 ]            |
+|                                             |                            |                            |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|                                             |                            |                            |           [ _from_p LBL: h968 ARG0: e965 ARG1: u966 ARG2: u967 ]                 |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h972 ARG0: x969 RSTR: h970 BODY: h971 ]            |
+|                                             |                            |                            |           [ compound LBL: h964 ARG0: e961 [ e PROG: - ] ARG1: u962 ARG2: u963 ]  |
+|                                             |                            |                            |           [ udef_q LBL: h959 ARG0: x956 RSTR: h957 BODY: h958 ]                  |
+|                                             |                            |                            |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|                                             |                            |                            |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|                                             |                            |                            |           [ _door_n_1 LBL: h951 ARG0: x950 ]                                     |
+|                                             |                            |                            |           [ place_n LBL: h998 ARG0: x997 ]                                       |
+|                                             |                            |                            |           [ poss LBL: h949 ARG0: e946 ARG1: x947 ARG2: i948 ]                    |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h944 ARG0: x941 RSTR: h942 BODY: h943 ]            |
+|                                             |                            |                            |           [ compound LBL: h927 ARG0: e924 [ e PROG: - ] ARG1: u925 ARG2: u926 ]  |
+|                                             |                            |                            |           [ udef_q LBL: h922 ARG0: x919 RSTR: h920 BODY: h921 ]                  |
+|                                             |                            |                            |           [ _living_n_1 LBL: h918 ARG0: x917 ]                                   |
+|                                             |                            |                            |           [ _room_n_unit LBL: h916 ARG0: x915 ]                                  |
+|                                             |                            |                            |           [ compound LBL: h940 ARG0: e937 [ e PROG: - ] ARG1: u938 ARG2: u939 ]  |
+|                                             |                            |                            |           [ udef_q LBL: h935 ARG0: x932 RSTR: h933 BODY: h934 ]                  |
+|                                             |                            |                            |           [ _back_n_1 LBL: h931 ARG0: x930 ]                                     |
+|                                             |                            |                            |           [ _opening_n_1 LBL: h929 ARG0: x928 ] >                                |
+|                                             |                            |                            |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 h1000 qeq h951 h1005 qeq    |
+|                                             |                            |                            | h998 h920 qeq h918 h942 qeq h916 h933 qeq h931 >                                 |
+|                                             |                            |                            |   EQS: < x980 eq x974 h979 eq h984 i978 eq x980 x956 eq x954 h964 eq h960 u963   |
+|                                             |                            |                            | eq x956 h964 eq h953 u962 eq x952 x969 eq x952 h968 eq h973 u967 eq x969 h968 eq |
+|                                             |                            |                            | h951 u966 eq x950 h979 eq h951 u977 eq x950 h988 eq h951 u986 eq x950 x999 eq    |
+|                                             |                            |                            | x950 h992 eq h1003 u991 eq x999 h992 eq h998 x990 eq x997 x1004 eq x997 h996 eq  |
+|                                             |                            |                            | h1008 x995 eq x1004 x919 eq x917 h927 eq h923 u926 eq x919 h927 eq h916 u925 eq  |
+|                                             |                            |                            | x915 x941 eq x915 h949 eq h945 i948 eq x941 x932 eq x930 h940 eq h936 u939 eq    |
+|                                             |                            |                            | x932 h940 eq h929 u938 eq x928 h949 eq h929 x947 eq x928 h996 eq h929 u994 eq    |
+|                                             |                            |                            | x928 > ]                                                                         |
++---------------------------------------------+----------------------------+----------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor1_prop_idOpenState | idLivingRoomToBedroomDoor1 | open                       | [ TOP: h951                                                                      |
+|                                             |                            |                            |   INDEX: x950                                                                    |
+|                                             |                            |                            |   RELS: < [ _open_a_to LBL: h988 ARG0: e985 ARG1: u986 ARG2: u987 ]              |
+|                                             |                            |                            |           [ _to_p LBL: h979 ARG0: e976 ARG1: u977 ARG2: i978 ]                   |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h983 ARG0: x980 RSTR: h981 BODY: h982 ]            |
+|                                             |                            |                            |           [ _bedroom_n_1 LBL: h975 ARG0: x974 ]                                  |
+|                                             |                            |                            |           [ _from_p LBL: h968 ARG0: e965 ARG1: u966 ARG2: u967 ]                 |
+|                                             |                            |                            |           [ def_udef_a_q LBL: h972 ARG0: x969 RSTR: h970 BODY: h971 ]            |
+|                                             |                            |                            |           [ compound LBL: h964 ARG0: e961 [ e PROG: - ] ARG1: u962 ARG2: u963 ]  |
+|                                             |                            |                            |           [ udef_q LBL: h959 ARG0: x956 RSTR: h957 BODY: h958 ]                  |
+|                                             |                            |                            |           [ _living_n_1 LBL: h955 ARG0: x954 ]                                   |
+|                                             |                            |                            |           [ _room_n_unit LBL: h953 ARG0: x952 ]                                  |
+|                                             |                            |                            |           [ _door_n_1 LBL: h951 ARG0: x950 ] >                                   |
+|                                             |                            |                            |   HCONS: < h981 qeq h975 h957 qeq h955 h970 qeq h953 >                           |
+|                                             |                            |                            |   EQS: < x980 eq x974 h979 eq h984 i978 eq x980 x956 eq x954 h964 eq h960 u963   |
+|                                             |                            |                            | eq x956 h964 eq h953 u962 eq x952 x969 eq x952 h968 eq h973 u967 eq x969 h968 eq |
+|                                             |                            |                            | h951 u966 eq x950 h979 eq h951 u977 eq x950 h988 eq h951 u986 eq x950 > ]        |
++---------------------------------------------+----------------------------+----------------------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                        GENERATED ENGLISH TEXT                                       |
++-----+-----------------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                                |
++-----+-----------------------------------------------------------------------------------------------+
+| 1   | A living room's back opening east of an open door from a living room to a bedroom             |
+| 2   | A living room's back opening east of an open door from a living room to bedrooms              |
+| 3   | A living room's back opening east of an open door from a living room to the bedroom           |
+| 4   | A living room's back opening east of an open door from a living room to the bedrooms          |
+| 5   | A living room's back opening east of an open door from a living room to the bedrooms.         |
+| 6   | A living room's back opening east of an open door from living rooms to the bedroom            |
+| 7   | A living room's back opening east of an open door from living rooms to the bedrooms           |
+| 8   | A living room's back opening east of an open door from living rooms to the bedrooms.          |
+| 9   | A living room's back opening east of an open door from the living room to a bedroom           |
+| 10  | A living room's back opening east of an open door from the living room to bedrooms            |
+| 11  | A living room's back opening east of an open door from the living room to bedrooms.           |
+| 12  | A living room's back opening east of an open door from the living room to the bedroom         |
+| 13  | A living room's back opening east of an open door from the living room to the bedrooms        |
+| 14  | A living room's back opening east of an open door from the living room to the bedrooms.       |
+| 15  | A living room's back opening east of an open door from the living rooms to a bedroom          |
+| 16  | A living room's back opening east of an open door from the living rooms to bedrooms           |
+| 17  | A living room's back opening east of an open door from the living rooms to bedrooms.          |
+| 18  | A living room's back opening east of an open door from the living rooms to the bedroom        |
+| 19  | A living room's back opening east of an open door from the living rooms to the bedrooms       |
+| 20  | A living room's back opening east of an open door from the living rooms to the bedrooms.      |
+| 21  | A living room's back opening east of an open door to a bedroom from a living room             |
+| 22  | A living room's back opening east of an open door to a bedroom from the living room           |
+| 23  | A living room's back opening east of an open door to a bedroom from the living rooms          |
+| 24  | A living room's back opening east of an open door to bedrooms from a living room              |
+| 25  | A living room's back opening east of an open door to bedrooms from the living room            |
+| 26  | A living room's back opening east of an open door to bedrooms from the living rooms           |
+| 27  | A living room's back opening east of an open door to the bedroom from a living room           |
+| 28  | A living room's back opening east of an open door to the bedroom from living rooms            |
+| 29  | A living room's back opening east of an open door to the bedroom from living rooms.           |
+| 30  | A living room's back opening east of an open door to the bedroom from the living room         |
+| 31  | A living room's back opening east of an open door to the bedroom from the living rooms        |
+| 32  | A living room's back opening east of an open door to the bedroom from the living rooms.       |
+| 33  | A living room's back opening east of an open door to the bedrooms from a living room          |
+| 34  | A living room's back opening east of an open door to the bedrooms from living rooms           |
+| 35  | A living room's back opening east of an open door to the bedrooms from living rooms.          |
+| 36  | A living room's back opening east of an open door to the bedrooms from the living room        |
+| 37  | A living room's back opening east of an open door to the bedrooms from the living rooms       |
+| 38  | A living room's back opening east of an open door to the bedrooms from the living rooms.      |
+| 39  | A living room's back opening east of the open door from a living room to a bedroom            |
+| 40  | A living room's back opening east of the open door from a living room to a bedroom.           |
+| 41  | A living room's back opening east of the open door from a living room to bedrooms             |
+| 42  | A living room's back opening east of the open door from a living room to bedrooms.            |
+| 43  | A living room's back opening east of the open door from a living room to the bedroom          |
+| 44  | A living room's back opening east of the open door from a living room to the bedroom.         |
+| 45  | A living room's back opening east of the open door from a living room to the bedrooms         |
+| 46  | A living room's back opening east of the open door from a living room to the bedrooms.        |
+| 47  | A living room's back opening east of the open door from living rooms to a bedroom             |
+| 48  | A living room's back opening east of the open door from living rooms to bedrooms              |
+| 49  | A living room's back opening east of the open door from living rooms to bedrooms.             |
+| 50  | A living room's back opening east of the open door from living rooms to the bedroom           |
+| 51  | A living room's back opening east of the open door from living rooms to the bedrooms          |
+| 52  | A living room's back opening east of the open door from living rooms to the bedrooms.         |
+| 53  | A living room's back opening east of the open door from the living room to a bedroom          |
+| 54  | A living room's back opening east of the open door from the living room to a bedroom.         |
+| 55  | A living room's back opening east of the open door from the living room to bedrooms           |
+| 56  | A living room's back opening east of the open door from the living room to bedrooms.          |
+| 57  | A living room's back opening east of the open door from the living room to the bedroom        |
+| 58  | A living room's back opening east of the open door from the living room to the bedroom.       |
+| 59  | A living room's back opening east of the open door from the living room to the bedrooms       |
+| 60  | A living room's back opening east of the open door from the living room to the bedrooms.      |
+| 61  | A living room's back opening east of the open door from the living rooms to a bedroom         |
+| 62  | A living room's back opening east of the open door from the living rooms to a bedroom.        |
+| 63  | A living room's back opening east of the open door from the living rooms to bedrooms          |
+| 64  | A living room's back opening east of the open door from the living rooms to bedrooms.         |
+| 65  | A living room's back opening east of the open door from the living rooms to the bedroom       |
+| 66  | A living room's back opening east of the open door from the living rooms to the bedroom.      |
+| 67  | A living room's back opening east of the open door from the living rooms to the bedrooms      |
+| 68  | A living room's back opening east of the open door from the living rooms to the bedrooms.     |
+| 69  | A living room's back opening east of the open door to a bedroom from a living room            |
+| 70  | A living room's back opening east of the open door to a bedroom from living rooms             |
+| 71  | A living room's back opening east of the open door to a bedroom from living rooms.            |
+| 72  | A living room's back opening east of the open door to a bedroom from the living room          |
+| 73  | A living room's back opening east of the open door to a bedroom from the living rooms         |
+| 74  | A living room's back opening east of the open door to a bedroom from the living rooms.        |
+| 75  | A living room's back opening east of the open door to bedrooms from a living room             |
+| 76  | A living room's back opening east of the open door to bedrooms from living rooms              |
+| 77  | A living room's back opening east of the open door to bedrooms from living rooms.             |
+| 78  | A living room's back opening east of the open door to bedrooms from the living room           |
+| 79  | A living room's back opening east of the open door to bedrooms from the living rooms          |
+| 80  | A living room's back opening east of the open door to bedrooms from the living rooms.         |
+| 81  | A living room's back opening east of the open door to the bedroom from a living room          |
+| 82  | A living room's back opening east of the open door to the bedroom from a living room.         |
+| 83  | A living room's back opening east of the open door to the bedroom from living rooms           |
+| 84  | A living room's back opening east of the open door to the bedroom from living rooms.          |
+| 85  | A living room's back opening east of the open door to the bedroom from the living room        |
+| 86  | A living room's back opening east of the open door to the bedroom from the living room.       |
+| 87  | A living room's back opening east of the open door to the bedroom from the living rooms       |
+| 88  | A living room's back opening east of the open door to the bedroom from the living rooms.      |
+| 89  | A living room's back opening east of the open door to the bedrooms from a living room         |
+| 90  | A living room's back opening east of the open door to the bedrooms from a living room.        |
+| 91  | A living room's back opening east of the open door to the bedrooms from living rooms          |
+| 92  | A living room's back opening east of the open door to the bedrooms from living rooms.         |
+| 93  | A living room's back opening east of the open door to the bedrooms from the living room       |
+| 94  | A living room's back opening east of the open door to the bedrooms from the living room.      |
+| 95  | A living room's back opening east of the open door to the bedrooms from the living rooms      |
+| 96  | A living room's back opening east of the open door to the bedrooms from the living rooms.     |
+| 97  | A living room's back opening east of the open doors from a living room to the bedroom         |
+| 98  | A living room's back opening east of the open doors from a living room to the bedrooms        |
+| 99  | A living room's back opening east of the open doors from a living room to the bedrooms.       |
+| 100 | A living room's back opening east of the open doors from living rooms to the bedrooms         |
+| 101 | A living room's back opening east of the open doors from the living room to a bedroom         |
+| 102 | A living room's back opening east of the open doors from the living room to the bedroom       |
+| 103 | A living room's back opening east of the open doors from the living room to the bedrooms      |
+| 104 | A living room's back opening east of the open doors from the living room to the bedrooms.     |
+| 105 | A living room's back opening east of the open doors from the living rooms to a bedroom        |
+| 106 | A living room's back opening east of the open doors from the living rooms to the bedroom      |
+| 107 | A living room's back opening east of the open doors from the living rooms to the bedrooms     |
+| 108 | A living room's back opening east of the open doors from the living rooms to the bedrooms.    |
+| 109 | A living room's back opening east of the open doors to a bedroom from a living room           |
+| 110 | A living room's back opening east of the open doors to a bedroom from the living room         |
+| 111 | A living room's back opening east of the open doors to a bedroom from the living rooms        |
+| 112 | A living room's back opening east of the open doors to bedrooms from a living room            |
+| 113 | A living room's back opening east of the open doors to bedrooms from the living room          |
+| 114 | A living room's back opening east of the open doors to bedrooms from the living rooms         |
+| 115 | A living room's back opening east of the open doors to the bedroom from a living room         |
+| 116 | A living room's back opening east of the open doors to the bedroom from living rooms          |
+| 117 | A living room's back opening east of the open doors to the bedroom from the living room       |
+| 118 | A living room's back opening east of the open doors to the bedroom from the living rooms      |
+| 119 | A living room's back opening east of the open doors to the bedroom from the living rooms.     |
+| 120 | A living room's back opening east of the open doors to the bedrooms from a living room        |
+| 121 | A living room's back opening east of the open doors to the bedrooms from the living room      |
+| 122 | A living room's back opening east of the open doors to the bedrooms from the living rooms     |
+| 123 | A living room's back opening, east of the open door from the living room to the bedrooms      |
+| 124 | A living room's back opening, east of the open door from the living rooms to the bedrooms     |
+| 125 | A living room's back openings east of an open door from a living room to a bedroom            |
+| 126 | A living room's back openings east of an open door from a living room to bedrooms             |
+| 127 | A living room's back openings east of an open door from a living room to the bedroom          |
+| 128 | A living room's back openings east of an open door from a living room to the bedrooms         |
+| 129 | A living room's back openings east of an open door from a living room to the bedrooms.        |
+| 130 | A living room's back openings east of an open door from living rooms to the bedroom           |
+| 131 | A living room's back openings east of an open door from living rooms to the bedrooms          |
+| 132 | A living room's back openings east of an open door from living rooms to the bedrooms.         |
+| 133 | A living room's back openings east of an open door from the living room to a bedroom          |
+| 134 | A living room's back openings east of an open door from the living room to bedrooms           |
+| 135 | A living room's back openings east of an open door from the living room to bedrooms.          |
+| 136 | A living room's back openings east of an open door from the living room to the bedroom        |
+| 137 | A living room's back openings east of an open door from the living room to the bedrooms       |
+| 138 | A living room's back openings east of an open door from the living room to the bedrooms.      |
+| 139 | A living room's back openings east of an open door from the living rooms to a bedroom         |
+| 140 | A living room's back openings east of an open door from the living rooms to bedrooms          |
+| 141 | A living room's back openings east of an open door from the living rooms to bedrooms.         |
+| 142 | A living room's back openings east of an open door from the living rooms to the bedroom       |
+| 143 | A living room's back openings east of an open door from the living rooms to the bedrooms      |
+| 144 | A living room's back openings east of an open door from the living rooms to the bedrooms.     |
+| 145 | A living room's back openings east of an open door to a bedroom from a living room            |
+| 146 | A living room's back openings east of an open door to a bedroom from the living room          |
+| 147 | A living room's back openings east of an open door to a bedroom from the living rooms         |
+| 148 | A living room's back openings east of an open door to bedrooms from a living room             |
+| 149 | A living room's back openings east of an open door to bedrooms from the living room           |
+| 150 | A living room's back openings east of an open door to bedrooms from the living rooms          |
+| 151 | A living room's back openings east of an open door to the bedroom from a living room          |
+| 152 | A living room's back openings east of an open door to the bedroom from living rooms           |
+| 153 | A living room's back openings east of an open door to the bedroom from living rooms.          |
+| 154 | A living room's back openings east of an open door to the bedroom from the living room        |
+| 155 | A living room's back openings east of an open door to the bedroom from the living rooms       |
+| 156 | A living room's back openings east of an open door to the bedroom from the living rooms.      |
+| 157 | A living room's back openings east of an open door to the bedrooms from a living room         |
+| 158 | A living room's back openings east of an open door to the bedrooms from living rooms          |
+| 159 | A living room's back openings east of an open door to the bedrooms from living rooms.         |
+| 160 | A living room's back openings east of an open door to the bedrooms from the living room       |
+| 161 | A living room's back openings east of an open door to the bedrooms from the living rooms      |
+| 162 | A living room's back openings east of an open door to the bedrooms from the living rooms.     |
+| 163 | A living room's back openings east of the open door from a living room to a bedroom           |
+| 164 | A living room's back openings east of the open door from a living room to a bedroom.          |
+| 165 | A living room's back openings east of the open door from a living room to bedrooms            |
+| 166 | A living room's back openings east of the open door from a living room to bedrooms.           |
+| 167 | A living room's back openings east of the open door from a living room to the bedroom         |
+| 168 | A living room's back openings east of the open door from a living room to the bedroom.        |
+| 169 | A living room's back openings east of the open door from a living room to the bedrooms        |
+| 170 | A living room's back openings east of the open door from a living room to the bedrooms.       |
+| 171 | A living room's back openings east of the open door from living rooms to a bedroom            |
+| 172 | A living room's back openings east of the open door from living rooms to bedrooms             |
+| 173 | A living room's back openings east of the open door from living rooms to bedrooms.            |
+| 174 | A living room's back openings east of the open door from living rooms to the bedroom          |
+| 175 | A living room's back openings east of the open door from living rooms to the bedrooms         |
+| 176 | A living room's back openings east of the open door from living rooms to the bedrooms.        |
+| 177 | A living room's back openings east of the open door from the living room to a bedroom         |
+| 178 | A living room's back openings east of the open door from the living room to a bedroom.        |
+| 179 | A living room's back openings east of the open door from the living room to bedrooms          |
+| 180 | A living room's back openings east of the open door from the living room to bedrooms.         |
+| 181 | A living room's back openings east of the open door from the living room to the bedroom       |
+| 182 | A living room's back openings east of the open door from the living room to the bedroom.      |
+| 183 | A living room's back openings east of the open door from the living room to the bedrooms      |
+| 184 | A living room's back openings east of the open door from the living room to the bedrooms.     |
+| 185 | A living room's back openings east of the open door from the living rooms to a bedroom        |
+| 186 | A living room's back openings east of the open door from the living rooms to a bedroom.       |
+| 187 | A living room's back openings east of the open door from the living rooms to bedrooms         |
+| 188 | A living room's back openings east of the open door from the living rooms to bedrooms.        |
+| 189 | A living room's back openings east of the open door from the living rooms to the bedroom      |
+| 190 | A living room's back openings east of the open door from the living rooms to the bedroom.     |
+| 191 | A living room's back openings east of the open door from the living rooms to the bedrooms     |
+| 192 | A living room's back openings east of the open door from the living rooms to the bedrooms.    |
+| 193 | A living room's back openings east of the open door to a bedroom from a living room           |
+| 194 | A living room's back openings east of the open door to a bedroom from living rooms            |
+| 195 | A living room's back openings east of the open door to a bedroom from living rooms.           |
+| 196 | A living room's back openings east of the open door to a bedroom from the living room         |
+| 197 | A living room's back openings east of the open door to a bedroom from the living rooms        |
+| 198 | A living room's back openings east of the open door to a bedroom from the living rooms.       |
+| 199 | A living room's back openings east of the open door to bedrooms from a living room            |
+| 200 | A living room's back openings east of the open door to bedrooms from living rooms             |
+| 201 | A living room's back openings east of the open door to bedrooms from living rooms.            |
+| 202 | A living room's back openings east of the open door to bedrooms from the living room          |
+| 203 | A living room's back openings east of the open door to bedrooms from the living rooms         |
+| 204 | A living room's back openings east of the open door to bedrooms from the living rooms.        |
+| 205 | A living room's back openings east of the open door to the bedroom from a living room         |
+| 206 | A living room's back openings east of the open door to the bedroom from a living room.        |
+| 207 | A living room's back openings east of the open door to the bedroom from living rooms          |
+| 208 | A living room's back openings east of the open door to the bedroom from living rooms.         |
+| 209 | A living room's back openings east of the open door to the bedroom from the living room       |
+| 210 | A living room's back openings east of the open door to the bedroom from the living room.      |
+| 211 | A living room's back openings east of the open door to the bedroom from the living rooms      |
+| 212 | A living room's back openings east of the open door to the bedroom from the living rooms.     |
+| 213 | A living room's back openings east of the open door to the bedrooms from a living room        |
+| 214 | A living room's back openings east of the open door to the bedrooms from a living room.       |
+| 215 | A living room's back openings east of the open door to the bedrooms from living rooms         |
+| 216 | A living room's back openings east of the open door to the bedrooms from living rooms.        |
+| 217 | A living room's back openings east of the open door to the bedrooms from the living room      |
+| 218 | A living room's back openings east of the open door to the bedrooms from the living room.     |
+| 219 | A living room's back openings east of the open door to the bedrooms from the living rooms     |
+| 220 | A living room's back openings east of the open door to the bedrooms from the living rooms.    |
+| 221 | A living room's back openings east of the open doors from a living room to the bedroom        |
+| 222 | A living room's back openings east of the open doors from a living room to the bedrooms       |
+| 223 | A living room's back openings east of the open doors from a living room to the bedrooms.      |
+| 224 | A living room's back openings east of the open doors from living rooms to the bedrooms        |
+| 225 | A living room's back openings east of the open doors from the living room to a bedroom        |
+| 226 | A living room's back openings east of the open doors from the living room to the bedroom      |
+| 227 | A living room's back openings east of the open doors from the living room to the bedrooms     |
+| 228 | A living room's back openings east of the open doors from the living room to the bedrooms.    |
+| 229 | A living room's back openings east of the open doors from the living rooms to a bedroom       |
+| 230 | A living room's back openings east of the open doors from the living rooms to the bedroom     |
+| 231 | A living room's back openings east of the open doors from the living rooms to the bedrooms    |
+| 232 | A living room's back openings east of the open doors from the living rooms to the bedrooms.   |
+| 233 | A living room's back openings east of the open doors to a bedroom from a living room          |
+| 234 | A living room's back openings east of the open doors to a bedroom from the living room        |
+| 235 | A living room's back openings east of the open doors to a bedroom from the living rooms       |
+| 236 | A living room's back openings east of the open doors to bedrooms from a living room           |
+| 237 | A living room's back openings east of the open doors to bedrooms from the living room         |
+| 238 | A living room's back openings east of the open doors to bedrooms from the living rooms        |
+| 239 | A living room's back openings east of the open doors to the bedroom from a living room        |
+| 240 | A living room's back openings east of the open doors to the bedroom from living rooms         |
+| 241 | A living room's back openings east of the open doors to the bedroom from the living room      |
+| 242 | A living room's back openings east of the open doors to the bedroom from the living rooms     |
+| 243 | A living room's back openings east of the open doors to the bedroom from the living rooms.    |
+| 244 | A living room's back openings east of the open doors to the bedrooms from a living room       |
+| 245 | A living room's back openings east of the open doors to the bedrooms from the living room     |
+| 246 | A living room's back openings east of the open doors to the bedrooms from the living rooms    |
+| 247 | A living room's back openings, east of the open door from the living room to the bedrooms     |
+| 248 | A living room's back openings, east of the open door from the living rooms to the bedrooms    |
+| 249 | Living rooms' back opening east of an open door from a living room to the bedrooms            |
+| 250 | Living rooms' back opening east of an open door from living rooms to the bedrooms             |
+| 251 | Living rooms' back opening east of an open door from the living room to the bedrooms          |
+| 252 | Living rooms' back opening east of an open door from the living room to the bedrooms.         |
+| 253 | Living rooms' back opening east of an open door from the living rooms to the bedroom          |
+| 254 | Living rooms' back opening east of an open door from the living rooms to the bedrooms         |
+| 255 | Living rooms' back opening east of an open door from the living rooms to the bedrooms.        |
+| 256 | Living rooms' back opening east of an open door to the bedroom from a living room             |
+| 257 | Living rooms' back opening east of an open door to the bedroom from the living room           |
+| 258 | Living rooms' back opening east of an open door to the bedroom from the living rooms          |
+| 259 | Living rooms' back opening east of an open door to the bedrooms from a living room            |
+| 260 | Living rooms' back opening east of an open door to the bedrooms from the living room          |
+| 261 | Living rooms' back opening east of an open door to the bedrooms from the living rooms         |
+| 262 | Living rooms' back opening east of the open door from a living room to a bedroom              |
+| 263 | Living rooms' back opening east of the open door from a living room to the bedroom            |
+| 264 | Living rooms' back opening east of the open door from a living room to the bedrooms           |
+| 265 | Living rooms' back opening east of the open door from a living room to the bedrooms.          |
+| 266 | Living rooms' back opening east of the open door from living rooms to the bedroom             |
+| 267 | Living rooms' back opening east of the open door from living rooms to the bedrooms            |
+| 268 | Living rooms' back opening east of the open door from living rooms to the bedrooms.           |
+| 269 | Living rooms' back opening east of the open door from the living room to a bedroom            |
+| 270 | Living rooms' back opening east of the open door from the living room to bedrooms             |
+| 271 | Living rooms' back opening east of the open door from the living room to the bedroom          |
+| 272 | Living rooms' back opening east of the open door from the living room to the bedrooms         |
+| 273 | Living rooms' back opening east of the open door from the living room to the bedrooms.        |
+| 274 | Living rooms' back opening east of the open door from the living rooms to a bedroom           |
+| 275 | Living rooms' back opening east of the open door from the living rooms to bedrooms            |
+| 276 | Living rooms' back opening east of the open door from the living rooms to the bedroom         |
+| 277 | Living rooms' back opening east of the open door from the living rooms to the bedrooms        |
+| 278 | Living rooms' back opening east of the open door from the living rooms to the bedrooms.       |
+| 279 | Living rooms' back opening east of the open door to a bedroom from a living room              |
+| 280 | Living rooms' back opening east of the open door to a bedroom from the living room            |
+| 281 | Living rooms' back opening east of the open door to a bedroom from the living rooms           |
+| 282 | Living rooms' back opening east of the open door to bedrooms from a living room               |
+| 283 | Living rooms' back opening east of the open door to bedrooms from the living room             |
+| 284 | Living rooms' back opening east of the open door to bedrooms from the living rooms            |
+| 285 | Living rooms' back opening east of the open door to the bedroom from a living room            |
+| 286 | Living rooms' back opening east of the open door to the bedroom from living rooms             |
+| 287 | Living rooms' back opening east of the open door to the bedroom from living rooms.            |
+| 288 | Living rooms' back opening east of the open door to the bedroom from the living room          |
+| 289 | Living rooms' back opening east of the open door to the bedroom from the living rooms         |
+| 290 | Living rooms' back opening east of the open door to the bedroom from the living rooms.        |
+| 291 | Living rooms' back opening east of the open door to the bedrooms from a living room           |
+| 292 | Living rooms' back opening east of the open door to the bedrooms from living rooms            |
+| 293 | Living rooms' back opening east of the open door to the bedrooms from living rooms.           |
+| 294 | Living rooms' back opening east of the open door to the bedrooms from the living room         |
+| 295 | Living rooms' back opening east of the open door to the bedrooms from the living rooms        |
+| 296 | Living rooms' back opening east of the open door to the bedrooms from the living rooms.       |
+| 297 | Living rooms' back opening east of the open doors from a living room to the bedrooms          |
+| 298 | Living rooms' back opening east of the open doors from the living room to the bedrooms        |
+| 299 | Living rooms' back opening east of the open doors from the living rooms to the bedrooms       |
+| 300 | Living rooms' back openings east of an open door from a living room to the bedrooms           |
+| 301 | Living rooms' back openings east of an open door from living rooms to the bedrooms            |
+| 302 | Living rooms' back openings east of an open door from the living room to the bedrooms         |
+| 303 | Living rooms' back openings east of an open door from the living room to the bedrooms.        |
+| 304 | Living rooms' back openings east of an open door from the living rooms to the bedroom         |
+| 305 | Living rooms' back openings east of an open door from the living rooms to the bedrooms        |
+| 306 | Living rooms' back openings east of an open door from the living rooms to the bedrooms.       |
+| 307 | Living rooms' back openings east of an open door to the bedroom from a living room            |
+| 308 | Living rooms' back openings east of an open door to the bedroom from the living room          |
+| 309 | Living rooms' back openings east of an open door to the bedroom from the living rooms         |
+| 310 | Living rooms' back openings east of an open door to the bedrooms from a living room           |
+| 311 | Living rooms' back openings east of an open door to the bedrooms from the living room         |
+| 312 | Living rooms' back openings east of an open door to the bedrooms from the living rooms        |
+| 313 | Living rooms' back openings east of the open door from a living room to a bedroom             |
+| 314 | Living rooms' back openings east of the open door from a living room to the bedroom           |
+| 315 | Living rooms' back openings east of the open door from a living room to the bedrooms          |
+| 316 | Living rooms' back openings east of the open door from a living room to the bedrooms.         |
+| 317 | Living rooms' back openings east of the open door from living rooms to the bedroom            |
+| 318 | Living rooms' back openings east of the open door from living rooms to the bedrooms           |
+| 319 | Living rooms' back openings east of the open door from living rooms to the bedrooms.          |
+| 320 | Living rooms' back openings east of the open door from the living room to a bedroom           |
+| 321 | Living rooms' back openings east of the open door from the living room to bedrooms            |
+| 322 | Living rooms' back openings east of the open door from the living room to the bedroom         |
+| 323 | Living rooms' back openings east of the open door from the living room to the bedrooms        |
+| 324 | Living rooms' back openings east of the open door from the living room to the bedrooms.       |
+| 325 | Living rooms' back openings east of the open door from the living rooms to a bedroom          |
+| 326 | Living rooms' back openings east of the open door from the living rooms to bedrooms           |
+| 327 | Living rooms' back openings east of the open door from the living rooms to the bedroom        |
+| 328 | Living rooms' back openings east of the open door from the living rooms to the bedrooms       |
+| 329 | Living rooms' back openings east of the open door from the living rooms to the bedrooms.      |
+| 330 | Living rooms' back openings east of the open door to a bedroom from a living room             |
+| 331 | Living rooms' back openings east of the open door to a bedroom from the living room           |
+| 332 | Living rooms' back openings east of the open door to a bedroom from the living rooms          |
+| 333 | Living rooms' back openings east of the open door to bedrooms from a living room              |
+| 334 | Living rooms' back openings east of the open door to bedrooms from the living room            |
+| 335 | Living rooms' back openings east of the open door to bedrooms from the living rooms           |
+| 336 | Living rooms' back openings east of the open door to the bedroom from a living room           |
+| 337 | Living rooms' back openings east of the open door to the bedroom from living rooms            |
+| 338 | Living rooms' back openings east of the open door to the bedroom from living rooms.           |
+| 339 | Living rooms' back openings east of the open door to the bedroom from the living room         |
+| 340 | Living rooms' back openings east of the open door to the bedroom from the living rooms        |
+| 341 | Living rooms' back openings east of the open door to the bedroom from the living rooms.       |
+| 342 | Living rooms' back openings east of the open door to the bedrooms from a living room          |
+| 343 | Living rooms' back openings east of the open door to the bedrooms from living rooms           |
+| 344 | Living rooms' back openings east of the open door to the bedrooms from living rooms.          |
+| 345 | Living rooms' back openings east of the open door to the bedrooms from the living room        |
+| 346 | Living rooms' back openings east of the open door to the bedrooms from the living rooms       |
+| 347 | Living rooms' back openings east of the open door to the bedrooms from the living rooms.      |
+| 348 | Living rooms' back openings east of the open doors from a living room to the bedrooms         |
+| 349 | Living rooms' back openings east of the open doors from the living room to the bedrooms       |
+| 350 | Living rooms' back openings east of the open doors from the living rooms to the bedrooms      |
+| 351 | The living room's back opening east of an open door from a living room to the bedroom         |
+| 352 | The living room's back opening east of an open door from a living room to the bedrooms        |
+| 353 | The living room's back opening east of an open door from a living room to the bedrooms.       |
+| 354 | The living room's back opening east of an open door from living rooms to the bedrooms         |
+| 355 | The living room's back opening east of an open door from the living room to the bedroom       |
+| 356 | The living room's back opening east of an open door from the living room to the bedrooms      |
+| 357 | The living room's back opening east of an open door from the living room to the bedrooms.     |
+| 358 | The living room's back opening east of an open door from the living rooms to the bedroom      |
+| 359 | The living room's back opening east of an open door from the living rooms to the bedrooms     |
+| 360 | The living room's back opening east of an open door from the living rooms to the bedrooms.    |
+| 361 | The living room's back opening east of an open door to the bedroom from a living room         |
+| 362 | The living room's back opening east of an open door to the bedroom from the living room       |
+| 363 | The living room's back opening east of an open door to the bedroom from the living rooms      |
+| 364 | The living room's back opening east of an open door to the bedrooms from a living room        |
+| 365 | The living room's back opening east of an open door to the bedrooms from the living room      |
+| 366 | The living room's back opening east of an open door to the bedrooms from the living rooms     |
+| 367 | The living room's back opening east of the open door from a living room to a bedroom          |
+| 368 | The living room's back opening east of the open door from a living room to bedrooms           |
+| 369 | The living room's back opening east of the open door from a living room to the bedroom        |
+| 370 | The living room's back opening east of the open door from a living room to the bedrooms       |
+| 371 | The living room's back opening east of the open door from a living room to the bedrooms.      |
+| 372 | The living room's back opening east of the open door from living rooms to the bedroom         |
+| 373 | The living room's back opening east of the open door from living rooms to the bedrooms        |
+| 374 | The living room's back opening east of the open door from living rooms to the bedrooms.       |
+| 375 | The living room's back opening east of the open door from the living room to a bedroom        |
+| 376 | The living room's back opening east of the open door from the living room to bedrooms         |
+| 377 | The living room's back opening east of the open door from the living room to bedrooms.        |
+| 378 | The living room's back opening east of the open door from the living room to the bedroom      |
+| 379 | The living room's back opening east of the open door from the living room to the bedrooms     |
+| 380 | The living room's back opening east of the open door from the living room to the bedrooms.    |
+| 381 | The living room's back opening east of the open door from the living rooms to a bedroom       |
+| 382 | The living room's back opening east of the open door from the living rooms to bedrooms        |
+| 383 | The living room's back opening east of the open door from the living rooms to bedrooms.       |
+| 384 | The living room's back opening east of the open door from the living rooms to the bedroom     |
+| 385 | The living room's back opening east of the open door from the living rooms to the bedrooms    |
+| 386 | The living room's back opening east of the open door from the living rooms to the bedrooms.   |
+| 387 | The living room's back opening east of the open door to a bedroom from a living room          |
+| 388 | The living room's back opening east of the open door to a bedroom from the living room        |
+| 389 | The living room's back opening east of the open door to a bedroom from the living rooms       |
+| 390 | The living room's back opening east of the open door to bedrooms from a living room           |
+| 391 | The living room's back opening east of the open door to bedrooms from the living room         |
+| 392 | The living room's back opening east of the open door to bedrooms from the living rooms        |
+| 393 | The living room's back opening east of the open door to the bedroom from a living room        |
+| 394 | The living room's back opening east of the open door to the bedroom from living rooms         |
+| 395 | The living room's back opening east of the open door to the bedroom from living rooms.        |
+| 396 | The living room's back opening east of the open door to the bedroom from the living room      |
+| 397 | The living room's back opening east of the open door to the bedroom from the living rooms     |
+| 398 | The living room's back opening east of the open door to the bedroom from the living rooms.    |
+| 399 | The living room's back opening east of the open door to the bedrooms from a living room       |
+| 400 | The living room's back opening east of the open door to the bedrooms from living rooms        |
+| 401 | The living room's back opening east of the open door to the bedrooms from living rooms.       |
+| 402 | The living room's back opening east of the open door to the bedrooms from the living room     |
+| 403 | The living room's back opening east of the open door to the bedrooms from the living rooms    |
+| 404 | The living room's back opening east of the open door to the bedrooms from the living rooms.   |
+| 405 | The living room's back opening east of the open doors from a living room to the bedrooms      |
+| 406 | The living room's back opening east of the open doors from living rooms to the bedrooms       |
+| 407 | The living room's back opening east of the open doors from the living room to the bedrooms    |
+| 408 | The living room's back opening east of the open doors from the living rooms to the bedrooms   |
+| 409 | The living room's back opening east of the open doors to the bedroom from a living room       |
+| 410 | The living room's back opening east of the open doors to the bedroom from the living room     |
+| 411 | The living room's back opening east of the open doors to the bedroom from the living rooms    |
+| 412 | The living room's back opening east of the open doors to the bedrooms from a living room      |
+| 413 | The living room's back opening east of the open doors to the bedrooms from the living room    |
+| 414 | The living room's back opening east of the open doors to the bedrooms from the living rooms   |
+| 415 | The living room's back openings east of an open door from a living room to the bedroom        |
+| 416 | The living room's back openings east of an open door from a living room to the bedrooms       |
+| 417 | The living room's back openings east of an open door from a living room to the bedrooms.      |
+| 418 | The living room's back openings east of an open door from living rooms to the bedrooms        |
+| 419 | The living room's back openings east of an open door from the living room to the bedroom      |
+| 420 | The living room's back openings east of an open door from the living room to the bedrooms     |
+| 421 | The living room's back openings east of an open door from the living room to the bedrooms.    |
+| 422 | The living room's back openings east of an open door from the living rooms to the bedroom     |
+| 423 | The living room's back openings east of an open door from the living rooms to the bedrooms    |
+| 424 | The living room's back openings east of an open door from the living rooms to the bedrooms.   |
+| 425 | The living room's back openings east of an open door to the bedroom from a living room        |
+| 426 | The living room's back openings east of an open door to the bedroom from the living room      |
+| 427 | The living room's back openings east of an open door to the bedroom from the living rooms     |
+| 428 | The living room's back openings east of an open door to the bedrooms from a living room       |
+| 429 | The living room's back openings east of an open door to the bedrooms from the living room     |
+| 430 | The living room's back openings east of an open door to the bedrooms from the living rooms    |
+| 431 | The living room's back openings east of the open door from a living room to a bedroom         |
+| 432 | The living room's back openings east of the open door from a living room to bedrooms          |
+| 433 | The living room's back openings east of the open door from a living room to the bedroom       |
+| 434 | The living room's back openings east of the open door from a living room to the bedrooms      |
+| 435 | The living room's back openings east of the open door from a living room to the bedrooms.     |
+| 436 | The living room's back openings east of the open door from living rooms to the bedroom        |
+| 437 | The living room's back openings east of the open door from living rooms to the bedrooms       |
+| 438 | The living room's back openings east of the open door from living rooms to the bedrooms.      |
+| 439 | The living room's back openings east of the open door from the living room to a bedroom       |
+| 440 | The living room's back openings east of the open door from the living room to bedrooms        |
+| 441 | The living room's back openings east of the open door from the living room to bedrooms.       |
+| 442 | The living room's back openings east of the open door from the living room to the bedroom     |
+| 443 | The living room's back openings east of the open door from the living room to the bedrooms    |
+| 444 | The living room's back openings east of the open door from the living room to the bedrooms.   |
+| 445 | The living room's back openings east of the open door from the living rooms to a bedroom      |
+| 446 | The living room's back openings east of the open door from the living rooms to bedrooms       |
+| 447 | The living room's back openings east of the open door from the living rooms to bedrooms.      |
+| 448 | The living room's back openings east of the open door from the living rooms to the bedroom    |
+| 449 | The living room's back openings east of the open door from the living rooms to the bedrooms   |
+| 450 | The living room's back openings east of the open door from the living rooms to the bedrooms.  |
+| 451 | The living room's back openings east of the open door to a bedroom from a living room         |
+| 452 | The living room's back openings east of the open door to a bedroom from the living room       |
+| 453 | The living room's back openings east of the open door to a bedroom from the living rooms      |
+| 454 | The living room's back openings east of the open door to bedrooms from a living room          |
+| 455 | The living room's back openings east of the open door to bedrooms from the living room        |
+| 456 | The living room's back openings east of the open door to bedrooms from the living rooms       |
+| 457 | The living room's back openings east of the open door to the bedroom from a living room       |
+| 458 | The living room's back openings east of the open door to the bedroom from living rooms        |
+| 459 | The living room's back openings east of the open door to the bedroom from living rooms.       |
+| 460 | The living room's back openings east of the open door to the bedroom from the living room     |
+| 461 | The living room's back openings east of the open door to the bedroom from the living rooms    |
+| 462 | The living room's back openings east of the open door to the bedroom from the living rooms.   |
+| 463 | The living room's back openings east of the open door to the bedrooms from a living room      |
+| 464 | The living room's back openings east of the open door to the bedrooms from living rooms       |
+| 465 | The living room's back openings east of the open door to the bedrooms from living rooms.      |
+| 466 | The living room's back openings east of the open door to the bedrooms from the living room    |
+| 467 | The living room's back openings east of the open door to the bedrooms from the living rooms   |
+| 468 | The living room's back openings east of the open door to the bedrooms from the living rooms.  |
+| 469 | The living room's back openings east of the open doors from a living room to the bedrooms     |
+| 470 | The living room's back openings east of the open doors from living rooms to the bedrooms      |
+| 471 | The living room's back openings east of the open doors from the living room to the bedrooms   |
+| 472 | The living room's back openings east of the open doors from the living rooms to the bedrooms  |
+| 473 | The living room's back openings east of the open doors to the bedroom from a living room      |
+| 474 | The living room's back openings east of the open doors to the bedroom from the living room    |
+| 475 | The living room's back openings east of the open doors to the bedroom from the living rooms   |
+| 476 | The living room's back openings east of the open doors to the bedrooms from a living room     |
+| 477 | The living room's back openings east of the open doors to the bedrooms from the living room   |
+| 478 | The living room's back openings east of the open doors to the bedrooms from the living rooms  |
+| 479 | The living rooms' back opening east of an open door from a living room to the bedroom         |
+| 480 | The living rooms' back opening east of an open door from a living room to the bedrooms        |
+| 481 | The living rooms' back opening east of an open door from a living room to the bedrooms.       |
+| 482 | The living rooms' back opening east of an open door from living rooms to the bedrooms         |
+| 483 | The living rooms' back opening east of an open door from the living room to a bedroom         |
+| 484 | The living rooms' back opening east of an open door from the living room to the bedroom       |
+| 485 | The living rooms' back opening east of an open door from the living room to the bedrooms      |
+| 486 | The living rooms' back opening east of an open door from the living room to the bedrooms.     |
+| 487 | The living rooms' back opening east of an open door from the living rooms to a bedroom        |
+| 488 | The living rooms' back opening east of an open door from the living rooms to the bedroom      |
+| 489 | The living rooms' back opening east of an open door from the living rooms to the bedrooms     |
+| 490 | The living rooms' back opening east of an open door from the living rooms to the bedrooms.    |
+| 491 | The living rooms' back opening east of an open door to a bedroom from a living room           |
+| 492 | The living rooms' back opening east of an open door to a bedroom from the living room         |
+| 493 | The living rooms' back opening east of an open door to a bedroom from the living rooms        |
+| 494 | The living rooms' back opening east of an open door to bedrooms from a living room            |
+| 495 | The living rooms' back opening east of an open door to the bedroom from a living room         |
+| 496 | The living rooms' back opening east of an open door to the bedroom from living rooms          |
+| 497 | The living rooms' back opening east of an open door to the bedroom from the living room       |
+| 498 | The living rooms' back opening east of an open door to the bedroom from the living rooms      |
+| 499 | The living rooms' back opening east of an open door to the bedroom from the living rooms.     |
+| 500 | The living rooms' back opening east of an open door to the bedrooms from a living room        |
+| 501 | The living rooms' back opening east of an open door to the bedrooms from the living room      |
+| 502 | The living rooms' back opening east of an open door to the bedrooms from the living rooms     |
+| 503 | The living rooms' back opening east of the open door from a living room to a bedroom          |
+| 504 | The living rooms' back opening east of the open door from a living room to bedrooms           |
+| 505 | The living rooms' back opening east of the open door from a living room to bedrooms.          |
+| 506 | The living rooms' back opening east of the open door from a living room to the bedroom        |
+| 507 | The living rooms' back opening east of the open door from a living room to the bedrooms       |
+| 508 | The living rooms' back opening east of the open door from a living room to the bedrooms.      |
+| 509 | The living rooms' back opening east of the open door from living rooms to a bedroom           |
+| 510 | The living rooms' back opening east of the open door from living rooms to the bedroom         |
+| 511 | The living rooms' back opening east of the open door from living rooms to the bedrooms        |
+| 512 | The living rooms' back opening east of the open door from living rooms to the bedrooms.       |
+| 513 | The living rooms' back opening east of the open door from the living room to a bedroom        |
+| 514 | The living rooms' back opening east of the open door from the living room to bedrooms         |
+| 515 | The living rooms' back opening east of the open door from the living room to bedrooms.        |
+| 516 | The living rooms' back opening east of the open door from the living room to the bedroom      |
+| 517 | The living rooms' back opening east of the open door from the living room to the bedrooms     |
+| 518 | The living rooms' back opening east of the open door from the living room to the bedrooms.    |
+| 519 | The living rooms' back opening east of the open door from the living rooms to a bedroom       |
+| 520 | The living rooms' back opening east of the open door from the living rooms to bedrooms        |
+| 521 | The living rooms' back opening east of the open door from the living rooms to bedrooms.       |
+| 522 | The living rooms' back opening east of the open door from the living rooms to the bedroom     |
+| 523 | The living rooms' back opening east of the open door from the living rooms to the bedrooms    |
+| 524 | The living rooms' back opening east of the open door from the living rooms to the bedrooms.   |
+| 525 | The living rooms' back opening east of the open door to a bedroom from a living room          |
+| 526 | The living rooms' back opening east of the open door to a bedroom from living rooms           |
+| 527 | The living rooms' back opening east of the open door to a bedroom from the living room        |
+| 528 | The living rooms' back opening east of the open door to a bedroom from the living rooms       |
+| 529 | The living rooms' back opening east of the open door to a bedroom from the living rooms.      |
+| 530 | The living rooms' back opening east of the open door to bedrooms from a living room           |
+| 531 | The living rooms' back opening east of the open door to bedrooms from the living room         |
+| 532 | The living rooms' back opening east of the open door to bedrooms from the living rooms        |
+| 533 | The living rooms' back opening east of the open door to the bedroom from a living room        |
+| 534 | The living rooms' back opening east of the open door to the bedroom from a living room.       |
+| 535 | The living rooms' back opening east of the open door to the bedroom from living rooms         |
+| 536 | The living rooms' back opening east of the open door to the bedroom from living rooms.        |
+| 537 | The living rooms' back opening east of the open door to the bedroom from the living room      |
+| 538 | The living rooms' back opening east of the open door to the bedroom from the living rooms     |
+| 539 | The living rooms' back opening east of the open door to the bedroom from the living rooms.    |
+| 540 | The living rooms' back opening east of the open door to the bedrooms from a living room       |
+| 541 | The living rooms' back opening east of the open door to the bedrooms from living rooms        |
+| 542 | The living rooms' back opening east of the open door to the bedrooms from living rooms.       |
+| 543 | The living rooms' back opening east of the open door to the bedrooms from the living room     |
+| 544 | The living rooms' back opening east of the open door to the bedrooms from the living rooms    |
+| 545 | The living rooms' back opening east of the open door to the bedrooms from the living rooms.   |
+| 546 | The living rooms' back opening east of the open doors from a living room to the bedrooms      |
+| 547 | The living rooms' back opening east of the open doors from living rooms to the bedrooms       |
+| 548 | The living rooms' back opening east of the open doors from the living room to the bedroom     |
+| 549 | The living rooms' back opening east of the open doors from the living room to the bedrooms    |
+| 550 | The living rooms' back opening east of the open doors from the living room to the bedrooms.   |
+| 551 | The living rooms' back opening east of the open doors from the living rooms to the bedroom    |
+| 552 | The living rooms' back opening east of the open doors from the living rooms to the bedrooms   |
+| 553 | The living rooms' back opening east of the open doors from the living rooms to the bedrooms.  |
+| 554 | The living rooms' back opening east of the open doors to the bedroom from a living room       |
+| 555 | The living rooms' back opening east of the open doors to the bedroom from the living room     |
+| 556 | The living rooms' back opening east of the open doors to the bedroom from the living rooms    |
+| 557 | The living rooms' back opening east of the open doors to the bedrooms from a living room      |
+| 558 | The living rooms' back opening east of the open doors to the bedrooms from the living room    |
+| 559 | The living rooms' back opening east of the open doors to the bedrooms from the living rooms   |
+| 560 | The living rooms' back openings east of an open door from a living room to the bedroom        |
+| 561 | The living rooms' back openings east of an open door from a living room to the bedrooms       |
+| 562 | The living rooms' back openings east of an open door from a living room to the bedrooms.      |
+| 563 | The living rooms' back openings east of an open door from living rooms to the bedrooms        |
+| 564 | The living rooms' back openings east of an open door from the living room to a bedroom        |
+| 565 | The living rooms' back openings east of an open door from the living room to the bedroom      |
+| 566 | The living rooms' back openings east of an open door from the living room to the bedrooms     |
+| 567 | The living rooms' back openings east of an open door from the living room to the bedrooms.    |
+| 568 | The living rooms' back openings east of an open door from the living rooms to a bedroom       |
+| 569 | The living rooms' back openings east of an open door from the living rooms to the bedroom     |
+| 570 | The living rooms' back openings east of an open door from the living rooms to the bedrooms    |
+| 571 | The living rooms' back openings east of an open door from the living rooms to the bedrooms.   |
+| 572 | The living rooms' back openings east of an open door to a bedroom from a living room          |
+| 573 | The living rooms' back openings east of an open door to a bedroom from the living room        |
+| 574 | The living rooms' back openings east of an open door to a bedroom from the living rooms       |
+| 575 | The living rooms' back openings east of an open door to bedrooms from a living room           |
+| 576 | The living rooms' back openings east of an open door to the bedroom from a living room        |
+| 577 | The living rooms' back openings east of an open door to the bedroom from living rooms         |
+| 578 | The living rooms' back openings east of an open door to the bedroom from the living room      |
+| 579 | The living rooms' back openings east of an open door to the bedroom from the living rooms     |
+| 580 | The living rooms' back openings east of an open door to the bedroom from the living rooms.    |
+| 581 | The living rooms' back openings east of an open door to the bedrooms from a living room       |
+| 582 | The living rooms' back openings east of an open door to the bedrooms from the living room     |
+| 583 | The living rooms' back openings east of an open door to the bedrooms from the living rooms    |
+| 584 | The living rooms' back openings east of the open door from a living room to a bedroom         |
+| 585 | The living rooms' back openings east of the open door from a living room to bedrooms          |
+| 586 | The living rooms' back openings east of the open door from a living room to bedrooms.         |
+| 587 | The living rooms' back openings east of the open door from a living room to the bedroom       |
+| 588 | The living rooms' back openings east of the open door from a living room to the bedrooms      |
+| 589 | The living rooms' back openings east of the open door from a living room to the bedrooms.     |
+| 590 | The living rooms' back openings east of the open door from living rooms to a bedroom          |
+| 591 | The living rooms' back openings east of the open door from living rooms to the bedroom        |
+| 592 | The living rooms' back openings east of the open door from living rooms to the bedrooms       |
+| 593 | The living rooms' back openings east of the open door from living rooms to the bedrooms.      |
+| 594 | The living rooms' back openings east of the open door from the living room to a bedroom       |
+| 595 | The living rooms' back openings east of the open door from the living room to bedrooms        |
+| 596 | The living rooms' back openings east of the open door from the living room to bedrooms.       |
+| 597 | The living rooms' back openings east of the open door from the living room to the bedroom     |
+| 598 | The living rooms' back openings east of the open door from the living room to the bedrooms    |
+| 599 | The living rooms' back openings east of the open door from the living room to the bedrooms.   |
+| 600 | The living rooms' back openings east of the open door from the living rooms to a bedroom      |
+| 601 | The living rooms' back openings east of the open door from the living rooms to bedrooms       |
+| 602 | The living rooms' back openings east of the open door from the living rooms to bedrooms.      |
+| 603 | The living rooms' back openings east of the open door from the living rooms to the bedroom    |
+| 604 | The living rooms' back openings east of the open door from the living rooms to the bedrooms   |
+| 605 | The living rooms' back openings east of the open door from the living rooms to the bedrooms.  |
+| 606 | The living rooms' back openings east of the open door to a bedroom from a living room         |
+| 607 | The living rooms' back openings east of the open door to a bedroom from living rooms          |
+| 608 | The living rooms' back openings east of the open door to a bedroom from the living room       |
+| 609 | The living rooms' back openings east of the open door to a bedroom from the living rooms      |
+| 610 | The living rooms' back openings east of the open door to a bedroom from the living rooms.     |
+| 611 | The living rooms' back openings east of the open door to bedrooms from a living room          |
+| 612 | The living rooms' back openings east of the open door to bedrooms from the living room        |
+| 613 | The living rooms' back openings east of the open door to bedrooms from the living rooms       |
+| 614 | The living rooms' back openings east of the open door to the bedroom from a living room       |
+| 615 | The living rooms' back openings east of the open door to the bedroom from a living room.      |
+| 616 | The living rooms' back openings east of the open door to the bedroom from living rooms        |
+| 617 | The living rooms' back openings east of the open door to the bedroom from living rooms.       |
+| 618 | The living rooms' back openings east of the open door to the bedroom from the living room     |
+| 619 | The living rooms' back openings east of the open door to the bedroom from the living rooms    |
+| 620 | The living rooms' back openings east of the open door to the bedroom from the living rooms.   |
+| 621 | The living rooms' back openings east of the open door to the bedrooms from a living room      |
+| 622 | The living rooms' back openings east of the open door to the bedrooms from living rooms       |
+| 623 | The living rooms' back openings east of the open door to the bedrooms from living rooms.      |
+| 624 | The living rooms' back openings east of the open door to the bedrooms from the living room    |
+| 625 | The living rooms' back openings east of the open door to the bedrooms from the living rooms   |
+| 626 | The living rooms' back openings east of the open door to the bedrooms from the living rooms.  |
+| 627 | The living rooms' back openings east of the open doors from a living room to the bedrooms     |
+| 628 | The living rooms' back openings east of the open doors from living rooms to the bedrooms      |
+| 629 | The living rooms' back openings east of the open doors from the living room to the bedroom    |
+| 630 | The living rooms' back openings east of the open doors from the living room to the bedrooms   |
+| 631 | The living rooms' back openings east of the open doors from the living room to the bedrooms.  |
+| 632 | The living rooms' back openings east of the open doors from the living rooms to the bedroom   |
+| 633 | The living rooms' back openings east of the open doors from the living rooms to the bedrooms  |
+| 634 | The living rooms' back openings east of the open doors from the living rooms to the bedrooms. |
+| 635 | The living rooms' back openings east of the open doors to the bedroom from a living room      |
+| 636 | The living rooms' back openings east of the open doors to the bedroom from the living room    |
+| 637 | The living rooms' back openings east of the open doors to the bedroom from the living rooms   |
+| 638 | The living rooms' back openings east of the open doors to the bedrooms from a living room     |
+| 639 | The living rooms' back openings east of the open doors to the bedrooms from the living room   |
+| 640 | The living rooms' back openings east of the open doors to the bedrooms from the living rooms  |
++-----+-----------------------------------------------------------------------------------------------+
+

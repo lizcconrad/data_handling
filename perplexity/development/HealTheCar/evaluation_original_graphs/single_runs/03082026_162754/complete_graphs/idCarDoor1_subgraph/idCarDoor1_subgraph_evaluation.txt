@@ -1,0 +1,704 @@
+GRAPH NAME: idCarDoor1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 450   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------+
+|                          GOLD OUTPUTS                          |
++---------------------------------------------------+------------+
+| Gold Output                                       | Generated? |
++---------------------------------------------------+------------+
+| the closed crumpled car door with a car door lock | True       |
++---------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------------+
+|                                     NODE METRICS                                     |
++----------------+--------------+---------------+------------------+-------------------+
+| Node           | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------------+--------------+---------------+------------------+-------------------+
+| idCarDoor1     | True         | True          | Covered          | Included          |
+| idCarDoorLock1 | True         | True          | Covered          | Included          |
+| crumpled       | True         | True          | Covered          | Included          |
+| closed         | True         | True          | Covered          | Included          |
++----------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+|                                                             EDGE METRICS                                                            |
++---------------------------------+------------+----------------+--------------+---------------+------------------+-------------------+
+| Edge                            | Parent     | Child          | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------+------------+----------------+--------------+---------------+------------------+-------------------+
+| idCarDoor1_prop_idLockMechanism | idCarDoor1 | idCarDoorLock1 | True         | True          | Covered          | Included          |
+| idCarDoor1_prop_idDescriptor_1  | idCarDoor1 | crumpled       | True         | True          | Covered          | Included          |
+| idCarDoor1_prop_idOpenState     | idCarDoor1 | closed         | True         | True          | Covered          | Included          |
++---------------------------------+------------+----------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h217                                                                      |
+|               |   INDEX: x216                                                                    |
+|               |   RELS: < [ _closed_a_1 LBL: h268 ARG0: e266 ARG1: u267 ]                        |
+|               |           [ _crumple_v_cause LBL: h265 ARG0: e262 [ e PERF: - ] ARG1: i263 ARG2: |
+|               | i264 ]                                                                           |
+|               |           [ _with_p LBL: h256 ARG0: e253 ARG1: u254 ARG2: i255 ]                 |
+|               |           [ def_udef_a_q LBL: h260 ARG0: x257 RSTR: h258 BODY: h259 ]            |
+|               |           [ compound LBL: h252 ARG0: e249 [ e PROG: - ] ARG1: u250 ARG2: u251 ]  |
+|               |           [ udef_q LBL: h247 ARG0: x244 RSTR: h245 BODY: h246 ]                  |
+|               |           [ compound LBL: h243 ARG0: e240 [ e PROG: - ] ARG1: u241 ARG2: u242 ]  |
+|               |           [ udef_q LBL: h238 ARG0: x235 RSTR: h236 BODY: h237 ]                  |
+|               |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|               |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|               |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|               |           [ compound LBL: h228 ARG0: e225 [ e PROG: - ] ARG1: u226 ARG2: u227 ]  |
+|               |           [ udef_q LBL: h223 ARG0: x220 RSTR: h221 BODY: h222 ]                  |
+|               |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|               |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|               |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 >             |
+|               |   ICONS: < e262 topic i264 >                                                     |
+|               |   EQS: < x235 eq x233 h243 eq h239 u242 eq x235 h243 eq h232 u241 eq x231 x244   |
+|               | eq x231 h252 eq h248 u251 eq x244 h252 eq h230 u250 eq x229 x257 eq x229 h256 eq |
+|               | h261 i255 eq x257 x220 eq x218 h228 eq h224 u227 eq x220 h228 eq h217 u226 eq    |
+|               | x216 h256 eq h217 u254 eq x216 h265 eq h217 i264 eq x216 h268 eq h217 u267 eq    |
+|               | x216 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h217                                                                      |
+|               |   INDEX: x216                                                                    |
+|               |   RELS: < [ _closed_a_1 LBL: h217 ARG0: e266 ARG1: x216 ]                        |
+|               |           [ _crumple_v_cause LBL: h217 ARG0: e262 [ e PERF: - ] ARG1: i263 ARG2: |
+|               | x216 ]                                                                           |
+|               |           [ _with_p LBL: h217 ARG0: e253 ARG1: x216 ARG2: x229 ]                 |
+|               |           [ def_udef_a_q LBL: h260 ARG0: x229 RSTR: h258 BODY: h259 ]            |
+|               |           [ compound LBL: h230 ARG0: e249 [ e PROG: - ] ARG1: x229 ARG2: x231 ]  |
+|               |           [ udef_q LBL: h247 ARG0: x231 RSTR: h245 BODY: h246 ]                  |
+|               |           [ compound LBL: h232 ARG0: e240 [ e PROG: - ] ARG1: x231 ARG2: x233 ]  |
+|               |           [ udef_q LBL: h238 ARG0: x233 RSTR: h236 BODY: h237 ]                  |
+|               |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|               |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|               |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|               |           [ compound LBL: h217 ARG0: e225 [ e PROG: - ] ARG1: x216 ARG2: x218 ]  |
+|               |           [ udef_q LBL: h223 ARG0: x218 RSTR: h221 BODY: h222 ]                  |
+|               |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|               |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|               |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 >             |
+|               |   ICONS: < e262 topic x216 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h277                                                                      |
+|               |   INDEX: e274                                                                    |
+|               |   RELS: < [ unknown LBL: h273 ARG: x216 ARG0: e274 ]                             |
+|               |           [ def_udef_a_q LBL: h272 ARG0: x216 RSTR: h270 BODY: h271 ]            |
+|               |           [ _closed_a_1 LBL: h217 ARG0: e266 ARG1: x216 ]                        |
+|               |           [ _crumple_v_cause LBL: h217 ARG0: e262 [ e PERF: - ] ARG1: i263 ARG2: |
+|               | x216 ]                                                                           |
+|               |           [ _with_p LBL: h217 ARG0: e253 ARG1: x216 ARG2: x229 ]                 |
+|               |           [ def_udef_a_q LBL: h260 ARG0: x229 RSTR: h258 BODY: h259 ]            |
+|               |           [ compound LBL: h230 ARG0: e249 [ e PROG: - ] ARG1: x229 ARG2: x231 ]  |
+|               |           [ udef_q LBL: h247 ARG0: x231 RSTR: h245 BODY: h246 ]                  |
+|               |           [ compound LBL: h232 ARG0: e240 [ e PROG: - ] ARG1: x231 ARG2: x233 ]  |
+|               |           [ udef_q LBL: h238 ARG0: x233 RSTR: h236 BODY: h237 ]                  |
+|               |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|               |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|               |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|               |           [ compound LBL: h217 ARG0: e225 [ e PROG: - ] ARG1: x216 ARG2: x218 ]  |
+|               |           [ udef_q LBL: h223 ARG0: x218 RSTR: h221 BODY: h222 ]                  |
+|               |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|               |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|               |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 h270 qeq h217 |
+|               | h277 qeq h273 >                                                                  |
+|               |   ICONS: < e262 topic x216 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------+
+|                                            NODE SEMENTS                                           |
++----------------+----------------------------------------------------------------------------------+
+| Node           | Generated SEMENT                                                                 |
++----------------+----------------------------------------------------------------------------------+
+| idCarDoor1     | [ TOP: h217                                                                      |
+|                |   INDEX: x216                                                                    |
+|                |   RELS: < [ compound LBL: h228 ARG0: e225 [ e PROG: - ] ARG1: u226 ARG2: u227 ]  |
+|                |           [ udef_q LBL: h223 ARG0: x220 RSTR: h221 BODY: h222 ]                  |
+|                |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|                |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|                |   HCONS: < h221 qeq h219 >                                                       |
+|                |   EQS: < x220 eq x218 h228 eq h224 u227 eq x220 h228 eq h217 u226 eq x216 > ]    |
++----------------+----------------------------------------------------------------------------------+
+| idCarDoorLock1 | [ TOP: h230                                                                      |
+|                |   INDEX: x229                                                                    |
+|                |   RELS: < [ compound LBL: h252 ARG0: e249 [ e PROG: - ] ARG1: u250 ARG2: u251 ]  |
+|                |           [ udef_q LBL: h247 ARG0: x244 RSTR: h245 BODY: h246 ]                  |
+|                |           [ compound LBL: h243 ARG0: e240 [ e PROG: - ] ARG1: u241 ARG2: u242 ]  |
+|                |           [ udef_q LBL: h238 ARG0: x235 RSTR: h236 BODY: h237 ]                  |
+|                |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|                |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|                |           [ _lock_n_1 LBL: h230 ARG0: x229 ] >                                   |
+|                |   HCONS: < h236 qeq h234 h245 qeq h232 >                                         |
+|                |   EQS: < x235 eq x233 h243 eq h239 u242 eq x235 h243 eq h232 u241 eq x231 x244   |
+|                | eq x231 h252 eq h248 u251 eq x244 h252 eq h230 u250 eq x229 > ]                  |
++----------------+----------------------------------------------------------------------------------+
+| crumpled       | [ TOP: h265                                                                      |
+|                |   INDEX: e262                                                                    |
+|                |   RELS: < [ _crumple_v_cause LBL: h265 ARG0: e262 ARG1: i263 ARG2: i264 ] >      |
+|                |   SLOTS: < ARG1: i263 ARG2: i264 > ]                                             |
++----------------+----------------------------------------------------------------------------------+
+| closed         | [ TOP: h268                                                                      |
+|                |   INDEX: e266                                                                    |
+|                |   RELS: < [ _closed_a_1 LBL: h268 ARG0: e266 ARG1: u267 ] >                      |
+|                |   SLOTS: < ARG1: u267 > ]                                                        |
++----------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE SEMENTS                                                                   |
++---------------------------------+------------+----------------+----------------------------------------------------------------------------------+
+| Edge                            | Parent     | Child          | Generated SEMENT                                                                 |
++---------------------------------+------------+----------------+----------------------------------------------------------------------------------+
+| idCarDoor1_prop_idLockMechanism | idCarDoor1 | idCarDoorLock1 | [ TOP: h217                                                                      |
+|                                 |            |                |   INDEX: x216                                                                    |
+|                                 |            |                |   RELS: < [ _with_p LBL: h256 ARG0: e253 ARG1: u254 ARG2: i255 ]                 |
+|                                 |            |                |           [ def_udef_a_q LBL: h260 ARG0: x257 RSTR: h258 BODY: h259 ]            |
+|                                 |            |                |           [ compound LBL: h252 ARG0: e249 [ e PROG: - ] ARG1: u250 ARG2: u251 ]  |
+|                                 |            |                |           [ udef_q LBL: h247 ARG0: x244 RSTR: h245 BODY: h246 ]                  |
+|                                 |            |                |           [ compound LBL: h243 ARG0: e240 [ e PROG: - ] ARG1: u241 ARG2: u242 ]  |
+|                                 |            |                |           [ udef_q LBL: h238 ARG0: x235 RSTR: h236 BODY: h237 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|                                 |            |                |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|                                 |            |                |           [ compound LBL: h228 ARG0: e225 [ e PROG: - ] ARG1: u226 ARG2: u227 ]  |
+|                                 |            |                |           [ udef_q LBL: h223 ARG0: x220 RSTR: h221 BODY: h222 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|                                 |            |                |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 >             |
+|                                 |            |                |   EQS: < x235 eq x233 h243 eq h239 u242 eq x235 h243 eq h232 u241 eq x231 x244   |
+|                                 |            |                | eq x231 h252 eq h248 u251 eq x244 h252 eq h230 u250 eq x229 x257 eq x229 h256 eq |
+|                                 |            |                | h261 i255 eq x257 x220 eq x218 h228 eq h224 u227 eq x220 h228 eq h217 u226 eq    |
+|                                 |            |                | x216 h256 eq h217 u254 eq x216 > ]                                               |
++---------------------------------+------------+----------------+----------------------------------------------------------------------------------+
+| idCarDoor1_prop_idDescriptor_1  | idCarDoor1 | crumpled       | [ TOP: h217                                                                      |
+|                                 |            |                |   INDEX: x216                                                                    |
+|                                 |            |                |   RELS: < [ _crumple_v_cause LBL: h265 ARG0: e262 [ e PERF: - ] ARG1: i263 ARG2: |
+|                                 |            |                | i264 ]                                                                           |
+|                                 |            |                |           [ _with_p LBL: h256 ARG0: e253 ARG1: u254 ARG2: i255 ]                 |
+|                                 |            |                |           [ def_udef_a_q LBL: h260 ARG0: x257 RSTR: h258 BODY: h259 ]            |
+|                                 |            |                |           [ compound LBL: h252 ARG0: e249 [ e PROG: - ] ARG1: u250 ARG2: u251 ]  |
+|                                 |            |                |           [ udef_q LBL: h247 ARG0: x244 RSTR: h245 BODY: h246 ]                  |
+|                                 |            |                |           [ compound LBL: h243 ARG0: e240 [ e PROG: - ] ARG1: u241 ARG2: u242 ]  |
+|                                 |            |                |           [ udef_q LBL: h238 ARG0: x235 RSTR: h236 BODY: h237 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|                                 |            |                |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|                                 |            |                |           [ compound LBL: h228 ARG0: e225 [ e PROG: - ] ARG1: u226 ARG2: u227 ]  |
+|                                 |            |                |           [ udef_q LBL: h223 ARG0: x220 RSTR: h221 BODY: h222 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|                                 |            |                |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 >             |
+|                                 |            |                |   ICONS: < e262 topic i264 >                                                     |
+|                                 |            |                |   EQS: < x235 eq x233 h243 eq h239 u242 eq x235 h243 eq h232 u241 eq x231 x244   |
+|                                 |            |                | eq x231 h252 eq h248 u251 eq x244 h252 eq h230 u250 eq x229 x257 eq x229 h256 eq |
+|                                 |            |                | h261 i255 eq x257 x220 eq x218 h228 eq h224 u227 eq x220 h228 eq h217 u226 eq    |
+|                                 |            |                | x216 h256 eq h217 u254 eq x216 h265 eq h217 i264 eq x216 > ]                     |
++---------------------------------+------------+----------------+----------------------------------------------------------------------------------+
+| idCarDoor1_prop_idOpenState     | idCarDoor1 | closed         | [ TOP: h217                                                                      |
+|                                 |            |                |   INDEX: x216                                                                    |
+|                                 |            |                |   RELS: < [ _closed_a_1 LBL: h268 ARG0: e266 ARG1: u267 ]                        |
+|                                 |            |                |           [ _crumple_v_cause LBL: h265 ARG0: e262 [ e PERF: - ] ARG1: i263 ARG2: |
+|                                 |            |                | i264 ]                                                                           |
+|                                 |            |                |           [ _with_p LBL: h256 ARG0: e253 ARG1: u254 ARG2: i255 ]                 |
+|                                 |            |                |           [ def_udef_a_q LBL: h260 ARG0: x257 RSTR: h258 BODY: h259 ]            |
+|                                 |            |                |           [ compound LBL: h252 ARG0: e249 [ e PROG: - ] ARG1: u250 ARG2: u251 ]  |
+|                                 |            |                |           [ udef_q LBL: h247 ARG0: x244 RSTR: h245 BODY: h246 ]                  |
+|                                 |            |                |           [ compound LBL: h243 ARG0: e240 [ e PROG: - ] ARG1: u241 ARG2: u242 ]  |
+|                                 |            |                |           [ udef_q LBL: h238 ARG0: x235 RSTR: h236 BODY: h237 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h234 ARG0: x233 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h232 ARG0: x231 ]                                     |
+|                                 |            |                |           [ _lock_n_1 LBL: h230 ARG0: x229 ]                                     |
+|                                 |            |                |           [ compound LBL: h228 ARG0: e225 [ e PROG: - ] ARG1: u226 ARG2: u227 ]  |
+|                                 |            |                |           [ udef_q LBL: h223 ARG0: x220 RSTR: h221 BODY: h222 ]                  |
+|                                 |            |                |           [ _car_n_1 LBL: h219 ARG0: x218 ]                                      |
+|                                 |            |                |           [ _door_n_1 LBL: h217 ARG0: x216 ] >                                   |
+|                                 |            |                |   HCONS: < h236 qeq h234 h245 qeq h232 h258 qeq h230 h221 qeq h219 >             |
+|                                 |            |                |   ICONS: < e262 topic i264 >                                                     |
+|                                 |            |                |   EQS: < x235 eq x233 h243 eq h239 u242 eq x235 h243 eq h232 u241 eq x231 x244   |
+|                                 |            |                | eq x231 h252 eq h248 u251 eq x244 h252 eq h230 u250 eq x229 x257 eq x229 h256 eq |
+|                                 |            |                | h261 i255 eq x257 x220 eq x218 h228 eq h224 u227 eq x220 h228 eq h217 u226 eq    |
+|                                 |            |                | x216 h256 eq h217 u254 eq x216 h265 eq h217 i264 eq x216 h268 eq h217 u267 eq    |
+|                                 |            |                | x216 > ]                                                                         |
++---------------------------------+------------+----------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------+
+|                     GENERATED ENGLISH TEXT                    |
++-----+---------------------------------------------------------+
+| #   | Generated Text                                          |
++-----+---------------------------------------------------------+
+| 1   | A cars closed crumpled door with a car door lock        |
+| 2   | A cars closed crumpled door with a car door lock.       |
+| 3   | A cars closed crumpled door with car door lock          |
+| 4   | A cars closed crumpled door with car door lock.         |
+| 5   | A cars closed crumpled door with car door locks         |
+| 6   | A cars closed crumpled door with car door locks.        |
+| 7   | A cars closed crumpled door with the car door lock      |
+| 8   | A cars closed crumpled door with the car door lock.     |
+| 9   | A cars closed crumpled door with the car door locks     |
+| 10  | A cars closed crumpled door with the car door locks.    |
+| 11  | A cars closed crumpled door, with a car door lock       |
+| 12  | A cars closed crumpled door, with car door lock         |
+| 13  | A cars closed crumpled door, with car door locks        |
+| 14  | A cars closed crumpled door, with the car door lock     |
+| 15  | A cars closed crumpled door, with the car door locks    |
+| 16  | A cars crumpled closed door with a car door lock        |
+| 17  | A cars crumpled closed door with a car door lock.       |
+| 18  | A cars crumpled closed door with car door lock          |
+| 19  | A cars crumpled closed door with car door lock.         |
+| 20  | A cars crumpled closed door with car door locks         |
+| 21  | A cars crumpled closed door with car door locks.        |
+| 22  | A cars crumpled closed door with the car door lock      |
+| 23  | A cars crumpled closed door with the car door lock.     |
+| 24  | A cars crumpled closed door with the car door locks     |
+| 25  | A cars crumpled closed door with the car door locks.    |
+| 26  | A cars crumpled closed door, with a car door lock       |
+| 27  | A cars crumpled closed door, with car door lock         |
+| 28  | A cars crumpled closed door, with car door locks        |
+| 29  | A cars crumpled closed door, with the car door lock     |
+| 30  | A cars crumpled closed door, with the car door locks    |
+| 31  | A closed cars crumpled door with a car door lock        |
+| 32  | A closed cars crumpled door with a car door lock.       |
+| 33  | A closed cars crumpled door with car door lock          |
+| 34  | A closed cars crumpled door with car door lock.         |
+| 35  | A closed cars crumpled door with car door locks         |
+| 36  | A closed cars crumpled door with car door locks.        |
+| 37  | A closed cars crumpled door with the car door lock      |
+| 38  | A closed cars crumpled door with the car door lock.     |
+| 39  | A closed cars crumpled door with the car door locks     |
+| 40  | A closed cars crumpled door with the car door locks.    |
+| 41  | A closed cars crumpled door, with a car door lock       |
+| 42  | A closed cars crumpled door, with car door lock         |
+| 43  | A closed cars crumpled door, with car door locks        |
+| 44  | A closed cars crumpled door, with the car door lock     |
+| 45  | A closed cars crumpled door, with the car door locks    |
+| 46  | A closed crumpled car door with a car door lock         |
+| 47  | A closed crumpled car door with a car door lock.        |
+| 48  | A closed crumpled car door with car door lock           |
+| 49  | A closed crumpled car door with car door lock.          |
+| 50  | A closed crumpled car door with car door locks          |
+| 51  | A closed crumpled car door with car door locks.         |
+| 52  | A closed crumpled car door with the car door lock       |
+| 53  | A closed crumpled car door with the car door lock.      |
+| 54  | A closed crumpled car door with the car door locks      |
+| 55  | A closed crumpled car door with the car door locks.     |
+| 56  | A closed crumpled car door, with a car door lock        |
+| 57  | A closed crumpled car door, with car door lock          |
+| 58  | A closed crumpled car door, with car door locks         |
+| 59  | A closed crumpled car door, with the car door lock      |
+| 60  | A closed crumpled car door, with the car door locks     |
+| 61  | A crumpled cars closed door with a car door lock        |
+| 62  | A crumpled cars closed door with a car door lock.       |
+| 63  | A crumpled cars closed door with car door lock          |
+| 64  | A crumpled cars closed door with car door lock.         |
+| 65  | A crumpled cars closed door with car door locks         |
+| 66  | A crumpled cars closed door with car door locks.        |
+| 67  | A crumpled cars closed door with the car door lock      |
+| 68  | A crumpled cars closed door with the car door lock.     |
+| 69  | A crumpled cars closed door with the car door locks     |
+| 70  | A crumpled cars closed door with the car door locks.    |
+| 71  | A crumpled cars closed door, with a car door lock       |
+| 72  | A crumpled cars closed door, with car door lock         |
+| 73  | A crumpled cars closed door, with car door locks        |
+| 74  | A crumpled cars closed door, with the car door lock     |
+| 75  | A crumpled cars closed door, with the car door locks    |
+| 76  | A crumpled closed car door with a car door lock         |
+| 77  | A crumpled closed car door with a car door lock.        |
+| 78  | A crumpled closed car door with car door lock           |
+| 79  | A crumpled closed car door with car door lock.          |
+| 80  | A crumpled closed car door with car door locks          |
+| 81  | A crumpled closed car door with car door locks.         |
+| 82  | A crumpled closed car door with the car door lock       |
+| 83  | A crumpled closed car door with the car door lock.      |
+| 84  | A crumpled closed car door with the car door locks      |
+| 85  | A crumpled closed car door with the car door locks.     |
+| 86  | A crumpled closed car door, with a car door lock        |
+| 87  | A crumpled closed car door, with car door lock          |
+| 88  | A crumpled closed car door, with car door locks         |
+| 89  | A crumpled closed car door, with the car door lock      |
+| 90  | A crumpled closed car door, with the car door locks     |
+| 91  | Cars closed crumpled door with a car door lock          |
+| 92  | Cars closed crumpled door with a car door lock.         |
+| 93  | Cars closed crumpled door with car door lock            |
+| 94  | Cars closed crumpled door with car door lock.           |
+| 95  | Cars closed crumpled door with car door locks           |
+| 96  | Cars closed crumpled door with car door locks.          |
+| 97  | Cars closed crumpled door with the car door lock        |
+| 98  | Cars closed crumpled door with the car door lock.       |
+| 99  | Cars closed crumpled door with the car door locks       |
+| 100 | Cars closed crumpled door with the car door locks.      |
+| 101 | Cars closed crumpled door, with a car door lock         |
+| 102 | Cars closed crumpled door, with car door lock           |
+| 103 | Cars closed crumpled door, with car door locks          |
+| 104 | Cars closed crumpled door, with the car door lock       |
+| 105 | Cars closed crumpled door, with the car door locks      |
+| 106 | Cars closed crumpled doors with a car door lock         |
+| 107 | Cars closed crumpled doors with a car door lock.        |
+| 108 | Cars closed crumpled doors with car door lock           |
+| 109 | Cars closed crumpled doors with car door lock.          |
+| 110 | Cars closed crumpled doors with car door locks          |
+| 111 | Cars closed crumpled doors with car door locks.         |
+| 112 | Cars closed crumpled doors with the car door lock       |
+| 113 | Cars closed crumpled doors with the car door lock.      |
+| 114 | Cars closed crumpled doors with the car door locks      |
+| 115 | Cars closed crumpled doors with the car door locks.     |
+| 116 | Cars closed crumpled doors, with a car door lock        |
+| 117 | Cars closed crumpled doors, with car door lock          |
+| 118 | Cars closed crumpled doors, with car door locks         |
+| 119 | Cars closed crumpled doors, with the car door lock      |
+| 120 | Cars closed crumpled doors, with the car door locks     |
+| 121 | Cars crumpled closed door with a car door lock          |
+| 122 | Cars crumpled closed door with a car door lock.         |
+| 123 | Cars crumpled closed door with car door lock            |
+| 124 | Cars crumpled closed door with car door lock.           |
+| 125 | Cars crumpled closed door with car door locks           |
+| 126 | Cars crumpled closed door with car door locks.          |
+| 127 | Cars crumpled closed door with the car door lock        |
+| 128 | Cars crumpled closed door with the car door lock.       |
+| 129 | Cars crumpled closed door with the car door locks       |
+| 130 | Cars crumpled closed door with the car door locks.      |
+| 131 | Cars crumpled closed door, with a car door lock         |
+| 132 | Cars crumpled closed door, with car door lock           |
+| 133 | Cars crumpled closed door, with car door locks          |
+| 134 | Cars crumpled closed door, with the car door lock       |
+| 135 | Cars crumpled closed door, with the car door locks      |
+| 136 | Cars crumpled closed doors with a car door lock         |
+| 137 | Cars crumpled closed doors with a car door lock.        |
+| 138 | Cars crumpled closed doors with car door lock           |
+| 139 | Cars crumpled closed doors with car door lock.          |
+| 140 | Cars crumpled closed doors with car door locks          |
+| 141 | Cars crumpled closed doors with car door locks.         |
+| 142 | Cars crumpled closed doors with the car door lock       |
+| 143 | Cars crumpled closed doors with the car door lock.      |
+| 144 | Cars crumpled closed doors with the car door locks      |
+| 145 | Cars crumpled closed doors with the car door locks.     |
+| 146 | Cars crumpled closed doors, with a car door lock        |
+| 147 | Cars crumpled closed doors, with car door lock          |
+| 148 | Cars crumpled closed doors, with car door locks         |
+| 149 | Cars crumpled closed doors, with the car door lock      |
+| 150 | Cars crumpled closed doors, with the car door locks     |
+| 151 | Closed cars crumpled door with a car door lock          |
+| 152 | Closed cars crumpled door with a car door lock.         |
+| 153 | Closed cars crumpled door with car door lock            |
+| 154 | Closed cars crumpled door with car door lock.           |
+| 155 | Closed cars crumpled door with car door locks           |
+| 156 | Closed cars crumpled door with car door locks.          |
+| 157 | Closed cars crumpled door with the car door lock        |
+| 158 | Closed cars crumpled door with the car door lock.       |
+| 159 | Closed cars crumpled door with the car door locks       |
+| 160 | Closed cars crumpled door with the car door locks.      |
+| 161 | Closed cars crumpled door, with a car door lock         |
+| 162 | Closed cars crumpled door, with car door lock           |
+| 163 | Closed cars crumpled door, with car door locks          |
+| 164 | Closed cars crumpled door, with the car door lock       |
+| 165 | Closed cars crumpled door, with the car door locks      |
+| 166 | Closed cars crumpled doors with a car door lock         |
+| 167 | Closed cars crumpled doors with a car door lock.        |
+| 168 | Closed cars crumpled doors with car door lock           |
+| 169 | Closed cars crumpled doors with car door lock.          |
+| 170 | Closed cars crumpled doors with car door locks          |
+| 171 | Closed cars crumpled doors with car door locks.         |
+| 172 | Closed cars crumpled doors with the car door lock       |
+| 173 | Closed cars crumpled doors with the car door lock.      |
+| 174 | Closed cars crumpled doors with the car door locks      |
+| 175 | Closed cars crumpled doors with the car door locks.     |
+| 176 | Closed cars crumpled doors, with a car door lock        |
+| 177 | Closed cars crumpled doors, with car door lock          |
+| 178 | Closed cars crumpled doors, with car door locks         |
+| 179 | Closed cars crumpled doors, with the car door lock      |
+| 180 | Closed cars crumpled doors, with the car door locks     |
+| 181 | Closed crumpled car door with a car door lock           |
+| 182 | Closed crumpled car door with a car door lock.          |
+| 183 | Closed crumpled car door with car door lock             |
+| 184 | Closed crumpled car door with car door lock.            |
+| 185 | Closed crumpled car door with car door locks            |
+| 186 | Closed crumpled car door with car door locks.           |
+| 187 | Closed crumpled car door with the car door lock         |
+| 188 | Closed crumpled car door with the car door lock.        |
+| 189 | Closed crumpled car door with the car door locks        |
+| 190 | Closed crumpled car door with the car door locks.       |
+| 191 | Closed crumpled car door, with a car door lock          |
+| 192 | Closed crumpled car door, with car door lock            |
+| 193 | Closed crumpled car door, with car door locks           |
+| 194 | Closed crumpled car door, with the car door lock        |
+| 195 | Closed crumpled car door, with the car door locks       |
+| 196 | Closed crumpled car doors with a car door lock          |
+| 197 | Closed crumpled car doors with a car door lock.         |
+| 198 | Closed crumpled car doors with car door lock            |
+| 199 | Closed crumpled car doors with car door lock.           |
+| 200 | Closed crumpled car doors with car door locks           |
+| 201 | Closed crumpled car doors with car door locks.          |
+| 202 | Closed crumpled car doors with the car door lock        |
+| 203 | Closed crumpled car doors with the car door lock.       |
+| 204 | Closed crumpled car doors with the car door locks       |
+| 205 | Closed crumpled car doors with the car door locks.      |
+| 206 | Closed crumpled car doors, with a car door lock         |
+| 207 | Closed crumpled car doors, with car door lock           |
+| 208 | Closed crumpled car doors, with car door locks          |
+| 209 | Closed crumpled car doors, with the car door lock       |
+| 210 | Closed crumpled car doors, with the car door locks      |
+| 211 | Crumpled cars closed door with a car door lock          |
+| 212 | Crumpled cars closed door with a car door lock.         |
+| 213 | Crumpled cars closed door with car door lock            |
+| 214 | Crumpled cars closed door with car door lock.           |
+| 215 | Crumpled cars closed door with car door locks           |
+| 216 | Crumpled cars closed door with car door locks.          |
+| 217 | Crumpled cars closed door with the car door lock        |
+| 218 | Crumpled cars closed door with the car door lock.       |
+| 219 | Crumpled cars closed door with the car door locks       |
+| 220 | Crumpled cars closed door with the car door locks.      |
+| 221 | Crumpled cars closed door, with a car door lock         |
+| 222 | Crumpled cars closed door, with car door lock           |
+| 223 | Crumpled cars closed door, with car door locks          |
+| 224 | Crumpled cars closed door, with the car door lock       |
+| 225 | Crumpled cars closed door, with the car door locks      |
+| 226 | Crumpled cars closed doors with a car door lock         |
+| 227 | Crumpled cars closed doors with a car door lock.        |
+| 228 | Crumpled cars closed doors with car door lock           |
+| 229 | Crumpled cars closed doors with car door lock.          |
+| 230 | Crumpled cars closed doors with car door locks          |
+| 231 | Crumpled cars closed doors with car door locks.         |
+| 232 | Crumpled cars closed doors with the car door lock       |
+| 233 | Crumpled cars closed doors with the car door lock.      |
+| 234 | Crumpled cars closed doors with the car door locks      |
+| 235 | Crumpled cars closed doors with the car door locks.     |
+| 236 | Crumpled cars closed doors, with a car door lock        |
+| 237 | Crumpled cars closed doors, with car door lock          |
+| 238 | Crumpled cars closed doors, with car door locks         |
+| 239 | Crumpled cars closed doors, with the car door lock      |
+| 240 | Crumpled cars closed doors, with the car door locks     |
+| 241 | Crumpled closed car door with a car door lock           |
+| 242 | Crumpled closed car door with a car door lock.          |
+| 243 | Crumpled closed car door with car door lock             |
+| 244 | Crumpled closed car door with car door lock.            |
+| 245 | Crumpled closed car door with car door locks            |
+| 246 | Crumpled closed car door with car door locks.           |
+| 247 | Crumpled closed car door with the car door lock         |
+| 248 | Crumpled closed car door with the car door lock.        |
+| 249 | Crumpled closed car door with the car door locks        |
+| 250 | Crumpled closed car door with the car door locks.       |
+| 251 | Crumpled closed car door, with a car door lock          |
+| 252 | Crumpled closed car door, with car door lock            |
+| 253 | Crumpled closed car door, with car door locks           |
+| 254 | Crumpled closed car door, with the car door lock        |
+| 255 | Crumpled closed car door, with the car door locks       |
+| 256 | Crumpled closed car doors with a car door lock          |
+| 257 | Crumpled closed car doors with a car door lock.         |
+| 258 | Crumpled closed car doors with car door lock            |
+| 259 | Crumpled closed car doors with car door lock.           |
+| 260 | Crumpled closed car doors with car door locks           |
+| 261 | Crumpled closed car doors with car door locks.          |
+| 262 | Crumpled closed car doors with the car door lock        |
+| 263 | Crumpled closed car doors with the car door lock.       |
+| 264 | Crumpled closed car doors with the car door locks       |
+| 265 | Crumpled closed car doors with the car door locks.      |
+| 266 | Crumpled closed car doors, with a car door lock         |
+| 267 | Crumpled closed car doors, with car door lock           |
+| 268 | Crumpled closed car doors, with car door locks          |
+| 269 | Crumpled closed car doors, with the car door lock       |
+| 270 | Crumpled closed car doors, with the car door locks      |
+| 271 | The cars closed crumpled door with a car door lock      |
+| 272 | The cars closed crumpled door with a car door lock.     |
+| 273 | The cars closed crumpled door with car door lock        |
+| 274 | The cars closed crumpled door with car door lock.       |
+| 275 | The cars closed crumpled door with car door locks       |
+| 276 | The cars closed crumpled door with car door locks.      |
+| 277 | The cars closed crumpled door with the car door lock    |
+| 278 | The cars closed crumpled door with the car door lock.   |
+| 279 | The cars closed crumpled door with the car door locks   |
+| 280 | The cars closed crumpled door with the car door locks.  |
+| 281 | The cars closed crumpled door, with a car door lock     |
+| 282 | The cars closed crumpled door, with car door lock       |
+| 283 | The cars closed crumpled door, with car door locks      |
+| 284 | The cars closed crumpled door, with the car door lock   |
+| 285 | The cars closed crumpled door, with the car door locks  |
+| 286 | The cars closed crumpled doors with a car door lock     |
+| 287 | The cars closed crumpled doors with a car door lock.    |
+| 288 | The cars closed crumpled doors with car door lock       |
+| 289 | The cars closed crumpled doors with car door lock.      |
+| 290 | The cars closed crumpled doors with car door locks      |
+| 291 | The cars closed crumpled doors with car door locks.     |
+| 292 | The cars closed crumpled doors with the car door lock   |
+| 293 | The cars closed crumpled doors with the car door lock.  |
+| 294 | The cars closed crumpled doors with the car door locks  |
+| 295 | The cars closed crumpled doors with the car door locks. |
+| 296 | The cars closed crumpled doors, with a car door lock    |
+| 297 | The cars closed crumpled doors, with car door lock      |
+| 298 | The cars closed crumpled doors, with car door locks     |
+| 299 | The cars closed crumpled doors, with the car door lock  |
+| 300 | The cars closed crumpled doors, with the car door locks |
+| 301 | The cars crumpled closed door with a car door lock      |
+| 302 | The cars crumpled closed door with a car door lock.     |
+| 303 | The cars crumpled closed door with car door lock        |
+| 304 | The cars crumpled closed door with car door lock.       |
+| 305 | The cars crumpled closed door with car door locks       |
+| 306 | The cars crumpled closed door with car door locks.      |
+| 307 | The cars crumpled closed door with the car door lock    |
+| 308 | The cars crumpled closed door with the car door lock.   |
+| 309 | The cars crumpled closed door with the car door locks   |
+| 310 | The cars crumpled closed door with the car door locks.  |
+| 311 | The cars crumpled closed door, with a car door lock     |
+| 312 | The cars crumpled closed door, with car door lock       |
+| 313 | The cars crumpled closed door, with car door locks      |
+| 314 | The cars crumpled closed door, with the car door lock   |
+| 315 | The cars crumpled closed door, with the car door locks  |
+| 316 | The cars crumpled closed doors with a car door lock     |
+| 317 | The cars crumpled closed doors with a car door lock.    |
+| 318 | The cars crumpled closed doors with car door lock       |
+| 319 | The cars crumpled closed doors with car door lock.      |
+| 320 | The cars crumpled closed doors with car door locks      |
+| 321 | The cars crumpled closed doors with car door locks.     |
+| 322 | The cars crumpled closed doors with the car door lock   |
+| 323 | The cars crumpled closed doors with the car door lock.  |
+| 324 | The cars crumpled closed doors with the car door locks  |
+| 325 | The cars crumpled closed doors with the car door locks. |
+| 326 | The cars crumpled closed doors, with a car door lock    |
+| 327 | The cars crumpled closed doors, with car door lock      |
+| 328 | The cars crumpled closed doors, with car door locks     |
+| 329 | The cars crumpled closed doors, with the car door lock  |
+| 330 | The cars crumpled closed doors, with the car door locks |
+| 331 | The closed cars crumpled door with a car door lock      |
+| 332 | The closed cars crumpled door with a car door lock.     |
+| 333 | The closed cars crumpled door with car door lock        |
+| 334 | The closed cars crumpled door with car door lock.       |
+| 335 | The closed cars crumpled door with car door locks       |
+| 336 | The closed cars crumpled door with car door locks.      |
+| 337 | The closed cars crumpled door with the car door lock    |
+| 338 | The closed cars crumpled door with the car door lock.   |
+| 339 | The closed cars crumpled door with the car door locks   |
+| 340 | The closed cars crumpled door with the car door locks.  |
+| 341 | The closed cars crumpled door, with a car door lock     |
+| 342 | The closed cars crumpled door, with car door lock       |
+| 343 | The closed cars crumpled door, with car door locks      |
+| 344 | The closed cars crumpled door, with the car door lock   |
+| 345 | The closed cars crumpled door, with the car door locks  |
+| 346 | The closed cars crumpled doors with a car door lock     |
+| 347 | The closed cars crumpled doors with a car door lock.    |
+| 348 | The closed cars crumpled doors with car door lock       |
+| 349 | The closed cars crumpled doors with car door lock.      |
+| 350 | The closed cars crumpled doors with car door locks      |
+| 351 | The closed cars crumpled doors with car door locks.     |
+| 352 | The closed cars crumpled doors with the car door lock   |
+| 353 | The closed cars crumpled doors with the car door lock.  |
+| 354 | The closed cars crumpled doors with the car door locks  |
+| 355 | The closed cars crumpled doors with the car door locks. |
+| 356 | The closed cars crumpled doors, with a car door lock    |
+| 357 | The closed cars crumpled doors, with car door lock      |
+| 358 | The closed cars crumpled doors, with car door locks     |
+| 359 | The closed cars crumpled doors, with the car door lock  |
+| 360 | The closed cars crumpled doors, with the car door locks |
+| 361 | The closed crumpled car door with a car door lock       |
+| 362 | The closed crumpled car door with a car door lock.      |
+| 363 | The closed crumpled car door with car door lock         |
+| 364 | The closed crumpled car door with car door lock.        |
+| 365 | The closed crumpled car door with car door locks        |
+| 366 | The closed crumpled car door with car door locks.       |
+| 367 | The closed crumpled car door with the car door lock     |
+| 368 | The closed crumpled car door with the car door lock.    |
+| 369 | The closed crumpled car door with the car door locks    |
+| 370 | The closed crumpled car door with the car door locks.   |
+| 371 | The closed crumpled car door, with a car door lock      |
+| 372 | The closed crumpled car door, with car door lock        |
+| 373 | The closed crumpled car door, with car door locks       |
+| 374 | The closed crumpled car door, with the car door lock    |
+| 375 | The closed crumpled car door, with the car door locks   |
+| 376 | The closed crumpled car doors with a car door lock      |
+| 377 | The closed crumpled car doors with a car door lock.     |
+| 378 | The closed crumpled car doors with car door lock        |
+| 379 | The closed crumpled car doors with car door lock.       |
+| 380 | The closed crumpled car doors with car door locks       |
+| 381 | The closed crumpled car doors with car door locks.      |
+| 382 | The closed crumpled car doors with the car door lock    |
+| 383 | The closed crumpled car doors with the car door lock.   |
+| 384 | The closed crumpled car doors with the car door locks   |
+| 385 | The closed crumpled car doors with the car door locks.  |
+| 386 | The closed crumpled car doors, with a car door lock     |
+| 387 | The closed crumpled car doors, with car door lock       |
+| 388 | The closed crumpled car doors, with car door locks      |
+| 389 | The closed crumpled car doors, with the car door lock   |
+| 390 | The closed crumpled car doors, with the car door locks  |
+| 391 | The crumpled cars closed door with a car door lock      |
+| 392 | The crumpled cars closed door with a car door lock.     |
+| 393 | The crumpled cars closed door with car door lock        |
+| 394 | The crumpled cars closed door with car door lock.       |
+| 395 | The crumpled cars closed door with car door locks       |
+| 396 | The crumpled cars closed door with car door locks.      |
+| 397 | The crumpled cars closed door with the car door lock    |
+| 398 | The crumpled cars closed door with the car door lock.   |
+| 399 | The crumpled cars closed door with the car door locks   |
+| 400 | The crumpled cars closed door with the car door locks.  |
+| 401 | The crumpled cars closed door, with a car door lock     |
+| 402 | The crumpled cars closed door, with car door lock       |
+| 403 | The crumpled cars closed door, with car door locks      |
+| 404 | The crumpled cars closed door, with the car door lock   |
+| 405 | The crumpled cars closed door, with the car door locks  |
+| 406 | The crumpled cars closed doors with a car door lock     |
+| 407 | The crumpled cars closed doors with a car door lock.    |
+| 408 | The crumpled cars closed doors with car door lock       |
+| 409 | The crumpled cars closed doors with car door lock.      |
+| 410 | The crumpled cars closed doors with car door locks      |
+| 411 | The crumpled cars closed doors with car door locks.     |
+| 412 | The crumpled cars closed doors with the car door lock   |
+| 413 | The crumpled cars closed doors with the car door lock.  |
+| 414 | The crumpled cars closed doors with the car door locks  |
+| 415 | The crumpled cars closed doors with the car door locks. |
+| 416 | The crumpled cars closed doors, with a car door lock    |
+| 417 | The crumpled cars closed doors, with car door lock      |
+| 418 | The crumpled cars closed doors, with car door locks     |
+| 419 | The crumpled cars closed doors, with the car door lock  |
+| 420 | The crumpled cars closed doors, with the car door locks |
+| 421 | The crumpled closed car door with a car door lock       |
+| 422 | The crumpled closed car door with a car door lock.      |
+| 423 | The crumpled closed car door with car door lock         |
+| 424 | The crumpled closed car door with car door lock.        |
+| 425 | The crumpled closed car door with car door locks        |
+| 426 | The crumpled closed car door with car door locks.       |
+| 427 | The crumpled closed car door with the car door lock     |
+| 428 | The crumpled closed car door with the car door lock.    |
+| 429 | The crumpled closed car door with the car door locks    |
+| 430 | The crumpled closed car door with the car door locks.   |
+| 431 | The crumpled closed car door, with a car door lock      |
+| 432 | The crumpled closed car door, with car door lock        |
+| 433 | The crumpled closed car door, with car door locks       |
+| 434 | The crumpled closed car door, with the car door lock    |
+| 435 | The crumpled closed car door, with the car door locks   |
+| 436 | The crumpled closed car doors with a car door lock      |
+| 437 | The crumpled closed car doors with a car door lock.     |
+| 438 | The crumpled closed car doors with car door lock        |
+| 439 | The crumpled closed car doors with car door lock.       |
+| 440 | The crumpled closed car doors with car door locks       |
+| 441 | The crumpled closed car doors with car door locks.      |
+| 442 | The crumpled closed car doors with the car door lock    |
+| 443 | The crumpled closed car doors with the car door lock.   |
+| 444 | The crumpled closed car doors with the car door locks   |
+| 445 | The crumpled closed car doors with the car door locks.  |
+| 446 | The crumpled closed car doors, with a car door lock     |
+| 447 | The crumpled closed car doors, with car door lock       |
+| 448 | The crumpled closed car doors, with car door locks      |
+| 449 | The crumpled closed car doors, with the car door lock   |
+| 450 | The crumpled closed car doors, with the car door locks  |
++-----+---------------------------------------------------------+
+

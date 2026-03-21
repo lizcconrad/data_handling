@@ -1,0 +1,364 @@
+GRAPH NAME: idSmoke1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 180   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------+
+|                            GOLD OUTPUTS                           |
++------------------------------------------------------+------------+
+| Gold Output                                          | Generated? |
++------------------------------------------------------+------------+
+| the immovable smoke east of the large immovable bear | True       |
++------------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------+
+|                                  NODE METRICS                                  |
++----------+--------------+---------------+------------------+-------------------+
+| Node     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------+--------------+---------------+------------------+-------------------+
+| idSmoke1 | True         | True          | Covered          | Included          |
+| yes      | True         | True          | Covered          | Included          |
+| idBear1  | True         | True          | Covered          | Included          |
+| large    | True         | True          | Covered          | Included          |
++----------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++---------------------------+----------+---------+--------------+---------------+------------------+-------------------+
+| Edge                      | Parent   | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------+----------+---------+--------------+---------------+------------------+-------------------+
+| idSmoke1_prop_idImmovable | idSmoke1 | yes     | True         | True          | Covered          | Included          |
+| isEastOf                  | idSmoke1 | idBear1 | True         | True          | Covered          | Included          |
+| idBear1_prop_idSize       | idBear1  | large   | True         | True          | Covered          | Included          |
+| idBear1_prop_idImmovable  | idBear1  | yes     | True         | True          | Covered          | Included          |
++---------------------------+----------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h987                                                                      |
+|               |   INDEX: x986                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h1020 ARG0: i1017 ARG1: u1018 ARG2: u1019 ]           |
+|               |           [ def_implicit_q LBL: h1031 ARG0: x1028 RSTR: h1029 BODY: h1030 ]      |
+|               |           [ _east_a_1 LBL: h1016 ARG0: i1013 ARG1: x1014 ARG2: u1015 ]           |
+|               |           [ def_udef_a_q LBL: h1026 ARG0: x1023 RSTR: h1024 BODY: h1025 ]        |
+|               |           [ _immovable_a_1 LBL: h1012 ARG0: e1010 ARG1: u1011 ]                  |
+|               |           [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: u1001 ]                      |
+|               |           [ _bear_n_1 LBL: h999 ARG0: x998 ]                                     |
+|               |           [ place_n LBL: h1022 ARG0: x1021 ]                                     |
+|               |           [ _immovable_a_1 LBL: h997 ARG0: e995 ARG1: u996 ]                     |
+|               |           [ _smoke_n_1 LBL: h987 ARG0: x986 ] >                                  |
+|               |   HCONS: < h1024 qeq h999 h1029 qeq h1022 >                                      |
+|               |   EQS: < h1002 eq h999 u1001 eq x998 h1012 eq h999 u1011 eq x998 x1023 eq x998   |
+|               | h1016 eq h1027 u1015 eq x1023 h1016 eq h1022 x1014 eq x1021 x1028 eq x1021 h1020 |
+|               | eq h1032 u1019 eq x1028 h997 eq h987 u996 eq x986 h1020 eq h987 u1018 eq x986 >  |
+|               | ]                                                                                |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1020                                                                     |
+|               |   INDEX: x986                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h1020 ARG0: i1017 ARG1: x986 ARG2: x1014 ]            |
+|               |           [ def_implicit_q LBL: h1031 ARG0: x1014 RSTR: h1029 BODY: h1030 ]      |
+|               |           [ _east_a_1 LBL: h1016 ARG0: i1013 ARG1: x1014 ARG2: x1023 ]           |
+|               |           [ def_udef_a_q LBL: h1026 ARG0: x1023 RSTR: h1024 BODY: h1025 ]        |
+|               |           [ _immovable_a_1 LBL: h1002 ARG0: e1010 ARG1: x1023 ]                  |
+|               |           [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: x1023 ]                      |
+|               |           [ _bear_n_1 LBL: h1002 ARG0: x1023 ]                                   |
+|               |           [ place_n LBL: h1016 ARG0: x1014 ]                                     |
+|               |           [ _immovable_a_1 LBL: h1020 ARG0: e995 ARG1: x986 ]                    |
+|               |           [ _smoke_n_1 LBL: h1020 ARG0: x986 ] >                                 |
+|               |   HCONS: < h1024 qeq h1002 h1029 qeq h1016 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1041                                                                     |
+|               |   INDEX: e1038                                                                   |
+|               |   RELS: < [ unknown LBL: h1037 ARG: x1033 ARG0: e1038 ]                          |
+|               |           [ def_udef_a_q LBL: h1036 ARG0: x1033 RSTR: h1034 BODY: h1035 ]        |
+|               |           [ loc_nonsp LBL: h1020 ARG0: i1017 ARG1: x1033 ARG2: x1014 ]           |
+|               |           [ def_implicit_q LBL: h1031 ARG0: x1014 RSTR: h1029 BODY: h1030 ]      |
+|               |           [ _east_a_1 LBL: h1016 ARG0: i1013 ARG1: x1014 ARG2: x1023 ]           |
+|               |           [ def_udef_a_q LBL: h1026 ARG0: x1023 RSTR: h1024 BODY: h1025 ]        |
+|               |           [ _immovable_a_1 LBL: h1002 ARG0: e1010 ARG1: x1023 ]                  |
+|               |           [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: x1023 ]                      |
+|               |           [ _bear_n_1 LBL: h1002 ARG0: x1023 ]                                   |
+|               |           [ place_n LBL: h1016 ARG0: x1014 ]                                     |
+|               |           [ _immovable_a_1 LBL: h1020 ARG0: e995 ARG1: x1033 ]                   |
+|               |           [ _smoke_n_1 LBL: h1020 ARG0: x1033 ] >                                |
+|               |   HCONS: < h1024 qeq h1002 h1029 qeq h1016 h1034 qeq h1020 h1041 qeq h1037 > ]   |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------+
+|                                     NODE SEMENTS                                     |
++----------+---------------------------------------------------------------------------+
+| Node     | Generated SEMENT                                                          |
++----------+---------------------------------------------------------------------------+
+| idSmoke1 | [ TOP: h987                                                               |
+|          |   INDEX: x986                                                             |
+|          |   RELS: < [ _smoke_n_1 LBL: h987 ARG0: x986 ] > ]                         |
++----------+---------------------------------------------------------------------------+
+| yes      | [ TOP: h1006                                                              |
+|          |   INDEX: e1003                                                            |
+|          |   RELS: < [ _true_a_of LBL: h1006 ARG0: e1003 ARG1: u1004 ARG2: u1005 ] > |
+|          |   SLOTS: < ARG1: u1004 ARG2: u1005 > ]                                    |
++----------+---------------------------------------------------------------------------+
+| idBear1  | [ TOP: h999                                                               |
+|          |   INDEX: x998                                                             |
+|          |   RELS: < [ _bear_n_1 LBL: h999 ARG0: x998 ] > ]                          |
++----------+---------------------------------------------------------------------------+
+| large    | [ TOP: h1002                                                              |
+|          |   INDEX: e1000                                                            |
+|          |   RELS: < [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: u1001 ] >             |
+|          |   SLOTS: < ARG1: u1001 > ]                                                |
++----------+---------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+| Edge                      | Parent   | Child   | Generated SEMENT                                                                 |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+| idSmoke1_prop_idImmovable | idSmoke1 | yes     | [ TOP: h987                                                                      |
+|                           |          |         |   INDEX: x986                                                                    |
+|                           |          |         |   RELS: < [ _immovable_a_1 LBL: h997 ARG0: e995 ARG1: u996 ]                     |
+|                           |          |         |           [ _smoke_n_1 LBL: h987 ARG0: x986 ] >                                  |
+|                           |          |         |   EQS: < h997 eq h987 u996 eq x986 > ]                                           |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+| isEastOf                  | idSmoke1 | idBear1 | [ TOP: h987                                                                      |
+|                           |          |         |   INDEX: x986                                                                    |
+|                           |          |         |   RELS: < [ loc_nonsp LBL: h1020 ARG0: i1017 ARG1: u1018 ARG2: u1019 ]           |
+|                           |          |         |           [ def_implicit_q LBL: h1031 ARG0: x1028 RSTR: h1029 BODY: h1030 ]      |
+|                           |          |         |           [ _east_a_1 LBL: h1016 ARG0: i1013 ARG1: x1014 ARG2: u1015 ]           |
+|                           |          |         |           [ def_udef_a_q LBL: h1026 ARG0: x1023 RSTR: h1024 BODY: h1025 ]        |
+|                           |          |         |           [ _immovable_a_1 LBL: h1012 ARG0: e1010 ARG1: u1011 ]                  |
+|                           |          |         |           [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: u1001 ]                      |
+|                           |          |         |           [ _bear_n_1 LBL: h999 ARG0: x998 ]                                     |
+|                           |          |         |           [ place_n LBL: h1022 ARG0: x1021 ]                                     |
+|                           |          |         |           [ _immovable_a_1 LBL: h997 ARG0: e995 ARG1: u996 ]                     |
+|                           |          |         |           [ _smoke_n_1 LBL: h987 ARG0: x986 ] >                                  |
+|                           |          |         |   HCONS: < h1024 qeq h999 h1029 qeq h1022 >                                      |
+|                           |          |         |   EQS: < h1002 eq h999 u1001 eq x998 h1012 eq h999 u1011 eq x998 x1023 eq x998   |
+|                           |          |         | h1016 eq h1027 u1015 eq x1023 h1016 eq h1022 x1014 eq x1021 x1028 eq x1021 h1020 |
+|                           |          |         | eq h1032 u1019 eq x1028 h997 eq h987 u996 eq x986 h1020 eq h987 u1018 eq x986 >  |
+|                           |          |         | ]                                                                                |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+| idBear1_prop_idSize       | idBear1  | large   | [ TOP: h999                                                                      |
+|                           |          |         |   INDEX: x998                                                                    |
+|                           |          |         |   RELS: < [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: u1001 ]                      |
+|                           |          |         |           [ _bear_n_1 LBL: h999 ARG0: x998 ] >                                   |
+|                           |          |         |   EQS: < h1002 eq h999 u1001 eq x998 > ]                                         |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+| idBear1_prop_idImmovable  | idBear1  | yes     | [ TOP: h999                                                                      |
+|                           |          |         |   INDEX: x998                                                                    |
+|                           |          |         |   RELS: < [ _immovable_a_1 LBL: h1012 ARG0: e1010 ARG1: u1011 ]                  |
+|                           |          |         |           [ _large_a_1 LBL: h1002 ARG0: e1000 ARG1: u1001 ]                      |
+|                           |          |         |           [ _bear_n_1 LBL: h999 ARG0: x998 ] >                                   |
+|                           |          |         |   EQS: < h1002 eq h999 u1001 eq x998 h1012 eq h999 u1011 eq x998 > ]             |
++---------------------------+----------+---------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------+
+|                     GENERATED ENGLISH TEXT                    |
++-----+---------------------------------------------------------+
+| #   | Generated Text                                          |
++-----+---------------------------------------------------------+
+| 1   | An immovable smoke east of a large immovable bear       |
+| 2   | An immovable smoke east of a large immovable bear.      |
+| 3   | An immovable smoke east of an immovable large bear      |
+| 4   | An immovable smoke east of an immovable large bear.     |
+| 5   | An immovable smoke east of immovable large bear         |
+| 6   | An immovable smoke east of immovable large bear.        |
+| 7   | An immovable smoke east of immovable large bears        |
+| 8   | An immovable smoke east of immovable large bears.       |
+| 9   | An immovable smoke east of large immovable bear         |
+| 10  | An immovable smoke east of large immovable bear.        |
+| 11  | An immovable smoke east of large immovable bears        |
+| 12  | An immovable smoke east of large immovable bears.       |
+| 13  | An immovable smoke east of the immovable large bear     |
+| 14  | An immovable smoke east of the immovable large bear.    |
+| 15  | An immovable smoke east of the immovable large bears    |
+| 16  | An immovable smoke east of the immovable large bears.   |
+| 17  | An immovable smoke east of the large immovable bear     |
+| 18  | An immovable smoke east of the large immovable bear.    |
+| 19  | An immovable smoke east of the large immovable bears    |
+| 20  | An immovable smoke east of the large immovable bears.   |
+| 21  | An immovable smoke, east of a large immovable bear      |
+| 22  | An immovable smoke, east of an immovable large bear     |
+| 23  | An immovable smoke, east of immovable large bear        |
+| 24  | An immovable smoke, east of immovable large bears       |
+| 25  | An immovable smoke, east of large immovable bear        |
+| 26  | An immovable smoke, east of large immovable bears       |
+| 27  | An immovable smoke, east of the immovable large bear    |
+| 28  | An immovable smoke, east of the immovable large bears   |
+| 29  | An immovable smoke, east of the large immovable bear    |
+| 30  | An immovable smoke, east of the large immovable bears   |
+| 31  | Immovable smoke east of a large immovable bear          |
+| 32  | Immovable smoke east of a large immovable bear          |
+| 33  | Immovable smoke east of a large immovable bear.         |
+| 34  | Immovable smoke east of a large immovable bear.         |
+| 35  | Immovable smoke east of an immovable large bear         |
+| 36  | Immovable smoke east of an immovable large bear         |
+| 37  | Immovable smoke east of an immovable large bear.        |
+| 38  | Immovable smoke east of an immovable large bear.        |
+| 39  | Immovable smoke east of immovable large bear            |
+| 40  | Immovable smoke east of immovable large bear            |
+| 41  | Immovable smoke east of immovable large bear.           |
+| 42  | Immovable smoke east of immovable large bear.           |
+| 43  | Immovable smoke east of immovable large bears           |
+| 44  | Immovable smoke east of immovable large bears           |
+| 45  | Immovable smoke east of immovable large bears.          |
+| 46  | Immovable smoke east of immovable large bears.          |
+| 47  | Immovable smoke east of large immovable bear            |
+| 48  | Immovable smoke east of large immovable bear            |
+| 49  | Immovable smoke east of large immovable bear.           |
+| 50  | Immovable smoke east of large immovable bear.           |
+| 51  | Immovable smoke east of large immovable bears           |
+| 52  | Immovable smoke east of large immovable bears           |
+| 53  | Immovable smoke east of large immovable bears.          |
+| 54  | Immovable smoke east of large immovable bears.          |
+| 55  | Immovable smoke east of the immovable large bear        |
+| 56  | Immovable smoke east of the immovable large bear        |
+| 57  | Immovable smoke east of the immovable large bear.       |
+| 58  | Immovable smoke east of the immovable large bear.       |
+| 59  | Immovable smoke east of the immovable large bears       |
+| 60  | Immovable smoke east of the immovable large bears       |
+| 61  | Immovable smoke east of the immovable large bears.      |
+| 62  | Immovable smoke east of the immovable large bears.      |
+| 63  | Immovable smoke east of the large immovable bear        |
+| 64  | Immovable smoke east of the large immovable bear        |
+| 65  | Immovable smoke east of the large immovable bear.       |
+| 66  | Immovable smoke east of the large immovable bear.       |
+| 67  | Immovable smoke east of the large immovable bears       |
+| 68  | Immovable smoke east of the large immovable bears       |
+| 69  | Immovable smoke east of the large immovable bears.      |
+| 70  | Immovable smoke east of the large immovable bears.      |
+| 71  | Immovable smoke, east of a large immovable bear         |
+| 72  | Immovable smoke, east of a large immovable bear         |
+| 73  | Immovable smoke, east of an immovable large bear        |
+| 74  | Immovable smoke, east of an immovable large bear        |
+| 75  | Immovable smoke, east of immovable large bear           |
+| 76  | Immovable smoke, east of immovable large bear           |
+| 77  | Immovable smoke, east of immovable large bears          |
+| 78  | Immovable smoke, east of immovable large bears          |
+| 79  | Immovable smoke, east of large immovable bear           |
+| 80  | Immovable smoke, east of large immovable bear           |
+| 81  | Immovable smoke, east of large immovable bears          |
+| 82  | Immovable smoke, east of large immovable bears          |
+| 83  | Immovable smoke, east of the immovable large bear       |
+| 84  | Immovable smoke, east of the immovable large bear       |
+| 85  | Immovable smoke, east of the immovable large bears      |
+| 86  | Immovable smoke, east of the immovable large bears      |
+| 87  | Immovable smoke, east of the large immovable bear       |
+| 88  | Immovable smoke, east of the large immovable bear       |
+| 89  | Immovable smoke, east of the large immovable bears      |
+| 90  | Immovable smoke, east of the large immovable bears      |
+| 91  | Immovable smokes east of a large immovable bear         |
+| 92  | Immovable smokes east of a large immovable bear.        |
+| 93  | Immovable smokes east of an immovable large bear        |
+| 94  | Immovable smokes east of an immovable large bear.       |
+| 95  | Immovable smokes east of immovable large bear           |
+| 96  | Immovable smokes east of immovable large bear.          |
+| 97  | Immovable smokes east of immovable large bears          |
+| 98  | Immovable smokes east of immovable large bears.         |
+| 99  | Immovable smokes east of large immovable bear           |
+| 100 | Immovable smokes east of large immovable bear.          |
+| 101 | Immovable smokes east of large immovable bears          |
+| 102 | Immovable smokes east of large immovable bears.         |
+| 103 | Immovable smokes east of the immovable large bear       |
+| 104 | Immovable smokes east of the immovable large bear.      |
+| 105 | Immovable smokes east of the immovable large bears      |
+| 106 | Immovable smokes east of the immovable large bears.     |
+| 107 | Immovable smokes east of the large immovable bear       |
+| 108 | Immovable smokes east of the large immovable bear.      |
+| 109 | Immovable smokes east of the large immovable bears      |
+| 110 | Immovable smokes east of the large immovable bears.     |
+| 111 | Immovable smokes, east of a large immovable bear        |
+| 112 | Immovable smokes, east of an immovable large bear       |
+| 113 | Immovable smokes, east of immovable large bear          |
+| 114 | Immovable smokes, east of immovable large bears         |
+| 115 | Immovable smokes, east of large immovable bear          |
+| 116 | Immovable smokes, east of large immovable bears         |
+| 117 | Immovable smokes, east of the immovable large bear      |
+| 118 | Immovable smokes, east of the immovable large bears     |
+| 119 | Immovable smokes, east of the large immovable bear      |
+| 120 | Immovable smokes, east of the large immovable bears     |
+| 121 | The immovable smoke east of a large immovable bear      |
+| 122 | The immovable smoke east of a large immovable bear.     |
+| 123 | The immovable smoke east of an immovable large bear     |
+| 124 | The immovable smoke east of an immovable large bear.    |
+| 125 | The immovable smoke east of immovable large bear        |
+| 126 | The immovable smoke east of immovable large bear.       |
+| 127 | The immovable smoke east of immovable large bears       |
+| 128 | The immovable smoke east of immovable large bears.      |
+| 129 | The immovable smoke east of large immovable bear        |
+| 130 | The immovable smoke east of large immovable bear.       |
+| 131 | The immovable smoke east of large immovable bears       |
+| 132 | The immovable smoke east of large immovable bears.      |
+| 133 | The immovable smoke east of the immovable large bear    |
+| 134 | The immovable smoke east of the immovable large bear.   |
+| 135 | The immovable smoke east of the immovable large bears   |
+| 136 | The immovable smoke east of the immovable large bears.  |
+| 137 | The immovable smoke east of the large immovable bear    |
+| 138 | The immovable smoke east of the large immovable bear.   |
+| 139 | The immovable smoke east of the large immovable bears   |
+| 140 | The immovable smoke east of the large immovable bears.  |
+| 141 | The immovable smoke, east of a large immovable bear     |
+| 142 | The immovable smoke, east of an immovable large bear    |
+| 143 | The immovable smoke, east of immovable large bear       |
+| 144 | The immovable smoke, east of immovable large bears      |
+| 145 | The immovable smoke, east of large immovable bear       |
+| 146 | The immovable smoke, east of large immovable bears      |
+| 147 | The immovable smoke, east of the immovable large bear   |
+| 148 | The immovable smoke, east of the immovable large bears  |
+| 149 | The immovable smoke, east of the large immovable bear   |
+| 150 | The immovable smoke, east of the large immovable bears  |
+| 151 | The immovable smokes east of a large immovable bear     |
+| 152 | The immovable smokes east of a large immovable bear.    |
+| 153 | The immovable smokes east of an immovable large bear    |
+| 154 | The immovable smokes east of an immovable large bear.   |
+| 155 | The immovable smokes east of immovable large bear       |
+| 156 | The immovable smokes east of immovable large bear.      |
+| 157 | The immovable smokes east of immovable large bears      |
+| 158 | The immovable smokes east of immovable large bears.     |
+| 159 | The immovable smokes east of large immovable bear       |
+| 160 | The immovable smokes east of large immovable bear.      |
+| 161 | The immovable smokes east of large immovable bears      |
+| 162 | The immovable smokes east of large immovable bears.     |
+| 163 | The immovable smokes east of the immovable large bear   |
+| 164 | The immovable smokes east of the immovable large bear.  |
+| 165 | The immovable smokes east of the immovable large bears  |
+| 166 | The immovable smokes east of the immovable large bears. |
+| 167 | The immovable smokes east of the large immovable bear   |
+| 168 | The immovable smokes east of the large immovable bear.  |
+| 169 | The immovable smokes east of the large immovable bears  |
+| 170 | The immovable smokes east of the large immovable bears. |
+| 171 | The immovable smokes, east of a large immovable bear    |
+| 172 | The immovable smokes, east of an immovable large bear   |
+| 173 | The immovable smokes, east of immovable large bear      |
+| 174 | The immovable smokes, east of immovable large bears     |
+| 175 | The immovable smokes, east of large immovable bear      |
+| 176 | The immovable smokes, east of large immovable bears     |
+| 177 | The immovable smokes, east of the immovable large bear  |
+| 178 | The immovable smokes, east of the immovable large bears |
+| 179 | The immovable smokes, east of the large immovable bear  |
+| 180 | The immovable smokes, east of the large immovable bears |
++-----+---------------------------------------------------------+
+

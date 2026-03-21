@@ -1,0 +1,343 @@
+GRAPH NAME: idCardKey1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-----------------------------------------------------------+
+|                        GOLD OUTPUTS                       |
++----------------------------------------------+------------+
+| Gold Output                                  | Generated? |
++----------------------------------------------+------------+
+| the unknown key card north of the front door | True       |
++----------------------------------------------+------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE METRICS                                    |
++--------------+--------------+---------------+------------------+-------------------+
+| Node         | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------+--------------+---------------+------------------+-------------------+
+| idCardKey1   | True         | True          | Covered          | Included          |
+| true         | True         | True          | Covered          | Included          |
+| idFrontDoor1 | True         | True          | Covered          | Included          |
++--------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE METRICS                                                           |
++---------------------------------+------------+--------------+--------------+---------------+------------------+-------------------+
+| Edge                            | Parent     | Child        | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------+------------+--------------+--------------+---------------+------------------+-------------------+
+| idCardKey1_prop_idUnknownObject | idCardKey1 | true         | True         | True          | Covered          | Included          |
+| isNorthOf                       | idCardKey1 | idFrontDoor1 | True         | True          | Covered          | Included          |
++---------------------------------+------------+--------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h4047                                                                     |
+|               |   INDEX: x4046                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4094 ARG0: e4091 ARG1: u4092 ARG2: x4093 ]           |
+|               |           [ def_implicit_q LBL: h4105 ARG0: x4102 RSTR: h4103 BODY: h4104 ]      |
+|               |           [ _north_a_1 LBL: h4090 ARG0: i4087 ARG1: x4088 ARG2: u4089 ]          |
+|               |           [ def_udef_a_q LBL: h4100 ARG0: x4097 RSTR: h4098 BODY: h4099 ]        |
+|               |           [ compound LBL: h4086 ARG0: e4083 [ e PROG: - ] ARG1: u4084 ARG2:      |
+|               | u4085 ]                                                                          |
+|               |           [ udef_q LBL: h4081 ARG0: x4078 RSTR: h4079 BODY: h4080 ]              |
+|               |           [ _front_n_1 LBL: h4077 ARG0: x4076 ]                                  |
+|               |           [ _door_n_1 LBL: h4075 ARG0: x4074 ]                                   |
+|               |           [ place_n LBL: h4096 ARG0: x4095 ]                                     |
+|               |           [ _un-_a_neg LBL: h4073 ARG0: i4071 ARG1: e4072 ]                      |
+|               |           [ _know_v_1 LBL: h4070 ARG0: e4067 [ e PERF: - ] ARG1: u4068 ARG2:     |
+|               | i4069 ]                                                                          |
+|               |           [ compound LBL: h4058 ARG0: e4055 [ e PROG: - ] ARG1: u4056 ARG2:      |
+|               | u4057 ]                                                                          |
+|               |           [ udef_q LBL: h4053 ARG0: x4050 RSTR: h4051 BODY: h4052 ]              |
+|               |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|               |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|               |   HCONS: < h4079 qeq h4077 h4098 qeq h4075 h4103 qeq h4096 h4051 qeq h4049 >     |
+|               |   ICONS: < e4067 topic i4069 >                                                   |
+|               |   EQS: < x4078 eq x4076 h4086 eq h4082 u4085 eq x4078 h4086 eq h4075 u4084 eq    |
+|               | x4074 x4097 eq x4074 h4090 eq h4101 u4089 eq x4097 h4090 eq h4096 x4088 eq x4095 |
+|               | x4102 eq x4095 h4094 eq h4106 x4093 eq x4102 h4073 eq h4070 e4072 eq e4067 x4050 |
+|               | eq x4048 h4058 eq h4054 u4057 eq x4050 h4058 eq h4047 u4056 eq x4046 h4070 eq    |
+|               | h4047 i4069 eq x4046 h4094 eq h4047 u4092 eq x4046 > ]                           |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h4047                                                                     |
+|               |   INDEX: x4046                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4047 ARG0: e4091 ARG1: x4046 ARG2: x4088 ]           |
+|               |           [ def_implicit_q LBL: h4105 ARG0: x4088 RSTR: h4103 BODY: h4104 ]      |
+|               |           [ _north_a_1 LBL: h4090 ARG0: i4087 ARG1: x4088 ARG2: x4074 ]          |
+|               |           [ def_udef_a_q LBL: h4100 ARG0: x4074 RSTR: h4098 BODY: h4099 ]        |
+|               |           [ compound LBL: h4075 ARG0: e4083 [ e PROG: - ] ARG1: x4074 ARG2:      |
+|               | x4076 ]                                                                          |
+|               |           [ udef_q LBL: h4081 ARG0: x4076 RSTR: h4079 BODY: h4080 ]              |
+|               |           [ _front_n_1 LBL: h4077 ARG0: x4076 ]                                  |
+|               |           [ _door_n_1 LBL: h4075 ARG0: x4074 ]                                   |
+|               |           [ place_n LBL: h4090 ARG0: x4088 ]                                     |
+|               |           [ _un-_a_neg LBL: h4047 ARG0: i4071 ARG1: e4067 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4047 ARG0: e4067 ARG1: u4068 ARG2: x4046 ]           |
+|               |           [ compound LBL: h4047 ARG0: e4055 [ e PROG: - ] ARG1: x4046 ARG2:      |
+|               | x4048 ]                                                                          |
+|               |           [ udef_q LBL: h4053 ARG0: x4048 RSTR: h4051 BODY: h4052 ]              |
+|               |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|               |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|               |   HCONS: < h4079 qeq h4077 h4098 qeq h4075 h4103 qeq h4090 h4051 qeq h4049 >     |
+|               |   ICONS: < e4067 topic x4046 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h4115                                                                     |
+|               |   INDEX: e4112                                                                   |
+|               |   RELS: < [ unknown LBL: h4111 ARG: x4046 ARG0: e4112 ]                          |
+|               |           [ def_udef_a_q LBL: h4110 ARG0: x4046 RSTR: h4108 BODY: h4109 ]        |
+|               |           [ loc_nonsp LBL: h4047 ARG0: e4091 ARG1: x4046 ARG2: x4088 ]           |
+|               |           [ def_implicit_q LBL: h4105 ARG0: x4088 RSTR: h4103 BODY: h4104 ]      |
+|               |           [ _north_a_1 LBL: h4090 ARG0: i4087 ARG1: x4088 ARG2: x4074 ]          |
+|               |           [ def_udef_a_q LBL: h4100 ARG0: x4074 RSTR: h4098 BODY: h4099 ]        |
+|               |           [ compound LBL: h4075 ARG0: e4083 [ e PROG: - ] ARG1: x4074 ARG2:      |
+|               | x4076 ]                                                                          |
+|               |           [ udef_q LBL: h4081 ARG0: x4076 RSTR: h4079 BODY: h4080 ]              |
+|               |           [ _front_n_1 LBL: h4077 ARG0: x4076 ]                                  |
+|               |           [ _door_n_1 LBL: h4075 ARG0: x4074 ]                                   |
+|               |           [ place_n LBL: h4090 ARG0: x4088 ]                                     |
+|               |           [ _un-_a_neg LBL: h4047 ARG0: i4071 ARG1: e4067 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4047 ARG0: e4067 ARG1: u4068 ARG2: x4046 ]           |
+|               |           [ compound LBL: h4047 ARG0: e4055 [ e PROG: - ] ARG1: x4046 ARG2:      |
+|               | x4048 ]                                                                          |
+|               |           [ udef_q LBL: h4053 ARG0: x4048 RSTR: h4051 BODY: h4052 ]              |
+|               |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|               |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|               |   HCONS: < h4079 qeq h4077 h4098 qeq h4075 h4103 qeq h4090 h4051 qeq h4049 h4108 |
+|               | qeq h4047 h4115 qeq h4111 >                                                      |
+|               |   ICONS: < e4067 topic x4046 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           NODE SEMENTS                                          |
++--------------+----------------------------------------------------------------------------------+
+| Node         | Generated SEMENT                                                                 |
++--------------+----------------------------------------------------------------------------------+
+| idCardKey1   | [ TOP: h4047                                                                     |
+|              |   INDEX: x4046                                                                   |
+|              |   RELS: < [ compound LBL: h4058 ARG0: e4055 [ e PROG: - ] ARG1: u4056 ARG2:      |
+|              | u4057 ]                                                                          |
+|              |           [ udef_q LBL: h4053 ARG0: x4050 RSTR: h4051 BODY: h4052 ]              |
+|              |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|              |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|              |   HCONS: < h4051 qeq h4049 >                                                     |
+|              |   EQS: < x4050 eq x4048 h4058 eq h4054 u4057 eq x4050 h4058 eq h4047 u4056 eq    |
+|              | x4046 > ]                                                                        |
++--------------+----------------------------------------------------------------------------------+
+| true         | [ TOP: h4062                                                                     |
+|              |   INDEX: e4059                                                                   |
+|              |   RELS: < [ _true_a_of LBL: h4062 ARG0: e4059 ARG1: u4060 ARG2: u4061 ] >        |
+|              |   SLOTS: < ARG1: u4060 ARG2: u4061 > ]                                           |
++--------------+----------------------------------------------------------------------------------+
+| idFrontDoor1 | [ TOP: h4075                                                                     |
+|              |   INDEX: x4074                                                                   |
+|              |   RELS: < [ compound LBL: h4086 ARG0: e4083 [ e PROG: - ] ARG1: u4084 ARG2:      |
+|              | u4085 ]                                                                          |
+|              |           [ udef_q LBL: h4081 ARG0: x4078 RSTR: h4079 BODY: h4080 ]              |
+|              |           [ _front_n_1 LBL: h4077 ARG0: x4076 ]                                  |
+|              |           [ _door_n_1 LBL: h4075 ARG0: x4074 ] >                                 |
+|              |   HCONS: < h4079 qeq h4077 >                                                     |
+|              |   EQS: < x4078 eq x4076 h4086 eq h4082 u4085 eq x4078 h4086 eq h4075 u4084 eq    |
+|              | x4074 > ]                                                                        |
++--------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE SEMENTS                                                                  |
++---------------------------------+------------+--------------+----------------------------------------------------------------------------------+
+| Edge                            | Parent     | Child        | Generated SEMENT                                                                 |
++---------------------------------+------------+--------------+----------------------------------------------------------------------------------+
+| idCardKey1_prop_idUnknownObject | idCardKey1 | true         | [ TOP: h4047                                                                     |
+|                                 |            |              |   INDEX: x4046                                                                   |
+|                                 |            |              |   RELS: < [ _un-_a_neg LBL: h4073 ARG0: i4071 ARG1: e4072 ]                      |
+|                                 |            |              |           [ _know_v_1 LBL: h4070 ARG0: e4067 [ e PERF: - ] ARG1: u4068 ARG2:     |
+|                                 |            |              | i4069 ]                                                                          |
+|                                 |            |              |           [ compound LBL: h4058 ARG0: e4055 [ e PROG: - ] ARG1: u4056 ARG2:      |
+|                                 |            |              | u4057 ]                                                                          |
+|                                 |            |              |           [ udef_q LBL: h4053 ARG0: x4050 RSTR: h4051 BODY: h4052 ]              |
+|                                 |            |              |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|                                 |            |              |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|                                 |            |              |   HCONS: < h4051 qeq h4049 >                                                     |
+|                                 |            |              |   ICONS: < e4067 topic i4069 >                                                   |
+|                                 |            |              |   EQS: < h4073 eq h4070 e4072 eq e4067 x4050 eq x4048 h4058 eq h4054 u4057 eq    |
+|                                 |            |              | x4050 h4058 eq h4047 u4056 eq x4046 h4070 eq h4047 i4069 eq x4046 > ]            |
++---------------------------------+------------+--------------+----------------------------------------------------------------------------------+
+| isNorthOf                       | idCardKey1 | idFrontDoor1 | [ TOP: h4047                                                                     |
+|                                 |            |              |   INDEX: x4046                                                                   |
+|                                 |            |              |   RELS: < [ loc_nonsp LBL: h4094 ARG0: e4091 ARG1: u4092 ARG2: x4093 ]           |
+|                                 |            |              |           [ def_implicit_q LBL: h4105 ARG0: x4102 RSTR: h4103 BODY: h4104 ]      |
+|                                 |            |              |           [ _north_a_1 LBL: h4090 ARG0: i4087 ARG1: x4088 ARG2: u4089 ]          |
+|                                 |            |              |           [ def_udef_a_q LBL: h4100 ARG0: x4097 RSTR: h4098 BODY: h4099 ]        |
+|                                 |            |              |           [ compound LBL: h4086 ARG0: e4083 [ e PROG: - ] ARG1: u4084 ARG2:      |
+|                                 |            |              | u4085 ]                                                                          |
+|                                 |            |              |           [ udef_q LBL: h4081 ARG0: x4078 RSTR: h4079 BODY: h4080 ]              |
+|                                 |            |              |           [ _front_n_1 LBL: h4077 ARG0: x4076 ]                                  |
+|                                 |            |              |           [ _door_n_1 LBL: h4075 ARG0: x4074 ]                                   |
+|                                 |            |              |           [ place_n LBL: h4096 ARG0: x4095 ]                                     |
+|                                 |            |              |           [ _un-_a_neg LBL: h4073 ARG0: i4071 ARG1: e4072 ]                      |
+|                                 |            |              |           [ _know_v_1 LBL: h4070 ARG0: e4067 [ e PERF: - ] ARG1: u4068 ARG2:     |
+|                                 |            |              | i4069 ]                                                                          |
+|                                 |            |              |           [ compound LBL: h4058 ARG0: e4055 [ e PROG: - ] ARG1: u4056 ARG2:      |
+|                                 |            |              | u4057 ]                                                                          |
+|                                 |            |              |           [ udef_q LBL: h4053 ARG0: x4050 RSTR: h4051 BODY: h4052 ]              |
+|                                 |            |              |           [ _key_n_1 LBL: h4049 ARG0: x4048 ]                                    |
+|                                 |            |              |           [ _card_n_1 LBL: h4047 ARG0: x4046 ] >                                 |
+|                                 |            |              |   HCONS: < h4079 qeq h4077 h4098 qeq h4075 h4103 qeq h4096 h4051 qeq h4049 >     |
+|                                 |            |              |   ICONS: < e4067 topic i4069 >                                                   |
+|                                 |            |              |   EQS: < x4078 eq x4076 h4086 eq h4082 u4085 eq x4078 h4086 eq h4075 u4084 eq    |
+|                                 |            |              | x4074 x4097 eq x4074 h4090 eq h4101 u4089 eq x4097 h4090 eq h4096 x4088 eq x4095 |
+|                                 |            |              | x4102 eq x4095 h4094 eq h4106 x4093 eq x4102 h4073 eq h4070 e4072 eq e4067 x4050 |
+|                                 |            |              | eq x4048 h4058 eq h4054 u4057 eq x4050 h4058 eq h4047 u4056 eq x4046 h4070 eq    |
+|                                 |            |              | h4047 i4069 eq x4046 h4094 eq h4047 u4092 eq x4046 > ]                           |
++---------------------------------+------------+--------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------+
+|                 GENERATED ENGLISH TEXT                 |
++-----+--------------------------------------------------+
+| #   | Generated Text                                   |
++-----+--------------------------------------------------+
+| 1   | A keys unknown card north of a front door        |
+| 2   | A keys unknown card north of a front door.       |
+| 3   | A keys unknown card north of front doors         |
+| 4   | A keys unknown card north of front doors.        |
+| 5   | A keys unknown card north of the front door      |
+| 6   | A keys unknown card north of the front door.     |
+| 7   | A keys unknown card north of the front doors     |
+| 8   | A keys unknown card north of the front doors.    |
+| 9   | A keys unknown card, north of a front door       |
+| 10  | A keys unknown card, north of front doors        |
+| 11  | A keys unknown card, north of the front door     |
+| 12  | A keys unknown card, north of the front doors    |
+| 13  | An unknown key card north of a front door        |
+| 14  | An unknown key card north of a front door.       |
+| 15  | An unknown key card north of front doors         |
+| 16  | An unknown key card north of front doors.        |
+| 17  | An unknown key card north of the front door      |
+| 18  | An unknown key card north of the front door.     |
+| 19  | An unknown key card north of the front doors     |
+| 20  | An unknown key card north of the front doors.    |
+| 21  | An unknown key card, north of a front door       |
+| 22  | An unknown key card, north of front doors        |
+| 23  | An unknown key card, north of the front door     |
+| 24  | An unknown key card, north of the front doors    |
+| 25  | Keys unknown card north of a front door          |
+| 26  | Keys unknown card north of a front door.         |
+| 27  | Keys unknown card north of front doors           |
+| 28  | Keys unknown card north of front doors.          |
+| 29  | Keys unknown card north of the front door        |
+| 30  | Keys unknown card north of the front door.       |
+| 31  | Keys unknown card north of the front doors       |
+| 32  | Keys unknown card north of the front doors.      |
+| 33  | Keys unknown card, north of a front door         |
+| 34  | Keys unknown card, north of front doors          |
+| 35  | Keys unknown card, north of the front door       |
+| 36  | Keys unknown card, north of the front doors      |
+| 37  | Keys unknown cards north of a front door         |
+| 38  | Keys unknown cards north of a front door.        |
+| 39  | Keys unknown cards north of front doors          |
+| 40  | Keys unknown cards north of front doors.         |
+| 41  | Keys unknown cards north of the front door       |
+| 42  | Keys unknown cards north of the front door.      |
+| 43  | Keys unknown cards north of the front doors      |
+| 44  | Keys unknown cards north of the front doors.     |
+| 45  | Keys unknown cards, north of a front door        |
+| 46  | Keys unknown cards, north of front doors         |
+| 47  | Keys unknown cards, north of the front door      |
+| 48  | Keys unknown cards, north of the front doors     |
+| 49  | The keys unknown card north of a front door      |
+| 50  | The keys unknown card north of a front door.     |
+| 51  | The keys unknown card north of front doors       |
+| 52  | The keys unknown card north of front doors.      |
+| 53  | The keys unknown card north of the front door    |
+| 54  | The keys unknown card north of the front door.   |
+| 55  | The keys unknown card north of the front doors   |
+| 56  | The keys unknown card north of the front doors.  |
+| 57  | The keys unknown card, north of a front door     |
+| 58  | The keys unknown card, north of front doors      |
+| 59  | The keys unknown card, north of the front door   |
+| 60  | The keys unknown card, north of the front doors  |
+| 61  | The keys unknown cards north of a front door     |
+| 62  | The keys unknown cards north of a front door.    |
+| 63  | The keys unknown cards north of front doors      |
+| 64  | The keys unknown cards north of front doors.     |
+| 65  | The keys unknown cards north of the front door   |
+| 66  | The keys unknown cards north of the front door.  |
+| 67  | The keys unknown cards north of the front doors  |
+| 68  | The keys unknown cards north of the front doors. |
+| 69  | The keys unknown cards, north of a front door    |
+| 70  | The keys unknown cards, north of front doors     |
+| 71  | The keys unknown cards, north of the front door  |
+| 72  | The keys unknown cards, north of the front doors |
+| 73  | The unknown key card north of a front door       |
+| 74  | The unknown key card north of a front door.      |
+| 75  | The unknown key card north of front doors        |
+| 76  | The unknown key card north of front doors.       |
+| 77  | The unknown key card north of the front door     |
+| 78  | The unknown key card north of the front door.    |
+| 79  | The unknown key card north of the front doors    |
+| 80  | The unknown key card north of the front doors.   |
+| 81  | The unknown key card, north of a front door      |
+| 82  | The unknown key card, north of front doors       |
+| 83  | The unknown key card, north of the front door    |
+| 84  | The unknown key card, north of the front doors   |
+| 85  | The unknown key cards north of a front door      |
+| 86  | The unknown key cards north of a front door.     |
+| 87  | The unknown key cards north of front doors       |
+| 88  | The unknown key cards north of front doors.      |
+| 89  | The unknown key cards north of the front door    |
+| 90  | The unknown key cards north of the front door.   |
+| 91  | The unknown key cards north of the front doors   |
+| 92  | The unknown key cards north of the front doors.  |
+| 93  | The unknown key cards, north of a front door     |
+| 94  | The unknown key cards, north of front doors      |
+| 95  | The unknown key cards, north of the front door   |
+| 96  | The unknown key cards, north of the front doors  |
+| 97  | Unknown key card north of a front door           |
+| 98  | Unknown key card north of a front door.          |
+| 99  | Unknown key card north of front doors            |
+| 100 | Unknown key card north of front doors.           |
+| 101 | Unknown key card north of the front door         |
+| 102 | Unknown key card north of the front door.        |
+| 103 | Unknown key card north of the front doors        |
+| 104 | Unknown key card north of the front doors.       |
+| 105 | Unknown key card, north of a front door          |
+| 106 | Unknown key card, north of front doors           |
+| 107 | Unknown key card, north of the front door        |
+| 108 | Unknown key card, north of the front doors       |
+| 109 | Unknown key cards north of a front door          |
+| 110 | Unknown key cards north of a front door.         |
+| 111 | Unknown key cards north of front doors           |
+| 112 | Unknown key cards north of front doors.          |
+| 113 | Unknown key cards north of the front door        |
+| 114 | Unknown key cards north of the front door.       |
+| 115 | Unknown key cards north of the front doors       |
+| 116 | Unknown key cards north of the front doors.      |
+| 117 | Unknown key cards, north of a front door         |
+| 118 | Unknown key cards, north of front doors          |
+| 119 | Unknown key cards, north of the front door       |
+| 120 | Unknown key cards, north of the front doors      |
++-----+--------------------------------------------------+
+

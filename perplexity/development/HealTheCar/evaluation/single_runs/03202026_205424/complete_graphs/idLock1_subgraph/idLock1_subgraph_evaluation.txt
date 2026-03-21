@@ -1,0 +1,255 @@
+GRAPH NAME: idLock1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 75    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-----------------------------------------------------+
+|                     GOLD OUTPUTS                    |
++----------------------------------------+------------+
+| Gold Output                            | Generated? |
++----------------------------------------+------------+
+| the locked lock east of the angry bear | True       |
++----------------------------------------+------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE METRICS                                 |
++---------+--------------+---------------+------------------+-------------------+
+| Node    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------+--------------+---------------+------------------+-------------------+
+| idLock1 | True         | True          | Covered          | Included          |
+| locked  | True         | True          | Covered          | Included          |
+| idBear1 | True         | True          | Covered          | Included          |
+| angry   | True         | True          | Covered          | Included          |
++---------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent  | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | True         | True          | Covered          | Included          |
+| isEastOf                   | idLock1 | idBear1 | True         | True          | Covered          | Included          |
+| idBear1_prop_idDescriptor  | idBear1 | angry   | True         | True          | Covered          | Included          |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h592                                                                      |
+|               |   INDEX: x591                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h610 ARG0: e607 ARG1: u608 ARG2: x609 ]               |
+|               |           [ def_implicit_q LBL: h621 ARG0: x618 RSTR: h619 BODY: h620 ]          |
+|               |           [ _east_a_1 LBL: h606 ARG0: i603 ARG1: x604 ARG2: u605 ]               |
+|               |           [ def_udef_a_q LBL: h616 ARG0: x613 RSTR: h614 BODY: h615 ]            |
+|               |           [ _angry_a_at LBL: h602 ARG0: e599 ARG1: u600 ARG2: u601 ]             |
+|               |           [ _bear_n_1 LBL: h598 ARG0: x597 ]                                     |
+|               |           [ place_n LBL: h612 ARG0: x611 ]                                       |
+|               |           [ _lock_v_cause LBL: h596 ARG0: e593 [ e PERF: - ] ARG1: i594 ARG2:    |
+|               | i595 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h592 ARG0: x591 ] >                                   |
+|               |   HCONS: < h614 qeq h598 h619 qeq h612 >                                         |
+|               |   ICONS: < e593 topic i595 >                                                     |
+|               |   EQS: < h602 eq h598 u600 eq x597 x613 eq x597 h606 eq h617 u605 eq x613 h606   |
+|               | eq h612 x604 eq x611 x618 eq x611 h610 eq h622 x609 eq x618 h596 eq h592 i595 eq |
+|               | x591 h610 eq h592 u608 eq x591 > ]                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h592                                                                      |
+|               |   INDEX: x591                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h592 ARG0: e607 ARG1: x591 ARG2: x604 ]               |
+|               |           [ def_implicit_q LBL: h621 ARG0: x604 RSTR: h619 BODY: h620 ]          |
+|               |           [ _east_a_1 LBL: h606 ARG0: i603 ARG1: x604 ARG2: x597 ]               |
+|               |           [ def_udef_a_q LBL: h616 ARG0: x597 RSTR: h614 BODY: h615 ]            |
+|               |           [ _angry_a_at LBL: h598 ARG0: e599 ARG1: x597 ARG2: u601 ]             |
+|               |           [ _bear_n_1 LBL: h598 ARG0: x597 ]                                     |
+|               |           [ place_n LBL: h606 ARG0: x604 ]                                       |
+|               |           [ _lock_v_cause LBL: h592 ARG0: e593 [ e PERF: - ] ARG1: i594 ARG2:    |
+|               | x591 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h592 ARG0: x591 ] >                                   |
+|               |   HCONS: < h614 qeq h598 h619 qeq h606 >                                         |
+|               |   ICONS: < e593 topic x591 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h631                                                                      |
+|               |   INDEX: e628                                                                    |
+|               |   RELS: < [ unknown LBL: h627 ARG: x591 ARG0: e628 ]                             |
+|               |           [ def_udef_a_q LBL: h626 ARG0: x591 RSTR: h624 BODY: h625 ]            |
+|               |           [ loc_nonsp LBL: h592 ARG0: e607 ARG1: x591 ARG2: x604 ]               |
+|               |           [ def_implicit_q LBL: h621 ARG0: x604 RSTR: h619 BODY: h620 ]          |
+|               |           [ _east_a_1 LBL: h606 ARG0: i603 ARG1: x604 ARG2: x597 ]               |
+|               |           [ def_udef_a_q LBL: h616 ARG0: x597 RSTR: h614 BODY: h615 ]            |
+|               |           [ _angry_a_at LBL: h598 ARG0: e599 ARG1: x597 ARG2: u601 ]             |
+|               |           [ _bear_n_1 LBL: h598 ARG0: x597 ]                                     |
+|               |           [ place_n LBL: h606 ARG0: x604 ]                                       |
+|               |           [ _lock_v_cause LBL: h592 ARG0: e593 [ e PERF: - ] ARG1: i594 ARG2:    |
+|               | x591 ]                                                                           |
+|               |           [ _lock_n_1 LBL: h592 ARG0: x591 ] >                                   |
+|               |   HCONS: < h614 qeq h598 h619 qeq h606 h624 qeq h592 h631 qeq h627 >             |
+|               |   ICONS: < e593 topic x591 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                    |
++---------+--------------------------------------------------------------------------+
+| Node    | Generated SEMENT                                                         |
++---------+--------------------------------------------------------------------------+
+| idLock1 | [ TOP: h592                                                              |
+|         |   INDEX: x591                                                            |
+|         |   RELS: < [ _lock_n_1 LBL: h592 ARG0: x591 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| locked  | [ TOP: h596                                                              |
+|         |   INDEX: e593                                                            |
+|         |   RELS: < [ _lock_v_cause LBL: h596 ARG0: e593 ARG1: i594 ARG2: i595 ] > |
+|         |   SLOTS: < ARG1: i594 ARG2: i595 > ]                                     |
++---------+--------------------------------------------------------------------------+
+| idBear1 | [ TOP: h598                                                              |
+|         |   INDEX: x597                                                            |
+|         |   RELS: < [ _bear_n_1 LBL: h598 ARG0: x597 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| angry   | [ TOP: h602                                                              |
+|         |   INDEX: e599                                                            |
+|         |   RELS: < [ _angry_a_at LBL: h602 ARG0: e599 ARG1: u600 ARG2: u601 ] >   |
+|         |   SLOTS: < ARG1: u600 ARG2: u601 > ]                                     |
++---------+--------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| Edge                       | Parent  | Child   | Generated SEMENT                                                                 |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | [ TOP: h592                                                                      |
+|                            |         |         |   INDEX: x591                                                                    |
+|                            |         |         |   RELS: < [ _lock_v_cause LBL: h596 ARG0: e593 [ e PERF: - ] ARG1: i594 ARG2:    |
+|                            |         |         | i595 ]                                                                           |
+|                            |         |         |           [ _lock_n_1 LBL: h592 ARG0: x591 ] >                                   |
+|                            |         |         |   ICONS: < e593 topic i595 >                                                     |
+|                            |         |         |   EQS: < h596 eq h592 i595 eq x591 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| isEastOf                   | idLock1 | idBear1 | [ TOP: h592                                                                      |
+|                            |         |         |   INDEX: x591                                                                    |
+|                            |         |         |   RELS: < [ loc_nonsp LBL: h610 ARG0: e607 ARG1: u608 ARG2: x609 ]               |
+|                            |         |         |           [ def_implicit_q LBL: h621 ARG0: x618 RSTR: h619 BODY: h620 ]          |
+|                            |         |         |           [ _east_a_1 LBL: h606 ARG0: i603 ARG1: x604 ARG2: u605 ]               |
+|                            |         |         |           [ def_udef_a_q LBL: h616 ARG0: x613 RSTR: h614 BODY: h615 ]            |
+|                            |         |         |           [ _angry_a_at LBL: h602 ARG0: e599 ARG1: u600 ARG2: u601 ]             |
+|                            |         |         |           [ _bear_n_1 LBL: h598 ARG0: x597 ]                                     |
+|                            |         |         |           [ place_n LBL: h612 ARG0: x611 ]                                       |
+|                            |         |         |           [ _lock_v_cause LBL: h596 ARG0: e593 [ e PERF: - ] ARG1: i594 ARG2:    |
+|                            |         |         | i595 ]                                                                           |
+|                            |         |         |           [ _lock_n_1 LBL: h592 ARG0: x591 ] >                                   |
+|                            |         |         |   HCONS: < h614 qeq h598 h619 qeq h612 >                                         |
+|                            |         |         |   ICONS: < e593 topic i595 >                                                     |
+|                            |         |         |   EQS: < h602 eq h598 u600 eq x597 x613 eq x597 h606 eq h617 u605 eq x613 h606   |
+|                            |         |         | eq h612 x604 eq x611 x618 eq x611 h610 eq h622 x609 eq x618 h596 eq h592 i595 eq |
+|                            |         |         | x591 h610 eq h592 u608 eq x591 > ]                                               |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idBear1_prop_idDescriptor  | idBear1 | angry   | [ TOP: h598                                                                      |
+|                            |         |         |   INDEX: x597                                                                    |
+|                            |         |         |   RELS: < [ _angry_a_at LBL: h602 ARG0: e599 ARG1: u600 ARG2: u601 ]             |
+|                            |         |         |           [ _bear_n_1 LBL: h598 ARG0: x597 ] >                                   |
+|                            |         |         |   EQS: < h602 eq h598 u600 eq x597 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+
++------------------------------------------------+
+|             GENERATED ENGLISH TEXT             |
++----+-------------------------------------------+
+| #  | Generated Text                            |
++----+-------------------------------------------+
+| 1  | A locked lock east of an angry bear       |
+| 2  | A locked lock east of an angry bear.      |
+| 3  | A locked lock east of angry bear          |
+| 4  | A locked lock east of angry bear.         |
+| 5  | A locked lock east of angry bears         |
+| 6  | A locked lock east of angry bears.        |
+| 7  | A locked lock east of the angry bear      |
+| 8  | A locked lock east of the angry bear.     |
+| 9  | A locked lock east of the angry bears     |
+| 10 | A locked lock east of the angry bears.    |
+| 11 | A locked lock, east of an angry bear      |
+| 12 | A locked lock, east of angry bear         |
+| 13 | A locked lock, east of angry bears        |
+| 14 | A locked lock, east of the angry bear     |
+| 15 | A locked lock, east of the angry bears    |
+| 16 | Locked lock east of an angry bear         |
+| 17 | Locked lock east of an angry bear.        |
+| 18 | Locked lock east of angry bear            |
+| 19 | Locked lock east of angry bear.           |
+| 20 | Locked lock east of angry bears           |
+| 21 | Locked lock east of angry bears.          |
+| 22 | Locked lock east of the angry bear        |
+| 23 | Locked lock east of the angry bear.       |
+| 24 | Locked lock east of the angry bears       |
+| 25 | Locked lock east of the angry bears.      |
+| 26 | Locked lock, east of an angry bear        |
+| 27 | Locked lock, east of angry bear           |
+| 28 | Locked lock, east of angry bears          |
+| 29 | Locked lock, east of the angry bear       |
+| 30 | Locked lock, east of the angry bears      |
+| 31 | Locked locks east of an angry bear        |
+| 32 | Locked locks east of an angry bear.       |
+| 33 | Locked locks east of angry bear           |
+| 34 | Locked locks east of angry bear.          |
+| 35 | Locked locks east of angry bears          |
+| 36 | Locked locks east of angry bears.         |
+| 37 | Locked locks east of the angry bear       |
+| 38 | Locked locks east of the angry bear.      |
+| 39 | Locked locks east of the angry bears      |
+| 40 | Locked locks east of the angry bears.     |
+| 41 | Locked locks, east of an angry bear       |
+| 42 | Locked locks, east of angry bear          |
+| 43 | Locked locks, east of angry bears         |
+| 44 | Locked locks, east of the angry bear      |
+| 45 | Locked locks, east of the angry bears     |
+| 46 | The locked lock east of an angry bear     |
+| 47 | The locked lock east of an angry bear.    |
+| 48 | The locked lock east of angry bear        |
+| 49 | The locked lock east of angry bear.       |
+| 50 | The locked lock east of angry bears       |
+| 51 | The locked lock east of angry bears.      |
+| 52 | The locked lock east of the angry bear    |
+| 53 | The locked lock east of the angry bear.   |
+| 54 | The locked lock east of the angry bears   |
+| 55 | The locked lock east of the angry bears.  |
+| 56 | The locked lock, east of an angry bear    |
+| 57 | The locked lock, east of angry bear       |
+| 58 | The locked lock, east of angry bears      |
+| 59 | The locked lock, east of the angry bear   |
+| 60 | The locked lock, east of the angry bears  |
+| 61 | The locked locks east of an angry bear    |
+| 62 | The locked locks east of an angry bear.   |
+| 63 | The locked locks east of angry bear       |
+| 64 | The locked locks east of angry bear.      |
+| 65 | The locked locks east of angry bears      |
+| 66 | The locked locks east of angry bears.     |
+| 67 | The locked locks east of the angry bear   |
+| 68 | The locked locks east of the angry bear.  |
+| 69 | The locked locks east of the angry bears  |
+| 70 | The locked locks east of the angry bears. |
+| 71 | The locked locks, east of an angry bear   |
+| 72 | The locked locks, east of angry bear      |
+| 73 | The locked locks, east of angry bears     |
+| 74 | The locked locks, east of the angry bear  |
+| 75 | The locked locks, east of the angry bears |
++----+-------------------------------------------+
+

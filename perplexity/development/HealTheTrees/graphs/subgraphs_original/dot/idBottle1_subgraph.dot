@@ -1,0 +1,19 @@
+strict digraph {
+idBottle1 [node_type="entity_node", root=root, lexicon_key=idBottle];
+broken [lexicon_key=broken];
+sharp [lexicon_key=sharp];
+brown [lexicon_key=brown];
+idPlayer [lexicon_key=idPlayer];
+false [lexicon_key=false];
+idRockPile1 [lexicon_key=idRockPile];
+yes [lexicon_key=yes];
+bumpy [lexicon_key=bumpy];
+idBottle1 -> broken [label="idBottle1_prop_idIntegrity", edge_type=property, lexicon_key=idIntegrity];
+idBottle1 -> sharp [label="idBottle1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idBottle1 -> brown [label="idBottle1_prop_idColor", edge_type=property, lexicon_key=idColor];
+idBottle1 -> idPlayer [label=isWestOf, edge_type=relationship, lexicon_key=isWestOf];
+idBottle1 -> idRockPile1 [label=isNear, edge_type=relationship, lexicon_key=isNear];
+idPlayer -> false [label="idPlayer_prop_idBottleFound", edge_type=property, lexicon_key=idBottleFound];
+idRockPile1 -> yes [label="idRockPile1_prop_idImmovable", edge_type=property, lexicon_key=idImmovable];
+idRockPile1 -> bumpy [label="idRockPile1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+}

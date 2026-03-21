@@ -1,0 +1,15 @@
+strict digraph {
+idCar1 [node_type="entity_node", root=root, lexicon_key=idCar];
+black [lexicon_key=black];
+old [lexicon_key=old];
+yes [lexicon_key=yes];
+idTaillight1 [lexicon_key=idTaillight];
+unlit [lexicon_key=unlit];
+idSpill1 [lexicon_key=idSpill];
+idCar1 -> black [label="idCar1_prop_idColor", edge_type=property, lexicon_key=idColor];
+idCar1 -> old [label="idCar1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idCar1 -> yes [label="idCar1_prop_idImmovable", edge_type=property, lexicon_key=idImmovable];
+idCar1 -> idTaillight1 [label=isEastOf, edge_type=relationship, lexicon_key=isEastOf];
+idTaillight1 -> unlit [label="idTaillight1_prop_idLitState", edge_type=property, lexicon_key=idLitState];
+idTaillight1 -> idSpill1 [label=isWestOf, edge_type=relationship, lexicon_key=isWestOf];
+}

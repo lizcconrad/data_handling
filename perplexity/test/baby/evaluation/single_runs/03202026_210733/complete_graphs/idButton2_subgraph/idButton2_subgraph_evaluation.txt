@@ -1,0 +1,783 @@
+GRAPH NAME: idButton2_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 531   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------------------------------+
+|                                          GOLD OUTPUTS                                          |
++-----------------------------------------------------------------------------------+------------+
+| Gold Output                                                                       | Generated? |
++-----------------------------------------------------------------------------------+------------+
+| the unknown second button west of the closed door from the closet to the workshop | True       |
++-----------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                         |
++------------------------+--------------+---------------+------------------+-------------------+
+| Node                   | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------------+--------------+---------------+------------------+-------------------+
+| idButton2              | True         | True          | Covered          | Included          |
+| 2                      | True         | True          | Covered          | Included          |
+| true                   | True         | True          | Covered          | Included          |
+| idClosetToWorkshopDoor | True         | True          | Covered          | Included          |
+| closed                 | True         | True          | Covered          | Included          |
++------------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                           EDGE METRICS                                                                          |
++-----------------------------------------+------------------------+------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                    | Parent                 | Child                  | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------------------+------------------------+------------------------+--------------+---------------+------------------+-------------------+
+| idButton2_prop_idOrdinality             | idButton2              | 2                      | True         | True          | Covered          | Included          |
+| idButton2_prop_idUnknownObject          | idButton2              | true                   | True         | True          | Covered          | Included          |
+| isWestOf                                | idButton2              | idClosetToWorkshopDoor | True         | True          | Covered          | Included          |
+| idClosetToWorkshopDoor_prop_idOpenState | idClosetToWorkshopDoor | closed                 | True         | True          | Covered          | Included          |
++-----------------------------------------+------------------------+------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1577                                                                     |
+|               |   INDEX: x1576                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1633 ARG0: e1630 ARG1: u1631 ARG2: x1632 ]           |
+|               |           [ def_implicit_q LBL: h1644 ARG0: x1641 RSTR: h1642 BODY: h1643 ]      |
+|               |           [ _west_a_1 LBL: h1629 ARG0: i1626 ARG1: x1627 ARG2: u1628 ]           |
+|               |           [ def_udef_a_q LBL: h1639 ARG0: x1636 RSTR: h1637 BODY: h1638 ]        |
+|               |           [ _closed_a_1 LBL: h1625 ARG0: e1623 ARG1: u1624 ]                     |
+|               |           [ _to_p LBL: h1617 ARG0: e1614 ARG1: u1615 ARG2: i1616 ]               |
+|               |           [ def_udef_a_q LBL: h1621 ARG0: x1618 RSTR: h1619 BODY: h1620 ]        |
+|               |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|               |           [ _from_p LBL: h1606 ARG0: e1603 ARG1: u1604 ARG2: u1605 ]             |
+|               |           [ def_udef_a_q LBL: h1610 ARG0: x1607 RSTR: h1608 BODY: h1609 ]        |
+|               |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|               |           [ _door_n_1 LBL: h1600 ARG0: x1599 ]                                   |
+|               |           [ place_n LBL: h1635 ARG0: x1634 ]                                     |
+|               |           [ _un-_a_neg LBL: h1598 ARG0: i1596 ARG1: e1597 ]                      |
+|               |           [ _know_v_1 LBL: h1595 ARG0: e1592 [ e PERF: - ] ARG1: u1593 ARG2:     |
+|               | i1594 ]                                                                          |
+|               |           [ ord LBL: h1583 ARG0: i1581 ARG1: u1582 CARG: "2" ]                   |
+|               |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|               |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 h1637 qeq h1600 h1642 qeq h1635 >     |
+|               |   ICONS: < e1592 topic i1594 >                                                   |
+|               |   EQS: < x1618 eq x1612 h1617 eq h1622 i1616 eq x1618 x1607 eq x1601 h1606 eq    |
+|               | h1611 u1605 eq x1607 h1606 eq h1600 u1604 eq x1599 h1617 eq h1600 u1615 eq x1599 |
+|               | h1625 eq h1600 u1624 eq x1599 x1636 eq x1599 h1629 eq h1640 u1628 eq x1636 h1629 |
+|               | eq h1635 x1627 eq x1634 x1641 eq x1634 h1633 eq h1645 x1632 eq x1641 h1598 eq    |
+|               | h1595 e1597 eq e1592 h1583 eq h1577 u1582 eq x1576 h1595 eq h1577 i1594 eq x1576 |
+|               | h1633 eq h1577 u1631 eq x1576 > ]                                                |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1577                                                                     |
+|               |   INDEX: x1576                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1577 ARG0: e1630 ARG1: x1576 ARG2: x1627 ]           |
+|               |           [ def_implicit_q LBL: h1644 ARG0: x1627 RSTR: h1642 BODY: h1643 ]      |
+|               |           [ _west_a_1 LBL: h1629 ARG0: i1626 ARG1: x1627 ARG2: x1599 ]           |
+|               |           [ def_udef_a_q LBL: h1639 ARG0: x1599 RSTR: h1637 BODY: h1638 ]        |
+|               |           [ _closed_a_1 LBL: h1600 ARG0: e1623 ARG1: x1599 ]                     |
+|               |           [ _to_p LBL: h1600 ARG0: e1614 ARG1: x1599 ARG2: x1612 ]               |
+|               |           [ def_udef_a_q LBL: h1621 ARG0: x1612 RSTR: h1619 BODY: h1620 ]        |
+|               |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|               |           [ _from_p LBL: h1600 ARG0: e1603 ARG1: x1599 ARG2: x1601 ]             |
+|               |           [ def_udef_a_q LBL: h1610 ARG0: x1601 RSTR: h1608 BODY: h1609 ]        |
+|               |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|               |           [ _door_n_1 LBL: h1600 ARG0: x1599 ]                                   |
+|               |           [ place_n LBL: h1629 ARG0: x1627 ]                                     |
+|               |           [ _un-_a_neg LBL: h1577 ARG0: i1596 ARG1: e1592 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1577 ARG0: e1592 ARG1: u1593 ARG2: x1576 ]           |
+|               |           [ ord LBL: h1577 ARG0: i1581 ARG1: x1576 CARG: "2" ]                   |
+|               |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|               |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 h1637 qeq h1600 h1642 qeq h1629 >     |
+|               |   ICONS: < e1592 topic x1576 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1654                                                                     |
+|               |   INDEX: e1651                                                                   |
+|               |   RELS: < [ unknown LBL: h1650 ARG: x1576 ARG0: e1651 ]                          |
+|               |           [ def_udef_a_q LBL: h1649 ARG0: x1576 RSTR: h1647 BODY: h1648 ]        |
+|               |           [ loc_nonsp LBL: h1577 ARG0: e1630 ARG1: x1576 ARG2: x1627 ]           |
+|               |           [ def_implicit_q LBL: h1644 ARG0: x1627 RSTR: h1642 BODY: h1643 ]      |
+|               |           [ _west_a_1 LBL: h1629 ARG0: i1626 ARG1: x1627 ARG2: x1599 ]           |
+|               |           [ def_udef_a_q LBL: h1639 ARG0: x1599 RSTR: h1637 BODY: h1638 ]        |
+|               |           [ _closed_a_1 LBL: h1600 ARG0: e1623 ARG1: x1599 ]                     |
+|               |           [ _to_p LBL: h1600 ARG0: e1614 ARG1: x1599 ARG2: x1612 ]               |
+|               |           [ def_udef_a_q LBL: h1621 ARG0: x1612 RSTR: h1619 BODY: h1620 ]        |
+|               |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|               |           [ _from_p LBL: h1600 ARG0: e1603 ARG1: x1599 ARG2: x1601 ]             |
+|               |           [ def_udef_a_q LBL: h1610 ARG0: x1601 RSTR: h1608 BODY: h1609 ]        |
+|               |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|               |           [ _door_n_1 LBL: h1600 ARG0: x1599 ]                                   |
+|               |           [ place_n LBL: h1629 ARG0: x1627 ]                                     |
+|               |           [ _un-_a_neg LBL: h1577 ARG0: i1596 ARG1: e1592 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1577 ARG0: e1592 ARG1: u1593 ARG2: x1576 ]           |
+|               |           [ ord LBL: h1577 ARG0: i1581 ARG1: x1576 CARG: "2" ]                   |
+|               |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|               |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 h1637 qeq h1600 h1642 qeq h1629 h1647 |
+|               | qeq h1577 h1654 qeq h1650 >                                                      |
+|               |   ICONS: < e1592 topic x1576 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                               |
++------------------------+----------------------------------------------------------------------------------+
+| Node                   | Generated SEMENT                                                                 |
++------------------------+----------------------------------------------------------------------------------+
+| idButton2              | [ TOP: h1577                                                                     |
+|                        |   INDEX: x1576                                                                   |
+|                        |   RELS: < [ _button_n_1 LBL: h1577 ARG0: x1576 ] > ]                             |
++------------------------+----------------------------------------------------------------------------------+
+| 2                      | [ TOP: h1580                                                                     |
+|                        |   INDEX: i1578                                                                   |
+|                        |   RELS: < [ card LBL: h1580 ARG0: i1578 ARG1: u1579 CARG: "2" ] >                |
+|                        |   SLOTS: < ARG1: u1579 > ]                                                       |
++------------------------+----------------------------------------------------------------------------------+
+| true                   | [ TOP: h1587                                                                     |
+|                        |   INDEX: e1584                                                                   |
+|                        |   RELS: < [ _true_a_of LBL: h1587 ARG0: e1584 ARG1: u1585 ARG2: u1586 ] >        |
+|                        |   SLOTS: < ARG1: u1585 ARG2: u1586 > ]                                           |
++------------------------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor | [ TOP: h1600                                                                     |
+|                        |   INDEX: x1599                                                                   |
+|                        |   RELS: < [ _to_p LBL: h1617 ARG0: e1614 ARG1: u1615 ARG2: i1616 ]               |
+|                        |           [ def_udef_a_q LBL: h1621 ARG0: x1618 RSTR: h1619 BODY: h1620 ]        |
+|                        |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|                        |           [ _from_p LBL: h1606 ARG0: e1603 ARG1: u1604 ARG2: u1605 ]             |
+|                        |           [ def_udef_a_q LBL: h1610 ARG0: x1607 RSTR: h1608 BODY: h1609 ]        |
+|                        |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|                        |           [ _door_n_1 LBL: h1600 ARG0: x1599 ] >                                 |
+|                        |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 >                                     |
+|                        |   EQS: < x1618 eq x1612 h1617 eq h1622 i1616 eq x1618 x1607 eq x1601 h1606 eq    |
+|                        | h1611 u1605 eq x1607 h1606 eq h1600 u1604 eq x1599 h1617 eq h1600 u1615 eq x1599 |
+|                        | > ]                                                                              |
++------------------------+----------------------------------------------------------------------------------+
+| closed                 | [ TOP: h1625                                                                     |
+|                        |   INDEX: e1623                                                                   |
+|                        |   RELS: < [ _closed_a_1 LBL: h1625 ARG0: e1623 ARG1: u1624 ] >                   |
+|                        |   SLOTS: < ARG1: u1624 > ]                                                       |
++------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE SEMENTS                                                                                 |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| Edge                                    | Parent                 | Child                  | Generated SEMENT                                                                 |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idButton2_prop_idOrdinality             | idButton2              | 2                      | [ TOP: h1577                                                                     |
+|                                         |                        |                        |   INDEX: x1576                                                                   |
+|                                         |                        |                        |   RELS: < [ ord LBL: h1583 ARG0: i1581 ARG1: u1582 CARG: "2" ]                   |
+|                                         |                        |                        |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|                                         |                        |                        |   EQS: < h1583 eq h1577 u1582 eq x1576 > ]                                       |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idButton2_prop_idUnknownObject          | idButton2              | true                   | [ TOP: h1577                                                                     |
+|                                         |                        |                        |   INDEX: x1576                                                                   |
+|                                         |                        |                        |   RELS: < [ _un-_a_neg LBL: h1598 ARG0: i1596 ARG1: e1597 ]                      |
+|                                         |                        |                        |           [ _know_v_1 LBL: h1595 ARG0: e1592 [ e PERF: - ] ARG1: u1593 ARG2:     |
+|                                         |                        |                        | i1594 ]                                                                          |
+|                                         |                        |                        |           [ ord LBL: h1583 ARG0: i1581 ARG1: u1582 CARG: "2" ]                   |
+|                                         |                        |                        |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|                                         |                        |                        |   ICONS: < e1592 topic i1594 >                                                   |
+|                                         |                        |                        |   EQS: < h1598 eq h1595 e1597 eq e1592 h1583 eq h1577 u1582 eq x1576 h1595 eq    |
+|                                         |                        |                        | h1577 i1594 eq x1576 > ]                                                         |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| isWestOf                                | idButton2              | idClosetToWorkshopDoor | [ TOP: h1577                                                                     |
+|                                         |                        |                        |   INDEX: x1576                                                                   |
+|                                         |                        |                        |   RELS: < [ loc_nonsp LBL: h1633 ARG0: e1630 ARG1: u1631 ARG2: x1632 ]           |
+|                                         |                        |                        |           [ def_implicit_q LBL: h1644 ARG0: x1641 RSTR: h1642 BODY: h1643 ]      |
+|                                         |                        |                        |           [ _west_a_1 LBL: h1629 ARG0: i1626 ARG1: x1627 ARG2: u1628 ]           |
+|                                         |                        |                        |           [ def_udef_a_q LBL: h1639 ARG0: x1636 RSTR: h1637 BODY: h1638 ]        |
+|                                         |                        |                        |           [ _closed_a_1 LBL: h1625 ARG0: e1623 ARG1: u1624 ]                     |
+|                                         |                        |                        |           [ _to_p LBL: h1617 ARG0: e1614 ARG1: u1615 ARG2: i1616 ]               |
+|                                         |                        |                        |           [ def_udef_a_q LBL: h1621 ARG0: x1618 RSTR: h1619 BODY: h1620 ]        |
+|                                         |                        |                        |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|                                         |                        |                        |           [ _from_p LBL: h1606 ARG0: e1603 ARG1: u1604 ARG2: u1605 ]             |
+|                                         |                        |                        |           [ def_udef_a_q LBL: h1610 ARG0: x1607 RSTR: h1608 BODY: h1609 ]        |
+|                                         |                        |                        |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|                                         |                        |                        |           [ _door_n_1 LBL: h1600 ARG0: x1599 ]                                   |
+|                                         |                        |                        |           [ place_n LBL: h1635 ARG0: x1634 ]                                     |
+|                                         |                        |                        |           [ _un-_a_neg LBL: h1598 ARG0: i1596 ARG1: e1597 ]                      |
+|                                         |                        |                        |           [ _know_v_1 LBL: h1595 ARG0: e1592 [ e PERF: - ] ARG1: u1593 ARG2:     |
+|                                         |                        |                        | i1594 ]                                                                          |
+|                                         |                        |                        |           [ ord LBL: h1583 ARG0: i1581 ARG1: u1582 CARG: "2" ]                   |
+|                                         |                        |                        |           [ _button_n_1 LBL: h1577 ARG0: x1576 ] >                               |
+|                                         |                        |                        |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 h1637 qeq h1600 h1642 qeq h1635 >     |
+|                                         |                        |                        |   ICONS: < e1592 topic i1594 >                                                   |
+|                                         |                        |                        |   EQS: < x1618 eq x1612 h1617 eq h1622 i1616 eq x1618 x1607 eq x1601 h1606 eq    |
+|                                         |                        |                        | h1611 u1605 eq x1607 h1606 eq h1600 u1604 eq x1599 h1617 eq h1600 u1615 eq x1599 |
+|                                         |                        |                        | h1625 eq h1600 u1624 eq x1599 x1636 eq x1599 h1629 eq h1640 u1628 eq x1636 h1629 |
+|                                         |                        |                        | eq h1635 x1627 eq x1634 x1641 eq x1634 h1633 eq h1645 x1632 eq x1641 h1598 eq    |
+|                                         |                        |                        | h1595 e1597 eq e1592 h1583 eq h1577 u1582 eq x1576 h1595 eq h1577 i1594 eq x1576 |
+|                                         |                        |                        | h1633 eq h1577 u1631 eq x1576 > ]                                                |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor_prop_idOpenState | idClosetToWorkshopDoor | closed                 | [ TOP: h1600                                                                     |
+|                                         |                        |                        |   INDEX: x1599                                                                   |
+|                                         |                        |                        |   RELS: < [ _closed_a_1 LBL: h1625 ARG0: e1623 ARG1: u1624 ]                     |
+|                                         |                        |                        |           [ _to_p LBL: h1617 ARG0: e1614 ARG1: u1615 ARG2: i1616 ]               |
+|                                         |                        |                        |           [ def_udef_a_q LBL: h1621 ARG0: x1618 RSTR: h1619 BODY: h1620 ]        |
+|                                         |                        |                        |           [ _workshop_n_1 LBL: h1613 ARG0: x1612 ]                               |
+|                                         |                        |                        |           [ _from_p LBL: h1606 ARG0: e1603 ARG1: u1604 ARG2: u1605 ]             |
+|                                         |                        |                        |           [ def_udef_a_q LBL: h1610 ARG0: x1607 RSTR: h1608 BODY: h1609 ]        |
+|                                         |                        |                        |           [ _closet_n_1 LBL: h1602 ARG0: x1601 ]                                 |
+|                                         |                        |                        |           [ _door_n_1 LBL: h1600 ARG0: x1599 ] >                                 |
+|                                         |                        |                        |   HCONS: < h1619 qeq h1613 h1608 qeq h1602 >                                     |
+|                                         |                        |                        |   EQS: < x1618 eq x1612 h1617 eq h1622 i1616 eq x1618 x1607 eq x1601 h1606 eq    |
+|                                         |                        |                        | h1611 u1605 eq x1607 h1606 eq h1600 u1604 eq x1599 h1617 eq h1600 u1615 eq x1599 |
+|                                         |                        |                        | h1625 eq h1600 u1624 eq x1599 > ]                                                |
++-----------------------------------------+------------------------+------------------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+|                                    GENERATED ENGLISH TEXT                                    |
++-----+----------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                         |
++-----+----------------------------------------------------------------------------------------+
+| 1   | A second unknown button west of a closed door from a closet to a workshop              |
+| 2   | A second unknown button west of a closed door from a closet to the workshop            |
+| 3   | A second unknown button west of a closed door from a closet to the workshops           |
+| 4   | A second unknown button west of a closed door from a closet to the workshops.          |
+| 5   | A second unknown button west of a closed door from a closet to workshops               |
+| 6   | A second unknown button west of a closed door from closets to a workshop               |
+| 7   | A second unknown button west of a closed door from closets to the workshop             |
+| 8   | A second unknown button west of a closed door from closets to the workshops            |
+| 9   | A second unknown button west of a closed door from closets to the workshops.           |
+| 10  | A second unknown button west of a closed door from closets to workshops                |
+| 11  | A second unknown button west of a closed door from the closet to a workshop            |
+| 12  | A second unknown button west of a closed door from the closet to a workshop.           |
+| 13  | A second unknown button west of a closed door from the closet to the workshop          |
+| 14  | A second unknown button west of a closed door from the closet to the workshop.         |
+| 15  | A second unknown button west of a closed door from the closet to the workshops         |
+| 16  | A second unknown button west of a closed door from the closet to the workshops.        |
+| 17  | A second unknown button west of a closed door from the closet to workshops             |
+| 18  | A second unknown button west of a closed door from the closet to workshops.            |
+| 19  | A second unknown button west of a closed door from the closets to a workshop           |
+| 20  | A second unknown button west of a closed door from the closets to the workshop         |
+| 21  | A second unknown button west of a closed door from the closets to the workshops        |
+| 22  | A second unknown button west of a closed door from the closets to the workshops.       |
+| 23  | A second unknown button west of a closed door to a workshop from a closet              |
+| 24  | A second unknown button west of a closed door to a workshop from a closet.             |
+| 25  | A second unknown button west of a closed door to a workshop from closets               |
+| 26  | A second unknown button west of a closed door to a workshop from the closet            |
+| 27  | A second unknown button west of a closed door to a workshop from the closets           |
+| 28  | A second unknown button west of a closed door to a workshop from the closets.          |
+| 29  | A second unknown button west of a closed door to the workshop from a closet            |
+| 30  | A second unknown button west of a closed door to the workshop from a closet.           |
+| 31  | A second unknown button west of a closed door to the workshop from closets             |
+| 32  | A second unknown button west of a closed door to the workshop from closets.            |
+| 33  | A second unknown button west of a closed door to the workshop from the closet          |
+| 34  | A second unknown button west of a closed door to the workshop from the closet.         |
+| 35  | A second unknown button west of a closed door to the workshop from the closets         |
+| 36  | A second unknown button west of a closed door to the workshop from the closets.        |
+| 37  | A second unknown button west of a closed door to the workshops from a closet           |
+| 38  | A second unknown button west of a closed door to the workshops from closets            |
+| 39  | A second unknown button west of a closed door to the workshops from the closet         |
+| 40  | A second unknown button west of a closed door to the workshops from the closets        |
+| 41  | A second unknown button west of a closed door to the workshops from the closets.       |
+| 42  | A second unknown button west of a closed door to workshops from a closet               |
+| 43  | A second unknown button west of a closed door to workshops from closets                |
+| 44  | A second unknown button west of a closed door to workshops from the closet             |
+| 45  | A second unknown button west of a closed door to workshops from the closets            |
+| 46  | A second unknown button west of a closed door to workshops from the closets.           |
+| 47  | A second unknown button west of the closed door from a closet to a workshop            |
+| 48  | A second unknown button west of the closed door from a closet to the workshop          |
+| 49  | A second unknown button west of the closed door from a closet to the workshops         |
+| 50  | A second unknown button west of the closed door from a closet to the workshops.        |
+| 51  | A second unknown button west of the closed door from a closet to workshops             |
+| 52  | A second unknown button west of the closed door from closets to a workshop             |
+| 53  | A second unknown button west of the closed door from closets to the workshop           |
+| 54  | A second unknown button west of the closed door from closets to the workshops          |
+| 55  | A second unknown button west of the closed door from closets to the workshops.         |
+| 56  | A second unknown button west of the closed door from closets to workshops              |
+| 57  | A second unknown button west of the closed door from the closet to a workshop          |
+| 58  | A second unknown button west of the closed door from the closet to a workshop.         |
+| 59  | A second unknown button west of the closed door from the closet to the workshop        |
+| 60  | A second unknown button west of the closed door from the closet to the workshop.       |
+| 61  | A second unknown button west of the closed door from the closet to the workshops       |
+| 62  | A second unknown button west of the closed door from the closet to the workshops.      |
+| 63  | A second unknown button west of the closed door from the closet to workshops           |
+| 64  | A second unknown button west of the closed door from the closet to workshops.          |
+| 65  | A second unknown button west of the closed door from the closets to a workshop         |
+| 66  | A second unknown button west of the closed door from the closets to the workshop       |
+| 67  | A second unknown button west of the closed door from the closets to the workshops      |
+| 68  | A second unknown button west of the closed door from the closets to the workshops.     |
+| 69  | A second unknown button west of the closed door from the closets to workshops          |
+| 70  | A second unknown button west of the closed door to a workshop from a closet            |
+| 71  | A second unknown button west of the closed door to a workshop from a closet.           |
+| 72  | A second unknown button west of the closed door to a workshop from closets             |
+| 73  | A second unknown button west of the closed door to a workshop from closets.            |
+| 74  | A second unknown button west of the closed door to a workshop from the closet          |
+| 75  | A second unknown button west of the closed door to a workshop from the closet.         |
+| 76  | A second unknown button west of the closed door to a workshop from the closets         |
+| 77  | A second unknown button west of the closed door to a workshop from the closets.        |
+| 78  | A second unknown button west of the closed door to the workshop from a closet          |
+| 79  | A second unknown button west of the closed door to the workshop from a closet.         |
+| 80  | A second unknown button west of the closed door to the workshop from closets           |
+| 81  | A second unknown button west of the closed door to the workshop from closets.          |
+| 82  | A second unknown button west of the closed door to the workshop from the closet        |
+| 83  | A second unknown button west of the closed door to the workshop from the closet.       |
+| 84  | A second unknown button west of the closed door to the workshop from the closets       |
+| 85  | A second unknown button west of the closed door to the workshop from the closets.      |
+| 86  | A second unknown button west of the closed door to the workshops from a closet         |
+| 87  | A second unknown button west of the closed door to the workshops from closets          |
+| 88  | A second unknown button west of the closed door to the workshops from the closet       |
+| 89  | A second unknown button west of the closed door to the workshops from the closets      |
+| 90  | A second unknown button west of the closed door to the workshops from the closets.     |
+| 91  | A second unknown button west of the closed door to workshops from a closet             |
+| 92  | A second unknown button west of the closed door to workshops from closets              |
+| 93  | A second unknown button west of the closed door to workshops from the closet           |
+| 94  | A second unknown button west of the closed door to workshops from the closets          |
+| 95  | A second unknown button west of the closed door to workshops from the closets.         |
+| 96  | A second unknown button west of the closed doors from a closet to a workshop           |
+| 97  | A second unknown button west of the closed doors from a closet to the workshop         |
+| 98  | A second unknown button west of the closed doors from a closet to the workshops        |
+| 99  | A second unknown button west of the closed doors from closets to the workshop          |
+| 100 | A second unknown button west of the closed doors from closets to the workshops         |
+| 101 | A second unknown button west of the closed doors from the closet to a workshop         |
+| 102 | A second unknown button west of the closed doors from the closet to the workshop       |
+| 103 | A second unknown button west of the closed doors from the closet to the workshops      |
+| 104 | A second unknown button west of the closed doors from the closet to the workshops.     |
+| 105 | A second unknown button west of the closed doors from the closet to workshops          |
+| 106 | A second unknown button west of the closed doors from the closets to the workshop      |
+| 107 | A second unknown button west of the closed doors from the closets to the workshops     |
+| 108 | A second unknown button west of the closed doors to a workshop from a closet           |
+| 109 | A second unknown button west of the closed doors to a workshop from the closet         |
+| 110 | A second unknown button west of the closed doors to a workshop from the closets        |
+| 111 | A second unknown button west of the closed doors to a workshop from the closets.       |
+| 112 | A second unknown button west of the closed doors to the workshop from a closet         |
+| 113 | A second unknown button west of the closed doors to the workshop from a closet.        |
+| 114 | A second unknown button west of the closed doors to the workshop from closets          |
+| 115 | A second unknown button west of the closed doors to the workshop from the closet       |
+| 116 | A second unknown button west of the closed doors to the workshop from the closets      |
+| 117 | A second unknown button west of the closed doors to the workshop from the closets.     |
+| 118 | A second unknown button west of the closed doors to the workshops from a closet        |
+| 119 | A second unknown button west of the closed doors to the workshops from the closet      |
+| 120 | A second unknown button west of the closed doors to the workshops from the closets     |
+| 121 | A second unknown button west of the closed doors to workshops from the closet          |
+| 122 | A second unknown button west of the closed doors to workshops from the closets         |
+| 123 | An unknown second button west of a closed door to the workshop from the closet         |
+| 124 | An unknown second button west of a closed door to the workshop from the closets        |
+| 125 | An unknown second button west of the closed door to the workshop from the closet       |
+| 126 | An unknown second button west of the closed door to the workshop from the closets      |
+| 127 | Second unknown button west of the closed door to the workshop from the closets         |
+| 128 | Second unknown buttons west of a closed door from a closet to a workshop               |
+| 129 | Second unknown buttons west of a closed door from a closet to the workshop             |
+| 130 | Second unknown buttons west of a closed door from a closet to the workshops            |
+| 131 | Second unknown buttons west of a closed door from a closet to the workshops.           |
+| 132 | Second unknown buttons west of a closed door from a closet to workshops                |
+| 133 | Second unknown buttons west of a closed door from closets to a workshop                |
+| 134 | Second unknown buttons west of a closed door from closets to the workshop              |
+| 135 | Second unknown buttons west of a closed door from closets to the workshops             |
+| 136 | Second unknown buttons west of a closed door from closets to the workshops.            |
+| 137 | Second unknown buttons west of a closed door from closets to workshops                 |
+| 138 | Second unknown buttons west of a closed door from the closet to a workshop             |
+| 139 | Second unknown buttons west of a closed door from the closet to a workshop.            |
+| 140 | Second unknown buttons west of a closed door from the closet to the workshop           |
+| 141 | Second unknown buttons west of a closed door from the closet to the workshop.          |
+| 142 | Second unknown buttons west of a closed door from the closet to the workshops          |
+| 143 | Second unknown buttons west of a closed door from the closet to the workshops.         |
+| 144 | Second unknown buttons west of a closed door from the closet to workshops              |
+| 145 | Second unknown buttons west of a closed door from the closet to workshops.             |
+| 146 | Second unknown buttons west of a closed door from the closets to a workshop            |
+| 147 | Second unknown buttons west of a closed door from the closets to the workshop          |
+| 148 | Second unknown buttons west of a closed door from the closets to the workshops         |
+| 149 | Second unknown buttons west of a closed door from the closets to the workshops.        |
+| 150 | Second unknown buttons west of a closed door from the closets to workshops             |
+| 151 | Second unknown buttons west of a closed door to a workshop from a closet               |
+| 152 | Second unknown buttons west of a closed door to a workshop from a closet.              |
+| 153 | Second unknown buttons west of a closed door to a workshop from closets                |
+| 154 | Second unknown buttons west of a closed door to a workshop from closets.               |
+| 155 | Second unknown buttons west of a closed door to a workshop from the closet             |
+| 156 | Second unknown buttons west of a closed door to a workshop from the closet.            |
+| 157 | Second unknown buttons west of a closed door to a workshop from the closets            |
+| 158 | Second unknown buttons west of a closed door to a workshop from the closets.           |
+| 159 | Second unknown buttons west of a closed door to the workshop from a closet             |
+| 160 | Second unknown buttons west of a closed door to the workshop from a closet.            |
+| 161 | Second unknown buttons west of a closed door to the workshop from closets              |
+| 162 | Second unknown buttons west of a closed door to the workshop from closets.             |
+| 163 | Second unknown buttons west of a closed door to the workshop from the closet           |
+| 164 | Second unknown buttons west of a closed door to the workshop from the closet.          |
+| 165 | Second unknown buttons west of a closed door to the workshop from the closets          |
+| 166 | Second unknown buttons west of a closed door to the workshop from the closets.         |
+| 167 | Second unknown buttons west of a closed door to the workshops from a closet            |
+| 168 | Second unknown buttons west of a closed door to the workshops from closets             |
+| 169 | Second unknown buttons west of a closed door to the workshops from the closet          |
+| 170 | Second unknown buttons west of a closed door to the workshops from the closets         |
+| 171 | Second unknown buttons west of a closed door to the workshops from the closets.        |
+| 172 | Second unknown buttons west of a closed door to workshops from a closet                |
+| 173 | Second unknown buttons west of a closed door to workshops from closets                 |
+| 174 | Second unknown buttons west of a closed door to workshops from the closet              |
+| 175 | Second unknown buttons west of a closed door to workshops from the closets             |
+| 176 | Second unknown buttons west of a closed door to workshops from the closets.            |
+| 177 | Second unknown buttons west of the closed door from a closet to a workshop             |
+| 178 | Second unknown buttons west of the closed door from a closet to the workshop           |
+| 179 | Second unknown buttons west of the closed door from a closet to the workshops          |
+| 180 | Second unknown buttons west of the closed door from a closet to the workshops.         |
+| 181 | Second unknown buttons west of the closed door from a closet to workshops              |
+| 182 | Second unknown buttons west of the closed door from closets to a workshop              |
+| 183 | Second unknown buttons west of the closed door from closets to the workshop            |
+| 184 | Second unknown buttons west of the closed door from closets to the workshops           |
+| 185 | Second unknown buttons west of the closed door from closets to the workshops.          |
+| 186 | Second unknown buttons west of the closed door from closets to workshops               |
+| 187 | Second unknown buttons west of the closed door from the closet to a workshop           |
+| 188 | Second unknown buttons west of the closed door from the closet to a workshop.          |
+| 189 | Second unknown buttons west of the closed door from the closet to the workshop         |
+| 190 | Second unknown buttons west of the closed door from the closet to the workshop.        |
+| 191 | Second unknown buttons west of the closed door from the closet to the workshops        |
+| 192 | Second unknown buttons west of the closed door from the closet to the workshops.       |
+| 193 | Second unknown buttons west of the closed door from the closet to workshops            |
+| 194 | Second unknown buttons west of the closed door from the closet to workshops.           |
+| 195 | Second unknown buttons west of the closed door from the closets to a workshop          |
+| 196 | Second unknown buttons west of the closed door from the closets to the workshop        |
+| 197 | Second unknown buttons west of the closed door from the closets to the workshops       |
+| 198 | Second unknown buttons west of the closed door from the closets to the workshops.      |
+| 199 | Second unknown buttons west of the closed door from the closets to workshops           |
+| 200 | Second unknown buttons west of the closed door to a workshop from a closet             |
+| 201 | Second unknown buttons west of the closed door to a workshop from a closet.            |
+| 202 | Second unknown buttons west of the closed door to a workshop from closets              |
+| 203 | Second unknown buttons west of the closed door to a workshop from closets.             |
+| 204 | Second unknown buttons west of the closed door to a workshop from the closet           |
+| 205 | Second unknown buttons west of the closed door to a workshop from the closet.          |
+| 206 | Second unknown buttons west of the closed door to a workshop from the closets          |
+| 207 | Second unknown buttons west of the closed door to a workshop from the closets.         |
+| 208 | Second unknown buttons west of the closed door to the workshop from a closet           |
+| 209 | Second unknown buttons west of the closed door to the workshop from a closet.          |
+| 210 | Second unknown buttons west of the closed door to the workshop from closets            |
+| 211 | Second unknown buttons west of the closed door to the workshop from closets.           |
+| 212 | Second unknown buttons west of the closed door to the workshop from the closet         |
+| 213 | Second unknown buttons west of the closed door to the workshop from the closet.        |
+| 214 | Second unknown buttons west of the closed door to the workshop from the closets        |
+| 215 | Second unknown buttons west of the closed door to the workshop from the closets.       |
+| 216 | Second unknown buttons west of the closed door to the workshops from a closet          |
+| 217 | Second unknown buttons west of the closed door to the workshops from closets           |
+| 218 | Second unknown buttons west of the closed door to the workshops from the closet        |
+| 219 | Second unknown buttons west of the closed door to the workshops from the closets       |
+| 220 | Second unknown buttons west of the closed door to the workshops from the closets.      |
+| 221 | Second unknown buttons west of the closed door to workshops from a closet              |
+| 222 | Second unknown buttons west of the closed door to workshops from closets               |
+| 223 | Second unknown buttons west of the closed door to workshops from the closet            |
+| 224 | Second unknown buttons west of the closed door to workshops from the closets           |
+| 225 | Second unknown buttons west of the closed door to workshops from the closets.          |
+| 226 | Second unknown buttons west of the closed doors from a closet to a workshop            |
+| 227 | Second unknown buttons west of the closed doors from a closet to the workshop          |
+| 228 | Second unknown buttons west of the closed doors from a closet to the workshops         |
+| 229 | Second unknown buttons west of the closed doors from closets to the workshop           |
+| 230 | Second unknown buttons west of the closed doors from closets to the workshops          |
+| 231 | Second unknown buttons west of the closed doors from the closet to a workshop          |
+| 232 | Second unknown buttons west of the closed doors from the closet to the workshop        |
+| 233 | Second unknown buttons west of the closed doors from the closet to the workshops       |
+| 234 | Second unknown buttons west of the closed doors from the closet to the workshops.      |
+| 235 | Second unknown buttons west of the closed doors from the closet to workshops           |
+| 236 | Second unknown buttons west of the closed doors from the closets to the workshop       |
+| 237 | Second unknown buttons west of the closed doors from the closets to the workshops      |
+| 238 | Second unknown buttons west of the closed doors to a workshop from a closet            |
+| 239 | Second unknown buttons west of the closed doors to a workshop from the closet          |
+| 240 | Second unknown buttons west of the closed doors to a workshop from the closets         |
+| 241 | Second unknown buttons west of the closed doors to a workshop from the closets.        |
+| 242 | Second unknown buttons west of the closed doors to the workshop from a closet          |
+| 243 | Second unknown buttons west of the closed doors to the workshop from a closet.         |
+| 244 | Second unknown buttons west of the closed doors to the workshop from closets           |
+| 245 | Second unknown buttons west of the closed doors to the workshop from the closet        |
+| 246 | Second unknown buttons west of the closed doors to the workshop from the closets       |
+| 247 | Second unknown buttons west of the closed doors to the workshop from the closets.      |
+| 248 | Second unknown buttons west of the closed doors to the workshops from a closet         |
+| 249 | Second unknown buttons west of the closed doors to the workshops from the closet       |
+| 250 | Second unknown buttons west of the closed doors to the workshops from the closets      |
+| 251 | Second unknown buttons west of the closed doors to workshops from a closet             |
+| 252 | Second unknown buttons west of the closed doors to workshops from the closet           |
+| 253 | Second unknown buttons west of the closed doors to workshops from the closets          |
+| 254 | The second unknown button west of a closed door from a closet to a workshop            |
+| 255 | The second unknown button west of a closed door from a closet to the workshop          |
+| 256 | The second unknown button west of a closed door from a closet to the workshops         |
+| 257 | The second unknown button west of a closed door from a closet to the workshops.        |
+| 258 | The second unknown button west of a closed door from a closet to workshops             |
+| 259 | The second unknown button west of a closed door from closets to a workshop             |
+| 260 | The second unknown button west of a closed door from closets to the workshop           |
+| 261 | The second unknown button west of a closed door from closets to the workshops          |
+| 262 | The second unknown button west of a closed door from closets to the workshops.         |
+| 263 | The second unknown button west of a closed door from closets to workshops              |
+| 264 | The second unknown button west of a closed door from the closet to a workshop          |
+| 265 | The second unknown button west of a closed door from the closet to a workshop.         |
+| 266 | The second unknown button west of a closed door from the closet to the workshop        |
+| 267 | The second unknown button west of a closed door from the closet to the workshop.       |
+| 268 | The second unknown button west of a closed door from the closet to the workshops       |
+| 269 | The second unknown button west of a closed door from the closet to the workshops.      |
+| 270 | The second unknown button west of a closed door from the closet to workshops           |
+| 271 | The second unknown button west of a closed door from the closet to workshops.          |
+| 272 | The second unknown button west of a closed door from the closets to a workshop         |
+| 273 | The second unknown button west of a closed door from the closets to the workshop       |
+| 274 | The second unknown button west of a closed door from the closets to the workshops      |
+| 275 | The second unknown button west of a closed door from the closets to the workshops.     |
+| 276 | The second unknown button west of a closed door to a workshop from a closet            |
+| 277 | The second unknown button west of a closed door to a workshop from a closet.           |
+| 278 | The second unknown button west of a closed door to a workshop from closets             |
+| 279 | The second unknown button west of a closed door to a workshop from the closet          |
+| 280 | The second unknown button west of a closed door to a workshop from the closets         |
+| 281 | The second unknown button west of a closed door to a workshop from the closets.        |
+| 282 | The second unknown button west of a closed door to the workshop from a closet          |
+| 283 | The second unknown button west of a closed door to the workshop from a closet.         |
+| 284 | The second unknown button west of a closed door to the workshop from closets           |
+| 285 | The second unknown button west of a closed door to the workshop from closets.          |
+| 286 | The second unknown button west of a closed door to the workshop from the closet        |
+| 287 | The second unknown button west of a closed door to the workshop from the closet.       |
+| 288 | The second unknown button west of a closed door to the workshop from the closets       |
+| 289 | The second unknown button west of a closed door to the workshop from the closets.      |
+| 290 | The second unknown button west of a closed door to the workshops from a closet         |
+| 291 | The second unknown button west of a closed door to the workshops from closets          |
+| 292 | The second unknown button west of a closed door to the workshops from the closet       |
+| 293 | The second unknown button west of a closed door to the workshops from the closets      |
+| 294 | The second unknown button west of a closed door to the workshops from the closets.     |
+| 295 | The second unknown button west of a closed door to workshops from a closet             |
+| 296 | The second unknown button west of a closed door to workshops from closets              |
+| 297 | The second unknown button west of a closed door to workshops from the closet           |
+| 298 | The second unknown button west of a closed door to workshops from the closets          |
+| 299 | The second unknown button west of a closed door to workshops from the closets.         |
+| 300 | The second unknown button west of the closed door from a closet to a workshop          |
+| 301 | The second unknown button west of the closed door from a closet to the workshop        |
+| 302 | The second unknown button west of the closed door from a closet to the workshops       |
+| 303 | The second unknown button west of the closed door from a closet to the workshops.      |
+| 304 | The second unknown button west of the closed door from a closet to workshops           |
+| 305 | The second unknown button west of the closed door from closets to a workshop           |
+| 306 | The second unknown button west of the closed door from closets to the workshop         |
+| 307 | The second unknown button west of the closed door from closets to the workshops        |
+| 308 | The second unknown button west of the closed door from closets to the workshops.       |
+| 309 | The second unknown button west of the closed door from closets to workshops            |
+| 310 | The second unknown button west of the closed door from the closet to a workshop        |
+| 311 | The second unknown button west of the closed door from the closet to a workshop.       |
+| 312 | The second unknown button west of the closed door from the closet to the workshop      |
+| 313 | The second unknown button west of the closed door from the closet to the workshop.     |
+| 314 | The second unknown button west of the closed door from the closet to the workshops     |
+| 315 | The second unknown button west of the closed door from the closet to the workshops.    |
+| 316 | The second unknown button west of the closed door from the closet to workshops         |
+| 317 | The second unknown button west of the closed door from the closet to workshops.        |
+| 318 | The second unknown button west of the closed door from the closets to a workshop       |
+| 319 | The second unknown button west of the closed door from the closets to the workshop     |
+| 320 | The second unknown button west of the closed door from the closets to the workshops    |
+| 321 | The second unknown button west of the closed door from the closets to the workshops.   |
+| 322 | The second unknown button west of the closed door from the closets to workshops        |
+| 323 | The second unknown button west of the closed door to a workshop from a closet          |
+| 324 | The second unknown button west of the closed door to a workshop from a closet.         |
+| 325 | The second unknown button west of the closed door to a workshop from closets           |
+| 326 | The second unknown button west of the closed door to a workshop from closets.          |
+| 327 | The second unknown button west of the closed door to a workshop from the closet        |
+| 328 | The second unknown button west of the closed door to a workshop from the closet.       |
+| 329 | The second unknown button west of the closed door to a workshop from the closets       |
+| 330 | The second unknown button west of the closed door to a workshop from the closets.      |
+| 331 | The second unknown button west of the closed door to the workshop from a closet        |
+| 332 | The second unknown button west of the closed door to the workshop from a closet.       |
+| 333 | The second unknown button west of the closed door to the workshop from closets         |
+| 334 | The second unknown button west of the closed door to the workshop from closets.        |
+| 335 | The second unknown button west of the closed door to the workshop from the closet      |
+| 336 | The second unknown button west of the closed door to the workshop from the closet.     |
+| 337 | The second unknown button west of the closed door to the workshop from the closets     |
+| 338 | The second unknown button west of the closed door to the workshop from the closets.    |
+| 339 | The second unknown button west of the closed door to the workshops from a closet       |
+| 340 | The second unknown button west of the closed door to the workshops from closets        |
+| 341 | The second unknown button west of the closed door to the workshops from the closet     |
+| 342 | The second unknown button west of the closed door to the workshops from the closets    |
+| 343 | The second unknown button west of the closed door to the workshops from the closets.   |
+| 344 | The second unknown button west of the closed door to workshops from a closet           |
+| 345 | The second unknown button west of the closed door to workshops from closets            |
+| 346 | The second unknown button west of the closed door to workshops from the closet         |
+| 347 | The second unknown button west of the closed door to workshops from the closets        |
+| 348 | The second unknown button west of the closed door to workshops from the closets.       |
+| 349 | The second unknown button west of the closed doors from a closet to a workshop         |
+| 350 | The second unknown button west of the closed doors from a closet to the workshop       |
+| 351 | The second unknown button west of the closed doors from a closet to the workshops      |
+| 352 | The second unknown button west of the closed doors from closets to the workshop        |
+| 353 | The second unknown button west of the closed doors from closets to the workshops       |
+| 354 | The second unknown button west of the closed doors from the closet to a workshop       |
+| 355 | The second unknown button west of the closed doors from the closet to the workshop     |
+| 356 | The second unknown button west of the closed doors from the closet to the workshops    |
+| 357 | The second unknown button west of the closed doors from the closet to the workshops.   |
+| 358 | The second unknown button west of the closed doors from the closet to workshops        |
+| 359 | The second unknown button west of the closed doors from the closets to the workshop    |
+| 360 | The second unknown button west of the closed doors from the closets to the workshops   |
+| 361 | The second unknown button west of the closed doors to a workshop from a closet         |
+| 362 | The second unknown button west of the closed doors to a workshop from the closet       |
+| 363 | The second unknown button west of the closed doors to a workshop from the closets      |
+| 364 | The second unknown button west of the closed doors to a workshop from the closets.     |
+| 365 | The second unknown button west of the closed doors to the workshop from a closet       |
+| 366 | The second unknown button west of the closed doors to the workshop from a closet.      |
+| 367 | The second unknown button west of the closed doors to the workshop from closets        |
+| 368 | The second unknown button west of the closed doors to the workshop from the closet     |
+| 369 | The second unknown button west of the closed doors to the workshop from the closets    |
+| 370 | The second unknown button west of the closed doors to the workshop from the closets.   |
+| 371 | The second unknown button west of the closed doors to the workshops from a closet      |
+| 372 | The second unknown button west of the closed doors to the workshops from the closet    |
+| 373 | The second unknown button west of the closed doors to the workshops from the closets   |
+| 374 | The second unknown button west of the closed doors to workshops from the closet        |
+| 375 | The second unknown button west of the closed doors to workshops from the closets       |
+| 376 | The second unknown buttons west of a closed door from a closet to a workshop           |
+| 377 | The second unknown buttons west of a closed door from a closet to a workshop.          |
+| 378 | The second unknown buttons west of a closed door from a closet to the workshop         |
+| 379 | The second unknown buttons west of a closed door from a closet to the workshops        |
+| 380 | The second unknown buttons west of a closed door from a closet to the workshops.       |
+| 381 | The second unknown buttons west of a closed door from a closet to workshops            |
+| 382 | The second unknown buttons west of a closed door from a closet to workshops.           |
+| 383 | The second unknown buttons west of a closed door from closets to a workshop            |
+| 384 | The second unknown buttons west of a closed door from closets to the workshop          |
+| 385 | The second unknown buttons west of a closed door from closets to the workshops         |
+| 386 | The second unknown buttons west of a closed door from closets to the workshops.        |
+| 387 | The second unknown buttons west of a closed door from closets to workshops             |
+| 388 | The second unknown buttons west of a closed door from the closet to a workshop         |
+| 389 | The second unknown buttons west of a closed door from the closet to a workshop.        |
+| 390 | The second unknown buttons west of a closed door from the closet to the workshop       |
+| 391 | The second unknown buttons west of a closed door from the closet to the workshop.      |
+| 392 | The second unknown buttons west of a closed door from the closet to the workshops      |
+| 393 | The second unknown buttons west of a closed door from the closet to the workshops.     |
+| 394 | The second unknown buttons west of a closed door from the closet to workshops          |
+| 395 | The second unknown buttons west of a closed door from the closet to workshops.         |
+| 396 | The second unknown buttons west of a closed door from the closets to a workshop        |
+| 397 | The second unknown buttons west of a closed door from the closets to the workshop      |
+| 398 | The second unknown buttons west of a closed door from the closets to the workshops     |
+| 399 | The second unknown buttons west of a closed door from the closets to the workshops.    |
+| 400 | The second unknown buttons west of a closed door from the closets to workshops         |
+| 401 | The second unknown buttons west of a closed door to a workshop from a closet           |
+| 402 | The second unknown buttons west of a closed door to a workshop from a closet.          |
+| 403 | The second unknown buttons west of a closed door to a workshop from closets            |
+| 404 | The second unknown buttons west of a closed door to a workshop from closets.           |
+| 405 | The second unknown buttons west of a closed door to a workshop from the closet         |
+| 406 | The second unknown buttons west of a closed door to a workshop from the closet.        |
+| 407 | The second unknown buttons west of a closed door to a workshop from the closets        |
+| 408 | The second unknown buttons west of a closed door to a workshop from the closets.       |
+| 409 | The second unknown buttons west of a closed door to the workshop from a closet         |
+| 410 | The second unknown buttons west of a closed door to the workshop from a closet.        |
+| 411 | The second unknown buttons west of a closed door to the workshop from closets          |
+| 412 | The second unknown buttons west of a closed door to the workshop from closets.         |
+| 413 | The second unknown buttons west of a closed door to the workshop from the closet       |
+| 414 | The second unknown buttons west of a closed door to the workshop from the closet.      |
+| 415 | The second unknown buttons west of a closed door to the workshop from the closets      |
+| 416 | The second unknown buttons west of a closed door to the workshop from the closets.     |
+| 417 | The second unknown buttons west of a closed door to the workshops from a closet        |
+| 418 | The second unknown buttons west of a closed door to the workshops from a closet.       |
+| 419 | The second unknown buttons west of a closed door to the workshops from closets         |
+| 420 | The second unknown buttons west of a closed door to the workshops from the closet      |
+| 421 | The second unknown buttons west of a closed door to the workshops from the closets     |
+| 422 | The second unknown buttons west of a closed door to the workshops from the closets.    |
+| 423 | The second unknown buttons west of a closed door to workshops from a closet            |
+| 424 | The second unknown buttons west of a closed door to workshops from a closet.           |
+| 425 | The second unknown buttons west of a closed door to workshops from closets             |
+| 426 | The second unknown buttons west of a closed door to workshops from the closet          |
+| 427 | The second unknown buttons west of a closed door to workshops from the closets         |
+| 428 | The second unknown buttons west of a closed door to workshops from the closets.        |
+| 429 | The second unknown buttons west of closed doors to the workshop from the closets       |
+| 430 | The second unknown buttons west of the closed door from a closet to a workshop         |
+| 431 | The second unknown buttons west of the closed door from a closet to a workshop.        |
+| 432 | The second unknown buttons west of the closed door from a closet to the workshop       |
+| 433 | The second unknown buttons west of the closed door from a closet to the workshop.      |
+| 434 | The second unknown buttons west of the closed door from a closet to the workshops      |
+| 435 | The second unknown buttons west of the closed door from a closet to the workshops.     |
+| 436 | The second unknown buttons west of the closed door from a closet to workshops          |
+| 437 | The second unknown buttons west of the closed door from a closet to workshops.         |
+| 438 | The second unknown buttons west of the closed door from closets to a workshop          |
+| 439 | The second unknown buttons west of the closed door from closets to the workshop        |
+| 440 | The second unknown buttons west of the closed door from closets to the workshops       |
+| 441 | The second unknown buttons west of the closed door from closets to the workshops.      |
+| 442 | The second unknown buttons west of the closed door from closets to workshops           |
+| 443 | The second unknown buttons west of the closed door from the closet to a workshop       |
+| 444 | The second unknown buttons west of the closed door from the closet to a workshop.      |
+| 445 | The second unknown buttons west of the closed door from the closet to the workshop     |
+| 446 | The second unknown buttons west of the closed door from the closet to the workshop.    |
+| 447 | The second unknown buttons west of the closed door from the closet to the workshops    |
+| 448 | The second unknown buttons west of the closed door from the closet to the workshops.   |
+| 449 | The second unknown buttons west of the closed door from the closet to workshops        |
+| 450 | The second unknown buttons west of the closed door from the closet to workshops.       |
+| 451 | The second unknown buttons west of the closed door from the closets to a workshop      |
+| 452 | The second unknown buttons west of the closed door from the closets to the workshop    |
+| 453 | The second unknown buttons west of the closed door from the closets to the workshops   |
+| 454 | The second unknown buttons west of the closed door from the closets to the workshops.  |
+| 455 | The second unknown buttons west of the closed door from the closets to workshops       |
+| 456 | The second unknown buttons west of the closed door to a workshop from a closet         |
+| 457 | The second unknown buttons west of the closed door to a workshop from a closet.        |
+| 458 | The second unknown buttons west of the closed door to a workshop from closets          |
+| 459 | The second unknown buttons west of the closed door to a workshop from closets.         |
+| 460 | The second unknown buttons west of the closed door to a workshop from the closet       |
+| 461 | The second unknown buttons west of the closed door to a workshop from the closet.      |
+| 462 | The second unknown buttons west of the closed door to a workshop from the closets      |
+| 463 | The second unknown buttons west of the closed door to a workshop from the closets.     |
+| 464 | The second unknown buttons west of the closed door to the workshop from a closet       |
+| 465 | The second unknown buttons west of the closed door to the workshop from a closet.      |
+| 466 | The second unknown buttons west of the closed door to the workshop from closets        |
+| 467 | The second unknown buttons west of the closed door to the workshop from closets.       |
+| 468 | The second unknown buttons west of the closed door to the workshop from the closet     |
+| 469 | The second unknown buttons west of the closed door to the workshop from the closet.    |
+| 470 | The second unknown buttons west of the closed door to the workshop from the closets    |
+| 471 | The second unknown buttons west of the closed door to the workshop from the closets.   |
+| 472 | The second unknown buttons west of the closed door to the workshops from a closet      |
+| 473 | The second unknown buttons west of the closed door to the workshops from a closet.     |
+| 474 | The second unknown buttons west of the closed door to the workshops from closets       |
+| 475 | The second unknown buttons west of the closed door to the workshops from closets.      |
+| 476 | The second unknown buttons west of the closed door to the workshops from the closet    |
+| 477 | The second unknown buttons west of the closed door to the workshops from the closet.   |
+| 478 | The second unknown buttons west of the closed door to the workshops from the closets   |
+| 479 | The second unknown buttons west of the closed door to the workshops from the closets.  |
+| 480 | The second unknown buttons west of the closed door to workshops from a closet          |
+| 481 | The second unknown buttons west of the closed door to workshops from a closet.         |
+| 482 | The second unknown buttons west of the closed door to workshops from closets           |
+| 483 | The second unknown buttons west of the closed door to workshops from the closet        |
+| 484 | The second unknown buttons west of the closed door to workshops from the closets       |
+| 485 | The second unknown buttons west of the closed door to workshops from the closets.      |
+| 486 | The second unknown buttons west of the closed doors from a closet to a workshop        |
+| 487 | The second unknown buttons west of the closed doors from a closet to the workshop      |
+| 488 | The second unknown buttons west of the closed doors from a closet to the workshops     |
+| 489 | The second unknown buttons west of the closed doors from a closet to the workshops.    |
+| 490 | The second unknown buttons west of the closed doors from closets to a workshop         |
+| 491 | The second unknown buttons west of the closed doors from closets to the workshop       |
+| 492 | The second unknown buttons west of the closed doors from closets to the workshops      |
+| 493 | The second unknown buttons west of the closed doors from the closet to a workshop      |
+| 494 | The second unknown buttons west of the closed doors from the closet to a workshop.     |
+| 495 | The second unknown buttons west of the closed doors from the closet to the workshop    |
+| 496 | The second unknown buttons west of the closed doors from the closet to the workshops   |
+| 497 | The second unknown buttons west of the closed doors from the closet to the workshops.  |
+| 498 | The second unknown buttons west of the closed doors from the closet to workshops       |
+| 499 | The second unknown buttons west of the closed doors from the closets to a workshop     |
+| 500 | The second unknown buttons west of the closed doors from the closets to the workshop   |
+| 501 | The second unknown buttons west of the closed doors from the closets to the workshops  |
+| 502 | The second unknown buttons west of the closed doors to a workshop from a closet        |
+| 503 | The second unknown buttons west of the closed doors to a workshop from closets         |
+| 504 | The second unknown buttons west of the closed doors to a workshop from the closet      |
+| 505 | The second unknown buttons west of the closed doors to a workshop from the closets     |
+| 506 | The second unknown buttons west of the closed doors to a workshop from the closets.    |
+| 507 | The second unknown buttons west of the closed doors to the workshop from a closet      |
+| 508 | The second unknown buttons west of the closed doors to the workshop from a closet.     |
+| 509 | The second unknown buttons west of the closed doors to the workshop from closets       |
+| 510 | The second unknown buttons west of the closed doors to the workshop from closets.      |
+| 511 | The second unknown buttons west of the closed doors to the workshop from the closet    |
+| 512 | The second unknown buttons west of the closed doors to the workshop from the closet.   |
+| 513 | The second unknown buttons west of the closed doors to the workshop from the closets   |
+| 514 | The second unknown buttons west of the closed doors to the workshop from the closets.  |
+| 515 | The second unknown buttons west of the closed doors to the workshops from a closet     |
+| 516 | The second unknown buttons west of the closed doors to the workshops from the closet   |
+| 517 | The second unknown buttons west of the closed doors to the workshops from the closets  |
+| 518 | The second unknown buttons west of the closed doors to the workshops from the closets. |
+| 519 | The second unknown buttons west of the closed doors to workshops from a closet         |
+| 520 | The second unknown buttons west of the closed doors to workshops from the closet       |
+| 521 | The second unknown buttons west of the closed doors to workshops from the closets      |
+| 522 | The second unknown buttons west of the closed doors to workshops from the closets.     |
+| 523 | The unknown second button west of a closed door from the closet to the workshop        |
+| 524 | The unknown second button west of a closed door from the closet to the workshops       |
+| 525 | The unknown second button west of a closed door to the workshop from the closet        |
+| 526 | The unknown second button west of a closed door to the workshop from the closets       |
+| 527 | The unknown second button west of the closed door from the closet to the workshop      |
+| 528 | The unknown second button west of the closed door from the closet to the workshops     |
+| 529 | The unknown second button west of the closed door to the workshop from a closet        |
+| 530 | The unknown second button west of the closed door to the workshop from the closet      |
+| 531 | The unknown second button west of the closed door to the workshop from the closets     |
++-----+----------------------------------------------------------------------------------------+
+

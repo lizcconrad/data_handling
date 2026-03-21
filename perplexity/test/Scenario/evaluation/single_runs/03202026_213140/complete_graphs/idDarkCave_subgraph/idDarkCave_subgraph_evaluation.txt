@@ -1,0 +1,780 @@
+GRAPH NAME: idDarkCave_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 600   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------+
+|                        GOLD OUTPUTS                        |
++-----------------------------------------------+------------+
+| Gold Output                                   | Generated? |
++-----------------------------------------------+------------+
+| the third dark dark cave south of the crystal | True       |
++-----------------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idDarkCave | True         | True          | Covered          | Included          |
+| 3          | True         | True          | Covered          | Included          |
+| dark       | True         | True          | Covered          | Included          |
+| idCrystal1 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                         |
++------------------------------+------------+------------+--------------+---------------+------------------+-------------------+
+| Edge                         | Parent     | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------+------------+------------+--------------+---------------+------------------+-------------------+
+| idDarkCave_prop_idOrdinality | idDarkCave | 3          | True         | True          | Covered          | Included          |
+| idDarkCave_prop_idTone       | idDarkCave | dark       | True         | True          | Covered          | Included          |
+| isSouthOf                    | idDarkCave | idCrystal1 | True         | True          | Covered          | Included          |
++------------------------------+------------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h909                                                                      |
+|               |   INDEX: x908                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h928 ARG0: e925 ARG1: u926 ARG2: x927 ]               |
+|               |           [ def_implicit_q LBL: h939 ARG0: x936 RSTR: h937 BODY: h938 ]          |
+|               |           [ _south_a_1 LBL: h924 ARG0: i921 ARG1: x922 ARG2: u923 ]              |
+|               |           [ def_udef_a_q LBL: h934 ARG0: x931 RSTR: h932 BODY: h933 ]            |
+|               |           [ _crystal_n_1 LBL: h920 ARG0: x919 ]                                  |
+|               |           [ place_n LBL: h930 ARG0: x929 ]                                       |
+|               |           [ _dark_a_1 LBL: h918 ARG0: e916 ARG1: u917 ]                          |
+|               |           [ ord LBL: h915 ARG0: i913 ARG1: u914 CARG: "3" ]                      |
+|               |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: u906 ]                          |
+|               |           [ _cave_n_1 LBL: h909 ARG0: x908 ] >                                   |
+|               |   HCONS: < h932 qeq h920 h937 qeq h930 >                                         |
+|               |   EQS: < x931 eq x919 h924 eq h935 u923 eq x931 h924 eq h930 x922 eq x929 x936   |
+|               | eq x929 h928 eq h940 x927 eq x936 h907 eq h909 u906 eq x908 h915 eq h909 u914 eq |
+|               | x908 h918 eq h909 u917 eq x908 h928 eq h909 u926 eq x908 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h907                                                                      |
+|               |   INDEX: x908                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h907 ARG0: e925 ARG1: x908 ARG2: x922 ]               |
+|               |           [ def_implicit_q LBL: h939 ARG0: x922 RSTR: h937 BODY: h938 ]          |
+|               |           [ _south_a_1 LBL: h924 ARG0: i921 ARG1: x922 ARG2: x919 ]              |
+|               |           [ def_udef_a_q LBL: h934 ARG0: x919 RSTR: h932 BODY: h933 ]            |
+|               |           [ _crystal_n_1 LBL: h920 ARG0: x919 ]                                  |
+|               |           [ place_n LBL: h924 ARG0: x922 ]                                       |
+|               |           [ _dark_a_1 LBL: h907 ARG0: e916 ARG1: x908 ]                          |
+|               |           [ ord LBL: h907 ARG0: i913 ARG1: x908 CARG: "3" ]                      |
+|               |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: x908 ]                          |
+|               |           [ _cave_n_1 LBL: h907 ARG0: x908 ] >                                   |
+|               |   HCONS: < h932 qeq h920 h937 qeq h924 > ]                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h949                                                                      |
+|               |   INDEX: e946                                                                    |
+|               |   RELS: < [ unknown LBL: h945 ARG: x908 ARG0: e946 ]                             |
+|               |           [ def_udef_a_q LBL: h944 ARG0: x908 RSTR: h942 BODY: h943 ]            |
+|               |           [ loc_nonsp LBL: h907 ARG0: e925 ARG1: x908 ARG2: x922 ]               |
+|               |           [ def_implicit_q LBL: h939 ARG0: x922 RSTR: h937 BODY: h938 ]          |
+|               |           [ _south_a_1 LBL: h924 ARG0: i921 ARG1: x922 ARG2: x919 ]              |
+|               |           [ def_udef_a_q LBL: h934 ARG0: x919 RSTR: h932 BODY: h933 ]            |
+|               |           [ _crystal_n_1 LBL: h920 ARG0: x919 ]                                  |
+|               |           [ place_n LBL: h924 ARG0: x922 ]                                       |
+|               |           [ _dark_a_1 LBL: h907 ARG0: e916 ARG1: x908 ]                          |
+|               |           [ ord LBL: h907 ARG0: i913 ARG1: x908 CARG: "3" ]                      |
+|               |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: x908 ]                          |
+|               |           [ _cave_n_1 LBL: h907 ARG0: x908 ] >                                   |
+|               |   HCONS: < h932 qeq h920 h937 qeq h924 h942 qeq h907 h949 qeq h945 > ]           |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------+
+|                                 NODE SEMENTS                                |
++------------+----------------------------------------------------------------+
+| Node       | Generated SEMENT                                               |
++------------+----------------------------------------------------------------+
+| idDarkCave | [ TOP: h909                                                    |
+|            |   INDEX: x908                                                  |
+|            |   RELS: < [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: u906 ]        |
+|            |           [ _cave_n_1 LBL: h909 ARG0: x908 ] >                 |
+|            |   EQS: < h907 eq h909 u906 eq x908 > ]                         |
++------------+----------------------------------------------------------------+
+| 3          | [ TOP: h912                                                    |
+|            |   INDEX: i910                                                  |
+|            |   RELS: < [ card LBL: h912 ARG0: i910 ARG1: u911 CARG: "3" ] > |
+|            |   SLOTS: < ARG1: u911 > ]                                      |
++------------+----------------------------------------------------------------+
+| dark       | [ TOP: h918                                                    |
+|            |   INDEX: e916                                                  |
+|            |   RELS: < [ _dark_a_1 LBL: h918 ARG0: e916 ARG1: u917 ] >      |
+|            |   SLOTS: < ARG1: u917 > ]                                      |
++------------+----------------------------------------------------------------+
+| idCrystal1 | [ TOP: h920                                                    |
+|            |   INDEX: x919                                                  |
+|            |   RELS: < [ _crystal_n_1 LBL: h920 ARG0: x919 ] > ]            |
++------------+----------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                               |
++------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| Edge                         | Parent     | Child      | Generated SEMENT                                                                 |
++------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idDarkCave_prop_idOrdinality | idDarkCave | 3          | [ TOP: h909                                                                      |
+|                              |            |            |   INDEX: x908                                                                    |
+|                              |            |            |   RELS: < [ ord LBL: h915 ARG0: i913 ARG1: u914 CARG: "3" ]                      |
+|                              |            |            |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: u906 ]                          |
+|                              |            |            |           [ _cave_n_1 LBL: h909 ARG0: x908 ] >                                   |
+|                              |            |            |   EQS: < h907 eq h909 u906 eq x908 h915 eq h909 u914 eq x908 > ]                 |
++------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idDarkCave_prop_idTone       | idDarkCave | dark       | [ TOP: h909                                                                      |
+|                              |            |            |   INDEX: x908                                                                    |
+|                              |            |            |   RELS: < [ _dark_a_1 LBL: h918 ARG0: e916 ARG1: u917 ]                          |
+|                              |            |            |           [ ord LBL: h915 ARG0: i913 ARG1: u914 CARG: "3" ]                      |
+|                              |            |            |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: u906 ]                          |
+|                              |            |            |           [ _cave_n_1 LBL: h909 ARG0: x908 ] >                                   |
+|                              |            |            |   EQS: < h907 eq h909 u906 eq x908 h915 eq h909 u914 eq x908 h918 eq h909 u917   |
+|                              |            |            | eq x908 > ]                                                                      |
++------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| isSouthOf                    | idDarkCave | idCrystal1 | [ TOP: h909                                                                      |
+|                              |            |            |   INDEX: x908                                                                    |
+|                              |            |            |   RELS: < [ loc_nonsp LBL: h928 ARG0: e925 ARG1: u926 ARG2: x927 ]               |
+|                              |            |            |           [ def_implicit_q LBL: h939 ARG0: x936 RSTR: h937 BODY: h938 ]          |
+|                              |            |            |           [ _south_a_1 LBL: h924 ARG0: i921 ARG1: x922 ARG2: u923 ]              |
+|                              |            |            |           [ def_udef_a_q LBL: h934 ARG0: x931 RSTR: h932 BODY: h933 ]            |
+|                              |            |            |           [ _crystal_n_1 LBL: h920 ARG0: x919 ]                                  |
+|                              |            |            |           [ place_n LBL: h930 ARG0: x929 ]                                       |
+|                              |            |            |           [ _dark_a_1 LBL: h918 ARG0: e916 ARG1: u917 ]                          |
+|                              |            |            |           [ ord LBL: h915 ARG0: i913 ARG1: u914 CARG: "3" ]                      |
+|                              |            |            |           [ _dark_a_1 LBL: h907 ARG0: e905 ARG1: u906 ]                          |
+|                              |            |            |           [ _cave_n_1 LBL: h909 ARG0: x908 ] >                                   |
+|                              |            |            |   HCONS: < h932 qeq h920 h937 qeq h930 >                                         |
+|                              |            |            |   EQS: < x931 eq x919 h924 eq h935 u923 eq x931 h924 eq h930 x922 eq x929 x936   |
+|                              |            |            | eq x929 h928 eq h940 x927 eq x936 h907 eq h909 u906 eq x908 h915 eq h909 u914 eq |
+|                              |            |            | x908 h918 eq h909 u917 eq x908 h928 eq h909 u926 eq x908 > ]                     |
++------------------------------+------------+------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                 |
++-----+---------------------------------------------------+
+| #   | Generated Text                                    |
++-----+---------------------------------------------------+
+| 1   | A dark dark third cave south of a crystal         |
+| 2   | A dark dark third cave south of a crystal         |
+| 3   | A dark dark third cave south of a crystal.        |
+| 4   | A dark dark third cave south of a crystal.        |
+| 5   | A dark dark third cave south of crystal           |
+| 6   | A dark dark third cave south of crystal           |
+| 7   | A dark dark third cave south of crystal.          |
+| 8   | A dark dark third cave south of crystal.          |
+| 9   | A dark dark third cave south of crystals          |
+| 10  | A dark dark third cave south of crystals          |
+| 11  | A dark dark third cave south of crystals.         |
+| 12  | A dark dark third cave south of crystals.         |
+| 13  | A dark dark third cave south of the crystal       |
+| 14  | A dark dark third cave south of the crystal       |
+| 15  | A dark dark third cave south of the crystal.      |
+| 16  | A dark dark third cave south of the crystal.      |
+| 17  | A dark dark third cave south of the crystals      |
+| 18  | A dark dark third cave south of the crystals      |
+| 19  | A dark dark third cave south of the crystals.     |
+| 20  | A dark dark third cave south of the crystals.     |
+| 21  | A dark dark third cave, south of a crystal        |
+| 22  | A dark dark third cave, south of a crystal        |
+| 23  | A dark dark third cave, south of crystal          |
+| 24  | A dark dark third cave, south of crystal          |
+| 25  | A dark dark third cave, south of crystals         |
+| 26  | A dark dark third cave, south of crystals         |
+| 27  | A dark dark third cave, south of the crystal      |
+| 28  | A dark dark third cave, south of the crystal      |
+| 29  | A dark dark third cave, south of the crystals     |
+| 30  | A dark dark third cave, south of the crystals     |
+| 31  | A dark dark third, cave south of a crystal        |
+| 32  | A dark dark third, cave south of a crystal        |
+| 33  | A dark dark third, cave south of a crystal.       |
+| 34  | A dark dark third, cave south of a crystal.       |
+| 35  | A dark dark third, cave south of crystal          |
+| 36  | A dark dark third, cave south of crystal          |
+| 37  | A dark dark third, cave south of crystal.         |
+| 38  | A dark dark third, cave south of crystal.         |
+| 39  | A dark dark third, cave south of crystals         |
+| 40  | A dark dark third, cave south of crystals         |
+| 41  | A dark dark third, cave south of crystals.        |
+| 42  | A dark dark third, cave south of crystals.        |
+| 43  | A dark dark third, cave south of the crystal      |
+| 44  | A dark dark third, cave south of the crystal      |
+| 45  | A dark dark third, cave south of the crystal.     |
+| 46  | A dark dark third, cave south of the crystal.     |
+| 47  | A dark dark third, cave south of the crystals     |
+| 48  | A dark dark third, cave south of the crystals     |
+| 49  | A dark dark third, cave south of the crystals.    |
+| 50  | A dark dark third, cave south of the crystals.    |
+| 51  | A dark dark third, cave, south of a crystal       |
+| 52  | A dark dark third, cave, south of a crystal       |
+| 53  | A dark dark third, cave, south of crystal         |
+| 54  | A dark dark third, cave, south of crystal         |
+| 55  | A dark dark third, cave, south of crystals        |
+| 56  | A dark dark third, cave, south of crystals        |
+| 57  | A dark dark third, cave, south of the crystal     |
+| 58  | A dark dark third, cave, south of the crystal     |
+| 59  | A dark dark third, cave, south of the crystals    |
+| 60  | A dark dark third, cave, south of the crystals    |
+| 61  | A dark third dark cave south of a crystal         |
+| 62  | A dark third dark cave south of a crystal         |
+| 63  | A dark third dark cave south of a crystal.        |
+| 64  | A dark third dark cave south of a crystal.        |
+| 65  | A dark third dark cave south of crystal           |
+| 66  | A dark third dark cave south of crystal           |
+| 67  | A dark third dark cave south of crystal.          |
+| 68  | A dark third dark cave south of crystal.          |
+| 69  | A dark third dark cave south of crystals          |
+| 70  | A dark third dark cave south of crystals          |
+| 71  | A dark third dark cave south of crystals.         |
+| 72  | A dark third dark cave south of crystals.         |
+| 73  | A dark third dark cave south of the crystal       |
+| 74  | A dark third dark cave south of the crystal       |
+| 75  | A dark third dark cave south of the crystal.      |
+| 76  | A dark third dark cave south of the crystal.      |
+| 77  | A dark third dark cave south of the crystals      |
+| 78  | A dark third dark cave south of the crystals      |
+| 79  | A dark third dark cave south of the crystals.     |
+| 80  | A dark third dark cave south of the crystals.     |
+| 81  | A dark third dark cave, south of a crystal        |
+| 82  | A dark third dark cave, south of a crystal        |
+| 83  | A dark third dark cave, south of crystal          |
+| 84  | A dark third dark cave, south of crystal          |
+| 85  | A dark third dark cave, south of crystals         |
+| 86  | A dark third dark cave, south of crystals         |
+| 87  | A dark third dark cave, south of the crystal      |
+| 88  | A dark third dark cave, south of the crystal      |
+| 89  | A dark third dark cave, south of the crystals     |
+| 90  | A dark third dark cave, south of the crystals     |
+| 91  | A third dark dark cave south of a crystal         |
+| 92  | A third dark dark cave south of a crystal         |
+| 93  | A third dark dark cave south of a crystal.        |
+| 94  | A third dark dark cave south of a crystal.        |
+| 95  | A third dark dark cave south of crystal           |
+| 96  | A third dark dark cave south of crystal           |
+| 97  | A third dark dark cave south of crystal.          |
+| 98  | A third dark dark cave south of crystal.          |
+| 99  | A third dark dark cave south of crystals          |
+| 100 | A third dark dark cave south of crystals          |
+| 101 | A third dark dark cave south of crystals.         |
+| 102 | A third dark dark cave south of crystals.         |
+| 103 | A third dark dark cave south of the crystal       |
+| 104 | A third dark dark cave south of the crystal       |
+| 105 | A third dark dark cave south of the crystal.      |
+| 106 | A third dark dark cave south of the crystal.      |
+| 107 | A third dark dark cave south of the crystals      |
+| 108 | A third dark dark cave south of the crystals      |
+| 109 | A third dark dark cave south of the crystals.     |
+| 110 | A third dark dark cave south of the crystals.     |
+| 111 | A third dark dark cave, south of a crystal        |
+| 112 | A third dark dark cave, south of a crystal        |
+| 113 | A third dark dark cave, south of crystal          |
+| 114 | A third dark dark cave, south of crystal          |
+| 115 | A third dark dark cave, south of crystals         |
+| 116 | A third dark dark cave, south of crystals         |
+| 117 | A third dark dark cave, south of the crystal      |
+| 118 | A third dark dark cave, south of the crystal      |
+| 119 | A third dark dark cave, south of the crystals     |
+| 120 | A third dark dark cave, south of the crystals     |
+| 121 | Dark dark third cave south of a crystal           |
+| 122 | Dark dark third cave south of a crystal           |
+| 123 | Dark dark third cave south of a crystal.          |
+| 124 | Dark dark third cave south of a crystal.          |
+| 125 | Dark dark third cave south of crystal             |
+| 126 | Dark dark third cave south of crystal             |
+| 127 | Dark dark third cave south of crystal.            |
+| 128 | Dark dark third cave south of crystal.            |
+| 129 | Dark dark third cave south of crystals            |
+| 130 | Dark dark third cave south of crystals            |
+| 131 | Dark dark third cave south of crystals.           |
+| 132 | Dark dark third cave south of crystals.           |
+| 133 | Dark dark third cave south of the crystal         |
+| 134 | Dark dark third cave south of the crystal         |
+| 135 | Dark dark third cave south of the crystal.        |
+| 136 | Dark dark third cave south of the crystal.        |
+| 137 | Dark dark third cave south of the crystals        |
+| 138 | Dark dark third cave south of the crystals        |
+| 139 | Dark dark third cave south of the crystals.       |
+| 140 | Dark dark third cave south of the crystals.       |
+| 141 | Dark dark third cave, south of a crystal          |
+| 142 | Dark dark third cave, south of a crystal          |
+| 143 | Dark dark third cave, south of crystal            |
+| 144 | Dark dark third cave, south of crystal            |
+| 145 | Dark dark third cave, south of crystals           |
+| 146 | Dark dark third cave, south of crystals           |
+| 147 | Dark dark third cave, south of the crystal        |
+| 148 | Dark dark third cave, south of the crystal        |
+| 149 | Dark dark third cave, south of the crystals       |
+| 150 | Dark dark third cave, south of the crystals       |
+| 151 | Dark dark third caves south of a crystal          |
+| 152 | Dark dark third caves south of a crystal          |
+| 153 | Dark dark third caves south of a crystal.         |
+| 154 | Dark dark third caves south of a crystal.         |
+| 155 | Dark dark third caves south of crystal            |
+| 156 | Dark dark third caves south of crystal            |
+| 157 | Dark dark third caves south of crystal.           |
+| 158 | Dark dark third caves south of crystal.           |
+| 159 | Dark dark third caves south of crystals           |
+| 160 | Dark dark third caves south of crystals           |
+| 161 | Dark dark third caves south of crystals.          |
+| 162 | Dark dark third caves south of crystals.          |
+| 163 | Dark dark third caves south of the crystal        |
+| 164 | Dark dark third caves south of the crystal        |
+| 165 | Dark dark third caves south of the crystal.       |
+| 166 | Dark dark third caves south of the crystal.       |
+| 167 | Dark dark third caves south of the crystals       |
+| 168 | Dark dark third caves south of the crystals       |
+| 169 | Dark dark third caves south of the crystals.      |
+| 170 | Dark dark third caves south of the crystals.      |
+| 171 | Dark dark third caves, south of a crystal         |
+| 172 | Dark dark third caves, south of a crystal         |
+| 173 | Dark dark third caves, south of crystal           |
+| 174 | Dark dark third caves, south of crystal           |
+| 175 | Dark dark third caves, south of crystals          |
+| 176 | Dark dark third caves, south of crystals          |
+| 177 | Dark dark third caves, south of the crystal       |
+| 178 | Dark dark third caves, south of the crystal       |
+| 179 | Dark dark third caves, south of the crystals      |
+| 180 | Dark dark third caves, south of the crystals      |
+| 181 | Dark dark third, cave south of a crystal          |
+| 182 | Dark dark third, cave south of a crystal          |
+| 183 | Dark dark third, cave south of a crystal.         |
+| 184 | Dark dark third, cave south of a crystal.         |
+| 185 | Dark dark third, cave south of crystal            |
+| 186 | Dark dark third, cave south of crystal            |
+| 187 | Dark dark third, cave south of crystal.           |
+| 188 | Dark dark third, cave south of crystal.           |
+| 189 | Dark dark third, cave south of crystals           |
+| 190 | Dark dark third, cave south of crystals           |
+| 191 | Dark dark third, cave south of crystals.          |
+| 192 | Dark dark third, cave south of crystals.          |
+| 193 | Dark dark third, cave south of the crystal        |
+| 194 | Dark dark third, cave south of the crystal        |
+| 195 | Dark dark third, cave south of the crystal.       |
+| 196 | Dark dark third, cave south of the crystal.       |
+| 197 | Dark dark third, cave south of the crystals       |
+| 198 | Dark dark third, cave south of the crystals       |
+| 199 | Dark dark third, cave south of the crystals.      |
+| 200 | Dark dark third, cave south of the crystals.      |
+| 201 | Dark dark third, cave, south of a crystal         |
+| 202 | Dark dark third, cave, south of a crystal         |
+| 203 | Dark dark third, cave, south of crystal           |
+| 204 | Dark dark third, cave, south of crystal           |
+| 205 | Dark dark third, cave, south of crystals          |
+| 206 | Dark dark third, cave, south of crystals          |
+| 207 | Dark dark third, cave, south of the crystal       |
+| 208 | Dark dark third, cave, south of the crystal       |
+| 209 | Dark dark third, cave, south of the crystals      |
+| 210 | Dark dark third, cave, south of the crystals      |
+| 211 | Dark dark third, caves south of a crystal         |
+| 212 | Dark dark third, caves south of a crystal         |
+| 213 | Dark dark third, caves south of a crystal.        |
+| 214 | Dark dark third, caves south of a crystal.        |
+| 215 | Dark dark third, caves south of crystal           |
+| 216 | Dark dark third, caves south of crystal           |
+| 217 | Dark dark third, caves south of crystal.          |
+| 218 | Dark dark third, caves south of crystal.          |
+| 219 | Dark dark third, caves south of crystals          |
+| 220 | Dark dark third, caves south of crystals          |
+| 221 | Dark dark third, caves south of crystals.         |
+| 222 | Dark dark third, caves south of crystals.         |
+| 223 | Dark dark third, caves south of the crystal       |
+| 224 | Dark dark third, caves south of the crystal       |
+| 225 | Dark dark third, caves south of the crystal.      |
+| 226 | Dark dark third, caves south of the crystal.      |
+| 227 | Dark dark third, caves south of the crystals      |
+| 228 | Dark dark third, caves south of the crystals      |
+| 229 | Dark dark third, caves south of the crystals.     |
+| 230 | Dark dark third, caves south of the crystals.     |
+| 231 | Dark dark third, caves, south of a crystal        |
+| 232 | Dark dark third, caves, south of a crystal        |
+| 233 | Dark dark third, caves, south of crystal          |
+| 234 | Dark dark third, caves, south of crystal          |
+| 235 | Dark dark third, caves, south of crystals         |
+| 236 | Dark dark third, caves, south of crystals         |
+| 237 | Dark dark third, caves, south of the crystal      |
+| 238 | Dark dark third, caves, south of the crystal      |
+| 239 | Dark dark third, caves, south of the crystals     |
+| 240 | Dark dark third, caves, south of the crystals     |
+| 241 | Dark third dark cave south of a crystal           |
+| 242 | Dark third dark cave south of a crystal           |
+| 243 | Dark third dark cave south of a crystal.          |
+| 244 | Dark third dark cave south of a crystal.          |
+| 245 | Dark third dark cave south of crystal             |
+| 246 | Dark third dark cave south of crystal             |
+| 247 | Dark third dark cave south of crystal.            |
+| 248 | Dark third dark cave south of crystal.            |
+| 249 | Dark third dark cave south of crystals            |
+| 250 | Dark third dark cave south of crystals            |
+| 251 | Dark third dark cave south of crystals.           |
+| 252 | Dark third dark cave south of crystals.           |
+| 253 | Dark third dark cave south of the crystal         |
+| 254 | Dark third dark cave south of the crystal         |
+| 255 | Dark third dark cave south of the crystal.        |
+| 256 | Dark third dark cave south of the crystal.        |
+| 257 | Dark third dark cave south of the crystals        |
+| 258 | Dark third dark cave south of the crystals        |
+| 259 | Dark third dark cave south of the crystals.       |
+| 260 | Dark third dark cave south of the crystals.       |
+| 261 | Dark third dark cave, south of a crystal          |
+| 262 | Dark third dark cave, south of a crystal          |
+| 263 | Dark third dark cave, south of crystal            |
+| 264 | Dark third dark cave, south of crystal            |
+| 265 | Dark third dark cave, south of crystals           |
+| 266 | Dark third dark cave, south of crystals           |
+| 267 | Dark third dark cave, south of the crystal        |
+| 268 | Dark third dark cave, south of the crystal        |
+| 269 | Dark third dark cave, south of the crystals       |
+| 270 | Dark third dark cave, south of the crystals       |
+| 271 | Dark third dark caves south of a crystal          |
+| 272 | Dark third dark caves south of a crystal          |
+| 273 | Dark third dark caves south of a crystal.         |
+| 274 | Dark third dark caves south of a crystal.         |
+| 275 | Dark third dark caves south of crystal            |
+| 276 | Dark third dark caves south of crystal            |
+| 277 | Dark third dark caves south of crystal.           |
+| 278 | Dark third dark caves south of crystal.           |
+| 279 | Dark third dark caves south of crystals           |
+| 280 | Dark third dark caves south of crystals           |
+| 281 | Dark third dark caves south of crystals.          |
+| 282 | Dark third dark caves south of crystals.          |
+| 283 | Dark third dark caves south of the crystal        |
+| 284 | Dark third dark caves south of the crystal        |
+| 285 | Dark third dark caves south of the crystal.       |
+| 286 | Dark third dark caves south of the crystal.       |
+| 287 | Dark third dark caves south of the crystals       |
+| 288 | Dark third dark caves south of the crystals       |
+| 289 | Dark third dark caves south of the crystals.      |
+| 290 | Dark third dark caves south of the crystals.      |
+| 291 | Dark third dark caves, south of a crystal         |
+| 292 | Dark third dark caves, south of a crystal         |
+| 293 | Dark third dark caves, south of crystal           |
+| 294 | Dark third dark caves, south of crystal           |
+| 295 | Dark third dark caves, south of crystals          |
+| 296 | Dark third dark caves, south of crystals          |
+| 297 | Dark third dark caves, south of the crystal       |
+| 298 | Dark third dark caves, south of the crystal       |
+| 299 | Dark third dark caves, south of the crystals      |
+| 300 | Dark third dark caves, south of the crystals      |
+| 301 | The dark dark third cave south of a crystal       |
+| 302 | The dark dark third cave south of a crystal       |
+| 303 | The dark dark third cave south of a crystal.      |
+| 304 | The dark dark third cave south of a crystal.      |
+| 305 | The dark dark third cave south of crystal         |
+| 306 | The dark dark third cave south of crystal         |
+| 307 | The dark dark third cave south of crystal.        |
+| 308 | The dark dark third cave south of crystal.        |
+| 309 | The dark dark third cave south of crystals        |
+| 310 | The dark dark third cave south of crystals        |
+| 311 | The dark dark third cave south of crystals.       |
+| 312 | The dark dark third cave south of crystals.       |
+| 313 | The dark dark third cave south of the crystal     |
+| 314 | The dark dark third cave south of the crystal     |
+| 315 | The dark dark third cave south of the crystal.    |
+| 316 | The dark dark third cave south of the crystal.    |
+| 317 | The dark dark third cave south of the crystals    |
+| 318 | The dark dark third cave south of the crystals    |
+| 319 | The dark dark third cave south of the crystals.   |
+| 320 | The dark dark third cave south of the crystals.   |
+| 321 | The dark dark third cave, south of a crystal      |
+| 322 | The dark dark third cave, south of a crystal      |
+| 323 | The dark dark third cave, south of crystal        |
+| 324 | The dark dark third cave, south of crystal        |
+| 325 | The dark dark third cave, south of crystals       |
+| 326 | The dark dark third cave, south of crystals       |
+| 327 | The dark dark third cave, south of the crystal    |
+| 328 | The dark dark third cave, south of the crystal    |
+| 329 | The dark dark third cave, south of the crystals   |
+| 330 | The dark dark third cave, south of the crystals   |
+| 331 | The dark dark third caves south of a crystal      |
+| 332 | The dark dark third caves south of a crystal      |
+| 333 | The dark dark third caves south of a crystal.     |
+| 334 | The dark dark third caves south of a crystal.     |
+| 335 | The dark dark third caves south of crystal        |
+| 336 | The dark dark third caves south of crystal        |
+| 337 | The dark dark third caves south of crystal.       |
+| 338 | The dark dark third caves south of crystal.       |
+| 339 | The dark dark third caves south of crystals       |
+| 340 | The dark dark third caves south of crystals       |
+| 341 | The dark dark third caves south of crystals.      |
+| 342 | The dark dark third caves south of crystals.      |
+| 343 | The dark dark third caves south of the crystal    |
+| 344 | The dark dark third caves south of the crystal    |
+| 345 | The dark dark third caves south of the crystal.   |
+| 346 | The dark dark third caves south of the crystal.   |
+| 347 | The dark dark third caves south of the crystals   |
+| 348 | The dark dark third caves south of the crystals   |
+| 349 | The dark dark third caves south of the crystals.  |
+| 350 | The dark dark third caves south of the crystals.  |
+| 351 | The dark dark third caves, south of a crystal     |
+| 352 | The dark dark third caves, south of a crystal     |
+| 353 | The dark dark third caves, south of crystal       |
+| 354 | The dark dark third caves, south of crystal       |
+| 355 | The dark dark third caves, south of crystals      |
+| 356 | The dark dark third caves, south of crystals      |
+| 357 | The dark dark third caves, south of the crystal   |
+| 358 | The dark dark third caves, south of the crystal   |
+| 359 | The dark dark third caves, south of the crystals  |
+| 360 | The dark dark third caves, south of the crystals  |
+| 361 | The dark dark third, cave south of a crystal      |
+| 362 | The dark dark third, cave south of a crystal      |
+| 363 | The dark dark third, cave south of a crystal.     |
+| 364 | The dark dark third, cave south of a crystal.     |
+| 365 | The dark dark third, cave south of crystal        |
+| 366 | The dark dark third, cave south of crystal        |
+| 367 | The dark dark third, cave south of crystal.       |
+| 368 | The dark dark third, cave south of crystal.       |
+| 369 | The dark dark third, cave south of crystals       |
+| 370 | The dark dark third, cave south of crystals       |
+| 371 | The dark dark third, cave south of crystals.      |
+| 372 | The dark dark third, cave south of crystals.      |
+| 373 | The dark dark third, cave south of the crystal    |
+| 374 | The dark dark third, cave south of the crystal    |
+| 375 | The dark dark third, cave south of the crystal.   |
+| 376 | The dark dark third, cave south of the crystal.   |
+| 377 | The dark dark third, cave south of the crystals   |
+| 378 | The dark dark third, cave south of the crystals   |
+| 379 | The dark dark third, cave south of the crystals.  |
+| 380 | The dark dark third, cave south of the crystals.  |
+| 381 | The dark dark third, cave, south of a crystal     |
+| 382 | The dark dark third, cave, south of a crystal     |
+| 383 | The dark dark third, cave, south of crystal       |
+| 384 | The dark dark third, cave, south of crystal       |
+| 385 | The dark dark third, cave, south of crystals      |
+| 386 | The dark dark third, cave, south of crystals      |
+| 387 | The dark dark third, cave, south of the crystal   |
+| 388 | The dark dark third, cave, south of the crystal   |
+| 389 | The dark dark third, cave, south of the crystals  |
+| 390 | The dark dark third, cave, south of the crystals  |
+| 391 | The dark dark third, caves south of a crystal     |
+| 392 | The dark dark third, caves south of a crystal     |
+| 393 | The dark dark third, caves south of a crystal.    |
+| 394 | The dark dark third, caves south of a crystal.    |
+| 395 | The dark dark third, caves south of crystal       |
+| 396 | The dark dark third, caves south of crystal       |
+| 397 | The dark dark third, caves south of crystal.      |
+| 398 | The dark dark third, caves south of crystal.      |
+| 399 | The dark dark third, caves south of crystals      |
+| 400 | The dark dark third, caves south of crystals      |
+| 401 | The dark dark third, caves south of crystals.     |
+| 402 | The dark dark third, caves south of crystals.     |
+| 403 | The dark dark third, caves south of the crystal   |
+| 404 | The dark dark third, caves south of the crystal   |
+| 405 | The dark dark third, caves south of the crystal.  |
+| 406 | The dark dark third, caves south of the crystal.  |
+| 407 | The dark dark third, caves south of the crystals  |
+| 408 | The dark dark third, caves south of the crystals  |
+| 409 | The dark dark third, caves south of the crystals. |
+| 410 | The dark dark third, caves south of the crystals. |
+| 411 | The dark dark third, caves, south of a crystal    |
+| 412 | The dark dark third, caves, south of a crystal    |
+| 413 | The dark dark third, caves, south of crystal      |
+| 414 | The dark dark third, caves, south of crystal      |
+| 415 | The dark dark third, caves, south of crystals     |
+| 416 | The dark dark third, caves, south of crystals     |
+| 417 | The dark dark third, caves, south of the crystal  |
+| 418 | The dark dark third, caves, south of the crystal  |
+| 419 | The dark dark third, caves, south of the crystals |
+| 420 | The dark dark third, caves, south of the crystals |
+| 421 | The dark third dark cave south of a crystal       |
+| 422 | The dark third dark cave south of a crystal       |
+| 423 | The dark third dark cave south of a crystal.      |
+| 424 | The dark third dark cave south of a crystal.      |
+| 425 | The dark third dark cave south of crystal         |
+| 426 | The dark third dark cave south of crystal         |
+| 427 | The dark third dark cave south of crystal.        |
+| 428 | The dark third dark cave south of crystal.        |
+| 429 | The dark third dark cave south of crystals        |
+| 430 | The dark third dark cave south of crystals        |
+| 431 | The dark third dark cave south of crystals.       |
+| 432 | The dark third dark cave south of crystals.       |
+| 433 | The dark third dark cave south of the crystal     |
+| 434 | The dark third dark cave south of the crystal     |
+| 435 | The dark third dark cave south of the crystal.    |
+| 436 | The dark third dark cave south of the crystal.    |
+| 437 | The dark third dark cave south of the crystals    |
+| 438 | The dark third dark cave south of the crystals    |
+| 439 | The dark third dark cave south of the crystals.   |
+| 440 | The dark third dark cave south of the crystals.   |
+| 441 | The dark third dark cave, south of a crystal      |
+| 442 | The dark third dark cave, south of a crystal      |
+| 443 | The dark third dark cave, south of crystal        |
+| 444 | The dark third dark cave, south of crystal        |
+| 445 | The dark third dark cave, south of crystals       |
+| 446 | The dark third dark cave, south of crystals       |
+| 447 | The dark third dark cave, south of the crystal    |
+| 448 | The dark third dark cave, south of the crystal    |
+| 449 | The dark third dark cave, south of the crystals   |
+| 450 | The dark third dark cave, south of the crystals   |
+| 451 | The dark third dark caves south of a crystal      |
+| 452 | The dark third dark caves south of a crystal      |
+| 453 | The dark third dark caves south of a crystal.     |
+| 454 | The dark third dark caves south of a crystal.     |
+| 455 | The dark third dark caves south of crystal        |
+| 456 | The dark third dark caves south of crystal        |
+| 457 | The dark third dark caves south of crystal.       |
+| 458 | The dark third dark caves south of crystal.       |
+| 459 | The dark third dark caves south of crystals       |
+| 460 | The dark third dark caves south of crystals       |
+| 461 | The dark third dark caves south of crystals.      |
+| 462 | The dark third dark caves south of crystals.      |
+| 463 | The dark third dark caves south of the crystal    |
+| 464 | The dark third dark caves south of the crystal    |
+| 465 | The dark third dark caves south of the crystal.   |
+| 466 | The dark third dark caves south of the crystal.   |
+| 467 | The dark third dark caves south of the crystals   |
+| 468 | The dark third dark caves south of the crystals   |
+| 469 | The dark third dark caves south of the crystals.  |
+| 470 | The dark third dark caves south of the crystals.  |
+| 471 | The dark third dark caves, south of a crystal     |
+| 472 | The dark third dark caves, south of a crystal     |
+| 473 | The dark third dark caves, south of crystal       |
+| 474 | The dark third dark caves, south of crystal       |
+| 475 | The dark third dark caves, south of crystals      |
+| 476 | The dark third dark caves, south of crystals      |
+| 477 | The dark third dark caves, south of the crystal   |
+| 478 | The dark third dark caves, south of the crystal   |
+| 479 | The dark third dark caves, south of the crystals  |
+| 480 | The dark third dark caves, south of the crystals  |
+| 481 | The third dark dark cave south of a crystal       |
+| 482 | The third dark dark cave south of a crystal       |
+| 483 | The third dark dark cave south of a crystal.      |
+| 484 | The third dark dark cave south of a crystal.      |
+| 485 | The third dark dark cave south of crystal         |
+| 486 | The third dark dark cave south of crystal         |
+| 487 | The third dark dark cave south of crystal.        |
+| 488 | The third dark dark cave south of crystal.        |
+| 489 | The third dark dark cave south of crystals        |
+| 490 | The third dark dark cave south of crystals        |
+| 491 | The third dark dark cave south of crystals.       |
+| 492 | The third dark dark cave south of crystals.       |
+| 493 | The third dark dark cave south of the crystal     |
+| 494 | The third dark dark cave south of the crystal     |
+| 495 | The third dark dark cave south of the crystal.    |
+| 496 | The third dark dark cave south of the crystal.    |
+| 497 | The third dark dark cave south of the crystals    |
+| 498 | The third dark dark cave south of the crystals    |
+| 499 | The third dark dark cave south of the crystals.   |
+| 500 | The third dark dark cave south of the crystals.   |
+| 501 | The third dark dark cave, south of a crystal      |
+| 502 | The third dark dark cave, south of a crystal      |
+| 503 | The third dark dark cave, south of crystal        |
+| 504 | The third dark dark cave, south of crystal        |
+| 505 | The third dark dark cave, south of crystals       |
+| 506 | The third dark dark cave, south of crystals       |
+| 507 | The third dark dark cave, south of the crystal    |
+| 508 | The third dark dark cave, south of the crystal    |
+| 509 | The third dark dark cave, south of the crystals   |
+| 510 | The third dark dark cave, south of the crystals   |
+| 511 | The third dark dark caves south of a crystal      |
+| 512 | The third dark dark caves south of a crystal      |
+| 513 | The third dark dark caves south of a crystal.     |
+| 514 | The third dark dark caves south of a crystal.     |
+| 515 | The third dark dark caves south of crystal        |
+| 516 | The third dark dark caves south of crystal        |
+| 517 | The third dark dark caves south of crystal.       |
+| 518 | The third dark dark caves south of crystal.       |
+| 519 | The third dark dark caves south of crystals       |
+| 520 | The third dark dark caves south of crystals       |
+| 521 | The third dark dark caves south of crystals.      |
+| 522 | The third dark dark caves south of crystals.      |
+| 523 | The third dark dark caves south of the crystal    |
+| 524 | The third dark dark caves south of the crystal    |
+| 525 | The third dark dark caves south of the crystal.   |
+| 526 | The third dark dark caves south of the crystal.   |
+| 527 | The third dark dark caves south of the crystals   |
+| 528 | The third dark dark caves south of the crystals   |
+| 529 | The third dark dark caves south of the crystals.  |
+| 530 | The third dark dark caves south of the crystals.  |
+| 531 | The third dark dark caves, south of a crystal     |
+| 532 | The third dark dark caves, south of a crystal     |
+| 533 | The third dark dark caves, south of crystal       |
+| 534 | The third dark dark caves, south of crystal       |
+| 535 | The third dark dark caves, south of crystals      |
+| 536 | The third dark dark caves, south of crystals      |
+| 537 | The third dark dark caves, south of the crystal   |
+| 538 | The third dark dark caves, south of the crystal   |
+| 539 | The third dark dark caves, south of the crystals  |
+| 540 | The third dark dark caves, south of the crystals  |
+| 541 | Third dark dark cave south of a crystal           |
+| 542 | Third dark dark cave south of a crystal           |
+| 543 | Third dark dark cave south of a crystal.          |
+| 544 | Third dark dark cave south of a crystal.          |
+| 545 | Third dark dark cave south of crystal             |
+| 546 | Third dark dark cave south of crystal             |
+| 547 | Third dark dark cave south of crystal.            |
+| 548 | Third dark dark cave south of crystal.            |
+| 549 | Third dark dark cave south of crystals            |
+| 550 | Third dark dark cave south of crystals            |
+| 551 | Third dark dark cave south of crystals.           |
+| 552 | Third dark dark cave south of crystals.           |
+| 553 | Third dark dark cave south of the crystal         |
+| 554 | Third dark dark cave south of the crystal         |
+| 555 | Third dark dark cave south of the crystal.        |
+| 556 | Third dark dark cave south of the crystal.        |
+| 557 | Third dark dark cave south of the crystals        |
+| 558 | Third dark dark cave south of the crystals        |
+| 559 | Third dark dark cave south of the crystals.       |
+| 560 | Third dark dark cave south of the crystals.       |
+| 561 | Third dark dark cave, south of a crystal          |
+| 562 | Third dark dark cave, south of a crystal          |
+| 563 | Third dark dark cave, south of crystal            |
+| 564 | Third dark dark cave, south of crystal            |
+| 565 | Third dark dark cave, south of crystals           |
+| 566 | Third dark dark cave, south of crystals           |
+| 567 | Third dark dark cave, south of the crystal        |
+| 568 | Third dark dark cave, south of the crystal        |
+| 569 | Third dark dark cave, south of the crystals       |
+| 570 | Third dark dark cave, south of the crystals       |
+| 571 | Third dark dark caves south of a crystal          |
+| 572 | Third dark dark caves south of a crystal          |
+| 573 | Third dark dark caves south of a crystal.         |
+| 574 | Third dark dark caves south of a crystal.         |
+| 575 | Third dark dark caves south of crystal            |
+| 576 | Third dark dark caves south of crystal            |
+| 577 | Third dark dark caves south of crystal.           |
+| 578 | Third dark dark caves south of crystal.           |
+| 579 | Third dark dark caves south of crystals           |
+| 580 | Third dark dark caves south of crystals           |
+| 581 | Third dark dark caves south of crystals.          |
+| 582 | Third dark dark caves south of crystals.          |
+| 583 | Third dark dark caves south of the crystal        |
+| 584 | Third dark dark caves south of the crystal        |
+| 585 | Third dark dark caves south of the crystal.       |
+| 586 | Third dark dark caves south of the crystal.       |
+| 587 | Third dark dark caves south of the crystals       |
+| 588 | Third dark dark caves south of the crystals       |
+| 589 | Third dark dark caves south of the crystals.      |
+| 590 | Third dark dark caves south of the crystals.      |
+| 591 | Third dark dark caves, south of a crystal         |
+| 592 | Third dark dark caves, south of a crystal         |
+| 593 | Third dark dark caves, south of crystal           |
+| 594 | Third dark dark caves, south of crystal           |
+| 595 | Third dark dark caves, south of crystals          |
+| 596 | Third dark dark caves, south of crystals          |
+| 597 | Third dark dark caves, south of the crystal       |
+| 598 | Third dark dark caves, south of the crystal       |
+| 599 | Third dark dark caves, south of the crystals      |
+| 600 | Third dark dark caves, south of the crystals      |
++-----+---------------------------------------------------+
+

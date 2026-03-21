@@ -1,0 +1,934 @@
+GRAPH NAME: idEntrancecaveBackOpening_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 720   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 2     |
++---------------------------------+-------+
+| Node Coverage                   | 0.75  |
+| Node Inclusion                  | 0.5   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.5   |
+| Edge Inclusion                  | 0.5   |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------------------------------------+
+|                                              GOLD OUTPUTS                                              |
++-------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                               | Generated? |
++-------------------------------------------------------------------------------------------+------------+
+| the tall open back opening to the cave's entrance north of the tall plage's front opening | False      |
++-------------------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                    NODE METRICS                                                                    |
++---------------------------+--------------+---------------+-----------------------------------------------------+-----------------------------------+
+| Node                      | Node Covered | Node Included | Coverage Comment                                    | Inclusion Comment                 |
++---------------------------+--------------+---------------+-----------------------------------------------------+-----------------------------------+
+| idEntrancecaveBackOpening | True         | True          | Covered                                             | Included                          |
+| tall                      | True         | False         | Covered                                             | Successor of failed element       |
+| open                      | True         | True          | Covered                                             | Included                          |
+| idPlageFrontOpening       | False        | False         | 'idPlageFrontOpening' not in lexicon's node entries | No SEMENT generated for this node |
++---------------------------+--------------+---------------+-----------------------------------------------------+-----------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                             EDGE METRICS                                                                                             |
++--------------------------------------------+---------------------------+---------------------+--------------+---------------+------------------------------------+-----------------------------------+
+| Edge                                       | Parent                    | Child               | Edge Covered | Edge Included | Coverage Comment                   | Inclusion Comment                 |
++--------------------------------------------+---------------------------+---------------------+--------------+---------------+------------------------------------+-----------------------------------+
+| idEntrancecaveBackOpening_prop_idHeight    | idEntrancecaveBackOpening | tall                | True         | True          | Covered                            | Included                          |
+| idEntrancecaveBackOpening_prop_idOpenState | idEntrancecaveBackOpening | open                | True         | True          | Covered                            | Included                          |
+| isNorthOf                                  | idEntrancecaveBackOpening | idPlageFrontOpening | False        | False         | child of 'isNorthOf' has no SEMENT | No SEMENT generated for this edge |
+| idPlageFrontOpening_prop_idHeight          | idPlageFrontOpening       | tall                | False        | False         | parent of 'idHeight' has no SEMENT | No SEMENT generated for this edge |
++--------------------------------------------+---------------------------+---------------------+--------------+---------------+------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1033                                                                     |
+|               |   INDEX: x1032                                                                   |
+|               |   RELS: < [ _open_a_to LBL: h1073 ARG0: e1070 ARG1: u1071 ARG2: u1072 ]          |
+|               |           [ _tall_a_1 LBL: h1069 ARG0: e1067 ARG1: u1068 ]                       |
+|               |           [ _to_p LBL: h1061 ARG0: e1058 ARG1: u1059 ARG2: i1060 ]               |
+|               |           [ def_udef_a_q LBL: h1065 ARG0: x1062 RSTR: h1063 BODY: h1064 ]        |
+|               |           [ poss LBL: h1057 ARG0: e1054 ARG1: x1055 ARG2: i1056 ]                |
+|               |           [ def_udef_a_q LBL: h1052 ARG0: x1049 RSTR: h1050 BODY: h1051 ]        |
+|               |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|               |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|               |           [ compound LBL: h1044 ARG0: e1041 [ e PROG: - ] ARG1: u1042 ARG2:      |
+|               | u1043 ]                                                                          |
+|               |           [ udef_q LBL: h1039 ARG0: x1036 RSTR: h1037 BODY: h1038 ]              |
+|               |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|               |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|               |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 >                     |
+|               |   EQS: < x1049 eq x1045 h1057 eq h1053 i1056 eq x1049 h1057 eq h1048 x1055 eq    |
+|               | x1047 x1062 eq x1047 h1061 eq h1066 i1060 eq x1062 x1036 eq x1034 h1044 eq h1040 |
+|               | u1043 eq x1036 h1044 eq h1033 u1042 eq x1032 h1061 eq h1033 u1059 eq x1032 h1069 |
+|               | eq h1033 u1068 eq x1032 h1073 eq h1033 u1071 eq x1032 > ]                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1033                                                                     |
+|               |   INDEX: x1032                                                                   |
+|               |   RELS: < [ _open_a_to LBL: h1033 ARG0: e1070 ARG1: x1032 ARG2: u1072 ]          |
+|               |           [ _tall_a_1 LBL: h1033 ARG0: e1067 ARG1: x1032 ]                       |
+|               |           [ _to_p LBL: h1033 ARG0: e1058 ARG1: x1032 ARG2: x1047 ]               |
+|               |           [ def_udef_a_q LBL: h1065 ARG0: x1047 RSTR: h1063 BODY: h1064 ]        |
+|               |           [ poss LBL: h1048 ARG0: e1054 ARG1: x1047 ARG2: x1045 ]                |
+|               |           [ def_udef_a_q LBL: h1052 ARG0: x1045 RSTR: h1050 BODY: h1051 ]        |
+|               |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|               |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|               |           [ compound LBL: h1033 ARG0: e1041 [ e PROG: - ] ARG1: x1032 ARG2:      |
+|               | x1034 ]                                                                          |
+|               |           [ udef_q LBL: h1039 ARG0: x1034 RSTR: h1037 BODY: h1038 ]              |
+|               |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|               |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|               |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1085                                                                     |
+|               |   INDEX: e1082                                                                   |
+|               |   RELS: < [ unknown LBL: h1081 ARG: x1032 ARG0: e1082 ]                          |
+|               |           [ def_udef_a_q LBL: h1080 ARG0: x1032 RSTR: h1078 BODY: h1079 ]        |
+|               |           [ _open_a_to LBL: h1033 ARG0: e1070 ARG1: x1032 ARG2: u1072 ]          |
+|               |           [ _tall_a_1 LBL: h1033 ARG0: e1067 ARG1: x1032 ]                       |
+|               |           [ _to_p LBL: h1033 ARG0: e1058 ARG1: x1032 ARG2: x1047 ]               |
+|               |           [ def_udef_a_q LBL: h1065 ARG0: x1047 RSTR: h1063 BODY: h1064 ]        |
+|               |           [ poss LBL: h1048 ARG0: e1054 ARG1: x1047 ARG2: x1045 ]                |
+|               |           [ def_udef_a_q LBL: h1052 ARG0: x1045 RSTR: h1050 BODY: h1051 ]        |
+|               |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|               |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|               |           [ compound LBL: h1033 ARG0: e1041 [ e PROG: - ] ARG1: x1032 ARG2:      |
+|               | x1034 ]                                                                          |
+|               |           [ udef_q LBL: h1039 ARG0: x1034 RSTR: h1037 BODY: h1038 ]              |
+|               |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|               |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|               |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 h1078 qeq h1033 h1085 |
+|               | qeq h1081 > ]                                                                    |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| Node                      | Generated SEMENT                                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| idEntrancecaveBackOpening | [ TOP: h1033                                                                     |
+|                           |   INDEX: x1032                                                                   |
+|                           |   RELS: < [ _to_p LBL: h1061 ARG0: e1058 ARG1: u1059 ARG2: i1060 ]               |
+|                           |           [ def_udef_a_q LBL: h1065 ARG0: x1062 RSTR: h1063 BODY: h1064 ]        |
+|                           |           [ poss LBL: h1057 ARG0: e1054 ARG1: x1055 ARG2: i1056 ]                |
+|                           |           [ def_udef_a_q LBL: h1052 ARG0: x1049 RSTR: h1050 BODY: h1051 ]        |
+|                           |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|                           |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|                           |           [ compound LBL: h1044 ARG0: e1041 [ e PROG: - ] ARG1: u1042 ARG2:      |
+|                           | u1043 ]                                                                          |
+|                           |           [ udef_q LBL: h1039 ARG0: x1036 RSTR: h1037 BODY: h1038 ]              |
+|                           |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|                           |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|                           |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 >                     |
+|                           |   EQS: < x1049 eq x1045 h1057 eq h1053 i1056 eq x1049 h1057 eq h1048 x1055 eq    |
+|                           | x1047 x1062 eq x1047 h1061 eq h1066 i1060 eq x1062 x1036 eq x1034 h1044 eq h1040 |
+|                           | u1043 eq x1036 h1044 eq h1033 u1042 eq x1032 h1061 eq h1033 u1059 eq x1032 > ]   |
++---------------------------+----------------------------------------------------------------------------------+
+| tall                      | [ TOP: h1076                                                                     |
+|                           |   INDEX: e1074                                                                   |
+|                           |   RELS: < [ _tall_a_1 LBL: h1076 ARG0: e1074 ARG1: u1075 ] >                     |
+|                           |   SLOTS: < ARG1: u1075 > ]                                                       |
++---------------------------+----------------------------------------------------------------------------------+
+| open                      | [ TOP: h1073                                                                     |
+|                           |   INDEX: e1070                                                                   |
+|                           |   RELS: < [ _open_a_to LBL: h1073 ARG0: e1070 ARG1: u1071 ARG2: u1072 ] >        |
+|                           |   SLOTS: < ARG1: u1071 ARG2: u1072 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| idPlageFrontOpening       | None                                                                             |
++---------------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                   EDGE SEMENTS                                                                                  |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+| Edge                                       | Parent                    | Child               | Generated SEMENT                                                                 |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+| idEntrancecaveBackOpening_prop_idHeight    | idEntrancecaveBackOpening | tall                | [ TOP: h1033                                                                     |
+|                                            |                           |                     |   INDEX: x1032                                                                   |
+|                                            |                           |                     |   RELS: < [ _tall_a_1 LBL: h1069 ARG0: e1067 ARG1: u1068 ]                       |
+|                                            |                           |                     |           [ _to_p LBL: h1061 ARG0: e1058 ARG1: u1059 ARG2: i1060 ]               |
+|                                            |                           |                     |           [ def_udef_a_q LBL: h1065 ARG0: x1062 RSTR: h1063 BODY: h1064 ]        |
+|                                            |                           |                     |           [ poss LBL: h1057 ARG0: e1054 ARG1: x1055 ARG2: i1056 ]                |
+|                                            |                           |                     |           [ def_udef_a_q LBL: h1052 ARG0: x1049 RSTR: h1050 BODY: h1051 ]        |
+|                                            |                           |                     |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|                                            |                           |                     |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|                                            |                           |                     |           [ compound LBL: h1044 ARG0: e1041 [ e PROG: - ] ARG1: u1042 ARG2:      |
+|                                            |                           |                     | u1043 ]                                                                          |
+|                                            |                           |                     |           [ udef_q LBL: h1039 ARG0: x1036 RSTR: h1037 BODY: h1038 ]              |
+|                                            |                           |                     |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|                                            |                           |                     |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|                                            |                           |                     |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 >                     |
+|                                            |                           |                     |   EQS: < x1049 eq x1045 h1057 eq h1053 i1056 eq x1049 h1057 eq h1048 x1055 eq    |
+|                                            |                           |                     | x1047 x1062 eq x1047 h1061 eq h1066 i1060 eq x1062 x1036 eq x1034 h1044 eq h1040 |
+|                                            |                           |                     | u1043 eq x1036 h1044 eq h1033 u1042 eq x1032 h1061 eq h1033 u1059 eq x1032 h1069 |
+|                                            |                           |                     | eq h1033 u1068 eq x1032 > ]                                                      |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+| idEntrancecaveBackOpening_prop_idOpenState | idEntrancecaveBackOpening | open                | [ TOP: h1033                                                                     |
+|                                            |                           |                     |   INDEX: x1032                                                                   |
+|                                            |                           |                     |   RELS: < [ _open_a_to LBL: h1073 ARG0: e1070 ARG1: u1071 ARG2: u1072 ]          |
+|                                            |                           |                     |           [ _tall_a_1 LBL: h1069 ARG0: e1067 ARG1: u1068 ]                       |
+|                                            |                           |                     |           [ _to_p LBL: h1061 ARG0: e1058 ARG1: u1059 ARG2: i1060 ]               |
+|                                            |                           |                     |           [ def_udef_a_q LBL: h1065 ARG0: x1062 RSTR: h1063 BODY: h1064 ]        |
+|                                            |                           |                     |           [ poss LBL: h1057 ARG0: e1054 ARG1: x1055 ARG2: i1056 ]                |
+|                                            |                           |                     |           [ def_udef_a_q LBL: h1052 ARG0: x1049 RSTR: h1050 BODY: h1051 ]        |
+|                                            |                           |                     |           [ _cave_n_1 LBL: h1046 ARG0: x1045 ]                                   |
+|                                            |                           |                     |           [ _entrance_n_1 LBL: h1048 ARG0: x1047 ]                               |
+|                                            |                           |                     |           [ compound LBL: h1044 ARG0: e1041 [ e PROG: - ] ARG1: u1042 ARG2:      |
+|                                            |                           |                     | u1043 ]                                                                          |
+|                                            |                           |                     |           [ udef_q LBL: h1039 ARG0: x1036 RSTR: h1037 BODY: h1038 ]              |
+|                                            |                           |                     |           [ _back_n_1 LBL: h1035 ARG0: x1034 ]                                   |
+|                                            |                           |                     |           [ _opening_n_1 LBL: h1033 ARG0: x1032 ] >                              |
+|                                            |                           |                     |   HCONS: < h1050 qeq h1046 h1063 qeq h1048 h1037 qeq h1035 >                     |
+|                                            |                           |                     |   EQS: < x1049 eq x1045 h1057 eq h1053 i1056 eq x1049 h1057 eq h1048 x1055 eq    |
+|                                            |                           |                     | x1047 x1062 eq x1047 h1061 eq h1066 i1060 eq x1062 x1036 eq x1034 h1044 eq h1040 |
+|                                            |                           |                     | u1043 eq x1036 h1044 eq h1033 u1042 eq x1032 h1061 eq h1033 u1059 eq x1032 h1069 |
+|                                            |                           |                     | eq h1033 u1068 eq x1032 h1073 eq h1033 u1071 eq x1032 > ]                        |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+| isNorthOf                                  | idEntrancecaveBackOpening | idPlageFrontOpening | None                                                                             |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+| idPlageFrontOpening_prop_idHeight          | idPlageFrontOpening       | tall                | None                                                                             |
++--------------------------------------------+---------------------------+---------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------+
+|                    GENERATED ENGLISH TEXT                   |
++-----+-------------------------------------------------------+
+| #   | Generated Text                                        |
++-----+-------------------------------------------------------+
+| 1   | A backs open tall opening to a cave's entrance        |
+| 2   | A backs open tall opening to a cave's entrance.       |
+| 3   | A backs open tall opening to a cave's entrances       |
+| 4   | A backs open tall opening to a cave's entrances.      |
+| 5   | A backs open tall opening to caves' entrance          |
+| 6   | A backs open tall opening to caves' entrance.         |
+| 7   | A backs open tall opening to caves' entrances         |
+| 8   | A backs open tall opening to caves' entrances.        |
+| 9   | A backs open tall opening to the cave's entrance      |
+| 10  | A backs open tall opening to the cave's entrance.     |
+| 11  | A backs open tall opening to the cave's entrances     |
+| 12  | A backs open tall opening to the cave's entrances.    |
+| 13  | A backs open tall opening to the caves' entrance      |
+| 14  | A backs open tall opening to the caves' entrance.     |
+| 15  | A backs open tall opening to the caves' entrances     |
+| 16  | A backs open tall opening to the caves' entrances.    |
+| 17  | A backs open tall opening, to a cave's entrance       |
+| 18  | A backs open tall opening, to a cave's entrances      |
+| 19  | A backs open tall opening, to caves' entrance         |
+| 20  | A backs open tall opening, to caves' entrances        |
+| 21  | A backs open tall opening, to the cave's entrance     |
+| 22  | A backs open tall opening, to the cave's entrances    |
+| 23  | A backs open tall opening, to the caves' entrance     |
+| 24  | A backs open tall opening, to the caves' entrances    |
+| 25  | A backs tall open opening to a cave's entrance        |
+| 26  | A backs tall open opening to a cave's entrance.       |
+| 27  | A backs tall open opening to a cave's entrances       |
+| 28  | A backs tall open opening to a cave's entrances.      |
+| 29  | A backs tall open opening to caves' entrance          |
+| 30  | A backs tall open opening to caves' entrance.         |
+| 31  | A backs tall open opening to caves' entrances         |
+| 32  | A backs tall open opening to caves' entrances.        |
+| 33  | A backs tall open opening to the cave's entrance      |
+| 34  | A backs tall open opening to the cave's entrance.     |
+| 35  | A backs tall open opening to the cave's entrances     |
+| 36  | A backs tall open opening to the cave's entrances.    |
+| 37  | A backs tall open opening to the caves' entrance      |
+| 38  | A backs tall open opening to the caves' entrance.     |
+| 39  | A backs tall open opening to the caves' entrances     |
+| 40  | A backs tall open opening to the caves' entrances.    |
+| 41  | A backs tall open opening, to a cave's entrance       |
+| 42  | A backs tall open opening, to a cave's entrances      |
+| 43  | A backs tall open opening, to caves' entrance         |
+| 44  | A backs tall open opening, to caves' entrances        |
+| 45  | A backs tall open opening, to the cave's entrance     |
+| 46  | A backs tall open opening, to the cave's entrances    |
+| 47  | A backs tall open opening, to the caves' entrance     |
+| 48  | A backs tall open opening, to the caves' entrances    |
+| 49  | A tall backs open opening to a cave's entrance        |
+| 50  | A tall backs open opening to a cave's entrance.       |
+| 51  | A tall backs open opening to a cave's entrances       |
+| 52  | A tall backs open opening to a cave's entrances.      |
+| 53  | A tall backs open opening to caves' entrance          |
+| 54  | A tall backs open opening to caves' entrance.         |
+| 55  | A tall backs open opening to caves' entrances         |
+| 56  | A tall backs open opening to caves' entrances.        |
+| 57  | A tall backs open opening to the cave's entrance      |
+| 58  | A tall backs open opening to the cave's entrance.     |
+| 59  | A tall backs open opening to the cave's entrances     |
+| 60  | A tall backs open opening to the cave's entrances.    |
+| 61  | A tall backs open opening to the caves' entrance      |
+| 62  | A tall backs open opening to the caves' entrance.     |
+| 63  | A tall backs open opening to the caves' entrances     |
+| 64  | A tall backs open opening to the caves' entrances.    |
+| 65  | A tall backs open opening, to a cave's entrance       |
+| 66  | A tall backs open opening, to a cave's entrances      |
+| 67  | A tall backs open opening, to caves' entrance         |
+| 68  | A tall backs open opening, to caves' entrances        |
+| 69  | A tall backs open opening, to the cave's entrance     |
+| 70  | A tall backs open opening, to the cave's entrances    |
+| 71  | A tall backs open opening, to the caves' entrance     |
+| 72  | A tall backs open opening, to the caves' entrances    |
+| 73  | A tall open back opening to a cave's entrance         |
+| 74  | A tall open back opening to a cave's entrance.        |
+| 75  | A tall open back opening to a cave's entrances        |
+| 76  | A tall open back opening to a cave's entrances.       |
+| 77  | A tall open back opening to caves' entrance           |
+| 78  | A tall open back opening to caves' entrance.          |
+| 79  | A tall open back opening to caves' entrances          |
+| 80  | A tall open back opening to caves' entrances.         |
+| 81  | A tall open back opening to the cave's entrance       |
+| 82  | A tall open back opening to the cave's entrance.      |
+| 83  | A tall open back opening to the cave's entrances      |
+| 84  | A tall open back opening to the cave's entrances.     |
+| 85  | A tall open back opening to the caves' entrance       |
+| 86  | A tall open back opening to the caves' entrance.      |
+| 87  | A tall open back opening to the caves' entrances      |
+| 88  | A tall open back opening to the caves' entrances.     |
+| 89  | A tall open back opening, to a cave's entrance        |
+| 90  | A tall open back opening, to a cave's entrances       |
+| 91  | A tall open back opening, to caves' entrance          |
+| 92  | A tall open back opening, to caves' entrances         |
+| 93  | A tall open back opening, to the cave's entrance      |
+| 94  | A tall open back opening, to the cave's entrances     |
+| 95  | A tall open back opening, to the caves' entrance      |
+| 96  | A tall open back opening, to the caves' entrances     |
+| 97  | An open backs tall opening to a cave's entrance       |
+| 98  | An open backs tall opening to a cave's entrance.      |
+| 99  | An open backs tall opening to a cave's entrances      |
+| 100 | An open backs tall opening to a cave's entrances.     |
+| 101 | An open backs tall opening to caves' entrance         |
+| 102 | An open backs tall opening to caves' entrance.        |
+| 103 | An open backs tall opening to caves' entrances        |
+| 104 | An open backs tall opening to caves' entrances.       |
+| 105 | An open backs tall opening to the cave's entrance     |
+| 106 | An open backs tall opening to the cave's entrance.    |
+| 107 | An open backs tall opening to the cave's entrances    |
+| 108 | An open backs tall opening to the cave's entrances.   |
+| 109 | An open backs tall opening to the caves' entrance     |
+| 110 | An open backs tall opening to the caves' entrance.    |
+| 111 | An open backs tall opening to the caves' entrances    |
+| 112 | An open backs tall opening to the caves' entrances.   |
+| 113 | An open backs tall opening, to a cave's entrance      |
+| 114 | An open backs tall opening, to a cave's entrances     |
+| 115 | An open backs tall opening, to caves' entrance        |
+| 116 | An open backs tall opening, to caves' entrances       |
+| 117 | An open backs tall opening, to the cave's entrance    |
+| 118 | An open backs tall opening, to the cave's entrances   |
+| 119 | An open backs tall opening, to the caves' entrance    |
+| 120 | An open backs tall opening, to the caves' entrances   |
+| 121 | An open tall back opening to a cave's entrance        |
+| 122 | An open tall back opening to a cave's entrance.       |
+| 123 | An open tall back opening to a cave's entrances       |
+| 124 | An open tall back opening to a cave's entrances.      |
+| 125 | An open tall back opening to caves' entrance          |
+| 126 | An open tall back opening to caves' entrance.         |
+| 127 | An open tall back opening to caves' entrances         |
+| 128 | An open tall back opening to caves' entrances.        |
+| 129 | An open tall back opening to the cave's entrance      |
+| 130 | An open tall back opening to the cave's entrance.     |
+| 131 | An open tall back opening to the cave's entrances     |
+| 132 | An open tall back opening to the cave's entrances.    |
+| 133 | An open tall back opening to the caves' entrance      |
+| 134 | An open tall back opening to the caves' entrance.     |
+| 135 | An open tall back opening to the caves' entrances     |
+| 136 | An open tall back opening to the caves' entrances.    |
+| 137 | An open tall back opening, to a cave's entrance       |
+| 138 | An open tall back opening, to a cave's entrances      |
+| 139 | An open tall back opening, to caves' entrance         |
+| 140 | An open tall back opening, to caves' entrances        |
+| 141 | An open tall back opening, to the cave's entrance     |
+| 142 | An open tall back opening, to the cave's entrances    |
+| 143 | An open tall back opening, to the caves' entrance     |
+| 144 | An open tall back opening, to the caves' entrances    |
+| 145 | Backs open tall opening to a cave's entrance          |
+| 146 | Backs open tall opening to a cave's entrance.         |
+| 147 | Backs open tall opening to a cave's entrances         |
+| 148 | Backs open tall opening to a cave's entrances.        |
+| 149 | Backs open tall opening to caves' entrance            |
+| 150 | Backs open tall opening to caves' entrance.           |
+| 151 | Backs open tall opening to caves' entrances           |
+| 152 | Backs open tall opening to caves' entrances.          |
+| 153 | Backs open tall opening to the cave's entrance        |
+| 154 | Backs open tall opening to the cave's entrance.       |
+| 155 | Backs open tall opening to the cave's entrances       |
+| 156 | Backs open tall opening to the cave's entrances.      |
+| 157 | Backs open tall opening to the caves' entrance        |
+| 158 | Backs open tall opening to the caves' entrance.       |
+| 159 | Backs open tall opening to the caves' entrances       |
+| 160 | Backs open tall opening to the caves' entrances.      |
+| 161 | Backs open tall opening, to a cave's entrance         |
+| 162 | Backs open tall opening, to a cave's entrances        |
+| 163 | Backs open tall opening, to caves' entrance           |
+| 164 | Backs open tall opening, to caves' entrances          |
+| 165 | Backs open tall opening, to the cave's entrance       |
+| 166 | Backs open tall opening, to the cave's entrances      |
+| 167 | Backs open tall opening, to the caves' entrance       |
+| 168 | Backs open tall opening, to the caves' entrances      |
+| 169 | Backs open tall openings to a cave's entrance         |
+| 170 | Backs open tall openings to a cave's entrance.        |
+| 171 | Backs open tall openings to a cave's entrances        |
+| 172 | Backs open tall openings to a cave's entrances.       |
+| 173 | Backs open tall openings to caves' entrance           |
+| 174 | Backs open tall openings to caves' entrance.          |
+| 175 | Backs open tall openings to caves' entrances          |
+| 176 | Backs open tall openings to caves' entrances.         |
+| 177 | Backs open tall openings to the cave's entrance       |
+| 178 | Backs open tall openings to the cave's entrance.      |
+| 179 | Backs open tall openings to the cave's entrances      |
+| 180 | Backs open tall openings to the cave's entrances.     |
+| 181 | Backs open tall openings to the caves' entrance       |
+| 182 | Backs open tall openings to the caves' entrance.      |
+| 183 | Backs open tall openings to the caves' entrances      |
+| 184 | Backs open tall openings to the caves' entrances.     |
+| 185 | Backs open tall openings, to a cave's entrance        |
+| 186 | Backs open tall openings, to a cave's entrances       |
+| 187 | Backs open tall openings, to caves' entrance          |
+| 188 | Backs open tall openings, to caves' entrances         |
+| 189 | Backs open tall openings, to the cave's entrance      |
+| 190 | Backs open tall openings, to the cave's entrances     |
+| 191 | Backs open tall openings, to the caves' entrance      |
+| 192 | Backs open tall openings, to the caves' entrances     |
+| 193 | Backs tall open opening to a cave's entrance          |
+| 194 | Backs tall open opening to a cave's entrance.         |
+| 195 | Backs tall open opening to a cave's entrances         |
+| 196 | Backs tall open opening to a cave's entrances.        |
+| 197 | Backs tall open opening to caves' entrance            |
+| 198 | Backs tall open opening to caves' entrance.           |
+| 199 | Backs tall open opening to caves' entrances           |
+| 200 | Backs tall open opening to caves' entrances.          |
+| 201 | Backs tall open opening to the cave's entrance        |
+| 202 | Backs tall open opening to the cave's entrance.       |
+| 203 | Backs tall open opening to the cave's entrances       |
+| 204 | Backs tall open opening to the cave's entrances.      |
+| 205 | Backs tall open opening to the caves' entrance        |
+| 206 | Backs tall open opening to the caves' entrance.       |
+| 207 | Backs tall open opening to the caves' entrances       |
+| 208 | Backs tall open opening to the caves' entrances.      |
+| 209 | Backs tall open opening, to a cave's entrance         |
+| 210 | Backs tall open opening, to a cave's entrances        |
+| 211 | Backs tall open opening, to caves' entrance           |
+| 212 | Backs tall open opening, to caves' entrances          |
+| 213 | Backs tall open opening, to the cave's entrance       |
+| 214 | Backs tall open opening, to the cave's entrances      |
+| 215 | Backs tall open opening, to the caves' entrance       |
+| 216 | Backs tall open opening, to the caves' entrances      |
+| 217 | Backs tall open openings to a cave's entrance         |
+| 218 | Backs tall open openings to a cave's entrance.        |
+| 219 | Backs tall open openings to a cave's entrances        |
+| 220 | Backs tall open openings to a cave's entrances.       |
+| 221 | Backs tall open openings to caves' entrance           |
+| 222 | Backs tall open openings to caves' entrance.          |
+| 223 | Backs tall open openings to caves' entrances          |
+| 224 | Backs tall open openings to caves' entrances.         |
+| 225 | Backs tall open openings to the cave's entrance       |
+| 226 | Backs tall open openings to the cave's entrance.      |
+| 227 | Backs tall open openings to the cave's entrances      |
+| 228 | Backs tall open openings to the cave's entrances.     |
+| 229 | Backs tall open openings to the caves' entrance       |
+| 230 | Backs tall open openings to the caves' entrance.      |
+| 231 | Backs tall open openings to the caves' entrances      |
+| 232 | Backs tall open openings to the caves' entrances.     |
+| 233 | Backs tall open openings, to a cave's entrance        |
+| 234 | Backs tall open openings, to a cave's entrances       |
+| 235 | Backs tall open openings, to caves' entrance          |
+| 236 | Backs tall open openings, to caves' entrances         |
+| 237 | Backs tall open openings, to the cave's entrance      |
+| 238 | Backs tall open openings, to the cave's entrances     |
+| 239 | Backs tall open openings, to the caves' entrance      |
+| 240 | Backs tall open openings, to the caves' entrances     |
+| 241 | Open backs tall opening to a cave's entrance          |
+| 242 | Open backs tall opening to a cave's entrance.         |
+| 243 | Open backs tall opening to a cave's entrances         |
+| 244 | Open backs tall opening to a cave's entrances.        |
+| 245 | Open backs tall opening to caves' entrance            |
+| 246 | Open backs tall opening to caves' entrance.           |
+| 247 | Open backs tall opening to caves' entrances           |
+| 248 | Open backs tall opening to caves' entrances.          |
+| 249 | Open backs tall opening to the cave's entrance        |
+| 250 | Open backs tall opening to the cave's entrance.       |
+| 251 | Open backs tall opening to the cave's entrances       |
+| 252 | Open backs tall opening to the cave's entrances.      |
+| 253 | Open backs tall opening to the caves' entrance        |
+| 254 | Open backs tall opening to the caves' entrance.       |
+| 255 | Open backs tall opening to the caves' entrances       |
+| 256 | Open backs tall opening to the caves' entrances.      |
+| 257 | Open backs tall opening, to a cave's entrance         |
+| 258 | Open backs tall opening, to a cave's entrances        |
+| 259 | Open backs tall opening, to caves' entrance           |
+| 260 | Open backs tall opening, to caves' entrances          |
+| 261 | Open backs tall opening, to the cave's entrance       |
+| 262 | Open backs tall opening, to the cave's entrances      |
+| 263 | Open backs tall opening, to the caves' entrance       |
+| 264 | Open backs tall opening, to the caves' entrances      |
+| 265 | Open backs tall openings to a cave's entrance         |
+| 266 | Open backs tall openings to a cave's entrance.        |
+| 267 | Open backs tall openings to a cave's entrances        |
+| 268 | Open backs tall openings to a cave's entrances.       |
+| 269 | Open backs tall openings to caves' entrance           |
+| 270 | Open backs tall openings to caves' entrance.          |
+| 271 | Open backs tall openings to caves' entrances          |
+| 272 | Open backs tall openings to caves' entrances.         |
+| 273 | Open backs tall openings to the cave's entrance       |
+| 274 | Open backs tall openings to the cave's entrance.      |
+| 275 | Open backs tall openings to the cave's entrances      |
+| 276 | Open backs tall openings to the cave's entrances.     |
+| 277 | Open backs tall openings to the caves' entrance       |
+| 278 | Open backs tall openings to the caves' entrance.      |
+| 279 | Open backs tall openings to the caves' entrances      |
+| 280 | Open backs tall openings to the caves' entrances.     |
+| 281 | Open backs tall openings, to a cave's entrance        |
+| 282 | Open backs tall openings, to a cave's entrances       |
+| 283 | Open backs tall openings, to caves' entrance          |
+| 284 | Open backs tall openings, to caves' entrances         |
+| 285 | Open backs tall openings, to the cave's entrance      |
+| 286 | Open backs tall openings, to the cave's entrances     |
+| 287 | Open backs tall openings, to the caves' entrance      |
+| 288 | Open backs tall openings, to the caves' entrances     |
+| 289 | Open tall back opening to a cave's entrance           |
+| 290 | Open tall back opening to a cave's entrance.          |
+| 291 | Open tall back opening to a cave's entrances          |
+| 292 | Open tall back opening to a cave's entrances.         |
+| 293 | Open tall back opening to caves' entrance             |
+| 294 | Open tall back opening to caves' entrance.            |
+| 295 | Open tall back opening to caves' entrances            |
+| 296 | Open tall back opening to caves' entrances.           |
+| 297 | Open tall back opening to the cave's entrance         |
+| 298 | Open tall back opening to the cave's entrance.        |
+| 299 | Open tall back opening to the cave's entrances        |
+| 300 | Open tall back opening to the cave's entrances.       |
+| 301 | Open tall back opening to the caves' entrance         |
+| 302 | Open tall back opening to the caves' entrance.        |
+| 303 | Open tall back opening to the caves' entrances        |
+| 304 | Open tall back opening to the caves' entrances.       |
+| 305 | Open tall back opening, to a cave's entrance          |
+| 306 | Open tall back opening, to a cave's entrances         |
+| 307 | Open tall back opening, to caves' entrance            |
+| 308 | Open tall back opening, to caves' entrances           |
+| 309 | Open tall back opening, to the cave's entrance        |
+| 310 | Open tall back opening, to the cave's entrances       |
+| 311 | Open tall back opening, to the caves' entrance        |
+| 312 | Open tall back opening, to the caves' entrances       |
+| 313 | Open tall back openings to a cave's entrance          |
+| 314 | Open tall back openings to a cave's entrance.         |
+| 315 | Open tall back openings to a cave's entrances         |
+| 316 | Open tall back openings to a cave's entrances.        |
+| 317 | Open tall back openings to caves' entrance            |
+| 318 | Open tall back openings to caves' entrance.           |
+| 319 | Open tall back openings to caves' entrances           |
+| 320 | Open tall back openings to caves' entrances.          |
+| 321 | Open tall back openings to the cave's entrance        |
+| 322 | Open tall back openings to the cave's entrance.       |
+| 323 | Open tall back openings to the cave's entrances       |
+| 324 | Open tall back openings to the cave's entrances.      |
+| 325 | Open tall back openings to the caves' entrance        |
+| 326 | Open tall back openings to the caves' entrance.       |
+| 327 | Open tall back openings to the caves' entrances       |
+| 328 | Open tall back openings to the caves' entrances.      |
+| 329 | Open tall back openings, to a cave's entrance         |
+| 330 | Open tall back openings, to a cave's entrances        |
+| 331 | Open tall back openings, to caves' entrance           |
+| 332 | Open tall back openings, to caves' entrances          |
+| 333 | Open tall back openings, to the cave's entrance       |
+| 334 | Open tall back openings, to the cave's entrances      |
+| 335 | Open tall back openings, to the caves' entrance       |
+| 336 | Open tall back openings, to the caves' entrances      |
+| 337 | Tall backs open opening to a cave's entrance          |
+| 338 | Tall backs open opening to a cave's entrance.         |
+| 339 | Tall backs open opening to a cave's entrances         |
+| 340 | Tall backs open opening to a cave's entrances.        |
+| 341 | Tall backs open opening to caves' entrance            |
+| 342 | Tall backs open opening to caves' entrance.           |
+| 343 | Tall backs open opening to caves' entrances           |
+| 344 | Tall backs open opening to caves' entrances.          |
+| 345 | Tall backs open opening to the cave's entrance        |
+| 346 | Tall backs open opening to the cave's entrance.       |
+| 347 | Tall backs open opening to the cave's entrances       |
+| 348 | Tall backs open opening to the cave's entrances.      |
+| 349 | Tall backs open opening to the caves' entrance        |
+| 350 | Tall backs open opening to the caves' entrance.       |
+| 351 | Tall backs open opening to the caves' entrances       |
+| 352 | Tall backs open opening to the caves' entrances.      |
+| 353 | Tall backs open opening, to a cave's entrance         |
+| 354 | Tall backs open opening, to a cave's entrances        |
+| 355 | Tall backs open opening, to caves' entrance           |
+| 356 | Tall backs open opening, to caves' entrances          |
+| 357 | Tall backs open opening, to the cave's entrance       |
+| 358 | Tall backs open opening, to the cave's entrances      |
+| 359 | Tall backs open opening, to the caves' entrance       |
+| 360 | Tall backs open opening, to the caves' entrances      |
+| 361 | Tall backs open openings to a cave's entrance         |
+| 362 | Tall backs open openings to a cave's entrance.        |
+| 363 | Tall backs open openings to a cave's entrances        |
+| 364 | Tall backs open openings to a cave's entrances.       |
+| 365 | Tall backs open openings to caves' entrance           |
+| 366 | Tall backs open openings to caves' entrance.          |
+| 367 | Tall backs open openings to caves' entrances          |
+| 368 | Tall backs open openings to caves' entrances.         |
+| 369 | Tall backs open openings to the cave's entrance       |
+| 370 | Tall backs open openings to the cave's entrance.      |
+| 371 | Tall backs open openings to the cave's entrances      |
+| 372 | Tall backs open openings to the cave's entrances.     |
+| 373 | Tall backs open openings to the caves' entrance       |
+| 374 | Tall backs open openings to the caves' entrance.      |
+| 375 | Tall backs open openings to the caves' entrances      |
+| 376 | Tall backs open openings to the caves' entrances.     |
+| 377 | Tall backs open openings, to a cave's entrance        |
+| 378 | Tall backs open openings, to a cave's entrances       |
+| 379 | Tall backs open openings, to caves' entrance          |
+| 380 | Tall backs open openings, to caves' entrances         |
+| 381 | Tall backs open openings, to the cave's entrance      |
+| 382 | Tall backs open openings, to the cave's entrances     |
+| 383 | Tall backs open openings, to the caves' entrance      |
+| 384 | Tall backs open openings, to the caves' entrances     |
+| 385 | Tall open back opening to a cave's entrance           |
+| 386 | Tall open back opening to a cave's entrance.          |
+| 387 | Tall open back opening to a cave's entrances          |
+| 388 | Tall open back opening to a cave's entrances.         |
+| 389 | Tall open back opening to caves' entrance             |
+| 390 | Tall open back opening to caves' entrance.            |
+| 391 | Tall open back opening to caves' entrances            |
+| 392 | Tall open back opening to caves' entrances.           |
+| 393 | Tall open back opening to the cave's entrance         |
+| 394 | Tall open back opening to the cave's entrance.        |
+| 395 | Tall open back opening to the cave's entrances        |
+| 396 | Tall open back opening to the cave's entrances.       |
+| 397 | Tall open back opening to the caves' entrance         |
+| 398 | Tall open back opening to the caves' entrance.        |
+| 399 | Tall open back opening to the caves' entrances        |
+| 400 | Tall open back opening to the caves' entrances.       |
+| 401 | Tall open back opening, to a cave's entrance          |
+| 402 | Tall open back opening, to a cave's entrances         |
+| 403 | Tall open back opening, to caves' entrance            |
+| 404 | Tall open back opening, to caves' entrances           |
+| 405 | Tall open back opening, to the cave's entrance        |
+| 406 | Tall open back opening, to the cave's entrances       |
+| 407 | Tall open back opening, to the caves' entrance        |
+| 408 | Tall open back opening, to the caves' entrances       |
+| 409 | Tall open back openings to a cave's entrance          |
+| 410 | Tall open back openings to a cave's entrance.         |
+| 411 | Tall open back openings to a cave's entrances         |
+| 412 | Tall open back openings to a cave's entrances.        |
+| 413 | Tall open back openings to caves' entrance            |
+| 414 | Tall open back openings to caves' entrance.           |
+| 415 | Tall open back openings to caves' entrances           |
+| 416 | Tall open back openings to caves' entrances.          |
+| 417 | Tall open back openings to the cave's entrance        |
+| 418 | Tall open back openings to the cave's entrance.       |
+| 419 | Tall open back openings to the cave's entrances       |
+| 420 | Tall open back openings to the cave's entrances.      |
+| 421 | Tall open back openings to the caves' entrance        |
+| 422 | Tall open back openings to the caves' entrance.       |
+| 423 | Tall open back openings to the caves' entrances       |
+| 424 | Tall open back openings to the caves' entrances.      |
+| 425 | Tall open back openings, to a cave's entrance         |
+| 426 | Tall open back openings, to a cave's entrances        |
+| 427 | Tall open back openings, to caves' entrance           |
+| 428 | Tall open back openings, to caves' entrances          |
+| 429 | Tall open back openings, to the cave's entrance       |
+| 430 | Tall open back openings, to the cave's entrances      |
+| 431 | Tall open back openings, to the caves' entrance       |
+| 432 | Tall open back openings, to the caves' entrances      |
+| 433 | The backs open tall opening to a cave's entrance      |
+| 434 | The backs open tall opening to a cave's entrance.     |
+| 435 | The backs open tall opening to a cave's entrances     |
+| 436 | The backs open tall opening to a cave's entrances.    |
+| 437 | The backs open tall opening to caves' entrance        |
+| 438 | The backs open tall opening to caves' entrance.       |
+| 439 | The backs open tall opening to caves' entrances       |
+| 440 | The backs open tall opening to caves' entrances.      |
+| 441 | The backs open tall opening to the cave's entrance    |
+| 442 | The backs open tall opening to the cave's entrance.   |
+| 443 | The backs open tall opening to the cave's entrances   |
+| 444 | The backs open tall opening to the cave's entrances.  |
+| 445 | The backs open tall opening to the caves' entrance    |
+| 446 | The backs open tall opening to the caves' entrance.   |
+| 447 | The backs open tall opening to the caves' entrances   |
+| 448 | The backs open tall opening to the caves' entrances.  |
+| 449 | The backs open tall opening, to a cave's entrance     |
+| 450 | The backs open tall opening, to a cave's entrances    |
+| 451 | The backs open tall opening, to caves' entrance       |
+| 452 | The backs open tall opening, to caves' entrances      |
+| 453 | The backs open tall opening, to the cave's entrance   |
+| 454 | The backs open tall opening, to the cave's entrances  |
+| 455 | The backs open tall opening, to the caves' entrance   |
+| 456 | The backs open tall opening, to the caves' entrances  |
+| 457 | The backs open tall openings to a cave's entrance     |
+| 458 | The backs open tall openings to a cave's entrance.    |
+| 459 | The backs open tall openings to a cave's entrances    |
+| 460 | The backs open tall openings to a cave's entrances.   |
+| 461 | The backs open tall openings to caves' entrance       |
+| 462 | The backs open tall openings to caves' entrance.      |
+| 463 | The backs open tall openings to caves' entrances      |
+| 464 | The backs open tall openings to caves' entrances.     |
+| 465 | The backs open tall openings to the cave's entrance   |
+| 466 | The backs open tall openings to the cave's entrance.  |
+| 467 | The backs open tall openings to the cave's entrances  |
+| 468 | The backs open tall openings to the cave's entrances. |
+| 469 | The backs open tall openings to the caves' entrance   |
+| 470 | The backs open tall openings to the caves' entrance.  |
+| 471 | The backs open tall openings to the caves' entrances  |
+| 472 | The backs open tall openings to the caves' entrances. |
+| 473 | The backs open tall openings, to a cave's entrance    |
+| 474 | The backs open tall openings, to a cave's entrances   |
+| 475 | The backs open tall openings, to caves' entrance      |
+| 476 | The backs open tall openings, to caves' entrances     |
+| 477 | The backs open tall openings, to the cave's entrance  |
+| 478 | The backs open tall openings, to the cave's entrances |
+| 479 | The backs open tall openings, to the caves' entrance  |
+| 480 | The backs open tall openings, to the caves' entrances |
+| 481 | The backs tall open opening to a cave's entrance      |
+| 482 | The backs tall open opening to a cave's entrance.     |
+| 483 | The backs tall open opening to a cave's entrances     |
+| 484 | The backs tall open opening to a cave's entrances.    |
+| 485 | The backs tall open opening to caves' entrance        |
+| 486 | The backs tall open opening to caves' entrance.       |
+| 487 | The backs tall open opening to caves' entrances       |
+| 488 | The backs tall open opening to caves' entrances.      |
+| 489 | The backs tall open opening to the cave's entrance    |
+| 490 | The backs tall open opening to the cave's entrance.   |
+| 491 | The backs tall open opening to the cave's entrances   |
+| 492 | The backs tall open opening to the cave's entrances.  |
+| 493 | The backs tall open opening to the caves' entrance    |
+| 494 | The backs tall open opening to the caves' entrance.   |
+| 495 | The backs tall open opening to the caves' entrances   |
+| 496 | The backs tall open opening to the caves' entrances.  |
+| 497 | The backs tall open opening, to a cave's entrance     |
+| 498 | The backs tall open opening, to a cave's entrances    |
+| 499 | The backs tall open opening, to caves' entrance       |
+| 500 | The backs tall open opening, to caves' entrances      |
+| 501 | The backs tall open opening, to the cave's entrance   |
+| 502 | The backs tall open opening, to the cave's entrances  |
+| 503 | The backs tall open opening, to the caves' entrance   |
+| 504 | The backs tall open opening, to the caves' entrances  |
+| 505 | The backs tall open openings to a cave's entrance     |
+| 506 | The backs tall open openings to a cave's entrance.    |
+| 507 | The backs tall open openings to a cave's entrances    |
+| 508 | The backs tall open openings to a cave's entrances.   |
+| 509 | The backs tall open openings to caves' entrance       |
+| 510 | The backs tall open openings to caves' entrance.      |
+| 511 | The backs tall open openings to caves' entrances      |
+| 512 | The backs tall open openings to caves' entrances.     |
+| 513 | The backs tall open openings to the cave's entrance   |
+| 514 | The backs tall open openings to the cave's entrance.  |
+| 515 | The backs tall open openings to the cave's entrances  |
+| 516 | The backs tall open openings to the cave's entrances. |
+| 517 | The backs tall open openings to the caves' entrance   |
+| 518 | The backs tall open openings to the caves' entrance.  |
+| 519 | The backs tall open openings to the caves' entrances  |
+| 520 | The backs tall open openings to the caves' entrances. |
+| 521 | The backs tall open openings, to a cave's entrance    |
+| 522 | The backs tall open openings, to a cave's entrances   |
+| 523 | The backs tall open openings, to caves' entrance      |
+| 524 | The backs tall open openings, to caves' entrances     |
+| 525 | The backs tall open openings, to the cave's entrance  |
+| 526 | The backs tall open openings, to the cave's entrances |
+| 527 | The backs tall open openings, to the caves' entrance  |
+| 528 | The backs tall open openings, to the caves' entrances |
+| 529 | The open backs tall opening to a cave's entrance      |
+| 530 | The open backs tall opening to a cave's entrance.     |
+| 531 | The open backs tall opening to a cave's entrances     |
+| 532 | The open backs tall opening to a cave's entrances.    |
+| 533 | The open backs tall opening to caves' entrance        |
+| 534 | The open backs tall opening to caves' entrance.       |
+| 535 | The open backs tall opening to caves' entrances       |
+| 536 | The open backs tall opening to caves' entrances.      |
+| 537 | The open backs tall opening to the cave's entrance    |
+| 538 | The open backs tall opening to the cave's entrance.   |
+| 539 | The open backs tall opening to the cave's entrances   |
+| 540 | The open backs tall opening to the cave's entrances.  |
+| 541 | The open backs tall opening to the caves' entrance    |
+| 542 | The open backs tall opening to the caves' entrance.   |
+| 543 | The open backs tall opening to the caves' entrances   |
+| 544 | The open backs tall opening to the caves' entrances.  |
+| 545 | The open backs tall opening, to a cave's entrance     |
+| 546 | The open backs tall opening, to a cave's entrances    |
+| 547 | The open backs tall opening, to caves' entrance       |
+| 548 | The open backs tall opening, to caves' entrances      |
+| 549 | The open backs tall opening, to the cave's entrance   |
+| 550 | The open backs tall opening, to the cave's entrances  |
+| 551 | The open backs tall opening, to the caves' entrance   |
+| 552 | The open backs tall opening, to the caves' entrances  |
+| 553 | The open backs tall openings to a cave's entrance     |
+| 554 | The open backs tall openings to a cave's entrance.    |
+| 555 | The open backs tall openings to a cave's entrances    |
+| 556 | The open backs tall openings to a cave's entrances.   |
+| 557 | The open backs tall openings to caves' entrance       |
+| 558 | The open backs tall openings to caves' entrance.      |
+| 559 | The open backs tall openings to caves' entrances      |
+| 560 | The open backs tall openings to caves' entrances.     |
+| 561 | The open backs tall openings to the cave's entrance   |
+| 562 | The open backs tall openings to the cave's entrance.  |
+| 563 | The open backs tall openings to the cave's entrances  |
+| 564 | The open backs tall openings to the cave's entrances. |
+| 565 | The open backs tall openings to the caves' entrance   |
+| 566 | The open backs tall openings to the caves' entrance.  |
+| 567 | The open backs tall openings to the caves' entrances  |
+| 568 | The open backs tall openings to the caves' entrances. |
+| 569 | The open backs tall openings, to a cave's entrance    |
+| 570 | The open backs tall openings, to a cave's entrances   |
+| 571 | The open backs tall openings, to caves' entrance      |
+| 572 | The open backs tall openings, to caves' entrances     |
+| 573 | The open backs tall openings, to the cave's entrance  |
+| 574 | The open backs tall openings, to the cave's entrances |
+| 575 | The open backs tall openings, to the caves' entrance  |
+| 576 | The open backs tall openings, to the caves' entrances |
+| 577 | The open tall back opening to a cave's entrance       |
+| 578 | The open tall back opening to a cave's entrance.      |
+| 579 | The open tall back opening to a cave's entrances      |
+| 580 | The open tall back opening to a cave's entrances.     |
+| 581 | The open tall back opening to caves' entrance         |
+| 582 | The open tall back opening to caves' entrance.        |
+| 583 | The open tall back opening to caves' entrances        |
+| 584 | The open tall back opening to caves' entrances.       |
+| 585 | The open tall back opening to the cave's entrance     |
+| 586 | The open tall back opening to the cave's entrance.    |
+| 587 | The open tall back opening to the cave's entrances    |
+| 588 | The open tall back opening to the cave's entrances.   |
+| 589 | The open tall back opening to the caves' entrance     |
+| 590 | The open tall back opening to the caves' entrance.    |
+| 591 | The open tall back opening to the caves' entrances    |
+| 592 | The open tall back opening to the caves' entrances.   |
+| 593 | The open tall back opening, to a cave's entrance      |
+| 594 | The open tall back opening, to a cave's entrances     |
+| 595 | The open tall back opening, to caves' entrance        |
+| 596 | The open tall back opening, to caves' entrances       |
+| 597 | The open tall back opening, to the cave's entrance    |
+| 598 | The open tall back opening, to the cave's entrances   |
+| 599 | The open tall back opening, to the caves' entrance    |
+| 600 | The open tall back opening, to the caves' entrances   |
+| 601 | The open tall back openings to a cave's entrance      |
+| 602 | The open tall back openings to a cave's entrance.     |
+| 603 | The open tall back openings to a cave's entrances     |
+| 604 | The open tall back openings to a cave's entrances.    |
+| 605 | The open tall back openings to caves' entrance        |
+| 606 | The open tall back openings to caves' entrance.       |
+| 607 | The open tall back openings to caves' entrances       |
+| 608 | The open tall back openings to caves' entrances.      |
+| 609 | The open tall back openings to the cave's entrance    |
+| 610 | The open tall back openings to the cave's entrance.   |
+| 611 | The open tall back openings to the cave's entrances   |
+| 612 | The open tall back openings to the cave's entrances.  |
+| 613 | The open tall back openings to the caves' entrance    |
+| 614 | The open tall back openings to the caves' entrance.   |
+| 615 | The open tall back openings to the caves' entrances   |
+| 616 | The open tall back openings to the caves' entrances.  |
+| 617 | The open tall back openings, to a cave's entrance     |
+| 618 | The open tall back openings, to a cave's entrances    |
+| 619 | The open tall back openings, to caves' entrance       |
+| 620 | The open tall back openings, to caves' entrances      |
+| 621 | The open tall back openings, to the cave's entrance   |
+| 622 | The open tall back openings, to the cave's entrances  |
+| 623 | The open tall back openings, to the caves' entrance   |
+| 624 | The open tall back openings, to the caves' entrances  |
+| 625 | The tall backs open opening to a cave's entrance      |
+| 626 | The tall backs open opening to a cave's entrance.     |
+| 627 | The tall backs open opening to a cave's entrances     |
+| 628 | The tall backs open opening to a cave's entrances.    |
+| 629 | The tall backs open opening to caves' entrance        |
+| 630 | The tall backs open opening to caves' entrance.       |
+| 631 | The tall backs open opening to caves' entrances       |
+| 632 | The tall backs open opening to caves' entrances.      |
+| 633 | The tall backs open opening to the cave's entrance    |
+| 634 | The tall backs open opening to the cave's entrance.   |
+| 635 | The tall backs open opening to the cave's entrances   |
+| 636 | The tall backs open opening to the cave's entrances.  |
+| 637 | The tall backs open opening to the caves' entrance    |
+| 638 | The tall backs open opening to the caves' entrance.   |
+| 639 | The tall backs open opening to the caves' entrances   |
+| 640 | The tall backs open opening to the caves' entrances.  |
+| 641 | The tall backs open opening, to a cave's entrance     |
+| 642 | The tall backs open opening, to a cave's entrances    |
+| 643 | The tall backs open opening, to caves' entrance       |
+| 644 | The tall backs open opening, to caves' entrances      |
+| 645 | The tall backs open opening, to the cave's entrance   |
+| 646 | The tall backs open opening, to the cave's entrances  |
+| 647 | The tall backs open opening, to the caves' entrance   |
+| 648 | The tall backs open opening, to the caves' entrances  |
+| 649 | The tall backs open openings to a cave's entrance     |
+| 650 | The tall backs open openings to a cave's entrance.    |
+| 651 | The tall backs open openings to a cave's entrances    |
+| 652 | The tall backs open openings to a cave's entrances.   |
+| 653 | The tall backs open openings to caves' entrance       |
+| 654 | The tall backs open openings to caves' entrance.      |
+| 655 | The tall backs open openings to caves' entrances      |
+| 656 | The tall backs open openings to caves' entrances.     |
+| 657 | The tall backs open openings to the cave's entrance   |
+| 658 | The tall backs open openings to the cave's entrance.  |
+| 659 | The tall backs open openings to the cave's entrances  |
+| 660 | The tall backs open openings to the cave's entrances. |
+| 661 | The tall backs open openings to the caves' entrance   |
+| 662 | The tall backs open openings to the caves' entrance.  |
+| 663 | The tall backs open openings to the caves' entrances  |
+| 664 | The tall backs open openings to the caves' entrances. |
+| 665 | The tall backs open openings, to a cave's entrance    |
+| 666 | The tall backs open openings, to a cave's entrances   |
+| 667 | The tall backs open openings, to caves' entrance      |
+| 668 | The tall backs open openings, to caves' entrances     |
+| 669 | The tall backs open openings, to the cave's entrance  |
+| 670 | The tall backs open openings, to the cave's entrances |
+| 671 | The tall backs open openings, to the caves' entrance  |
+| 672 | The tall backs open openings, to the caves' entrances |
+| 673 | The tall open back opening to a cave's entrance       |
+| 674 | The tall open back opening to a cave's entrance.      |
+| 675 | The tall open back opening to a cave's entrances      |
+| 676 | The tall open back opening to a cave's entrances.     |
+| 677 | The tall open back opening to caves' entrance         |
+| 678 | The tall open back opening to caves' entrance.        |
+| 679 | The tall open back opening to caves' entrances        |
+| 680 | The tall open back opening to caves' entrances.       |
+| 681 | The tall open back opening to the cave's entrance     |
+| 682 | The tall open back opening to the cave's entrance.    |
+| 683 | The tall open back opening to the cave's entrances    |
+| 684 | The tall open back opening to the cave's entrances.   |
+| 685 | The tall open back opening to the caves' entrance     |
+| 686 | The tall open back opening to the caves' entrance.    |
+| 687 | The tall open back opening to the caves' entrances    |
+| 688 | The tall open back opening to the caves' entrances.   |
+| 689 | The tall open back opening, to a cave's entrance      |
+| 690 | The tall open back opening, to a cave's entrances     |
+| 691 | The tall open back opening, to caves' entrance        |
+| 692 | The tall open back opening, to caves' entrances       |
+| 693 | The tall open back opening, to the cave's entrance    |
+| 694 | The tall open back opening, to the cave's entrances   |
+| 695 | The tall open back opening, to the caves' entrance    |
+| 696 | The tall open back opening, to the caves' entrances   |
+| 697 | The tall open back openings to a cave's entrance      |
+| 698 | The tall open back openings to a cave's entrance.     |
+| 699 | The tall open back openings to a cave's entrances     |
+| 700 | The tall open back openings to a cave's entrances.    |
+| 701 | The tall open back openings to caves' entrance        |
+| 702 | The tall open back openings to caves' entrance.       |
+| 703 | The tall open back openings to caves' entrances       |
+| 704 | The tall open back openings to caves' entrances.      |
+| 705 | The tall open back openings to the cave's entrance    |
+| 706 | The tall open back openings to the cave's entrance.   |
+| 707 | The tall open back openings to the cave's entrances   |
+| 708 | The tall open back openings to the cave's entrances.  |
+| 709 | The tall open back openings to the caves' entrance    |
+| 710 | The tall open back openings to the caves' entrance.   |
+| 711 | The tall open back openings to the caves' entrances   |
+| 712 | The tall open back openings to the caves' entrances.  |
+| 713 | The tall open back openings, to a cave's entrance     |
+| 714 | The tall open back openings, to a cave's entrances    |
+| 715 | The tall open back openings, to caves' entrance       |
+| 716 | The tall open back openings, to caves' entrances      |
+| 717 | The tall open back openings, to the cave's entrance   |
+| 718 | The tall open back openings, to the cave's entrances  |
+| 719 | The tall open back openings, to the caves' entrance   |
+| 720 | The tall open back openings, to the caves' entrances  |
++-----+-------------------------------------------------------+
+

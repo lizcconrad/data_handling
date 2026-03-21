@@ -1,0 +1,351 @@
+GRAPH NAME: idCavern1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 180   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------+
+|                        GOLD OUTPUTS                        |
++-----------------------------------------------+------------+
+| Gold Output                                   | Generated? |
++-----------------------------------------------+------------+
+| the original first cavern east of the boulder | True       |
++-----------------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idCavern1  | True         | True          | Covered          | Included          |
+| 1          | True         | True          | Covered          | Included          |
+| original   | True         | True          | Covered          | Included          |
+| idBoulder2 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                        |
++-----------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+| Edge                        | Parent    | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+| idCavern1_prop_idOrdinality | idCavern1 | 1          | True         | True          | Covered          | Included          |
+| idCavern1_prop_idDescriptor | idCavern1 | original   | True         | True          | Covered          | Included          |
+| isEastOf                    | idCavern1 | idBoulder2 | True         | True          | Covered          | Included          |
++-----------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h681                                                                      |
+|               |   INDEX: x680                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h700 ARG0: e697 ARG1: u698 ARG2: x699 ]               |
+|               |           [ def_implicit_q LBL: h711 ARG0: x708 RSTR: h709 BODY: h710 ]          |
+|               |           [ _east_a_1 LBL: h696 ARG0: i693 ARG1: x694 ARG2: u695 ]               |
+|               |           [ def_udef_a_q LBL: h706 ARG0: x703 RSTR: h704 BODY: h705 ]            |
+|               |           [ _boulder_n_1 LBL: h692 ARG0: x691 ]                                  |
+|               |           [ place_n LBL: h702 ARG0: x701 ]                                       |
+|               |           [ _original_a_1 LBL: h690 ARG0: e688 ARG1: u689 ]                      |
+|               |           [ ord LBL: h687 ARG0: i685 ARG1: u686 CARG: "1" ]                      |
+|               |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|               |   HCONS: < h704 qeq h692 h709 qeq h702 >                                         |
+|               |   EQS: < x703 eq x691 h696 eq h707 u695 eq x703 h696 eq h702 x694 eq x701 x708   |
+|               | eq x701 h700 eq h712 x699 eq x708 h687 eq h681 u686 eq x680 h690 eq h681 u689 eq |
+|               | x680 h700 eq h681 u698 eq x680 > ]                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h681                                                                      |
+|               |   INDEX: x680                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h681 ARG0: e697 ARG1: x680 ARG2: x694 ]               |
+|               |           [ def_implicit_q LBL: h711 ARG0: x694 RSTR: h709 BODY: h710 ]          |
+|               |           [ _east_a_1 LBL: h696 ARG0: i693 ARG1: x694 ARG2: x691 ]               |
+|               |           [ def_udef_a_q LBL: h706 ARG0: x691 RSTR: h704 BODY: h705 ]            |
+|               |           [ _boulder_n_1 LBL: h692 ARG0: x691 ]                                  |
+|               |           [ place_n LBL: h696 ARG0: x694 ]                                       |
+|               |           [ _original_a_1 LBL: h681 ARG0: e688 ARG1: x680 ]                      |
+|               |           [ ord LBL: h681 ARG0: i685 ARG1: x680 CARG: "1" ]                      |
+|               |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|               |   HCONS: < h704 qeq h692 h709 qeq h696 > ]                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h721                                                                      |
+|               |   INDEX: e718                                                                    |
+|               |   RELS: < [ unknown LBL: h717 ARG: x680 ARG0: e718 ]                             |
+|               |           [ def_udef_a_q LBL: h716 ARG0: x680 RSTR: h714 BODY: h715 ]            |
+|               |           [ loc_nonsp LBL: h681 ARG0: e697 ARG1: x680 ARG2: x694 ]               |
+|               |           [ def_implicit_q LBL: h711 ARG0: x694 RSTR: h709 BODY: h710 ]          |
+|               |           [ _east_a_1 LBL: h696 ARG0: i693 ARG1: x694 ARG2: x691 ]               |
+|               |           [ def_udef_a_q LBL: h706 ARG0: x691 RSTR: h704 BODY: h705 ]            |
+|               |           [ _boulder_n_1 LBL: h692 ARG0: x691 ]                                  |
+|               |           [ place_n LBL: h696 ARG0: x694 ]                                       |
+|               |           [ _original_a_1 LBL: h681 ARG0: e688 ARG1: x680 ]                      |
+|               |           [ ord LBL: h681 ARG0: i685 ARG1: x680 CARG: "1" ]                      |
+|               |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|               |   HCONS: < h704 qeq h692 h709 qeq h696 h714 qeq h681 h721 qeq h717 > ]           |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------+
+|                                 NODE SEMENTS                                |
++------------+----------------------------------------------------------------+
+| Node       | Generated SEMENT                                               |
++------------+----------------------------------------------------------------+
+| idCavern1  | [ TOP: h681                                                    |
+|            |   INDEX: x680                                                  |
+|            |   RELS: < [ _cavern_n_1 LBL: h681 ARG0: x680 ] > ]             |
++------------+----------------------------------------------------------------+
+| 1          | [ TOP: h684                                                    |
+|            |   INDEX: i682                                                  |
+|            |   RELS: < [ card LBL: h684 ARG0: i682 ARG1: u683 CARG: "1" ] > |
+|            |   SLOTS: < ARG1: u683 > ]                                      |
++------------+----------------------------------------------------------------+
+| original   | [ TOP: h690                                                    |
+|            |   INDEX: e688                                                  |
+|            |   RELS: < [ _original_a_1 LBL: h690 ARG0: e688 ARG1: u689 ] >  |
+|            |   SLOTS: < ARG1: u689 > ]                                      |
++------------+----------------------------------------------------------------+
+| idBoulder2 | [ TOP: h692                                                    |
+|            |   INDEX: x691                                                  |
+|            |   RELS: < [ _boulder_n_1 LBL: h692 ARG0: x691 ] > ]            |
++------------+----------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE SEMENTS                                                              |
++-----------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| Edge                        | Parent    | Child      | Generated SEMENT                                                                 |
++-----------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| idCavern1_prop_idOrdinality | idCavern1 | 1          | [ TOP: h681                                                                      |
+|                             |           |            |   INDEX: x680                                                                    |
+|                             |           |            |   RELS: < [ ord LBL: h687 ARG0: i685 ARG1: u686 CARG: "1" ]                      |
+|                             |           |            |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|                             |           |            |   EQS: < h687 eq h681 u686 eq x680 > ]                                           |
++-----------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| idCavern1_prop_idDescriptor | idCavern1 | original   | [ TOP: h681                                                                      |
+|                             |           |            |   INDEX: x680                                                                    |
+|                             |           |            |   RELS: < [ _original_a_1 LBL: h690 ARG0: e688 ARG1: u689 ]                      |
+|                             |           |            |           [ ord LBL: h687 ARG0: i685 ARG1: u686 CARG: "1" ]                      |
+|                             |           |            |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|                             |           |            |   EQS: < h687 eq h681 u686 eq x680 h690 eq h681 u689 eq x680 > ]                 |
++-----------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| isEastOf                    | idCavern1 | idBoulder2 | [ TOP: h681                                                                      |
+|                             |           |            |   INDEX: x680                                                                    |
+|                             |           |            |   RELS: < [ loc_nonsp LBL: h700 ARG0: e697 ARG1: u698 ARG2: x699 ]               |
+|                             |           |            |           [ def_implicit_q LBL: h711 ARG0: x708 RSTR: h709 BODY: h710 ]          |
+|                             |           |            |           [ _east_a_1 LBL: h696 ARG0: i693 ARG1: x694 ARG2: u695 ]               |
+|                             |           |            |           [ def_udef_a_q LBL: h706 ARG0: x703 RSTR: h704 BODY: h705 ]            |
+|                             |           |            |           [ _boulder_n_1 LBL: h692 ARG0: x691 ]                                  |
+|                             |           |            |           [ place_n LBL: h702 ARG0: x701 ]                                       |
+|                             |           |            |           [ _original_a_1 LBL: h690 ARG0: e688 ARG1: u689 ]                      |
+|                             |           |            |           [ ord LBL: h687 ARG0: i685 ARG1: u686 CARG: "1" ]                      |
+|                             |           |            |           [ _cavern_n_1 LBL: h681 ARG0: x680 ] >                                 |
+|                             |           |            |   HCONS: < h704 qeq h692 h709 qeq h702 >                                         |
+|                             |           |            |   EQS: < x703 eq x691 h696 eq h707 u695 eq x703 h696 eq h702 x694 eq x701 x708   |
+|                             |           |            | eq x701 h700 eq h712 x699 eq x708 h687 eq h681 u686 eq x680 h690 eq h681 u689 eq |
+|                             |           |            | x680 h700 eq h681 u698 eq x680 > ]                                               |
++-----------------------------+-----------+------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                 |
++-----+---------------------------------------------------+
+| #   | Generated Text                                    |
++-----+---------------------------------------------------+
+| 1   | A first original cavern east of a boulder         |
+| 2   | A first original cavern east of a boulder.        |
+| 3   | A first original cavern east of boulders          |
+| 4   | A first original cavern east of boulders.         |
+| 5   | A first original cavern east of the boulder       |
+| 6   | A first original cavern east of the boulder.      |
+| 7   | A first original cavern east of the boulders      |
+| 8   | A first original cavern east of the boulders.     |
+| 9   | A first original cavern, east of a boulder        |
+| 10  | A first original cavern, east of boulders         |
+| 11  | A first original cavern, east of the boulder      |
+| 12  | A first original cavern, east of the boulders     |
+| 13  | An original first cavern east of a boulder        |
+| 14  | An original first cavern east of a boulder.       |
+| 15  | An original first cavern east of boulders         |
+| 16  | An original first cavern east of boulders.        |
+| 17  | An original first cavern east of the boulder      |
+| 18  | An original first cavern east of the boulder.     |
+| 19  | An original first cavern east of the boulders     |
+| 20  | An original first cavern east of the boulders.    |
+| 21  | An original first cavern, east of a boulder       |
+| 22  | An original first cavern, east of boulders        |
+| 23  | An original first cavern, east of the boulder     |
+| 24  | An original first cavern, east of the boulders    |
+| 25  | An original first, cavern east of a boulder       |
+| 26  | An original first, cavern east of a boulder.      |
+| 27  | An original first, cavern east of boulders        |
+| 28  | An original first, cavern east of boulders.       |
+| 29  | An original first, cavern east of the boulder     |
+| 30  | An original first, cavern east of the boulder.    |
+| 31  | An original first, cavern east of the boulders    |
+| 32  | An original first, cavern east of the boulders.   |
+| 33  | An original first, cavern, east of a boulder      |
+| 34  | An original first, cavern, east of boulders       |
+| 35  | An original first, cavern, east of the boulder    |
+| 36  | An original first, cavern, east of the boulders   |
+| 37  | First original cavern east of a boulder           |
+| 38  | First original cavern east of a boulder.          |
+| 39  | First original cavern east of boulders            |
+| 40  | First original cavern east of boulders.           |
+| 41  | First original cavern east of the boulder         |
+| 42  | First original cavern east of the boulder.        |
+| 43  | First original cavern east of the boulders        |
+| 44  | First original cavern east of the boulders.       |
+| 45  | First original cavern, east of a boulder          |
+| 46  | First original cavern, east of boulders           |
+| 47  | First original cavern, east of the boulder        |
+| 48  | First original cavern, east of the boulders       |
+| 49  | First original caverns east of a boulder          |
+| 50  | First original caverns east of a boulder.         |
+| 51  | First original caverns east of boulders           |
+| 52  | First original caverns east of boulders.          |
+| 53  | First original caverns east of the boulder        |
+| 54  | First original caverns east of the boulder.       |
+| 55  | First original caverns east of the boulders       |
+| 56  | First original caverns east of the boulders.      |
+| 57  | First original caverns, east of a boulder         |
+| 58  | First original caverns, east of boulders          |
+| 59  | First original caverns, east of the boulder       |
+| 60  | First original caverns, east of the boulders      |
+| 61  | Original first cavern east of a boulder           |
+| 62  | Original first cavern east of a boulder.          |
+| 63  | Original first cavern east of boulders            |
+| 64  | Original first cavern east of boulders.           |
+| 65  | Original first cavern east of the boulder         |
+| 66  | Original first cavern east of the boulder.        |
+| 67  | Original first cavern east of the boulders        |
+| 68  | Original first cavern east of the boulders.       |
+| 69  | Original first cavern, east of a boulder          |
+| 70  | Original first cavern, east of boulders           |
+| 71  | Original first cavern, east of the boulder        |
+| 72  | Original first cavern, east of the boulders       |
+| 73  | Original first caverns east of a boulder          |
+| 74  | Original first caverns east of a boulder.         |
+| 75  | Original first caverns east of boulders           |
+| 76  | Original first caverns east of boulders.          |
+| 77  | Original first caverns east of the boulder        |
+| 78  | Original first caverns east of the boulder.       |
+| 79  | Original first caverns east of the boulders       |
+| 80  | Original first caverns east of the boulders.      |
+| 81  | Original first caverns, east of a boulder         |
+| 82  | Original first caverns, east of boulders          |
+| 83  | Original first caverns, east of the boulder       |
+| 84  | Original first caverns, east of the boulders      |
+| 85  | Original first, cavern east of a boulder          |
+| 86  | Original first, cavern east of a boulder.         |
+| 87  | Original first, cavern east of boulders           |
+| 88  | Original first, cavern east of boulders.          |
+| 89  | Original first, cavern east of the boulder        |
+| 90  | Original first, cavern east of the boulder.       |
+| 91  | Original first, cavern east of the boulders       |
+| 92  | Original first, cavern east of the boulders.      |
+| 93  | Original first, cavern, east of a boulder         |
+| 94  | Original first, cavern, east of boulders          |
+| 95  | Original first, cavern, east of the boulder       |
+| 96  | Original first, cavern, east of the boulders      |
+| 97  | Original first, caverns east of a boulder         |
+| 98  | Original first, caverns east of a boulder.        |
+| 99  | Original first, caverns east of boulders          |
+| 100 | Original first, caverns east of boulders.         |
+| 101 | Original first, caverns east of the boulder       |
+| 102 | Original first, caverns east of the boulder.      |
+| 103 | Original first, caverns east of the boulders      |
+| 104 | Original first, caverns east of the boulders.     |
+| 105 | Original first, caverns, east of a boulder        |
+| 106 | Original first, caverns, east of boulders         |
+| 107 | Original first, caverns, east of the boulder      |
+| 108 | Original first, caverns, east of the boulders     |
+| 109 | The first original cavern east of a boulder       |
+| 110 | The first original cavern east of a boulder.      |
+| 111 | The first original cavern east of boulders        |
+| 112 | The first original cavern east of boulders.       |
+| 113 | The first original cavern east of the boulder     |
+| 114 | The first original cavern east of the boulder.    |
+| 115 | The first original cavern east of the boulders    |
+| 116 | The first original cavern east of the boulders.   |
+| 117 | The first original cavern, east of a boulder      |
+| 118 | The first original cavern, east of boulders       |
+| 119 | The first original cavern, east of the boulder    |
+| 120 | The first original cavern, east of the boulders   |
+| 121 | The first original caverns east of a boulder      |
+| 122 | The first original caverns east of a boulder.     |
+| 123 | The first original caverns east of boulders       |
+| 124 | The first original caverns east of boulders.      |
+| 125 | The first original caverns east of the boulder    |
+| 126 | The first original caverns east of the boulder.   |
+| 127 | The first original caverns east of the boulders   |
+| 128 | The first original caverns east of the boulders.  |
+| 129 | The first original caverns, east of a boulder     |
+| 130 | The first original caverns, east of boulders      |
+| 131 | The first original caverns, east of the boulder   |
+| 132 | The first original caverns, east of the boulders  |
+| 133 | The original first cavern east of a boulder       |
+| 134 | The original first cavern east of a boulder.      |
+| 135 | The original first cavern east of boulders        |
+| 136 | The original first cavern east of boulders.       |
+| 137 | The original first cavern east of the boulder     |
+| 138 | The original first cavern east of the boulder.    |
+| 139 | The original first cavern east of the boulders    |
+| 140 | The original first cavern east of the boulders.   |
+| 141 | The original first cavern, east of a boulder      |
+| 142 | The original first cavern, east of boulders       |
+| 143 | The original first cavern, east of the boulder    |
+| 144 | The original first cavern, east of the boulders   |
+| 145 | The original first caverns east of a boulder      |
+| 146 | The original first caverns east of a boulder.     |
+| 147 | The original first caverns east of boulders       |
+| 148 | The original first caverns east of boulders.      |
+| 149 | The original first caverns east of the boulder    |
+| 150 | The original first caverns east of the boulder.   |
+| 151 | The original first caverns east of the boulders   |
+| 152 | The original first caverns east of the boulders.  |
+| 153 | The original first caverns, east of a boulder     |
+| 154 | The original first caverns, east of boulders      |
+| 155 | The original first caverns, east of the boulder   |
+| 156 | The original first caverns, east of the boulders  |
+| 157 | The original first, cavern east of a boulder      |
+| 158 | The original first, cavern east of a boulder.     |
+| 159 | The original first, cavern east of boulders       |
+| 160 | The original first, cavern east of boulders.      |
+| 161 | The original first, cavern east of the boulder    |
+| 162 | The original first, cavern east of the boulder.   |
+| 163 | The original first, cavern east of the boulders   |
+| 164 | The original first, cavern east of the boulders.  |
+| 165 | The original first, cavern, east of a boulder     |
+| 166 | The original first, cavern, east of boulders      |
+| 167 | The original first, cavern, east of the boulder   |
+| 168 | The original first, cavern, east of the boulders  |
+| 169 | The original first, caverns east of a boulder     |
+| 170 | The original first, caverns east of a boulder.    |
+| 171 | The original first, caverns east of boulders      |
+| 172 | The original first, caverns east of boulders.     |
+| 173 | The original first, caverns east of the boulder   |
+| 174 | The original first, caverns east of the boulder.  |
+| 175 | The original first, caverns east of the boulders  |
+| 176 | The original first, caverns east of the boulders. |
+| 177 | The original first, caverns, east of a boulder    |
+| 178 | The original first, caverns, east of boulders     |
+| 179 | The original first, caverns, east of the boulder  |
+| 180 | The original first, caverns, east of the boulders |
++-----+---------------------------------------------------+
+

@@ -1,0 +1,337 @@
+GRAPH NAME: idTheCave1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 180   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------+
+|                     GOLD OUTPUTS                     |
++-----------------------------------------+------------+
+| Gold Output                             | Generated? |
++-----------------------------------------+------------+
+| The Cave near the original first cavern | True       |
++-----------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idTheCave1 | True         | True          | Covered          | Included          |
+| idCavern1  | True         | True          | Covered          | Included          |
+| 1          | True         | True          | Covered          | Included          |
+| original   | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                        |
++-----------------------------+------------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                        | Parent     | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------+------------+-----------+--------------+---------------+------------------+-------------------+
+| isNear                      | idTheCave1 | idCavern1 | True         | True          | Covered          | Included          |
+| idCavern1_prop_idOrdinality | idCavern1  | 1         | True         | True          | Covered          | Included          |
+| idCavern1_prop_idDescriptor | idCavern1  | original  | True         | True          | Covered          | Included          |
++-----------------------------+------------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1680                                                                     |
+|               |   INDEX: x1679                                                                   |
+|               |   RELS: < [ _near_p LBL: h1695 ARG0: e1692 ARG1: u1693 ARG2: i1694 ]             |
+|               |           [ def_udef_a_q LBL: h1699 ARG0: x1696 RSTR: h1697 BODY: h1698 ]        |
+|               |           [ _original_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                   |
+|               |           [ ord LBL: h1688 ARG0: i1686 ARG1: u1687 CARG: "1" ]                   |
+|               |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ]                                 |
+|               |           [ named LBL: h1680 ARG0: x1679 CARG: "Cave" ] >                        |
+|               |   HCONS: < h1697 qeq h1682 >                                                     |
+|               |   EQS: < h1688 eq h1682 u1687 eq x1681 h1691 eq h1682 u1690 eq x1681 x1696 eq    |
+|               | x1681 h1695 eq h1700 i1694 eq x1696 h1695 eq h1680 u1693 eq x1679 > ]            |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1680                                                                     |
+|               |   INDEX: x1679                                                                   |
+|               |   RELS: < [ _near_p LBL: h1680 ARG0: e1692 ARG1: x1679 ARG2: x1681 ]             |
+|               |           [ def_udef_a_q LBL: h1699 ARG0: x1681 RSTR: h1697 BODY: h1698 ]        |
+|               |           [ _original_a_1 LBL: h1682 ARG0: e1689 ARG1: x1681 ]                   |
+|               |           [ ord LBL: h1682 ARG0: i1686 ARG1: x1681 CARG: "1" ]                   |
+|               |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ]                                 |
+|               |           [ named LBL: h1680 ARG0: x1679 CARG: "Cave" ] >                        |
+|               |   HCONS: < h1697 qeq h1682 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1709                                                                     |
+|               |   INDEX: e1706                                                                   |
+|               |   RELS: < [ unknown LBL: h1705 ARG: x1679 ARG0: e1706 ]                          |
+|               |           [ def_udef_a_q LBL: h1704 ARG0: x1679 RSTR: h1702 BODY: h1703 ]        |
+|               |           [ _near_p LBL: h1680 ARG0: e1692 ARG1: x1679 ARG2: x1681 ]             |
+|               |           [ def_udef_a_q LBL: h1699 ARG0: x1681 RSTR: h1697 BODY: h1698 ]        |
+|               |           [ _original_a_1 LBL: h1682 ARG0: e1689 ARG1: x1681 ]                   |
+|               |           [ ord LBL: h1682 ARG0: i1686 ARG1: x1681 CARG: "1" ]                   |
+|               |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ]                                 |
+|               |           [ named LBL: h1680 ARG0: x1679 CARG: "Cave" ] >                        |
+|               |   HCONS: < h1697 qeq h1682 h1702 qeq h1680 h1709 qeq h1705 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------+
+|                                  NODE SEMENTS                                  |
++------------+-------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                  |
++------------+-------------------------------------------------------------------+
+| idTheCave1 | [ TOP: h1680                                                      |
+|            |   INDEX: x1679                                                    |
+|            |   RELS: < [ named LBL: h1680 ARG0: x1679 CARG: "Cave" ] > ]       |
++------------+-------------------------------------------------------------------+
+| idCavern1  | [ TOP: h1682                                                      |
+|            |   INDEX: x1681                                                    |
+|            |   RELS: < [ _cavern_n_1 LBL: h1682 ARG0: x1681 ] > ]              |
++------------+-------------------------------------------------------------------+
+| 1          | [ TOP: h1685                                                      |
+|            |   INDEX: i1683                                                    |
+|            |   RELS: < [ card LBL: h1685 ARG0: i1683 ARG1: u1684 CARG: "1" ] > |
+|            |   SLOTS: < ARG1: u1684 > ]                                        |
++------------+-------------------------------------------------------------------+
+| original   | [ TOP: h1691                                                      |
+|            |   INDEX: e1689                                                    |
+|            |   RELS: < [ _original_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ] >  |
+|            |   SLOTS: < ARG1: u1690 > ]                                        |
++------------+-------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE SEMENTS                                                              |
++-----------------------------+------------+-----------+----------------------------------------------------------------------------------+
+| Edge                        | Parent     | Child     | Generated SEMENT                                                                 |
++-----------------------------+------------+-----------+----------------------------------------------------------------------------------+
+| isNear                      | idTheCave1 | idCavern1 | [ TOP: h1680                                                                     |
+|                             |            |           |   INDEX: x1679                                                                   |
+|                             |            |           |   RELS: < [ _near_p LBL: h1695 ARG0: e1692 ARG1: u1693 ARG2: i1694 ]             |
+|                             |            |           |           [ def_udef_a_q LBL: h1699 ARG0: x1696 RSTR: h1697 BODY: h1698 ]        |
+|                             |            |           |           [ _original_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                   |
+|                             |            |           |           [ ord LBL: h1688 ARG0: i1686 ARG1: u1687 CARG: "1" ]                   |
+|                             |            |           |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ]                                 |
+|                             |            |           |           [ named LBL: h1680 ARG0: x1679 CARG: "Cave" ] >                        |
+|                             |            |           |   HCONS: < h1697 qeq h1682 >                                                     |
+|                             |            |           |   EQS: < h1688 eq h1682 u1687 eq x1681 h1691 eq h1682 u1690 eq x1681 x1696 eq    |
+|                             |            |           | x1681 h1695 eq h1700 i1694 eq x1696 h1695 eq h1680 u1693 eq x1679 > ]            |
++-----------------------------+------------+-----------+----------------------------------------------------------------------------------+
+| idCavern1_prop_idOrdinality | idCavern1  | 1         | [ TOP: h1682                                                                     |
+|                             |            |           |   INDEX: x1681                                                                   |
+|                             |            |           |   RELS: < [ ord LBL: h1688 ARG0: i1686 ARG1: u1687 CARG: "1" ]                   |
+|                             |            |           |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ] >                               |
+|                             |            |           |   EQS: < h1688 eq h1682 u1687 eq x1681 > ]                                       |
++-----------------------------+------------+-----------+----------------------------------------------------------------------------------+
+| idCavern1_prop_idDescriptor | idCavern1  | original  | [ TOP: h1682                                                                     |
+|                             |            |           |   INDEX: x1681                                                                   |
+|                             |            |           |   RELS: < [ _original_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                   |
+|                             |            |           |           [ ord LBL: h1688 ARG0: i1686 ARG1: u1687 CARG: "1" ]                   |
+|                             |            |           |           [ _cavern_n_1 LBL: h1682 ARG0: x1681 ] >                               |
+|                             |            |           |   EQS: < h1688 eq h1682 u1687 eq x1681 h1691 eq h1682 u1690 eq x1681 > ]         |
++-----------------------------+------------+-----------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------+
+|               GENERATED ENGLISH TEXT              |
++-----+---------------------------------------------+
+| #   | Generated Text                              |
++-----+---------------------------------------------+
+| 1   | A Cave near a first original cavern         |
+| 2   | A Cave near a first original cavern.        |
+| 3   | A Cave near an original first cavern        |
+| 4   | A Cave near an original first cavern.       |
+| 5   | A Cave near an original first, cavern       |
+| 6   | A Cave near an original first, cavern.      |
+| 7   | A Cave near first original caverns          |
+| 8   | A Cave near first original caverns.         |
+| 9   | A Cave near original first caverns          |
+| 10  | A Cave near original first caverns.         |
+| 11  | A Cave near original first, caverns         |
+| 12  | A Cave near original first, caverns.        |
+| 13  | A Cave near the first original cavern       |
+| 14  | A Cave near the first original cavern.      |
+| 15  | A Cave near the first original caverns      |
+| 16  | A Cave near the first original caverns.     |
+| 17  | A Cave near the original first cavern       |
+| 18  | A Cave near the original first cavern.      |
+| 19  | A Cave near the original first caverns      |
+| 20  | A Cave near the original first caverns.     |
+| 21  | A Cave near the original first, cavern      |
+| 22  | A Cave near the original first, cavern.     |
+| 23  | A Cave near the original first, caverns     |
+| 24  | A Cave near the original first, caverns.    |
+| 25  | A Cave, near a first original cavern        |
+| 26  | A Cave, near an original first cavern       |
+| 27  | A Cave, near an original first, cavern      |
+| 28  | A Cave, near first original caverns         |
+| 29  | A Cave, near original first caverns         |
+| 30  | A Cave, near original first, caverns        |
+| 31  | A Cave, near the first original cavern      |
+| 32  | A Cave, near the first original caverns     |
+| 33  | A Cave, near the original first cavern      |
+| 34  | A Cave, near the original first caverns     |
+| 35  | A Cave, near the original first, cavern     |
+| 36  | A Cave, near the original first, caverns    |
+| 37  | An Cave near a first original cavern        |
+| 38  | An Cave near a first original cavern.       |
+| 39  | An Cave near an original first cavern       |
+| 40  | An Cave near an original first cavern.      |
+| 41  | An Cave near an original first, cavern      |
+| 42  | An Cave near an original first, cavern.     |
+| 43  | An Cave near first original caverns         |
+| 44  | An Cave near first original caverns.        |
+| 45  | An Cave near original first caverns         |
+| 46  | An Cave near original first caverns.        |
+| 47  | An Cave near original first, caverns        |
+| 48  | An Cave near original first, caverns.       |
+| 49  | An Cave near the first original cavern      |
+| 50  | An Cave near the first original cavern.     |
+| 51  | An Cave near the first original caverns     |
+| 52  | An Cave near the first original caverns.    |
+| 53  | An Cave near the original first cavern      |
+| 54  | An Cave near the original first cavern.     |
+| 55  | An Cave near the original first caverns     |
+| 56  | An Cave near the original first caverns.    |
+| 57  | An Cave near the original first, cavern     |
+| 58  | An Cave near the original first, cavern.    |
+| 59  | An Cave near the original first, caverns    |
+| 60  | An Cave near the original first, caverns.   |
+| 61  | An Cave, near a first original cavern       |
+| 62  | An Cave, near an original first cavern      |
+| 63  | An Cave, near an original first, cavern     |
+| 64  | An Cave, near first original caverns        |
+| 65  | An Cave, near original first caverns        |
+| 66  | An Cave, near original first, caverns       |
+| 67  | An Cave, near the first original cavern     |
+| 68  | An Cave, near the first original caverns    |
+| 69  | An Cave, near the original first cavern     |
+| 70  | An Cave, near the original first caverns    |
+| 71  | An Cave, near the original first, cavern    |
+| 72  | An Cave, near the original first, caverns   |
+| 73  | Caves near a first original cavern          |
+| 74  | Caves near a first original cavern.         |
+| 75  | Caves near an original first cavern         |
+| 76  | Caves near an original first cavern.        |
+| 77  | Caves near an original first, cavern        |
+| 78  | Caves near an original first, cavern.       |
+| 79  | Caves near first original caverns           |
+| 80  | Caves near first original caverns.          |
+| 81  | Caves near original first caverns           |
+| 82  | Caves near original first caverns.          |
+| 83  | Caves near original first, caverns          |
+| 84  | Caves near original first, caverns.         |
+| 85  | Caves near the first original cavern        |
+| 86  | Caves near the first original cavern.       |
+| 87  | Caves near the first original caverns       |
+| 88  | Caves near the first original caverns.      |
+| 89  | Caves near the original first cavern        |
+| 90  | Caves near the original first cavern.       |
+| 91  | Caves near the original first caverns       |
+| 92  | Caves near the original first caverns.      |
+| 93  | Caves near the original first, cavern       |
+| 94  | Caves near the original first, cavern.      |
+| 95  | Caves near the original first, caverns      |
+| 96  | Caves near the original first, caverns.     |
+| 97  | Caves, near a first original cavern         |
+| 98  | Caves, near an original first cavern        |
+| 99  | Caves, near an original first, cavern       |
+| 100 | Caves, near first original caverns          |
+| 101 | Caves, near original first caverns          |
+| 102 | Caves, near original first, caverns         |
+| 103 | Caves, near the first original cavern       |
+| 104 | Caves, near the first original caverns      |
+| 105 | Caves, near the original first cavern       |
+| 106 | Caves, near the original first caverns      |
+| 107 | Caves, near the original first, cavern      |
+| 108 | Caves, near the original first, caverns     |
+| 109 | The Cave near a first original cavern       |
+| 110 | The Cave near a first original cavern.      |
+| 111 | The Cave near an original first cavern      |
+| 112 | The Cave near an original first cavern.     |
+| 113 | The Cave near an original first, cavern     |
+| 114 | The Cave near an original first, cavern.    |
+| 115 | The Cave near first original caverns        |
+| 116 | The Cave near first original caverns.       |
+| 117 | The Cave near original first caverns        |
+| 118 | The Cave near original first caverns.       |
+| 119 | The Cave near original first, caverns       |
+| 120 | The Cave near original first, caverns.      |
+| 121 | The Cave near the first original cavern     |
+| 122 | The Cave near the first original cavern.    |
+| 123 | The Cave near the first original caverns    |
+| 124 | The Cave near the first original caverns.   |
+| 125 | The Cave near the original first cavern     |
+| 126 | The Cave near the original first cavern.    |
+| 127 | The Cave near the original first caverns    |
+| 128 | The Cave near the original first caverns.   |
+| 129 | The Cave near the original first, cavern    |
+| 130 | The Cave near the original first, cavern.   |
+| 131 | The Cave near the original first, caverns   |
+| 132 | The Cave near the original first, caverns.  |
+| 133 | The Cave, near a first original cavern      |
+| 134 | The Cave, near an original first cavern     |
+| 135 | The Cave, near an original first, cavern    |
+| 136 | The Cave, near first original caverns       |
+| 137 | The Cave, near original first caverns       |
+| 138 | The Cave, near original first, caverns      |
+| 139 | The Cave, near the first original cavern    |
+| 140 | The Cave, near the first original caverns   |
+| 141 | The Cave, near the original first cavern    |
+| 142 | The Cave, near the original first caverns   |
+| 143 | The Cave, near the original first, cavern   |
+| 144 | The Cave, near the original first, caverns  |
+| 145 | The Caves near a first original cavern      |
+| 146 | The Caves near a first original cavern.     |
+| 147 | The Caves near an original first cavern     |
+| 148 | The Caves near an original first cavern.    |
+| 149 | The Caves near an original first, cavern    |
+| 150 | The Caves near an original first, cavern.   |
+| 151 | The Caves near first original caverns       |
+| 152 | The Caves near first original caverns.      |
+| 153 | The Caves near original first caverns       |
+| 154 | The Caves near original first caverns.      |
+| 155 | The Caves near original first, caverns      |
+| 156 | The Caves near original first, caverns.     |
+| 157 | The Caves near the first original cavern    |
+| 158 | The Caves near the first original cavern.   |
+| 159 | The Caves near the first original caverns   |
+| 160 | The Caves near the first original caverns.  |
+| 161 | The Caves near the original first cavern    |
+| 162 | The Caves near the original first cavern.   |
+| 163 | The Caves near the original first caverns   |
+| 164 | The Caves near the original first caverns.  |
+| 165 | The Caves near the original first, cavern   |
+| 166 | The Caves near the original first, cavern.  |
+| 167 | The Caves near the original first, caverns  |
+| 168 | The Caves near the original first, caverns. |
+| 169 | The Caves, near a first original cavern     |
+| 170 | The Caves, near an original first cavern    |
+| 171 | The Caves, near an original first, cavern   |
+| 172 | The Caves, near first original caverns      |
+| 173 | The Caves, near original first caverns      |
+| 174 | The Caves, near original first, caverns     |
+| 175 | The Caves, near the first original cavern   |
+| 176 | The Caves, near the first original caverns  |
+| 177 | The Caves, near the original first cavern   |
+| 178 | The Caves, near the original first caverns  |
+| 179 | The Caves, near the original first, cavern  |
+| 180 | The Caves, near the original first, caverns |
++-----+---------------------------------------------+
+

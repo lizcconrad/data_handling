@@ -1,0 +1,195 @@
+GRAPH NAME: idBody1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 75    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 2     |
+| Nodes Covered                   | 2     |
+| Nodes Included                  | 2     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 1     |
+| Edges Covered                   | 1     |
+| Edges Included                  | 1     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------+
+|              GOLD OUTPUTS              |
++---------------------------+------------+
+| Gold Output               | Generated? |
++---------------------------+------------+
+| the body near the stomach | True       |
++---------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idBody1    | True         | True          | Covered          | Included          |
+| idStomach1 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                             EDGE METRICS                                            |
++--------+---------+------------+--------------+---------------+------------------+-------------------+
+| Edge   | Parent  | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------+---------+------------+--------------+---------------+------------------+-------------------+
+| isNear | idBody1 | idStomach1 | True         | True          | Covered          | Included          |
++--------+---------+------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------+
+|                                       GENERATED SEMENTS                                       |
++---------------+-------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                        |
++---------------+-------------------------------------------------------------------------------+
+| Original      | [ TOP: h555                                                                   |
+|               |   INDEX: x554                                                                 |
+|               |   RELS: < [ _near_p LBL: h561 ARG0: e558 ARG1: u559 ARG2: i560 ]              |
+|               |           [ def_udef_a_q LBL: h565 ARG0: x562 RSTR: h563 BODY: h564 ]         |
+|               |           [ _stomach_n_1 LBL: h557 ARG0: x556 ]                               |
+|               |           [ _body_n_1 LBL: h555 ARG0: x554 ] >                                |
+|               |   HCONS: < h563 qeq h557 >                                                    |
+|               |   EQS: < x562 eq x556 h561 eq h566 i560 eq x562 h561 eq h555 u559 eq x554 > ] |
++---------------+-------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h555                                                                   |
+|               |   INDEX: x554                                                                 |
+|               |   RELS: < [ _near_p LBL: h555 ARG0: e558 ARG1: x554 ARG2: x556 ]              |
+|               |           [ def_udef_a_q LBL: h565 ARG0: x556 RSTR: h563 BODY: h564 ]         |
+|               |           [ _stomach_n_1 LBL: h557 ARG0: x556 ]                               |
+|               |           [ _body_n_1 LBL: h555 ARG0: x554 ] >                                |
+|               |   HCONS: < h563 qeq h557 > ]                                                  |
++---------------+-------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h575                                                                   |
+|               |   INDEX: e572                                                                 |
+|               |   RELS: < [ unknown LBL: h571 ARG: x554 ARG0: e572 ]                          |
+|               |           [ def_udef_a_q LBL: h570 ARG0: x554 RSTR: h568 BODY: h569 ]         |
+|               |           [ _near_p LBL: h555 ARG0: e558 ARG1: x554 ARG2: x556 ]              |
+|               |           [ def_udef_a_q LBL: h565 ARG0: x556 RSTR: h563 BODY: h564 ]         |
+|               |           [ _stomach_n_1 LBL: h557 ARG0: x556 ]                               |
+|               |           [ _body_n_1 LBL: h555 ARG0: x554 ] >                                |
+|               |   HCONS: < h563 qeq h557 h568 qeq h555 h575 qeq h571 > ]                      |
++---------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------------------+
+|                           NODE SEMENTS                           |
++------------+-----------------------------------------------------+
+| Node       | Generated SEMENT                                    |
++------------+-----------------------------------------------------+
+| idBody1    | [ TOP: h555                                         |
+|            |   INDEX: x554                                       |
+|            |   RELS: < [ _body_n_1 LBL: h555 ARG0: x554 ] > ]    |
++------------+-----------------------------------------------------+
+| idStomach1 | [ TOP: h557                                         |
+|            |   INDEX: x556                                       |
+|            |   RELS: < [ _stomach_n_1 LBL: h557 ARG0: x556 ] > ] |
++------------+-----------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------+
+|                                                  EDGE SEMENTS                                                 |
++--------+---------+------------+-------------------------------------------------------------------------------+
+| Edge   | Parent  | Child      | Generated SEMENT                                                              |
++--------+---------+------------+-------------------------------------------------------------------------------+
+| isNear | idBody1 | idStomach1 | [ TOP: h555                                                                   |
+|        |         |            |   INDEX: x554                                                                 |
+|        |         |            |   RELS: < [ _near_p LBL: h561 ARG0: e558 ARG1: u559 ARG2: i560 ]              |
+|        |         |            |           [ def_udef_a_q LBL: h565 ARG0: x562 RSTR: h563 BODY: h564 ]         |
+|        |         |            |           [ _stomach_n_1 LBL: h557 ARG0: x556 ]                               |
+|        |         |            |           [ _body_n_1 LBL: h555 ARG0: x554 ] >                                |
+|        |         |            |   HCONS: < h563 qeq h557 >                                                    |
+|        |         |            |   EQS: < x562 eq x556 h561 eq h566 i560 eq x562 h561 eq h555 u559 eq x554 > ] |
++--------+---------+------------+-------------------------------------------------------------------------------+
+
++-------------------------------------+
+|        GENERATED ENGLISH TEXT       |
++----+--------------------------------+
+| #  | Generated Text                 |
++----+--------------------------------+
+| 1  | A body near a stomach          |
+| 2  | A body near a stomach.         |
+| 3  | A body near stomach            |
+| 4  | A body near stomach.           |
+| 5  | A body near stomaches          |
+| 6  | A body near stomaches.         |
+| 7  | A body near the stomach        |
+| 8  | A body near the stomach.       |
+| 9  | A body near the stomaches      |
+| 10 | A body near the stomaches.     |
+| 11 | A body, near a stomach         |
+| 12 | A body, near stomach           |
+| 13 | A body, near stomaches         |
+| 14 | A body, near the stomach       |
+| 15 | A body, near the stomaches     |
+| 16 | Bodies near a stomach          |
+| 17 | Bodies near a stomach.         |
+| 18 | Bodies near stomach            |
+| 19 | Bodies near stomach.           |
+| 20 | Bodies near stomaches          |
+| 21 | Bodies near stomaches.         |
+| 22 | Bodies near the stomach        |
+| 23 | Bodies near the stomach.       |
+| 24 | Bodies near the stomaches      |
+| 25 | Bodies near the stomaches.     |
+| 26 | Bodies, near a stomach         |
+| 27 | Bodies, near stomach           |
+| 28 | Bodies, near stomaches         |
+| 29 | Bodies, near the stomach       |
+| 30 | Bodies, near the stomaches     |
+| 31 | Body near a stomach            |
+| 32 | Body near a stomach.           |
+| 33 | Body near stomach              |
+| 34 | Body near stomach.             |
+| 35 | Body near stomaches            |
+| 36 | Body near stomaches.           |
+| 37 | Body near the stomach          |
+| 38 | Body near the stomach.         |
+| 39 | Body near the stomaches        |
+| 40 | Body near the stomaches.       |
+| 41 | Body, near a stomach           |
+| 42 | Body, near stomach             |
+| 43 | Body, near stomaches           |
+| 44 | Body, near the stomach         |
+| 45 | Body, near the stomaches       |
+| 46 | The bodies near a stomach      |
+| 47 | The bodies near a stomach.     |
+| 48 | The bodies near stomach        |
+| 49 | The bodies near stomach.       |
+| 50 | The bodies near stomaches      |
+| 51 | The bodies near stomaches.     |
+| 52 | The bodies near the stomach    |
+| 53 | The bodies near the stomach.   |
+| 54 | The bodies near the stomaches  |
+| 55 | The bodies near the stomaches. |
+| 56 | The bodies, near a stomach     |
+| 57 | The bodies, near stomach       |
+| 58 | The bodies, near stomaches     |
+| 59 | The bodies, near the stomach   |
+| 60 | The bodies, near the stomaches |
+| 61 | The body near a stomach        |
+| 62 | The body near a stomach.       |
+| 63 | The body near stomach          |
+| 64 | The body near stomach.         |
+| 65 | The body near stomaches        |
+| 66 | The body near stomaches.       |
+| 67 | The body near the stomach      |
+| 68 | The body near the stomach.     |
+| 69 | The body near the stomaches    |
+| 70 | The body near the stomaches.   |
+| 71 | The body, near a stomach       |
+| 72 | The body, near stomach         |
+| 73 | The body, near stomaches       |
+| 74 | The body, near the stomach     |
+| 75 | The body, near the stomaches   |
++----+--------------------------------+
+

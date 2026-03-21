@@ -1,0 +1,14 @@
+strict digraph {
+idTheTrees1 [node_type="entity_node", root=root, lexicon_key=idTheTrees];
+idGlowingArea1 [lexicon_key=idGlowingArea];
+glowing [lexicon_key=glowing];
+idPlayer [lexicon_key=idPlayer];
+false [lexicon_key=false];
+idClearing1 [lexicon_key=idClearing];
+idTheTrees1 -> idGlowingArea1 [label=isNear, edge_type=relationship, lexicon_key=isNear];
+idTheTrees1 -> idPlayer [label=isNear, edge_type=relationship, lexicon_key=isNear];
+idGlowingArea1 -> glowing [label="idGlowingArea1_prop_idDescriptor", edge_type=property, lexicon_key=idDescriptor];
+idGlowingArea1 -> idTheTrees1 [label=isInsideOf, edge_type=relationship, lexicon_key=isInsideOf];
+idPlayer -> false [label="idPlayer_prop_idBottleFound", edge_type=property, lexicon_key=idBottleFound];
+idPlayer -> idClearing1 [label=isNear, edge_type=relationship, lexicon_key=isNear];
+}

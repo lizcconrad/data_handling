@@ -1,0 +1,441 @@
+GRAPH NAME: idTent1DoorInsideOpening_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 192   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------------------+
+|                                GOLD OUTPUTS                                |
++---------------------------------------------------------------+------------+
+| Gold Output                                                   | Generated? |
++---------------------------------------------------------------+------------+
+| the tent door's inside opening south of the unknown tent door | True       |
++---------------------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------+
+|                                          NODE METRICS                                          |
++--------------------------+--------------+---------------+------------------+-------------------+
+| Node                     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------------------+--------------+---------------+------------------+-------------------+
+| idTent1DoorInsideOpening | True         | True          | Covered          | Included          |
+| idTent1Door              | True         | True          | Covered          | Included          |
+| true                     | True         | True          | Covered          | Included          |
++--------------------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE METRICS                                                                  |
++----------------------------------+--------------------------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent                   | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+--------------------------+-------------+--------------+---------------+------------------+-------------------+
+| isSouthOf                        | idTent1DoorInsideOpening | idTent1Door | True         | True          | Covered          | Included          |
+| idTent1Door_prop_idUnknownObject | idTent1Door              | true        | True         | True          | Covered          | Included          |
++----------------------------------+--------------------------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h4963                                                                     |
+|               |   INDEX: x4962                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5008 ARG0: e5005 ARG1: u5006 ARG2: x5007 ]           |
+|               |           [ def_implicit_q LBL: h5019 ARG0: x5016 RSTR: h5017 BODY: h5018 ]      |
+|               |           [ _south_a_1 LBL: h5004 ARG0: i5001 ARG1: x5002 ARG2: u5003 ]          |
+|               |           [ def_udef_a_q LBL: h5014 ARG0: x5011 RSTR: h5012 BODY: h5013 ]        |
+|               |           [ _un-_a_neg LBL: h5000 ARG0: i4998 ARG1: e4999 ]                      |
+|               |           [ _know_v_1 LBL: h4997 ARG0: e4994 [ e PERF: - ] ARG1: u4995 ARG2:     |
+|               | i4996 ]                                                                          |
+|               |           [ compound LBL: h4985 ARG0: e4982 [ e PROG: - ] ARG1: u4983 ARG2:      |
+|               | u4984 ]                                                                          |
+|               |           [ udef_q LBL: h4980 ARG0: x4977 RSTR: h4978 BODY: h4979 ]              |
+|               |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|               |           [ _door_n_1 LBL: h4974 ARG0: x4973 ]                                   |
+|               |           [ place_n LBL: h5010 ARG0: x5009 ]                                     |
+|               |           [ poss LBL: h4972 ARG0: e4969 ARG1: x4970 ARG2: i4971 ]                |
+|               |           [ def_udef_a_q LBL: h4967 ARG0: x4964 RSTR: h4965 BODY: h4966 ]        |
+|               |           [ compound LBL: h4958 ARG0: e4955 [ e PROG: - ] ARG1: u4956 ARG2:      |
+|               | u4957 ]                                                                          |
+|               |           [ udef_q LBL: h4953 ARG0: x4950 RSTR: h4951 BODY: h4952 ]              |
+|               |           [ _tent_n_1 LBL: h4949 ARG0: x4948 ]                                   |
+|               |           [ _door_n_1 LBL: h4947 ARG0: x4946 ]                                   |
+|               |           [ _inside_a_1 LBL: h4961 ARG0: e4959 ARG1: u4960 ]                     |
+|               |           [ _opening_n_1 LBL: h4963 ARG0: x4962 ] >                              |
+|               |   HCONS: < h4978 qeq h4976 h5012 qeq h4974 h5017 qeq h5010 h4951 qeq h4949 h4965 |
+|               | qeq h4947 >                                                                      |
+|               |   ICONS: < e4994 topic i4996 >                                                   |
+|               |   EQS: < h5000 eq h4997 e4999 eq e4994 x4977 eq x4975 h4985 eq h4981 u4984 eq    |
+|               | x4977 h4985 eq h4974 u4983 eq x4973 h4997 eq h4974 i4996 eq x4973 x5011 eq x4973 |
+|               | h5004 eq h5015 u5003 eq x5011 h5004 eq h5010 x5002 eq x5009 x5016 eq x5009 h5008 |
+|               | eq h5020 x5007 eq x5016 x4950 eq x4948 h4958 eq h4954 u4957 eq x4950 h4958 eq    |
+|               | h4947 u4956 eq x4946 x4964 eq x4946 h4972 eq h4968 i4971 eq x4964 h4961 eq h4963 |
+|               | u4960 eq x4962 h4972 eq h4963 x4970 eq x4962 h5008 eq h4963 u5006 eq x4962 > ]   |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h4961                                                                     |
+|               |   INDEX: x4962                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4961 ARG0: e5005 ARG1: x4962 ARG2: x5002 ]           |
+|               |           [ def_implicit_q LBL: h5019 ARG0: x5002 RSTR: h5017 BODY: h5018 ]      |
+|               |           [ _south_a_1 LBL: h5004 ARG0: i5001 ARG1: x5002 ARG2: x4973 ]          |
+|               |           [ def_udef_a_q LBL: h5014 ARG0: x4973 RSTR: h5012 BODY: h5013 ]        |
+|               |           [ _un-_a_neg LBL: h4974 ARG0: i4998 ARG1: e4994 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4974 ARG0: e4994 ARG1: u4995 ARG2: x4973 ]           |
+|               |           [ compound LBL: h4974 ARG0: e4982 [ e PROG: - ] ARG1: x4973 ARG2:      |
+|               | x4975 ]                                                                          |
+|               |           [ udef_q LBL: h4980 ARG0: x4975 RSTR: h4978 BODY: h4979 ]              |
+|               |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|               |           [ _door_n_1 LBL: h4974 ARG0: x4973 ]                                   |
+|               |           [ place_n LBL: h5004 ARG0: x5002 ]                                     |
+|               |           [ poss LBL: h4961 ARG0: e4969 ARG1: x4962 ARG2: x4946 ]                |
+|               |           [ def_udef_a_q LBL: h4967 ARG0: x4946 RSTR: h4965 BODY: h4966 ]        |
+|               |           [ compound LBL: h4947 ARG0: e4955 [ e PROG: - ] ARG1: x4946 ARG2:      |
+|               | x4948 ]                                                                          |
+|               |           [ udef_q LBL: h4953 ARG0: x4948 RSTR: h4951 BODY: h4952 ]              |
+|               |           [ _tent_n_1 LBL: h4949 ARG0: x4948 ]                                   |
+|               |           [ _door_n_1 LBL: h4947 ARG0: x4946 ]                                   |
+|               |           [ _inside_a_1 LBL: h4961 ARG0: e4959 ARG1: x4962 ]                     |
+|               |           [ _opening_n_1 LBL: h4961 ARG0: x4962 ] >                              |
+|               |   HCONS: < h4978 qeq h4976 h5012 qeq h4974 h5017 qeq h5004 h4951 qeq h4949 h4965 |
+|               | qeq h4947 >                                                                      |
+|               |   ICONS: < e4994 topic x4973 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h5029                                                                     |
+|               |   INDEX: e5026                                                                   |
+|               |   RELS: < [ unknown LBL: h5025 ARG: x4962 ARG0: e5026 ]                          |
+|               |           [ def_udef_a_q LBL: h5024 ARG0: x4962 RSTR: h5022 BODY: h5023 ]        |
+|               |           [ loc_nonsp LBL: h4961 ARG0: e5005 ARG1: x4962 ARG2: x5002 ]           |
+|               |           [ def_implicit_q LBL: h5019 ARG0: x5002 RSTR: h5017 BODY: h5018 ]      |
+|               |           [ _south_a_1 LBL: h5004 ARG0: i5001 ARG1: x5002 ARG2: x4973 ]          |
+|               |           [ def_udef_a_q LBL: h5014 ARG0: x4973 RSTR: h5012 BODY: h5013 ]        |
+|               |           [ _un-_a_neg LBL: h4974 ARG0: i4998 ARG1: e4994 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4974 ARG0: e4994 ARG1: u4995 ARG2: x4973 ]           |
+|               |           [ compound LBL: h4974 ARG0: e4982 [ e PROG: - ] ARG1: x4973 ARG2:      |
+|               | x4975 ]                                                                          |
+|               |           [ udef_q LBL: h4980 ARG0: x4975 RSTR: h4978 BODY: h4979 ]              |
+|               |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|               |           [ _door_n_1 LBL: h4974 ARG0: x4973 ]                                   |
+|               |           [ place_n LBL: h5004 ARG0: x5002 ]                                     |
+|               |           [ poss LBL: h4961 ARG0: e4969 ARG1: x4962 ARG2: x4946 ]                |
+|               |           [ def_udef_a_q LBL: h4967 ARG0: x4946 RSTR: h4965 BODY: h4966 ]        |
+|               |           [ compound LBL: h4947 ARG0: e4955 [ e PROG: - ] ARG1: x4946 ARG2:      |
+|               | x4948 ]                                                                          |
+|               |           [ udef_q LBL: h4953 ARG0: x4948 RSTR: h4951 BODY: h4952 ]              |
+|               |           [ _tent_n_1 LBL: h4949 ARG0: x4948 ]                                   |
+|               |           [ _door_n_1 LBL: h4947 ARG0: x4946 ]                                   |
+|               |           [ _inside_a_1 LBL: h4961 ARG0: e4959 ARG1: x4962 ]                     |
+|               |           [ _opening_n_1 LBL: h4961 ARG0: x4962 ] >                              |
+|               |   HCONS: < h4978 qeq h4976 h5012 qeq h4974 h5017 qeq h5004 h4951 qeq h4949 h4965 |
+|               | qeq h4947 h5022 qeq h4961 h5029 qeq h5025 >                                      |
+|               |   ICONS: < e4994 topic x4973 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                |
++--------------------------+----------------------------------------------------------------------------------+
+| Node                     | Generated SEMENT                                                                 |
++--------------------------+----------------------------------------------------------------------------------+
+| idTent1DoorInsideOpening | [ TOP: h4963                                                                     |
+|                          |   INDEX: x4962                                                                   |
+|                          |   RELS: < [ poss LBL: h4972 ARG0: e4969 ARG1: x4970 ARG2: i4971 ]                |
+|                          |           [ def_udef_a_q LBL: h4967 ARG0: x4964 RSTR: h4965 BODY: h4966 ]        |
+|                          |           [ compound LBL: h4958 ARG0: e4955 [ e PROG: - ] ARG1: u4956 ARG2:      |
+|                          | u4957 ]                                                                          |
+|                          |           [ udef_q LBL: h4953 ARG0: x4950 RSTR: h4951 BODY: h4952 ]              |
+|                          |           [ _tent_n_1 LBL: h4949 ARG0: x4948 ]                                   |
+|                          |           [ _door_n_1 LBL: h4947 ARG0: x4946 ]                                   |
+|                          |           [ _inside_a_1 LBL: h4961 ARG0: e4959 ARG1: u4960 ]                     |
+|                          |           [ _opening_n_1 LBL: h4963 ARG0: x4962 ] >                              |
+|                          |   HCONS: < h4951 qeq h4949 h4965 qeq h4947 >                                     |
+|                          |   EQS: < x4950 eq x4948 h4958 eq h4954 u4957 eq x4950 h4958 eq h4947 u4956 eq    |
+|                          | x4946 x4964 eq x4946 h4972 eq h4968 i4971 eq x4964 h4961 eq h4963 u4960 eq x4962 |
+|                          | h4972 eq h4963 x4970 eq x4962 > ]                                                |
++--------------------------+----------------------------------------------------------------------------------+
+| idTent1Door              | [ TOP: h4974                                                                     |
+|                          |   INDEX: x4973                                                                   |
+|                          |   RELS: < [ compound LBL: h4985 ARG0: e4982 [ e PROG: - ] ARG1: u4983 ARG2:      |
+|                          | u4984 ]                                                                          |
+|                          |           [ udef_q LBL: h4980 ARG0: x4977 RSTR: h4978 BODY: h4979 ]              |
+|                          |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|                          |           [ _door_n_1 LBL: h4974 ARG0: x4973 ] >                                 |
+|                          |   HCONS: < h4978 qeq h4976 >                                                     |
+|                          |   EQS: < x4977 eq x4975 h4985 eq h4981 u4984 eq x4977 h4985 eq h4974 u4983 eq    |
+|                          | x4973 > ]                                                                        |
++--------------------------+----------------------------------------------------------------------------------+
+| true                     | [ TOP: h4989                                                                     |
+|                          |   INDEX: e4986                                                                   |
+|                          |   RELS: < [ _true_a_of LBL: h4989 ARG0: e4986 ARG1: u4987 ARG2: u4988 ] >        |
+|                          |   SLOTS: < ARG1: u4987 ARG2: u4988 > ]                                           |
++--------------------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                         EDGE SEMENTS                                                                         |
++----------------------------------+--------------------------+-------------+----------------------------------------------------------------------------------+
+| Edge                             | Parent                   | Child       | Generated SEMENT                                                                 |
++----------------------------------+--------------------------+-------------+----------------------------------------------------------------------------------+
+| isSouthOf                        | idTent1DoorInsideOpening | idTent1Door | [ TOP: h4963                                                                     |
+|                                  |                          |             |   INDEX: x4962                                                                   |
+|                                  |                          |             |   RELS: < [ loc_nonsp LBL: h5008 ARG0: e5005 ARG1: u5006 ARG2: x5007 ]           |
+|                                  |                          |             |           [ def_implicit_q LBL: h5019 ARG0: x5016 RSTR: h5017 BODY: h5018 ]      |
+|                                  |                          |             |           [ _south_a_1 LBL: h5004 ARG0: i5001 ARG1: x5002 ARG2: u5003 ]          |
+|                                  |                          |             |           [ def_udef_a_q LBL: h5014 ARG0: x5011 RSTR: h5012 BODY: h5013 ]        |
+|                                  |                          |             |           [ _un-_a_neg LBL: h5000 ARG0: i4998 ARG1: e4999 ]                      |
+|                                  |                          |             |           [ _know_v_1 LBL: h4997 ARG0: e4994 [ e PERF: - ] ARG1: u4995 ARG2:     |
+|                                  |                          |             | i4996 ]                                                                          |
+|                                  |                          |             |           [ compound LBL: h4985 ARG0: e4982 [ e PROG: - ] ARG1: u4983 ARG2:      |
+|                                  |                          |             | u4984 ]                                                                          |
+|                                  |                          |             |           [ udef_q LBL: h4980 ARG0: x4977 RSTR: h4978 BODY: h4979 ]              |
+|                                  |                          |             |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|                                  |                          |             |           [ _door_n_1 LBL: h4974 ARG0: x4973 ]                                   |
+|                                  |                          |             |           [ place_n LBL: h5010 ARG0: x5009 ]                                     |
+|                                  |                          |             |           [ poss LBL: h4972 ARG0: e4969 ARG1: x4970 ARG2: i4971 ]                |
+|                                  |                          |             |           [ def_udef_a_q LBL: h4967 ARG0: x4964 RSTR: h4965 BODY: h4966 ]        |
+|                                  |                          |             |           [ compound LBL: h4958 ARG0: e4955 [ e PROG: - ] ARG1: u4956 ARG2:      |
+|                                  |                          |             | u4957 ]                                                                          |
+|                                  |                          |             |           [ udef_q LBL: h4953 ARG0: x4950 RSTR: h4951 BODY: h4952 ]              |
+|                                  |                          |             |           [ _tent_n_1 LBL: h4949 ARG0: x4948 ]                                   |
+|                                  |                          |             |           [ _door_n_1 LBL: h4947 ARG0: x4946 ]                                   |
+|                                  |                          |             |           [ _inside_a_1 LBL: h4961 ARG0: e4959 ARG1: u4960 ]                     |
+|                                  |                          |             |           [ _opening_n_1 LBL: h4963 ARG0: x4962 ] >                              |
+|                                  |                          |             |   HCONS: < h4978 qeq h4976 h5012 qeq h4974 h5017 qeq h5010 h4951 qeq h4949 h4965 |
+|                                  |                          |             | qeq h4947 >                                                                      |
+|                                  |                          |             |   ICONS: < e4994 topic i4996 >                                                   |
+|                                  |                          |             |   EQS: < h5000 eq h4997 e4999 eq e4994 x4977 eq x4975 h4985 eq h4981 u4984 eq    |
+|                                  |                          |             | x4977 h4985 eq h4974 u4983 eq x4973 h4997 eq h4974 i4996 eq x4973 x5011 eq x4973 |
+|                                  |                          |             | h5004 eq h5015 u5003 eq x5011 h5004 eq h5010 x5002 eq x5009 x5016 eq x5009 h5008 |
+|                                  |                          |             | eq h5020 x5007 eq x5016 x4950 eq x4948 h4958 eq h4954 u4957 eq x4950 h4958 eq    |
+|                                  |                          |             | h4947 u4956 eq x4946 x4964 eq x4946 h4972 eq h4968 i4971 eq x4964 h4961 eq h4963 |
+|                                  |                          |             | u4960 eq x4962 h4972 eq h4963 x4970 eq x4962 h5008 eq h4963 u5006 eq x4962 > ]   |
++----------------------------------+--------------------------+-------------+----------------------------------------------------------------------------------+
+| idTent1Door_prop_idUnknownObject | idTent1Door              | true        | [ TOP: h4974                                                                     |
+|                                  |                          |             |   INDEX: x4973                                                                   |
+|                                  |                          |             |   RELS: < [ _un-_a_neg LBL: h5000 ARG0: i4998 ARG1: e4999 ]                      |
+|                                  |                          |             |           [ _know_v_1 LBL: h4997 ARG0: e4994 [ e PERF: - ] ARG1: u4995 ARG2:     |
+|                                  |                          |             | i4996 ]                                                                          |
+|                                  |                          |             |           [ compound LBL: h4985 ARG0: e4982 [ e PROG: - ] ARG1: u4983 ARG2:      |
+|                                  |                          |             | u4984 ]                                                                          |
+|                                  |                          |             |           [ udef_q LBL: h4980 ARG0: x4977 RSTR: h4978 BODY: h4979 ]              |
+|                                  |                          |             |           [ _tent_n_1 LBL: h4976 ARG0: x4975 ]                                   |
+|                                  |                          |             |           [ _door_n_1 LBL: h4974 ARG0: x4973 ] >                                 |
+|                                  |                          |             |   HCONS: < h4978 qeq h4976 >                                                     |
+|                                  |                          |             |   ICONS: < e4994 topic i4996 >                                                   |
+|                                  |                          |             |   EQS: < h5000 eq h4997 e4999 eq e4994 x4977 eq x4975 h4985 eq h4981 u4984 eq    |
+|                                  |                          |             | x4977 h4985 eq h4974 u4983 eq x4973 h4997 eq h4974 i4996 eq x4973 > ]            |
++----------------------------------+--------------------------+-------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------+
+|                          GENERATED ENGLISH TEXT                         |
++-----+-------------------------------------------------------------------+
+| #   | Generated Text                                                    |
++-----+-------------------------------------------------------------------+
+| 1   | A tent door's inside opening south of a tents unknown door        |
+| 2   | A tent door's inside opening south of a tents unknown door.       |
+| 3   | A tent door's inside opening south of an unknown tent door        |
+| 4   | A tent door's inside opening south of an unknown tent door.       |
+| 5   | A tent door's inside opening south of tents unknown doors         |
+| 6   | A tent door's inside opening south of tents unknown doors.        |
+| 7   | A tent door's inside opening south of the tents unknown door      |
+| 8   | A tent door's inside opening south of the tents unknown door.     |
+| 9   | A tent door's inside opening south of the tents unknown doors     |
+| 10  | A tent door's inside opening south of the tents unknown doors.    |
+| 11  | A tent door's inside opening south of the unknown tent door       |
+| 12  | A tent door's inside opening south of the unknown tent door.      |
+| 13  | A tent door's inside opening south of the unknown tent doors      |
+| 14  | A tent door's inside opening south of the unknown tent doors.     |
+| 15  | A tent door's inside opening south of unknown tent doors          |
+| 16  | A tent door's inside opening south of unknown tent doors.         |
+| 17  | A tent door's inside opening, south of a tents unknown door       |
+| 18  | A tent door's inside opening, south of an unknown tent door       |
+| 19  | A tent door's inside opening, south of tents unknown doors        |
+| 20  | A tent door's inside opening, south of the tents unknown door     |
+| 21  | A tent door's inside opening, south of the tents unknown doors    |
+| 22  | A tent door's inside opening, south of the unknown tent door      |
+| 23  | A tent door's inside opening, south of the unknown tent doors     |
+| 24  | A tent door's inside opening, south of unknown tent doors         |
+| 25  | A tent door's inside openings south of a tents unknown door       |
+| 26  | A tent door's inside openings south of a tents unknown door.      |
+| 27  | A tent door's inside openings south of an unknown tent door       |
+| 28  | A tent door's inside openings south of an unknown tent door.      |
+| 29  | A tent door's inside openings south of tents unknown doors        |
+| 30  | A tent door's inside openings south of tents unknown doors.       |
+| 31  | A tent door's inside openings south of the tents unknown door     |
+| 32  | A tent door's inside openings south of the tents unknown door.    |
+| 33  | A tent door's inside openings south of the tents unknown doors    |
+| 34  | A tent door's inside openings south of the tents unknown doors.   |
+| 35  | A tent door's inside openings south of the unknown tent door      |
+| 36  | A tent door's inside openings south of the unknown tent door.     |
+| 37  | A tent door's inside openings south of the unknown tent doors     |
+| 38  | A tent door's inside openings south of the unknown tent doors.    |
+| 39  | A tent door's inside openings south of unknown tent doors         |
+| 40  | A tent door's inside openings south of unknown tent doors.        |
+| 41  | A tent door's inside openings, south of a tents unknown door      |
+| 42  | A tent door's inside openings, south of an unknown tent door      |
+| 43  | A tent door's inside openings, south of tents unknown doors       |
+| 44  | A tent door's inside openings, south of the tents unknown door    |
+| 45  | A tent door's inside openings, south of the tents unknown doors   |
+| 46  | A tent door's inside openings, south of the unknown tent door     |
+| 47  | A tent door's inside openings, south of the unknown tent doors    |
+| 48  | A tent door's inside openings, south of unknown tent doors        |
+| 49  | Tent doors' inside opening south of a tents unknown door          |
+| 50  | Tent doors' inside opening south of a tents unknown door.         |
+| 51  | Tent doors' inside opening south of an unknown tent door          |
+| 52  | Tent doors' inside opening south of an unknown tent door.         |
+| 53  | Tent doors' inside opening south of tents unknown doors           |
+| 54  | Tent doors' inside opening south of tents unknown doors.          |
+| 55  | Tent doors' inside opening south of the tents unknown door        |
+| 56  | Tent doors' inside opening south of the tents unknown door.       |
+| 57  | Tent doors' inside opening south of the tents unknown doors       |
+| 58  | Tent doors' inside opening south of the tents unknown doors.      |
+| 59  | Tent doors' inside opening south of the unknown tent door         |
+| 60  | Tent doors' inside opening south of the unknown tent door.        |
+| 61  | Tent doors' inside opening south of the unknown tent doors        |
+| 62  | Tent doors' inside opening south of the unknown tent doors.       |
+| 63  | Tent doors' inside opening south of unknown tent doors            |
+| 64  | Tent doors' inside opening south of unknown tent doors.           |
+| 65  | Tent doors' inside opening, south of a tents unknown door         |
+| 66  | Tent doors' inside opening, south of an unknown tent door         |
+| 67  | Tent doors' inside opening, south of tents unknown doors          |
+| 68  | Tent doors' inside opening, south of the tents unknown door       |
+| 69  | Tent doors' inside opening, south of the tents unknown doors      |
+| 70  | Tent doors' inside opening, south of the unknown tent door        |
+| 71  | Tent doors' inside opening, south of the unknown tent doors       |
+| 72  | Tent doors' inside opening, south of unknown tent doors           |
+| 73  | Tent doors' inside openings south of a tents unknown door         |
+| 74  | Tent doors' inside openings south of a tents unknown door.        |
+| 75  | Tent doors' inside openings south of an unknown tent door         |
+| 76  | Tent doors' inside openings south of an unknown tent door.        |
+| 77  | Tent doors' inside openings south of tents unknown doors          |
+| 78  | Tent doors' inside openings south of tents unknown doors.         |
+| 79  | Tent doors' inside openings south of the tents unknown door       |
+| 80  | Tent doors' inside openings south of the tents unknown door.      |
+| 81  | Tent doors' inside openings south of the tents unknown doors      |
+| 82  | Tent doors' inside openings south of the tents unknown doors.     |
+| 83  | Tent doors' inside openings south of the unknown tent door        |
+| 84  | Tent doors' inside openings south of the unknown tent door.       |
+| 85  | Tent doors' inside openings south of the unknown tent doors       |
+| 86  | Tent doors' inside openings south of the unknown tent doors.      |
+| 87  | Tent doors' inside openings south of unknown tent doors           |
+| 88  | Tent doors' inside openings south of unknown tent doors.          |
+| 89  | Tent doors' inside openings, south of a tents unknown door        |
+| 90  | Tent doors' inside openings, south of an unknown tent door        |
+| 91  | Tent doors' inside openings, south of tents unknown doors         |
+| 92  | Tent doors' inside openings, south of the tents unknown door      |
+| 93  | Tent doors' inside openings, south of the tents unknown doors     |
+| 94  | Tent doors' inside openings, south of the unknown tent door       |
+| 95  | Tent doors' inside openings, south of the unknown tent doors      |
+| 96  | Tent doors' inside openings, south of unknown tent doors          |
+| 97  | The tent door's inside opening south of a tents unknown door      |
+| 98  | The tent door's inside opening south of a tents unknown door.     |
+| 99  | The tent door's inside opening south of an unknown tent door      |
+| 100 | The tent door's inside opening south of an unknown tent door.     |
+| 101 | The tent door's inside opening south of tents unknown doors       |
+| 102 | The tent door's inside opening south of tents unknown doors.      |
+| 103 | The tent door's inside opening south of the tents unknown door    |
+| 104 | The tent door's inside opening south of the tents unknown door.   |
+| 105 | The tent door's inside opening south of the tents unknown doors   |
+| 106 | The tent door's inside opening south of the tents unknown doors.  |
+| 107 | The tent door's inside opening south of the unknown tent door     |
+| 108 | The tent door's inside opening south of the unknown tent door.    |
+| 109 | The tent door's inside opening south of the unknown tent doors    |
+| 110 | The tent door's inside opening south of the unknown tent doors.   |
+| 111 | The tent door's inside opening south of unknown tent doors        |
+| 112 | The tent door's inside opening south of unknown tent doors.       |
+| 113 | The tent door's inside opening, south of a tents unknown door     |
+| 114 | The tent door's inside opening, south of an unknown tent door     |
+| 115 | The tent door's inside opening, south of tents unknown doors      |
+| 116 | The tent door's inside opening, south of the tents unknown door   |
+| 117 | The tent door's inside opening, south of the tents unknown doors  |
+| 118 | The tent door's inside opening, south of the unknown tent door    |
+| 119 | The tent door's inside opening, south of the unknown tent doors   |
+| 120 | The tent door's inside opening, south of unknown tent doors       |
+| 121 | The tent door's inside openings south of a tents unknown door     |
+| 122 | The tent door's inside openings south of a tents unknown door.    |
+| 123 | The tent door's inside openings south of an unknown tent door     |
+| 124 | The tent door's inside openings south of an unknown tent door.    |
+| 125 | The tent door's inside openings south of tents unknown doors      |
+| 126 | The tent door's inside openings south of tents unknown doors.     |
+| 127 | The tent door's inside openings south of the tents unknown door   |
+| 128 | The tent door's inside openings south of the tents unknown door.  |
+| 129 | The tent door's inside openings south of the tents unknown doors  |
+| 130 | The tent door's inside openings south of the tents unknown doors. |
+| 131 | The tent door's inside openings south of the unknown tent door    |
+| 132 | The tent door's inside openings south of the unknown tent door.   |
+| 133 | The tent door's inside openings south of the unknown tent doors   |
+| 134 | The tent door's inside openings south of the unknown tent doors.  |
+| 135 | The tent door's inside openings south of unknown tent doors       |
+| 136 | The tent door's inside openings south of unknown tent doors.      |
+| 137 | The tent door's inside openings, south of a tents unknown door    |
+| 138 | The tent door's inside openings, south of an unknown tent door    |
+| 139 | The tent door's inside openings, south of tents unknown doors     |
+| 140 | The tent door's inside openings, south of the tents unknown door  |
+| 141 | The tent door's inside openings, south of the tents unknown doors |
+| 142 | The tent door's inside openings, south of the unknown tent door   |
+| 143 | The tent door's inside openings, south of the unknown tent doors  |
+| 144 | The tent door's inside openings, south of unknown tent doors      |
+| 145 | The tent doors' inside opening south of a tents unknown door      |
+| 146 | The tent doors' inside opening south of a tents unknown door.     |
+| 147 | The tent doors' inside opening south of an unknown tent door      |
+| 148 | The tent doors' inside opening south of an unknown tent door.     |
+| 149 | The tent doors' inside opening south of tents unknown doors       |
+| 150 | The tent doors' inside opening south of tents unknown doors.      |
+| 151 | The tent doors' inside opening south of the tents unknown door    |
+| 152 | The tent doors' inside opening south of the tents unknown door.   |
+| 153 | The tent doors' inside opening south of the tents unknown doors   |
+| 154 | The tent doors' inside opening south of the tents unknown doors.  |
+| 155 | The tent doors' inside opening south of the unknown tent door     |
+| 156 | The tent doors' inside opening south of the unknown tent door.    |
+| 157 | The tent doors' inside opening south of the unknown tent doors    |
+| 158 | The tent doors' inside opening south of the unknown tent doors.   |
+| 159 | The tent doors' inside opening south of unknown tent doors        |
+| 160 | The tent doors' inside opening south of unknown tent doors.       |
+| 161 | The tent doors' inside opening, south of a tents unknown door     |
+| 162 | The tent doors' inside opening, south of an unknown tent door     |
+| 163 | The tent doors' inside opening, south of tents unknown doors      |
+| 164 | The tent doors' inside opening, south of the tents unknown door   |
+| 165 | The tent doors' inside opening, south of the tents unknown doors  |
+| 166 | The tent doors' inside opening, south of the unknown tent door    |
+| 167 | The tent doors' inside opening, south of the unknown tent doors   |
+| 168 | The tent doors' inside opening, south of unknown tent doors       |
+| 169 | The tent doors' inside openings south of a tents unknown door     |
+| 170 | The tent doors' inside openings south of a tents unknown door.    |
+| 171 | The tent doors' inside openings south of an unknown tent door     |
+| 172 | The tent doors' inside openings south of an unknown tent door.    |
+| 173 | The tent doors' inside openings south of tents unknown doors      |
+| 174 | The tent doors' inside openings south of tents unknown doors.     |
+| 175 | The tent doors' inside openings south of the tents unknown door   |
+| 176 | The tent doors' inside openings south of the tents unknown door.  |
+| 177 | The tent doors' inside openings south of the tents unknown doors  |
+| 178 | The tent doors' inside openings south of the tents unknown doors. |
+| 179 | The tent doors' inside openings south of the unknown tent door    |
+| 180 | The tent doors' inside openings south of the unknown tent door.   |
+| 181 | The tent doors' inside openings south of the unknown tent doors   |
+| 182 | The tent doors' inside openings south of the unknown tent doors.  |
+| 183 | The tent doors' inside openings south of unknown tent doors       |
+| 184 | The tent doors' inside openings south of unknown tent doors.      |
+| 185 | The tent doors' inside openings, south of a tents unknown door    |
+| 186 | The tent doors' inside openings, south of an unknown tent door    |
+| 187 | The tent doors' inside openings, south of tents unknown doors     |
+| 188 | The tent doors' inside openings, south of the tents unknown door  |
+| 189 | The tent doors' inside openings, south of the tents unknown doors |
+| 190 | The tent doors' inside openings, south of the unknown tent door   |
+| 191 | The tent doors' inside openings, south of the unknown tent doors  |
+| 192 | The tent doors' inside openings, south of unknown tent doors      |
++-----+-------------------------------------------------------------------+
+

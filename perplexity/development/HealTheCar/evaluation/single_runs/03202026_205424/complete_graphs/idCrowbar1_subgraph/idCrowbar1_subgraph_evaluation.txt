@@ -1,0 +1,563 @@
+GRAPH NAME: idCrowbar1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 360   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------+
+|                         GOLD OUTPUTS                         |
++-------------------------------------------------+------------+
+| Gold Output                                     | Generated? |
++-------------------------------------------------+------------+
+| the cool black unknown crowbar east of the tire | True       |
++-------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idCrowbar1 | True         | True          | Covered          | Included          |
+| black      | True         | True          | Covered          | Included          |
+| cool       | True         | True          | Covered          | Included          |
+| true       | True         | True          | Covered          | Included          |
+| idTire1    | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                         |
++---------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+| Edge                            | Parent     | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+| idCrowbar1_prop_idColor         | idCrowbar1 | black   | True         | True          | Covered          | Included          |
+| idCrowbar1_prop_idDescriptor    | idCrowbar1 | cool    | True         | True          | Covered          | Included          |
+| idCrowbar1_prop_idUnknownObject | idCrowbar1 | true    | True         | True          | Covered          | Included          |
+| isEastOf                        | idCrowbar1 | idTire1 | True         | True          | Covered          | Included          |
++---------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h980                                                                      |
+|               |   INDEX: x979                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h1011 ARG0: e1008 ARG1: u1009 ARG2: x1010 ]           |
+|               |           [ def_implicit_q LBL: h1022 ARG0: x1019 RSTR: h1020 BODY: h1021 ]      |
+|               |           [ _east_a_1 LBL: h1007 ARG0: i1004 ARG1: x1005 ARG2: u1006 ]           |
+|               |           [ def_udef_a_q LBL: h1017 ARG0: x1014 RSTR: h1015 BODY: h1016 ]        |
+|               |           [ _tire_n_1 LBL: h1003 ARG0: x1002 ]                                   |
+|               |           [ place_n LBL: h1013 ARG0: x1012 ]                                     |
+|               |           [ _un-_a_neg LBL: h1001 ARG0: i999 ARG1: e1000 ]                       |
+|               |           [ _know_v_1 LBL: h998 ARG0: e995 [ e PERF: - ] ARG1: u996 ARG2: i997 ] |
+|               |           [ _cool_a_1 LBL: h986 ARG0: e984 ARG1: i985 ]                          |
+|               |           [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ]                         |
+|               |           [ _crowbar_n_1 LBL: h980 ARG0: x979 ] >                                |
+|               |   HCONS: < h1015 qeq h1003 h1020 qeq h1013 >                                     |
+|               |   ICONS: < e995 topic i997 >                                                     |
+|               |   EQS: < x1014 eq x1002 h1007 eq h1018 u1006 eq x1014 h1007 eq h1013 x1005 eq    |
+|               | x1012 x1019 eq x1012 h1011 eq h1023 x1010 eq x1019 h1001 eq h998 e1000 eq e995   |
+|               | h983 eq h980 i982 eq x979 h986 eq h980 i985 eq x979 h998 eq h980 i997 eq x979    |
+|               | h1011 eq h980 u1009 eq x979 > ]                                                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1001                                                                     |
+|               |   INDEX: x979                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h1001 ARG0: e1008 ARG1: x979 ARG2: x1005 ]            |
+|               |           [ def_implicit_q LBL: h1022 ARG0: x1005 RSTR: h1020 BODY: h1021 ]      |
+|               |           [ _east_a_1 LBL: h1007 ARG0: i1004 ARG1: x1005 ARG2: x1002 ]           |
+|               |           [ def_udef_a_q LBL: h1017 ARG0: x1002 RSTR: h1015 BODY: h1016 ]        |
+|               |           [ _tire_n_1 LBL: h1003 ARG0: x1002 ]                                   |
+|               |           [ place_n LBL: h1007 ARG0: x1005 ]                                     |
+|               |           [ _un-_a_neg LBL: h1001 ARG0: i999 ARG1: e1000 [ e PERF: - ] ]         |
+|               |           [ _know_v_1 LBL: h1001 ARG0: e1000 ARG1: u996 ARG2: x979 ]             |
+|               |           [ _cool_a_1 LBL: h1001 ARG0: e984 ARG1: x979 ]                         |
+|               |           [ _black_a_1 LBL: h1001 ARG0: i981 ARG1: x979 ]                        |
+|               |           [ _crowbar_n_1 LBL: h1001 ARG0: x979 ] >                               |
+|               |   HCONS: < h1015 qeq h1003 h1020 qeq h1007 >                                     |
+|               |   ICONS: < e1000 topic x979 > ]                                                  |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1032                                                                     |
+|               |   INDEX: e1029                                                                   |
+|               |   RELS: < [ unknown LBL: h1028 ARG: x1024 ARG0: e1029 ]                          |
+|               |           [ def_udef_a_q LBL: h1027 ARG0: x1024 RSTR: h1025 BODY: h1026 ]        |
+|               |           [ loc_nonsp LBL: h1001 ARG0: e1008 ARG1: x1024 ARG2: x1005 ]           |
+|               |           [ def_implicit_q LBL: h1022 ARG0: x1005 RSTR: h1020 BODY: h1021 ]      |
+|               |           [ _east_a_1 LBL: h1007 ARG0: i1004 ARG1: x1005 ARG2: x1002 ]           |
+|               |           [ def_udef_a_q LBL: h1017 ARG0: x1002 RSTR: h1015 BODY: h1016 ]        |
+|               |           [ _tire_n_1 LBL: h1003 ARG0: x1002 ]                                   |
+|               |           [ place_n LBL: h1007 ARG0: x1005 ]                                     |
+|               |           [ _un-_a_neg LBL: h1001 ARG0: i999 ARG1: e1000 [ e PERF: - ] ]         |
+|               |           [ _know_v_1 LBL: h1001 ARG0: e1000 ARG1: u996 ARG2: x1024 ]            |
+|               |           [ _cool_a_1 LBL: h1001 ARG0: e984 ARG1: x1024 ]                        |
+|               |           [ _black_a_1 LBL: h1001 ARG0: i981 ARG1: x1024 ]                       |
+|               |           [ _crowbar_n_1 LBL: h1001 ARG0: x1024 ] >                              |
+|               |   HCONS: < h1015 qeq h1003 h1020 qeq h1007 h1025 qeq h1001 h1032 qeq h1028 >     |
+|               |   ICONS: < e1000 topic x1024 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                    |
++------------+-----------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                      |
++------------+-----------------------------------------------------------------------+
+| idCrowbar1 | [ TOP: h980                                                           |
+|            |   INDEX: x979                                                         |
+|            |   RELS: < [ _crowbar_n_1 LBL: h980 ARG0: x979 ] > ]                   |
++------------+-----------------------------------------------------------------------+
+| black      | [ TOP: h983                                                           |
+|            |   INDEX: i981                                                         |
+|            |   RELS: < [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ] >            |
+|            |   SLOTS: < ARG1: i982 > ]                                             |
++------------+-----------------------------------------------------------------------+
+| cool       | [ TOP: h986                                                           |
+|            |   INDEX: e984                                                         |
+|            |   RELS: < [ _cool_a_1 LBL: h986 ARG0: e984 ARG1: i985 ] >             |
+|            |   SLOTS: < ARG1: i985 > ]                                             |
++------------+-----------------------------------------------------------------------+
+| true       | [ TOP: h990                                                           |
+|            |   INDEX: e987                                                         |
+|            |   RELS: < [ _true_a_of LBL: h990 ARG0: e987 ARG1: u988 ARG2: u989 ] > |
+|            |   SLOTS: < ARG1: u988 ARG2: u989 > ]                                  |
++------------+-----------------------------------------------------------------------+
+| idTire1    | [ TOP: h1003                                                          |
+|            |   INDEX: x1002                                                        |
+|            |   RELS: < [ _tire_n_1 LBL: h1003 ARG0: x1002 ] > ]                    |
++------------+-----------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                               |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| Edge                            | Parent     | Child   | Generated SEMENT                                                                 |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| idCrowbar1_prop_idColor         | idCrowbar1 | black   | [ TOP: h980                                                                      |
+|                                 |            |         |   INDEX: x979                                                                    |
+|                                 |            |         |   RELS: < [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ]                         |
+|                                 |            |         |           [ _crowbar_n_1 LBL: h980 ARG0: x979 ] >                                |
+|                                 |            |         |   EQS: < h983 eq h980 i982 eq x979 > ]                                           |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| idCrowbar1_prop_idDescriptor    | idCrowbar1 | cool    | [ TOP: h980                                                                      |
+|                                 |            |         |   INDEX: x979                                                                    |
+|                                 |            |         |   RELS: < [ _cool_a_1 LBL: h986 ARG0: e984 ARG1: i985 ]                          |
+|                                 |            |         |           [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ]                         |
+|                                 |            |         |           [ _crowbar_n_1 LBL: h980 ARG0: x979 ] >                                |
+|                                 |            |         |   EQS: < h983 eq h980 i982 eq x979 h986 eq h980 i985 eq x979 > ]                 |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| idCrowbar1_prop_idUnknownObject | idCrowbar1 | true    | [ TOP: h980                                                                      |
+|                                 |            |         |   INDEX: x979                                                                    |
+|                                 |            |         |   RELS: < [ _un-_a_neg LBL: h1001 ARG0: i999 ARG1: e1000 ]                       |
+|                                 |            |         |           [ _know_v_1 LBL: h998 ARG0: e995 [ e PERF: - ] ARG1: u996 ARG2: i997 ] |
+|                                 |            |         |           [ _cool_a_1 LBL: h986 ARG0: e984 ARG1: i985 ]                          |
+|                                 |            |         |           [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ]                         |
+|                                 |            |         |           [ _crowbar_n_1 LBL: h980 ARG0: x979 ] >                                |
+|                                 |            |         |   ICONS: < e995 topic i997 >                                                     |
+|                                 |            |         |   EQS: < h1001 eq h998 e1000 eq e995 h983 eq h980 i982 eq x979 h986 eq h980 i985 |
+|                                 |            |         | eq x979 h998 eq h980 i997 eq x979 > ]                                            |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| isEastOf                        | idCrowbar1 | idTire1 | [ TOP: h980                                                                      |
+|                                 |            |         |   INDEX: x979                                                                    |
+|                                 |            |         |   RELS: < [ loc_nonsp LBL: h1011 ARG0: e1008 ARG1: u1009 ARG2: x1010 ]           |
+|                                 |            |         |           [ def_implicit_q LBL: h1022 ARG0: x1019 RSTR: h1020 BODY: h1021 ]      |
+|                                 |            |         |           [ _east_a_1 LBL: h1007 ARG0: i1004 ARG1: x1005 ARG2: u1006 ]           |
+|                                 |            |         |           [ def_udef_a_q LBL: h1017 ARG0: x1014 RSTR: h1015 BODY: h1016 ]        |
+|                                 |            |         |           [ _tire_n_1 LBL: h1003 ARG0: x1002 ]                                   |
+|                                 |            |         |           [ place_n LBL: h1013 ARG0: x1012 ]                                     |
+|                                 |            |         |           [ _un-_a_neg LBL: h1001 ARG0: i999 ARG1: e1000 ]                       |
+|                                 |            |         |           [ _know_v_1 LBL: h998 ARG0: e995 [ e PERF: - ] ARG1: u996 ARG2: i997 ] |
+|                                 |            |         |           [ _cool_a_1 LBL: h986 ARG0: e984 ARG1: i985 ]                          |
+|                                 |            |         |           [ _black_a_1 LBL: h983 ARG0: i981 ARG1: i982 ]                         |
+|                                 |            |         |           [ _crowbar_n_1 LBL: h980 ARG0: x979 ] >                                |
+|                                 |            |         |   HCONS: < h1015 qeq h1003 h1020 qeq h1013 >                                     |
+|                                 |            |         |   ICONS: < e995 topic i997 >                                                     |
+|                                 |            |         |   EQS: < x1014 eq x1002 h1007 eq h1018 u1006 eq x1014 h1007 eq h1013 x1005 eq    |
+|                                 |            |         | x1012 x1019 eq x1012 h1011 eq h1023 x1010 eq x1019 h1001 eq h998 e1000 eq e995   |
+|                                 |            |         | h983 eq h980 i982 eq x979 h986 eq h980 i985 eq x979 h998 eq h980 i997 eq x979    |
+|                                 |            |         | h1011 eq h980 u1009 eq x979 > ]                                                  |
++---------------------------------+------------+---------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                  |
++-----+----------------------------------------------------+
+| #   | Generated Text                                     |
++-----+----------------------------------------------------+
+| 1   | A black cool unknown crowbar east of a tire        |
+| 2   | A black cool unknown crowbar east of a tire.       |
+| 3   | A black cool unknown crowbar east of the tire      |
+| 4   | A black cool unknown crowbar east of the tire.     |
+| 5   | A black cool unknown crowbar east of the tires     |
+| 6   | A black cool unknown crowbar east of the tires.    |
+| 7   | A black cool unknown crowbar east of tires         |
+| 8   | A black cool unknown crowbar east of tires.        |
+| 9   | A black cool unknown crowbar, east of a tire       |
+| 10  | A black cool unknown crowbar, east of the tire     |
+| 11  | A black cool unknown crowbar, east of the tires    |
+| 12  | A black cool unknown crowbar, east of tires        |
+| 13  | A black unknown cool crowbar east of a tire        |
+| 14  | A black unknown cool crowbar east of a tire.       |
+| 15  | A black unknown cool crowbar east of the tire      |
+| 16  | A black unknown cool crowbar east of the tire.     |
+| 17  | A black unknown cool crowbar east of the tires     |
+| 18  | A black unknown cool crowbar east of the tires.    |
+| 19  | A black unknown cool crowbar east of tires         |
+| 20  | A black unknown cool crowbar east of tires.        |
+| 21  | A black unknown cool crowbar, east of a tire       |
+| 22  | A black unknown cool crowbar, east of the tire     |
+| 23  | A black unknown cool crowbar, east of the tires    |
+| 24  | A black unknown cool crowbar, east of tires        |
+| 25  | A cool black unknown crowbar east of a tire        |
+| 26  | A cool black unknown crowbar east of a tire.       |
+| 27  | A cool black unknown crowbar east of the tire      |
+| 28  | A cool black unknown crowbar east of the tire.     |
+| 29  | A cool black unknown crowbar east of the tires     |
+| 30  | A cool black unknown crowbar east of the tires.    |
+| 31  | A cool black unknown crowbar east of tires         |
+| 32  | A cool black unknown crowbar east of tires.        |
+| 33  | A cool black unknown crowbar, east of a tire       |
+| 34  | A cool black unknown crowbar, east of the tire     |
+| 35  | A cool black unknown crowbar, east of the tires    |
+| 36  | A cool black unknown crowbar, east of tires        |
+| 37  | A cool unknown black crowbar east of a tire        |
+| 38  | A cool unknown black crowbar east of a tire.       |
+| 39  | A cool unknown black crowbar east of the tire      |
+| 40  | A cool unknown black crowbar east of the tire.     |
+| 41  | A cool unknown black crowbar east of the tires     |
+| 42  | A cool unknown black crowbar east of the tires.    |
+| 43  | A cool unknown black crowbar east of tires         |
+| 44  | A cool unknown black crowbar east of tires.        |
+| 45  | A cool unknown black crowbar, east of a tire       |
+| 46  | A cool unknown black crowbar, east of the tire     |
+| 47  | A cool unknown black crowbar, east of the tires    |
+| 48  | A cool unknown black crowbar, east of tires        |
+| 49  | An unknown black cool crowbar east of a tire       |
+| 50  | An unknown black cool crowbar east of a tire.      |
+| 51  | An unknown black cool crowbar east of the tire     |
+| 52  | An unknown black cool crowbar east of the tire.    |
+| 53  | An unknown black cool crowbar east of the tires    |
+| 54  | An unknown black cool crowbar east of the tires.   |
+| 55  | An unknown black cool crowbar east of tires        |
+| 56  | An unknown black cool crowbar east of tires.       |
+| 57  | An unknown black cool crowbar, east of a tire      |
+| 58  | An unknown black cool crowbar, east of the tire    |
+| 59  | An unknown black cool crowbar, east of the tires   |
+| 60  | An unknown black cool crowbar, east of tires       |
+| 61  | An unknown cool black crowbar east of a tire       |
+| 62  | An unknown cool black crowbar east of a tire.      |
+| 63  | An unknown cool black crowbar east of the tire     |
+| 64  | An unknown cool black crowbar east of the tire.    |
+| 65  | An unknown cool black crowbar east of the tires    |
+| 66  | An unknown cool black crowbar east of the tires.   |
+| 67  | An unknown cool black crowbar east of tires        |
+| 68  | An unknown cool black crowbar east of tires.       |
+| 69  | An unknown cool black crowbar, east of a tire      |
+| 70  | An unknown cool black crowbar, east of the tire    |
+| 71  | An unknown cool black crowbar, east of the tires   |
+| 72  | An unknown cool black crowbar, east of tires       |
+| 73  | Black cool unknown crowbar east of a tire          |
+| 74  | Black cool unknown crowbar east of a tire.         |
+| 75  | Black cool unknown crowbar east of the tire        |
+| 76  | Black cool unknown crowbar east of the tire.       |
+| 77  | Black cool unknown crowbar east of the tires       |
+| 78  | Black cool unknown crowbar east of the tires.      |
+| 79  | Black cool unknown crowbar east of tires           |
+| 80  | Black cool unknown crowbar east of tires.          |
+| 81  | Black cool unknown crowbar, east of a tire         |
+| 82  | Black cool unknown crowbar, east of the tire       |
+| 83  | Black cool unknown crowbar, east of the tires      |
+| 84  | Black cool unknown crowbar, east of tires          |
+| 85  | Black cool unknown crowbars east of a tire         |
+| 86  | Black cool unknown crowbars east of a tire.        |
+| 87  | Black cool unknown crowbars east of the tire       |
+| 88  | Black cool unknown crowbars east of the tire.      |
+| 89  | Black cool unknown crowbars east of the tires      |
+| 90  | Black cool unknown crowbars east of the tires.     |
+| 91  | Black cool unknown crowbars east of tires          |
+| 92  | Black cool unknown crowbars east of tires.         |
+| 93  | Black cool unknown crowbars, east of a tire        |
+| 94  | Black cool unknown crowbars, east of the tire      |
+| 95  | Black cool unknown crowbars, east of the tires     |
+| 96  | Black cool unknown crowbars, east of tires         |
+| 97  | Black unknown cool crowbar east of a tire          |
+| 98  | Black unknown cool crowbar east of a tire.         |
+| 99  | Black unknown cool crowbar east of the tire        |
+| 100 | Black unknown cool crowbar east of the tire.       |
+| 101 | Black unknown cool crowbar east of the tires       |
+| 102 | Black unknown cool crowbar east of the tires.      |
+| 103 | Black unknown cool crowbar east of tires           |
+| 104 | Black unknown cool crowbar east of tires.          |
+| 105 | Black unknown cool crowbar, east of a tire         |
+| 106 | Black unknown cool crowbar, east of the tire       |
+| 107 | Black unknown cool crowbar, east of the tires      |
+| 108 | Black unknown cool crowbar, east of tires          |
+| 109 | Black unknown cool crowbars east of a tire         |
+| 110 | Black unknown cool crowbars east of a tire.        |
+| 111 | Black unknown cool crowbars east of the tire       |
+| 112 | Black unknown cool crowbars east of the tire.      |
+| 113 | Black unknown cool crowbars east of the tires      |
+| 114 | Black unknown cool crowbars east of the tires.     |
+| 115 | Black unknown cool crowbars east of tires          |
+| 116 | Black unknown cool crowbars east of tires.         |
+| 117 | Black unknown cool crowbars, east of a tire        |
+| 118 | Black unknown cool crowbars, east of the tire      |
+| 119 | Black unknown cool crowbars, east of the tires     |
+| 120 | Black unknown cool crowbars, east of tires         |
+| 121 | Cool black unknown crowbar east of a tire          |
+| 122 | Cool black unknown crowbar east of a tire.         |
+| 123 | Cool black unknown crowbar east of the tire        |
+| 124 | Cool black unknown crowbar east of the tire.       |
+| 125 | Cool black unknown crowbar east of the tires       |
+| 126 | Cool black unknown crowbar east of the tires.      |
+| 127 | Cool black unknown crowbar east of tires           |
+| 128 | Cool black unknown crowbar east of tires.          |
+| 129 | Cool black unknown crowbar, east of a tire         |
+| 130 | Cool black unknown crowbar, east of the tire       |
+| 131 | Cool black unknown crowbar, east of the tires      |
+| 132 | Cool black unknown crowbar, east of tires          |
+| 133 | Cool black unknown crowbars east of a tire         |
+| 134 | Cool black unknown crowbars east of a tire.        |
+| 135 | Cool black unknown crowbars east of the tire       |
+| 136 | Cool black unknown crowbars east of the tire.      |
+| 137 | Cool black unknown crowbars east of the tires      |
+| 138 | Cool black unknown crowbars east of the tires.     |
+| 139 | Cool black unknown crowbars east of tires          |
+| 140 | Cool black unknown crowbars east of tires.         |
+| 141 | Cool black unknown crowbars, east of a tire        |
+| 142 | Cool black unknown crowbars, east of the tire      |
+| 143 | Cool black unknown crowbars, east of the tires     |
+| 144 | Cool black unknown crowbars, east of tires         |
+| 145 | Cool unknown black crowbar east of a tire          |
+| 146 | Cool unknown black crowbar east of a tire.         |
+| 147 | Cool unknown black crowbar east of the tire        |
+| 148 | Cool unknown black crowbar east of the tire.       |
+| 149 | Cool unknown black crowbar east of the tires       |
+| 150 | Cool unknown black crowbar east of the tires.      |
+| 151 | Cool unknown black crowbar east of tires           |
+| 152 | Cool unknown black crowbar east of tires.          |
+| 153 | Cool unknown black crowbar, east of a tire         |
+| 154 | Cool unknown black crowbar, east of the tire       |
+| 155 | Cool unknown black crowbar, east of the tires      |
+| 156 | Cool unknown black crowbar, east of tires          |
+| 157 | Cool unknown black crowbars east of a tire         |
+| 158 | Cool unknown black crowbars east of a tire.        |
+| 159 | Cool unknown black crowbars east of the tire       |
+| 160 | Cool unknown black crowbars east of the tire.      |
+| 161 | Cool unknown black crowbars east of the tires      |
+| 162 | Cool unknown black crowbars east of the tires.     |
+| 163 | Cool unknown black crowbars east of tires          |
+| 164 | Cool unknown black crowbars east of tires.         |
+| 165 | Cool unknown black crowbars, east of a tire        |
+| 166 | Cool unknown black crowbars, east of the tire      |
+| 167 | Cool unknown black crowbars, east of the tires     |
+| 168 | Cool unknown black crowbars, east of tires         |
+| 169 | The black cool unknown crowbar east of a tire      |
+| 170 | The black cool unknown crowbar east of a tire.     |
+| 171 | The black cool unknown crowbar east of the tire    |
+| 172 | The black cool unknown crowbar east of the tire.   |
+| 173 | The black cool unknown crowbar east of the tires   |
+| 174 | The black cool unknown crowbar east of the tires.  |
+| 175 | The black cool unknown crowbar east of tires       |
+| 176 | The black cool unknown crowbar east of tires.      |
+| 177 | The black cool unknown crowbar, east of a tire     |
+| 178 | The black cool unknown crowbar, east of the tire   |
+| 179 | The black cool unknown crowbar, east of the tires  |
+| 180 | The black cool unknown crowbar, east of tires      |
+| 181 | The black cool unknown crowbars east of a tire     |
+| 182 | The black cool unknown crowbars east of a tire.    |
+| 183 | The black cool unknown crowbars east of the tire   |
+| 184 | The black cool unknown crowbars east of the tire.  |
+| 185 | The black cool unknown crowbars east of the tires  |
+| 186 | The black cool unknown crowbars east of the tires. |
+| 187 | The black cool unknown crowbars east of tires      |
+| 188 | The black cool unknown crowbars east of tires.     |
+| 189 | The black cool unknown crowbars, east of a tire    |
+| 190 | The black cool unknown crowbars, east of the tire  |
+| 191 | The black cool unknown crowbars, east of the tires |
+| 192 | The black cool unknown crowbars, east of tires     |
+| 193 | The black unknown cool crowbar east of a tire      |
+| 194 | The black unknown cool crowbar east of a tire.     |
+| 195 | The black unknown cool crowbar east of the tire    |
+| 196 | The black unknown cool crowbar east of the tire.   |
+| 197 | The black unknown cool crowbar east of the tires   |
+| 198 | The black unknown cool crowbar east of the tires.  |
+| 199 | The black unknown cool crowbar east of tires       |
+| 200 | The black unknown cool crowbar east of tires.      |
+| 201 | The black unknown cool crowbar, east of a tire     |
+| 202 | The black unknown cool crowbar, east of the tire   |
+| 203 | The black unknown cool crowbar, east of the tires  |
+| 204 | The black unknown cool crowbar, east of tires      |
+| 205 | The black unknown cool crowbars east of a tire     |
+| 206 | The black unknown cool crowbars east of a tire.    |
+| 207 | The black unknown cool crowbars east of the tire   |
+| 208 | The black unknown cool crowbars east of the tire.  |
+| 209 | The black unknown cool crowbars east of the tires  |
+| 210 | The black unknown cool crowbars east of the tires. |
+| 211 | The black unknown cool crowbars east of tires      |
+| 212 | The black unknown cool crowbars east of tires.     |
+| 213 | The black unknown cool crowbars, east of a tire    |
+| 214 | The black unknown cool crowbars, east of the tire  |
+| 215 | The black unknown cool crowbars, east of the tires |
+| 216 | The black unknown cool crowbars, east of tires     |
+| 217 | The cool black unknown crowbar east of a tire      |
+| 218 | The cool black unknown crowbar east of a tire.     |
+| 219 | The cool black unknown crowbar east of the tire    |
+| 220 | The cool black unknown crowbar east of the tire.   |
+| 221 | The cool black unknown crowbar east of the tires   |
+| 222 | The cool black unknown crowbar east of the tires.  |
+| 223 | The cool black unknown crowbar east of tires       |
+| 224 | The cool black unknown crowbar east of tires.      |
+| 225 | The cool black unknown crowbar, east of a tire     |
+| 226 | The cool black unknown crowbar, east of the tire   |
+| 227 | The cool black unknown crowbar, east of the tires  |
+| 228 | The cool black unknown crowbar, east of tires      |
+| 229 | The cool black unknown crowbars east of a tire     |
+| 230 | The cool black unknown crowbars east of a tire.    |
+| 231 | The cool black unknown crowbars east of the tire   |
+| 232 | The cool black unknown crowbars east of the tire.  |
+| 233 | The cool black unknown crowbars east of the tires  |
+| 234 | The cool black unknown crowbars east of the tires. |
+| 235 | The cool black unknown crowbars east of tires      |
+| 236 | The cool black unknown crowbars east of tires.     |
+| 237 | The cool black unknown crowbars, east of a tire    |
+| 238 | The cool black unknown crowbars, east of the tire  |
+| 239 | The cool black unknown crowbars, east of the tires |
+| 240 | The cool black unknown crowbars, east of tires     |
+| 241 | The cool unknown black crowbar east of a tire      |
+| 242 | The cool unknown black crowbar east of a tire.     |
+| 243 | The cool unknown black crowbar east of the tire    |
+| 244 | The cool unknown black crowbar east of the tire.   |
+| 245 | The cool unknown black crowbar east of the tires   |
+| 246 | The cool unknown black crowbar east of the tires.  |
+| 247 | The cool unknown black crowbar east of tires       |
+| 248 | The cool unknown black crowbar east of tires.      |
+| 249 | The cool unknown black crowbar, east of a tire     |
+| 250 | The cool unknown black crowbar, east of the tire   |
+| 251 | The cool unknown black crowbar, east of the tires  |
+| 252 | The cool unknown black crowbar, east of tires      |
+| 253 | The cool unknown black crowbars east of a tire     |
+| 254 | The cool unknown black crowbars east of a tire.    |
+| 255 | The cool unknown black crowbars east of the tire   |
+| 256 | The cool unknown black crowbars east of the tire.  |
+| 257 | The cool unknown black crowbars east of the tires  |
+| 258 | The cool unknown black crowbars east of the tires. |
+| 259 | The cool unknown black crowbars east of tires      |
+| 260 | The cool unknown black crowbars east of tires.     |
+| 261 | The cool unknown black crowbars, east of a tire    |
+| 262 | The cool unknown black crowbars, east of the tire  |
+| 263 | The cool unknown black crowbars, east of the tires |
+| 264 | The cool unknown black crowbars, east of tires     |
+| 265 | The unknown black cool crowbar east of a tire      |
+| 266 | The unknown black cool crowbar east of a tire.     |
+| 267 | The unknown black cool crowbar east of the tire    |
+| 268 | The unknown black cool crowbar east of the tire.   |
+| 269 | The unknown black cool crowbar east of the tires   |
+| 270 | The unknown black cool crowbar east of the tires.  |
+| 271 | The unknown black cool crowbar east of tires       |
+| 272 | The unknown black cool crowbar east of tires.      |
+| 273 | The unknown black cool crowbar, east of a tire     |
+| 274 | The unknown black cool crowbar, east of the tire   |
+| 275 | The unknown black cool crowbar, east of the tires  |
+| 276 | The unknown black cool crowbar, east of tires      |
+| 277 | The unknown black cool crowbars east of a tire     |
+| 278 | The unknown black cool crowbars east of a tire.    |
+| 279 | The unknown black cool crowbars east of the tire   |
+| 280 | The unknown black cool crowbars east of the tire.  |
+| 281 | The unknown black cool crowbars east of the tires  |
+| 282 | The unknown black cool crowbars east of the tires. |
+| 283 | The unknown black cool crowbars east of tires      |
+| 284 | The unknown black cool crowbars east of tires.     |
+| 285 | The unknown black cool crowbars, east of a tire    |
+| 286 | The unknown black cool crowbars, east of the tire  |
+| 287 | The unknown black cool crowbars, east of the tires |
+| 288 | The unknown black cool crowbars, east of tires     |
+| 289 | The unknown cool black crowbar east of a tire      |
+| 290 | The unknown cool black crowbar east of a tire.     |
+| 291 | The unknown cool black crowbar east of the tire    |
+| 292 | The unknown cool black crowbar east of the tire.   |
+| 293 | The unknown cool black crowbar east of the tires   |
+| 294 | The unknown cool black crowbar east of the tires.  |
+| 295 | The unknown cool black crowbar east of tires       |
+| 296 | The unknown cool black crowbar east of tires.      |
+| 297 | The unknown cool black crowbar, east of a tire     |
+| 298 | The unknown cool black crowbar, east of the tire   |
+| 299 | The unknown cool black crowbar, east of the tires  |
+| 300 | The unknown cool black crowbar, east of tires      |
+| 301 | The unknown cool black crowbars east of a tire     |
+| 302 | The unknown cool black crowbars east of a tire.    |
+| 303 | The unknown cool black crowbars east of the tire   |
+| 304 | The unknown cool black crowbars east of the tire.  |
+| 305 | The unknown cool black crowbars east of the tires  |
+| 306 | The unknown cool black crowbars east of the tires. |
+| 307 | The unknown cool black crowbars east of tires      |
+| 308 | The unknown cool black crowbars east of tires.     |
+| 309 | The unknown cool black crowbars, east of a tire    |
+| 310 | The unknown cool black crowbars, east of the tire  |
+| 311 | The unknown cool black crowbars, east of the tires |
+| 312 | The unknown cool black crowbars, east of tires     |
+| 313 | Unknown black cool crowbar east of a tire          |
+| 314 | Unknown black cool crowbar east of a tire.         |
+| 315 | Unknown black cool crowbar east of the tire        |
+| 316 | Unknown black cool crowbar east of the tire.       |
+| 317 | Unknown black cool crowbar east of the tires       |
+| 318 | Unknown black cool crowbar east of the tires.      |
+| 319 | Unknown black cool crowbar east of tires           |
+| 320 | Unknown black cool crowbar east of tires.          |
+| 321 | Unknown black cool crowbar, east of a tire         |
+| 322 | Unknown black cool crowbar, east of the tire       |
+| 323 | Unknown black cool crowbar, east of the tires      |
+| 324 | Unknown black cool crowbar, east of tires          |
+| 325 | Unknown black cool crowbars east of a tire         |
+| 326 | Unknown black cool crowbars east of a tire.        |
+| 327 | Unknown black cool crowbars east of the tire       |
+| 328 | Unknown black cool crowbars east of the tire.      |
+| 329 | Unknown black cool crowbars east of the tires      |
+| 330 | Unknown black cool crowbars east of the tires.     |
+| 331 | Unknown black cool crowbars east of tires          |
+| 332 | Unknown black cool crowbars east of tires.         |
+| 333 | Unknown black cool crowbars, east of a tire        |
+| 334 | Unknown black cool crowbars, east of the tire      |
+| 335 | Unknown black cool crowbars, east of the tires     |
+| 336 | Unknown black cool crowbars, east of tires         |
+| 337 | Unknown cool black crowbar east of a tire          |
+| 338 | Unknown cool black crowbar east of a tire.         |
+| 339 | Unknown cool black crowbar east of the tire        |
+| 340 | Unknown cool black crowbar east of the tire.       |
+| 341 | Unknown cool black crowbar east of the tires       |
+| 342 | Unknown cool black crowbar east of the tires.      |
+| 343 | Unknown cool black crowbar east of tires           |
+| 344 | Unknown cool black crowbar east of tires.          |
+| 345 | Unknown cool black crowbar, east of a tire         |
+| 346 | Unknown cool black crowbar, east of the tire       |
+| 347 | Unknown cool black crowbar, east of the tires      |
+| 348 | Unknown cool black crowbar, east of tires          |
+| 349 | Unknown cool black crowbars east of a tire         |
+| 350 | Unknown cool black crowbars east of a tire.        |
+| 351 | Unknown cool black crowbars east of the tire       |
+| 352 | Unknown cool black crowbars east of the tire.      |
+| 353 | Unknown cool black crowbars east of the tires      |
+| 354 | Unknown cool black crowbars east of the tires.     |
+| 355 | Unknown cool black crowbars east of tires          |
+| 356 | Unknown cool black crowbars east of tires.         |
+| 357 | Unknown cool black crowbars, east of a tire        |
+| 358 | Unknown cool black crowbars, east of the tire      |
+| 359 | Unknown cool black crowbars, east of the tires     |
+| 360 | Unknown cool black crowbars, east of tires         |
++-----+----------------------------------------------------+
+

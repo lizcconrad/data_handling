@@ -1,0 +1,776 @@
+GRAPH NAME: idFrontDoor1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 542   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------+
+|                              GOLD OUTPUTS                              |
++-----------------------------------------------------------+------------+
+| Gold Output                                               | Generated? |
++-----------------------------------------------------------+------------+
+| the closed front door with the lock west of the drive way | True       |
++-----------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------+
+|                                      NODE METRICS                                      |
++------------------+--------------+---------------+------------------+-------------------+
+| Node             | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------+--------------+---------------+------------------+-------------------+
+| idFrontDoor1     | True         | True          | Covered          | Included          |
+| closed           | True         | True          | Covered          | Included          |
+| idFrontDoor1Lock | True         | True          | Covered          | Included          |
+| idDriveway1      | True         | True          | Covered          | Included          |
++------------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE METRICS                                                               |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+| Edge                              | Parent       | Child            | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+| idFrontDoor1_prop_idOpenState     | idFrontDoor1 | closed           | True         | True          | Covered          | Included          |
+| idFrontDoor1_prop_idLockMechanism | idFrontDoor1 | idFrontDoor1Lock | True         | True          | Covered          | Included          |
+| isWestOf                          | idFrontDoor1 | idDriveway1      | True         | True          | Covered          | Included          |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h844                                                                      |
+|               |   INDEX: x843                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h891 ARG0: e888 ARG1: u889 ARG2: x890 ]               |
+|               |           [ def_implicit_q LBL: h902 ARG0: x899 RSTR: h900 BODY: h901 ]          |
+|               |           [ _west_a_1 LBL: h887 ARG0: i884 ARG1: x885 ARG2: u886 ]               |
+|               |           [ def_udef_a_q LBL: h897 ARG0: x894 RSTR: h895 BODY: h896 ]            |
+|               |           [ compound LBL: h883 ARG0: e880 [ e PROG: - ] ARG1: u881 ARG2: u882 ]  |
+|               |           [ udef_q LBL: h878 ARG0: x875 RSTR: h876 BODY: h877 ]                  |
+|               |           [ _drive_n_1 LBL: h874 ARG0: x873 ]                                    |
+|               |           [ _way_n_of LBL: h872 ARG0: x870 ARG1: i871 ]                          |
+|               |           [ place_n LBL: h893 ARG0: x892 ]                                       |
+|               |           [ _with_p LBL: h864 ARG0: e861 ARG1: u862 ARG2: i863 ]                 |
+|               |           [ def_udef_a_q LBL: h868 ARG0: x865 RSTR: h866 BODY: h867 ]            |
+|               |           [ _lock_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|               |           [ compound LBL: h855 ARG0: e852 [ e PROG: - ] ARG1: u853 ARG2: u854 ]  |
+|               |           [ udef_q LBL: h850 ARG0: x847 RSTR: h848 BODY: h849 ]                  |
+|               |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|               |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|               |   HCONS: < h876 qeq h874 h895 qeq h872 h900 qeq h893 h866 qeq h860 h848 qeq h846 |
+|               | >                                                                                |
+|               |   EQS: < x875 eq x873 h883 eq h879 u882 eq x875 h883 eq h872 u881 eq x870 x894   |
+|               | eq x870 h887 eq h898 u886 eq x894 h887 eq h893 x885 eq x892 x899 eq x892 h891 eq |
+|               | h903 x890 eq x899 x865 eq x859 h864 eq h869 i863 eq x865 x847 eq x845 h855 eq    |
+|               | h851 u854 eq x847 h855 eq h844 u853 eq x843 h858 eq h844 u857 eq x843 h864 eq    |
+|               | h844 u862 eq x843 h891 eq h844 u889 eq x843 > ]                                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h844                                                                      |
+|               |   INDEX: x843                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h844 ARG0: e888 ARG1: x843 ARG2: x885 ]               |
+|               |           [ def_implicit_q LBL: h902 ARG0: x885 RSTR: h900 BODY: h901 ]          |
+|               |           [ _west_a_1 LBL: h887 ARG0: i884 ARG1: x885 ARG2: x870 ]               |
+|               |           [ def_udef_a_q LBL: h897 ARG0: x870 RSTR: h895 BODY: h896 ]            |
+|               |           [ compound LBL: h872 ARG0: e880 [ e PROG: - ] ARG1: x870 ARG2: x873 ]  |
+|               |           [ udef_q LBL: h878 ARG0: x873 RSTR: h876 BODY: h877 ]                  |
+|               |           [ _drive_n_1 LBL: h874 ARG0: x873 ]                                    |
+|               |           [ _way_n_of LBL: h872 ARG0: x870 ARG1: i871 ]                          |
+|               |           [ place_n LBL: h887 ARG0: x885 ]                                       |
+|               |           [ _with_p LBL: h844 ARG0: e861 ARG1: x843 ARG2: x859 ]                 |
+|               |           [ def_udef_a_q LBL: h868 ARG0: x859 RSTR: h866 BODY: h867 ]            |
+|               |           [ _lock_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h844 ARG0: e856 ARG1: x843 ]                        |
+|               |           [ compound LBL: h844 ARG0: e852 [ e PROG: - ] ARG1: x843 ARG2: x845 ]  |
+|               |           [ udef_q LBL: h850 ARG0: x845 RSTR: h848 BODY: h849 ]                  |
+|               |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|               |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|               |   HCONS: < h876 qeq h874 h895 qeq h872 h900 qeq h887 h866 qeq h860 h848 qeq h846 |
+|               | > ]                                                                              |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h912                                                                      |
+|               |   INDEX: e909                                                                    |
+|               |   RELS: < [ unknown LBL: h908 ARG: x843 ARG0: e909 ]                             |
+|               |           [ def_udef_a_q LBL: h907 ARG0: x843 RSTR: h905 BODY: h906 ]            |
+|               |           [ loc_nonsp LBL: h844 ARG0: e888 ARG1: x843 ARG2: x885 ]               |
+|               |           [ def_implicit_q LBL: h902 ARG0: x885 RSTR: h900 BODY: h901 ]          |
+|               |           [ _west_a_1 LBL: h887 ARG0: i884 ARG1: x885 ARG2: x870 ]               |
+|               |           [ def_udef_a_q LBL: h897 ARG0: x870 RSTR: h895 BODY: h896 ]            |
+|               |           [ compound LBL: h872 ARG0: e880 [ e PROG: - ] ARG1: x870 ARG2: x873 ]  |
+|               |           [ udef_q LBL: h878 ARG0: x873 RSTR: h876 BODY: h877 ]                  |
+|               |           [ _drive_n_1 LBL: h874 ARG0: x873 ]                                    |
+|               |           [ _way_n_of LBL: h872 ARG0: x870 ARG1: i871 ]                          |
+|               |           [ place_n LBL: h887 ARG0: x885 ]                                       |
+|               |           [ _with_p LBL: h844 ARG0: e861 ARG1: x843 ARG2: x859 ]                 |
+|               |           [ def_udef_a_q LBL: h868 ARG0: x859 RSTR: h866 BODY: h867 ]            |
+|               |           [ _lock_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h844 ARG0: e856 ARG1: x843 ]                        |
+|               |           [ compound LBL: h844 ARG0: e852 [ e PROG: - ] ARG1: x843 ARG2: x845 ]  |
+|               |           [ udef_q LBL: h850 ARG0: x845 RSTR: h848 BODY: h849 ]                  |
+|               |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|               |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|               |   HCONS: < h876 qeq h874 h895 qeq h872 h900 qeq h887 h866 qeq h860 h848 qeq h846 |
+|               | h905 qeq h844 h912 qeq h908 > ]                                                  |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------+
+|                                            NODE SEMENTS                                            |
++------------------+---------------------------------------------------------------------------------+
+| Node             | Generated SEMENT                                                                |
++------------------+---------------------------------------------------------------------------------+
+| idFrontDoor1     | [ TOP: h844                                                                     |
+|                  |   INDEX: x843                                                                   |
+|                  |   RELS: < [ compound LBL: h855 ARG0: e852 [ e PROG: - ] ARG1: u853 ARG2: u854 ] |
+|                  |           [ udef_q LBL: h850 ARG0: x847 RSTR: h848 BODY: h849 ]                 |
+|                  |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                   |
+|                  |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                  |
+|                  |   HCONS: < h848 qeq h846 >                                                      |
+|                  |   EQS: < x847 eq x845 h855 eq h851 u854 eq x847 h855 eq h844 u853 eq x843 > ]   |
++------------------+---------------------------------------------------------------------------------+
+| closed           | [ TOP: h858                                                                     |
+|                  |   INDEX: e856                                                                   |
+|                  |   RELS: < [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ] >                     |
+|                  |   SLOTS: < ARG1: u857 > ]                                                       |
++------------------+---------------------------------------------------------------------------------+
+| idFrontDoor1Lock | [ TOP: h860                                                                     |
+|                  |   INDEX: x859                                                                   |
+|                  |   RELS: < [ _lock_n_1 LBL: h860 ARG0: x859 ] > ]                                |
++------------------+---------------------------------------------------------------------------------+
+| idDriveway1      | [ TOP: h872                                                                     |
+|                  |   INDEX: x870                                                                   |
+|                  |   RELS: < [ compound LBL: h883 ARG0: e880 [ e PROG: - ] ARG1: u881 ARG2: u882 ] |
+|                  |           [ udef_q LBL: h878 ARG0: x875 RSTR: h876 BODY: h877 ]                 |
+|                  |           [ _drive_n_1 LBL: h874 ARG0: x873 ]                                   |
+|                  |           [ _way_n_of LBL: h872 ARG0: x870 ARG1: i871 ] >                       |
+|                  |   HCONS: < h876 qeq h874 >                                                      |
+|                  |   EQS: < x875 eq x873 h883 eq h879 u882 eq x875 h883 eq h872 u881 eq x870 >     |
+|                  |   SLOTS: < ARG1: i871 > ]                                                       |
++------------------+---------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                      EDGE SEMENTS                                                                      |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| Edge                              | Parent       | Child            | Generated SEMENT                                                                 |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| idFrontDoor1_prop_idOpenState     | idFrontDoor1 | closed           | [ TOP: h844                                                                      |
+|                                   |              |                  |   INDEX: x843                                                                    |
+|                                   |              |                  |   RELS: < [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|                                   |              |                  |           [ compound LBL: h855 ARG0: e852 [ e PROG: - ] ARG1: u853 ARG2: u854 ]  |
+|                                   |              |                  |           [ udef_q LBL: h850 ARG0: x847 RSTR: h848 BODY: h849 ]                  |
+|                                   |              |                  |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|                                   |              |                  |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|                                   |              |                  |   HCONS: < h848 qeq h846 >                                                       |
+|                                   |              |                  |   EQS: < x847 eq x845 h855 eq h851 u854 eq x847 h855 eq h844 u853 eq x843 h858   |
+|                                   |              |                  | eq h844 u857 eq x843 > ]                                                         |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| idFrontDoor1_prop_idLockMechanism | idFrontDoor1 | idFrontDoor1Lock | [ TOP: h844                                                                      |
+|                                   |              |                  |   INDEX: x843                                                                    |
+|                                   |              |                  |   RELS: < [ _with_p LBL: h864 ARG0: e861 ARG1: u862 ARG2: i863 ]                 |
+|                                   |              |                  |           [ def_udef_a_q LBL: h868 ARG0: x865 RSTR: h866 BODY: h867 ]            |
+|                                   |              |                  |           [ _lock_n_1 LBL: h860 ARG0: x859 ]                                     |
+|                                   |              |                  |           [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|                                   |              |                  |           [ compound LBL: h855 ARG0: e852 [ e PROG: - ] ARG1: u853 ARG2: u854 ]  |
+|                                   |              |                  |           [ udef_q LBL: h850 ARG0: x847 RSTR: h848 BODY: h849 ]                  |
+|                                   |              |                  |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|                                   |              |                  |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|                                   |              |                  |   HCONS: < h866 qeq h860 h848 qeq h846 >                                         |
+|                                   |              |                  |   EQS: < x865 eq x859 h864 eq h869 i863 eq x865 x847 eq x845 h855 eq h851 u854   |
+|                                   |              |                  | eq x847 h855 eq h844 u853 eq x843 h858 eq h844 u857 eq x843 h864 eq h844 u862 eq |
+|                                   |              |                  | x843 > ]                                                                         |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| isWestOf                          | idFrontDoor1 | idDriveway1      | [ TOP: h844                                                                      |
+|                                   |              |                  |   INDEX: x843                                                                    |
+|                                   |              |                  |   RELS: < [ loc_nonsp LBL: h891 ARG0: e888 ARG1: u889 ARG2: x890 ]               |
+|                                   |              |                  |           [ def_implicit_q LBL: h902 ARG0: x899 RSTR: h900 BODY: h901 ]          |
+|                                   |              |                  |           [ _west_a_1 LBL: h887 ARG0: i884 ARG1: x885 ARG2: u886 ]               |
+|                                   |              |                  |           [ def_udef_a_q LBL: h897 ARG0: x894 RSTR: h895 BODY: h896 ]            |
+|                                   |              |                  |           [ compound LBL: h883 ARG0: e880 [ e PROG: - ] ARG1: u881 ARG2: u882 ]  |
+|                                   |              |                  |           [ udef_q LBL: h878 ARG0: x875 RSTR: h876 BODY: h877 ]                  |
+|                                   |              |                  |           [ _drive_n_1 LBL: h874 ARG0: x873 ]                                    |
+|                                   |              |                  |           [ _way_n_of LBL: h872 ARG0: x870 ARG1: i871 ]                          |
+|                                   |              |                  |           [ place_n LBL: h893 ARG0: x892 ]                                       |
+|                                   |              |                  |           [ _with_p LBL: h864 ARG0: e861 ARG1: u862 ARG2: i863 ]                 |
+|                                   |              |                  |           [ def_udef_a_q LBL: h868 ARG0: x865 RSTR: h866 BODY: h867 ]            |
+|                                   |              |                  |           [ _lock_n_1 LBL: h860 ARG0: x859 ]                                     |
+|                                   |              |                  |           [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|                                   |              |                  |           [ compound LBL: h855 ARG0: e852 [ e PROG: - ] ARG1: u853 ARG2: u854 ]  |
+|                                   |              |                  |           [ udef_q LBL: h850 ARG0: x847 RSTR: h848 BODY: h849 ]                  |
+|                                   |              |                  |           [ _front_n_1 LBL: h846 ARG0: x845 ]                                    |
+|                                   |              |                  |           [ _door_n_1 LBL: h844 ARG0: x843 ] >                                   |
+|                                   |              |                  |   HCONS: < h876 qeq h874 h895 qeq h872 h900 qeq h893 h866 qeq h860 h848 qeq h846 |
+|                                   |              |                  | >                                                                                |
+|                                   |              |                  |   EQS: < x875 eq x873 h883 eq h879 u882 eq x875 h883 eq h872 u881 eq x870 x894   |
+|                                   |              |                  | eq x870 h887 eq h898 u886 eq x894 h887 eq h893 x885 eq x892 x899 eq x892 h891 eq |
+|                                   |              |                  | h903 x890 eq x899 x865 eq x859 h864 eq h869 i863 eq x865 x847 eq x845 h855 eq    |
+|                                   |              |                  | h851 u854 eq x847 h855 eq h844 u853 eq x843 h858 eq h844 u857 eq x843 h864 eq    |
+|                                   |              |                  | h844 u862 eq x843 h891 eq h844 u889 eq x843 > ]                                  |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------+
+|                        GENERATED ENGLISH TEXT                       |
++-----+---------------------------------------------------------------+
+| #   | Generated Text                                                |
++-----+---------------------------------------------------------------+
+| 1   | A closed front door west of a dr. way with a lock             |
+| 2   | A closed front door west of a dr. way with a lock.            |
+| 3   | A closed front door west of a dr. way with a lock?            |
+| 4   | A closed front door west of a dr. way with locks              |
+| 5   | A closed front door west of a dr. way with locks.             |
+| 6   | A closed front door west of a dr. way with locks?             |
+| 7   | A closed front door west of a dr. way with the lock           |
+| 8   | A closed front door west of a dr. way with the lock?          |
+| 9   | A closed front door west of a dr. way with the locks          |
+| 10  | A closed front door west of a dr. way with the locks.         |
+| 11  | A closed front door west of a dr. way with the locks?         |
+| 12  | A closed front door west of a drive way with a lock           |
+| 13  | A closed front door west of a drive way with a lock.          |
+| 14  | A closed front door west of a drive way with a lock?          |
+| 15  | A closed front door west of a drive way with locks            |
+| 16  | A closed front door west of a drive way with locks.           |
+| 17  | A closed front door west of a drive way with locks?           |
+| 18  | A closed front door west of a drive way with the lock         |
+| 19  | A closed front door west of a drive way with the lock?        |
+| 20  | A closed front door west of a drive way with the locks        |
+| 21  | A closed front door west of a drive way with the locks.       |
+| 22  | A closed front door west of a drive way with the locks?       |
+| 23  | A closed front door west of the dr. way with a lock           |
+| 24  | A closed front door west of the dr. way with a lock.          |
+| 25  | A closed front door west of the dr. way with a lock?          |
+| 26  | A closed front door west of the dr. way with lock?            |
+| 27  | A closed front door west of the dr. way with locks            |
+| 28  | A closed front door west of the dr. way with locks.           |
+| 29  | A closed front door west of the dr. way with locks?           |
+| 30  | A closed front door west of the dr. way with the lock         |
+| 31  | A closed front door west of the dr. way with the lock.        |
+| 32  | A closed front door west of the dr. way with the lock?        |
+| 33  | A closed front door west of the dr. way with the locks        |
+| 34  | A closed front door west of the dr. way with the locks.       |
+| 35  | A closed front door west of the dr. way with the locks?       |
+| 36  | A closed front door west of the dr. ways with a lock          |
+| 37  | A closed front door west of the dr. ways with a lock?         |
+| 38  | A closed front door west of the dr. ways with locks           |
+| 39  | A closed front door west of the dr. ways with locks?          |
+| 40  | A closed front door west of the dr. ways with the lock        |
+| 41  | A closed front door west of the dr. ways with the lock?       |
+| 42  | A closed front door west of the dr. ways with the locks       |
+| 43  | A closed front door west of the dr. ways with the locks.      |
+| 44  | A closed front door west of the dr. ways with the locks?      |
+| 45  | A closed front door west of the drive way with a lock         |
+| 46  | A closed front door west of the drive way with a lock.        |
+| 47  | A closed front door west of the drive way with a lock?        |
+| 48  | A closed front door west of the drive way with lock?          |
+| 49  | A closed front door west of the drive way with locks          |
+| 50  | A closed front door west of the drive way with locks.         |
+| 51  | A closed front door west of the drive way with locks?         |
+| 52  | A closed front door west of the drive way with the lock       |
+| 53  | A closed front door west of the drive way with the lock.      |
+| 54  | A closed front door west of the drive way with the lock?      |
+| 55  | A closed front door west of the drive way with the locks      |
+| 56  | A closed front door west of the drive way with the locks.     |
+| 57  | A closed front door west of the drive way with the locks?     |
+| 58  | A closed front door west of the drive ways with a lock        |
+| 59  | A closed front door west of the drive ways with a lock?       |
+| 60  | A closed front door west of the drive ways with locks         |
+| 61  | A closed front door west of the drive ways with locks?        |
+| 62  | A closed front door west of the drive ways with the lock      |
+| 63  | A closed front door west of the drive ways with the lock?     |
+| 64  | A closed front door west of the drive ways with the locks     |
+| 65  | A closed front door west of the drive ways with the locks.    |
+| 66  | A closed front door west of the drive ways with the locks?    |
+| 67  | A closed front door with a lock west of a dr. way             |
+| 68  | A closed front door with a lock west of a dr. way.            |
+| 69  | A closed front door with a lock west of a dr. way?            |
+| 70  | A closed front door with a lock west of a drive way           |
+| 71  | A closed front door with a lock west of a drive way.          |
+| 72  | A closed front door with a lock west of a drive way?          |
+| 73  | A closed front door with a lock west of the dr. way           |
+| 74  | A closed front door with a lock west of the dr. way.          |
+| 75  | A closed front door with a lock west of the dr. way?          |
+| 76  | A closed front door with a lock west of the dr. ways          |
+| 77  | A closed front door with a lock west of the dr. ways.         |
+| 78  | A closed front door with a lock west of the dr. ways?         |
+| 79  | A closed front door with a lock west of the drive way         |
+| 80  | A closed front door with a lock west of the drive way.        |
+| 81  | A closed front door with a lock west of the drive way?        |
+| 82  | A closed front door with a lock west of the drive ways        |
+| 83  | A closed front door with a lock west of the drive ways.       |
+| 84  | A closed front door with a lock west of the drive ways?       |
+| 85  | A closed front door with locks west of a dr. way              |
+| 86  | A closed front door with locks west of a dr. way.             |
+| 87  | A closed front door with locks west of a dr. way?             |
+| 88  | A closed front door with locks west of a drive way            |
+| 89  | A closed front door with locks west of a drive way.           |
+| 90  | A closed front door with locks west of a drive way?           |
+| 91  | A closed front door with locks west of the dr. way            |
+| 92  | A closed front door with locks west of the dr. way.           |
+| 93  | A closed front door with locks west of the dr. way?           |
+| 94  | A closed front door with locks west of the dr. ways           |
+| 95  | A closed front door with locks west of the dr. ways.          |
+| 96  | A closed front door with locks west of the dr. ways?          |
+| 97  | A closed front door with locks west of the drive way          |
+| 98  | A closed front door with locks west of the drive way.         |
+| 99  | A closed front door with locks west of the drive way?         |
+| 100 | A closed front door with locks west of the drive ways         |
+| 101 | A closed front door with locks west of the drive ways.        |
+| 102 | A closed front door with locks west of the drive ways?        |
+| 103 | A closed front door with the lock west of a dr. way           |
+| 104 | A closed front door with the lock west of a dr. way.          |
+| 105 | A closed front door with the lock west of a dr. way?          |
+| 106 | A closed front door with the lock west of a drive way         |
+| 107 | A closed front door with the lock west of a drive way.        |
+| 108 | A closed front door with the lock west of a drive way?        |
+| 109 | A closed front door with the lock west of dr. ways.           |
+| 110 | A closed front door with the lock west of dr. ways?           |
+| 111 | A closed front door with the lock west of drive ways.         |
+| 112 | A closed front door with the lock west of drive ways?         |
+| 113 | A closed front door with the lock west of the dr. way         |
+| 114 | A closed front door with the lock west of the dr. way.        |
+| 115 | A closed front door with the lock west of the dr. way?        |
+| 116 | A closed front door with the lock west of the dr. ways        |
+| 117 | A closed front door with the lock west of the dr. ways.       |
+| 118 | A closed front door with the lock west of the dr. ways?       |
+| 119 | A closed front door with the lock west of the drive way       |
+| 120 | A closed front door with the lock west of the drive way.      |
+| 121 | A closed front door with the lock west of the drive way?      |
+| 122 | A closed front door with the lock west of the drive ways      |
+| 123 | A closed front door with the lock west of the drive ways.     |
+| 124 | A closed front door with the lock west of the drive ways?     |
+| 125 | A closed front door with the locks west of a dr. way          |
+| 126 | A closed front door with the locks west of a dr. way.         |
+| 127 | A closed front door with the locks west of a dr. way?         |
+| 128 | A closed front door with the locks west of a drive way        |
+| 129 | A closed front door with the locks west of a drive way.       |
+| 130 | A closed front door with the locks west of a drive way?       |
+| 131 | A closed front door with the locks west of the dr. way        |
+| 132 | A closed front door with the locks west of the dr. way.       |
+| 133 | A closed front door with the locks west of the dr. way?       |
+| 134 | A closed front door with the locks west of the dr. ways       |
+| 135 | A closed front door with the locks west of the dr. ways.      |
+| 136 | A closed front door with the locks west of the dr. ways?      |
+| 137 | A closed front door with the locks west of the drive way      |
+| 138 | A closed front door with the locks west of the drive way.     |
+| 139 | A closed front door with the locks west of the drive way?     |
+| 140 | A closed front door with the locks west of the drive ways     |
+| 141 | A closed front door with the locks west of the drive ways.    |
+| 142 | A closed front door with the locks west of the drive ways?    |
+| 143 | A fronts closed door west of the dr. way with the lock        |
+| 144 | A fronts closed door west of the dr. way with the locks       |
+| 145 | A fronts closed door west of the drive way with the lock      |
+| 146 | A fronts closed door west of the drive way with the locks     |
+| 147 | Closed front door with a lock west of the dr. way             |
+| 148 | Closed front door with a lock west of the dr. way.            |
+| 149 | Closed front door with a lock west of the dr. way?            |
+| 150 | Closed front door with a lock west of the drive way?          |
+| 151 | Closed front door with the lock west of a dr. way             |
+| 152 | Closed front door with the lock west of a dr. way.            |
+| 153 | Closed front door with the lock west of a dr. way?            |
+| 154 | Closed front door with the lock west of a drive way           |
+| 155 | Closed front door with the lock west of a drive way.          |
+| 156 | Closed front door with the lock west of a drive way?          |
+| 157 | Closed front door with the lock west of the dr. way           |
+| 158 | Closed front door with the lock west of the dr. way.          |
+| 159 | Closed front door with the lock west of the dr. way?          |
+| 160 | Closed front door with the lock west of the dr. ways.         |
+| 161 | Closed front door with the lock west of the dr. ways?         |
+| 162 | Closed front door with the lock west of the drive way         |
+| 163 | Closed front door with the lock west of the drive way.        |
+| 164 | Closed front door with the lock west of the drive way?        |
+| 165 | Closed front door with the lock west of the drive ways.       |
+| 166 | Closed front door with the lock west of the drive ways?       |
+| 167 | Closed front doors west of a dr. way with the locks           |
+| 168 | Closed front doors west of a drive way with the locks         |
+| 169 | Closed front doors west of the dr. way with a lock?           |
+| 170 | Closed front doors west of the dr. way with the lock          |
+| 171 | Closed front doors west of the dr. way with the lock?         |
+| 172 | Closed front doors west of the dr. way with the locks         |
+| 173 | Closed front doors west of the dr. way with the locks.        |
+| 174 | Closed front doors west of the dr. way with the locks?        |
+| 175 | Closed front doors west of the drive way with a lock?         |
+| 176 | Closed front doors west of the drive way with the lock        |
+| 177 | Closed front doors west of the drive way with the lock?       |
+| 178 | Closed front doors west of the drive way with the locks       |
+| 179 | Closed front doors west of the drive way with the locks.      |
+| 180 | Closed front doors west of the drive way with the locks?      |
+| 181 | Closed front doors with a lock west of a dr. way              |
+| 182 | Closed front doors with a lock west of a dr. way.             |
+| 183 | Closed front doors with a lock west of a dr. way?             |
+| 184 | Closed front doors with a lock west of a drive way            |
+| 185 | Closed front doors with a lock west of a drive way.           |
+| 186 | Closed front doors with a lock west of a drive way?           |
+| 187 | Closed front doors with a lock west of drive ways.            |
+| 188 | Closed front doors with a lock west of drive ways?            |
+| 189 | Closed front doors with a lock west of the dr. way            |
+| 190 | Closed front doors with a lock west of the dr. way.           |
+| 191 | Closed front doors with a lock west of the dr. way?           |
+| 192 | Closed front doors with a lock west of the dr. ways           |
+| 193 | Closed front doors with a lock west of the dr. ways.          |
+| 194 | Closed front doors with a lock west of the dr. ways?          |
+| 195 | Closed front doors with a lock west of the drive way          |
+| 196 | Closed front doors with a lock west of the drive way.         |
+| 197 | Closed front doors with a lock west of the drive way?         |
+| 198 | Closed front doors with a lock west of the drive ways         |
+| 199 | Closed front doors with a lock west of the drive ways.        |
+| 200 | Closed front doors with a lock west of the drive ways?        |
+| 201 | Closed front doors with locks west of a dr. way               |
+| 202 | Closed front doors with locks west of a dr. way.              |
+| 203 | Closed front doors with locks west of a dr. way?              |
+| 204 | Closed front doors with locks west of a drive way             |
+| 205 | Closed front doors with locks west of a drive way.            |
+| 206 | Closed front doors with locks west of a drive way?            |
+| 207 | Closed front doors with locks west of the dr. way             |
+| 208 | Closed front doors with locks west of the dr. way.            |
+| 209 | Closed front doors with locks west of the dr. way?            |
+| 210 | Closed front doors with locks west of the dr. ways            |
+| 211 | Closed front doors with locks west of the dr. ways.           |
+| 212 | Closed front doors with locks west of the dr. ways?           |
+| 213 | Closed front doors with locks west of the drive way           |
+| 214 | Closed front doors with locks west of the drive way.          |
+| 215 | Closed front doors with locks west of the drive way?          |
+| 216 | Closed front doors with locks west of the drive ways          |
+| 217 | Closed front doors with locks west of the drive ways.         |
+| 218 | Closed front doors with locks west of the drive ways?         |
+| 219 | Closed front doors with the lock west of a dr. way            |
+| 220 | Closed front doors with the lock west of a dr. way.           |
+| 221 | Closed front doors with the lock west of a dr. way?           |
+| 222 | Closed front doors with the lock west of a drive way          |
+| 223 | Closed front doors with the lock west of a drive way.         |
+| 224 | Closed front doors with the lock west of a drive way?         |
+| 225 | Closed front doors with the lock west of dr. ways.            |
+| 226 | Closed front doors with the lock west of dr. ways?            |
+| 227 | Closed front doors with the lock west of drive ways.          |
+| 228 | Closed front doors with the lock west of drive ways?          |
+| 229 | Closed front doors with the lock west of the dr. way          |
+| 230 | Closed front doors with the lock west of the dr. way.         |
+| 231 | Closed front doors with the lock west of the dr. way?         |
+| 232 | Closed front doors with the lock west of the dr. ways         |
+| 233 | Closed front doors with the lock west of the dr. ways.        |
+| 234 | Closed front doors with the lock west of the dr. ways?        |
+| 235 | Closed front doors with the lock west of the drive way        |
+| 236 | Closed front doors with the lock west of the drive way.       |
+| 237 | Closed front doors with the lock west of the drive way?       |
+| 238 | Closed front doors with the lock west of the drive ways       |
+| 239 | Closed front doors with the lock west of the drive ways.      |
+| 240 | Closed front doors with the lock west of the drive ways?      |
+| 241 | Closed front doors with the locks west of a dr. way           |
+| 242 | Closed front doors with the locks west of a dr. way.          |
+| 243 | Closed front doors with the locks west of a dr. way?          |
+| 244 | Closed front doors with the locks west of a drive way         |
+| 245 | Closed front doors with the locks west of a drive way.        |
+| 246 | Closed front doors with the locks west of a drive way?        |
+| 247 | Closed front doors with the locks west of the dr. way         |
+| 248 | Closed front doors with the locks west of the dr. way.        |
+| 249 | Closed front doors with the locks west of the dr. way?        |
+| 250 | Closed front doors with the locks west of the dr. ways        |
+| 251 | Closed front doors with the locks west of the dr. ways.       |
+| 252 | Closed front doors with the locks west of the dr. ways?       |
+| 253 | Closed front doors with the locks west of the drive way       |
+| 254 | Closed front doors with the locks west of the drive way.      |
+| 255 | Closed front doors with the locks west of the drive way?      |
+| 256 | Closed front doors with the locks west of the drive ways      |
+| 257 | Closed front doors with the locks west of the drive ways.     |
+| 258 | Closed front doors with the locks west of the drive ways?     |
+| 259 | Fronts closed doors with a lock west of the dr. way?          |
+| 260 | Fronts closed doors with a lock west of the drive way?        |
+| 261 | Fronts closed doors with the lock west of a dr. way?          |
+| 262 | Fronts closed doors with the lock west of a drive way?        |
+| 263 | Fronts closed doors with the lock west of the dr. way         |
+| 264 | Fronts closed doors with the lock west of the dr. way.        |
+| 265 | Fronts closed doors with the lock west of the dr. way?        |
+| 266 | Fronts closed doors with the lock west of the dr. ways.       |
+| 267 | Fronts closed doors with the lock west of the dr. ways?       |
+| 268 | Fronts closed doors with the lock west of the drive way       |
+| 269 | Fronts closed doors with the lock west of the drive way.      |
+| 270 | Fronts closed doors with the lock west of the drive way?      |
+| 271 | Fronts closed doors with the lock west of the drive ways.     |
+| 272 | Fronts closed doors with the lock west of the drive ways?     |
+| 273 | The closed front door west of a dr. way with a lock           |
+| 274 | The closed front door west of a dr. way with a lock.          |
+| 275 | The closed front door west of a dr. way with a lock?          |
+| 276 | The closed front door west of a dr. way with locks            |
+| 277 | The closed front door west of a dr. way with locks.           |
+| 278 | The closed front door west of a dr. way with locks?           |
+| 279 | The closed front door west of a dr. way with the lock         |
+| 280 | The closed front door west of a dr. way with the lock?        |
+| 281 | The closed front door west of a dr. way with the locks        |
+| 282 | The closed front door west of a dr. way with the locks.       |
+| 283 | The closed front door west of a dr. way with the locks?       |
+| 284 | The closed front door west of a drive way with a lock         |
+| 285 | The closed front door west of a drive way with a lock.        |
+| 286 | The closed front door west of a drive way with a lock?        |
+| 287 | The closed front door west of a drive way with locks          |
+| 288 | The closed front door west of a drive way with locks.         |
+| 289 | The closed front door west of a drive way with locks?         |
+| 290 | The closed front door west of a drive way with the lock       |
+| 291 | The closed front door west of a drive way with the lock?      |
+| 292 | The closed front door west of a drive way with the locks      |
+| 293 | The closed front door west of a drive way with the locks.     |
+| 294 | The closed front door west of a drive way with the locks?     |
+| 295 | The closed front door west of the dr. way with a lock         |
+| 296 | The closed front door west of the dr. way with a lock.        |
+| 297 | The closed front door west of the dr. way with a lock?        |
+| 298 | The closed front door west of the dr. way with lock?          |
+| 299 | The closed front door west of the dr. way with locks          |
+| 300 | The closed front door west of the dr. way with locks.         |
+| 301 | The closed front door west of the dr. way with locks?         |
+| 302 | The closed front door west of the dr. way with the lock       |
+| 303 | The closed front door west of the dr. way with the lock.      |
+| 304 | The closed front door west of the dr. way with the lock?      |
+| 305 | The closed front door west of the dr. way with the locks      |
+| 306 | The closed front door west of the dr. way with the locks.     |
+| 307 | The closed front door west of the dr. way with the locks?     |
+| 308 | The closed front door west of the dr. ways with a lock        |
+| 309 | The closed front door west of the dr. ways with a lock?       |
+| 310 | The closed front door west of the dr. ways with locks         |
+| 311 | The closed front door west of the dr. ways with locks?        |
+| 312 | The closed front door west of the dr. ways with the lock      |
+| 313 | The closed front door west of the dr. ways with the lock?     |
+| 314 | The closed front door west of the dr. ways with the locks     |
+| 315 | The closed front door west of the dr. ways with the locks.    |
+| 316 | The closed front door west of the dr. ways with the locks?    |
+| 317 | The closed front door west of the drive way with a lock       |
+| 318 | The closed front door west of the drive way with a lock.      |
+| 319 | The closed front door west of the drive way with a lock?      |
+| 320 | The closed front door west of the drive way with lock?        |
+| 321 | The closed front door west of the drive way with locks        |
+| 322 | The closed front door west of the drive way with locks.       |
+| 323 | The closed front door west of the drive way with locks?       |
+| 324 | The closed front door west of the drive way with the lock     |
+| 325 | The closed front door west of the drive way with the lock.    |
+| 326 | The closed front door west of the drive way with the lock?    |
+| 327 | The closed front door west of the drive way with the locks    |
+| 328 | The closed front door west of the drive way with the locks.   |
+| 329 | The closed front door west of the drive way with the locks?   |
+| 330 | The closed front door west of the drive ways with a lock      |
+| 331 | The closed front door west of the drive ways with a lock?     |
+| 332 | The closed front door west of the drive ways with locks       |
+| 333 | The closed front door west of the drive ways with locks?      |
+| 334 | The closed front door west of the drive ways with the lock    |
+| 335 | The closed front door west of the drive ways with the lock?   |
+| 336 | The closed front door west of the drive ways with the locks   |
+| 337 | The closed front door west of the drive ways with the locks.  |
+| 338 | The closed front door west of the drive ways with the locks?  |
+| 339 | The closed front door with a lock west of a dr. way           |
+| 340 | The closed front door with a lock west of a dr. way.          |
+| 341 | The closed front door with a lock west of a dr. way?          |
+| 342 | The closed front door with a lock west of a drive way         |
+| 343 | The closed front door with a lock west of a drive way.        |
+| 344 | The closed front door with a lock west of a drive way?        |
+| 345 | The closed front door with a lock west of the dr. way         |
+| 346 | The closed front door with a lock west of the dr. way.        |
+| 347 | The closed front door with a lock west of the dr. way?        |
+| 348 | The closed front door with a lock west of the dr. ways        |
+| 349 | The closed front door with a lock west of the dr. ways.       |
+| 350 | The closed front door with a lock west of the dr. ways?       |
+| 351 | The closed front door with a lock west of the drive way       |
+| 352 | The closed front door with a lock west of the drive way.      |
+| 353 | The closed front door with a lock west of the drive way?      |
+| 354 | The closed front door with a lock west of the drive ways      |
+| 355 | The closed front door with a lock west of the drive ways.     |
+| 356 | The closed front door with a lock west of the drive ways?     |
+| 357 | The closed front door with locks west of a dr. way            |
+| 358 | The closed front door with locks west of a dr. way.           |
+| 359 | The closed front door with locks west of a dr. way?           |
+| 360 | The closed front door with locks west of a drive way          |
+| 361 | The closed front door with locks west of a drive way.         |
+| 362 | The closed front door with locks west of a drive way?         |
+| 363 | The closed front door with locks west of the dr. way          |
+| 364 | The closed front door with locks west of the dr. way.         |
+| 365 | The closed front door with locks west of the dr. way?         |
+| 366 | The closed front door with locks west of the dr. ways         |
+| 367 | The closed front door with locks west of the dr. ways.        |
+| 368 | The closed front door with locks west of the dr. ways?        |
+| 369 | The closed front door with locks west of the drive way        |
+| 370 | The closed front door with locks west of the drive way.       |
+| 371 | The closed front door with locks west of the drive way?       |
+| 372 | The closed front door with locks west of the drive ways       |
+| 373 | The closed front door with locks west of the drive ways.      |
+| 374 | The closed front door with locks west of the drive ways?      |
+| 375 | The closed front door with the lock west of a dr. way         |
+| 376 | The closed front door with the lock west of a dr. way.        |
+| 377 | The closed front door with the lock west of a dr. way?        |
+| 378 | The closed front door with the lock west of a drive way       |
+| 379 | The closed front door with the lock west of a drive way.      |
+| 380 | The closed front door with the lock west of a drive way?      |
+| 381 | The closed front door with the lock west of dr. ways.         |
+| 382 | The closed front door with the lock west of dr. ways?         |
+| 383 | The closed front door with the lock west of drive ways.       |
+| 384 | The closed front door with the lock west of drive ways?       |
+| 385 | The closed front door with the lock west of the dr. way       |
+| 386 | The closed front door with the lock west of the dr. way.      |
+| 387 | The closed front door with the lock west of the dr. way?      |
+| 388 | The closed front door with the lock west of the dr. ways      |
+| 389 | The closed front door with the lock west of the dr. ways.     |
+| 390 | The closed front door with the lock west of the dr. ways?     |
+| 391 | The closed front door with the lock west of the drive way     |
+| 392 | The closed front door with the lock west of the drive way.    |
+| 393 | The closed front door with the lock west of the drive way?    |
+| 394 | The closed front door with the lock west of the drive ways    |
+| 395 | The closed front door with the lock west of the drive ways.   |
+| 396 | The closed front door with the lock west of the drive ways?   |
+| 397 | The closed front door with the locks west of a dr. way        |
+| 398 | The closed front door with the locks west of a dr. way.       |
+| 399 | The closed front door with the locks west of a dr. way?       |
+| 400 | The closed front door with the locks west of a drive way      |
+| 401 | The closed front door with the locks west of a drive way.     |
+| 402 | The closed front door with the locks west of a drive way?     |
+| 403 | The closed front door with the locks west of the dr. way      |
+| 404 | The closed front door with the locks west of the dr. way.     |
+| 405 | The closed front door with the locks west of the dr. way?     |
+| 406 | The closed front door with the locks west of the dr. ways     |
+| 407 | The closed front door with the locks west of the dr. ways.    |
+| 408 | The closed front door with the locks west of the dr. ways?    |
+| 409 | The closed front door with the locks west of the drive way    |
+| 410 | The closed front door with the locks west of the drive way.   |
+| 411 | The closed front door with the locks west of the drive way?   |
+| 412 | The closed front door with the locks west of the drive ways   |
+| 413 | The closed front door with the locks west of the drive ways.  |
+| 414 | The closed front door with the locks west of the drive ways?  |
+| 415 | The closed front doors west of a dr. way with a lock          |
+| 416 | The closed front doors west of a dr. way with a lock?         |
+| 417 | The closed front doors west of a dr. way with locks           |
+| 418 | The closed front doors west of a dr. way with locks?          |
+| 419 | The closed front doors west of a dr. way with the lock        |
+| 420 | The closed front doors west of a dr. way with the lock?       |
+| 421 | The closed front doors west of a dr. way with the locks       |
+| 422 | The closed front doors west of a dr. way with the locks.      |
+| 423 | The closed front doors west of a dr. way with the locks?      |
+| 424 | The closed front doors west of a drive way with a lock        |
+| 425 | The closed front doors west of a drive way with a lock?       |
+| 426 | The closed front doors west of a drive way with locks         |
+| 427 | The closed front doors west of a drive way with locks?        |
+| 428 | The closed front doors west of a drive way with the lock      |
+| 429 | The closed front doors west of a drive way with the lock?     |
+| 430 | The closed front doors west of a drive way with the locks     |
+| 431 | The closed front doors west of a drive way with the locks.    |
+| 432 | The closed front doors west of a drive way with the locks?    |
+| 433 | The closed front doors west of the dr. way with a lock        |
+| 434 | The closed front doors west of the dr. way with a lock.       |
+| 435 | The closed front doors west of the dr. way with a lock?       |
+| 436 | The closed front doors west of the dr. way with lock?         |
+| 437 | The closed front doors west of the dr. way with locks         |
+| 438 | The closed front doors west of the dr. way with locks.        |
+| 439 | The closed front doors west of the dr. way with locks?        |
+| 440 | The closed front doors west of the dr. way with the lock      |
+| 441 | The closed front doors west of the dr. way with the lock.     |
+| 442 | The closed front doors west of the dr. way with the lock?     |
+| 443 | The closed front doors west of the dr. way with the locks     |
+| 444 | The closed front doors west of the dr. way with the locks.    |
+| 445 | The closed front doors west of the dr. way with the locks?    |
+| 446 | The closed front doors west of the dr. ways with a lock       |
+| 447 | The closed front doors west of the dr. ways with a lock?      |
+| 448 | The closed front doors west of the dr. ways with locks        |
+| 449 | The closed front doors west of the dr. ways with locks?       |
+| 450 | The closed front doors west of the dr. ways with the lock     |
+| 451 | The closed front doors west of the dr. ways with the lock?    |
+| 452 | The closed front doors west of the dr. ways with the locks    |
+| 453 | The closed front doors west of the dr. ways with the locks?   |
+| 454 | The closed front doors west of the drive way with a lock      |
+| 455 | The closed front doors west of the drive way with a lock.     |
+| 456 | The closed front doors west of the drive way with a lock?     |
+| 457 | The closed front doors west of the drive way with locks       |
+| 458 | The closed front doors west of the drive way with locks.      |
+| 459 | The closed front doors west of the drive way with locks?      |
+| 460 | The closed front doors west of the drive way with the lock    |
+| 461 | The closed front doors west of the drive way with the lock.   |
+| 462 | The closed front doors west of the drive way with the lock?   |
+| 463 | The closed front doors west of the drive way with the locks   |
+| 464 | The closed front doors west of the drive way with the locks.  |
+| 465 | The closed front doors west of the drive way with the locks?  |
+| 466 | The closed front doors west of the drive ways with a lock     |
+| 467 | The closed front doors west of the drive ways with locks?     |
+| 468 | The closed front doors west of the drive ways with the lock   |
+| 469 | The closed front doors west of the drive ways with the locks  |
+| 470 | The closed front doors west of the drive ways with the locks? |
+| 471 | The closed front doors with a lock west of a dr. way          |
+| 472 | The closed front doors with a lock west of a dr. way.         |
+| 473 | The closed front doors with a lock west of a dr. way?         |
+| 474 | The closed front doors with a lock west of a drive way        |
+| 475 | The closed front doors with a lock west of a drive way.       |
+| 476 | The closed front doors with a lock west of a drive way?       |
+| 477 | The closed front doors with a lock west of the dr. way        |
+| 478 | The closed front doors with a lock west of the dr. way.       |
+| 479 | The closed front doors with a lock west of the dr. way?       |
+| 480 | The closed front doors with a lock west of the dr. ways       |
+| 481 | The closed front doors with a lock west of the dr. ways.      |
+| 482 | The closed front doors with a lock west of the dr. ways?      |
+| 483 | The closed front doors with a lock west of the drive way      |
+| 484 | The closed front doors with a lock west of the drive way.     |
+| 485 | The closed front doors with a lock west of the drive way?     |
+| 486 | The closed front doors with a lock west of the drive ways     |
+| 487 | The closed front doors with a lock west of the drive ways.    |
+| 488 | The closed front doors with a lock west of the drive ways?    |
+| 489 | The closed front doors with locks west of a dr. way           |
+| 490 | The closed front doors with locks west of a dr. way.          |
+| 491 | The closed front doors with locks west of a dr. way?          |
+| 492 | The closed front doors with locks west of a drive way         |
+| 493 | The closed front doors with locks west of a drive way.        |
+| 494 | The closed front doors with locks west of a drive way?        |
+| 495 | The closed front doors with locks west of the dr. way         |
+| 496 | The closed front doors with locks west of the dr. way.        |
+| 497 | The closed front doors with locks west of the dr. way?        |
+| 498 | The closed front doors with locks west of the dr. ways.       |
+| 499 | The closed front doors with locks west of the dr. ways?       |
+| 500 | The closed front doors with locks west of the drive way       |
+| 501 | The closed front doors with locks west of the drive way.      |
+| 502 | The closed front doors with locks west of the drive way?      |
+| 503 | The closed front doors with locks west of the drive ways.     |
+| 504 | The closed front doors with locks west of the drive ways?     |
+| 505 | The closed front doors with the lock west of a dr. way        |
+| 506 | The closed front doors with the lock west of a dr. way.       |
+| 507 | The closed front doors with the lock west of a dr. way?       |
+| 508 | The closed front doors with the lock west of a drive way      |
+| 509 | The closed front doors with the lock west of a drive way.     |
+| 510 | The closed front doors with the lock west of a drive way?     |
+| 511 | The closed front doors with the lock west of the dr. way      |
+| 512 | The closed front doors with the lock west of the dr. way.     |
+| 513 | The closed front doors with the lock west of the dr. way?     |
+| 514 | The closed front doors with the lock west of the dr. ways     |
+| 515 | The closed front doors with the lock west of the dr. ways.    |
+| 516 | The closed front doors with the lock west of the dr. ways?    |
+| 517 | The closed front doors with the lock west of the drive way    |
+| 518 | The closed front doors with the lock west of the drive way.   |
+| 519 | The closed front doors with the lock west of the drive way?   |
+| 520 | The closed front doors with the lock west of the drive ways   |
+| 521 | The closed front doors with the lock west of the drive ways.  |
+| 522 | The closed front doors with the lock west of the drive ways?  |
+| 523 | The closed front doors with the locks west of a dr. way       |
+| 524 | The closed front doors with the locks west of a dr. way.      |
+| 525 | The closed front doors with the locks west of a dr. way?      |
+| 526 | The closed front doors with the locks west of a drive way     |
+| 527 | The closed front doors with the locks west of a drive way.    |
+| 528 | The closed front doors with the locks west of a drive way?    |
+| 529 | The closed front doors with the locks west of the dr. way     |
+| 530 | The closed front doors with the locks west of the dr. way.    |
+| 531 | The closed front doors with the locks west of the dr. way?    |
+| 532 | The closed front doors with the locks west of the dr. ways.   |
+| 533 | The closed front doors with the locks west of the dr. ways?   |
+| 534 | The closed front doors with the locks west of the drive way   |
+| 535 | The closed front doors with the locks west of the drive way.  |
+| 536 | The closed front doors with the locks west of the drive way?  |
+| 537 | The closed front doors with the locks west of the drive ways. |
+| 538 | The closed front doors with the locks west of the drive ways? |
+| 539 | The fronts closed door west of the dr. way with the lock      |
+| 540 | The fronts closed door west of the dr. way with the locks     |
+| 541 | The fronts closed door west of the drive way with the lock    |
+| 542 | The fronts closed door west of the drive way with the locks   |
++-----+---------------------------------------------------------------+
+

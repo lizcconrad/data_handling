@@ -1,0 +1,1108 @@
+GRAPH NAME: idLock1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 920   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++---------------------------------------------------------------+
+|                          GOLD OUTPUTS                         |
++--------------------------------------------------+------------+
+| Gold Output                                      | Generated? |
++--------------------------------------------------+------------+
+| the locked lock west of the immovable green bush | True       |
++--------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE METRICS                                 |
++---------+--------------+---------------+------------------+-------------------+
+| Node    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------+--------------+---------------+------------------+-------------------+
+| idLock1 | True         | True          | Covered          | Included          |
+| locked  | True         | True          | Covered          | Included          |
+| idBush1 | True         | True          | Covered          | Included          |
+| green   | True         | True          | Covered          | Included          |
+| yes     | True         | True          | Covered          | Included          |
++---------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent  | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | True         | True          | Covered          | Included          |
+| isWestOf                   | idLock1 | idBush1 | True         | True          | Covered          | Included          |
+| idBush1_prop_idColor       | idBush1 | green   | True         | True          | Covered          | Included          |
+| idBush1_prop_idImmovable   | idBush1 | yes     | True         | True          | Covered          | Included          |
++----------------------------+---------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h550                                                                      |
+|               |   INDEX: x549                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h577 ARG0: i574 ARG1: u575 ARG2: u576 ]               |
+|               |           [ def_implicit_q LBL: h588 ARG0: x585 RSTR: h586 BODY: h587 ]          |
+|               |           [ _west_a_1 LBL: h573 ARG0: i570 ARG1: x571 ARG2: u572 ]               |
+|               |           [ def_udef_a_q LBL: h583 ARG0: x580 RSTR: h581 BODY: h582 ]            |
+|               |           [ _immovable_a_1 LBL: h569 ARG0: e567 ARG1: u568 ]                     |
+|               |           [ _green_a_2 LBL: h559 ARG0: i557 ARG1: i558 ]                         |
+|               |           [ _bush_n_1 LBL: h556 ARG0: x555 ]                                     |
+|               |           [ place_n LBL: h579 ARG0: x578 ]                                       |
+|               |           [ _lock_v_cause LBL: h554 ARG0: e551 ARG1: i552 ARG2: i553 ]           |
+|               |           [ _lock_n_1 LBL: h550 ARG0: x549 ] >                                   |
+|               |   HCONS: < h581 qeq h556 h586 qeq h579 >                                         |
+|               |   EQS: < h559 eq h556 i558 eq x555 h569 eq h556 u568 eq x555 x580 eq x555 h573   |
+|               | eq h584 u572 eq x580 h573 eq h579 x571 eq x578 x585 eq x578 h577 eq h589 u576 eq |
+|               | x585 h554 eq h550 i553 eq x549 h577 eq h550 u575 eq x549 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h550                                                                      |
+|               |   INDEX: x549                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h550 ARG0: i574 ARG1: x549 ARG2: x571 ]               |
+|               |           [ def_implicit_q LBL: h588 ARG0: x571 RSTR: h586 BODY: h587 ]          |
+|               |           [ _west_a_1 LBL: h573 ARG0: i570 ARG1: x571 ARG2: x555 ]               |
+|               |           [ def_udef_a_q LBL: h583 ARG0: x555 RSTR: h581 BODY: h582 ]            |
+|               |           [ _immovable_a_1 LBL: h556 ARG0: e567 ARG1: x555 ]                     |
+|               |           [ _green_a_2 LBL: h556 ARG0: i557 ARG1: x555 ]                         |
+|               |           [ _bush_n_1 LBL: h556 ARG0: x555 ]                                     |
+|               |           [ place_n LBL: h573 ARG0: x571 ]                                       |
+|               |           [ _lock_v_cause LBL: h550 ARG0: e551 ARG1: i552 ARG2: x549 ]           |
+|               |           [ _lock_n_1 LBL: h550 ARG0: x549 ] >                                   |
+|               |   HCONS: < h581 qeq h556 h586 qeq h573 > ]                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h598                                                                      |
+|               |   INDEX: e595                                                                    |
+|               |   RELS: < [ unknown LBL: h594 ARG: x549 ARG0: e595 ]                             |
+|               |           [ def_udef_a_q LBL: h593 ARG0: x549 RSTR: h591 BODY: h592 ]            |
+|               |           [ loc_nonsp LBL: h550 ARG0: i574 ARG1: x549 ARG2: x571 ]               |
+|               |           [ def_implicit_q LBL: h588 ARG0: x571 RSTR: h586 BODY: h587 ]          |
+|               |           [ _west_a_1 LBL: h573 ARG0: i570 ARG1: x571 ARG2: x555 ]               |
+|               |           [ def_udef_a_q LBL: h583 ARG0: x555 RSTR: h581 BODY: h582 ]            |
+|               |           [ _immovable_a_1 LBL: h556 ARG0: e567 ARG1: x555 ]                     |
+|               |           [ _green_a_2 LBL: h556 ARG0: i557 ARG1: x555 ]                         |
+|               |           [ _bush_n_1 LBL: h556 ARG0: x555 ]                                     |
+|               |           [ place_n LBL: h573 ARG0: x571 ]                                       |
+|               |           [ _lock_v_cause LBL: h550 ARG0: e551 ARG1: i552 ARG2: x549 ]           |
+|               |           [ _lock_n_1 LBL: h550 ARG0: x549 ] >                                   |
+|               |   HCONS: < h581 qeq h556 h586 qeq h573 h591 qeq h550 h598 qeq h594 > ]           |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                    |
++---------+--------------------------------------------------------------------------+
+| Node    | Generated SEMENT                                                         |
++---------+--------------------------------------------------------------------------+
+| idLock1 | [ TOP: h550                                                              |
+|         |   INDEX: x549                                                            |
+|         |   RELS: < [ _lock_n_1 LBL: h550 ARG0: x549 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| locked  | [ TOP: h554                                                              |
+|         |   INDEX: e551                                                            |
+|         |   RELS: < [ _lock_v_cause LBL: h554 ARG0: e551 ARG1: i552 ARG2: i553 ] > |
+|         |   SLOTS: < ARG1: i552 ARG2: i553 > ]                                     |
++---------+--------------------------------------------------------------------------+
+| idBush1 | [ TOP: h556                                                              |
+|         |   INDEX: x555                                                            |
+|         |   RELS: < [ _bush_n_1 LBL: h556 ARG0: x555 ] > ]                         |
++---------+--------------------------------------------------------------------------+
+| green   | [ TOP: h559                                                              |
+|         |   INDEX: i557                                                            |
+|         |   RELS: < [ _green_a_2 LBL: h559 ARG0: i557 ARG1: i558 ] >               |
+|         |   SLOTS: < ARG1: i558 > ]                                                |
++---------+--------------------------------------------------------------------------+
+| yes     | [ TOP: h563                                                              |
+|         |   INDEX: e560                                                            |
+|         |   RELS: < [ _true_a_of LBL: h563 ARG0: e560 ARG1: u561 ARG2: u562 ] >    |
+|         |   SLOTS: < ARG1: u561 ARG2: u562 > ]                                     |
++---------+--------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| Edge                       | Parent  | Child   | Generated SEMENT                                                                 |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idLock1_prop_idLockedState | idLock1 | locked  | [ TOP: h550                                                                      |
+|                            |         |         |   INDEX: x549                                                                    |
+|                            |         |         |   RELS: < [ _lock_v_cause LBL: h554 ARG0: e551 ARG1: i552 ARG2: i553 ]           |
+|                            |         |         |           [ _lock_n_1 LBL: h550 ARG0: x549 ] >                                   |
+|                            |         |         |   EQS: < h554 eq h550 i553 eq x549 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| isWestOf                   | idLock1 | idBush1 | [ TOP: h550                                                                      |
+|                            |         |         |   INDEX: x549                                                                    |
+|                            |         |         |   RELS: < [ loc_nonsp LBL: h577 ARG0: i574 ARG1: u575 ARG2: u576 ]               |
+|                            |         |         |           [ def_implicit_q LBL: h588 ARG0: x585 RSTR: h586 BODY: h587 ]          |
+|                            |         |         |           [ _west_a_1 LBL: h573 ARG0: i570 ARG1: x571 ARG2: u572 ]               |
+|                            |         |         |           [ def_udef_a_q LBL: h583 ARG0: x580 RSTR: h581 BODY: h582 ]            |
+|                            |         |         |           [ _immovable_a_1 LBL: h569 ARG0: e567 ARG1: u568 ]                     |
+|                            |         |         |           [ _green_a_2 LBL: h559 ARG0: i557 ARG1: i558 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h556 ARG0: x555 ]                                     |
+|                            |         |         |           [ place_n LBL: h579 ARG0: x578 ]                                       |
+|                            |         |         |           [ _lock_v_cause LBL: h554 ARG0: e551 ARG1: i552 ARG2: i553 ]           |
+|                            |         |         |           [ _lock_n_1 LBL: h550 ARG0: x549 ] >                                   |
+|                            |         |         |   HCONS: < h581 qeq h556 h586 qeq h579 >                                         |
+|                            |         |         |   EQS: < h559 eq h556 i558 eq x555 h569 eq h556 u568 eq x555 x580 eq x555 h573   |
+|                            |         |         | eq h584 u572 eq x580 h573 eq h579 x571 eq x578 x585 eq x578 h577 eq h589 u576 eq |
+|                            |         |         | x585 h554 eq h550 i553 eq x549 h577 eq h550 u575 eq x549 > ]                     |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idBush1_prop_idColor       | idBush1 | green   | [ TOP: h556                                                                      |
+|                            |         |         |   INDEX: x555                                                                    |
+|                            |         |         |   RELS: < [ _green_a_2 LBL: h559 ARG0: i557 ARG1: i558 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h556 ARG0: x555 ] >                                   |
+|                            |         |         |   EQS: < h559 eq h556 i558 eq x555 > ]                                           |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idBush1_prop_idImmovable   | idBush1 | yes     | [ TOP: h556                                                                      |
+|                            |         |         |   INDEX: x555                                                                    |
+|                            |         |         |   RELS: < [ _immovable_a_1 LBL: h569 ARG0: e567 ARG1: u568 ]                     |
+|                            |         |         |           [ _green_a_2 LBL: h559 ARG0: i557 ARG1: i558 ]                         |
+|                            |         |         |           [ _bush_n_1 LBL: h556 ARG0: x555 ] >                                   |
+|                            |         |         |   EQS: < h559 eq h556 i558 eq x555 h569 eq h556 u568 eq x555 > ]                 |
++----------------------------+---------+---------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------+
+|                    GENERATED ENGLISH TEXT                    |
++-----+--------------------------------------------------------+
+| #   | Generated Text                                         |
++-----+--------------------------------------------------------+
+| 1   | A lock locked west of a green immovable bush           |
+| 2   | A lock locked west of a green immovable bush.          |
+| 3   | A lock locked west of an immovable green bush          |
+| 4   | A lock locked west of an immovable green bush.         |
+| 5   | A lock locked west of green immovable bushes           |
+| 6   | A lock locked west of green immovable bushes.          |
+| 7   | A lock locked west of immovable green bushes           |
+| 8   | A lock locked west of immovable green bushes.          |
+| 9   | A lock locked west of the green immovable bush         |
+| 10  | A lock locked west of the green immovable bush.        |
+| 11  | A lock locked west of the green immovable bushes       |
+| 12  | A lock locked west of the green immovable bushes.      |
+| 13  | A lock locked west of the immovable green bush         |
+| 14  | A lock locked west of the immovable green bush.        |
+| 15  | A lock locked west of the immovable green bushes       |
+| 16  | A lock locked west of the immovable green bushes.      |
+| 17  | A lock locked, west of a green immovable bush          |
+| 18  | A lock locked, west of an immovable green bush         |
+| 19  | A lock locked, west of green immovable bushes          |
+| 20  | A lock locked, west of immovable green bushes          |
+| 21  | A lock locked, west of the green immovable bush        |
+| 22  | A lock locked, west of the green immovable bushes      |
+| 23  | A lock locked, west of the immovable green bush        |
+| 24  | A lock locked, west of the immovable green bushes      |
+| 25  | A lock to lock west of a green immovable bush          |
+| 26  | A lock to lock west of a green immovable bush.         |
+| 27  | A lock to lock west of an immovable green bush         |
+| 28  | A lock to lock west of an immovable green bush.        |
+| 29  | A lock to lock west of green immovable bushes          |
+| 30  | A lock to lock west of green immovable bushes.         |
+| 31  | A lock to lock west of immovable green bushes          |
+| 32  | A lock to lock west of immovable green bushes.         |
+| 33  | A lock to lock west of the green immovable bush        |
+| 34  | A lock to lock west of the green immovable bush.       |
+| 35  | A lock to lock west of the green immovable bushes      |
+| 36  | A lock to lock west of the green immovable bushes.     |
+| 37  | A lock to lock west of the immovable green bush        |
+| 38  | A lock to lock west of the immovable green bush.       |
+| 39  | A lock to lock west of the immovable green bushes      |
+| 40  | A lock to lock west of the immovable green bushes.     |
+| 41  | A lock to lock, west of a green immovable bush         |
+| 42  | A lock to lock, west of an immovable green bush        |
+| 43  | A lock to lock, west of green immovable bushes         |
+| 44  | A lock to lock, west of immovable green bushes         |
+| 45  | A lock to lock, west of the green immovable bush       |
+| 46  | A lock to lock, west of the green immovable bushes     |
+| 47  | A lock to lock, west of the immovable green bush       |
+| 48  | A lock to lock, west of the immovable green bushes     |
+| 49  | A lock west of a green immovable bush locked           |
+| 50  | A lock west of a green immovable bush locked.          |
+| 51  | A lock west of a green immovable bush to lock          |
+| 52  | A lock west of a green immovable bush to lock.         |
+| 53  | A lock west of a green immovable bush, locked          |
+| 54  | A lock west of a green immovable bush, locked.         |
+| 55  | A lock west of a green immovable bush, to lock         |
+| 56  | A lock west of a green immovable bush, to lock.        |
+| 57  | A lock west of an immovable green bush locked          |
+| 58  | A lock west of an immovable green bush locked.         |
+| 59  | A lock west of an immovable green bush to lock         |
+| 60  | A lock west of an immovable green bush to lock.        |
+| 61  | A lock west of an immovable green bush, locked         |
+| 62  | A lock west of an immovable green bush, locked.        |
+| 63  | A lock west of an immovable green bush, to lock        |
+| 64  | A lock west of an immovable green bush, to lock.       |
+| 65  | A lock west of green immovable bushes locked           |
+| 66  | A lock west of green immovable bushes locked.          |
+| 67  | A lock west of green immovable bushes to lock          |
+| 68  | A lock west of green immovable bushes to lock.         |
+| 69  | A lock west of green immovable bushes, locked          |
+| 70  | A lock west of green immovable bushes, locked.         |
+| 71  | A lock west of green immovable bushes, to lock         |
+| 72  | A lock west of green immovable bushes, to lock.        |
+| 73  | A lock west of immovable green bushes locked           |
+| 74  | A lock west of immovable green bushes locked.          |
+| 75  | A lock west of immovable green bushes to lock          |
+| 76  | A lock west of immovable green bushes to lock.         |
+| 77  | A lock west of immovable green bushes, locked          |
+| 78  | A lock west of immovable green bushes, locked.         |
+| 79  | A lock west of immovable green bushes, to lock         |
+| 80  | A lock west of immovable green bushes, to lock.        |
+| 81  | A lock west of the green immovable bush locked         |
+| 82  | A lock west of the green immovable bush locked.        |
+| 83  | A lock west of the green immovable bush to lock        |
+| 84  | A lock west of the green immovable bush to lock.       |
+| 85  | A lock west of the green immovable bush, locked        |
+| 86  | A lock west of the green immovable bush, locked.       |
+| 87  | A lock west of the green immovable bush, to lock       |
+| 88  | A lock west of the green immovable bush, to lock.      |
+| 89  | A lock west of the green immovable bushes locked       |
+| 90  | A lock west of the green immovable bushes locked.      |
+| 91  | A lock west of the green immovable bushes to lock      |
+| 92  | A lock west of the green immovable bushes to lock.     |
+| 93  | A lock west of the green immovable bushes, locked      |
+| 94  | A lock west of the green immovable bushes, locked.     |
+| 95  | A lock west of the green immovable bushes, to lock     |
+| 96  | A lock west of the green immovable bushes, to lock.    |
+| 97  | A lock west of the immovable green bush locked         |
+| 98  | A lock west of the immovable green bush locked.        |
+| 99  | A lock west of the immovable green bush to lock        |
+| 100 | A lock west of the immovable green bush to lock.       |
+| 101 | A lock west of the immovable green bush, locked        |
+| 102 | A lock west of the immovable green bush, locked.       |
+| 103 | A lock west of the immovable green bush, to lock       |
+| 104 | A lock west of the immovable green bush, to lock.      |
+| 105 | A lock west of the immovable green bushes locked       |
+| 106 | A lock west of the immovable green bushes locked.      |
+| 107 | A lock west of the immovable green bushes to lock      |
+| 108 | A lock west of the immovable green bushes to lock.     |
+| 109 | A lock west of the immovable green bushes, locked      |
+| 110 | A lock west of the immovable green bushes, locked.     |
+| 111 | A lock west of the immovable green bushes, to lock     |
+| 112 | A lock west of the immovable green bushes, to lock.    |
+| 113 | A lock, locked, west of a green immovable bush         |
+| 114 | A lock, locked, west of an immovable green bush        |
+| 115 | A lock, locked, west of green immovable bushes         |
+| 116 | A lock, locked, west of immovable green bushes         |
+| 117 | A lock, locked, west of the green immovable bush       |
+| 118 | A lock, locked, west of the green immovable bushes     |
+| 119 | A lock, locked, west of the immovable green bush       |
+| 120 | A lock, locked, west of the immovable green bushes     |
+| 121 | A lock, to lock, west of a green immovable bush        |
+| 122 | A lock, to lock, west of an immovable green bush       |
+| 123 | A lock, to lock, west of green immovable bushes        |
+| 124 | A lock, to lock, west of immovable green bushes        |
+| 125 | A lock, to lock, west of the green immovable bush      |
+| 126 | A lock, to lock, west of the green immovable bushes    |
+| 127 | A lock, to lock, west of the immovable green bush      |
+| 128 | A lock, to lock, west of the immovable green bushes    |
+| 129 | A lock, west of a green immovable bush locked          |
+| 130 | A lock, west of a green immovable bush locked.         |
+| 131 | A lock, west of a green immovable bush to lock         |
+| 132 | A lock, west of a green immovable bush to lock.        |
+| 133 | A lock, west of an immovable green bush locked         |
+| 134 | A lock, west of an immovable green bush locked.        |
+| 135 | A lock, west of an immovable green bush to lock        |
+| 136 | A lock, west of an immovable green bush to lock.       |
+| 137 | A lock, west of green immovable bushes locked          |
+| 138 | A lock, west of green immovable bushes locked.         |
+| 139 | A lock, west of green immovable bushes to lock         |
+| 140 | A lock, west of green immovable bushes to lock.        |
+| 141 | A lock, west of immovable green bushes locked          |
+| 142 | A lock, west of immovable green bushes locked.         |
+| 143 | A lock, west of immovable green bushes to lock         |
+| 144 | A lock, west of immovable green bushes to lock.        |
+| 145 | A lock, west of the green immovable bush locked        |
+| 146 | A lock, west of the green immovable bush locked.       |
+| 147 | A lock, west of the green immovable bush to lock       |
+| 148 | A lock, west of the green immovable bush to lock.      |
+| 149 | A lock, west of the green immovable bushes locked      |
+| 150 | A lock, west of the green immovable bushes locked.     |
+| 151 | A lock, west of the green immovable bushes to lock     |
+| 152 | A lock, west of the green immovable bushes to lock.    |
+| 153 | A lock, west of the immovable green bush locked        |
+| 154 | A lock, west of the immovable green bush locked.       |
+| 155 | A lock, west of the immovable green bush to lock       |
+| 156 | A lock, west of the immovable green bush to lock.      |
+| 157 | A lock, west of the immovable green bushes locked      |
+| 158 | A lock, west of the immovable green bushes locked.     |
+| 159 | A lock, west of the immovable green bushes to lock     |
+| 160 | A lock, west of the immovable green bushes to lock.    |
+| 161 | A locked lock west of a green immovable bush           |
+| 162 | A locked lock west of a green immovable bush.          |
+| 163 | A locked lock west of an immovable green bush          |
+| 164 | A locked lock west of an immovable green bush.         |
+| 165 | A locked lock west of green immovable bushes           |
+| 166 | A locked lock west of green immovable bushes.          |
+| 167 | A locked lock west of immovable green bushes           |
+| 168 | A locked lock west of immovable green bushes.          |
+| 169 | A locked lock west of the green immovable bush         |
+| 170 | A locked lock west of the green immovable bush.        |
+| 171 | A locked lock west of the green immovable bushes       |
+| 172 | A locked lock west of the green immovable bushes.      |
+| 173 | A locked lock west of the immovable green bush         |
+| 174 | A locked lock west of the immovable green bush.        |
+| 175 | A locked lock west of the immovable green bushes       |
+| 176 | A locked lock west of the immovable green bushes.      |
+| 177 | A locked lock, west of a green immovable bush          |
+| 178 | A locked lock, west of an immovable green bush         |
+| 179 | A locked lock, west of green immovable bushes          |
+| 180 | A locked lock, west of immovable green bushes          |
+| 181 | A locked lock, west of the green immovable bush        |
+| 182 | A locked lock, west of the green immovable bushes      |
+| 183 | A locked lock, west of the immovable green bush        |
+| 184 | A locked lock, west of the immovable green bushes      |
+| 185 | Lock locked west of a green immovable bush             |
+| 186 | Lock locked west of a green immovable bush.            |
+| 187 | Lock locked west of an immovable green bush            |
+| 188 | Lock locked west of an immovable green bush.           |
+| 189 | Lock locked west of green immovable bushes             |
+| 190 | Lock locked west of green immovable bushes.            |
+| 191 | Lock locked west of immovable green bushes             |
+| 192 | Lock locked west of immovable green bushes.            |
+| 193 | Lock locked west of the green immovable bush           |
+| 194 | Lock locked west of the green immovable bush.          |
+| 195 | Lock locked west of the green immovable bushes         |
+| 196 | Lock locked west of the green immovable bushes.        |
+| 197 | Lock locked west of the immovable green bush           |
+| 198 | Lock locked west of the immovable green bush.          |
+| 199 | Lock locked west of the immovable green bushes         |
+| 200 | Lock locked west of the immovable green bushes.        |
+| 201 | Lock locked, west of a green immovable bush            |
+| 202 | Lock locked, west of an immovable green bush           |
+| 203 | Lock locked, west of green immovable bushes            |
+| 204 | Lock locked, west of immovable green bushes            |
+| 205 | Lock locked, west of the green immovable bush          |
+| 206 | Lock locked, west of the green immovable bushes        |
+| 207 | Lock locked, west of the immovable green bush          |
+| 208 | Lock locked, west of the immovable green bushes        |
+| 209 | Lock to lock west of a green immovable bush            |
+| 210 | Lock to lock west of a green immovable bush.           |
+| 211 | Lock to lock west of an immovable green bush           |
+| 212 | Lock to lock west of an immovable green bush.          |
+| 213 | Lock to lock west of green immovable bushes            |
+| 214 | Lock to lock west of green immovable bushes.           |
+| 215 | Lock to lock west of immovable green bushes            |
+| 216 | Lock to lock west of immovable green bushes.           |
+| 217 | Lock to lock west of the green immovable bush          |
+| 218 | Lock to lock west of the green immovable bush.         |
+| 219 | Lock to lock west of the green immovable bushes        |
+| 220 | Lock to lock west of the green immovable bushes.       |
+| 221 | Lock to lock west of the immovable green bush          |
+| 222 | Lock to lock west of the immovable green bush.         |
+| 223 | Lock to lock west of the immovable green bushes        |
+| 224 | Lock to lock west of the immovable green bushes.       |
+| 225 | Lock to lock, west of a green immovable bush           |
+| 226 | Lock to lock, west of an immovable green bush          |
+| 227 | Lock to lock, west of green immovable bushes           |
+| 228 | Lock to lock, west of immovable green bushes           |
+| 229 | Lock to lock, west of the green immovable bush         |
+| 230 | Lock to lock, west of the green immovable bushes       |
+| 231 | Lock to lock, west of the immovable green bush         |
+| 232 | Lock to lock, west of the immovable green bushes       |
+| 233 | Lock west of a green immovable bush locked             |
+| 234 | Lock west of a green immovable bush locked.            |
+| 235 | Lock west of a green immovable bush to lock            |
+| 236 | Lock west of a green immovable bush to lock.           |
+| 237 | Lock west of a green immovable bush, locked            |
+| 238 | Lock west of a green immovable bush, locked.           |
+| 239 | Lock west of a green immovable bush, to lock           |
+| 240 | Lock west of a green immovable bush, to lock.          |
+| 241 | Lock west of an immovable green bush locked            |
+| 242 | Lock west of an immovable green bush locked.           |
+| 243 | Lock west of an immovable green bush to lock           |
+| 244 | Lock west of an immovable green bush to lock.          |
+| 245 | Lock west of an immovable green bush, locked           |
+| 246 | Lock west of an immovable green bush, locked.          |
+| 247 | Lock west of an immovable green bush, to lock          |
+| 248 | Lock west of an immovable green bush, to lock.         |
+| 249 | Lock west of green immovable bushes locked             |
+| 250 | Lock west of green immovable bushes locked.            |
+| 251 | Lock west of green immovable bushes to lock            |
+| 252 | Lock west of green immovable bushes to lock.           |
+| 253 | Lock west of green immovable bushes, locked            |
+| 254 | Lock west of green immovable bushes, locked.           |
+| 255 | Lock west of green immovable bushes, to lock           |
+| 256 | Lock west of green immovable bushes, to lock.          |
+| 257 | Lock west of immovable green bushes locked             |
+| 258 | Lock west of immovable green bushes locked.            |
+| 259 | Lock west of immovable green bushes to lock            |
+| 260 | Lock west of immovable green bushes to lock.           |
+| 261 | Lock west of immovable green bushes, locked            |
+| 262 | Lock west of immovable green bushes, locked.           |
+| 263 | Lock west of immovable green bushes, to lock           |
+| 264 | Lock west of immovable green bushes, to lock.          |
+| 265 | Lock west of the green immovable bush locked           |
+| 266 | Lock west of the green immovable bush locked.          |
+| 267 | Lock west of the green immovable bush to lock          |
+| 268 | Lock west of the green immovable bush to lock.         |
+| 269 | Lock west of the green immovable bush, locked          |
+| 270 | Lock west of the green immovable bush, locked.         |
+| 271 | Lock west of the green immovable bush, to lock         |
+| 272 | Lock west of the green immovable bush, to lock.        |
+| 273 | Lock west of the green immovable bushes locked         |
+| 274 | Lock west of the green immovable bushes locked.        |
+| 275 | Lock west of the green immovable bushes to lock        |
+| 276 | Lock west of the green immovable bushes to lock.       |
+| 277 | Lock west of the green immovable bushes, locked        |
+| 278 | Lock west of the green immovable bushes, locked.       |
+| 279 | Lock west of the green immovable bushes, to lock       |
+| 280 | Lock west of the green immovable bushes, to lock.      |
+| 281 | Lock west of the immovable green bush locked           |
+| 282 | Lock west of the immovable green bush locked.          |
+| 283 | Lock west of the immovable green bush to lock          |
+| 284 | Lock west of the immovable green bush to lock.         |
+| 285 | Lock west of the immovable green bush, locked          |
+| 286 | Lock west of the immovable green bush, locked.         |
+| 287 | Lock west of the immovable green bush, to lock         |
+| 288 | Lock west of the immovable green bush, to lock.        |
+| 289 | Lock west of the immovable green bushes locked         |
+| 290 | Lock west of the immovable green bushes locked.        |
+| 291 | Lock west of the immovable green bushes to lock        |
+| 292 | Lock west of the immovable green bushes to lock.       |
+| 293 | Lock west of the immovable green bushes, locked        |
+| 294 | Lock west of the immovable green bushes, locked.       |
+| 295 | Lock west of the immovable green bushes, to lock       |
+| 296 | Lock west of the immovable green bushes, to lock.      |
+| 297 | Lock, locked, west of a green immovable bush           |
+| 298 | Lock, locked, west of an immovable green bush          |
+| 299 | Lock, locked, west of green immovable bushes           |
+| 300 | Lock, locked, west of immovable green bushes           |
+| 301 | Lock, locked, west of the green immovable bush         |
+| 302 | Lock, locked, west of the green immovable bushes       |
+| 303 | Lock, locked, west of the immovable green bush         |
+| 304 | Lock, locked, west of the immovable green bushes       |
+| 305 | Lock, to lock, west of a green immovable bush          |
+| 306 | Lock, to lock, west of an immovable green bush         |
+| 307 | Lock, to lock, west of green immovable bushes          |
+| 308 | Lock, to lock, west of immovable green bushes          |
+| 309 | Lock, to lock, west of the green immovable bush        |
+| 310 | Lock, to lock, west of the green immovable bushes      |
+| 311 | Lock, to lock, west of the immovable green bush        |
+| 312 | Lock, to lock, west of the immovable green bushes      |
+| 313 | Lock, west of a green immovable bush locked            |
+| 314 | Lock, west of a green immovable bush locked.           |
+| 315 | Lock, west of a green immovable bush to lock           |
+| 316 | Lock, west of a green immovable bush to lock.          |
+| 317 | Lock, west of an immovable green bush locked           |
+| 318 | Lock, west of an immovable green bush locked.          |
+| 319 | Lock, west of an immovable green bush to lock          |
+| 320 | Lock, west of an immovable green bush to lock.         |
+| 321 | Lock, west of green immovable bushes locked            |
+| 322 | Lock, west of green immovable bushes locked.           |
+| 323 | Lock, west of green immovable bushes to lock           |
+| 324 | Lock, west of green immovable bushes to lock.          |
+| 325 | Lock, west of immovable green bushes locked            |
+| 326 | Lock, west of immovable green bushes locked.           |
+| 327 | Lock, west of immovable green bushes to lock           |
+| 328 | Lock, west of immovable green bushes to lock.          |
+| 329 | Lock, west of the green immovable bush locked          |
+| 330 | Lock, west of the green immovable bush locked.         |
+| 331 | Lock, west of the green immovable bush to lock         |
+| 332 | Lock, west of the green immovable bush to lock.        |
+| 333 | Lock, west of the green immovable bushes locked        |
+| 334 | Lock, west of the green immovable bushes locked.       |
+| 335 | Lock, west of the green immovable bushes to lock       |
+| 336 | Lock, west of the green immovable bushes to lock.      |
+| 337 | Lock, west of the immovable green bush locked          |
+| 338 | Lock, west of the immovable green bush locked.         |
+| 339 | Lock, west of the immovable green bush to lock         |
+| 340 | Lock, west of the immovable green bush to lock.        |
+| 341 | Lock, west of the immovable green bushes locked        |
+| 342 | Lock, west of the immovable green bushes locked.       |
+| 343 | Lock, west of the immovable green bushes to lock       |
+| 344 | Lock, west of the immovable green bushes to lock.      |
+| 345 | Locked lock west of a green immovable bush             |
+| 346 | Locked lock west of a green immovable bush.            |
+| 347 | Locked lock west of an immovable green bush            |
+| 348 | Locked lock west of an immovable green bush.           |
+| 349 | Locked lock west of green immovable bushes             |
+| 350 | Locked lock west of green immovable bushes.            |
+| 351 | Locked lock west of immovable green bushes             |
+| 352 | Locked lock west of immovable green bushes.            |
+| 353 | Locked lock west of the green immovable bush           |
+| 354 | Locked lock west of the green immovable bush.          |
+| 355 | Locked lock west of the green immovable bushes         |
+| 356 | Locked lock west of the green immovable bushes.        |
+| 357 | Locked lock west of the immovable green bush           |
+| 358 | Locked lock west of the immovable green bush.          |
+| 359 | Locked lock west of the immovable green bushes         |
+| 360 | Locked lock west of the immovable green bushes.        |
+| 361 | Locked lock, west of a green immovable bush            |
+| 362 | Locked lock, west of an immovable green bush           |
+| 363 | Locked lock, west of green immovable bushes            |
+| 364 | Locked lock, west of immovable green bushes            |
+| 365 | Locked lock, west of the green immovable bush          |
+| 366 | Locked lock, west of the green immovable bushes        |
+| 367 | Locked lock, west of the immovable green bush          |
+| 368 | Locked lock, west of the immovable green bushes        |
+| 369 | Locked locks west of a green immovable bush            |
+| 370 | Locked locks west of a green immovable bush.           |
+| 371 | Locked locks west of an immovable green bush           |
+| 372 | Locked locks west of an immovable green bush.          |
+| 373 | Locked locks west of green immovable bushes            |
+| 374 | Locked locks west of green immovable bushes.           |
+| 375 | Locked locks west of immovable green bushes            |
+| 376 | Locked locks west of immovable green bushes.           |
+| 377 | Locked locks west of the green immovable bush          |
+| 378 | Locked locks west of the green immovable bush.         |
+| 379 | Locked locks west of the green immovable bushes        |
+| 380 | Locked locks west of the green immovable bushes.       |
+| 381 | Locked locks west of the immovable green bush          |
+| 382 | Locked locks west of the immovable green bush.         |
+| 383 | Locked locks west of the immovable green bushes        |
+| 384 | Locked locks west of the immovable green bushes.       |
+| 385 | Locked locks, west of a green immovable bush           |
+| 386 | Locked locks, west of an immovable green bush          |
+| 387 | Locked locks, west of green immovable bushes           |
+| 388 | Locked locks, west of immovable green bushes           |
+| 389 | Locked locks, west of the green immovable bush         |
+| 390 | Locked locks, west of the green immovable bushes       |
+| 391 | Locked locks, west of the immovable green bush         |
+| 392 | Locked locks, west of the immovable green bushes       |
+| 393 | Locks locked west of a green immovable bush            |
+| 394 | Locks locked west of a green immovable bush.           |
+| 395 | Locks locked west of an immovable green bush           |
+| 396 | Locks locked west of an immovable green bush.          |
+| 397 | Locks locked west of green immovable bushes            |
+| 398 | Locks locked west of green immovable bushes.           |
+| 399 | Locks locked west of immovable green bushes            |
+| 400 | Locks locked west of immovable green bushes.           |
+| 401 | Locks locked west of the green immovable bush          |
+| 402 | Locks locked west of the green immovable bush.         |
+| 403 | Locks locked west of the green immovable bushes        |
+| 404 | Locks locked west of the green immovable bushes.       |
+| 405 | Locks locked west of the immovable green bush          |
+| 406 | Locks locked west of the immovable green bush.         |
+| 407 | Locks locked west of the immovable green bushes        |
+| 408 | Locks locked west of the immovable green bushes.       |
+| 409 | Locks locked, west of a green immovable bush           |
+| 410 | Locks locked, west of an immovable green bush          |
+| 411 | Locks locked, west of green immovable bushes           |
+| 412 | Locks locked, west of immovable green bushes           |
+| 413 | Locks locked, west of the green immovable bush         |
+| 414 | Locks locked, west of the green immovable bushes       |
+| 415 | Locks locked, west of the immovable green bush         |
+| 416 | Locks locked, west of the immovable green bushes       |
+| 417 | Locks to lock west of a green immovable bush           |
+| 418 | Locks to lock west of a green immovable bush.          |
+| 419 | Locks to lock west of an immovable green bush          |
+| 420 | Locks to lock west of an immovable green bush.         |
+| 421 | Locks to lock west of green immovable bushes           |
+| 422 | Locks to lock west of green immovable bushes.          |
+| 423 | Locks to lock west of immovable green bushes           |
+| 424 | Locks to lock west of immovable green bushes.          |
+| 425 | Locks to lock west of the green immovable bush         |
+| 426 | Locks to lock west of the green immovable bush.        |
+| 427 | Locks to lock west of the green immovable bushes       |
+| 428 | Locks to lock west of the green immovable bushes.      |
+| 429 | Locks to lock west of the immovable green bush         |
+| 430 | Locks to lock west of the immovable green bush.        |
+| 431 | Locks to lock west of the immovable green bushes       |
+| 432 | Locks to lock west of the immovable green bushes.      |
+| 433 | Locks to lock, west of a green immovable bush          |
+| 434 | Locks to lock, west of an immovable green bush         |
+| 435 | Locks to lock, west of green immovable bushes          |
+| 436 | Locks to lock, west of immovable green bushes          |
+| 437 | Locks to lock, west of the green immovable bush        |
+| 438 | Locks to lock, west of the green immovable bushes      |
+| 439 | Locks to lock, west of the immovable green bush        |
+| 440 | Locks to lock, west of the immovable green bushes      |
+| 441 | Locks west of a green immovable bush locked            |
+| 442 | Locks west of a green immovable bush locked.           |
+| 443 | Locks west of a green immovable bush to lock           |
+| 444 | Locks west of a green immovable bush to lock.          |
+| 445 | Locks west of a green immovable bush, locked           |
+| 446 | Locks west of a green immovable bush, locked.          |
+| 447 | Locks west of a green immovable bush, to lock          |
+| 448 | Locks west of a green immovable bush, to lock.         |
+| 449 | Locks west of an immovable green bush locked           |
+| 450 | Locks west of an immovable green bush locked.          |
+| 451 | Locks west of an immovable green bush to lock          |
+| 452 | Locks west of an immovable green bush to lock.         |
+| 453 | Locks west of an immovable green bush, locked          |
+| 454 | Locks west of an immovable green bush, locked.         |
+| 455 | Locks west of an immovable green bush, to lock         |
+| 456 | Locks west of an immovable green bush, to lock.        |
+| 457 | Locks west of green immovable bushes locked            |
+| 458 | Locks west of green immovable bushes locked.           |
+| 459 | Locks west of green immovable bushes to lock           |
+| 460 | Locks west of green immovable bushes to lock.          |
+| 461 | Locks west of green immovable bushes, locked           |
+| 462 | Locks west of green immovable bushes, locked.          |
+| 463 | Locks west of green immovable bushes, to lock          |
+| 464 | Locks west of green immovable bushes, to lock.         |
+| 465 | Locks west of immovable green bushes locked            |
+| 466 | Locks west of immovable green bushes locked.           |
+| 467 | Locks west of immovable green bushes to lock           |
+| 468 | Locks west of immovable green bushes to lock.          |
+| 469 | Locks west of immovable green bushes, locked           |
+| 470 | Locks west of immovable green bushes, locked.          |
+| 471 | Locks west of immovable green bushes, to lock          |
+| 472 | Locks west of immovable green bushes, to lock.         |
+| 473 | Locks west of the green immovable bush locked          |
+| 474 | Locks west of the green immovable bush locked.         |
+| 475 | Locks west of the green immovable bush to lock         |
+| 476 | Locks west of the green immovable bush to lock.        |
+| 477 | Locks west of the green immovable bush, locked         |
+| 478 | Locks west of the green immovable bush, locked.        |
+| 479 | Locks west of the green immovable bush, to lock        |
+| 480 | Locks west of the green immovable bush, to lock.       |
+| 481 | Locks west of the green immovable bushes locked        |
+| 482 | Locks west of the green immovable bushes locked.       |
+| 483 | Locks west of the green immovable bushes to lock       |
+| 484 | Locks west of the green immovable bushes to lock.      |
+| 485 | Locks west of the green immovable bushes, locked       |
+| 486 | Locks west of the green immovable bushes, locked.      |
+| 487 | Locks west of the green immovable bushes, to lock      |
+| 488 | Locks west of the green immovable bushes, to lock.     |
+| 489 | Locks west of the immovable green bush locked          |
+| 490 | Locks west of the immovable green bush locked.         |
+| 491 | Locks west of the immovable green bush to lock         |
+| 492 | Locks west of the immovable green bush to lock.        |
+| 493 | Locks west of the immovable green bush, locked         |
+| 494 | Locks west of the immovable green bush, locked.        |
+| 495 | Locks west of the immovable green bush, to lock        |
+| 496 | Locks west of the immovable green bush, to lock.       |
+| 497 | Locks west of the immovable green bushes locked        |
+| 498 | Locks west of the immovable green bushes locked.       |
+| 499 | Locks west of the immovable green bushes to lock       |
+| 500 | Locks west of the immovable green bushes to lock.      |
+| 501 | Locks west of the immovable green bushes, locked       |
+| 502 | Locks west of the immovable green bushes, locked.      |
+| 503 | Locks west of the immovable green bushes, to lock      |
+| 504 | Locks west of the immovable green bushes, to lock.     |
+| 505 | Locks, locked, west of a green immovable bush          |
+| 506 | Locks, locked, west of an immovable green bush         |
+| 507 | Locks, locked, west of green immovable bushes          |
+| 508 | Locks, locked, west of immovable green bushes          |
+| 509 | Locks, locked, west of the green immovable bush        |
+| 510 | Locks, locked, west of the green immovable bushes      |
+| 511 | Locks, locked, west of the immovable green bush        |
+| 512 | Locks, locked, west of the immovable green bushes      |
+| 513 | Locks, to lock, west of a green immovable bush         |
+| 514 | Locks, to lock, west of an immovable green bush        |
+| 515 | Locks, to lock, west of green immovable bushes         |
+| 516 | Locks, to lock, west of immovable green bushes         |
+| 517 | Locks, to lock, west of the green immovable bush       |
+| 518 | Locks, to lock, west of the green immovable bushes     |
+| 519 | Locks, to lock, west of the immovable green bush       |
+| 520 | Locks, to lock, west of the immovable green bushes     |
+| 521 | Locks, west of a green immovable bush locked           |
+| 522 | Locks, west of a green immovable bush locked.          |
+| 523 | Locks, west of a green immovable bush to lock          |
+| 524 | Locks, west of a green immovable bush to lock.         |
+| 525 | Locks, west of an immovable green bush locked          |
+| 526 | Locks, west of an immovable green bush locked.         |
+| 527 | Locks, west of an immovable green bush to lock         |
+| 528 | Locks, west of an immovable green bush to lock.        |
+| 529 | Locks, west of green immovable bushes locked           |
+| 530 | Locks, west of green immovable bushes locked.          |
+| 531 | Locks, west of green immovable bushes to lock          |
+| 532 | Locks, west of green immovable bushes to lock.         |
+| 533 | Locks, west of immovable green bushes locked           |
+| 534 | Locks, west of immovable green bushes locked.          |
+| 535 | Locks, west of immovable green bushes to lock          |
+| 536 | Locks, west of immovable green bushes to lock.         |
+| 537 | Locks, west of the green immovable bush locked         |
+| 538 | Locks, west of the green immovable bush locked.        |
+| 539 | Locks, west of the green immovable bush to lock        |
+| 540 | Locks, west of the green immovable bush to lock.       |
+| 541 | Locks, west of the green immovable bushes locked       |
+| 542 | Locks, west of the green immovable bushes locked.      |
+| 543 | Locks, west of the green immovable bushes to lock      |
+| 544 | Locks, west of the green immovable bushes to lock.     |
+| 545 | Locks, west of the immovable green bush locked         |
+| 546 | Locks, west of the immovable green bush locked.        |
+| 547 | Locks, west of the immovable green bush to lock        |
+| 548 | Locks, west of the immovable green bush to lock.       |
+| 549 | Locks, west of the immovable green bushes locked       |
+| 550 | Locks, west of the immovable green bushes locked.      |
+| 551 | Locks, west of the immovable green bushes to lock      |
+| 552 | Locks, west of the immovable green bushes to lock.     |
+| 553 | The lock locked west of a green immovable bush         |
+| 554 | The lock locked west of a green immovable bush.        |
+| 555 | The lock locked west of an immovable green bush        |
+| 556 | The lock locked west of an immovable green bush.       |
+| 557 | The lock locked west of green immovable bushes         |
+| 558 | The lock locked west of green immovable bushes.        |
+| 559 | The lock locked west of immovable green bushes         |
+| 560 | The lock locked west of immovable green bushes.        |
+| 561 | The lock locked west of the green immovable bush       |
+| 562 | The lock locked west of the green immovable bush.      |
+| 563 | The lock locked west of the green immovable bushes     |
+| 564 | The lock locked west of the green immovable bushes.    |
+| 565 | The lock locked west of the immovable green bush       |
+| 566 | The lock locked west of the immovable green bush.      |
+| 567 | The lock locked west of the immovable green bushes     |
+| 568 | The lock locked west of the immovable green bushes.    |
+| 569 | The lock locked, west of a green immovable bush        |
+| 570 | The lock locked, west of an immovable green bush       |
+| 571 | The lock locked, west of green immovable bushes        |
+| 572 | The lock locked, west of immovable green bushes        |
+| 573 | The lock locked, west of the green immovable bush      |
+| 574 | The lock locked, west of the green immovable bushes    |
+| 575 | The lock locked, west of the immovable green bush      |
+| 576 | The lock locked, west of the immovable green bushes    |
+| 577 | The lock to lock west of a green immovable bush        |
+| 578 | The lock to lock west of a green immovable bush.       |
+| 579 | The lock to lock west of an immovable green bush       |
+| 580 | The lock to lock west of an immovable green bush.      |
+| 581 | The lock to lock west of green immovable bushes        |
+| 582 | The lock to lock west of green immovable bushes.       |
+| 583 | The lock to lock west of immovable green bushes        |
+| 584 | The lock to lock west of immovable green bushes.       |
+| 585 | The lock to lock west of the green immovable bush      |
+| 586 | The lock to lock west of the green immovable bush.     |
+| 587 | The lock to lock west of the green immovable bushes    |
+| 588 | The lock to lock west of the green immovable bushes.   |
+| 589 | The lock to lock west of the immovable green bush      |
+| 590 | The lock to lock west of the immovable green bush.     |
+| 591 | The lock to lock west of the immovable green bushes    |
+| 592 | The lock to lock west of the immovable green bushes.   |
+| 593 | The lock to lock, west of a green immovable bush       |
+| 594 | The lock to lock, west of an immovable green bush      |
+| 595 | The lock to lock, west of green immovable bushes       |
+| 596 | The lock to lock, west of immovable green bushes       |
+| 597 | The lock to lock, west of the green immovable bush     |
+| 598 | The lock to lock, west of the green immovable bushes   |
+| 599 | The lock to lock, west of the immovable green bush     |
+| 600 | The lock to lock, west of the immovable green bushes   |
+| 601 | The lock west of a green immovable bush locked         |
+| 602 | The lock west of a green immovable bush locked.        |
+| 603 | The lock west of a green immovable bush to lock        |
+| 604 | The lock west of a green immovable bush to lock.       |
+| 605 | The lock west of a green immovable bush, locked        |
+| 606 | The lock west of a green immovable bush, locked.       |
+| 607 | The lock west of a green immovable bush, to lock       |
+| 608 | The lock west of a green immovable bush, to lock.      |
+| 609 | The lock west of an immovable green bush locked        |
+| 610 | The lock west of an immovable green bush locked.       |
+| 611 | The lock west of an immovable green bush to lock       |
+| 612 | The lock west of an immovable green bush to lock.      |
+| 613 | The lock west of an immovable green bush, locked       |
+| 614 | The lock west of an immovable green bush, locked.      |
+| 615 | The lock west of an immovable green bush, to lock      |
+| 616 | The lock west of an immovable green bush, to lock.     |
+| 617 | The lock west of green immovable bushes locked         |
+| 618 | The lock west of green immovable bushes locked.        |
+| 619 | The lock west of green immovable bushes to lock        |
+| 620 | The lock west of green immovable bushes to lock.       |
+| 621 | The lock west of green immovable bushes, locked        |
+| 622 | The lock west of green immovable bushes, locked.       |
+| 623 | The lock west of green immovable bushes, to lock       |
+| 624 | The lock west of green immovable bushes, to lock.      |
+| 625 | The lock west of immovable green bushes locked         |
+| 626 | The lock west of immovable green bushes locked.        |
+| 627 | The lock west of immovable green bushes to lock        |
+| 628 | The lock west of immovable green bushes to lock.       |
+| 629 | The lock west of immovable green bushes, locked        |
+| 630 | The lock west of immovable green bushes, locked.       |
+| 631 | The lock west of immovable green bushes, to lock       |
+| 632 | The lock west of immovable green bushes, to lock.      |
+| 633 | The lock west of the green immovable bush locked       |
+| 634 | The lock west of the green immovable bush locked.      |
+| 635 | The lock west of the green immovable bush to lock      |
+| 636 | The lock west of the green immovable bush to lock.     |
+| 637 | The lock west of the green immovable bush, locked      |
+| 638 | The lock west of the green immovable bush, locked.     |
+| 639 | The lock west of the green immovable bush, to lock     |
+| 640 | The lock west of the green immovable bush, to lock.    |
+| 641 | The lock west of the green immovable bushes locked     |
+| 642 | The lock west of the green immovable bushes locked.    |
+| 643 | The lock west of the green immovable bushes to lock    |
+| 644 | The lock west of the green immovable bushes to lock.   |
+| 645 | The lock west of the green immovable bushes, locked    |
+| 646 | The lock west of the green immovable bushes, locked.   |
+| 647 | The lock west of the green immovable bushes, to lock   |
+| 648 | The lock west of the green immovable bushes, to lock.  |
+| 649 | The lock west of the immovable green bush locked       |
+| 650 | The lock west of the immovable green bush locked.      |
+| 651 | The lock west of the immovable green bush to lock      |
+| 652 | The lock west of the immovable green bush to lock.     |
+| 653 | The lock west of the immovable green bush, locked      |
+| 654 | The lock west of the immovable green bush, locked.     |
+| 655 | The lock west of the immovable green bush, to lock     |
+| 656 | The lock west of the immovable green bush, to lock.    |
+| 657 | The lock west of the immovable green bushes locked     |
+| 658 | The lock west of the immovable green bushes locked.    |
+| 659 | The lock west of the immovable green bushes to lock    |
+| 660 | The lock west of the immovable green bushes to lock.   |
+| 661 | The lock west of the immovable green bushes, locked    |
+| 662 | The lock west of the immovable green bushes, locked.   |
+| 663 | The lock west of the immovable green bushes, to lock   |
+| 664 | The lock west of the immovable green bushes, to lock.  |
+| 665 | The lock, locked, west of a green immovable bush       |
+| 666 | The lock, locked, west of an immovable green bush      |
+| 667 | The lock, locked, west of green immovable bushes       |
+| 668 | The lock, locked, west of immovable green bushes       |
+| 669 | The lock, locked, west of the green immovable bush     |
+| 670 | The lock, locked, west of the green immovable bushes   |
+| 671 | The lock, locked, west of the immovable green bush     |
+| 672 | The lock, locked, west of the immovable green bushes   |
+| 673 | The lock, to lock, west of a green immovable bush      |
+| 674 | The lock, to lock, west of an immovable green bush     |
+| 675 | The lock, to lock, west of green immovable bushes      |
+| 676 | The lock, to lock, west of immovable green bushes      |
+| 677 | The lock, to lock, west of the green immovable bush    |
+| 678 | The lock, to lock, west of the green immovable bushes  |
+| 679 | The lock, to lock, west of the immovable green bush    |
+| 680 | The lock, to lock, west of the immovable green bushes  |
+| 681 | The lock, west of a green immovable bush locked        |
+| 682 | The lock, west of a green immovable bush locked.       |
+| 683 | The lock, west of a green immovable bush to lock       |
+| 684 | The lock, west of a green immovable bush to lock.      |
+| 685 | The lock, west of an immovable green bush locked       |
+| 686 | The lock, west of an immovable green bush locked.      |
+| 687 | The lock, west of an immovable green bush to lock      |
+| 688 | The lock, west of an immovable green bush to lock.     |
+| 689 | The lock, west of green immovable bushes locked        |
+| 690 | The lock, west of green immovable bushes locked.       |
+| 691 | The lock, west of green immovable bushes to lock       |
+| 692 | The lock, west of green immovable bushes to lock.      |
+| 693 | The lock, west of immovable green bushes locked        |
+| 694 | The lock, west of immovable green bushes locked.       |
+| 695 | The lock, west of immovable green bushes to lock       |
+| 696 | The lock, west of immovable green bushes to lock.      |
+| 697 | The lock, west of the green immovable bush locked      |
+| 698 | The lock, west of the green immovable bush locked.     |
+| 699 | The lock, west of the green immovable bush to lock     |
+| 700 | The lock, west of the green immovable bush to lock.    |
+| 701 | The lock, west of the green immovable bushes locked    |
+| 702 | The lock, west of the green immovable bushes locked.   |
+| 703 | The lock, west of the green immovable bushes to lock   |
+| 704 | The lock, west of the green immovable bushes to lock.  |
+| 705 | The lock, west of the immovable green bush locked      |
+| 706 | The lock, west of the immovable green bush locked.     |
+| 707 | The lock, west of the immovable green bush to lock     |
+| 708 | The lock, west of the immovable green bush to lock.    |
+| 709 | The lock, west of the immovable green bushes locked    |
+| 710 | The lock, west of the immovable green bushes locked.   |
+| 711 | The lock, west of the immovable green bushes to lock   |
+| 712 | The lock, west of the immovable green bushes to lock.  |
+| 713 | The locked lock west of a green immovable bush         |
+| 714 | The locked lock west of a green immovable bush.        |
+| 715 | The locked lock west of an immovable green bush        |
+| 716 | The locked lock west of an immovable green bush.       |
+| 717 | The locked lock west of green immovable bushes         |
+| 718 | The locked lock west of green immovable bushes.        |
+| 719 | The locked lock west of immovable green bushes         |
+| 720 | The locked lock west of immovable green bushes.        |
+| 721 | The locked lock west of the green immovable bush       |
+| 722 | The locked lock west of the green immovable bush.      |
+| 723 | The locked lock west of the green immovable bushes     |
+| 724 | The locked lock west of the green immovable bushes.    |
+| 725 | The locked lock west of the immovable green bush       |
+| 726 | The locked lock west of the immovable green bush.      |
+| 727 | The locked lock west of the immovable green bushes     |
+| 728 | The locked lock west of the immovable green bushes.    |
+| 729 | The locked lock, west of a green immovable bush        |
+| 730 | The locked lock, west of an immovable green bush       |
+| 731 | The locked lock, west of green immovable bushes        |
+| 732 | The locked lock, west of immovable green bushes        |
+| 733 | The locked lock, west of the green immovable bush      |
+| 734 | The locked lock, west of the green immovable bushes    |
+| 735 | The locked lock, west of the immovable green bush      |
+| 736 | The locked lock, west of the immovable green bushes    |
+| 737 | The locked locks west of a green immovable bush        |
+| 738 | The locked locks west of a green immovable bush.       |
+| 739 | The locked locks west of an immovable green bush       |
+| 740 | The locked locks west of an immovable green bush.      |
+| 741 | The locked locks west of green immovable bushes        |
+| 742 | The locked locks west of green immovable bushes.       |
+| 743 | The locked locks west of immovable green bushes        |
+| 744 | The locked locks west of immovable green bushes.       |
+| 745 | The locked locks west of the green immovable bush      |
+| 746 | The locked locks west of the green immovable bush.     |
+| 747 | The locked locks west of the green immovable bushes    |
+| 748 | The locked locks west of the green immovable bushes.   |
+| 749 | The locked locks west of the immovable green bush      |
+| 750 | The locked locks west of the immovable green bush.     |
+| 751 | The locked locks west of the immovable green bushes    |
+| 752 | The locked locks west of the immovable green bushes.   |
+| 753 | The locked locks, west of a green immovable bush       |
+| 754 | The locked locks, west of an immovable green bush      |
+| 755 | The locked locks, west of green immovable bushes       |
+| 756 | The locked locks, west of immovable green bushes       |
+| 757 | The locked locks, west of the green immovable bush     |
+| 758 | The locked locks, west of the green immovable bushes   |
+| 759 | The locked locks, west of the immovable green bush     |
+| 760 | The locked locks, west of the immovable green bushes   |
+| 761 | The locks locked west of a green immovable bush        |
+| 762 | The locks locked west of a green immovable bush.       |
+| 763 | The locks locked west of an immovable green bush       |
+| 764 | The locks locked west of an immovable green bush.      |
+| 765 | The locks locked west of green immovable bushes        |
+| 766 | The locks locked west of green immovable bushes.       |
+| 767 | The locks locked west of immovable green bushes        |
+| 768 | The locks locked west of immovable green bushes.       |
+| 769 | The locks locked west of the green immovable bush      |
+| 770 | The locks locked west of the green immovable bush.     |
+| 771 | The locks locked west of the green immovable bushes    |
+| 772 | The locks locked west of the green immovable bushes.   |
+| 773 | The locks locked west of the immovable green bush      |
+| 774 | The locks locked west of the immovable green bush.     |
+| 775 | The locks locked west of the immovable green bushes    |
+| 776 | The locks locked west of the immovable green bushes.   |
+| 777 | The locks locked, west of a green immovable bush       |
+| 778 | The locks locked, west of an immovable green bush      |
+| 779 | The locks locked, west of green immovable bushes       |
+| 780 | The locks locked, west of immovable green bushes       |
+| 781 | The locks locked, west of the green immovable bush     |
+| 782 | The locks locked, west of the green immovable bushes   |
+| 783 | The locks locked, west of the immovable green bush     |
+| 784 | The locks locked, west of the immovable green bushes   |
+| 785 | The locks to lock west of a green immovable bush       |
+| 786 | The locks to lock west of a green immovable bush.      |
+| 787 | The locks to lock west of an immovable green bush      |
+| 788 | The locks to lock west of an immovable green bush.     |
+| 789 | The locks to lock west of green immovable bushes       |
+| 790 | The locks to lock west of green immovable bushes.      |
+| 791 | The locks to lock west of immovable green bushes       |
+| 792 | The locks to lock west of immovable green bushes.      |
+| 793 | The locks to lock west of the green immovable bush     |
+| 794 | The locks to lock west of the green immovable bush.    |
+| 795 | The locks to lock west of the green immovable bushes   |
+| 796 | The locks to lock west of the green immovable bushes.  |
+| 797 | The locks to lock west of the immovable green bush     |
+| 798 | The locks to lock west of the immovable green bush.    |
+| 799 | The locks to lock west of the immovable green bushes   |
+| 800 | The locks to lock west of the immovable green bushes.  |
+| 801 | The locks to lock, west of a green immovable bush      |
+| 802 | The locks to lock, west of an immovable green bush     |
+| 803 | The locks to lock, west of green immovable bushes      |
+| 804 | The locks to lock, west of immovable green bushes      |
+| 805 | The locks to lock, west of the green immovable bush    |
+| 806 | The locks to lock, west of the green immovable bushes  |
+| 807 | The locks to lock, west of the immovable green bush    |
+| 808 | The locks to lock, west of the immovable green bushes  |
+| 809 | The locks west of a green immovable bush locked        |
+| 810 | The locks west of a green immovable bush locked.       |
+| 811 | The locks west of a green immovable bush to lock       |
+| 812 | The locks west of a green immovable bush to lock.      |
+| 813 | The locks west of a green immovable bush, locked       |
+| 814 | The locks west of a green immovable bush, locked.      |
+| 815 | The locks west of a green immovable bush, to lock      |
+| 816 | The locks west of a green immovable bush, to lock.     |
+| 817 | The locks west of an immovable green bush locked       |
+| 818 | The locks west of an immovable green bush locked.      |
+| 819 | The locks west of an immovable green bush to lock      |
+| 820 | The locks west of an immovable green bush to lock.     |
+| 821 | The locks west of an immovable green bush, locked      |
+| 822 | The locks west of an immovable green bush, locked.     |
+| 823 | The locks west of an immovable green bush, to lock     |
+| 824 | The locks west of an immovable green bush, to lock.    |
+| 825 | The locks west of green immovable bushes locked        |
+| 826 | The locks west of green immovable bushes locked.       |
+| 827 | The locks west of green immovable bushes to lock       |
+| 828 | The locks west of green immovable bushes to lock.      |
+| 829 | The locks west of green immovable bushes, locked       |
+| 830 | The locks west of green immovable bushes, locked.      |
+| 831 | The locks west of green immovable bushes, to lock      |
+| 832 | The locks west of green immovable bushes, to lock.     |
+| 833 | The locks west of immovable green bushes locked        |
+| 834 | The locks west of immovable green bushes locked.       |
+| 835 | The locks west of immovable green bushes to lock       |
+| 836 | The locks west of immovable green bushes to lock.      |
+| 837 | The locks west of immovable green bushes, locked       |
+| 838 | The locks west of immovable green bushes, locked.      |
+| 839 | The locks west of immovable green bushes, to lock      |
+| 840 | The locks west of immovable green bushes, to lock.     |
+| 841 | The locks west of the green immovable bush locked      |
+| 842 | The locks west of the green immovable bush locked.     |
+| 843 | The locks west of the green immovable bush to lock     |
+| 844 | The locks west of the green immovable bush to lock.    |
+| 845 | The locks west of the green immovable bush, locked     |
+| 846 | The locks west of the green immovable bush, locked.    |
+| 847 | The locks west of the green immovable bush, to lock    |
+| 848 | The locks west of the green immovable bush, to lock.   |
+| 849 | The locks west of the green immovable bushes locked    |
+| 850 | The locks west of the green immovable bushes locked.   |
+| 851 | The locks west of the green immovable bushes to lock   |
+| 852 | The locks west of the green immovable bushes to lock.  |
+| 853 | The locks west of the green immovable bushes, locked   |
+| 854 | The locks west of the green immovable bushes, locked.  |
+| 855 | The locks west of the green immovable bushes, to lock  |
+| 856 | The locks west of the green immovable bushes, to lock. |
+| 857 | The locks west of the immovable green bush locked      |
+| 858 | The locks west of the immovable green bush locked.     |
+| 859 | The locks west of the immovable green bush to lock     |
+| 860 | The locks west of the immovable green bush to lock.    |
+| 861 | The locks west of the immovable green bush, locked     |
+| 862 | The locks west of the immovable green bush, locked.    |
+| 863 | The locks west of the immovable green bush, to lock    |
+| 864 | The locks west of the immovable green bush, to lock.   |
+| 865 | The locks west of the immovable green bushes locked    |
+| 866 | The locks west of the immovable green bushes locked.   |
+| 867 | The locks west of the immovable green bushes to lock   |
+| 868 | The locks west of the immovable green bushes to lock.  |
+| 869 | The locks west of the immovable green bushes, locked   |
+| 870 | The locks west of the immovable green bushes, locked.  |
+| 871 | The locks west of the immovable green bushes, to lock  |
+| 872 | The locks west of the immovable green bushes, to lock. |
+| 873 | The locks, locked, west of a green immovable bush      |
+| 874 | The locks, locked, west of an immovable green bush     |
+| 875 | The locks, locked, west of green immovable bushes      |
+| 876 | The locks, locked, west of immovable green bushes      |
+| 877 | The locks, locked, west of the green immovable bush    |
+| 878 | The locks, locked, west of the green immovable bushes  |
+| 879 | The locks, locked, west of the immovable green bush    |
+| 880 | The locks, locked, west of the immovable green bushes  |
+| 881 | The locks, to lock, west of a green immovable bush     |
+| 882 | The locks, to lock, west of an immovable green bush    |
+| 883 | The locks, to lock, west of green immovable bushes     |
+| 884 | The locks, to lock, west of immovable green bushes     |
+| 885 | The locks, to lock, west of the green immovable bush   |
+| 886 | The locks, to lock, west of the green immovable bushes |
+| 887 | The locks, to lock, west of the immovable green bush   |
+| 888 | The locks, to lock, west of the immovable green bushes |
+| 889 | The locks, west of a green immovable bush locked       |
+| 890 | The locks, west of a green immovable bush locked.      |
+| 891 | The locks, west of a green immovable bush to lock      |
+| 892 | The locks, west of a green immovable bush to lock.     |
+| 893 | The locks, west of an immovable green bush locked      |
+| 894 | The locks, west of an immovable green bush locked.     |
+| 895 | The locks, west of an immovable green bush to lock     |
+| 896 | The locks, west of an immovable green bush to lock.    |
+| 897 | The locks, west of green immovable bushes locked       |
+| 898 | The locks, west of green immovable bushes locked.      |
+| 899 | The locks, west of green immovable bushes to lock      |
+| 900 | The locks, west of green immovable bushes to lock.     |
+| 901 | The locks, west of immovable green bushes locked       |
+| 902 | The locks, west of immovable green bushes locked.      |
+| 903 | The locks, west of immovable green bushes to lock      |
+| 904 | The locks, west of immovable green bushes to lock.     |
+| 905 | The locks, west of the green immovable bush locked     |
+| 906 | The locks, west of the green immovable bush locked.    |
+| 907 | The locks, west of the green immovable bush to lock    |
+| 908 | The locks, west of the green immovable bush to lock.   |
+| 909 | The locks, west of the green immovable bushes locked   |
+| 910 | The locks, west of the green immovable bushes locked.  |
+| 911 | The locks, west of the green immovable bushes to lock  |
+| 912 | The locks, west of the green immovable bushes to lock. |
+| 913 | The locks, west of the immovable green bush locked     |
+| 914 | The locks, west of the immovable green bush locked.    |
+| 915 | The locks, west of the immovable green bush to lock    |
+| 916 | The locks, west of the immovable green bush to lock.   |
+| 917 | The locks, west of the immovable green bushes locked   |
+| 918 | The locks, west of the immovable green bushes locked.  |
+| 919 | The locks, west of the immovable green bushes to lock  |
+| 920 | The locks, west of the immovable green bushes to lock. |
++-----+--------------------------------------------------------+
+

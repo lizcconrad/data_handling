@@ -1,0 +1,469 @@
+GRAPH NAME: idSink1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 240                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 7                  |
+| Nodes Covered                   | 6                  |
+| Nodes Included                  | 6                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.8571428571428571 |
+| Node Inclusion                  | 0.8571428571428571 |
++---------------------------------+--------------------+
+| Edge Count                      | 6                  |
+| Edges Covered                   | 5                  |
+| Edges Included                  | 5                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8333333333333334 |
+| Edge Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+
++------------------------------------------------------------------------------------+
+|                                    GOLD OUTPUTS                                    |
++-----------------------------------------------------------------------+------------+
+| Gold Output                                                           | Generated? |
++-----------------------------------------------------------------------+------------+
+| the stained white porcelain sink west of the immovable green painting | False      |
++-----------------------------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         NODE METRICS                                                         |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                            | Inclusion Comment                 |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| idSink1     | True         | True          | Covered                                     | Included                          |
+| idporcelain | False        | False         | 'idporcelain' not in lexicon's node entries | No SEMENT generated for this node |
+| stained     | True         | True          | Covered                                     | Included                          |
+| white       | True         | True          | Covered                                     | Included                          |
+| idPainting1 | True         | True          | Covered                                     | Included                          |
+| green       | True         | True          | Covered                                     | Included                          |
+| yes         | True         | True          | Covered                                     | Included                          |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                             EDGE METRICS                                                                            |
++------------------------------+-------------+-------------+--------------+---------------+---------------------------------------+-----------------------------------+
+| Edge                         | Parent      | Child       | Edge Covered | Edge Included | Coverage Comment                      | Inclusion Comment                 |
++------------------------------+-------------+-------------+--------------+---------------+---------------------------------------+-----------------------------------+
+| idSink1_prop_idDescriptor    | idSink1     | idporcelain | False        | False         | child of 'idDescriptor' has no SEMENT | No SEMENT generated for this edge |
+| idSink1_prop_idDescriptor_1  | idSink1     | stained     | True         | True          | Covered                               | Included                          |
+| idSink1_prop_idColor         | idSink1     | white       | True         | True          | Covered                               | Included                          |
+| isWestOf                     | idSink1     | idPainting1 | True         | True          | Covered                               | Included                          |
+| idPainting1_prop_idColor     | idPainting1 | green       | True         | True          | Covered                               | Included                          |
+| idPainting1_prop_idImmovable | idPainting1 | yes         | True         | True          | Covered                               | Included                          |
++------------------------------+-------------+-------------+--------------+---------------+---------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h101                                                                      |
+|               |   INDEX: x100                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h132 ARG0: e129 ARG1: u130 ARG2: x131 ]               |
+|               |           [ def_implicit_q LBL: h143 ARG0: x140 RSTR: h141 BODY: h142 ]          |
+|               |           [ _west_a_1 LBL: h128 ARG0: i125 ARG1: x126 ARG2: u127 ]               |
+|               |           [ def_udef_a_q LBL: h138 ARG0: x135 RSTR: h136 BODY: h137 ]            |
+|               |           [ _immovable_a_1 LBL: h124 ARG0: e122 ARG1: u123 ]                     |
+|               |           [ _green_a_2 LBL: h114 ARG0: i112 ARG1: i113 ]                         |
+|               |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ]                     |
+|               |           [ place_n LBL: h134 ARG0: x133 ]                                       |
+|               |           [ _white_a_1 LBL: h108 ARG0: i106 ARG1: i107 ]                         |
+|               |           [ _stain_v_1 LBL: h105 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: i104  |
+|               | ]                                                                                |
+|               |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|               |   HCONS: < h136 qeq h111 h141 qeq h134 >                                         |
+|               |   ICONS: < e102 topic i104 >                                                     |
+|               |   EQS: < h114 eq h111 i113 eq x109 h124 eq h111 u123 eq x109 x135 eq x109 h128   |
+|               | eq h139 u127 eq x135 h128 eq h134 x126 eq x133 x140 eq x133 h132 eq h144 x131 eq |
+|               | x140 h105 eq h101 i104 eq x100 h108 eq h101 i107 eq x100 h132 eq h101 u130 eq    |
+|               | x100 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h101                                                                      |
+|               |   INDEX: x100                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h101 ARG0: e129 ARG1: x100 ARG2: x126 ]               |
+|               |           [ def_implicit_q LBL: h143 ARG0: x126 RSTR: h141 BODY: h142 ]          |
+|               |           [ _west_a_1 LBL: h128 ARG0: i125 ARG1: x126 ARG2: x109 ]               |
+|               |           [ def_udef_a_q LBL: h138 ARG0: x109 RSTR: h136 BODY: h137 ]            |
+|               |           [ _immovable_a_1 LBL: h111 ARG0: e122 ARG1: x109 ]                     |
+|               |           [ _green_a_2 LBL: h111 ARG0: i112 ARG1: x109 ]                         |
+|               |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ]                     |
+|               |           [ place_n LBL: h128 ARG0: x126 ]                                       |
+|               |           [ _white_a_1 LBL: h101 ARG0: i106 ARG1: x100 ]                         |
+|               |           [ _stain_v_1 LBL: h101 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: x100  |
+|               | ]                                                                                |
+|               |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|               |   HCONS: < h136 qeq h111 h141 qeq h128 >                                         |
+|               |   ICONS: < e102 topic x100 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h153                                                                      |
+|               |   INDEX: e150                                                                    |
+|               |   RELS: < [ unknown LBL: h149 ARG: x100 ARG0: e150 ]                             |
+|               |           [ def_udef_a_q LBL: h148 ARG0: x100 RSTR: h146 BODY: h147 ]            |
+|               |           [ loc_nonsp LBL: h101 ARG0: e129 ARG1: x100 ARG2: x126 ]               |
+|               |           [ def_implicit_q LBL: h143 ARG0: x126 RSTR: h141 BODY: h142 ]          |
+|               |           [ _west_a_1 LBL: h128 ARG0: i125 ARG1: x126 ARG2: x109 ]               |
+|               |           [ def_udef_a_q LBL: h138 ARG0: x109 RSTR: h136 BODY: h137 ]            |
+|               |           [ _immovable_a_1 LBL: h111 ARG0: e122 ARG1: x109 ]                     |
+|               |           [ _green_a_2 LBL: h111 ARG0: i112 ARG1: x109 ]                         |
+|               |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ]                     |
+|               |           [ place_n LBL: h128 ARG0: x126 ]                                       |
+|               |           [ _white_a_1 LBL: h101 ARG0: i106 ARG1: x100 ]                         |
+|               |           [ _stain_v_1 LBL: h101 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: x100  |
+|               | ]                                                                                |
+|               |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|               |   HCONS: < h136 qeq h111 h141 qeq h128 h146 qeq h101 h153 qeq h149 >             |
+|               |   ICONS: < e102 topic x100 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+|                                     NODE SEMENTS                                    |
++-------------+-----------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                      |
++-------------+-----------------------------------------------------------------------+
+| idSink1     | [ TOP: h101                                                           |
+|             |   INDEX: x100                                                         |
+|             |   RELS: < [ _sink_n_1 LBL: h101 ARG0: x100 ] > ]                      |
++-------------+-----------------------------------------------------------------------+
+| idporcelain | None                                                                  |
++-------------+-----------------------------------------------------------------------+
+| stained     | [ TOP: h105                                                           |
+|             |   INDEX: e102                                                         |
+|             |   RELS: < [ _stain_v_1 LBL: h105 ARG0: e102 ARG1: i103 ARG2: i104 ] > |
+|             |   SLOTS: < ARG1: i103 ARG2: i104 > ]                                  |
++-------------+-----------------------------------------------------------------------+
+| white       | [ TOP: h108                                                           |
+|             |   INDEX: i106                                                         |
+|             |   RELS: < [ _white_a_1 LBL: h108 ARG0: i106 ARG1: i107 ] >            |
+|             |   SLOTS: < ARG1: i107 > ]                                             |
++-------------+-----------------------------------------------------------------------+
+| idPainting1 | [ TOP: h111                                                           |
+|             |   INDEX: x109                                                         |
+|             |   RELS: < [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ] >        |
+|             |   SLOTS: < ARG1: i110 > ]                                             |
++-------------+-----------------------------------------------------------------------+
+| green       | [ TOP: h114                                                           |
+|             |   INDEX: i112                                                         |
+|             |   RELS: < [ _green_a_2 LBL: h114 ARG0: i112 ARG1: i113 ] >            |
+|             |   SLOTS: < ARG1: i113 > ]                                             |
++-------------+-----------------------------------------------------------------------+
+| yes         | [ TOP: h118                                                           |
+|             |   INDEX: e115                                                         |
+|             |   RELS: < [ _true_a_of LBL: h118 ARG0: e115 ARG1: u116 ARG2: u117 ] > |
+|             |   SLOTS: < ARG1: u116 ARG2: u117 > ]                                  |
++-------------+-----------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| Edge                         | Parent      | Child       | Generated SEMENT                                                                 |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idSink1_prop_idDescriptor    | idSink1     | idporcelain | None                                                                             |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idSink1_prop_idDescriptor_1  | idSink1     | stained     | [ TOP: h101                                                                      |
+|                              |             |             |   INDEX: x100                                                                    |
+|                              |             |             |   RELS: < [ _stain_v_1 LBL: h105 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: i104  |
+|                              |             |             | ]                                                                                |
+|                              |             |             |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|                              |             |             |   ICONS: < e102 topic i104 >                                                     |
+|                              |             |             |   EQS: < h105 eq h101 i104 eq x100 > ]                                           |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idSink1_prop_idColor         | idSink1     | white       | [ TOP: h101                                                                      |
+|                              |             |             |   INDEX: x100                                                                    |
+|                              |             |             |   RELS: < [ _white_a_1 LBL: h108 ARG0: i106 ARG1: i107 ]                         |
+|                              |             |             |           [ _stain_v_1 LBL: h105 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: i104  |
+|                              |             |             | ]                                                                                |
+|                              |             |             |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|                              |             |             |   ICONS: < e102 topic i104 >                                                     |
+|                              |             |             |   EQS: < h105 eq h101 i104 eq x100 h108 eq h101 i107 eq x100 > ]                 |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| isWestOf                     | idSink1     | idPainting1 | [ TOP: h101                                                                      |
+|                              |             |             |   INDEX: x100                                                                    |
+|                              |             |             |   RELS: < [ loc_nonsp LBL: h132 ARG0: e129 ARG1: u130 ARG2: x131 ]               |
+|                              |             |             |           [ def_implicit_q LBL: h143 ARG0: x140 RSTR: h141 BODY: h142 ]          |
+|                              |             |             |           [ _west_a_1 LBL: h128 ARG0: i125 ARG1: x126 ARG2: u127 ]               |
+|                              |             |             |           [ def_udef_a_q LBL: h138 ARG0: x135 RSTR: h136 BODY: h137 ]            |
+|                              |             |             |           [ _immovable_a_1 LBL: h124 ARG0: e122 ARG1: u123 ]                     |
+|                              |             |             |           [ _green_a_2 LBL: h114 ARG0: i112 ARG1: i113 ]                         |
+|                              |             |             |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ]                     |
+|                              |             |             |           [ place_n LBL: h134 ARG0: x133 ]                                       |
+|                              |             |             |           [ _white_a_1 LBL: h108 ARG0: i106 ARG1: i107 ]                         |
+|                              |             |             |           [ _stain_v_1 LBL: h105 ARG0: e102 [ e PERF: - ] ARG1: i103 ARG2: i104  |
+|                              |             |             | ]                                                                                |
+|                              |             |             |           [ _sink_n_1 LBL: h101 ARG0: x100 ] >                                   |
+|                              |             |             |   HCONS: < h136 qeq h111 h141 qeq h134 >                                         |
+|                              |             |             |   ICONS: < e102 topic i104 >                                                     |
+|                              |             |             |   EQS: < h114 eq h111 i113 eq x109 h124 eq h111 u123 eq x109 x135 eq x109 h128   |
+|                              |             |             | eq h139 u127 eq x135 h128 eq h134 x126 eq x133 x140 eq x133 h132 eq h144 x131 eq |
+|                              |             |             | x140 h105 eq h101 i104 eq x100 h108 eq h101 i107 eq x100 h132 eq h101 u130 eq    |
+|                              |             |             | x100 > ]                                                                         |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idPainting1_prop_idColor     | idPainting1 | green       | [ TOP: h111                                                                      |
+|                              |             |             |   INDEX: x109                                                                    |
+|                              |             |             |   RELS: < [ _green_a_2 LBL: h114 ARG0: i112 ARG1: i113 ]                         |
+|                              |             |             |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ] >                   |
+|                              |             |             |   EQS: < h114 eq h111 i113 eq x109 >                                             |
+|                              |             |             |   SLOTS: < ARG1: i110 > ]                                                        |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idPainting1_prop_idImmovable | idPainting1 | yes         | [ TOP: h111                                                                      |
+|                              |             |             |   INDEX: x109                                                                    |
+|                              |             |             |   RELS: < [ _immovable_a_1 LBL: h124 ARG0: e122 ARG1: u123 ]                     |
+|                              |             |             |           [ _green_a_2 LBL: h114 ARG0: i112 ARG1: i113 ]                         |
+|                              |             |             |           [ _painting_n_of LBL: h111 ARG0: x109 ARG1: i110 ] >                   |
+|                              |             |             |   EQS: < h114 eq h111 i113 eq x109 h124 eq h111 u123 eq x109 >                   |
+|                              |             |             |   SLOTS: < ARG1: i110 > ]                                                        |
++------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------+
+|                        GENERATED ENGLISH TEXT                        |
++-----+----------------------------------------------------------------+
+| #   | Generated Text                                                 |
++-----+----------------------------------------------------------------+
+| 1   | A stained white sink west of a green immovable painting        |
+| 2   | A stained white sink west of a green immovable painting.       |
+| 3   | A stained white sink west of an immovable green painting       |
+| 4   | A stained white sink west of an immovable green painting.      |
+| 5   | A stained white sink west of green immovable paintings         |
+| 6   | A stained white sink west of green immovable paintings.        |
+| 7   | A stained white sink west of immovable green paintings         |
+| 8   | A stained white sink west of immovable green paintings.        |
+| 9   | A stained white sink west of the green immovable painting      |
+| 10  | A stained white sink west of the green immovable painting.     |
+| 11  | A stained white sink west of the green immovable paintings     |
+| 12  | A stained white sink west of the green immovable paintings.    |
+| 13  | A stained white sink west of the immovable green painting      |
+| 14  | A stained white sink west of the immovable green painting.     |
+| 15  | A stained white sink west of the immovable green paintings     |
+| 16  | A stained white sink west of the immovable green paintings.    |
+| 17  | A stained white sink, west of a green immovable painting       |
+| 18  | A stained white sink, west of an immovable green painting      |
+| 19  | A stained white sink, west of green immovable paintings        |
+| 20  | A stained white sink, west of immovable green paintings        |
+| 21  | A stained white sink, west of the green immovable painting     |
+| 22  | A stained white sink, west of the green immovable paintings    |
+| 23  | A stained white sink, west of the immovable green painting     |
+| 24  | A stained white sink, west of the immovable green paintings    |
+| 25  | A white stained sink west of a green immovable painting        |
+| 26  | A white stained sink west of a green immovable painting.       |
+| 27  | A white stained sink west of an immovable green painting       |
+| 28  | A white stained sink west of an immovable green painting.      |
+| 29  | A white stained sink west of green immovable paintings         |
+| 30  | A white stained sink west of green immovable paintings.        |
+| 31  | A white stained sink west of immovable green paintings         |
+| 32  | A white stained sink west of immovable green paintings.        |
+| 33  | A white stained sink west of the green immovable painting      |
+| 34  | A white stained sink west of the green immovable painting.     |
+| 35  | A white stained sink west of the green immovable paintings     |
+| 36  | A white stained sink west of the green immovable paintings.    |
+| 37  | A white stained sink west of the immovable green painting      |
+| 38  | A white stained sink west of the immovable green painting.     |
+| 39  | A white stained sink west of the immovable green paintings     |
+| 40  | A white stained sink west of the immovable green paintings.    |
+| 41  | A white stained sink, west of a green immovable painting       |
+| 42  | A white stained sink, west of an immovable green painting      |
+| 43  | A white stained sink, west of green immovable paintings        |
+| 44  | A white stained sink, west of immovable green paintings        |
+| 45  | A white stained sink, west of the green immovable painting     |
+| 46  | A white stained sink, west of the green immovable paintings    |
+| 47  | A white stained sink, west of the immovable green painting     |
+| 48  | A white stained sink, west of the immovable green paintings    |
+| 49  | Stained white sink west of a green immovable painting          |
+| 50  | Stained white sink west of a green immovable painting.         |
+| 51  | Stained white sink west of an immovable green painting         |
+| 52  | Stained white sink west of an immovable green painting.        |
+| 53  | Stained white sink west of green immovable paintings           |
+| 54  | Stained white sink west of green immovable paintings.          |
+| 55  | Stained white sink west of immovable green paintings           |
+| 56  | Stained white sink west of immovable green paintings.          |
+| 57  | Stained white sink west of the green immovable painting        |
+| 58  | Stained white sink west of the green immovable painting.       |
+| 59  | Stained white sink west of the green immovable paintings       |
+| 60  | Stained white sink west of the green immovable paintings.      |
+| 61  | Stained white sink west of the immovable green painting        |
+| 62  | Stained white sink west of the immovable green painting.       |
+| 63  | Stained white sink west of the immovable green paintings       |
+| 64  | Stained white sink west of the immovable green paintings.      |
+| 65  | Stained white sink, west of a green immovable painting         |
+| 66  | Stained white sink, west of an immovable green painting        |
+| 67  | Stained white sink, west of green immovable paintings          |
+| 68  | Stained white sink, west of immovable green paintings          |
+| 69  | Stained white sink, west of the green immovable painting       |
+| 70  | Stained white sink, west of the green immovable paintings      |
+| 71  | Stained white sink, west of the immovable green painting       |
+| 72  | Stained white sink, west of the immovable green paintings      |
+| 73  | Stained white sinks west of a green immovable painting         |
+| 74  | Stained white sinks west of a green immovable painting.        |
+| 75  | Stained white sinks west of an immovable green painting        |
+| 76  | Stained white sinks west of an immovable green painting.       |
+| 77  | Stained white sinks west of green immovable paintings          |
+| 78  | Stained white sinks west of green immovable paintings.         |
+| 79  | Stained white sinks west of immovable green paintings          |
+| 80  | Stained white sinks west of immovable green paintings.         |
+| 81  | Stained white sinks west of the green immovable painting       |
+| 82  | Stained white sinks west of the green immovable painting.      |
+| 83  | Stained white sinks west of the green immovable paintings      |
+| 84  | Stained white sinks west of the green immovable paintings.     |
+| 85  | Stained white sinks west of the immovable green painting       |
+| 86  | Stained white sinks west of the immovable green painting.      |
+| 87  | Stained white sinks west of the immovable green paintings      |
+| 88  | Stained white sinks west of the immovable green paintings.     |
+| 89  | Stained white sinks, west of a green immovable painting        |
+| 90  | Stained white sinks, west of an immovable green painting       |
+| 91  | Stained white sinks, west of green immovable paintings         |
+| 92  | Stained white sinks, west of immovable green paintings         |
+| 93  | Stained white sinks, west of the green immovable painting      |
+| 94  | Stained white sinks, west of the green immovable paintings     |
+| 95  | Stained white sinks, west of the immovable green painting      |
+| 96  | Stained white sinks, west of the immovable green paintings     |
+| 97  | The stained white sink west of a green immovable painting      |
+| 98  | The stained white sink west of a green immovable painting.     |
+| 99  | The stained white sink west of an immovable green painting     |
+| 100 | The stained white sink west of an immovable green painting.    |
+| 101 | The stained white sink west of green immovable paintings       |
+| 102 | The stained white sink west of green immovable paintings.      |
+| 103 | The stained white sink west of immovable green paintings       |
+| 104 | The stained white sink west of immovable green paintings.      |
+| 105 | The stained white sink west of the green immovable painting    |
+| 106 | The stained white sink west of the green immovable painting.   |
+| 107 | The stained white sink west of the green immovable paintings   |
+| 108 | The stained white sink west of the green immovable paintings.  |
+| 109 | The stained white sink west of the immovable green painting    |
+| 110 | The stained white sink west of the immovable green painting.   |
+| 111 | The stained white sink west of the immovable green paintings   |
+| 112 | The stained white sink west of the immovable green paintings.  |
+| 113 | The stained white sink, west of a green immovable painting     |
+| 114 | The stained white sink, west of an immovable green painting    |
+| 115 | The stained white sink, west of green immovable paintings      |
+| 116 | The stained white sink, west of immovable green paintings      |
+| 117 | The stained white sink, west of the green immovable painting   |
+| 118 | The stained white sink, west of the green immovable paintings  |
+| 119 | The stained white sink, west of the immovable green painting   |
+| 120 | The stained white sink, west of the immovable green paintings  |
+| 121 | The stained white sinks west of a green immovable painting     |
+| 122 | The stained white sinks west of a green immovable painting.    |
+| 123 | The stained white sinks west of an immovable green painting    |
+| 124 | The stained white sinks west of an immovable green painting.   |
+| 125 | The stained white sinks west of green immovable paintings      |
+| 126 | The stained white sinks west of green immovable paintings.     |
+| 127 | The stained white sinks west of immovable green paintings      |
+| 128 | The stained white sinks west of immovable green paintings.     |
+| 129 | The stained white sinks west of the green immovable painting   |
+| 130 | The stained white sinks west of the green immovable painting.  |
+| 131 | The stained white sinks west of the green immovable paintings  |
+| 132 | The stained white sinks west of the green immovable paintings. |
+| 133 | The stained white sinks west of the immovable green painting   |
+| 134 | The stained white sinks west of the immovable green painting.  |
+| 135 | The stained white sinks west of the immovable green paintings  |
+| 136 | The stained white sinks west of the immovable green paintings. |
+| 137 | The stained white sinks, west of a green immovable painting    |
+| 138 | The stained white sinks, west of an immovable green painting   |
+| 139 | The stained white sinks, west of green immovable paintings     |
+| 140 | The stained white sinks, west of immovable green paintings     |
+| 141 | The stained white sinks, west of the green immovable painting  |
+| 142 | The stained white sinks, west of the green immovable paintings |
+| 143 | The stained white sinks, west of the immovable green painting  |
+| 144 | The stained white sinks, west of the immovable green paintings |
+| 145 | The white stained sink west of a green immovable painting      |
+| 146 | The white stained sink west of a green immovable painting.     |
+| 147 | The white stained sink west of an immovable green painting     |
+| 148 | The white stained sink west of an immovable green painting.    |
+| 149 | The white stained sink west of green immovable paintings       |
+| 150 | The white stained sink west of green immovable paintings.      |
+| 151 | The white stained sink west of immovable green paintings       |
+| 152 | The white stained sink west of immovable green paintings.      |
+| 153 | The white stained sink west of the green immovable painting    |
+| 154 | The white stained sink west of the green immovable painting.   |
+| 155 | The white stained sink west of the green immovable paintings   |
+| 156 | The white stained sink west of the green immovable paintings.  |
+| 157 | The white stained sink west of the immovable green painting    |
+| 158 | The white stained sink west of the immovable green painting.   |
+| 159 | The white stained sink west of the immovable green paintings   |
+| 160 | The white stained sink west of the immovable green paintings.  |
+| 161 | The white stained sink, west of a green immovable painting     |
+| 162 | The white stained sink, west of an immovable green painting    |
+| 163 | The white stained sink, west of green immovable paintings      |
+| 164 | The white stained sink, west of immovable green paintings      |
+| 165 | The white stained sink, west of the green immovable painting   |
+| 166 | The white stained sink, west of the green immovable paintings  |
+| 167 | The white stained sink, west of the immovable green painting   |
+| 168 | The white stained sink, west of the immovable green paintings  |
+| 169 | The white stained sinks west of a green immovable painting     |
+| 170 | The white stained sinks west of a green immovable painting.    |
+| 171 | The white stained sinks west of an immovable green painting    |
+| 172 | The white stained sinks west of an immovable green painting.   |
+| 173 | The white stained sinks west of green immovable paintings      |
+| 174 | The white stained sinks west of green immovable paintings.     |
+| 175 | The white stained sinks west of immovable green paintings      |
+| 176 | The white stained sinks west of immovable green paintings.     |
+| 177 | The white stained sinks west of the green immovable painting   |
+| 178 | The white stained sinks west of the green immovable painting.  |
+| 179 | The white stained sinks west of the green immovable paintings  |
+| 180 | The white stained sinks west of the green immovable paintings. |
+| 181 | The white stained sinks west of the immovable green painting   |
+| 182 | The white stained sinks west of the immovable green painting.  |
+| 183 | The white stained sinks west of the immovable green paintings  |
+| 184 | The white stained sinks west of the immovable green paintings. |
+| 185 | The white stained sinks, west of a green immovable painting    |
+| 186 | The white stained sinks, west of an immovable green painting   |
+| 187 | The white stained sinks, west of green immovable paintings     |
+| 188 | The white stained sinks, west of immovable green paintings     |
+| 189 | The white stained sinks, west of the green immovable painting  |
+| 190 | The white stained sinks, west of the green immovable paintings |
+| 191 | The white stained sinks, west of the immovable green painting  |
+| 192 | The white stained sinks, west of the immovable green paintings |
+| 193 | White stained sink west of a green immovable painting          |
+| 194 | White stained sink west of a green immovable painting.         |
+| 195 | White stained sink west of an immovable green painting         |
+| 196 | White stained sink west of an immovable green painting.        |
+| 197 | White stained sink west of green immovable paintings           |
+| 198 | White stained sink west of green immovable paintings.          |
+| 199 | White stained sink west of immovable green paintings           |
+| 200 | White stained sink west of immovable green paintings.          |
+| 201 | White stained sink west of the green immovable painting        |
+| 202 | White stained sink west of the green immovable painting.       |
+| 203 | White stained sink west of the green immovable paintings       |
+| 204 | White stained sink west of the green immovable paintings.      |
+| 205 | White stained sink west of the immovable green painting        |
+| 206 | White stained sink west of the immovable green painting.       |
+| 207 | White stained sink west of the immovable green paintings       |
+| 208 | White stained sink west of the immovable green paintings.      |
+| 209 | White stained sink, west of a green immovable painting         |
+| 210 | White stained sink, west of an immovable green painting        |
+| 211 | White stained sink, west of green immovable paintings          |
+| 212 | White stained sink, west of immovable green paintings          |
+| 213 | White stained sink, west of the green immovable painting       |
+| 214 | White stained sink, west of the green immovable paintings      |
+| 215 | White stained sink, west of the immovable green painting       |
+| 216 | White stained sink, west of the immovable green paintings      |
+| 217 | White stained sinks west of a green immovable painting         |
+| 218 | White stained sinks west of a green immovable painting.        |
+| 219 | White stained sinks west of an immovable green painting        |
+| 220 | White stained sinks west of an immovable green painting.       |
+| 221 | White stained sinks west of green immovable paintings          |
+| 222 | White stained sinks west of green immovable paintings.         |
+| 223 | White stained sinks west of immovable green paintings          |
+| 224 | White stained sinks west of immovable green paintings.         |
+| 225 | White stained sinks west of the green immovable painting       |
+| 226 | White stained sinks west of the green immovable painting.      |
+| 227 | White stained sinks west of the green immovable paintings      |
+| 228 | White stained sinks west of the green immovable paintings.     |
+| 229 | White stained sinks west of the immovable green painting       |
+| 230 | White stained sinks west of the immovable green painting.      |
+| 231 | White stained sinks west of the immovable green paintings      |
+| 232 | White stained sinks west of the immovable green paintings.     |
+| 233 | White stained sinks, west of a green immovable painting        |
+| 234 | White stained sinks, west of an immovable green painting       |
+| 235 | White stained sinks, west of green immovable paintings         |
+| 236 | White stained sinks, west of immovable green paintings         |
+| 237 | White stained sinks, west of the green immovable painting      |
+| 238 | White stained sinks, west of the green immovable paintings     |
+| 239 | White stained sinks, west of the immovable green painting      |
+| 240 | White stained sinks, west of the immovable green paintings     |
++-----+----------------------------------------------------------------+
+

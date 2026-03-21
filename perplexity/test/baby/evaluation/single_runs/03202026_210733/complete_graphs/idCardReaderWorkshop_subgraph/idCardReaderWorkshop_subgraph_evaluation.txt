@@ -1,0 +1,1051 @@
+GRAPH NAME: idCardReaderWorkshop_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 761   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------------------------------------------+
+|                                            GOLD OUTPUTS                                            |
++---------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                           | Generated? |
++---------------------------------------------------------------------------------------+------------+
+| the unknown locked card reader workshop near the door from the closet to the workshop | True       |
++---------------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                         |
++------------------------+--------------+---------------+------------------+-------------------+
+| Node                   | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------------+--------------+---------------+------------------+-------------------+
+| idCardReaderWorkshop   | True         | True          | Covered          | Included          |
+| locked                 | True         | True          | Covered          | Included          |
+| true                   | True         | True          | Covered          | Included          |
+| idClosetToWorkshopDoor | True         | True          | Covered          | Included          |
++------------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                           EDGE METRICS                                                                          |
++-------------------------------------------+----------------------+------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                      | Parent               | Child                  | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-------------------------------------------+----------------------+------------------------+--------------+---------------+------------------+-------------------+
+| idCardReaderWorkshop_prop_idLockedState   | idCardReaderWorkshop | locked                 | True         | True          | Covered          | Included          |
+| idCardReaderWorkshop_prop_idUnknownObject | idCardReaderWorkshop | true                   | True         | True          | Covered          | Included          |
+| isNear                                    | idCardReaderWorkshop | idClosetToWorkshopDoor | True         | True          | Covered          | Included          |
++-------------------------------------------+----------------------+------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2835                                                                     |
+|               |   INDEX: x2834                                                                   |
+|               |   RELS: < [ _near_p LBL: h2905 ARG0: e2902 ARG1: u2903 ARG2: i2904 ]             |
+|               |           [ def_udef_a_q LBL: h2909 ARG0: x2906 RSTR: h2907 BODY: h2908 ]        |
+|               |           [ _to_p LBL: h2896 ARG0: e2893 ARG1: u2894 ARG2: i2895 ]               |
+|               |           [ def_udef_a_q LBL: h2900 ARG0: x2897 RSTR: h2898 BODY: h2899 ]        |
+|               |           [ _workshop_n_1 LBL: h2892 ARG0: x2891 ]                               |
+|               |           [ _from_p LBL: h2885 ARG0: e2882 ARG1: u2883 ARG2: u2884 ]             |
+|               |           [ def_udef_a_q LBL: h2889 ARG0: x2886 RSTR: h2887 BODY: h2888 ]        |
+|               |           [ _closet_n_1 LBL: h2881 ARG0: x2880 ]                                 |
+|               |           [ _door_n_1 LBL: h2879 ARG0: x2878 ]                                   |
+|               |           [ _un-_a_neg LBL: h2877 ARG0: i2875 ARG1: e2876 ]                      |
+|               |           [ _know_v_1 LBL: h2874 ARG0: e2871 [ e PERF: - ] ARG1: u2872 ARG2:     |
+|               | i2873 ]                                                                          |
+|               |           [ _lock_v_cause LBL: h2862 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|               | i2861 ]                                                                          |
+|               |           [ compound LBL: h2858 ARG0: e2855 [ e PROG: - ] ARG1: u2856 ARG2:      |
+|               | u2857 ]                                                                          |
+|               |           [ udef_q LBL: h2853 ARG0: x2850 RSTR: h2851 BODY: h2852 ]              |
+|               |           [ compound LBL: h2849 ARG0: e2846 [ e PROG: - ] ARG1: u2847 ARG2:      |
+|               | u2848 ]                                                                          |
+|               |           [ udef_q LBL: h2844 ARG0: x2841 RSTR: h2842 BODY: h2843 ]              |
+|               |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|               |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|               |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|               |   HCONS: < h2898 qeq h2892 h2887 qeq h2881 h2907 qeq h2879 h2842 qeq h2840 h2851 |
+|               | qeq h2838 >                                                                      |
+|               |   ICONS: < e2859 topic i2861 e2871 topic i2873 >                                 |
+|               |   EQS: < x2897 eq x2891 h2896 eq h2901 i2895 eq x2897 x2886 eq x2880 h2885 eq    |
+|               | h2890 u2884 eq x2886 h2885 eq h2879 u2883 eq x2878 h2896 eq h2879 u2894 eq x2878 |
+|               | x2906 eq x2878 h2905 eq h2910 i2904 eq x2906 h2877 eq h2874 e2876 eq e2871 x2841 |
+|               | eq x2839 h2849 eq h2845 u2848 eq x2841 h2849 eq h2838 u2847 eq x2836 x2850 eq    |
+|               | x2836 h2858 eq h2854 u2857 eq x2850 h2858 eq h2835 u2856 eq x2834 h2862 eq h2835 |
+|               | i2861 eq x2834 h2874 eq h2835 i2873 eq x2834 h2905 eq h2835 u2903 eq x2834 > ]   |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2835                                                                     |
+|               |   INDEX: x2834                                                                   |
+|               |   RELS: < [ _near_p LBL: h2835 ARG0: e2902 ARG1: x2834 ARG2: x2878 ]             |
+|               |           [ def_udef_a_q LBL: h2909 ARG0: x2878 RSTR: h2907 BODY: h2908 ]        |
+|               |           [ _to_p LBL: h2879 ARG0: e2893 ARG1: x2878 ARG2: x2891 ]               |
+|               |           [ def_udef_a_q LBL: h2900 ARG0: x2891 RSTR: h2898 BODY: h2899 ]        |
+|               |           [ _workshop_n_1 LBL: h2892 ARG0: x2891 ]                               |
+|               |           [ _from_p LBL: h2879 ARG0: e2882 ARG1: x2878 ARG2: x2880 ]             |
+|               |           [ def_udef_a_q LBL: h2889 ARG0: x2880 RSTR: h2887 BODY: h2888 ]        |
+|               |           [ _closet_n_1 LBL: h2881 ARG0: x2880 ]                                 |
+|               |           [ _door_n_1 LBL: h2879 ARG0: x2878 ]                                   |
+|               |           [ _un-_a_neg LBL: h2835 ARG0: i2875 ARG1: e2871 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2835 ARG0: e2871 ARG1: u2872 ARG2: x2834 ]           |
+|               |           [ _lock_v_cause LBL: h2835 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|               | x2834 ]                                                                          |
+|               |           [ compound LBL: h2835 ARG0: e2855 [ e PROG: - ] ARG1: x2834 ARG2:      |
+|               | x2836 ]                                                                          |
+|               |           [ udef_q LBL: h2853 ARG0: x2836 RSTR: h2851 BODY: h2852 ]              |
+|               |           [ compound LBL: h2838 ARG0: e2846 [ e PROG: - ] ARG1: x2836 ARG2:      |
+|               | x2839 ]                                                                          |
+|               |           [ udef_q LBL: h2844 ARG0: x2839 RSTR: h2842 BODY: h2843 ]              |
+|               |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|               |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|               |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|               |   HCONS: < h2898 qeq h2892 h2887 qeq h2881 h2907 qeq h2879 h2842 qeq h2840 h2851 |
+|               | qeq h2838 >                                                                      |
+|               |   ICONS: < e2859 topic x2834 e2871 topic x2834 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2919                                                                     |
+|               |   INDEX: e2916                                                                   |
+|               |   RELS: < [ unknown LBL: h2915 ARG: x2834 ARG0: e2916 ]                          |
+|               |           [ def_udef_a_q LBL: h2914 ARG0: x2834 RSTR: h2912 BODY: h2913 ]        |
+|               |           [ _near_p LBL: h2835 ARG0: e2902 ARG1: x2834 ARG2: x2878 ]             |
+|               |           [ def_udef_a_q LBL: h2909 ARG0: x2878 RSTR: h2907 BODY: h2908 ]        |
+|               |           [ _to_p LBL: h2879 ARG0: e2893 ARG1: x2878 ARG2: x2891 ]               |
+|               |           [ def_udef_a_q LBL: h2900 ARG0: x2891 RSTR: h2898 BODY: h2899 ]        |
+|               |           [ _workshop_n_1 LBL: h2892 ARG0: x2891 ]                               |
+|               |           [ _from_p LBL: h2879 ARG0: e2882 ARG1: x2878 ARG2: x2880 ]             |
+|               |           [ def_udef_a_q LBL: h2889 ARG0: x2880 RSTR: h2887 BODY: h2888 ]        |
+|               |           [ _closet_n_1 LBL: h2881 ARG0: x2880 ]                                 |
+|               |           [ _door_n_1 LBL: h2879 ARG0: x2878 ]                                   |
+|               |           [ _un-_a_neg LBL: h2835 ARG0: i2875 ARG1: e2871 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2835 ARG0: e2871 ARG1: u2872 ARG2: x2834 ]           |
+|               |           [ _lock_v_cause LBL: h2835 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|               | x2834 ]                                                                          |
+|               |           [ compound LBL: h2835 ARG0: e2855 [ e PROG: - ] ARG1: x2834 ARG2:      |
+|               | x2836 ]                                                                          |
+|               |           [ udef_q LBL: h2853 ARG0: x2836 RSTR: h2851 BODY: h2852 ]              |
+|               |           [ compound LBL: h2838 ARG0: e2846 [ e PROG: - ] ARG1: x2836 ARG2:      |
+|               | x2839 ]                                                                          |
+|               |           [ udef_q LBL: h2844 ARG0: x2839 RSTR: h2842 BODY: h2843 ]              |
+|               |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|               |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|               |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|               |   HCONS: < h2898 qeq h2892 h2887 qeq h2881 h2907 qeq h2879 h2842 qeq h2840 h2851 |
+|               | qeq h2838 h2912 qeq h2835 h2919 qeq h2915 >                                      |
+|               |   ICONS: < e2859 topic x2834 e2871 topic x2834 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                               |
++------------------------+----------------------------------------------------------------------------------+
+| Node                   | Generated SEMENT                                                                 |
++------------------------+----------------------------------------------------------------------------------+
+| idCardReaderWorkshop   | [ TOP: h2835                                                                     |
+|                        |   INDEX: x2834                                                                   |
+|                        |   RELS: < [ compound LBL: h2858 ARG0: e2855 [ e PROG: - ] ARG1: u2856 ARG2:      |
+|                        | u2857 ]                                                                          |
+|                        |           [ udef_q LBL: h2853 ARG0: x2850 RSTR: h2851 BODY: h2852 ]              |
+|                        |           [ compound LBL: h2849 ARG0: e2846 [ e PROG: - ] ARG1: u2847 ARG2:      |
+|                        | u2848 ]                                                                          |
+|                        |           [ udef_q LBL: h2844 ARG0: x2841 RSTR: h2842 BODY: h2843 ]              |
+|                        |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|                        |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|                        |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|                        |   HCONS: < h2842 qeq h2840 h2851 qeq h2838 >                                     |
+|                        |   EQS: < x2841 eq x2839 h2849 eq h2845 u2848 eq x2841 h2849 eq h2838 u2847 eq    |
+|                        | x2836 x2850 eq x2836 h2858 eq h2854 u2857 eq x2850 h2858 eq h2835 u2856 eq x2834 |
+|                        | > ]                                                                              |
++------------------------+----------------------------------------------------------------------------------+
+| locked                 | [ TOP: h2862                                                                     |
+|                        |   INDEX: e2859                                                                   |
+|                        |   RELS: < [ _lock_v_cause LBL: h2862 ARG0: e2859 ARG1: i2860 ARG2: i2861 ] >     |
+|                        |   SLOTS: < ARG1: i2860 ARG2: i2861 > ]                                           |
++------------------------+----------------------------------------------------------------------------------+
+| true                   | [ TOP: h2866                                                                     |
+|                        |   INDEX: e2863                                                                   |
+|                        |   RELS: < [ _true_a_of LBL: h2866 ARG0: e2863 ARG1: u2864 ARG2: u2865 ] >        |
+|                        |   SLOTS: < ARG1: u2864 ARG2: u2865 > ]                                           |
++------------------------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor | [ TOP: h2879                                                                     |
+|                        |   INDEX: x2878                                                                   |
+|                        |   RELS: < [ _to_p LBL: h2896 ARG0: e2893 ARG1: u2894 ARG2: i2895 ]               |
+|                        |           [ def_udef_a_q LBL: h2900 ARG0: x2897 RSTR: h2898 BODY: h2899 ]        |
+|                        |           [ _workshop_n_1 LBL: h2892 ARG0: x2891 ]                               |
+|                        |           [ _from_p LBL: h2885 ARG0: e2882 ARG1: u2883 ARG2: u2884 ]             |
+|                        |           [ def_udef_a_q LBL: h2889 ARG0: x2886 RSTR: h2887 BODY: h2888 ]        |
+|                        |           [ _closet_n_1 LBL: h2881 ARG0: x2880 ]                                 |
+|                        |           [ _door_n_1 LBL: h2879 ARG0: x2878 ] >                                 |
+|                        |   HCONS: < h2898 qeq h2892 h2887 qeq h2881 >                                     |
+|                        |   EQS: < x2897 eq x2891 h2896 eq h2901 i2895 eq x2897 x2886 eq x2880 h2885 eq    |
+|                        | h2890 u2884 eq x2886 h2885 eq h2879 u2883 eq x2878 h2896 eq h2879 u2894 eq x2878 |
+|                        | > ]                                                                              |
++------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE SEMENTS                                                                                 |
++-------------------------------------------+----------------------+------------------------+----------------------------------------------------------------------------------+
+| Edge                                      | Parent               | Child                  | Generated SEMENT                                                                 |
++-------------------------------------------+----------------------+------------------------+----------------------------------------------------------------------------------+
+| idCardReaderWorkshop_prop_idLockedState   | idCardReaderWorkshop | locked                 | [ TOP: h2835                                                                     |
+|                                           |                      |                        |   INDEX: x2834                                                                   |
+|                                           |                      |                        |   RELS: < [ _lock_v_cause LBL: h2862 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|                                           |                      |                        | i2861 ]                                                                          |
+|                                           |                      |                        |           [ compound LBL: h2858 ARG0: e2855 [ e PROG: - ] ARG1: u2856 ARG2:      |
+|                                           |                      |                        | u2857 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2853 ARG0: x2850 RSTR: h2851 BODY: h2852 ]              |
+|                                           |                      |                        |           [ compound LBL: h2849 ARG0: e2846 [ e PROG: - ] ARG1: u2847 ARG2:      |
+|                                           |                      |                        | u2848 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2844 ARG0: x2841 RSTR: h2842 BODY: h2843 ]              |
+|                                           |                      |                        |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|                                           |                      |                        |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|                                           |                      |                        |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|                                           |                      |                        |   HCONS: < h2842 qeq h2840 h2851 qeq h2838 >                                     |
+|                                           |                      |                        |   ICONS: < e2859 topic i2861 >                                                   |
+|                                           |                      |                        |   EQS: < x2841 eq x2839 h2849 eq h2845 u2848 eq x2841 h2849 eq h2838 u2847 eq    |
+|                                           |                      |                        | x2836 x2850 eq x2836 h2858 eq h2854 u2857 eq x2850 h2858 eq h2835 u2856 eq x2834 |
+|                                           |                      |                        | h2862 eq h2835 i2861 eq x2834 > ]                                                |
++-------------------------------------------+----------------------+------------------------+----------------------------------------------------------------------------------+
+| idCardReaderWorkshop_prop_idUnknownObject | idCardReaderWorkshop | true                   | [ TOP: h2835                                                                     |
+|                                           |                      |                        |   INDEX: x2834                                                                   |
+|                                           |                      |                        |   RELS: < [ _un-_a_neg LBL: h2877 ARG0: i2875 ARG1: e2876 ]                      |
+|                                           |                      |                        |           [ _know_v_1 LBL: h2874 ARG0: e2871 [ e PERF: - ] ARG1: u2872 ARG2:     |
+|                                           |                      |                        | i2873 ]                                                                          |
+|                                           |                      |                        |           [ _lock_v_cause LBL: h2862 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|                                           |                      |                        | i2861 ]                                                                          |
+|                                           |                      |                        |           [ compound LBL: h2858 ARG0: e2855 [ e PROG: - ] ARG1: u2856 ARG2:      |
+|                                           |                      |                        | u2857 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2853 ARG0: x2850 RSTR: h2851 BODY: h2852 ]              |
+|                                           |                      |                        |           [ compound LBL: h2849 ARG0: e2846 [ e PROG: - ] ARG1: u2847 ARG2:      |
+|                                           |                      |                        | u2848 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2844 ARG0: x2841 RSTR: h2842 BODY: h2843 ]              |
+|                                           |                      |                        |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|                                           |                      |                        |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|                                           |                      |                        |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|                                           |                      |                        |   HCONS: < h2842 qeq h2840 h2851 qeq h2838 >                                     |
+|                                           |                      |                        |   ICONS: < e2859 topic i2861 e2871 topic i2873 >                                 |
+|                                           |                      |                        |   EQS: < h2877 eq h2874 e2876 eq e2871 x2841 eq x2839 h2849 eq h2845 u2848 eq    |
+|                                           |                      |                        | x2841 h2849 eq h2838 u2847 eq x2836 x2850 eq x2836 h2858 eq h2854 u2857 eq x2850 |
+|                                           |                      |                        | h2858 eq h2835 u2856 eq x2834 h2862 eq h2835 i2861 eq x2834 h2874 eq h2835 i2873 |
+|                                           |                      |                        | eq x2834 > ]                                                                     |
++-------------------------------------------+----------------------+------------------------+----------------------------------------------------------------------------------+
+| isNear                                    | idCardReaderWorkshop | idClosetToWorkshopDoor | [ TOP: h2835                                                                     |
+|                                           |                      |                        |   INDEX: x2834                                                                   |
+|                                           |                      |                        |   RELS: < [ _near_p LBL: h2905 ARG0: e2902 ARG1: u2903 ARG2: i2904 ]             |
+|                                           |                      |                        |           [ def_udef_a_q LBL: h2909 ARG0: x2906 RSTR: h2907 BODY: h2908 ]        |
+|                                           |                      |                        |           [ _to_p LBL: h2896 ARG0: e2893 ARG1: u2894 ARG2: i2895 ]               |
+|                                           |                      |                        |           [ def_udef_a_q LBL: h2900 ARG0: x2897 RSTR: h2898 BODY: h2899 ]        |
+|                                           |                      |                        |           [ _workshop_n_1 LBL: h2892 ARG0: x2891 ]                               |
+|                                           |                      |                        |           [ _from_p LBL: h2885 ARG0: e2882 ARG1: u2883 ARG2: u2884 ]             |
+|                                           |                      |                        |           [ def_udef_a_q LBL: h2889 ARG0: x2886 RSTR: h2887 BODY: h2888 ]        |
+|                                           |                      |                        |           [ _closet_n_1 LBL: h2881 ARG0: x2880 ]                                 |
+|                                           |                      |                        |           [ _door_n_1 LBL: h2879 ARG0: x2878 ]                                   |
+|                                           |                      |                        |           [ _un-_a_neg LBL: h2877 ARG0: i2875 ARG1: e2876 ]                      |
+|                                           |                      |                        |           [ _know_v_1 LBL: h2874 ARG0: e2871 [ e PERF: - ] ARG1: u2872 ARG2:     |
+|                                           |                      |                        | i2873 ]                                                                          |
+|                                           |                      |                        |           [ _lock_v_cause LBL: h2862 ARG0: e2859 [ e PERF: - ] ARG1: i2860 ARG2: |
+|                                           |                      |                        | i2861 ]                                                                          |
+|                                           |                      |                        |           [ compound LBL: h2858 ARG0: e2855 [ e PROG: - ] ARG1: u2856 ARG2:      |
+|                                           |                      |                        | u2857 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2853 ARG0: x2850 RSTR: h2851 BODY: h2852 ]              |
+|                                           |                      |                        |           [ compound LBL: h2849 ARG0: e2846 [ e PROG: - ] ARG1: u2847 ARG2:      |
+|                                           |                      |                        | u2848 ]                                                                          |
+|                                           |                      |                        |           [ udef_q LBL: h2844 ARG0: x2841 RSTR: h2842 BODY: h2843 ]              |
+|                                           |                      |                        |           [ _card_n_1 LBL: h2840 ARG0: x2839 ]                                   |
+|                                           |                      |                        |           [ _reader_n_of LBL: h2838 ARG0: x2836 ARG1: i2837 ]                    |
+|                                           |                      |                        |           [ _workshop_n_1 LBL: h2835 ARG0: x2834 ] >                             |
+|                                           |                      |                        |   HCONS: < h2898 qeq h2892 h2887 qeq h2881 h2907 qeq h2879 h2842 qeq h2840 h2851 |
+|                                           |                      |                        | qeq h2838 >                                                                      |
+|                                           |                      |                        |   ICONS: < e2859 topic i2861 e2871 topic i2873 >                                 |
+|                                           |                      |                        |   EQS: < x2897 eq x2891 h2896 eq h2901 i2895 eq x2897 x2886 eq x2880 h2885 eq    |
+|                                           |                      |                        | h2890 u2884 eq x2886 h2885 eq h2879 u2883 eq x2878 h2896 eq h2879 u2894 eq x2878 |
+|                                           |                      |                        | x2906 eq x2878 h2905 eq h2910 i2904 eq x2906 h2877 eq h2874 e2876 eq e2871 x2841 |
+|                                           |                      |                        | eq x2839 h2849 eq h2845 u2848 eq x2841 h2849 eq h2838 u2847 eq x2836 x2850 eq    |
+|                                           |                      |                        | x2836 h2858 eq h2854 u2857 eq x2850 h2858 eq h2835 u2856 eq x2834 h2862 eq h2835 |
+|                                           |                      |                        | i2861 eq x2834 h2874 eq h2835 i2873 eq x2834 h2905 eq h2835 u2903 eq x2834 > ]   |
++-------------------------------------------+----------------------+------------------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                      GENERATED ENGLISH TEXT                                      |
++-----+--------------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                             |
++-----+--------------------------------------------------------------------------------------------+
+| 1   | A card readers locked unknown workshop near a door to the workshop from the closet         |
+| 2   | A card readers locked unknown workshop near a door to the workshop from the closets        |
+| 3   | A locked card readers unknown workshop near a door from a closet to the workshop           |
+| 4   | A locked card readers unknown workshop near a door from a closet to the workshops          |
+| 5   | A locked card readers unknown workshop near a door from closets to the workshop            |
+| 6   | A locked card readers unknown workshop near a door from closets to the workshops           |
+| 7   | A locked card readers unknown workshop near a door from the closet to a workshop           |
+| 8   | A locked card readers unknown workshop near a door from the closet to the workshop         |
+| 9   | A locked card readers unknown workshop near a door from the closet to the workshops        |
+| 10  | A locked card readers unknown workshop near a door from the closet to the workshops.       |
+| 11  | A locked card readers unknown workshop near a door from the closet to workshops            |
+| 12  | A locked card readers unknown workshop near a door from the closets to the workshops       |
+| 13  | A locked card readers unknown workshop near a door to a workshop from a closet             |
+| 14  | A locked card readers unknown workshop near a door to a workshop from the closet           |
+| 15  | A locked card readers unknown workshop near a door to a workshop from the closets          |
+| 16  | A locked card readers unknown workshop near a door to the workshop from a closet           |
+| 17  | A locked card readers unknown workshop near a door to the workshop from closets            |
+| 18  | A locked card readers unknown workshop near a door to the workshop from the closet         |
+| 19  | A locked card readers unknown workshop near a door to the workshop from the closets        |
+| 20  | A locked card readers unknown workshop near a door to the workshop from the closets.       |
+| 21  | A locked card readers unknown workshop near a door to the workshops from the closet        |
+| 22  | A locked card readers unknown workshop near a door to the workshops from the closets       |
+| 23  | A locked card readers unknown workshop near a door to workshops from the closet            |
+| 24  | A locked card readers unknown workshop near a door to workshops from the closets           |
+| 25  | A locked card readers unknown workshop near doors from the closet to the workshops         |
+| 26  | A locked card readers unknown workshop near doors to a workshop from the closets           |
+| 27  | A locked card readers unknown workshop near doors to the workshop from the closet          |
+| 28  | A locked card readers unknown workshop near doors to the workshop from the closets         |
+| 29  | A locked card readers unknown workshop near the door from the closet to a workshop         |
+| 30  | A locked card readers unknown workshop near the door from the closet to the workshop       |
+| 31  | A locked card readers unknown workshop near the door from the closet to the workshops      |
+| 32  | A locked card readers unknown workshop near the door to a workshop from the closet         |
+| 33  | A locked card readers unknown workshop near the door to a workshop from the closets        |
+| 34  | A locked card readers unknown workshop near the door to the workshop from a closet         |
+| 35  | A locked card readers unknown workshop near the door to the workshop from the closet       |
+| 36  | A locked card readers unknown workshop near the door to the workshop from the closets      |
+| 37  | A locked card readers unknown workshop near the door to the workshop from the closets.     |
+| 38  | A locked card readers unknown workshop near the doors from the closet to the workshop      |
+| 39  | A locked card readers unknown workshop near the doors from the closet to the workshops     |
+| 40  | A locked card readers unknown workshop near the doors to the workshop from a closet        |
+| 41  | A locked card readers unknown workshop near the doors to the workshop from the closet      |
+| 42  | A locked card readers unknown workshop near the doors to the workshop from the closets     |
+| 43  | A locked unknown card reader workshop near a door from a closet to a workshop              |
+| 44  | A locked unknown card reader workshop near a door from a closet to the workshop            |
+| 45  | A locked unknown card reader workshop near a door from a closet to the workshops           |
+| 46  | A locked unknown card reader workshop near a door from a closet to the workshops.          |
+| 47  | A locked unknown card reader workshop near a door from a closet to workshops               |
+| 48  | A locked unknown card reader workshop near a door from closets to a workshop               |
+| 49  | A locked unknown card reader workshop near a door from closets to the workshop             |
+| 50  | A locked unknown card reader workshop near a door from closets to the workshops            |
+| 51  | A locked unknown card reader workshop near a door from closets to the workshops.           |
+| 52  | A locked unknown card reader workshop near a door from closets to workshops                |
+| 53  | A locked unknown card reader workshop near a door from closets, to the workshops           |
+| 54  | A locked unknown card reader workshop near a door from the closet to a workshop            |
+| 55  | A locked unknown card reader workshop near a door from the closet to a workshop.           |
+| 56  | A locked unknown card reader workshop near a door from the closet to the workshop          |
+| 57  | A locked unknown card reader workshop near a door from the closet to the workshop.         |
+| 58  | A locked unknown card reader workshop near a door from the closet to the workshops         |
+| 59  | A locked unknown card reader workshop near a door from the closet to the workshops.        |
+| 60  | A locked unknown card reader workshop near a door from the closet to workshops             |
+| 61  | A locked unknown card reader workshop near a door from the closet to workshops.            |
+| 62  | A locked unknown card reader workshop near a door from the closets to a workshop           |
+| 63  | A locked unknown card reader workshop near a door from the closets to the workshop         |
+| 64  | A locked unknown card reader workshop near a door from the closets to the workshops        |
+| 65  | A locked unknown card reader workshop near a door from the closets to the workshops.       |
+| 66  | A locked unknown card reader workshop near a door from the closets to workshops            |
+| 67  | A locked unknown card reader workshop near a door to a workshop from a closet              |
+| 68  | A locked unknown card reader workshop near a door to a workshop from a closet.             |
+| 69  | A locked unknown card reader workshop near a door to a workshop from closets               |
+| 70  | A locked unknown card reader workshop near a door to a workshop from closets.              |
+| 71  | A locked unknown card reader workshop near a door to a workshop from the closet            |
+| 72  | A locked unknown card reader workshop near a door to a workshop from the closet.           |
+| 73  | A locked unknown card reader workshop near a door to a workshop from the closets           |
+| 74  | A locked unknown card reader workshop near a door to a workshop from the closets.          |
+| 75  | A locked unknown card reader workshop near a door to the workshop from a closet            |
+| 76  | A locked unknown card reader workshop near a door to the workshop from a closet.           |
+| 77  | A locked unknown card reader workshop near a door to the workshop from closets             |
+| 78  | A locked unknown card reader workshop near a door to the workshop from closets.            |
+| 79  | A locked unknown card reader workshop near a door to the workshop from the closet          |
+| 80  | A locked unknown card reader workshop near a door to the workshop from the closet.         |
+| 81  | A locked unknown card reader workshop near a door to the workshop from the closets         |
+| 82  | A locked unknown card reader workshop near a door to the workshop from the closets.        |
+| 83  | A locked unknown card reader workshop near a door to the workshops from a closet           |
+| 84  | A locked unknown card reader workshop near a door to the workshops from closets            |
+| 85  | A locked unknown card reader workshop near a door to the workshops from the closet         |
+| 86  | A locked unknown card reader workshop near a door to the workshops from the closets        |
+| 87  | A locked unknown card reader workshop near a door to the workshops from the closets.       |
+| 88  | A locked unknown card reader workshop near a door to workshops from a closet               |
+| 89  | A locked unknown card reader workshop near a door to workshops from closets                |
+| 90  | A locked unknown card reader workshop near a door to workshops from the closet             |
+| 91  | A locked unknown card reader workshop near a door to workshops from the closets            |
+| 92  | A locked unknown card reader workshop near a door to workshops from the closets.           |
+| 93  | A locked unknown card reader workshop near doors from a closet to the workshop             |
+| 94  | A locked unknown card reader workshop near doors from a closet to the workshops            |
+| 95  | A locked unknown card reader workshop near doors from closets to the workshops             |
+| 96  | A locked unknown card reader workshop near doors from the closet to a workshop             |
+| 97  | A locked unknown card reader workshop near doors from the closet to the workshop           |
+| 98  | A locked unknown card reader workshop near doors from the closet to the workshops          |
+| 99  | A locked unknown card reader workshop near doors from the closet to the workshops.         |
+| 100 | A locked unknown card reader workshop near doors from the closet to workshops              |
+| 101 | A locked unknown card reader workshop near doors from the closets to the workshops         |
+| 102 | A locked unknown card reader workshop near doors to a workshop from a closet               |
+| 103 | A locked unknown card reader workshop near doors to a workshop from closets                |
+| 104 | A locked unknown card reader workshop near doors to a workshop from the closet             |
+| 105 | A locked unknown card reader workshop near doors to a workshop from the closets            |
+| 106 | A locked unknown card reader workshop near doors to a workshop from the closets.           |
+| 107 | A locked unknown card reader workshop near doors to the workshop from a closet             |
+| 108 | A locked unknown card reader workshop near doors to the workshop from a closet.            |
+| 109 | A locked unknown card reader workshop near doors to the workshop from closets              |
+| 110 | A locked unknown card reader workshop near doors to the workshop from closets.             |
+| 111 | A locked unknown card reader workshop near doors to the workshop from the closet           |
+| 112 | A locked unknown card reader workshop near doors to the workshop from the closet.          |
+| 113 | A locked unknown card reader workshop near doors to the workshop from the closets          |
+| 114 | A locked unknown card reader workshop near doors to the workshop from the closets.         |
+| 115 | A locked unknown card reader workshop near doors to the workshops from the closet          |
+| 116 | A locked unknown card reader workshop near doors to the workshops from the closets         |
+| 117 | A locked unknown card reader workshop near doors to workshops from the closets             |
+| 118 | A locked unknown card reader workshop near the door from a closet to a workshop            |
+| 119 | A locked unknown card reader workshop near the door from a closet to the workshop          |
+| 120 | A locked unknown card reader workshop near the door from a closet to the workshops         |
+| 121 | A locked unknown card reader workshop near the door from a closet to the workshops.        |
+| 122 | A locked unknown card reader workshop near the door from closets to a workshop             |
+| 123 | A locked unknown card reader workshop near the door from closets to the workshop           |
+| 124 | A locked unknown card reader workshop near the door from closets to the workshops          |
+| 125 | A locked unknown card reader workshop near the door from closets, to the workshops         |
+| 126 | A locked unknown card reader workshop near the door from the closet to a workshop          |
+| 127 | A locked unknown card reader workshop near the door from the closet to a workshop.         |
+| 128 | A locked unknown card reader workshop near the door from the closet to the workshop        |
+| 129 | A locked unknown card reader workshop near the door from the closet to the workshops       |
+| 130 | A locked unknown card reader workshop near the door from the closet to the workshops.      |
+| 131 | A locked unknown card reader workshop near the door from the closet to workshops           |
+| 132 | A locked unknown card reader workshop near the door from the closets to a workshop         |
+| 133 | A locked unknown card reader workshop near the door from the closets to the workshop       |
+| 134 | A locked unknown card reader workshop near the door from the closets to the workshops      |
+| 135 | A locked unknown card reader workshop near the door to a workshop from a closet            |
+| 136 | A locked unknown card reader workshop near the door to a workshop from closets             |
+| 137 | A locked unknown card reader workshop near the door to a workshop from the closet          |
+| 138 | A locked unknown card reader workshop near the door to a workshop from the closets         |
+| 139 | A locked unknown card reader workshop near the door to a workshop from the closets.        |
+| 140 | A locked unknown card reader workshop near the door to the workshop from a closet          |
+| 141 | A locked unknown card reader workshop near the door to the workshop from a closet.         |
+| 142 | A locked unknown card reader workshop near the door to the workshop from closets           |
+| 143 | A locked unknown card reader workshop near the door to the workshop from closets.          |
+| 144 | A locked unknown card reader workshop near the door to the workshop from the closet        |
+| 145 | A locked unknown card reader workshop near the door to the workshop from the closet.       |
+| 146 | A locked unknown card reader workshop near the door to the workshop from the closets       |
+| 147 | A locked unknown card reader workshop near the door to the workshop from the closets.      |
+| 148 | A locked unknown card reader workshop near the door to the workshops from a closet         |
+| 149 | A locked unknown card reader workshop near the door to the workshops from the closet       |
+| 150 | A locked unknown card reader workshop near the door to the workshops from the closets      |
+| 151 | A locked unknown card reader workshop near the door to the workshops from the closets.     |
+| 152 | A locked unknown card reader workshop near the door to workshops from a closet             |
+| 153 | A locked unknown card reader workshop near the door to workshops from the closet           |
+| 154 | A locked unknown card reader workshop near the door to workshops from the closets          |
+| 155 | A locked unknown card reader workshop near the door to workshops from the closets.         |
+| 156 | A locked unknown card reader workshop near the doors from a closet to a workshop           |
+| 157 | A locked unknown card reader workshop near the doors from a closet to the workshop         |
+| 158 | A locked unknown card reader workshop near the doors from a closet to the workshops        |
+| 159 | A locked unknown card reader workshop near the doors from closets to the workshop          |
+| 160 | A locked unknown card reader workshop near the doors from closets to the workshops         |
+| 161 | A locked unknown card reader workshop near the doors from the closet to a workshop         |
+| 162 | A locked unknown card reader workshop near the doors from the closet to the workshop       |
+| 163 | A locked unknown card reader workshop near the doors from the closet to the workshops      |
+| 164 | A locked unknown card reader workshop near the doors from the closet to the workshops.     |
+| 165 | A locked unknown card reader workshop near the doors from the closet to workshops          |
+| 166 | A locked unknown card reader workshop near the doors from the closets to the workshop      |
+| 167 | A locked unknown card reader workshop near the doors from the closets to the workshops     |
+| 168 | A locked unknown card reader workshop near the doors to a workshop from a closet           |
+| 169 | A locked unknown card reader workshop near the doors to a workshop from closets            |
+| 170 | A locked unknown card reader workshop near the doors to a workshop from the closet         |
+| 171 | A locked unknown card reader workshop near the doors to a workshop from the closets        |
+| 172 | A locked unknown card reader workshop near the doors to a workshop from the closets.       |
+| 173 | A locked unknown card reader workshop near the doors to the workshop from a closet         |
+| 174 | A locked unknown card reader workshop near the doors to the workshop from a closet.        |
+| 175 | A locked unknown card reader workshop near the doors to the workshop from closets          |
+| 176 | A locked unknown card reader workshop near the doors to the workshop from closets.         |
+| 177 | A locked unknown card reader workshop near the doors to the workshop from the closet       |
+| 178 | A locked unknown card reader workshop near the doors to the workshop from the closet.      |
+| 179 | A locked unknown card reader workshop near the doors to the workshop from the closets      |
+| 180 | A locked unknown card reader workshop near the doors to the workshop from the closets.     |
+| 181 | A locked unknown card reader workshop near the doors to the workshops from a closet        |
+| 182 | A locked unknown card reader workshop near the doors to the workshops from the closet      |
+| 183 | A locked unknown card reader workshop near the doors to the workshops from the closets     |
+| 184 | A locked unknown card reader workshop near the doors to workshops from a closet            |
+| 185 | A locked unknown card reader workshop near the doors to workshops from the closet          |
+| 186 | A locked unknown card reader workshop near the doors to workshops from the closets         |
+| 187 | An unknown locked card reader workshop near a door from the closet to a workshop           |
+| 188 | An unknown locked card reader workshop near a door from the closet to the workshop         |
+| 189 | An unknown locked card reader workshop near a door from the closet to the workshops        |
+| 190 | An unknown locked card reader workshop near a door to a workshop from the closet           |
+| 191 | An unknown locked card reader workshop near a door to a workshop from the closets          |
+| 192 | An unknown locked card reader workshop near a door to the workshop from a closet           |
+| 193 | An unknown locked card reader workshop near a door to the workshop from the closet         |
+| 194 | An unknown locked card reader workshop near a door to the workshop from the closets        |
+| 195 | An unknown locked card reader workshop near a door to the workshop from the closets.       |
+| 196 | An unknown locked card reader workshop near doors to the workshop from the closets         |
+| 197 | An unknown locked card reader workshop near the door to the workshop from the closet       |
+| 198 | An unknown locked card reader workshop near the door to the workshop from the closets      |
+| 199 | An unknown locked card reader workshop near the doors to the workshop from the closets     |
+| 200 | Card readers locked unknown workshops near a door from the closet to the workshops         |
+| 201 | Card readers locked unknown workshops near a door to the workshop from the closet          |
+| 202 | Card readers locked unknown workshops near a door to the workshop from the closets         |
+| 203 | Locked card readers unknown workshops near a door from a closet to a workshop              |
+| 204 | Locked card readers unknown workshops near a door from a closet to the workshop            |
+| 205 | Locked card readers unknown workshops near a door from a closet to the workshops           |
+| 206 | Locked card readers unknown workshops near a door from closets to the workshop             |
+| 207 | Locked card readers unknown workshops near a door from closets to the workshops            |
+| 208 | Locked card readers unknown workshops near a door from the closet to a workshop            |
+| 209 | Locked card readers unknown workshops near a door from the closet to the workshop          |
+| 210 | Locked card readers unknown workshops near a door from the closet to the workshops         |
+| 211 | Locked card readers unknown workshops near a door from the closet to the workshops.        |
+| 212 | Locked card readers unknown workshops near a door from the closet to workshops             |
+| 213 | Locked card readers unknown workshops near a door from the closets to the workshop         |
+| 214 | Locked card readers unknown workshops near a door from the closets to the workshops        |
+| 215 | Locked card readers unknown workshops near a door to a workshop from a closet              |
+| 216 | Locked card readers unknown workshops near a door to a workshop from the closet            |
+| 217 | Locked card readers unknown workshops near a door to a workshop from the closets           |
+| 218 | Locked card readers unknown workshops near a door to a workshop from the closets.          |
+| 219 | Locked card readers unknown workshops near a door to the workshop from a closet            |
+| 220 | Locked card readers unknown workshops near a door to the workshop from a closet.           |
+| 221 | Locked card readers unknown workshops near a door to the workshop from closets             |
+| 222 | Locked card readers unknown workshops near a door to the workshop from the closet          |
+| 223 | Locked card readers unknown workshops near a door to the workshop from the closets         |
+| 224 | Locked card readers unknown workshops near a door to the workshop from the closets.        |
+| 225 | Locked card readers unknown workshops near a door to the workshops from the closet         |
+| 226 | Locked card readers unknown workshops near a door to the workshops from the closets        |
+| 227 | Locked card readers unknown workshops near a door to workshops from the closet             |
+| 228 | Locked card readers unknown workshops near a door to workshops from the closets            |
+| 229 | Locked card readers unknown workshops near doors to the workshop from the closets          |
+| 230 | Locked card readers unknown workshops near the door from the closet to the workshop        |
+| 231 | Locked card readers unknown workshops near the door from the closet to the workshops       |
+| 232 | Locked card readers unknown workshops near the door to a workshop from the closet          |
+| 233 | Locked card readers unknown workshops near the door to a workshop from the closets         |
+| 234 | Locked card readers unknown workshops near the door to the workshop from a closet          |
+| 235 | Locked card readers unknown workshops near the door to the workshop from the closet        |
+| 236 | Locked card readers unknown workshops near the door to the workshop from the closets       |
+| 237 | Locked card readers unknown workshops near the door to the workshop from the closets.      |
+| 238 | Locked card readers unknown workshops near the doors from the closet to the workshop       |
+| 239 | Locked card readers unknown workshops near the doors from the closet to the workshops      |
+| 240 | Locked card readers unknown workshops near the doors to the workshop from a closet         |
+| 241 | Locked card readers unknown workshops near the doors to the workshop from the closet       |
+| 242 | Locked card readers unknown workshops near the doors to the workshop from the closets      |
+| 243 | Locked unknown card reader workshop near a door from the closet to the workshop            |
+| 244 | Locked unknown card reader workshop near a door from the closet to the workshops           |
+| 245 | Locked unknown card reader workshop near a door to a workshop from the closets             |
+| 246 | Locked unknown card reader workshop near a door to the workshop from a closet              |
+| 247 | Locked unknown card reader workshop near a door to the workshop from the closet            |
+| 248 | Locked unknown card reader workshop near a door to the workshop from the closets           |
+| 249 | Locked unknown card reader workshop near the door to the workshop from the closet          |
+| 250 | Locked unknown card reader workshop near the door to the workshop from the closets         |
+| 251 | Locked unknown card reader workshops near a door from a closet to a workshop               |
+| 252 | Locked unknown card reader workshops near a door from a closet to the workshop             |
+| 253 | Locked unknown card reader workshops near a door from a closet to the workshops            |
+| 254 | Locked unknown card reader workshops near a door from closets to a workshop                |
+| 255 | Locked unknown card reader workshops near a door from closets to the workshop              |
+| 256 | Locked unknown card reader workshops near a door from closets to the workshops             |
+| 257 | Locked unknown card reader workshops near a door from the closet to a workshop             |
+| 258 | Locked unknown card reader workshops near a door from the closet to the workshop           |
+| 259 | Locked unknown card reader workshops near a door from the closet to the workshops          |
+| 260 | Locked unknown card reader workshops near a door from the closet to the workshops.         |
+| 261 | Locked unknown card reader workshops near a door from the closet to workshops              |
+| 262 | Locked unknown card reader workshops near a door from the closets to the workshop          |
+| 263 | Locked unknown card reader workshops near a door from the closets to the workshops         |
+| 264 | Locked unknown card reader workshops near a door to a workshop from a closet               |
+| 265 | Locked unknown card reader workshops near a door to a workshop from closets                |
+| 266 | Locked unknown card reader workshops near a door to a workshop from the closet             |
+| 267 | Locked unknown card reader workshops near a door to a workshop from the closets            |
+| 268 | Locked unknown card reader workshops near a door to a workshop from the closets.           |
+| 269 | Locked unknown card reader workshops near a door to the workshop from a closet             |
+| 270 | Locked unknown card reader workshops near a door to the workshop from a closet.            |
+| 271 | Locked unknown card reader workshops near a door to the workshop from closets              |
+| 272 | Locked unknown card reader workshops near a door to the workshop from closets.             |
+| 273 | Locked unknown card reader workshops near a door to the workshop from the closet           |
+| 274 | Locked unknown card reader workshops near a door to the workshop from the closet.          |
+| 275 | Locked unknown card reader workshops near a door to the workshop from the closets          |
+| 276 | Locked unknown card reader workshops near a door to the workshop from the closets.         |
+| 277 | Locked unknown card reader workshops near a door to the workshops from a closet            |
+| 278 | Locked unknown card reader workshops near a door to the workshops from the closet          |
+| 279 | Locked unknown card reader workshops near a door to the workshops from the closets         |
+| 280 | Locked unknown card reader workshops near a door to workshops from a closet                |
+| 281 | Locked unknown card reader workshops near a door to workshops from the closet              |
+| 282 | Locked unknown card reader workshops near a door to workshops from the closets             |
+| 283 | Locked unknown card reader workshops near doors from the closet to the workshops           |
+| 284 | Locked unknown card reader workshops near doors to the workshop from the closets           |
+| 285 | Locked unknown card reader workshops near the door from a closet to the workshops          |
+| 286 | Locked unknown card reader workshops near the door from the closet to a workshop           |
+| 287 | Locked unknown card reader workshops near the door from the closet to the workshop         |
+| 288 | Locked unknown card reader workshops near the door from the closet to the workshops        |
+| 289 | Locked unknown card reader workshops near the door to a workshop from the closet           |
+| 290 | Locked unknown card reader workshops near the door to a workshop from the closets          |
+| 291 | Locked unknown card reader workshops near the door to the workshop from a closet           |
+| 292 | Locked unknown card reader workshops near the door to the workshop from closets            |
+| 293 | Locked unknown card reader workshops near the door to the workshop from the closet         |
+| 294 | Locked unknown card reader workshops near the door to the workshop from the closets        |
+| 295 | Locked unknown card reader workshops near the door to the workshop from the closets.       |
+| 296 | Locked unknown card reader workshops near the door to the workshops from the closets       |
+| 297 | Locked unknown card reader workshops near the doors from the closet to a workshop          |
+| 298 | Locked unknown card reader workshops near the doors from the closet to the workshop        |
+| 299 | Locked unknown card reader workshops near the doors from the closet to the workshops       |
+| 300 | Locked unknown card reader workshops near the doors to a workshop from the closet          |
+| 301 | Locked unknown card reader workshops near the doors to a workshop from the closets         |
+| 302 | Locked unknown card reader workshops near the doors to the workshop from a closet          |
+| 303 | Locked unknown card reader workshops near the doors to the workshop from the closet        |
+| 304 | Locked unknown card reader workshops near the doors to the workshop from the closets       |
+| 305 | Locked unknown card reader workshops near the doors to the workshop from the closets.      |
+| 306 | The card readers locked unknown workshop near a door to the workshop from the closet       |
+| 307 | The card readers locked unknown workshop near a door to the workshop from the closets      |
+| 308 | The card readers locked unknown workshops near a door from the closet to the workshop      |
+| 309 | The card readers locked unknown workshops near a door from the closet to the workshops     |
+| 310 | The card readers locked unknown workshops near a door to the workshop from a closet        |
+| 311 | The card readers locked unknown workshops near a door to the workshop from the closet      |
+| 312 | The card readers locked unknown workshops near a door to the workshop from the closets     |
+| 313 | The card readers locked unknown workshops near the door to the workshop from the closets   |
+| 314 | The locked card readers unknown workshop near a door from a closet to the workshop         |
+| 315 | The locked card readers unknown workshop near a door from a closet to the workshops        |
+| 316 | The locked card readers unknown workshop near a door from closets to the workshop          |
+| 317 | The locked card readers unknown workshop near a door from closets to the workshops         |
+| 318 | The locked card readers unknown workshop near a door from the closet to a workshop         |
+| 319 | The locked card readers unknown workshop near a door from the closet to the workshop       |
+| 320 | The locked card readers unknown workshop near a door from the closet to the workshops      |
+| 321 | The locked card readers unknown workshop near a door from the closet to the workshops.     |
+| 322 | The locked card readers unknown workshop near a door from the closet to workshops          |
+| 323 | The locked card readers unknown workshop near a door to a workshop from a closet           |
+| 324 | The locked card readers unknown workshop near a door to a workshop from the closet         |
+| 325 | The locked card readers unknown workshop near a door to a workshop from the closets        |
+| 326 | The locked card readers unknown workshop near a door to the workshop from a closet         |
+| 327 | The locked card readers unknown workshop near a door to the workshop from closets          |
+| 328 | The locked card readers unknown workshop near a door to the workshop from the closet       |
+| 329 | The locked card readers unknown workshop near a door to the workshop from the closets      |
+| 330 | The locked card readers unknown workshop near a door to the workshop from the closets.     |
+| 331 | The locked card readers unknown workshop near a door to the workshops from the closet      |
+| 332 | The locked card readers unknown workshop near a door to the workshops from the closets     |
+| 333 | The locked card readers unknown workshop near a door to workshops from the closet          |
+| 334 | The locked card readers unknown workshop near a door to workshops from the closets         |
+| 335 | The locked card readers unknown workshop near doors from the closet to the workshops       |
+| 336 | The locked card readers unknown workshop near doors to a workshop from the closets         |
+| 337 | The locked card readers unknown workshop near doors to the workshop from the closet        |
+| 338 | The locked card readers unknown workshop near doors to the workshop from the closets       |
+| 339 | The locked card readers unknown workshop near the door from the closet to the workshop     |
+| 340 | The locked card readers unknown workshop near the door from the closet to the workshops    |
+| 341 | The locked card readers unknown workshop near the door to a workshop from the closet       |
+| 342 | The locked card readers unknown workshop near the door to a workshop from the closets      |
+| 343 | The locked card readers unknown workshop near the door to the workshop from a closet       |
+| 344 | The locked card readers unknown workshop near the door to the workshop from the closet     |
+| 345 | The locked card readers unknown workshop near the door to the workshop from the closets    |
+| 346 | The locked card readers unknown workshop near the door to the workshop from the closets.   |
+| 347 | The locked card readers unknown workshop near the doors from the closet to the workshop    |
+| 348 | The locked card readers unknown workshop near the doors from the closet to the workshops   |
+| 349 | The locked card readers unknown workshop near the doors to the workshop from a closet      |
+| 350 | The locked card readers unknown workshop near the doors to the workshop from the closet    |
+| 351 | The locked card readers unknown workshop near the doors to the workshop from the closets   |
+| 352 | The locked card readers unknown workshops near a door from a closet to a workshop          |
+| 353 | The locked card readers unknown workshops near a door from a closet to the workshop        |
+| 354 | The locked card readers unknown workshops near a door from a closet to the workshops       |
+| 355 | The locked card readers unknown workshops near a door from a closet to the workshops.      |
+| 356 | The locked card readers unknown workshops near a door from closets to a workshop           |
+| 357 | The locked card readers unknown workshops near a door from closets to the workshop         |
+| 358 | The locked card readers unknown workshops near a door from closets to the workshops        |
+| 359 | The locked card readers unknown workshops near a door from the closet to a workshop        |
+| 360 | The locked card readers unknown workshops near a door from the closet to the workshop      |
+| 361 | The locked card readers unknown workshops near a door from the closet to the workshops     |
+| 362 | The locked card readers unknown workshops near a door from the closet to the workshops.    |
+| 363 | The locked card readers unknown workshops near a door from the closet to workshops         |
+| 364 | The locked card readers unknown workshops near a door from the closets to the workshop     |
+| 365 | The locked card readers unknown workshops near a door from the closets to the workshops    |
+| 366 | The locked card readers unknown workshops near a door to a workshop from a closet          |
+| 367 | The locked card readers unknown workshops near a door to a workshop from closets           |
+| 368 | The locked card readers unknown workshops near a door to a workshop from the closet        |
+| 369 | The locked card readers unknown workshops near a door to a workshop from the closets       |
+| 370 | The locked card readers unknown workshops near a door to a workshop from the closets.      |
+| 371 | The locked card readers unknown workshops near a door to the workshop from a closet        |
+| 372 | The locked card readers unknown workshops near a door to the workshop from a closet.       |
+| 373 | The locked card readers unknown workshops near a door to the workshop from closets         |
+| 374 | The locked card readers unknown workshops near a door to the workshop from closets.        |
+| 375 | The locked card readers unknown workshops near a door to the workshop from the closet      |
+| 376 | The locked card readers unknown workshops near a door to the workshop from the closet.     |
+| 377 | The locked card readers unknown workshops near a door to the workshop from the closets     |
+| 378 | The locked card readers unknown workshops near a door to the workshop from the closets.    |
+| 379 | The locked card readers unknown workshops near a door to the workshops from a closet       |
+| 380 | The locked card readers unknown workshops near a door to the workshops from the closet     |
+| 381 | The locked card readers unknown workshops near a door to the workshops from the closets    |
+| 382 | The locked card readers unknown workshops near a door to workshops from a closet           |
+| 383 | The locked card readers unknown workshops near a door to workshops from the closet         |
+| 384 | The locked card readers unknown workshops near a door to workshops from the closets        |
+| 385 | The locked card readers unknown workshops near doors from a closet to the workshops        |
+| 386 | The locked card readers unknown workshops near doors from the closet to the workshop       |
+| 387 | The locked card readers unknown workshops near doors from the closet to the workshops      |
+| 388 | The locked card readers unknown workshops near doors to a workshop from the closets        |
+| 389 | The locked card readers unknown workshops near doors to the workshop from a closet         |
+| 390 | The locked card readers unknown workshops near doors to the workshop from closets          |
+| 391 | The locked card readers unknown workshops near doors to the workshop from the closet       |
+| 392 | The locked card readers unknown workshops near doors to the workshop from the closets      |
+| 393 | The locked card readers unknown workshops near doors to the workshop from the closets.     |
+| 394 | The locked card readers unknown workshops near doors to the workshops from the closets     |
+| 395 | The locked card readers unknown workshops near doors to workshops from the closets         |
+| 396 | The locked card readers unknown workshops near the door from a closet to the workshop      |
+| 397 | The locked card readers unknown workshops near the door from a closet to the workshops     |
+| 398 | The locked card readers unknown workshops near the door from the closet to a workshop      |
+| 399 | The locked card readers unknown workshops near the door from the closet to the workshop    |
+| 400 | The locked card readers unknown workshops near the door from the closet to the workshops   |
+| 401 | The locked card readers unknown workshops near the door from the closet to the workshops.  |
+| 402 | The locked card readers unknown workshops near the door to a workshop from a closet        |
+| 403 | The locked card readers unknown workshops near the door to a workshop from the closet      |
+| 404 | The locked card readers unknown workshops near the door to a workshop from the closets     |
+| 405 | The locked card readers unknown workshops near the door to the workshop from a closet      |
+| 406 | The locked card readers unknown workshops near the door to the workshop from closets       |
+| 407 | The locked card readers unknown workshops near the door to the workshop from the closet    |
+| 408 | The locked card readers unknown workshops near the door to the workshop from the closets   |
+| 409 | The locked card readers unknown workshops near the door to the workshop from the closets.  |
+| 410 | The locked card readers unknown workshops near the door to the workshops from the closet   |
+| 411 | The locked card readers unknown workshops near the door to the workshops from the closets  |
+| 412 | The locked card readers unknown workshops near the door to workshops from the closet       |
+| 413 | The locked card readers unknown workshops near the door to workshops from the closets      |
+| 414 | The locked card readers unknown workshops near the doors from a closet to the workshops    |
+| 415 | The locked card readers unknown workshops near the doors from the closet to a workshop     |
+| 416 | The locked card readers unknown workshops near the doors from the closet to the workshop   |
+| 417 | The locked card readers unknown workshops near the doors from the closet to the workshops  |
+| 418 | The locked card readers unknown workshops near the doors to a workshop from the closet     |
+| 419 | The locked card readers unknown workshops near the doors to a workshop from the closets    |
+| 420 | The locked card readers unknown workshops near the doors to the workshop from a closet     |
+| 421 | The locked card readers unknown workshops near the doors to the workshop from closets      |
+| 422 | The locked card readers unknown workshops near the doors to the workshop from the closet   |
+| 423 | The locked card readers unknown workshops near the doors to the workshop from the closets  |
+| 424 | The locked card readers unknown workshops near the doors to the workshop from the closets. |
+| 425 | The locked unknown card reader workshop near a door from a closet to a workshop            |
+| 426 | The locked unknown card reader workshop near a door from a closet to the workshop          |
+| 427 | The locked unknown card reader workshop near a door from a closet to the workshops         |
+| 428 | The locked unknown card reader workshop near a door from a closet to the workshops.        |
+| 429 | The locked unknown card reader workshop near a door from a closet to workshops             |
+| 430 | The locked unknown card reader workshop near a door from closets to a workshop             |
+| 431 | The locked unknown card reader workshop near a door from closets to the workshop           |
+| 432 | The locked unknown card reader workshop near a door from closets to the workshops          |
+| 433 | The locked unknown card reader workshop near a door from closets to the workshops.         |
+| 434 | The locked unknown card reader workshop near a door from closets to workshops              |
+| 435 | The locked unknown card reader workshop near a door from closets, to the workshops         |
+| 436 | The locked unknown card reader workshop near a door from the closet to a workshop          |
+| 437 | The locked unknown card reader workshop near a door from the closet to a workshop.         |
+| 438 | The locked unknown card reader workshop near a door from the closet to the workshop        |
+| 439 | The locked unknown card reader workshop near a door from the closet to the workshop.       |
+| 440 | The locked unknown card reader workshop near a door from the closet to the workshops       |
+| 441 | The locked unknown card reader workshop near a door from the closet to the workshops.      |
+| 442 | The locked unknown card reader workshop near a door from the closet to workshops           |
+| 443 | The locked unknown card reader workshop near a door from the closet to workshops.          |
+| 444 | The locked unknown card reader workshop near a door from the closets to a workshop         |
+| 445 | The locked unknown card reader workshop near a door from the closets to the workshop       |
+| 446 | The locked unknown card reader workshop near a door from the closets to the workshops      |
+| 447 | The locked unknown card reader workshop near a door from the closets to the workshops.     |
+| 448 | The locked unknown card reader workshop near a door from the closets to workshops          |
+| 449 | The locked unknown card reader workshop near a door to a workshop from a closet            |
+| 450 | The locked unknown card reader workshop near a door to a workshop from a closet.           |
+| 451 | The locked unknown card reader workshop near a door to a workshop from closets             |
+| 452 | The locked unknown card reader workshop near a door to a workshop from closets.            |
+| 453 | The locked unknown card reader workshop near a door to a workshop from the closet          |
+| 454 | The locked unknown card reader workshop near a door to a workshop from the closet.         |
+| 455 | The locked unknown card reader workshop near a door to a workshop from the closets         |
+| 456 | The locked unknown card reader workshop near a door to a workshop from the closets.        |
+| 457 | The locked unknown card reader workshop near a door to the workshop from a closet          |
+| 458 | The locked unknown card reader workshop near a door to the workshop from a closet.         |
+| 459 | The locked unknown card reader workshop near a door to the workshop from closets           |
+| 460 | The locked unknown card reader workshop near a door to the workshop from closets.          |
+| 461 | The locked unknown card reader workshop near a door to the workshop from the closet        |
+| 462 | The locked unknown card reader workshop near a door to the workshop from the closet.       |
+| 463 | The locked unknown card reader workshop near a door to the workshop from the closets       |
+| 464 | The locked unknown card reader workshop near a door to the workshop from the closets.      |
+| 465 | The locked unknown card reader workshop near a door to the workshops from a closet         |
+| 466 | The locked unknown card reader workshop near a door to the workshops from closets          |
+| 467 | The locked unknown card reader workshop near a door to the workshops from the closet       |
+| 468 | The locked unknown card reader workshop near a door to the workshops from the closets      |
+| 469 | The locked unknown card reader workshop near a door to the workshops from the closets.     |
+| 470 | The locked unknown card reader workshop near a door to workshops from a closet             |
+| 471 | The locked unknown card reader workshop near a door to workshops from closets              |
+| 472 | The locked unknown card reader workshop near a door to workshops from the closet           |
+| 473 | The locked unknown card reader workshop near a door to workshops from the closets          |
+| 474 | The locked unknown card reader workshop near a door to workshops from the closets.         |
+| 475 | The locked unknown card reader workshop near doors from a closet to the workshop           |
+| 476 | The locked unknown card reader workshop near doors from a closet to the workshops          |
+| 477 | The locked unknown card reader workshop near doors from closets to the workshops           |
+| 478 | The locked unknown card reader workshop near doors from the closet to a workshop           |
+| 479 | The locked unknown card reader workshop near doors from the closet to the workshop         |
+| 480 | The locked unknown card reader workshop near doors from the closet to the workshops        |
+| 481 | The locked unknown card reader workshop near doors from the closet to the workshops.       |
+| 482 | The locked unknown card reader workshop near doors from the closet to workshops            |
+| 483 | The locked unknown card reader workshop near doors from the closets to the workshops       |
+| 484 | The locked unknown card reader workshop near doors to a workshop from a closet             |
+| 485 | The locked unknown card reader workshop near doors to a workshop from closets              |
+| 486 | The locked unknown card reader workshop near doors to a workshop from the closet           |
+| 487 | The locked unknown card reader workshop near doors to a workshop from the closets          |
+| 488 | The locked unknown card reader workshop near doors to a workshop from the closets.         |
+| 489 | The locked unknown card reader workshop near doors to the workshop from a closet           |
+| 490 | The locked unknown card reader workshop near doors to the workshop from a closet.          |
+| 491 | The locked unknown card reader workshop near doors to the workshop from closets            |
+| 492 | The locked unknown card reader workshop near doors to the workshop from closets.           |
+| 493 | The locked unknown card reader workshop near doors to the workshop from the closet         |
+| 494 | The locked unknown card reader workshop near doors to the workshop from the closet.        |
+| 495 | The locked unknown card reader workshop near doors to the workshop from the closets        |
+| 496 | The locked unknown card reader workshop near doors to the workshop from the closets.       |
+| 497 | The locked unknown card reader workshop near doors to the workshops from the closet        |
+| 498 | The locked unknown card reader workshop near doors to the workshops from the closets       |
+| 499 | The locked unknown card reader workshop near doors to workshops from the closets           |
+| 500 | The locked unknown card reader workshop near the door from a closet to a workshop          |
+| 501 | The locked unknown card reader workshop near the door from a closet to the workshop        |
+| 502 | The locked unknown card reader workshop near the door from a closet to the workshops       |
+| 503 | The locked unknown card reader workshop near the door from a closet to the workshops.      |
+| 504 | The locked unknown card reader workshop near the door from closets to a workshop           |
+| 505 | The locked unknown card reader workshop near the door from closets to the workshop         |
+| 506 | The locked unknown card reader workshop near the door from closets to the workshops        |
+| 507 | The locked unknown card reader workshop near the door from closets, to the workshops       |
+| 508 | The locked unknown card reader workshop near the door from the closet to a workshop        |
+| 509 | The locked unknown card reader workshop near the door from the closet to a workshop.       |
+| 510 | The locked unknown card reader workshop near the door from the closet to the workshop      |
+| 511 | The locked unknown card reader workshop near the door from the closet to the workshops     |
+| 512 | The locked unknown card reader workshop near the door from the closet to the workshops.    |
+| 513 | The locked unknown card reader workshop near the door from the closet to workshops         |
+| 514 | The locked unknown card reader workshop near the door from the closets to a workshop       |
+| 515 | The locked unknown card reader workshop near the door from the closets to the workshop     |
+| 516 | The locked unknown card reader workshop near the door from the closets to the workshops    |
+| 517 | The locked unknown card reader workshop near the door to a workshop from a closet          |
+| 518 | The locked unknown card reader workshop near the door to a workshop from closets           |
+| 519 | The locked unknown card reader workshop near the door to a workshop from the closet        |
+| 520 | The locked unknown card reader workshop near the door to a workshop from the closets       |
+| 521 | The locked unknown card reader workshop near the door to a workshop from the closets.      |
+| 522 | The locked unknown card reader workshop near the door to the workshop from a closet        |
+| 523 | The locked unknown card reader workshop near the door to the workshop from a closet.       |
+| 524 | The locked unknown card reader workshop near the door to the workshop from closets         |
+| 525 | The locked unknown card reader workshop near the door to the workshop from closets.        |
+| 526 | The locked unknown card reader workshop near the door to the workshop from the closet      |
+| 527 | The locked unknown card reader workshop near the door to the workshop from the closet.     |
+| 528 | The locked unknown card reader workshop near the door to the workshop from the closets     |
+| 529 | The locked unknown card reader workshop near the door to the workshop from the closets.    |
+| 530 | The locked unknown card reader workshop near the door to the workshops from a closet       |
+| 531 | The locked unknown card reader workshop near the door to the workshops from the closet     |
+| 532 | The locked unknown card reader workshop near the door to the workshops from the closets    |
+| 533 | The locked unknown card reader workshop near the door to the workshops from the closets.   |
+| 534 | The locked unknown card reader workshop near the door to workshops from a closet           |
+| 535 | The locked unknown card reader workshop near the door to workshops from the closet         |
+| 536 | The locked unknown card reader workshop near the door to workshops from the closets        |
+| 537 | The locked unknown card reader workshop near the doors from a closet to a workshop         |
+| 538 | The locked unknown card reader workshop near the doors from a closet to the workshop       |
+| 539 | The locked unknown card reader workshop near the doors from a closet to the workshops      |
+| 540 | The locked unknown card reader workshop near the doors from closets to the workshop        |
+| 541 | The locked unknown card reader workshop near the doors from closets to the workshops       |
+| 542 | The locked unknown card reader workshop near the doors from the closet to a workshop       |
+| 543 | The locked unknown card reader workshop near the doors from the closet to the workshop     |
+| 544 | The locked unknown card reader workshop near the doors from the closet to the workshops    |
+| 545 | The locked unknown card reader workshop near the doors from the closet to the workshops.   |
+| 546 | The locked unknown card reader workshop near the doors from the closet to workshops        |
+| 547 | The locked unknown card reader workshop near the doors from the closets to the workshop    |
+| 548 | The locked unknown card reader workshop near the doors from the closets to the workshops   |
+| 549 | The locked unknown card reader workshop near the doors to a workshop from a closet         |
+| 550 | The locked unknown card reader workshop near the doors to a workshop from closets          |
+| 551 | The locked unknown card reader workshop near the doors to a workshop from the closet       |
+| 552 | The locked unknown card reader workshop near the doors to a workshop from the closets      |
+| 553 | The locked unknown card reader workshop near the doors to a workshop from the closets.     |
+| 554 | The locked unknown card reader workshop near the doors to the workshop from a closet       |
+| 555 | The locked unknown card reader workshop near the doors to the workshop from a closet.      |
+| 556 | The locked unknown card reader workshop near the doors to the workshop from closets        |
+| 557 | The locked unknown card reader workshop near the doors to the workshop from closets.       |
+| 558 | The locked unknown card reader workshop near the doors to the workshop from the closet     |
+| 559 | The locked unknown card reader workshop near the doors to the workshop from the closet.    |
+| 560 | The locked unknown card reader workshop near the doors to the workshop from the closets    |
+| 561 | The locked unknown card reader workshop near the doors to the workshop from the closets.   |
+| 562 | The locked unknown card reader workshop near the doors to the workshops from a closet      |
+| 563 | The locked unknown card reader workshop near the doors to the workshops from the closet    |
+| 564 | The locked unknown card reader workshop near the doors to the workshops from the closets   |
+| 565 | The locked unknown card reader workshop near the doors to workshops from a closet          |
+| 566 | The locked unknown card reader workshop near the doors to workshops from the closet        |
+| 567 | The locked unknown card reader workshop near the doors to workshops from the closets       |
+| 568 | The locked unknown card reader workshops near a door from a closet to a workshop           |
+| 569 | The locked unknown card reader workshops near a door from a closet to the workshop         |
+| 570 | The locked unknown card reader workshops near a door from a closet to the workshops        |
+| 571 | The locked unknown card reader workshops near a door from a closet to the workshops.       |
+| 572 | The locked unknown card reader workshops near a door from a closet to workshops            |
+| 573 | The locked unknown card reader workshops near a door from closets to a workshop            |
+| 574 | The locked unknown card reader workshops near a door from closets to the workshop          |
+| 575 | The locked unknown card reader workshops near a door from closets to the workshops         |
+| 576 | The locked unknown card reader workshops near a door from closets to the workshops.        |
+| 577 | The locked unknown card reader workshops near a door from closets to workshops             |
+| 578 | The locked unknown card reader workshops near a door from the closet to a workshop         |
+| 579 | The locked unknown card reader workshops near a door from the closet to a workshop.        |
+| 580 | The locked unknown card reader workshops near a door from the closet to the workshop       |
+| 581 | The locked unknown card reader workshops near a door from the closet to the workshop.      |
+| 582 | The locked unknown card reader workshops near a door from the closet to the workshops      |
+| 583 | The locked unknown card reader workshops near a door from the closet to the workshops.     |
+| 584 | The locked unknown card reader workshops near a door from the closet to workshops          |
+| 585 | The locked unknown card reader workshops near a door from the closet to workshops.         |
+| 586 | The locked unknown card reader workshops near a door from the closets to a workshop        |
+| 587 | The locked unknown card reader workshops near a door from the closets to the workshop      |
+| 588 | The locked unknown card reader workshops near a door from the closets to the workshops     |
+| 589 | The locked unknown card reader workshops near a door from the closets to the workshops.    |
+| 590 | The locked unknown card reader workshops near a door to a workshop from a closet           |
+| 591 | The locked unknown card reader workshops near a door to a workshop from a closet.          |
+| 592 | The locked unknown card reader workshops near a door to a workshop from closets            |
+| 593 | The locked unknown card reader workshops near a door to a workshop from the closet         |
+| 594 | The locked unknown card reader workshops near a door to a workshop from the closets        |
+| 595 | The locked unknown card reader workshops near a door to a workshop from the closets.       |
+| 596 | The locked unknown card reader workshops near a door to the workshop from a closet         |
+| 597 | The locked unknown card reader workshops near a door to the workshop from a closet.        |
+| 598 | The locked unknown card reader workshops near a door to the workshop from closets          |
+| 599 | The locked unknown card reader workshops near a door to the workshop from closets.         |
+| 600 | The locked unknown card reader workshops near a door to the workshop from the closet       |
+| 601 | The locked unknown card reader workshops near a door to the workshop from the closet.      |
+| 602 | The locked unknown card reader workshops near a door to the workshop from the closets      |
+| 603 | The locked unknown card reader workshops near a door to the workshop from the closets.     |
+| 604 | The locked unknown card reader workshops near a door to the workshops from a closet        |
+| 605 | The locked unknown card reader workshops near a door to the workshops from closets         |
+| 606 | The locked unknown card reader workshops near a door to the workshops from the closet      |
+| 607 | The locked unknown card reader workshops near a door to the workshops from the closets     |
+| 608 | The locked unknown card reader workshops near a door to the workshops from the closets.    |
+| 609 | The locked unknown card reader workshops near a door to workshops from a closet            |
+| 610 | The locked unknown card reader workshops near a door to workshops from closets             |
+| 611 | The locked unknown card reader workshops near a door to workshops from the closet          |
+| 612 | The locked unknown card reader workshops near a door to workshops from the closets         |
+| 613 | The locked unknown card reader workshops near a door to workshops from the closets.        |
+| 614 | The locked unknown card reader workshops near doors from a closet to the workshops         |
+| 615 | The locked unknown card reader workshops near doors from closets to the workshops          |
+| 616 | The locked unknown card reader workshops near doors from the closet to a workshop          |
+| 617 | The locked unknown card reader workshops near doors from the closet to the workshop        |
+| 618 | The locked unknown card reader workshops near doors from the closet to the workshops       |
+| 619 | The locked unknown card reader workshops near doors from the closet to the workshops.      |
+| 620 | The locked unknown card reader workshops near doors from the closet to workshops           |
+| 621 | The locked unknown card reader workshops near doors from the closets to the workshops      |
+| 622 | The locked unknown card reader workshops near doors to a workshop from a closet            |
+| 623 | The locked unknown card reader workshops near doors to a workshop from the closet          |
+| 624 | The locked unknown card reader workshops near doors to a workshop from the closets         |
+| 625 | The locked unknown card reader workshops near doors to a workshop from the closets.        |
+| 626 | The locked unknown card reader workshops near doors to the workshop from a closet          |
+| 627 | The locked unknown card reader workshops near doors to the workshop from a closet.         |
+| 628 | The locked unknown card reader workshops near doors to the workshop from closets           |
+| 629 | The locked unknown card reader workshops near doors to the workshop from the closet        |
+| 630 | The locked unknown card reader workshops near doors to the workshop from the closet.       |
+| 631 | The locked unknown card reader workshops near doors to the workshop from the closets       |
+| 632 | The locked unknown card reader workshops near doors to the workshop from the closets.      |
+| 633 | The locked unknown card reader workshops near doors to the workshops from the closets      |
+| 634 | The locked unknown card reader workshops near doors to workshops from the closets          |
+| 635 | The locked unknown card reader workshops near the door from a closet to a workshop         |
+| 636 | The locked unknown card reader workshops near the door from a closet to the workshop       |
+| 637 | The locked unknown card reader workshops near the door from a closet to the workshops      |
+| 638 | The locked unknown card reader workshops near the door from closets to the workshop        |
+| 639 | The locked unknown card reader workshops near the door from closets to the workshops       |
+| 640 | The locked unknown card reader workshops near the door from the closet to a workshop       |
+| 641 | The locked unknown card reader workshops near the door from the closet to the workshop     |
+| 642 | The locked unknown card reader workshops near the door from the closet to the workshops    |
+| 643 | The locked unknown card reader workshops near the door from the closet to the workshops.   |
+| 644 | The locked unknown card reader workshops near the door from the closet to workshops        |
+| 645 | The locked unknown card reader workshops near the door from the closets to the workshop    |
+| 646 | The locked unknown card reader workshops near the door from the closets to the workshops   |
+| 647 | The locked unknown card reader workshops near the door to a workshop from a closet         |
+| 648 | The locked unknown card reader workshops near the door to a workshop from closets          |
+| 649 | The locked unknown card reader workshops near the door to a workshop from the closet       |
+| 650 | The locked unknown card reader workshops near the door to a workshop from the closets      |
+| 651 | The locked unknown card reader workshops near the door to a workshop from the closets.     |
+| 652 | The locked unknown card reader workshops near the door to the workshop from a closet       |
+| 653 | The locked unknown card reader workshops near the door to the workshop from a closet.      |
+| 654 | The locked unknown card reader workshops near the door to the workshop from closets        |
+| 655 | The locked unknown card reader workshops near the door to the workshop from closets.       |
+| 656 | The locked unknown card reader workshops near the door to the workshop from the closet     |
+| 657 | The locked unknown card reader workshops near the door to the workshop from the closet.    |
+| 658 | The locked unknown card reader workshops near the door to the workshop from the closets    |
+| 659 | The locked unknown card reader workshops near the door to the workshop from the closets.   |
+| 660 | The locked unknown card reader workshops near the door to the workshops from a closet      |
+| 661 | The locked unknown card reader workshops near the door to the workshops from the closet    |
+| 662 | The locked unknown card reader workshops near the door to the workshops from the closets   |
+| 663 | The locked unknown card reader workshops near the door to workshops from a closet          |
+| 664 | The locked unknown card reader workshops near the door to workshops from the closet        |
+| 665 | The locked unknown card reader workshops near the door to workshops from the closets       |
+| 666 | The locked unknown card reader workshops near the doors from a closet to a workshop        |
+| 667 | The locked unknown card reader workshops near the doors from a closet to the workshop      |
+| 668 | The locked unknown card reader workshops near the doors from a closet to the workshops     |
+| 669 | The locked unknown card reader workshops near the doors from closets to the workshop       |
+| 670 | The locked unknown card reader workshops near the doors from closets to the workshops      |
+| 671 | The locked unknown card reader workshops near the doors from the closet to a workshop      |
+| 672 | The locked unknown card reader workshops near the doors from the closet to the workshop    |
+| 673 | The locked unknown card reader workshops near the doors from the closet to the workshops   |
+| 674 | The locked unknown card reader workshops near the doors from the closet to the workshops.  |
+| 675 | The locked unknown card reader workshops near the doors from the closet to workshops       |
+| 676 | The locked unknown card reader workshops near the doors from the closets to the workshop   |
+| 677 | The locked unknown card reader workshops near the doors from the closets to the workshops  |
+| 678 | The locked unknown card reader workshops near the doors to a workshop from a closet        |
+| 679 | The locked unknown card reader workshops near the doors to a workshop from the closet      |
+| 680 | The locked unknown card reader workshops near the doors to a workshop from the closets     |
+| 681 | The locked unknown card reader workshops near the doors to a workshop from the closets.    |
+| 682 | The locked unknown card reader workshops near the doors to the workshop from a closet      |
+| 683 | The locked unknown card reader workshops near the doors to the workshop from a closet.     |
+| 684 | The locked unknown card reader workshops near the doors to the workshop from closets       |
+| 685 | The locked unknown card reader workshops near the doors to the workshop from the closet    |
+| 686 | The locked unknown card reader workshops near the doors to the workshop from the closets   |
+| 687 | The locked unknown card reader workshops near the doors to the workshop from the closets.  |
+| 688 | The locked unknown card reader workshops near the doors to the workshops from a closet     |
+| 689 | The locked unknown card reader workshops near the doors to the workshops from the closet   |
+| 690 | The locked unknown card reader workshops near the doors to the workshops from the closets  |
+| 691 | The locked unknown card reader workshops near the doors to workshops from the closet       |
+| 692 | The locked unknown card reader workshops near the doors to workshops from the closets      |
+| 693 | The unknown card readers locked workshops near a door to the workshop from the closets     |
+| 694 | The unknown locked card reader workshop near a door from a closet to the workshops         |
+| 695 | The unknown locked card reader workshop near a door from the closet to a workshop          |
+| 696 | The unknown locked card reader workshop near a door from the closet to the workshop        |
+| 697 | The unknown locked card reader workshop near a door from the closet to the workshops       |
+| 698 | The unknown locked card reader workshop near a door to a workshop from the closet          |
+| 699 | The unknown locked card reader workshop near a door to a workshop from the closets         |
+| 700 | The unknown locked card reader workshop near a door to the workshop from a closet          |
+| 701 | The unknown locked card reader workshop near a door to the workshop from closets           |
+| 702 | The unknown locked card reader workshop near a door to the workshop from the closet        |
+| 703 | The unknown locked card reader workshop near a door to the workshop from the closets       |
+| 704 | The unknown locked card reader workshop near a door to the workshop from the closets.      |
+| 705 | The unknown locked card reader workshop near a door to the workshops from the closets      |
+| 706 | The unknown locked card reader workshop near a door to workshops from the closets          |
+| 707 | The unknown locked card reader workshop near doors from the closet to the workshops        |
+| 708 | The unknown locked card reader workshop near doors to the workshop from the closets        |
+| 709 | The unknown locked card reader workshop near the door from the closet to the workshop      |
+| 710 | The unknown locked card reader workshop near the door from the closet to the workshops     |
+| 711 | The unknown locked card reader workshop near the door to the workshop from a closet        |
+| 712 | The unknown locked card reader workshop near the door to the workshop from the closet      |
+| 713 | The unknown locked card reader workshop near the door to the workshop from the closets     |
+| 714 | The unknown locked card reader workshop near the doors from the closet to the workshops    |
+| 715 | The unknown locked card reader workshop near the doors to the workshop from the closet     |
+| 716 | The unknown locked card reader workshop near the doors to the workshop from the closets    |
+| 717 | The unknown locked card reader workshops near a door from the closet to a workshop         |
+| 718 | The unknown locked card reader workshops near a door from the closet to the workshop       |
+| 719 | The unknown locked card reader workshops near a door from the closet to the workshops      |
+| 720 | The unknown locked card reader workshops near a door to a workshop from the closet         |
+| 721 | The unknown locked card reader workshops near a door to a workshop from the closets        |
+| 722 | The unknown locked card reader workshops near a door to the workshop from a closet         |
+| 723 | The unknown locked card reader workshops near a door to the workshop from the closet       |
+| 724 | The unknown locked card reader workshops near a door to the workshop from the closets      |
+| 725 | The unknown locked card reader workshops near a door to the workshop from the closets.     |
+| 726 | The unknown locked card reader workshops near doors to the workshop from the closets       |
+| 727 | The unknown locked card reader workshops near the door from the closet to the workshops    |
+| 728 | The unknown locked card reader workshops near the door to the workshop from the closet     |
+| 729 | The unknown locked card reader workshops near the door to the workshop from the closets    |
+| 730 | The unknown locked card reader workshops near the doors to the workshop from the closet    |
+| 731 | The unknown locked card reader workshops near the doors to the workshop from the closets   |
+| 732 | Unknown card readers locked workshops near a door to the workshop from the closets         |
+| 733 | Unknown locked card reader workshops near a door from a closet to the workshop             |
+| 734 | Unknown locked card reader workshops near a door from a closet to the workshops            |
+| 735 | Unknown locked card reader workshops near a door from closets to the workshops             |
+| 736 | Unknown locked card reader workshops near a door from the closet to a workshop             |
+| 737 | Unknown locked card reader workshops near a door from the closet to the workshop           |
+| 738 | Unknown locked card reader workshops near a door from the closet to the workshops          |
+| 739 | Unknown locked card reader workshops near a door from the closet to the workshops.         |
+| 740 | Unknown locked card reader workshops near a door from the closet to workshops              |
+| 741 | Unknown locked card reader workshops near a door to a workshop from a closet               |
+| 742 | Unknown locked card reader workshops near a door to a workshop from the closet             |
+| 743 | Unknown locked card reader workshops near a door to a workshop from the closets            |
+| 744 | Unknown locked card reader workshops near a door to the workshop from a closet             |
+| 745 | Unknown locked card reader workshops near a door to the workshop from closets              |
+| 746 | Unknown locked card reader workshops near a door to the workshop from the closet           |
+| 747 | Unknown locked card reader workshops near a door to the workshop from the closets          |
+| 748 | Unknown locked card reader workshops near a door to the workshop from the closets.         |
+| 749 | Unknown locked card reader workshops near a door to the workshops from the closet          |
+| 750 | Unknown locked card reader workshops near a door to the workshops from the closets         |
+| 751 | Unknown locked card reader workshops near a door to workshops from the closet              |
+| 752 | Unknown locked card reader workshops near a door to workshops from the closets             |
+| 753 | Unknown locked card reader workshops near doors to the workshop from the closets           |
+| 754 | Unknown locked card reader workshops near the door from the closet to the workshop         |
+| 755 | Unknown locked card reader workshops near the door from the closet to the workshops        |
+| 756 | Unknown locked card reader workshops near the door to the workshop from a closet           |
+| 757 | Unknown locked card reader workshops near the door to the workshop from the closet         |
+| 758 | Unknown locked card reader workshops near the door to the workshop from the closets        |
+| 759 | Unknown locked card reader workshops near the doors from the closet to the workshops       |
+| 760 | Unknown locked card reader workshops near the doors to the workshop from the closet        |
+| 761 | Unknown locked card reader workshops near the doors to the workshop from the closets       |
++-----+--------------------------------------------------------------------------------------------+
+

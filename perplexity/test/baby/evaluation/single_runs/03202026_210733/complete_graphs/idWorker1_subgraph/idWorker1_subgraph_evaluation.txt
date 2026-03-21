@@ -1,0 +1,207 @@
+GRAPH NAME: idWorker1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 30    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++---------------------------------------------------+
+|                    GOLD OUTPUTS                   |
++--------------------------------------+------------+
+| Gold Output                          | Generated? |
++--------------------------------------+------------+
+| the unknown worker near the day care | True       |
++--------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idWorker1  | True         | True          | Covered          | Included          |
+| true       | True         | True          | Covered          | Included          |
+| idDaycare1 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+|                                                          EDGE METRICS                                                         |
++--------------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+| Edge                           | Parent    | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+| idWorker1_prop_idUnknownObject | idWorker1 | true       | True         | True          | Covered          | Included          |
+| isNear                         | idWorker1 | idDaycare1 | True         | True          | Covered          | Included          |
++--------------------------------+-----------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2219                                                                     |
+|               |   INDEX: x2218                                                                   |
+|               |   RELS: < [ _near_p LBL: h2252 ARG0: e2249 ARG1: u2250 ARG2: i2251 ]             |
+|               |           [ def_udef_a_q LBL: h2256 ARG0: x2253 RSTR: h2254 BODY: h2255 ]        |
+|               |           [ compound LBL: h2248 ARG0: e2245 [ e PROG: - ] ARG1: u2246 ARG2:      |
+|               | u2247 ]                                                                          |
+|               |           [ udef_q LBL: h2243 ARG0: x2240 RSTR: h2241 BODY: h2242 ]              |
+|               |           [ _day_n_of LBL: h2239 ARG0: x2237 ARG1: i2238 ]                       |
+|               |           [ _care_n_1 LBL: h2236 ARG0: x2235 ]                                   |
+|               |           [ _un-_a_neg LBL: h2234 ARG0: i2232 ARG1: e2233 ]                      |
+|               |           [ _know_v_1 LBL: h2231 ARG0: e2228 [ e PERF: - ] ARG1: u2229 ARG2:     |
+|               | i2230 ]                                                                          |
+|               |           [ _worker_n_1 LBL: h2219 ARG0: x2218 ] >                               |
+|               |   HCONS: < h2241 qeq h2239 h2254 qeq h2236 >                                     |
+|               |   ICONS: < e2228 topic i2230 >                                                   |
+|               |   EQS: < x2240 eq x2237 h2248 eq h2244 u2247 eq x2240 h2248 eq h2236 u2246 eq    |
+|               | x2235 x2253 eq x2235 h2252 eq h2257 i2251 eq x2253 h2234 eq h2231 e2233 eq e2228 |
+|               | h2231 eq h2219 i2230 eq x2218 h2252 eq h2219 u2250 eq x2218 > ]                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2219                                                                     |
+|               |   INDEX: x2218                                                                   |
+|               |   RELS: < [ _near_p LBL: h2219 ARG0: e2249 ARG1: x2218 ARG2: x2235 ]             |
+|               |           [ def_udef_a_q LBL: h2256 ARG0: x2235 RSTR: h2254 BODY: h2255 ]        |
+|               |           [ compound LBL: h2236 ARG0: e2245 [ e PROG: - ] ARG1: x2235 ARG2:      |
+|               | x2237 ]                                                                          |
+|               |           [ udef_q LBL: h2243 ARG0: x2237 RSTR: h2241 BODY: h2242 ]              |
+|               |           [ _day_n_of LBL: h2239 ARG0: x2237 ARG1: i2238 ]                       |
+|               |           [ _care_n_1 LBL: h2236 ARG0: x2235 ]                                   |
+|               |           [ _un-_a_neg LBL: h2219 ARG0: i2232 ARG1: e2228 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2219 ARG0: e2228 ARG1: u2229 ARG2: x2218 ]           |
+|               |           [ _worker_n_1 LBL: h2219 ARG0: x2218 ] >                               |
+|               |   HCONS: < h2241 qeq h2239 h2254 qeq h2236 >                                     |
+|               |   ICONS: < e2228 topic x2218 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2266                                                                     |
+|               |   INDEX: e2263                                                                   |
+|               |   RELS: < [ unknown LBL: h2262 ARG: x2218 ARG0: e2263 ]                          |
+|               |           [ def_udef_a_q LBL: h2261 ARG0: x2218 RSTR: h2259 BODY: h2260 ]        |
+|               |           [ _near_p LBL: h2219 ARG0: e2249 ARG1: x2218 ARG2: x2235 ]             |
+|               |           [ def_udef_a_q LBL: h2256 ARG0: x2235 RSTR: h2254 BODY: h2255 ]        |
+|               |           [ compound LBL: h2236 ARG0: e2245 [ e PROG: - ] ARG1: x2235 ARG2:      |
+|               | x2237 ]                                                                          |
+|               |           [ udef_q LBL: h2243 ARG0: x2237 RSTR: h2241 BODY: h2242 ]              |
+|               |           [ _day_n_of LBL: h2239 ARG0: x2237 ARG1: i2238 ]                       |
+|               |           [ _care_n_1 LBL: h2236 ARG0: x2235 ]                                   |
+|               |           [ _un-_a_neg LBL: h2219 ARG0: i2232 ARG1: e2228 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2219 ARG0: e2228 ARG1: u2229 ARG2: x2218 ]           |
+|               |           [ _worker_n_1 LBL: h2219 ARG0: x2218 ] >                               |
+|               |   HCONS: < h2241 qeq h2239 h2254 qeq h2236 h2259 qeq h2219 h2266 qeq h2262 >     |
+|               |   ICONS: < e2228 topic x2218 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------+
+|                                          NODE SEMENTS                                         |
++------------+----------------------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                                 |
++------------+----------------------------------------------------------------------------------+
+| idWorker1  | [ TOP: h2219                                                                     |
+|            |   INDEX: x2218                                                                   |
+|            |   RELS: < [ _worker_n_1 LBL: h2219 ARG0: x2218 ] > ]                             |
++------------+----------------------------------------------------------------------------------+
+| true       | [ TOP: h2223                                                                     |
+|            |   INDEX: e2220                                                                   |
+|            |   RELS: < [ _true_a_of LBL: h2223 ARG0: e2220 ARG1: u2221 ARG2: u2222 ] >        |
+|            |   SLOTS: < ARG1: u2221 ARG2: u2222 > ]                                           |
++------------+----------------------------------------------------------------------------------+
+| idDaycare1 | [ TOP: h2236                                                                     |
+|            |   INDEX: x2235                                                                   |
+|            |   RELS: < [ compound LBL: h2248 ARG0: e2245 [ e PROG: - ] ARG1: u2246 ARG2:      |
+|            | u2247 ]                                                                          |
+|            |           [ udef_q LBL: h2243 ARG0: x2240 RSTR: h2241 BODY: h2242 ]              |
+|            |           [ _day_n_of LBL: h2239 ARG0: x2237 ARG1: i2238 ]                       |
+|            |           [ _care_n_1 LBL: h2236 ARG0: x2235 ] >                                 |
+|            |   HCONS: < h2241 qeq h2239 >                                                     |
+|            |   EQS: < x2240 eq x2237 h2248 eq h2244 u2247 eq x2240 h2248 eq h2236 u2246 eq    |
+|            | x2235 > ]                                                                        |
++------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                                |
++--------------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent    | Child      | Generated SEMENT                                                                 |
++--------------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| idWorker1_prop_idUnknownObject | idWorker1 | true       | [ TOP: h2219                                                                     |
+|                                |           |            |   INDEX: x2218                                                                   |
+|                                |           |            |   RELS: < [ _un-_a_neg LBL: h2234 ARG0: i2232 ARG1: e2233 ]                      |
+|                                |           |            |           [ _know_v_1 LBL: h2231 ARG0: e2228 [ e PERF: - ] ARG1: u2229 ARG2:     |
+|                                |           |            | i2230 ]                                                                          |
+|                                |           |            |           [ _worker_n_1 LBL: h2219 ARG0: x2218 ] >                               |
+|                                |           |            |   ICONS: < e2228 topic i2230 >                                                   |
+|                                |           |            |   EQS: < h2234 eq h2231 e2233 eq e2228 h2231 eq h2219 i2230 eq x2218 > ]         |
++--------------------------------+-----------+------------+----------------------------------------------------------------------------------+
+| isNear                         | idWorker1 | idDaycare1 | [ TOP: h2219                                                                     |
+|                                |           |            |   INDEX: x2218                                                                   |
+|                                |           |            |   RELS: < [ _near_p LBL: h2252 ARG0: e2249 ARG1: u2250 ARG2: i2251 ]             |
+|                                |           |            |           [ def_udef_a_q LBL: h2256 ARG0: x2253 RSTR: h2254 BODY: h2255 ]        |
+|                                |           |            |           [ compound LBL: h2248 ARG0: e2245 [ e PROG: - ] ARG1: u2246 ARG2:      |
+|                                |           |            | u2247 ]                                                                          |
+|                                |           |            |           [ udef_q LBL: h2243 ARG0: x2240 RSTR: h2241 BODY: h2242 ]              |
+|                                |           |            |           [ _day_n_of LBL: h2239 ARG0: x2237 ARG1: i2238 ]                       |
+|                                |           |            |           [ _care_n_1 LBL: h2236 ARG0: x2235 ]                                   |
+|                                |           |            |           [ _un-_a_neg LBL: h2234 ARG0: i2232 ARG1: e2233 ]                      |
+|                                |           |            |           [ _know_v_1 LBL: h2231 ARG0: e2228 [ e PERF: - ] ARG1: u2229 ARG2:     |
+|                                |           |            | i2230 ]                                                                          |
+|                                |           |            |           [ _worker_n_1 LBL: h2219 ARG0: x2218 ] >                               |
+|                                |           |            |   HCONS: < h2241 qeq h2239 h2254 qeq h2236 >                                     |
+|                                |           |            |   ICONS: < e2228 topic i2230 >                                                   |
+|                                |           |            |   EQS: < x2240 eq x2237 h2248 eq h2244 u2247 eq x2240 h2248 eq h2236 u2246 eq    |
+|                                |           |            | x2235 x2253 eq x2235 h2252 eq h2257 i2251 eq x2253 h2234 eq h2231 e2233 eq e2228 |
+|                                |           |            | h2231 eq h2219 i2230 eq x2218 h2252 eq h2219 u2250 eq x2218 > ]                  |
++--------------------------------+-----------+------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------+
+|            GENERATED ENGLISH TEXT           |
++----+----------------------------------------+
+| #  | Generated Text                         |
++----+----------------------------------------+
+| 1  | An unknown worker near day care        |
+| 2  | An unknown worker near day care.       |
+| 3  | An unknown worker near the day care    |
+| 4  | An unknown worker near the day care.   |
+| 5  | An unknown worker, near day care       |
+| 6  | An unknown worker, near the day care   |
+| 7  | The unknown worker near day care       |
+| 8  | The unknown worker near day care.      |
+| 9  | The unknown worker near the day care   |
+| 10 | The unknown worker near the day care.  |
+| 11 | The unknown worker, near day care      |
+| 12 | The unknown worker, near the day care  |
+| 13 | The unknown workers near day care      |
+| 14 | The unknown workers near day care.     |
+| 15 | The unknown workers near the day care  |
+| 16 | The unknown workers near the day care. |
+| 17 | The unknown workers, near day care     |
+| 18 | The unknown workers, near the day care |
+| 19 | Unknown worker near day care           |
+| 20 | Unknown worker near day care.          |
+| 21 | Unknown worker near the day care       |
+| 22 | Unknown worker near the day care.      |
+| 23 | Unknown worker, near day care          |
+| 24 | Unknown worker, near the day care      |
+| 25 | Unknown workers near day care          |
+| 26 | Unknown workers near day care.         |
+| 27 | Unknown workers near the day care      |
+| 28 | Unknown workers near the day care.     |
+| 29 | Unknown workers, near day care         |
+| 30 | Unknown workers, near the day care     |
++----+----------------------------------------+
+

@@ -1,0 +1,1364 @@
+GRAPH NAME: idLivingRoomToBedroomDoor_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1086  |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------------+
+|                                        GOLD OUTPUTS                                       |
++------------------------------------------------------------------------------+------------+
+| Gold Output                                                                  | Generated? |
++------------------------------------------------------------------------------+------------+
+| the unknown open door from the living room to the bedroom east of the player | False      |
++------------------------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           NODE METRICS                                          |
++---------------------------+--------------+---------------+------------------+-------------------+
+| Node                      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------------------+--------------+---------------+------------------+-------------------+
+| idLivingRoomToBedroomDoor | True         | True          | Covered          | Included          |
+| open                      | True         | True          | Covered          | Included          |
+| true                      | True         | True          | Covered          | Included          |
+| idPlayer                  | True         | True          | Covered          | Included          |
++---------------------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                         EDGE METRICS                                                                        |
++------------------------------------------------+---------------------------+----------+--------------+---------------+------------------+-------------------+
+| Edge                                           | Parent                    | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------------------------+---------------------------+----------+--------------+---------------+------------------+-------------------+
+| idLivingRoomToBedroomDoor_prop_idOpenState     | idLivingRoomToBedroomDoor | open     | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true     | True         | True          | Covered          | Included          |
+| isEastOf                                       | idLivingRoomToBedroomDoor | idPlayer | True         | True          | Covered          | Included          |
++------------------------------------------------+---------------------------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3695                                                                     |
+|               |   INDEX: x3694                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3758 ARG0: e3755 ARG1: u3756 ARG2: x3757 ]           |
+|               |           [ def_implicit_q LBL: h3769 ARG0: x3766 RSTR: h3767 BODY: h3768 ]      |
+|               |           [ _east_a_1 LBL: h3754 ARG0: i3751 ARG1: x3752 ARG2: u3753 ]           |
+|               |           [ def_udef_a_q LBL: h3764 ARG0: x3761 RSTR: h3762 BODY: h3763 ]        |
+|               |           [ _player_n_of LBL: h3750 ARG0: x3748 ARG1: i3749 ]                    |
+|               |           [ place_n LBL: h3760 ARG0: x3759 ]                                     |
+|               |           [ _un-_a_neg LBL: h3747 ARG0: i3745 ARG1: e3746 ]                      |
+|               |           [ _know_v_1 LBL: h3744 ARG0: e3741 [ e PERF: - ] ARG1: u3742 ARG2:     |
+|               | i3743 ]                                                                          |
+|               |           [ _open_a_to LBL: h3732 ARG0: e3729 ARG1: u3730 ARG2: u3731 ]          |
+|               |           [ _to_p LBL: h3723 ARG0: e3720 ARG1: u3721 ARG2: i3722 ]               |
+|               |           [ def_udef_a_q LBL: h3727 ARG0: x3724 RSTR: h3725 BODY: h3726 ]        |
+|               |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|               |           [ _from_p LBL: h3712 ARG0: e3709 ARG1: u3710 ARG2: u3711 ]             |
+|               |           [ def_udef_a_q LBL: h3716 ARG0: x3713 RSTR: h3714 BODY: h3715 ]        |
+|               |           [ compound LBL: h3708 ARG0: e3705 [ e PROG: - ] ARG1: u3706 ARG2:      |
+|               | u3707 ]                                                                          |
+|               |           [ udef_q LBL: h3703 ARG0: x3700 RSTR: h3701 BODY: h3702 ]              |
+|               |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|               |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|               |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|               |   HCONS: < h3762 qeq h3750 h3767 qeq h3760 h3725 qeq h3719 h3701 qeq h3699 h3714 |
+|               | qeq h3697 >                                                                      |
+|               |   ICONS: < e3741 topic i3743 >                                                   |
+|               |   EQS: < x3761 eq x3748 h3754 eq h3765 u3753 eq x3761 h3754 eq h3760 x3752 eq    |
+|               | x3759 x3766 eq x3759 h3758 eq h3770 x3757 eq x3766 h3747 eq h3744 e3746 eq e3741 |
+|               | x3724 eq x3718 h3723 eq h3728 i3722 eq x3724 x3700 eq x3698 h3708 eq h3704 u3707 |
+|               | eq x3700 h3708 eq h3697 u3706 eq x3696 x3713 eq x3696 h3712 eq h3717 u3711 eq    |
+|               | x3713 h3712 eq h3695 u3710 eq x3694 h3723 eq h3695 u3721 eq x3694 h3732 eq h3695 |
+|               | u3730 eq x3694 h3744 eq h3695 i3743 eq x3694 h3758 eq h3695 u3756 eq x3694 > ]   |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3695                                                                     |
+|               |   INDEX: x3694                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3695 ARG0: e3755 ARG1: x3694 ARG2: x3752 ]           |
+|               |           [ def_implicit_q LBL: h3769 ARG0: x3752 RSTR: h3767 BODY: h3768 ]      |
+|               |           [ _east_a_1 LBL: h3754 ARG0: i3751 ARG1: x3752 ARG2: x3748 ]           |
+|               |           [ def_udef_a_q LBL: h3764 ARG0: x3748 RSTR: h3762 BODY: h3763 ]        |
+|               |           [ _player_n_of LBL: h3750 ARG0: x3748 ARG1: i3749 ]                    |
+|               |           [ place_n LBL: h3754 ARG0: x3752 ]                                     |
+|               |           [ _un-_a_neg LBL: h3695 ARG0: i3745 ARG1: e3741 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3695 ARG0: e3741 ARG1: u3742 ARG2: x3694 ]           |
+|               |           [ _open_a_to LBL: h3695 ARG0: e3729 ARG1: x3694 ARG2: u3731 ]          |
+|               |           [ _to_p LBL: h3695 ARG0: e3720 ARG1: x3694 ARG2: x3718 ]               |
+|               |           [ def_udef_a_q LBL: h3727 ARG0: x3718 RSTR: h3725 BODY: h3726 ]        |
+|               |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|               |           [ _from_p LBL: h3695 ARG0: e3709 ARG1: x3694 ARG2: x3696 ]             |
+|               |           [ def_udef_a_q LBL: h3716 ARG0: x3696 RSTR: h3714 BODY: h3715 ]        |
+|               |           [ compound LBL: h3697 ARG0: e3705 [ e PROG: - ] ARG1: x3696 ARG2:      |
+|               | x3698 ]                                                                          |
+|               |           [ udef_q LBL: h3703 ARG0: x3698 RSTR: h3701 BODY: h3702 ]              |
+|               |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|               |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|               |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|               |   HCONS: < h3762 qeq h3750 h3767 qeq h3754 h3725 qeq h3719 h3701 qeq h3699 h3714 |
+|               | qeq h3697 >                                                                      |
+|               |   ICONS: < e3741 topic x3694 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3779                                                                     |
+|               |   INDEX: e3776                                                                   |
+|               |   RELS: < [ unknown LBL: h3775 ARG: x3694 ARG0: e3776 ]                          |
+|               |           [ def_udef_a_q LBL: h3774 ARG0: x3694 RSTR: h3772 BODY: h3773 ]        |
+|               |           [ loc_nonsp LBL: h3695 ARG0: e3755 ARG1: x3694 ARG2: x3752 ]           |
+|               |           [ def_implicit_q LBL: h3769 ARG0: x3752 RSTR: h3767 BODY: h3768 ]      |
+|               |           [ _east_a_1 LBL: h3754 ARG0: i3751 ARG1: x3752 ARG2: x3748 ]           |
+|               |           [ def_udef_a_q LBL: h3764 ARG0: x3748 RSTR: h3762 BODY: h3763 ]        |
+|               |           [ _player_n_of LBL: h3750 ARG0: x3748 ARG1: i3749 ]                    |
+|               |           [ place_n LBL: h3754 ARG0: x3752 ]                                     |
+|               |           [ _un-_a_neg LBL: h3695 ARG0: i3745 ARG1: e3741 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3695 ARG0: e3741 ARG1: u3742 ARG2: x3694 ]           |
+|               |           [ _open_a_to LBL: h3695 ARG0: e3729 ARG1: x3694 ARG2: u3731 ]          |
+|               |           [ _to_p LBL: h3695 ARG0: e3720 ARG1: x3694 ARG2: x3718 ]               |
+|               |           [ def_udef_a_q LBL: h3727 ARG0: x3718 RSTR: h3725 BODY: h3726 ]        |
+|               |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|               |           [ _from_p LBL: h3695 ARG0: e3709 ARG1: x3694 ARG2: x3696 ]             |
+|               |           [ def_udef_a_q LBL: h3716 ARG0: x3696 RSTR: h3714 BODY: h3715 ]        |
+|               |           [ compound LBL: h3697 ARG0: e3705 [ e PROG: - ] ARG1: x3696 ARG2:      |
+|               | x3698 ]                                                                          |
+|               |           [ udef_q LBL: h3703 ARG0: x3698 RSTR: h3701 BODY: h3702 ]              |
+|               |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|               |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|               |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|               |   HCONS: < h3762 qeq h3750 h3767 qeq h3754 h3725 qeq h3719 h3701 qeq h3699 h3714 |
+|               | qeq h3697 h3772 qeq h3695 h3779 qeq h3775 >                                      |
+|               |   ICONS: < e3741 topic x3694 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| Node                      | Generated SEMENT                                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor | [ TOP: h3695                                                                     |
+|                           |   INDEX: x3694                                                                   |
+|                           |   RELS: < [ _to_p LBL: h3723 ARG0: e3720 ARG1: u3721 ARG2: i3722 ]               |
+|                           |           [ def_udef_a_q LBL: h3727 ARG0: x3724 RSTR: h3725 BODY: h3726 ]        |
+|                           |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|                           |           [ _from_p LBL: h3712 ARG0: e3709 ARG1: u3710 ARG2: u3711 ]             |
+|                           |           [ def_udef_a_q LBL: h3716 ARG0: x3713 RSTR: h3714 BODY: h3715 ]        |
+|                           |           [ compound LBL: h3708 ARG0: e3705 [ e PROG: - ] ARG1: u3706 ARG2:      |
+|                           | u3707 ]                                                                          |
+|                           |           [ udef_q LBL: h3703 ARG0: x3700 RSTR: h3701 BODY: h3702 ]              |
+|                           |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|                           |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|                           |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|                           |   HCONS: < h3725 qeq h3719 h3701 qeq h3699 h3714 qeq h3697 >                     |
+|                           |   EQS: < x3724 eq x3718 h3723 eq h3728 i3722 eq x3724 x3700 eq x3698 h3708 eq    |
+|                           | h3704 u3707 eq x3700 h3708 eq h3697 u3706 eq x3696 x3713 eq x3696 h3712 eq h3717 |
+|                           | u3711 eq x3713 h3712 eq h3695 u3710 eq x3694 h3723 eq h3695 u3721 eq x3694 > ]   |
++---------------------------+----------------------------------------------------------------------------------+
+| open                      | [ TOP: h3732                                                                     |
+|                           |   INDEX: e3729                                                                   |
+|                           |   RELS: < [ _open_a_to LBL: h3732 ARG0: e3729 ARG1: u3730 ARG2: u3731 ] >        |
+|                           |   SLOTS: < ARG1: u3730 ARG2: u3731 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| true                      | [ TOP: h3736                                                                     |
+|                           |   INDEX: e3733                                                                   |
+|                           |   RELS: < [ _true_a_of LBL: h3736 ARG0: e3733 ARG1: u3734 ARG2: u3735 ] >        |
+|                           |   SLOTS: < ARG1: u3734 ARG2: u3735 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| idPlayer                  | [ TOP: h3750                                                                     |
+|                           |   INDEX: x3748                                                                   |
+|                           |   RELS: < [ _player_n_of LBL: h3750 ARG0: x3748 ARG1: i3749 ] >                  |
+|                           |   SLOTS: < ARG1: i3749 > ]                                                       |
++---------------------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                               EDGE SEMENTS                                                                               |
++------------------------------------------------+---------------------------+----------+----------------------------------------------------------------------------------+
+| Edge                                           | Parent                    | Child    | Generated SEMENT                                                                 |
++------------------------------------------------+---------------------------+----------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor_prop_idOpenState     | idLivingRoomToBedroomDoor | open     | [ TOP: h3695                                                                     |
+|                                                |                           |          |   INDEX: x3694                                                                   |
+|                                                |                           |          |   RELS: < [ _open_a_to LBL: h3732 ARG0: e3729 ARG1: u3730 ARG2: u3731 ]          |
+|                                                |                           |          |           [ _to_p LBL: h3723 ARG0: e3720 ARG1: u3721 ARG2: i3722 ]               |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3727 ARG0: x3724 RSTR: h3725 BODY: h3726 ]        |
+|                                                |                           |          |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|                                                |                           |          |           [ _from_p LBL: h3712 ARG0: e3709 ARG1: u3710 ARG2: u3711 ]             |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3716 ARG0: x3713 RSTR: h3714 BODY: h3715 ]        |
+|                                                |                           |          |           [ compound LBL: h3708 ARG0: e3705 [ e PROG: - ] ARG1: u3706 ARG2:      |
+|                                                |                           |          | u3707 ]                                                                          |
+|                                                |                           |          |           [ udef_q LBL: h3703 ARG0: x3700 RSTR: h3701 BODY: h3702 ]              |
+|                                                |                           |          |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|                                                |                           |          |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|                                                |                           |          |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|                                                |                           |          |   HCONS: < h3725 qeq h3719 h3701 qeq h3699 h3714 qeq h3697 >                     |
+|                                                |                           |          |   EQS: < x3724 eq x3718 h3723 eq h3728 i3722 eq x3724 x3700 eq x3698 h3708 eq    |
+|                                                |                           |          | h3704 u3707 eq x3700 h3708 eq h3697 u3706 eq x3696 x3713 eq x3696 h3712 eq h3717 |
+|                                                |                           |          | u3711 eq x3713 h3712 eq h3695 u3710 eq x3694 h3723 eq h3695 u3721 eq x3694 h3732 |
+|                                                |                           |          | eq h3695 u3730 eq x3694 > ]                                                      |
++------------------------------------------------+---------------------------+----------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true     | [ TOP: h3695                                                                     |
+|                                                |                           |          |   INDEX: x3694                                                                   |
+|                                                |                           |          |   RELS: < [ _un-_a_neg LBL: h3747 ARG0: i3745 ARG1: e3746 ]                      |
+|                                                |                           |          |           [ _know_v_1 LBL: h3744 ARG0: e3741 [ e PERF: - ] ARG1: u3742 ARG2:     |
+|                                                |                           |          | i3743 ]                                                                          |
+|                                                |                           |          |           [ _open_a_to LBL: h3732 ARG0: e3729 ARG1: u3730 ARG2: u3731 ]          |
+|                                                |                           |          |           [ _to_p LBL: h3723 ARG0: e3720 ARG1: u3721 ARG2: i3722 ]               |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3727 ARG0: x3724 RSTR: h3725 BODY: h3726 ]        |
+|                                                |                           |          |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|                                                |                           |          |           [ _from_p LBL: h3712 ARG0: e3709 ARG1: u3710 ARG2: u3711 ]             |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3716 ARG0: x3713 RSTR: h3714 BODY: h3715 ]        |
+|                                                |                           |          |           [ compound LBL: h3708 ARG0: e3705 [ e PROG: - ] ARG1: u3706 ARG2:      |
+|                                                |                           |          | u3707 ]                                                                          |
+|                                                |                           |          |           [ udef_q LBL: h3703 ARG0: x3700 RSTR: h3701 BODY: h3702 ]              |
+|                                                |                           |          |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|                                                |                           |          |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|                                                |                           |          |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|                                                |                           |          |   HCONS: < h3725 qeq h3719 h3701 qeq h3699 h3714 qeq h3697 >                     |
+|                                                |                           |          |   ICONS: < e3741 topic i3743 >                                                   |
+|                                                |                           |          |   EQS: < h3747 eq h3744 e3746 eq e3741 x3724 eq x3718 h3723 eq h3728 i3722 eq    |
+|                                                |                           |          | x3724 x3700 eq x3698 h3708 eq h3704 u3707 eq x3700 h3708 eq h3697 u3706 eq x3696 |
+|                                                |                           |          | x3713 eq x3696 h3712 eq h3717 u3711 eq x3713 h3712 eq h3695 u3710 eq x3694 h3723 |
+|                                                |                           |          | eq h3695 u3721 eq x3694 h3732 eq h3695 u3730 eq x3694 h3744 eq h3695 i3743 eq    |
+|                                                |                           |          | x3694 > ]                                                                        |
++------------------------------------------------+---------------------------+----------+----------------------------------------------------------------------------------+
+| isEastOf                                       | idLivingRoomToBedroomDoor | idPlayer | [ TOP: h3695                                                                     |
+|                                                |                           |          |   INDEX: x3694                                                                   |
+|                                                |                           |          |   RELS: < [ loc_nonsp LBL: h3758 ARG0: e3755 ARG1: u3756 ARG2: x3757 ]           |
+|                                                |                           |          |           [ def_implicit_q LBL: h3769 ARG0: x3766 RSTR: h3767 BODY: h3768 ]      |
+|                                                |                           |          |           [ _east_a_1 LBL: h3754 ARG0: i3751 ARG1: x3752 ARG2: u3753 ]           |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3764 ARG0: x3761 RSTR: h3762 BODY: h3763 ]        |
+|                                                |                           |          |           [ _player_n_of LBL: h3750 ARG0: x3748 ARG1: i3749 ]                    |
+|                                                |                           |          |           [ place_n LBL: h3760 ARG0: x3759 ]                                     |
+|                                                |                           |          |           [ _un-_a_neg LBL: h3747 ARG0: i3745 ARG1: e3746 ]                      |
+|                                                |                           |          |           [ _know_v_1 LBL: h3744 ARG0: e3741 [ e PERF: - ] ARG1: u3742 ARG2:     |
+|                                                |                           |          | i3743 ]                                                                          |
+|                                                |                           |          |           [ _open_a_to LBL: h3732 ARG0: e3729 ARG1: u3730 ARG2: u3731 ]          |
+|                                                |                           |          |           [ _to_p LBL: h3723 ARG0: e3720 ARG1: u3721 ARG2: i3722 ]               |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3727 ARG0: x3724 RSTR: h3725 BODY: h3726 ]        |
+|                                                |                           |          |           [ _bedroom_n_1 LBL: h3719 ARG0: x3718 ]                                |
+|                                                |                           |          |           [ _from_p LBL: h3712 ARG0: e3709 ARG1: u3710 ARG2: u3711 ]             |
+|                                                |                           |          |           [ def_udef_a_q LBL: h3716 ARG0: x3713 RSTR: h3714 BODY: h3715 ]        |
+|                                                |                           |          |           [ compound LBL: h3708 ARG0: e3705 [ e PROG: - ] ARG1: u3706 ARG2:      |
+|                                                |                           |          | u3707 ]                                                                          |
+|                                                |                           |          |           [ udef_q LBL: h3703 ARG0: x3700 RSTR: h3701 BODY: h3702 ]              |
+|                                                |                           |          |           [ _living_n_1 LBL: h3699 ARG0: x3698 ]                                 |
+|                                                |                           |          |           [ _room_n_unit LBL: h3697 ARG0: x3696 ]                                |
+|                                                |                           |          |           [ _door_n_1 LBL: h3695 ARG0: x3694 ] >                                 |
+|                                                |                           |          |   HCONS: < h3762 qeq h3750 h3767 qeq h3760 h3725 qeq h3719 h3701 qeq h3699 h3714 |
+|                                                |                           |          | qeq h3697 >                                                                      |
+|                                                |                           |          |   ICONS: < e3741 topic i3743 >                                                   |
+|                                                |                           |          |   EQS: < x3761 eq x3748 h3754 eq h3765 u3753 eq x3761 h3754 eq h3760 x3752 eq    |
+|                                                |                           |          | x3759 x3766 eq x3759 h3758 eq h3770 x3757 eq x3766 h3747 eq h3744 e3746 eq e3741 |
+|                                                |                           |          | x3724 eq x3718 h3723 eq h3728 i3722 eq x3724 x3700 eq x3698 h3708 eq h3704 u3707 |
+|                                                |                           |          | eq x3700 h3708 eq h3697 u3706 eq x3696 x3713 eq x3696 h3712 eq h3717 u3711 eq    |
+|                                                |                           |          | x3713 h3712 eq h3695 u3710 eq x3694 h3723 eq h3695 u3721 eq x3694 h3732 eq h3695 |
+|                                                |                           |          | u3730 eq x3694 h3744 eq h3695 i3743 eq x3694 h3758 eq h3695 u3756 eq x3694 > ]   |
++------------------------------------------------+---------------------------+----------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------+
+|                                  GENERATED ENGLISH TEXT                                  |
++------+-----------------------------------------------------------------------------------+
+| #    | Generated Text                                                                    |
++------+-----------------------------------------------------------------------------------+
+| 1    | An open unknown door east of the player from the living room to the bedrooms      |
+| 2    | An open unknown door east of the player from the living rooms to the bedrooms     |
+| 3    | An open unknown door east of the players from a living room to the bedrooms       |
+| 4    | An open unknown door east of the players from living rooms to the bedrooms        |
+| 5    | An open unknown door east of the players from the living room to the bedrooms     |
+| 6    | An open unknown door east of the players from the living rooms to the bedrooms    |
+| 7    | An open unknown door east of the players to the bedroom from a living room        |
+| 8    | An open unknown door east of the players to the bedroom from the living room      |
+| 9    | An open unknown door east of the players to the bedroom from the living rooms     |
+| 10   | An open unknown door east of the players to the bedrooms from a living room       |
+| 11   | An open unknown door east of the players to the bedrooms from the living room     |
+| 12   | An open unknown door east of the players to the bedrooms from the living rooms    |
+| 13   | An open unknown door from a living room east of the player to the bedroom         |
+| 14   | An open unknown door from a living room east of the player to the bedrooms        |
+| 15   | An open unknown door from a living room east of the player to the bedrooms.       |
+| 16   | An open unknown door from a living room east of the players to a bedroom          |
+| 17   | An open unknown door from a living room east of the players to bedrooms           |
+| 18   | An open unknown door from a living room east of the players to bedrooms.          |
+| 19   | An open unknown door from a living room east of the players to the bedroom        |
+| 20   | An open unknown door from a living room east of the players to the bedrooms       |
+| 21   | An open unknown door from a living room east of the players to the bedrooms.      |
+| 22   | An open unknown door from a living room to the bedroom east of the players        |
+| 23   | An open unknown door from a living room to the bedrooms east of the players       |
+| 24   | An open unknown door from living rooms east of the player to the bedrooms         |
+| 25   | An open unknown door from living rooms east of the players to a bedroom           |
+| 26   | An open unknown door from living rooms east of the players to bedrooms            |
+| 27   | An open unknown door from living rooms east of the players to the bedroom         |
+| 28   | An open unknown door from living rooms east of the players to the bedrooms        |
+| 29   | An open unknown door from living rooms east of the players to the bedrooms.       |
+| 30   | An open unknown door from living rooms to the bedroom east of the players         |
+| 31   | An open unknown door from living rooms to the bedrooms east of the players        |
+| 32   | An open unknown door from living rooms, to the bedrooms east of the players       |
+| 33   | An open unknown door from the living room east of a player to the bedrooms        |
+| 34   | An open unknown door from the living room east of the player to a bedroom         |
+| 35   | An open unknown door from the living room east of the player to the bedroom       |
+| 36   | An open unknown door from the living room east of the player to the bedrooms      |
+| 37   | An open unknown door from the living room east of the player to the bedrooms.     |
+| 38   | An open unknown door from the living room east of the players to a bedroom        |
+| 39   | An open unknown door from the living room east of the players to bedrooms         |
+| 40   | An open unknown door from the living room east of the players to bedrooms.        |
+| 41   | An open unknown door from the living room east of the players to the bedroom      |
+| 42   | An open unknown door from the living room east of the players to the bedrooms     |
+| 43   | An open unknown door from the living room east of the players to the bedrooms.    |
+| 44   | An open unknown door from the living room to a bedroom east of the players        |
+| 45   | An open unknown door from the living room to bedrooms east of the players         |
+| 46   | An open unknown door from the living room to the bedroom east of the player       |
+| 47   | An open unknown door from the living room to the bedroom east of the players      |
+| 48   | An open unknown door from the living room to the bedrooms east of the player      |
+| 49   | An open unknown door from the living room to the bedrooms east of the players     |
+| 50   | An open unknown door from the living rooms east of a player to the bedrooms       |
+| 51   | An open unknown door from the living rooms east of the player to a bedroom        |
+| 52   | An open unknown door from the living rooms east of the player to the bedroom      |
+| 53   | An open unknown door from the living rooms east of the player to the bedrooms     |
+| 54   | An open unknown door from the living rooms east of the player to the bedrooms.    |
+| 55   | An open unknown door from the living rooms east of the player, to the bedrooms    |
+| 56   | An open unknown door from the living rooms east of the players to a bedroom       |
+| 57   | An open unknown door from the living rooms east of the players to bedrooms        |
+| 58   | An open unknown door from the living rooms east of the players to bedrooms.       |
+| 59   | An open unknown door from the living rooms east of the players to the bedroom     |
+| 60   | An open unknown door from the living rooms east of the players to the bedrooms    |
+| 61   | An open unknown door from the living rooms east of the players to the bedrooms.   |
+| 62   | An open unknown door from the living rooms to a bedroom east of the players       |
+| 63   | An open unknown door from the living rooms to bedrooms east of the players        |
+| 64   | An open unknown door from the living rooms to the bedroom east of the player      |
+| 65   | An open unknown door from the living rooms to the bedroom east of the players     |
+| 66   | An open unknown door from the living rooms to the bedrooms east of the player     |
+| 67   | An open unknown door from the living rooms to the bedrooms east of the players    |
+| 68   | An open unknown door to a bedroom east of the player from a living room           |
+| 69   | An open unknown door to a bedroom east of the player from the living room         |
+| 70   | An open unknown door to a bedroom east of the player from the living rooms        |
+| 71   | An open unknown door to a bedroom east of the players from a living room          |
+| 72   | An open unknown door to a bedroom east of the players from living rooms           |
+| 73   | An open unknown door to a bedroom east of the players from living rooms.          |
+| 74   | An open unknown door to a bedroom east of the players from the living room        |
+| 75   | An open unknown door to a bedroom east of the players from the living rooms       |
+| 76   | An open unknown door to a bedroom east of the players from the living rooms.      |
+| 77   | An open unknown door to a bedroom from a living room east of the players          |
+| 78   | An open unknown door to a bedroom from the living room east of the players        |
+| 79   | An open unknown door to a bedroom from the living rooms east of the players       |
+| 80   | An open unknown door to bedrooms east of the player from a living room            |
+| 81   | An open unknown door to bedrooms east of the player from the living room          |
+| 82   | An open unknown door to bedrooms east of the player from the living rooms         |
+| 83   | An open unknown door to bedrooms east of the players from a living room           |
+| 84   | An open unknown door to bedrooms east of the players from living rooms            |
+| 85   | An open unknown door to bedrooms east of the players from living rooms.           |
+| 86   | An open unknown door to bedrooms east of the players from the living room         |
+| 87   | An open unknown door to bedrooms east of the players from the living rooms        |
+| 88   | An open unknown door to bedrooms east of the players from the living rooms.       |
+| 89   | An open unknown door to bedrooms from a living room east of the players           |
+| 90   | An open unknown door to bedrooms from the living room east of the players         |
+| 91   | An open unknown door to bedrooms from the living rooms east of the players        |
+| 92   | An open unknown door to the bedroom east of the player from a living room         |
+| 93   | An open unknown door to the bedroom east of the player from living rooms          |
+| 94   | An open unknown door to the bedroom east of the player from living rooms.         |
+| 95   | An open unknown door to the bedroom east of the player from the living room       |
+| 96   | An open unknown door to the bedroom east of the player from the living rooms      |
+| 97   | An open unknown door to the bedroom east of the player from the living rooms.     |
+| 98   | An open unknown door to the bedroom east of the players from a living room        |
+| 99   | An open unknown door to the bedroom east of the players from a living room.       |
+| 100  | An open unknown door to the bedroom east of the players from living rooms         |
+| 101  | An open unknown door to the bedroom east of the players from living rooms.        |
+| 102  | An open unknown door to the bedroom east of the players from the living room      |
+| 103  | An open unknown door to the bedroom east of the players from the living room.     |
+| 104  | An open unknown door to the bedroom east of the players from the living rooms     |
+| 105  | An open unknown door to the bedroom east of the players from the living rooms.    |
+| 106  | An open unknown door to the bedroom from a living room east of the player         |
+| 107  | An open unknown door to the bedroom from a living room east of the players        |
+| 108  | An open unknown door to the bedroom from living rooms east of the players         |
+| 109  | An open unknown door to the bedroom from the living room east of the player       |
+| 110  | An open unknown door to the bedroom from the living room east of the player.      |
+| 111  | An open unknown door to the bedroom from the living room east of the players      |
+| 112  | An open unknown door to the bedroom from the living room east of the players.     |
+| 113  | An open unknown door to the bedroom from the living rooms east of the player      |
+| 114  | An open unknown door to the bedroom from the living rooms east of the player.     |
+| 115  | An open unknown door to the bedroom from the living rooms east of the players     |
+| 116  | An open unknown door to the bedroom from the living rooms east of the players.    |
+| 117  | An open unknown door to the bedrooms east of the player from a living room        |
+| 118  | An open unknown door to the bedrooms east of the player from living rooms         |
+| 119  | An open unknown door to the bedrooms east of the player from living rooms.        |
+| 120  | An open unknown door to the bedrooms east of the player from the living room      |
+| 121  | An open unknown door to the bedrooms east of the player from the living rooms     |
+| 122  | An open unknown door to the bedrooms east of the player from the living rooms.    |
+| 123  | An open unknown door to the bedrooms east of the players from a living room       |
+| 124  | An open unknown door to the bedrooms east of the players from a living room.      |
+| 125  | An open unknown door to the bedrooms east of the players from living rooms        |
+| 126  | An open unknown door to the bedrooms east of the players from living rooms.       |
+| 127  | An open unknown door to the bedrooms east of the players from the living room     |
+| 128  | An open unknown door to the bedrooms east of the players from the living room.    |
+| 129  | An open unknown door to the bedrooms east of the players from the living rooms    |
+| 130  | An open unknown door to the bedrooms east of the players from the living rooms.   |
+| 131  | An open unknown door to the bedrooms from a living room east of the player        |
+| 132  | An open unknown door to the bedrooms from a living room east of the players       |
+| 133  | An open unknown door to the bedrooms from living rooms east of the players        |
+| 134  | An open unknown door to the bedrooms from the living room east of the player      |
+| 135  | An open unknown door to the bedrooms from the living room east of the players     |
+| 136  | An open unknown door to the bedrooms from the living rooms east of the player     |
+| 137  | An open unknown door to the bedrooms from the living rooms east of the players    |
+| 138  | An unknown open door from a living room east of the player to the bedrooms        |
+| 139  | An unknown open door from a living room east of the players to the bedrooms       |
+| 140  | An unknown open door from living rooms east of the players to the bedrooms        |
+| 141  | An unknown open door from the living room east of the player to the bedrooms      |
+| 142  | An unknown open door from the living room east of the players to the bedroom      |
+| 143  | An unknown open door from the living room east of the players to the bedrooms     |
+| 144  | An unknown open door from the living room east of the players to the bedrooms.    |
+| 145  | An unknown open door from the living rooms east of the player to the bedrooms     |
+| 146  | An unknown open door from the living rooms east of the players to the bedroom     |
+| 147  | An unknown open door from the living rooms east of the players to the bedrooms    |
+| 148  | An unknown open door from the living rooms east of the players to the bedrooms.   |
+| 149  | An unknown open door to a bedroom east of the players from a living room          |
+| 150  | An unknown open door to a bedroom east of the players from the living room        |
+| 151  | An unknown open door to a bedroom east of the players from the living rooms       |
+| 152  | An unknown open door to the bedroom east of the player from a living room         |
+| 153  | An unknown open door to the bedroom east of the player from the living room       |
+| 154  | An unknown open door to the bedroom east of the player from the living rooms      |
+| 155  | An unknown open door to the bedroom east of the players from a living room        |
+| 156  | An unknown open door to the bedroom east of the players from living rooms         |
+| 157  | An unknown open door to the bedroom east of the players from living rooms.        |
+| 158  | An unknown open door to the bedroom east of the players from the living room      |
+| 159  | An unknown open door to the bedroom east of the players from the living rooms     |
+| 160  | An unknown open door to the bedroom east of the players from the living rooms.    |
+| 161  | An unknown open door to the bedroom from the living room east of the players      |
+| 162  | An unknown open door to the bedroom from the living rooms east of the players     |
+| 163  | An unknown open door to the bedrooms east of the player from a living room        |
+| 164  | An unknown open door to the bedrooms east of the players from a living room       |
+| 165  | An unknown open door to the bedrooms east of the players from living rooms        |
+| 166  | An unknown open door to the bedrooms east of the players from living rooms.       |
+| 167  | An unknown open door to the bedrooms east of the players from the living room     |
+| 168  | An unknown open door to the bedrooms east of the players from the living rooms    |
+| 169  | Open unknown door east of the players from a living room to the bedrooms          |
+| 170  | Open unknown door east of the players from the living room to the bedrooms        |
+| 171  | Open unknown door east of the players from the living rooms to the bedrooms       |
+| 172  | Open unknown door from a living room east of the players to the bedrooms          |
+| 173  | Open unknown door from living rooms east of the players to the bedrooms           |
+| 174  | Open unknown door from the living room east of the player, to the bedrooms        |
+| 175  | Open unknown door from the living room east of the players to the bedrooms        |
+| 176  | Open unknown door from the living room east of the players, to the bedrooms       |
+| 177  | Open unknown door from the living rooms east of the player, to the bedrooms       |
+| 178  | Open unknown door from the living rooms east of the players to the bedrooms       |
+| 179  | Open unknown door from the living rooms east of the players, to the bedrooms      |
+| 180  | Open unknown doors east of the players from a living room to the bedrooms         |
+| 181  | Open unknown doors east of the players from the living room to the bedrooms       |
+| 182  | Open unknown doors east of the players from the living rooms to the bedrooms      |
+| 183  | Open unknown doors east of the players to the bedroom from a living room          |
+| 184  | Open unknown doors east of the players to the bedrooms from a living room         |
+| 185  | Open unknown doors from a living room east of the player to the bedrooms          |
+| 186  | Open unknown doors from a living room east of the player to the bedrooms.         |
+| 187  | Open unknown doors from a living room east of the player, to the bedrooms         |
+| 188  | Open unknown doors from a living room east of the players to bedrooms             |
+| 189  | Open unknown doors from a living room east of the players to the bedroom          |
+| 190  | Open unknown doors from a living room east of the players to the bedrooms         |
+| 191  | Open unknown doors from a living room east of the players to the bedrooms.        |
+| 192  | Open unknown doors from a living room east of the players, to the bedrooms        |
+| 193  | Open unknown doors from a living room to a bedroom east of a player               |
+| 194  | Open unknown doors from a living room to a bedroom east of the player             |
+| 195  | Open unknown doors from a living room to a bedroom east of the player.            |
+| 196  | Open unknown doors from a living room to a bedroom east of the players            |
+| 197  | Open unknown doors from a living room to a bedroom east of the players.           |
+| 198  | Open unknown doors from a living room to bedrooms east of the player              |
+| 199  | Open unknown doors from a living room to bedrooms east of the player.             |
+| 200  | Open unknown doors from a living room to bedrooms east of the players             |
+| 201  | Open unknown doors from a living room to bedrooms east of the players.            |
+| 202  | Open unknown doors from a living room to the bedroom east of a player             |
+| 203  | Open unknown doors from a living room to the bedroom east of a player.            |
+| 204  | Open unknown doors from a living room to the bedroom east of players.             |
+| 205  | Open unknown doors from a living room to the bedroom east of the player           |
+| 206  | Open unknown doors from a living room to the bedroom east of the player.          |
+| 207  | Open unknown doors from a living room to the bedroom east of the players          |
+| 208  | Open unknown doors from a living room to the bedroom east of the players.         |
+| 209  | Open unknown doors from a living room to the bedrooms east of a player            |
+| 210  | Open unknown doors from a living room to the bedrooms east of a player.           |
+| 211  | Open unknown doors from a living room to the bedrooms east of the player          |
+| 212  | Open unknown doors from a living room to the bedrooms east of the player.         |
+| 213  | Open unknown doors from a living room to the bedrooms east of the players         |
+| 214  | Open unknown doors from a living room to the bedrooms east of the players.        |
+| 215  | Open unknown doors from a living room, to the bedrooms east of the player         |
+| 216  | Open unknown doors from a living room, to the bedrooms east of the players        |
+| 217  | Open unknown doors from living rooms east of the player to the bedrooms           |
+| 218  | Open unknown doors from living rooms east of the player, to the bedrooms          |
+| 219  | Open unknown doors from living rooms east of the players to the bedrooms          |
+| 220  | Open unknown doors from living rooms east of the players to the bedrooms.         |
+| 221  | Open unknown doors from living rooms to a bedroom east of the player              |
+| 222  | Open unknown doors from living rooms to a bedroom east of the player.             |
+| 223  | Open unknown doors from living rooms to a bedroom east of the players             |
+| 224  | Open unknown doors from living rooms to a bedroom east of the players.            |
+| 225  | Open unknown doors from living rooms to bedrooms east of the player               |
+| 226  | Open unknown doors from living rooms to bedrooms east of the player.              |
+| 227  | Open unknown doors from living rooms to bedrooms east of the players              |
+| 228  | Open unknown doors from living rooms to bedrooms east of the players.             |
+| 229  | Open unknown doors from living rooms to the bedroom east of a player              |
+| 230  | Open unknown doors from living rooms to the bedroom east of a player.             |
+| 231  | Open unknown doors from living rooms to the bedroom east of the player            |
+| 232  | Open unknown doors from living rooms to the bedroom east of the player.           |
+| 233  | Open unknown doors from living rooms to the bedroom east of the players           |
+| 234  | Open unknown doors from living rooms to the bedroom east of the players.          |
+| 235  | Open unknown doors from living rooms to the bedrooms east of a player             |
+| 236  | Open unknown doors from living rooms to the bedrooms east of a player.            |
+| 237  | Open unknown doors from living rooms to the bedrooms east of the player           |
+| 238  | Open unknown doors from living rooms to the bedrooms east of the player.          |
+| 239  | Open unknown doors from living rooms to the bedrooms east of the players          |
+| 240  | Open unknown doors from living rooms to the bedrooms east of the players.         |
+| 241  | Open unknown doors from living rooms, to the bedroom east of the players          |
+| 242  | Open unknown doors from living rooms, to the bedrooms east of the player          |
+| 243  | Open unknown doors from living rooms, to the bedrooms east of the player.         |
+| 244  | Open unknown doors from living rooms, to the bedrooms east of the players         |
+| 245  | Open unknown doors from the living room east of a player to the bedrooms          |
+| 246  | Open unknown doors from the living room east of the player to the bedrooms        |
+| 247  | Open unknown doors from the living room east of the player to the bedrooms.       |
+| 248  | Open unknown doors from the living room east of the player, to the bedroom        |
+| 249  | Open unknown doors from the living room east of the player, to the bedrooms       |
+| 250  | Open unknown doors from the living room east of the players to a bedroom          |
+| 251  | Open unknown doors from the living room east of the players to bedrooms           |
+| 252  | Open unknown doors from the living room east of the players to bedrooms.          |
+| 253  | Open unknown doors from the living room east of the players to the bedroom        |
+| 254  | Open unknown doors from the living room east of the players to the bedrooms       |
+| 255  | Open unknown doors from the living room east of the players to the bedrooms.      |
+| 256  | Open unknown doors from the living room east of the players, to the bedrooms      |
+| 257  | Open unknown doors from the living room to a bedroom east of a player             |
+| 258  | Open unknown doors from the living room to a bedroom east of the player           |
+| 259  | Open unknown doors from the living room to a bedroom east of the player.          |
+| 260  | Open unknown doors from the living room to a bedroom east of the players          |
+| 261  | Open unknown doors from the living room to a bedroom east of the players.         |
+| 262  | Open unknown doors from the living room to bedrooms east of a player              |
+| 263  | Open unknown doors from the living room to bedrooms east of the player            |
+| 264  | Open unknown doors from the living room to bedrooms east of the player.           |
+| 265  | Open unknown doors from the living room to bedrooms east of the players           |
+| 266  | Open unknown doors from the living room to bedrooms east of the players.          |
+| 267  | Open unknown doors from the living room to the bedroom east of a player           |
+| 268  | Open unknown doors from the living room to the bedroom east of a player.          |
+| 269  | Open unknown doors from the living room to the bedroom east of players            |
+| 270  | Open unknown doors from the living room to the bedroom east of players.           |
+| 271  | Open unknown doors from the living room to the bedroom east of the player         |
+| 272  | Open unknown doors from the living room to the bedroom east of the player.        |
+| 273  | Open unknown doors from the living room to the bedroom east of the players        |
+| 274  | Open unknown doors from the living room to the bedroom east of the players.       |
+| 275  | Open unknown doors from the living room to the bedrooms east of a player          |
+| 276  | Open unknown doors from the living room to the bedrooms east of a player.         |
+| 277  | Open unknown doors from the living room to the bedrooms east of players.          |
+| 278  | Open unknown doors from the living room to the bedrooms east of the player        |
+| 279  | Open unknown doors from the living room to the bedrooms east of the player.       |
+| 280  | Open unknown doors from the living room to the bedrooms east of the players       |
+| 281  | Open unknown doors from the living room to the bedrooms east of the players.      |
+| 282  | Open unknown doors from the living room, to the bedrooms east of the player       |
+| 283  | Open unknown doors from the living room, to the bedrooms east of the players      |
+| 284  | Open unknown doors from the living rooms east of a player to the bedrooms         |
+| 285  | Open unknown doors from the living rooms east of the player to the bedrooms       |
+| 286  | Open unknown doors from the living rooms east of the player to the bedrooms.      |
+| 287  | Open unknown doors from the living rooms east of the player, to the bedroom       |
+| 288  | Open unknown doors from the living rooms east of the player, to the bedrooms      |
+| 289  | Open unknown doors from the living rooms east of the players to a bedroom         |
+| 290  | Open unknown doors from the living rooms east of the players to bedrooms          |
+| 291  | Open unknown doors from the living rooms east of the players to bedrooms.         |
+| 292  | Open unknown doors from the living rooms east of the players to the bedroom       |
+| 293  | Open unknown doors from the living rooms east of the players to the bedrooms      |
+| 294  | Open unknown doors from the living rooms east of the players to the bedrooms.     |
+| 295  | Open unknown doors from the living rooms east of the players, to the bedrooms     |
+| 296  | Open unknown doors from the living rooms to a bedroom east of a player            |
+| 297  | Open unknown doors from the living rooms to a bedroom east of the player          |
+| 298  | Open unknown doors from the living rooms to a bedroom east of the player.         |
+| 299  | Open unknown doors from the living rooms to a bedroom east of the players         |
+| 300  | Open unknown doors from the living rooms to a bedroom east of the players.        |
+| 301  | Open unknown doors from the living rooms to bedrooms east of a player             |
+| 302  | Open unknown doors from the living rooms to bedrooms east of the player           |
+| 303  | Open unknown doors from the living rooms to bedrooms east of the player.          |
+| 304  | Open unknown doors from the living rooms to bedrooms east of the players          |
+| 305  | Open unknown doors from the living rooms to bedrooms east of the players.         |
+| 306  | Open unknown doors from the living rooms to the bedroom east of a player          |
+| 307  | Open unknown doors from the living rooms to the bedroom east of a player.         |
+| 308  | Open unknown doors from the living rooms to the bedroom east of players           |
+| 309  | Open unknown doors from the living rooms to the bedroom east of players.          |
+| 310  | Open unknown doors from the living rooms to the bedroom east of the player        |
+| 311  | Open unknown doors from the living rooms to the bedroom east of the player.       |
+| 312  | Open unknown doors from the living rooms to the bedroom east of the players       |
+| 313  | Open unknown doors from the living rooms to the bedroom east of the players.      |
+| 314  | Open unknown doors from the living rooms to the bedrooms east of a player         |
+| 315  | Open unknown doors from the living rooms to the bedrooms east of a player.        |
+| 316  | Open unknown doors from the living rooms to the bedrooms east of players.         |
+| 317  | Open unknown doors from the living rooms to the bedrooms east of the player       |
+| 318  | Open unknown doors from the living rooms to the bedrooms east of the player.      |
+| 319  | Open unknown doors from the living rooms to the bedrooms east of the players      |
+| 320  | Open unknown doors from the living rooms to the bedrooms east of the players.     |
+| 321  | Open unknown doors from the living rooms, to the bedrooms east of the player      |
+| 322  | Open unknown doors from the living rooms, to the bedrooms east of the players     |
+| 323  | Open unknown doors to a bedroom east of the player from a living room             |
+| 324  | Open unknown doors to a bedroom east of the player from the living room           |
+| 325  | Open unknown doors to a bedroom east of the player from the living rooms          |
+| 326  | Open unknown doors to a bedroom east of the players from a living room            |
+| 327  | Open unknown doors to a bedroom east of the players from living rooms             |
+| 328  | Open unknown doors to a bedroom east of the players from the living room          |
+| 329  | Open unknown doors to a bedroom east of the players from the living rooms         |
+| 330  | Open unknown doors to a bedroom east of the players from the living rooms.        |
+| 331  | Open unknown doors to a bedroom from a living room east of a player               |
+| 332  | Open unknown doors to a bedroom from a living room east of a player.              |
+| 333  | Open unknown doors to a bedroom from a living room east of the player             |
+| 334  | Open unknown doors to a bedroom from a living room east of the player.            |
+| 335  | Open unknown doors to a bedroom from a living room east of the players            |
+| 336  | Open unknown doors to a bedroom from a living room east of the players.           |
+| 337  | Open unknown doors to a bedroom from living rooms east of the player              |
+| 338  | Open unknown doors to a bedroom from living rooms east of the player.             |
+| 339  | Open unknown doors to a bedroom from living rooms east of the players             |
+| 340  | Open unknown doors to a bedroom from living rooms east of the players.            |
+| 341  | Open unknown doors to a bedroom from the living room east of a player             |
+| 342  | Open unknown doors to a bedroom from the living room east of a player.            |
+| 343  | Open unknown doors to a bedroom from the living room east of the player           |
+| 344  | Open unknown doors to a bedroom from the living room east of the player.          |
+| 345  | Open unknown doors to a bedroom from the living room east of the players          |
+| 346  | Open unknown doors to a bedroom from the living room east of the players.         |
+| 347  | Open unknown doors to a bedroom from the living rooms east of a player            |
+| 348  | Open unknown doors to a bedroom from the living rooms east of a player.           |
+| 349  | Open unknown doors to a bedroom from the living rooms east of players.            |
+| 350  | Open unknown doors to a bedroom from the living rooms east of the player          |
+| 351  | Open unknown doors to a bedroom from the living rooms east of the player.         |
+| 352  | Open unknown doors to a bedroom from the living rooms east of the players         |
+| 353  | Open unknown doors to a bedroom from the living rooms east of the players.        |
+| 354  | Open unknown doors to bedrooms east of the player from a living room              |
+| 355  | Open unknown doors to bedrooms east of the player from the living room            |
+| 356  | Open unknown doors to bedrooms east of the player from the living rooms           |
+| 357  | Open unknown doors to bedrooms east of the players from a living room             |
+| 358  | Open unknown doors to bedrooms east of the players from the living room           |
+| 359  | Open unknown doors to bedrooms east of the players from the living rooms          |
+| 360  | Open unknown doors to bedrooms east of the players from the living rooms.         |
+| 361  | Open unknown doors to bedrooms from a living room east of a player                |
+| 362  | Open unknown doors to bedrooms from a living room east of the player              |
+| 363  | Open unknown doors to bedrooms from a living room east of the player.             |
+| 364  | Open unknown doors to bedrooms from a living room east of the players             |
+| 365  | Open unknown doors to bedrooms from a living room east of the players.            |
+| 366  | Open unknown doors to bedrooms from living rooms east of the player               |
+| 367  | Open unknown doors to bedrooms from living rooms east of the player.              |
+| 368  | Open unknown doors to bedrooms from living rooms east of the players              |
+| 369  | Open unknown doors to bedrooms from living rooms east of the players.             |
+| 370  | Open unknown doors to bedrooms from the living room east of a player              |
+| 371  | Open unknown doors to bedrooms from the living room east of a player.             |
+| 372  | Open unknown doors to bedrooms from the living room east of the player            |
+| 373  | Open unknown doors to bedrooms from the living room east of the player.           |
+| 374  | Open unknown doors to bedrooms from the living room east of the players           |
+| 375  | Open unknown doors to bedrooms from the living room east of the players.          |
+| 376  | Open unknown doors to bedrooms from the living rooms east of a player             |
+| 377  | Open unknown doors to bedrooms from the living rooms east of a player.            |
+| 378  | Open unknown doors to bedrooms from the living rooms east of the player           |
+| 379  | Open unknown doors to bedrooms from the living rooms east of the player.          |
+| 380  | Open unknown doors to bedrooms from the living rooms east of the players          |
+| 381  | Open unknown doors to bedrooms from the living rooms east of the players.         |
+| 382  | Open unknown doors to the bedroom east of a player from a living room             |
+| 383  | Open unknown doors to the bedroom east of the player from a living room           |
+| 384  | Open unknown doors to the bedroom east of the player from living rooms            |
+| 385  | Open unknown doors to the bedroom east of the player from the living room         |
+| 386  | Open unknown doors to the bedroom east of the player from the living rooms        |
+| 387  | Open unknown doors to the bedroom east of the player from the living rooms.       |
+| 388  | Open unknown doors to the bedroom east of the players from a living room          |
+| 389  | Open unknown doors to the bedroom east of the players from a living room.         |
+| 390  | Open unknown doors to the bedroom east of the players from living rooms           |
+| 391  | Open unknown doors to the bedroom east of the players from living rooms.          |
+| 392  | Open unknown doors to the bedroom east of the players from the living room        |
+| 393  | Open unknown doors to the bedroom east of the players from the living room.       |
+| 394  | Open unknown doors to the bedroom east of the players from the living rooms       |
+| 395  | Open unknown doors to the bedroom east of the players from the living rooms.      |
+| 396  | Open unknown doors to the bedroom from a living room east of a player             |
+| 397  | Open unknown doors to the bedroom from a living room east of a player.            |
+| 398  | Open unknown doors to the bedroom from a living room east of players              |
+| 399  | Open unknown doors to the bedroom from a living room east of players.             |
+| 400  | Open unknown doors to the bedroom from a living room east of the player           |
+| 401  | Open unknown doors to the bedroom from a living room east of the player.          |
+| 402  | Open unknown doors to the bedroom from a living room east of the players          |
+| 403  | Open unknown doors to the bedroom from a living room east of the players.         |
+| 404  | Open unknown doors to the bedroom from living rooms east of a player              |
+| 405  | Open unknown doors to the bedroom from living rooms east of a player.             |
+| 406  | Open unknown doors to the bedroom from living rooms east of the player            |
+| 407  | Open unknown doors to the bedroom from living rooms east of the player.           |
+| 408  | Open unknown doors to the bedroom from living rooms east of the players           |
+| 409  | Open unknown doors to the bedroom from living rooms east of the players.          |
+| 410  | Open unknown doors to the bedroom from the living room east of a player           |
+| 411  | Open unknown doors to the bedroom from the living room east of a player.          |
+| 412  | Open unknown doors to the bedroom from the living room east of players            |
+| 413  | Open unknown doors to the bedroom from the living room east of players.           |
+| 414  | Open unknown doors to the bedroom from the living room east of the player         |
+| 415  | Open unknown doors to the bedroom from the living room east of the player.        |
+| 416  | Open unknown doors to the bedroom from the living room east of the players        |
+| 417  | Open unknown doors to the bedroom from the living room east of the players.       |
+| 418  | Open unknown doors to the bedroom from the living rooms east of a player          |
+| 419  | Open unknown doors to the bedroom from the living rooms east of a player.         |
+| 420  | Open unknown doors to the bedroom from the living rooms east of players           |
+| 421  | Open unknown doors to the bedroom from the living rooms east of players.          |
+| 422  | Open unknown doors to the bedroom from the living rooms east of the player        |
+| 423  | Open unknown doors to the bedroom from the living rooms east of the player.       |
+| 424  | Open unknown doors to the bedroom from the living rooms east of the players       |
+| 425  | Open unknown doors to the bedroom from the living rooms east of the players.      |
+| 426  | Open unknown doors to the bedrooms east of a player from a living room            |
+| 427  | Open unknown doors to the bedrooms east of the player from a living room          |
+| 428  | Open unknown doors to the bedrooms east of the player from the living room        |
+| 429  | Open unknown doors to the bedrooms east of the player from the living rooms       |
+| 430  | Open unknown doors to the bedrooms east of the player from the living rooms.      |
+| 431  | Open unknown doors to the bedrooms east of the players from a living room         |
+| 432  | Open unknown doors to the bedrooms east of the players from a living room.        |
+| 433  | Open unknown doors to the bedrooms east of the players from living rooms          |
+| 434  | Open unknown doors to the bedrooms east of the players from living rooms.         |
+| 435  | Open unknown doors to the bedrooms east of the players from the living room       |
+| 436  | Open unknown doors to the bedrooms east of the players from the living room.      |
+| 437  | Open unknown doors to the bedrooms east of the players from the living rooms      |
+| 438  | Open unknown doors to the bedrooms east of the players from the living rooms.     |
+| 439  | Open unknown doors to the bedrooms from a living room east of a player            |
+| 440  | Open unknown doors to the bedrooms from a living room east of a player.           |
+| 441  | Open unknown doors to the bedrooms from a living room east of players             |
+| 442  | Open unknown doors to the bedrooms from a living room east of players.            |
+| 443  | Open unknown doors to the bedrooms from a living room east of the player          |
+| 444  | Open unknown doors to the bedrooms from a living room east of the player.         |
+| 445  | Open unknown doors to the bedrooms from a living room east of the players         |
+| 446  | Open unknown doors to the bedrooms from a living room east of the players.        |
+| 447  | Open unknown doors to the bedrooms from living rooms east of a player             |
+| 448  | Open unknown doors to the bedrooms from living rooms east of a player.            |
+| 449  | Open unknown doors to the bedrooms from living rooms east of the player           |
+| 450  | Open unknown doors to the bedrooms from living rooms east of the player.          |
+| 451  | Open unknown doors to the bedrooms from living rooms east of the players          |
+| 452  | Open unknown doors to the bedrooms from living rooms east of the players.         |
+| 453  | Open unknown doors to the bedrooms from the living room east of a player          |
+| 454  | Open unknown doors to the bedrooms from the living room east of a player.         |
+| 455  | Open unknown doors to the bedrooms from the living room east of players           |
+| 456  | Open unknown doors to the bedrooms from the living room east of players.          |
+| 457  | Open unknown doors to the bedrooms from the living room east of the player        |
+| 458  | Open unknown doors to the bedrooms from the living room east of the player.       |
+| 459  | Open unknown doors to the bedrooms from the living room east of the players       |
+| 460  | Open unknown doors to the bedrooms from the living room east of the players.      |
+| 461  | Open unknown doors to the bedrooms from the living rooms east of a player         |
+| 462  | Open unknown doors to the bedrooms from the living rooms east of a player.        |
+| 463  | Open unknown doors to the bedrooms from the living rooms east of players          |
+| 464  | Open unknown doors to the bedrooms from the living rooms east of players.         |
+| 465  | Open unknown doors to the bedrooms from the living rooms east of the player       |
+| 466  | Open unknown doors to the bedrooms from the living rooms east of the player.      |
+| 467  | Open unknown doors to the bedrooms from the living rooms east of the players      |
+| 468  | Open unknown doors to the bedrooms from the living rooms east of the players.     |
+| 469  | The open unknown door east of the player from a living room to the bedrooms       |
+| 470  | The open unknown door east of the player from the living room to the bedrooms     |
+| 471  | The open unknown door east of the player from the living rooms to the bedrooms    |
+| 472  | The open unknown door east of the players from a living room to the bedrooms      |
+| 473  | The open unknown door east of the players from living rooms to the bedrooms       |
+| 474  | The open unknown door east of the players from the living room to the bedroom     |
+| 475  | The open unknown door east of the players from the living room to the bedrooms    |
+| 476  | The open unknown door east of the players from the living room to the bedrooms.   |
+| 477  | The open unknown door east of the players from the living rooms to the bedroom    |
+| 478  | The open unknown door east of the players from the living rooms to the bedrooms   |
+| 479  | The open unknown door east of the players from the living rooms to the bedrooms.  |
+| 480  | The open unknown door east of the players to the bedroom from a living room       |
+| 481  | The open unknown door east of the players to the bedroom from living rooms        |
+| 482  | The open unknown door east of the players to the bedroom from living rooms.       |
+| 483  | The open unknown door east of the players to the bedroom from the living room     |
+| 484  | The open unknown door east of the players to the bedroom from the living rooms    |
+| 485  | The open unknown door east of the players to the bedrooms from a living room      |
+| 486  | The open unknown door east of the players to the bedrooms from the living room    |
+| 487  | The open unknown door east of the players to the bedrooms from the living rooms   |
+| 488  | The open unknown door from a living room east of a player to the bedrooms         |
+| 489  | The open unknown door from a living room east of the player to a bedroom          |
+| 490  | The open unknown door from a living room east of the player to the bedroom        |
+| 491  | The open unknown door from a living room east of the player to the bedrooms       |
+| 492  | The open unknown door from a living room east of the player to the bedrooms.      |
+| 493  | The open unknown door from a living room east of the player, to the bedrooms      |
+| 494  | The open unknown door from a living room east of the players to a bedroom         |
+| 495  | The open unknown door from a living room east of the players to bedrooms          |
+| 496  | The open unknown door from a living room east of the players to bedrooms.         |
+| 497  | The open unknown door from a living room east of the players to the bedroom       |
+| 498  | The open unknown door from a living room east of the players to the bedrooms      |
+| 499  | The open unknown door from a living room east of the players to the bedrooms.     |
+| 500  | The open unknown door from a living room east of the players, to the bedrooms     |
+| 501  | The open unknown door from a living room to a bedroom east of the players         |
+| 502  | The open unknown door from a living room to bedrooms east of the players          |
+| 503  | The open unknown door from a living room to the bedroom east of the player        |
+| 504  | The open unknown door from a living room to the bedroom east of the players       |
+| 505  | The open unknown door from a living room to the bedrooms east of the player       |
+| 506  | The open unknown door from a living room to the bedrooms east of the players      |
+| 507  | The open unknown door from a living room, to the bedrooms east of the players     |
+| 508  | The open unknown door from living rooms east of a player to the bedrooms          |
+| 509  | The open unknown door from living rooms east of the player to the bedroom         |
+| 510  | The open unknown door from living rooms east of the player to the bedrooms        |
+| 511  | The open unknown door from living rooms east of the player to the bedrooms.       |
+| 512  | The open unknown door from living rooms east of the players to a bedroom          |
+| 513  | The open unknown door from living rooms east of the players to bedrooms           |
+| 514  | The open unknown door from living rooms east of the players to bedrooms.          |
+| 515  | The open unknown door from living rooms east of the players to the bedroom        |
+| 516  | The open unknown door from living rooms east of the players to the bedrooms       |
+| 517  | The open unknown door from living rooms east of the players to the bedrooms.      |
+| 518  | The open unknown door from living rooms to a bedroom east of the players          |
+| 519  | The open unknown door from living rooms to the bedroom east of the player         |
+| 520  | The open unknown door from living rooms to the bedroom east of the players        |
+| 521  | The open unknown door from living rooms to the bedrooms east of the players       |
+| 522  | The open unknown door from living rooms, to the bedrooms east of the players      |
+| 523  | The open unknown door from the living room east of a player to the bedrooms       |
+| 524  | The open unknown door from the living room east of the player to a bedroom        |
+| 525  | The open unknown door from the living room east of the player to bedrooms         |
+| 526  | The open unknown door from the living room east of the player to the bedroom      |
+| 527  | The open unknown door from the living room east of the player to the bedrooms     |
+| 528  | The open unknown door from the living room east of the player to the bedrooms.    |
+| 529  | The open unknown door from the living room east of the player, to the bedrooms    |
+| 530  | The open unknown door from the living room east of the players to a bedroom       |
+| 531  | The open unknown door from the living room east of the players to a bedroom.      |
+| 532  | The open unknown door from the living room east of the players to bedrooms        |
+| 533  | The open unknown door from the living room east of the players to bedrooms.       |
+| 534  | The open unknown door from the living room east of the players to the bedroom     |
+| 535  | The open unknown door from the living room east of the players to the bedrooms    |
+| 536  | The open unknown door from the living room east of the players to the bedrooms.   |
+| 537  | The open unknown door from the living room east of the players, to the bedrooms   |
+| 538  | The open unknown door from the living room to a bedroom east of the players       |
+| 539  | The open unknown door from the living room to bedrooms east of the players        |
+| 540  | The open unknown door from the living room to the bedroom east of the player      |
+| 541  | The open unknown door from the living room to the bedroom east of the player.     |
+| 542  | The open unknown door from the living room to the bedroom east of the players     |
+| 543  | The open unknown door from the living room to the bedroom east of the players.    |
+| 544  | The open unknown door from the living room to the bedrooms east of the player     |
+| 545  | The open unknown door from the living room to the bedrooms east of the players    |
+| 546  | The open unknown door from the living room, to the bedrooms east of the players   |
+| 547  | The open unknown door from the living rooms east of a player to the bedrooms      |
+| 548  | The open unknown door from the living rooms east of the player to a bedroom       |
+| 549  | The open unknown door from the living rooms east of the player to bedrooms        |
+| 550  | The open unknown door from the living rooms east of the player to the bedroom     |
+| 551  | The open unknown door from the living rooms east of the player to the bedrooms    |
+| 552  | The open unknown door from the living rooms east of the player to the bedrooms.   |
+| 553  | The open unknown door from the living rooms east of the player, to the bedrooms   |
+| 554  | The open unknown door from the living rooms east of the players to a bedroom      |
+| 555  | The open unknown door from the living rooms east of the players to a bedroom.     |
+| 556  | The open unknown door from the living rooms east of the players to bedrooms       |
+| 557  | The open unknown door from the living rooms east of the players to bedrooms.      |
+| 558  | The open unknown door from the living rooms east of the players to the bedroom    |
+| 559  | The open unknown door from the living rooms east of the players to the bedrooms   |
+| 560  | The open unknown door from the living rooms east of the players to the bedrooms.  |
+| 561  | The open unknown door from the living rooms east of the players, to the bedrooms  |
+| 562  | The open unknown door from the living rooms to a bedroom east of the players      |
+| 563  | The open unknown door from the living rooms to bedrooms east of the players       |
+| 564  | The open unknown door from the living rooms to the bedroom east of the player     |
+| 565  | The open unknown door from the living rooms to the bedroom east of the player.    |
+| 566  | The open unknown door from the living rooms to the bedroom east of the players    |
+| 567  | The open unknown door from the living rooms to the bedroom east of the players.   |
+| 568  | The open unknown door from the living rooms to the bedrooms east of the player    |
+| 569  | The open unknown door from the living rooms to the bedrooms east of the player.   |
+| 570  | The open unknown door from the living rooms to the bedrooms east of the players   |
+| 571  | The open unknown door from the living rooms, to the bedrooms east of the players  |
+| 572  | The open unknown door to a bedroom east of the player from a living room          |
+| 573  | The open unknown door to a bedroom east of the player from living rooms           |
+| 574  | The open unknown door to a bedroom east of the player from living rooms.          |
+| 575  | The open unknown door to a bedroom east of the player from the living room        |
+| 576  | The open unknown door to a bedroom east of the player from the living rooms       |
+| 577  | The open unknown door to a bedroom east of the players from a living room         |
+| 578  | The open unknown door to a bedroom east of the players from living rooms          |
+| 579  | The open unknown door to a bedroom east of the players from living rooms.         |
+| 580  | The open unknown door to a bedroom east of the players from the living room       |
+| 581  | The open unknown door to a bedroom east of the players from the living rooms      |
+| 582  | The open unknown door to a bedroom east of the players from the living rooms.     |
+| 583  | The open unknown door to a bedroom from a living room east of the players         |
+| 584  | The open unknown door to a bedroom from living rooms east of the players          |
+| 585  | The open unknown door to a bedroom from the living room east of the players       |
+| 586  | The open unknown door to a bedroom from the living rooms east of the players      |
+| 587  | The open unknown door to bedrooms east of the player from a living room           |
+| 588  | The open unknown door to bedrooms east of the player from living rooms            |
+| 589  | The open unknown door to bedrooms east of the player from the living room         |
+| 590  | The open unknown door to bedrooms east of the player from the living rooms        |
+| 591  | The open unknown door to bedrooms east of the players from a living room          |
+| 592  | The open unknown door to bedrooms east of the players from living rooms           |
+| 593  | The open unknown door to bedrooms east of the players from living rooms.          |
+| 594  | The open unknown door to bedrooms east of the players from the living room        |
+| 595  | The open unknown door to bedrooms east of the players from the living rooms       |
+| 596  | The open unknown door to bedrooms east of the players from the living rooms.      |
+| 597  | The open unknown door to bedrooms from a living room east of the players          |
+| 598  | The open unknown door to bedrooms from the living room east of the players        |
+| 599  | The open unknown door to bedrooms from the living rooms east of the players       |
+| 600  | The open unknown door to the bedroom east of a player from a living room          |
+| 601  | The open unknown door to the bedroom east of a player from the living room        |
+| 602  | The open unknown door to the bedroom east of a player from the living rooms       |
+| 603  | The open unknown door to the bedroom east of the player from a living room        |
+| 604  | The open unknown door to the bedroom east of the player from living rooms         |
+| 605  | The open unknown door to the bedroom east of the player from living rooms.        |
+| 606  | The open unknown door to the bedroom east of the player from the living room      |
+| 607  | The open unknown door to the bedroom east of the player from the living rooms     |
+| 608  | The open unknown door to the bedroom east of the player from the living rooms.    |
+| 609  | The open unknown door to the bedroom east of the players from a living room       |
+| 610  | The open unknown door to the bedroom east of the players from a living room.      |
+| 611  | The open unknown door to the bedroom east of the players from living rooms        |
+| 612  | The open unknown door to the bedroom east of the players from living rooms.       |
+| 613  | The open unknown door to the bedroom east of the players from the living room     |
+| 614  | The open unknown door to the bedroom east of the players from the living room.    |
+| 615  | The open unknown door to the bedroom east of the players from the living rooms    |
+| 616  | The open unknown door to the bedroom east of the players from the living rooms.   |
+| 617  | The open unknown door to the bedroom from a living room east of the player        |
+| 618  | The open unknown door to the bedroom from a living room east of the player.       |
+| 619  | The open unknown door to the bedroom from a living room east of the players       |
+| 620  | The open unknown door to the bedroom from a living room east of the players.      |
+| 621  | The open unknown door to the bedroom from living rooms east of the players        |
+| 622  | The open unknown door to the bedroom from the living room east of the player      |
+| 623  | The open unknown door to the bedroom from the living room east of the player.     |
+| 624  | The open unknown door to the bedroom from the living room east of the players     |
+| 625  | The open unknown door to the bedroom from the living room east of the players.    |
+| 626  | The open unknown door to the bedroom from the living rooms east of the player     |
+| 627  | The open unknown door to the bedroom from the living rooms east of the player.    |
+| 628  | The open unknown door to the bedroom from the living rooms east of the players    |
+| 629  | The open unknown door to the bedroom from the living rooms east of the players.   |
+| 630  | The open unknown door to the bedrooms east of a player from a living room         |
+| 631  | The open unknown door to the bedrooms east of a player from the living rooms      |
+| 632  | The open unknown door to the bedrooms east of the player from a living room       |
+| 633  | The open unknown door to the bedrooms east of the player from living rooms        |
+| 634  | The open unknown door to the bedrooms east of the player from living rooms.       |
+| 635  | The open unknown door to the bedrooms east of the player from the living room     |
+| 636  | The open unknown door to the bedrooms east of the player from the living rooms    |
+| 637  | The open unknown door to the bedrooms east of the player from the living rooms.   |
+| 638  | The open unknown door to the bedrooms east of the players from a living room      |
+| 639  | The open unknown door to the bedrooms east of the players from a living room.     |
+| 640  | The open unknown door to the bedrooms east of the players from living rooms       |
+| 641  | The open unknown door to the bedrooms east of the players from living rooms.      |
+| 642  | The open unknown door to the bedrooms east of the players from the living room    |
+| 643  | The open unknown door to the bedrooms east of the players from the living room.   |
+| 644  | The open unknown door to the bedrooms east of the players from the living rooms   |
+| 645  | The open unknown door to the bedrooms east of the players from the living rooms.  |
+| 646  | The open unknown door to the bedrooms from a living room east of the player       |
+| 647  | The open unknown door to the bedrooms from a living room east of the players      |
+| 648  | The open unknown door to the bedrooms from living rooms east of the players       |
+| 649  | The open unknown door to the bedrooms from the living room east of the player     |
+| 650  | The open unknown door to the bedrooms from the living room east of the player.    |
+| 651  | The open unknown door to the bedrooms from the living room east of the players    |
+| 652  | The open unknown door to the bedrooms from the living room east of the players.   |
+| 653  | The open unknown door to the bedrooms from the living rooms east of the player    |
+| 654  | The open unknown door to the bedrooms from the living rooms east of the player.   |
+| 655  | The open unknown door to the bedrooms from the living rooms east of the players   |
+| 656  | The open unknown door to the bedrooms from the living rooms east of the players.  |
+| 657  | The open unknown doors east of the player from a living room to the bedrooms      |
+| 658  | The open unknown doors east of the player from living rooms to the bedrooms       |
+| 659  | The open unknown doors east of the player from the living room to the bedrooms    |
+| 660  | The open unknown doors east of the player from the living rooms to the bedrooms   |
+| 661  | The open unknown doors east of the player to the bedroom from a living room       |
+| 662  | The open unknown doors east of the player to the bedroom from the living room     |
+| 663  | The open unknown doors east of the player to the bedroom from the living rooms    |
+| 664  | The open unknown doors east of the player to the bedrooms from a living room      |
+| 665  | The open unknown doors east of the player to the bedrooms from the living room    |
+| 666  | The open unknown doors east of the player to the bedrooms from the living rooms   |
+| 667  | The open unknown doors east of the players from a living room to the bedroom      |
+| 668  | The open unknown doors east of the players from a living room to the bedrooms     |
+| 669  | The open unknown doors east of the players from a living room to the bedrooms.    |
+| 670  | The open unknown doors east of the players from living rooms to the bedrooms      |
+| 671  | The open unknown doors east of the players from the living room to a bedroom      |
+| 672  | The open unknown doors east of the players from the living room to the bedroom    |
+| 673  | The open unknown doors east of the players from the living room to the bedrooms   |
+| 674  | The open unknown doors east of the players from the living room to the bedrooms.  |
+| 675  | The open unknown doors east of the players from the living rooms to a bedroom     |
+| 676  | The open unknown doors east of the players from the living rooms to the bedroom   |
+| 677  | The open unknown doors east of the players from the living rooms to the bedrooms  |
+| 678  | The open unknown doors east of the players from the living rooms to the bedrooms. |
+| 679  | The open unknown doors east of the players to a bedroom from a living room        |
+| 680  | The open unknown doors east of the players to a bedroom from the living room      |
+| 681  | The open unknown doors east of the players to a bedroom from the living rooms     |
+| 682  | The open unknown doors east of the players to bedrooms from a living room         |
+| 683  | The open unknown doors east of the players to bedrooms from the living room       |
+| 684  | The open unknown doors east of the players to bedrooms from the living rooms      |
+| 685  | The open unknown doors east of the players to the bedroom from a living room      |
+| 686  | The open unknown doors east of the players to the bedroom from living rooms       |
+| 687  | The open unknown doors east of the players to the bedroom from living rooms.      |
+| 688  | The open unknown doors east of the players to the bedroom from the living room    |
+| 689  | The open unknown doors east of the players to the bedroom from the living rooms   |
+| 690  | The open unknown doors east of the players to the bedroom from the living rooms.  |
+| 691  | The open unknown doors east of the players to the bedrooms from a living room     |
+| 692  | The open unknown doors east of the players to the bedrooms from living rooms      |
+| 693  | The open unknown doors east of the players to the bedrooms from living rooms.     |
+| 694  | The open unknown doors east of the players to the bedrooms from the living room   |
+| 695  | The open unknown doors east of the players to the bedrooms from the living rooms  |
+| 696  | The open unknown doors east of the players to the bedrooms from the living rooms. |
+| 697  | The open unknown doors from a living room east of a player to the bedrooms        |
+| 698  | The open unknown doors from a living room east of the player to a bedroom         |
+| 699  | The open unknown doors from a living room east of the player to bedrooms          |
+| 700  | The open unknown doors from a living room east of the player to the bedroom       |
+| 701  | The open unknown doors from a living room east of the player to the bedrooms      |
+| 702  | The open unknown doors from a living room east of the player to the bedrooms.     |
+| 703  | The open unknown doors from a living room east of the player, to the bedrooms     |
+| 704  | The open unknown doors from a living room east of the players to a bedroom        |
+| 705  | The open unknown doors from a living room east of the players to a bedroom.       |
+| 706  | The open unknown doors from a living room east of the players to bedrooms         |
+| 707  | The open unknown doors from a living room east of the players to bedrooms.        |
+| 708  | The open unknown doors from a living room east of the players to the bedroom      |
+| 709  | The open unknown doors from a living room east of the players to the bedroom.     |
+| 710  | The open unknown doors from a living room east of the players to the bedrooms     |
+| 711  | The open unknown doors from a living room east of the players to the bedrooms.    |
+| 712  | The open unknown doors from a living room east of the players, to the bedrooms    |
+| 713  | The open unknown doors from a living room to a bedroom east of the players        |
+| 714  | The open unknown doors from a living room to bedrooms east of the players         |
+| 715  | The open unknown doors from a living room to the bedroom east of the player       |
+| 716  | The open unknown doors from a living room to the bedroom east of the player.      |
+| 717  | The open unknown doors from a living room to the bedroom east of the players      |
+| 718  | The open unknown doors from a living room to the bedroom east of the players.     |
+| 719  | The open unknown doors from a living room to the bedrooms east of the player      |
+| 720  | The open unknown doors from a living room to the bedrooms east of the player.     |
+| 721  | The open unknown doors from a living room to the bedrooms east of the players     |
+| 722  | The open unknown doors from a living room to the bedrooms east of the players.    |
+| 723  | The open unknown doors from a living room, to the bedrooms east of the players    |
+| 724  | The open unknown doors from living rooms east of a player to the bedrooms         |
+| 725  | The open unknown doors from living rooms east of the player to a bedroom          |
+| 726  | The open unknown doors from living rooms east of the player to bedrooms           |
+| 727  | The open unknown doors from living rooms east of the player to the bedroom        |
+| 728  | The open unknown doors from living rooms east of the player to the bedrooms       |
+| 729  | The open unknown doors from living rooms east of the player to the bedrooms.      |
+| 730  | The open unknown doors from living rooms east of the players to a bedroom         |
+| 731  | The open unknown doors from living rooms east of the players to a bedroom.        |
+| 732  | The open unknown doors from living rooms east of the players to bedrooms          |
+| 733  | The open unknown doors from living rooms east of the players to bedrooms.         |
+| 734  | The open unknown doors from living rooms east of the players to the bedroom       |
+| 735  | The open unknown doors from living rooms east of the players to the bedrooms      |
+| 736  | The open unknown doors from living rooms east of the players to the bedrooms.     |
+| 737  | The open unknown doors from living rooms to a bedroom east of the players         |
+| 738  | The open unknown doors from living rooms to bedrooms east of the players          |
+| 739  | The open unknown doors from living rooms to the bedroom east of the player        |
+| 740  | The open unknown doors from living rooms to the bedroom east of the player.       |
+| 741  | The open unknown doors from living rooms to the bedroom east of the players       |
+| 742  | The open unknown doors from living rooms to the bedrooms east of the player       |
+| 743  | The open unknown doors from living rooms to the bedrooms east of the players      |
+| 744  | The open unknown doors from living rooms, to the bedrooms east of the players     |
+| 745  | The open unknown doors from the living room east of a player to the bedrooms      |
+| 746  | The open unknown doors from the living room east of the player to a bedroom       |
+| 747  | The open unknown doors from the living room east of the player to bedrooms        |
+| 748  | The open unknown doors from the living room east of the player to bedrooms.       |
+| 749  | The open unknown doors from the living room east of the player to the bedroom     |
+| 750  | The open unknown doors from the living room east of the player to the bedrooms    |
+| 751  | The open unknown doors from the living room east of the player to the bedrooms.   |
+| 752  | The open unknown doors from the living room east of the player, to the bedrooms   |
+| 753  | The open unknown doors from the living room east of the players to a bedroom      |
+| 754  | The open unknown doors from the living room east of the players to a bedroom.     |
+| 755  | The open unknown doors from the living room east of the players to bedrooms       |
+| 756  | The open unknown doors from the living room east of the players to bedrooms.      |
+| 757  | The open unknown doors from the living room east of the players to the bedroom    |
+| 758  | The open unknown doors from the living room east of the players to the bedroom.   |
+| 759  | The open unknown doors from the living room east of the players to the bedrooms   |
+| 760  | The open unknown doors from the living room east of the players to the bedrooms.  |
+| 761  | The open unknown doors from the living room east of the players, to the bedrooms  |
+| 762  | The open unknown doors from the living room to a bedroom east of the player       |
+| 763  | The open unknown doors from the living room to a bedroom east of the players      |
+| 764  | The open unknown doors from the living room to bedrooms east of the players       |
+| 765  | The open unknown doors from the living room to the bedroom east of the player     |
+| 766  | The open unknown doors from the living room to the bedroom east of the player.    |
+| 767  | The open unknown doors from the living room to the bedroom east of the players    |
+| 768  | The open unknown doors from the living room to the bedroom east of the players.   |
+| 769  | The open unknown doors from the living room to the bedrooms east of the player    |
+| 770  | The open unknown doors from the living room to the bedrooms east of the player.   |
+| 771  | The open unknown doors from the living room to the bedrooms east of the players   |
+| 772  | The open unknown doors from the living room to the bedrooms east of the players.  |
+| 773  | The open unknown doors from the living room, to the bedrooms east of the players  |
+| 774  | The open unknown doors from the living rooms east of a player to the bedrooms     |
+| 775  | The open unknown doors from the living rooms east of the player to a bedroom      |
+| 776  | The open unknown doors from the living rooms east of the player to bedrooms       |
+| 777  | The open unknown doors from the living rooms east of the player to bedrooms.      |
+| 778  | The open unknown doors from the living rooms east of the player to the bedroom    |
+| 779  | The open unknown doors from the living rooms east of the player to the bedrooms   |
+| 780  | The open unknown doors from the living rooms east of the player to the bedrooms.  |
+| 781  | The open unknown doors from the living rooms east of the player, to the bedrooms  |
+| 782  | The open unknown doors from the living rooms east of the players to a bedroom     |
+| 783  | The open unknown doors from the living rooms east of the players to a bedroom.    |
+| 784  | The open unknown doors from the living rooms east of the players to bedrooms      |
+| 785  | The open unknown doors from the living rooms east of the players to bedrooms.     |
+| 786  | The open unknown doors from the living rooms east of the players to the bedroom   |
+| 787  | The open unknown doors from the living rooms east of the players to the bedroom.  |
+| 788  | The open unknown doors from the living rooms east of the players to the bedrooms  |
+| 789  | The open unknown doors from the living rooms east of the players to the bedrooms. |
+| 790  | The open unknown doors from the living rooms east of the players, to the bedrooms |
+| 791  | The open unknown doors from the living rooms to a bedroom east of the player      |
+| 792  | The open unknown doors from the living rooms to a bedroom east of the players     |
+| 793  | The open unknown doors from the living rooms to bedrooms east of the players      |
+| 794  | The open unknown doors from the living rooms to the bedroom east of the player    |
+| 795  | The open unknown doors from the living rooms to the bedroom east of the player.   |
+| 796  | The open unknown doors from the living rooms to the bedroom east of the players   |
+| 797  | The open unknown doors from the living rooms to the bedroom east of the players.  |
+| 798  | The open unknown doors from the living rooms to the bedrooms east of the player   |
+| 799  | The open unknown doors from the living rooms to the bedrooms east of the player.  |
+| 800  | The open unknown doors from the living rooms to the bedrooms east of the players  |
+| 801  | The open unknown doors from the living rooms to the bedrooms east of the players. |
+| 802  | The open unknown doors from the living rooms, to the bedrooms east of the players |
+| 803  | The open unknown doors to a bedroom east of the player from a living room         |
+| 804  | The open unknown doors to a bedroom east of the player from living rooms          |
+| 805  | The open unknown doors to a bedroom east of the player from living rooms.         |
+| 806  | The open unknown doors to a bedroom east of the player from the living room       |
+| 807  | The open unknown doors to a bedroom east of the player from the living rooms      |
+| 808  | The open unknown doors to a bedroom east of the player from the living rooms.     |
+| 809  | The open unknown doors to a bedroom east of the players from a living room        |
+| 810  | The open unknown doors to a bedroom east of the players from a living room.       |
+| 811  | The open unknown doors to a bedroom east of the players from living rooms         |
+| 812  | The open unknown doors to a bedroom east of the players from living rooms.        |
+| 813  | The open unknown doors to a bedroom east of the players from the living room      |
+| 814  | The open unknown doors to a bedroom east of the players from the living room.     |
+| 815  | The open unknown doors to a bedroom east of the players from the living rooms     |
+| 816  | The open unknown doors to a bedroom east of the players from the living rooms.    |
+| 817  | The open unknown doors to a bedroom from a living room east of the player         |
+| 818  | The open unknown doors to a bedroom from a living room east of the players        |
+| 819  | The open unknown doors to a bedroom from living rooms east of the players         |
+| 820  | The open unknown doors to a bedroom from the living room east of the player       |
+| 821  | The open unknown doors to a bedroom from the living room east of the players      |
+| 822  | The open unknown doors to a bedroom from the living rooms east of the player      |
+| 823  | The open unknown doors to a bedroom from the living rooms east of the player.     |
+| 824  | The open unknown doors to a bedroom from the living rooms east of the players     |
+| 825  | The open unknown doors to bedrooms east of the player from a living room          |
+| 826  | The open unknown doors to bedrooms east of the player from living rooms           |
+| 827  | The open unknown doors to bedrooms east of the player from living rooms.          |
+| 828  | The open unknown doors to bedrooms east of the player from the living room        |
+| 829  | The open unknown doors to bedrooms east of the player from the living rooms       |
+| 830  | The open unknown doors to bedrooms east of the player from the living rooms.      |
+| 831  | The open unknown doors to bedrooms east of the players from a living room         |
+| 832  | The open unknown doors to bedrooms east of the players from a living room.        |
+| 833  | The open unknown doors to bedrooms east of the players from living rooms          |
+| 834  | The open unknown doors to bedrooms east of the players from living rooms.         |
+| 835  | The open unknown doors to bedrooms east of the players from the living room       |
+| 836  | The open unknown doors to bedrooms east of the players from the living room.      |
+| 837  | The open unknown doors to bedrooms east of the players from the living rooms      |
+| 838  | The open unknown doors to bedrooms east of the players from the living rooms.     |
+| 839  | The open unknown doors to bedrooms from a living room east of the players         |
+| 840  | The open unknown doors to bedrooms from living rooms east of the players          |
+| 841  | The open unknown doors to bedrooms from the living room east of the player        |
+| 842  | The open unknown doors to bedrooms from the living room east of the players       |
+| 843  | The open unknown doors to bedrooms from the living rooms east of the player       |
+| 844  | The open unknown doors to bedrooms from the living rooms east of the players      |
+| 845  | The open unknown doors to the bedroom east of a player from a living room         |
+| 846  | The open unknown doors to the bedroom east of a player from the living room       |
+| 847  | The open unknown doors to the bedroom east of a player from the living rooms      |
+| 848  | The open unknown doors to the bedroom east of the player from a living room       |
+| 849  | The open unknown doors to the bedroom east of the player from a living room.      |
+| 850  | The open unknown doors to the bedroom east of the player from living rooms        |
+| 851  | The open unknown doors to the bedroom east of the player from living rooms.       |
+| 852  | The open unknown doors to the bedroom east of the player from the living room     |
+| 853  | The open unknown doors to the bedroom east of the player from the living room.    |
+| 854  | The open unknown doors to the bedroom east of the player from the living rooms    |
+| 855  | The open unknown doors to the bedroom east of the player from the living rooms.   |
+| 856  | The open unknown doors to the bedroom east of the players from a living room      |
+| 857  | The open unknown doors to the bedroom east of the players from a living room.     |
+| 858  | The open unknown doors to the bedroom east of the players from living rooms       |
+| 859  | The open unknown doors to the bedroom east of the players from living rooms.      |
+| 860  | The open unknown doors to the bedroom east of the players from the living room    |
+| 861  | The open unknown doors to the bedroom east of the players from the living room.   |
+| 862  | The open unknown doors to the bedroom east of the players from the living rooms   |
+| 863  | The open unknown doors to the bedroom east of the players from the living rooms.  |
+| 864  | The open unknown doors to the bedroom from a living room east of the player       |
+| 865  | The open unknown doors to the bedroom from a living room east of the player.      |
+| 866  | The open unknown doors to the bedroom from a living room east of the players      |
+| 867  | The open unknown doors to the bedroom from a living room east of the players.     |
+| 868  | The open unknown doors to the bedroom from living rooms east of the player        |
+| 869  | The open unknown doors to the bedroom from living rooms east of the player.       |
+| 870  | The open unknown doors to the bedroom from living rooms east of the players       |
+| 871  | The open unknown doors to the bedroom from the living room east of the player     |
+| 872  | The open unknown doors to the bedroom from the living room east of the player.    |
+| 873  | The open unknown doors to the bedroom from the living room east of the players    |
+| 874  | The open unknown doors to the bedroom from the living room east of the players.   |
+| 875  | The open unknown doors to the bedroom from the living rooms east of the player    |
+| 876  | The open unknown doors to the bedroom from the living rooms east of the player.   |
+| 877  | The open unknown doors to the bedroom from the living rooms east of the players   |
+| 878  | The open unknown doors to the bedroom from the living rooms east of the players.  |
+| 879  | The open unknown doors to the bedrooms east of a player from a living room        |
+| 880  | The open unknown doors to the bedrooms east of a player from the living room      |
+| 881  | The open unknown doors to the bedrooms east of a player from the living rooms     |
+| 882  | The open unknown doors to the bedrooms east of the player from a living room      |
+| 883  | The open unknown doors to the bedrooms east of the player from a living room.     |
+| 884  | The open unknown doors to the bedrooms east of the player from living rooms       |
+| 885  | The open unknown doors to the bedrooms east of the player from living rooms.      |
+| 886  | The open unknown doors to the bedrooms east of the player from the living room    |
+| 887  | The open unknown doors to the bedrooms east of the player from the living room.   |
+| 888  | The open unknown doors to the bedrooms east of the player from the living rooms   |
+| 889  | The open unknown doors to the bedrooms east of the player from the living rooms.  |
+| 890  | The open unknown doors to the bedrooms east of the players from a living room     |
+| 891  | The open unknown doors to the bedrooms east of the players from a living room.    |
+| 892  | The open unknown doors to the bedrooms east of the players from living rooms      |
+| 893  | The open unknown doors to the bedrooms east of the players from living rooms.     |
+| 894  | The open unknown doors to the bedrooms east of the players from the living room   |
+| 895  | The open unknown doors to the bedrooms east of the players from the living room.  |
+| 896  | The open unknown doors to the bedrooms east of the players from the living rooms  |
+| 897  | The open unknown doors to the bedrooms east of the players from the living rooms. |
+| 898  | The open unknown doors to the bedrooms from a living room east of the player      |
+| 899  | The open unknown doors to the bedrooms from a living room east of the player.     |
+| 900  | The open unknown doors to the bedrooms from a living room east of the players     |
+| 901  | The open unknown doors to the bedrooms from a living room east of the players.    |
+| 902  | The open unknown doors to the bedrooms from living rooms east of the player       |
+| 903  | The open unknown doors to the bedrooms from living rooms east of the players      |
+| 904  | The open unknown doors to the bedrooms from the living room east of the player    |
+| 905  | The open unknown doors to the bedrooms from the living room east of the player.   |
+| 906  | The open unknown doors to the bedrooms from the living room east of the players   |
+| 907  | The open unknown doors to the bedrooms from the living room east of the players.  |
+| 908  | The open unknown doors to the bedrooms from the living rooms east of the player   |
+| 909  | The open unknown doors to the bedrooms from the living rooms east of the player.  |
+| 910  | The open unknown doors to the bedrooms from the living rooms east of the players  |
+| 911  | The open unknown doors to the bedrooms from the living rooms east of the players. |
+| 912  | The unknown open door east of the players from the living room to the bedrooms    |
+| 913  | The unknown open door east of the players from the living rooms to the bedrooms   |
+| 914  | The unknown open door from a living room east of the player to the bedrooms       |
+| 915  | The unknown open door from a living room east of the players to the bedroom       |
+| 916  | The unknown open door from a living room east of the players to the bedrooms      |
+| 917  | The unknown open door from a living room east of the players to the bedrooms.     |
+| 918  | The unknown open door from living rooms east of the player to the bedrooms        |
+| 919  | The unknown open door from living rooms east of the players to the bedrooms       |
+| 920  | The unknown open door from the living room east of the player to the bedrooms     |
+| 921  | The unknown open door from the living room east of the players to the bedroom     |
+| 922  | The unknown open door from the living room east of the players to the bedrooms    |
+| 923  | The unknown open door from the living room east of the players to the bedrooms.   |
+| 924  | The unknown open door from the living room to the bedroom east of the players     |
+| 925  | The unknown open door from the living rooms east of the player to the bedrooms    |
+| 926  | The unknown open door from the living rooms east of the players to the bedroom    |
+| 927  | The unknown open door from the living rooms east of the players to the bedrooms   |
+| 928  | The unknown open door from the living rooms east of the players to the bedrooms.  |
+| 929  | The unknown open door from the living rooms to the bedroom east of the players    |
+| 930  | The unknown open door to a bedroom east of the players from a living room         |
+| 931  | The unknown open door to a bedroom east of the players from the living room       |
+| 932  | The unknown open door to a bedroom east of the players from the living rooms      |
+| 933  | The unknown open door to bedrooms east of the players from a living room          |
+| 934  | The unknown open door to bedrooms east of the players from the living room        |
+| 935  | The unknown open door to bedrooms east of the players from the living rooms       |
+| 936  | The unknown open door to the bedroom east of the player from a living room        |
+| 937  | The unknown open door to the bedroom east of the player from the living room      |
+| 938  | The unknown open door to the bedroom east of the player from the living rooms     |
+| 939  | The unknown open door to the bedroom east of the players from a living room       |
+| 940  | The unknown open door to the bedroom east of the players from living rooms        |
+| 941  | The unknown open door to the bedroom east of the players from living rooms.       |
+| 942  | The unknown open door to the bedroom east of the players from the living room     |
+| 943  | The unknown open door to the bedroom east of the players from the living rooms    |
+| 944  | The unknown open door to the bedroom east of the players from the living rooms.   |
+| 945  | The unknown open door to the bedroom from a living room east of the players       |
+| 946  | The unknown open door to the bedroom from the living room east of the players     |
+| 947  | The unknown open door to the bedroom from the living rooms east of the players    |
+| 948  | The unknown open door to the bedrooms east of the player from a living room       |
+| 949  | The unknown open door to the bedrooms east of the player from the living room     |
+| 950  | The unknown open door to the bedrooms east of the player from the living rooms    |
+| 951  | The unknown open door to the bedrooms east of the players from a living room      |
+| 952  | The unknown open door to the bedrooms east of the players from living rooms       |
+| 953  | The unknown open door to the bedrooms east of the players from living rooms.      |
+| 954  | The unknown open door to the bedrooms east of the players from the living room    |
+| 955  | The unknown open door to the bedrooms east of the players from the living rooms   |
+| 956  | The unknown open door to the bedrooms east of the players from the living rooms.  |
+| 957  | The unknown open door to the bedrooms from the living room east of the players    |
+| 958  | The unknown open door to the bedrooms from the living rooms east of the players   |
+| 959  | The unknown open doors from a living room east of the player to the bedrooms      |
+| 960  | The unknown open doors from a living room east of the players to the bedrooms     |
+| 961  | The unknown open doors from living rooms east of the player to the bedrooms       |
+| 962  | The unknown open doors from living rooms east of the players to the bedrooms      |
+| 963  | The unknown open doors from the living room east of the player to the bedrooms    |
+| 964  | The unknown open doors from the living room east of the players to the bedroom    |
+| 965  | The unknown open doors from the living room east of the players to the bedrooms   |
+| 966  | The unknown open doors from the living room east of the players to the bedrooms.  |
+| 967  | The unknown open doors from the living rooms east of the player to the bedrooms   |
+| 968  | The unknown open doors from the living rooms east of the players to the bedroom   |
+| 969  | The unknown open doors from the living rooms east of the players to the bedrooms  |
+| 970  | The unknown open doors from the living rooms east of the players to the bedrooms. |
+| 971  | The unknown open doors to a bedroom east of the players from a living room        |
+| 972  | The unknown open doors to a bedroom east of the players from the living room      |
+| 973  | The unknown open doors to a bedroom east of the players from the living rooms     |
+| 974  | The unknown open doors to bedrooms east of the players from a living room         |
+| 975  | The unknown open doors to bedrooms east of the players from the living room       |
+| 976  | The unknown open doors to bedrooms east of the players from the living rooms      |
+| 977  | The unknown open doors to the bedroom east of the player from a living room       |
+| 978  | The unknown open doors to the bedroom east of the player from the living room     |
+| 979  | The unknown open doors to the bedroom east of the player from the living rooms    |
+| 980  | The unknown open doors to the bedroom east of the players from a living room      |
+| 981  | The unknown open doors to the bedroom east of the players from living rooms       |
+| 982  | The unknown open doors to the bedroom east of the players from living rooms.      |
+| 983  | The unknown open doors to the bedroom east of the players from the living room    |
+| 984  | The unknown open doors to the bedroom east of the players from the living rooms   |
+| 985  | The unknown open doors to the bedroom east of the players from the living rooms.  |
+| 986  | The unknown open doors to the bedroom from the living room east of the players    |
+| 987  | The unknown open doors to the bedroom from the living rooms east of the players   |
+| 988  | The unknown open doors to the bedrooms east of the player from a living room      |
+| 989  | The unknown open doors to the bedrooms east of the player from the living room    |
+| 990  | The unknown open doors to the bedrooms east of the player from the living rooms   |
+| 991  | The unknown open doors to the bedrooms east of the players from a living room     |
+| 992  | The unknown open doors to the bedrooms east of the players from living rooms      |
+| 993  | The unknown open doors to the bedrooms east of the players from living rooms.     |
+| 994  | The unknown open doors to the bedrooms east of the players from the living room   |
+| 995  | The unknown open doors to the bedrooms east of the players from the living rooms  |
+| 996  | The unknown open doors to the bedrooms east of the players from the living rooms. |
+| 997  | The unknown open doors to the bedrooms from the living room east of the players   |
+| 998  | The unknown open doors to the bedrooms from the living rooms east of the players  |
+| 999  | Unknown open doors from a living room east of the players to the bedrooms         |
+| 1000 | Unknown open doors from a living room to a bedroom east of the players            |
+| 1001 | Unknown open doors from a living room to bedrooms east of the players             |
+| 1002 | Unknown open doors from a living room to the bedroom east of the player           |
+| 1003 | Unknown open doors from a living room to the bedroom east of the player.          |
+| 1004 | Unknown open doors from a living room to the bedroom east of the players          |
+| 1005 | Unknown open doors from a living room to the bedroom east of the players.         |
+| 1006 | Unknown open doors from a living room to the bedrooms east of the player          |
+| 1007 | Unknown open doors from a living room to the bedrooms east of the players         |
+| 1008 | Unknown open doors from living rooms east of the players to the bedrooms          |
+| 1009 | Unknown open doors from living rooms to a bedroom east of the players             |
+| 1010 | Unknown open doors from living rooms to bedrooms east of the players              |
+| 1011 | Unknown open doors from living rooms to the bedroom east of the player            |
+| 1012 | Unknown open doors from living rooms to the bedroom east of the players           |
+| 1013 | Unknown open doors from living rooms to the bedrooms east of the player           |
+| 1014 | Unknown open doors from living rooms to the bedrooms east of the players          |
+| 1015 | Unknown open doors from the living room east of the players to the bedrooms       |
+| 1016 | Unknown open doors from the living room to a bedroom east of the players          |
+| 1017 | Unknown open doors from the living room to bedrooms east of the players           |
+| 1018 | Unknown open doors from the living room to the bedroom east of the player         |
+| 1019 | Unknown open doors from the living room to the bedroom east of the player.        |
+| 1020 | Unknown open doors from the living room to the bedroom east of the players        |
+| 1021 | Unknown open doors from the living room to the bedroom east of the players.       |
+| 1022 | Unknown open doors from the living room to the bedrooms east of the player        |
+| 1023 | Unknown open doors from the living room to the bedrooms east of the player.       |
+| 1024 | Unknown open doors from the living room to the bedrooms east of the players       |
+| 1025 | Unknown open doors from the living room to the bedrooms east of the players.      |
+| 1026 | Unknown open doors from the living rooms east of the players to the bedrooms      |
+| 1027 | Unknown open doors from the living rooms to a bedroom east of the players         |
+| 1028 | Unknown open doors from the living rooms to bedrooms east of the players          |
+| 1029 | Unknown open doors from the living rooms to the bedroom east of the player        |
+| 1030 | Unknown open doors from the living rooms to the bedroom east of the player.       |
+| 1031 | Unknown open doors from the living rooms to the bedroom east of the players       |
+| 1032 | Unknown open doors from the living rooms to the bedroom east of the players.      |
+| 1033 | Unknown open doors from the living rooms to the bedrooms east of the player       |
+| 1034 | Unknown open doors from the living rooms to the bedrooms east of the player.      |
+| 1035 | Unknown open doors from the living rooms to the bedrooms east of the players      |
+| 1036 | Unknown open doors from the living rooms to the bedrooms east of the players.     |
+| 1037 | Unknown open doors to a bedroom from a living room east of the player             |
+| 1038 | Unknown open doors to a bedroom from a living room east of the players            |
+| 1039 | Unknown open doors to a bedroom from living rooms east of the players             |
+| 1040 | Unknown open doors to a bedroom from the living room east of the player           |
+| 1041 | Unknown open doors to a bedroom from the living room east of the player.          |
+| 1042 | Unknown open doors to a bedroom from the living room east of the players          |
+| 1043 | Unknown open doors to a bedroom from the living rooms east of the player          |
+| 1044 | Unknown open doors to a bedroom from the living rooms east of the player.         |
+| 1045 | Unknown open doors to a bedroom from the living rooms east of the players         |
+| 1046 | Unknown open doors to a bedroom from the living rooms east of the players.        |
+| 1047 | Unknown open doors to bedrooms from a living room east of the players             |
+| 1048 | Unknown open doors to bedrooms from living rooms east of the players              |
+| 1049 | Unknown open doors to bedrooms from the living room east of the player            |
+| 1050 | Unknown open doors to bedrooms from the living room east of the players           |
+| 1051 | Unknown open doors to bedrooms from the living rooms east of the player           |
+| 1052 | Unknown open doors to bedrooms from the living rooms east of the players          |
+| 1053 | Unknown open doors to the bedroom east of the players from a living room          |
+| 1054 | Unknown open doors to the bedroom east of the players from the living room        |
+| 1055 | Unknown open doors to the bedroom east of the players from the living rooms       |
+| 1056 | Unknown open doors to the bedroom from a living room east of the player           |
+| 1057 | Unknown open doors to the bedroom from a living room east of the player.          |
+| 1058 | Unknown open doors to the bedroom from a living room east of the players          |
+| 1059 | Unknown open doors to the bedroom from a living room east of the players.         |
+| 1060 | Unknown open doors to the bedroom from living rooms east of the player            |
+| 1061 | Unknown open doors to the bedroom from living rooms east of the players           |
+| 1062 | Unknown open doors to the bedroom from the living room east of the player         |
+| 1063 | Unknown open doors to the bedroom from the living room east of the player.        |
+| 1064 | Unknown open doors to the bedroom from the living room east of the players        |
+| 1065 | Unknown open doors to the bedroom from the living room east of the players.       |
+| 1066 | Unknown open doors to the bedroom from the living rooms east of the player        |
+| 1067 | Unknown open doors to the bedroom from the living rooms east of the player.       |
+| 1068 | Unknown open doors to the bedroom from the living rooms east of the players       |
+| 1069 | Unknown open doors to the bedroom from the living rooms east of the players.      |
+| 1070 | Unknown open doors to the bedrooms east of the players from a living room         |
+| 1071 | Unknown open doors to the bedrooms east of the players from the living room       |
+| 1072 | Unknown open doors to the bedrooms east of the players from the living rooms      |
+| 1073 | Unknown open doors to the bedrooms from a living room east of the player          |
+| 1074 | Unknown open doors to the bedrooms from a living room east of the player.         |
+| 1075 | Unknown open doors to the bedrooms from a living room east of the players         |
+| 1076 | Unknown open doors to the bedrooms from a living room east of the players.        |
+| 1077 | Unknown open doors to the bedrooms from living rooms east of the player           |
+| 1078 | Unknown open doors to the bedrooms from living rooms east of the players          |
+| 1079 | Unknown open doors to the bedrooms from the living room east of the player        |
+| 1080 | Unknown open doors to the bedrooms from the living room east of the player.       |
+| 1081 | Unknown open doors to the bedrooms from the living room east of the players       |
+| 1082 | Unknown open doors to the bedrooms from the living room east of the players.      |
+| 1083 | Unknown open doors to the bedrooms from the living rooms east of the player       |
+| 1084 | Unknown open doors to the bedrooms from the living rooms east of the player.      |
+| 1085 | Unknown open doors to the bedrooms from the living rooms east of the players      |
+| 1086 | Unknown open doors to the bedrooms from the living rooms east of the players.     |
++------+-----------------------------------------------------------------------------------+
+

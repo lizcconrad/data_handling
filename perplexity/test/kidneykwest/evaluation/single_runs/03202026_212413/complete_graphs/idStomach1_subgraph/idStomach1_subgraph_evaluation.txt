@@ -1,0 +1,301 @@
+GRAPH NAME: idStomach1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 144   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------+
+|                         GOLD OUTPUTS                         |
++-------------------------------------------------+------------+
+| Gold Output                                     | Generated? |
++-------------------------------------------------+------------+
+| the stomach near the interesting immovable duct | True       |
++-------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idStomach1 | True         | True          | Covered          | Included          |
+| idDuct1    | True         | True          | Covered          | Included          |
+| true       | True         | True          | Covered          | Included          |
+| yes        | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+|                                                          EDGE METRICS                                                         |
++----------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent     | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+| isNear                           | idStomach1 | idDuct1 | True         | True          | Covered          | Included          |
+| idDuct1_prop_idInterestingObject | idDuct1    | true    | True         | True          | Covered          | Included          |
+| idDuct1_prop_idImmovable         | idDuct1    | yes     | True         | True          | Covered          | Included          |
++----------------------------------+------------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h737                                                                      |
+|               |   INDEX: x736                                                                    |
+|               |   RELS: < [ _near_p LBL: h768 ARG0: e765 ARG1: u766 ARG2: i767 ]                 |
+|               |           [ def_udef_a_q LBL: h772 ARG0: x769 RSTR: h770 BODY: h771 ]            |
+|               |           [ _immovable_a_1 LBL: h764 ARG0: e762 ARG1: u763 ]                     |
+|               |           [ _interesting_a_for LBL: h747 ARG0: e744 ARG1: u745 ARG2: u746 ]      |
+|               |           [ _duct_n_1 LBL: h739 ARG0: x738 ]                                     |
+|               |           [ _stomach_n_1 LBL: h737 ARG0: x736 ] >                                |
+|               |   HCONS: < h770 qeq h739 >                                                       |
+|               |   EQS: < h747 eq h739 u745 eq x738 h764 eq h739 u763 eq x738 x769 eq x738 h768   |
+|               | eq h773 i767 eq x769 h768 eq h737 u766 eq x736 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h737                                                                      |
+|               |   INDEX: x736                                                                    |
+|               |   RELS: < [ _near_p LBL: h737 ARG0: e765 ARG1: x736 ARG2: x738 ]                 |
+|               |           [ def_udef_a_q LBL: h772 ARG0: x738 RSTR: h770 BODY: h771 ]            |
+|               |           [ _immovable_a_1 LBL: h739 ARG0: e762 ARG1: x738 ]                     |
+|               |           [ _interesting_a_for LBL: h739 ARG0: e744 ARG1: x738 ARG2: u746 ]      |
+|               |           [ _duct_n_1 LBL: h739 ARG0: x738 ]                                     |
+|               |           [ _stomach_n_1 LBL: h737 ARG0: x736 ] >                                |
+|               |   HCONS: < h770 qeq h739 > ]                                                     |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h782                                                                      |
+|               |   INDEX: e779                                                                    |
+|               |   RELS: < [ unknown LBL: h778 ARG: x736 ARG0: e779 ]                             |
+|               |           [ def_udef_a_q LBL: h777 ARG0: x736 RSTR: h775 BODY: h776 ]            |
+|               |           [ _near_p LBL: h737 ARG0: e765 ARG1: x736 ARG2: x738 ]                 |
+|               |           [ def_udef_a_q LBL: h772 ARG0: x738 RSTR: h770 BODY: h771 ]            |
+|               |           [ _immovable_a_1 LBL: h739 ARG0: e762 ARG1: x738 ]                     |
+|               |           [ _interesting_a_for LBL: h739 ARG0: e744 ARG1: x738 ARG2: u746 ]      |
+|               |           [ _duct_n_1 LBL: h739 ARG0: x738 ]                                     |
+|               |           [ _stomach_n_1 LBL: h737 ARG0: x736 ] >                                |
+|               |   HCONS: < h770 qeq h739 h775 qeq h737 h782 qeq h778 > ]                         |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                    |
++------------+-----------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                      |
++------------+-----------------------------------------------------------------------+
+| idStomach1 | [ TOP: h737                                                           |
+|            |   INDEX: x736                                                         |
+|            |   RELS: < [ _stomach_n_1 LBL: h737 ARG0: x736 ] > ]                   |
++------------+-----------------------------------------------------------------------+
+| idDuct1    | [ TOP: h739                                                           |
+|            |   INDEX: x738                                                         |
+|            |   RELS: < [ _duct_n_1 LBL: h739 ARG0: x738 ] > ]                      |
++------------+-----------------------------------------------------------------------+
+| true       | [ TOP: h743                                                           |
+|            |   INDEX: e740                                                         |
+|            |   RELS: < [ _true_a_of LBL: h743 ARG0: e740 ARG1: u741 ARG2: u742 ] > |
+|            |   SLOTS: < ARG1: u741 ARG2: u742 > ]                                  |
++------------+-----------------------------------------------------------------------+
+| yes        | [ TOP: h758                                                           |
+|            |   INDEX: e755                                                         |
+|            |   RELS: < [ _true_a_of LBL: h758 ARG0: e755 ARG1: u756 ARG2: u757 ] > |
+|            |   SLOTS: < ARG1: u756 ARG2: u757 > ]                                  |
++------------+-----------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                                |
++----------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| Edge                             | Parent     | Child   | Generated SEMENT                                                                 |
++----------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| isNear                           | idStomach1 | idDuct1 | [ TOP: h737                                                                      |
+|                                  |            |         |   INDEX: x736                                                                    |
+|                                  |            |         |   RELS: < [ _near_p LBL: h768 ARG0: e765 ARG1: u766 ARG2: i767 ]                 |
+|                                  |            |         |           [ def_udef_a_q LBL: h772 ARG0: x769 RSTR: h770 BODY: h771 ]            |
+|                                  |            |         |           [ _immovable_a_1 LBL: h764 ARG0: e762 ARG1: u763 ]                     |
+|                                  |            |         |           [ _interesting_a_for LBL: h747 ARG0: e744 ARG1: u745 ARG2: u746 ]      |
+|                                  |            |         |           [ _duct_n_1 LBL: h739 ARG0: x738 ]                                     |
+|                                  |            |         |           [ _stomach_n_1 LBL: h737 ARG0: x736 ] >                                |
+|                                  |            |         |   HCONS: < h770 qeq h739 >                                                       |
+|                                  |            |         |   EQS: < h747 eq h739 u745 eq x738 h764 eq h739 u763 eq x738 x769 eq x738 h768   |
+|                                  |            |         | eq h773 i767 eq x769 h768 eq h737 u766 eq x736 > ]                               |
++----------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| idDuct1_prop_idInterestingObject | idDuct1    | true    | [ TOP: h739                                                                      |
+|                                  |            |         |   INDEX: x738                                                                    |
+|                                  |            |         |   RELS: < [ _interesting_a_for LBL: h747 ARG0: e744 ARG1: u745 ARG2: u746 ]      |
+|                                  |            |         |           [ _duct_n_1 LBL: h739 ARG0: x738 ] >                                   |
+|                                  |            |         |   EQS: < h747 eq h739 u745 eq x738 > ]                                           |
++----------------------------------+------------+---------+----------------------------------------------------------------------------------+
+| idDuct1_prop_idImmovable         | idDuct1    | yes     | [ TOP: h739                                                                      |
+|                                  |            |         |   INDEX: x738                                                                    |
+|                                  |            |         |   RELS: < [ _immovable_a_1 LBL: h764 ARG0: e762 ARG1: u763 ]                     |
+|                                  |            |         |           [ _interesting_a_for LBL: h747 ARG0: e744 ARG1: u745 ARG2: u746 ]      |
+|                                  |            |         |           [ _duct_n_1 LBL: h739 ARG0: x738 ] >                                   |
+|                                  |            |         |   EQS: < h747 eq h739 u745 eq x738 h764 eq h739 u763 eq x738 > ]                 |
++----------------------------------+------------+---------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------+
+|                   GENERATED ENGLISH TEXT                  |
++-----+-----------------------------------------------------+
+| #   | Generated Text                                      |
++-----+-----------------------------------------------------+
+| 1   | A stomach near an immovable interesting duct        |
+| 2   | A stomach near an immovable interesting duct.       |
+| 3   | A stomach near an interesting immovable duct        |
+| 4   | A stomach near an interesting immovable duct.       |
+| 5   | A stomach near immovable interesting ducts          |
+| 6   | A stomach near immovable interesting ducts.         |
+| 7   | A stomach near interesting immovable ducts          |
+| 8   | A stomach near interesting immovable ducts.         |
+| 9   | A stomach near the immovable interesting duct       |
+| 10  | A stomach near the immovable interesting duct.      |
+| 11  | A stomach near the immovable interesting ducts      |
+| 12  | A stomach near the immovable interesting ducts.     |
+| 13  | A stomach near the interesting immovable duct       |
+| 14  | A stomach near the interesting immovable duct.      |
+| 15  | A stomach near the interesting immovable ducts      |
+| 16  | A stomach near the interesting immovable ducts.     |
+| 17  | A stomach, near an immovable interesting duct       |
+| 18  | A stomach, near an interesting immovable duct       |
+| 19  | A stomach, near immovable interesting ducts         |
+| 20  | A stomach, near interesting immovable ducts         |
+| 21  | A stomach, near the immovable interesting duct      |
+| 22  | A stomach, near the immovable interesting ducts     |
+| 23  | A stomach, near the interesting immovable duct      |
+| 24  | A stomach, near the interesting immovable ducts     |
+| 25  | Stomach near an immovable interesting duct          |
+| 26  | Stomach near an immovable interesting duct          |
+| 27  | Stomach near an immovable interesting duct.         |
+| 28  | Stomach near an immovable interesting duct.         |
+| 29  | Stomach near an interesting immovable duct          |
+| 30  | Stomach near an interesting immovable duct          |
+| 31  | Stomach near an interesting immovable duct.         |
+| 32  | Stomach near an interesting immovable duct.         |
+| 33  | Stomach near immovable interesting ducts            |
+| 34  | Stomach near immovable interesting ducts            |
+| 35  | Stomach near immovable interesting ducts.           |
+| 36  | Stomach near immovable interesting ducts.           |
+| 37  | Stomach near interesting immovable ducts            |
+| 38  | Stomach near interesting immovable ducts            |
+| 39  | Stomach near interesting immovable ducts.           |
+| 40  | Stomach near interesting immovable ducts.           |
+| 41  | Stomach near the immovable interesting duct         |
+| 42  | Stomach near the immovable interesting duct         |
+| 43  | Stomach near the immovable interesting duct.        |
+| 44  | Stomach near the immovable interesting duct.        |
+| 45  | Stomach near the immovable interesting ducts        |
+| 46  | Stomach near the immovable interesting ducts        |
+| 47  | Stomach near the immovable interesting ducts.       |
+| 48  | Stomach near the immovable interesting ducts.       |
+| 49  | Stomach near the interesting immovable duct         |
+| 50  | Stomach near the interesting immovable duct         |
+| 51  | Stomach near the interesting immovable duct.        |
+| 52  | Stomach near the interesting immovable duct.        |
+| 53  | Stomach near the interesting immovable ducts        |
+| 54  | Stomach near the interesting immovable ducts        |
+| 55  | Stomach near the interesting immovable ducts.       |
+| 56  | Stomach near the interesting immovable ducts.       |
+| 57  | Stomach, near an immovable interesting duct         |
+| 58  | Stomach, near an immovable interesting duct         |
+| 59  | Stomach, near an interesting immovable duct         |
+| 60  | Stomach, near an interesting immovable duct         |
+| 61  | Stomach, near immovable interesting ducts           |
+| 62  | Stomach, near immovable interesting ducts           |
+| 63  | Stomach, near interesting immovable ducts           |
+| 64  | Stomach, near interesting immovable ducts           |
+| 65  | Stomach, near the immovable interesting duct        |
+| 66  | Stomach, near the immovable interesting duct        |
+| 67  | Stomach, near the immovable interesting ducts       |
+| 68  | Stomach, near the immovable interesting ducts       |
+| 69  | Stomach, near the interesting immovable duct        |
+| 70  | Stomach, near the interesting immovable duct        |
+| 71  | Stomach, near the interesting immovable ducts       |
+| 72  | Stomach, near the interesting immovable ducts       |
+| 73  | Stomaches near an immovable interesting duct        |
+| 74  | Stomaches near an immovable interesting duct.       |
+| 75  | Stomaches near an interesting immovable duct        |
+| 76  | Stomaches near an interesting immovable duct.       |
+| 77  | Stomaches near immovable interesting ducts          |
+| 78  | Stomaches near immovable interesting ducts.         |
+| 79  | Stomaches near interesting immovable ducts          |
+| 80  | Stomaches near interesting immovable ducts.         |
+| 81  | Stomaches near the immovable interesting duct       |
+| 82  | Stomaches near the immovable interesting duct.      |
+| 83  | Stomaches near the immovable interesting ducts      |
+| 84  | Stomaches near the immovable interesting ducts.     |
+| 85  | Stomaches near the interesting immovable duct       |
+| 86  | Stomaches near the interesting immovable duct.      |
+| 87  | Stomaches near the interesting immovable ducts      |
+| 88  | Stomaches near the interesting immovable ducts.     |
+| 89  | Stomaches, near an immovable interesting duct       |
+| 90  | Stomaches, near an interesting immovable duct       |
+| 91  | Stomaches, near immovable interesting ducts         |
+| 92  | Stomaches, near interesting immovable ducts         |
+| 93  | Stomaches, near the immovable interesting duct      |
+| 94  | Stomaches, near the immovable interesting ducts     |
+| 95  | Stomaches, near the interesting immovable duct      |
+| 96  | Stomaches, near the interesting immovable ducts     |
+| 97  | The stomach near an immovable interesting duct      |
+| 98  | The stomach near an immovable interesting duct.     |
+| 99  | The stomach near an interesting immovable duct      |
+| 100 | The stomach near an interesting immovable duct.     |
+| 101 | The stomach near immovable interesting ducts        |
+| 102 | The stomach near immovable interesting ducts.       |
+| 103 | The stomach near interesting immovable ducts        |
+| 104 | The stomach near interesting immovable ducts.       |
+| 105 | The stomach near the immovable interesting duct     |
+| 106 | The stomach near the immovable interesting duct.    |
+| 107 | The stomach near the immovable interesting ducts    |
+| 108 | The stomach near the immovable interesting ducts.   |
+| 109 | The stomach near the interesting immovable duct     |
+| 110 | The stomach near the interesting immovable duct.    |
+| 111 | The stomach near the interesting immovable ducts    |
+| 112 | The stomach near the interesting immovable ducts.   |
+| 113 | The stomach, near an immovable interesting duct     |
+| 114 | The stomach, near an interesting immovable duct     |
+| 115 | The stomach, near immovable interesting ducts       |
+| 116 | The stomach, near interesting immovable ducts       |
+| 117 | The stomach, near the immovable interesting duct    |
+| 118 | The stomach, near the immovable interesting ducts   |
+| 119 | The stomach, near the interesting immovable duct    |
+| 120 | The stomach, near the interesting immovable ducts   |
+| 121 | The stomaches near an immovable interesting duct    |
+| 122 | The stomaches near an immovable interesting duct.   |
+| 123 | The stomaches near an interesting immovable duct    |
+| 124 | The stomaches near an interesting immovable duct.   |
+| 125 | The stomaches near immovable interesting ducts      |
+| 126 | The stomaches near immovable interesting ducts.     |
+| 127 | The stomaches near interesting immovable ducts      |
+| 128 | The stomaches near interesting immovable ducts.     |
+| 129 | The stomaches near the immovable interesting duct   |
+| 130 | The stomaches near the immovable interesting duct.  |
+| 131 | The stomaches near the immovable interesting ducts  |
+| 132 | The stomaches near the immovable interesting ducts. |
+| 133 | The stomaches near the interesting immovable duct   |
+| 134 | The stomaches near the interesting immovable duct.  |
+| 135 | The stomaches near the interesting immovable ducts  |
+| 136 | The stomaches near the interesting immovable ducts. |
+| 137 | The stomaches, near an immovable interesting duct   |
+| 138 | The stomaches, near an interesting immovable duct   |
+| 139 | The stomaches, near immovable interesting ducts     |
+| 140 | The stomaches, near interesting immovable ducts     |
+| 141 | The stomaches, near the immovable interesting duct  |
+| 142 | The stomaches, near the immovable interesting ducts |
+| 143 | The stomaches, near the interesting immovable duct  |
+| 144 | The stomaches, near the interesting immovable ducts |
++-----+-----------------------------------------------------+
+

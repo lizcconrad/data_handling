@@ -1,0 +1,727 @@
+GRAPH NAME: idCrib1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 500   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------+
+|                           GOLD OUTPUTS                           |
++-----------------------------------------------------+------------+
+| Gold Output                                         | Generated? |
++-----------------------------------------------------+------------+
+| the unknown crib east of the front door with a lock | True       |
++-----------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------+
+|                                      NODE METRICS                                      |
++------------------+--------------+---------------+------------------+-------------------+
+| Node             | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------+--------------+---------------+------------------+-------------------+
+| idCrib1          | True         | True          | Covered          | Included          |
+| true             | True         | True          | Covered          | Included          |
+| idFrontDoor1     | True         | True          | Covered          | Included          |
+| idFrontDoor1Lock | True         | True          | Covered          | Included          |
++------------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE METRICS                                                               |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+| Edge                              | Parent       | Child            | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+| idCrib1_prop_idUnknownObject      | idCrib1      | true             | True         | True          | Covered          | Included          |
+| isEastOf                          | idCrib1      | idFrontDoor1     | True         | True          | Covered          | Included          |
+| idFrontDoor1_prop_idLockMechanism | idFrontDoor1 | idFrontDoor1Lock | True         | True          | Covered          | Included          |
++-----------------------------------+--------------+------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3121                                                                     |
+|               |   INDEX: x3120                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3168 ARG0: e3165 ARG1: u3166 ARG2: x3167 ]           |
+|               |           [ def_implicit_q LBL: h3179 ARG0: x3176 RSTR: h3177 BODY: h3178 ]      |
+|               |           [ _east_a_1 LBL: h3164 ARG0: i3161 ARG1: x3162 ARG2: u3163 ]           |
+|               |           [ def_udef_a_q LBL: h3174 ARG0: x3171 RSTR: h3172 BODY: h3173 ]        |
+|               |           [ _with_p LBL: h3155 ARG0: e3152 ARG1: u3153 ARG2: i3154 ]             |
+|               |           [ def_udef_a_q LBL: h3159 ARG0: x3156 RSTR: h3157 BODY: h3158 ]        |
+|               |           [ _lock_n_1 LBL: h3151 ARG0: x3150 ]                                   |
+|               |           [ compound LBL: h3149 ARG0: e3146 [ e PROG: - ] ARG1: u3147 ARG2:      |
+|               | u3148 ]                                                                          |
+|               |           [ udef_q LBL: h3144 ARG0: x3141 RSTR: h3142 BODY: h3143 ]              |
+|               |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|               |           [ _door_n_1 LBL: h3138 ARG0: x3137 ]                                   |
+|               |           [ place_n LBL: h3170 ARG0: x3169 ]                                     |
+|               |           [ _un-_a_neg LBL: h3136 ARG0: i3134 ARG1: e3135 ]                      |
+|               |           [ _know_v_1 LBL: h3133 ARG0: e3130 [ e PERF: - ] ARG1: u3131 ARG2:     |
+|               | i3132 ]                                                                          |
+|               |           [ _crib_n_1 LBL: h3121 ARG0: x3120 ] >                                 |
+|               |   HCONS: < h3157 qeq h3151 h3142 qeq h3140 h3172 qeq h3138 h3177 qeq h3170 >     |
+|               |   ICONS: < e3130 topic i3132 >                                                   |
+|               |   EQS: < x3156 eq x3150 h3155 eq h3160 i3154 eq x3156 x3141 eq x3139 h3149 eq    |
+|               | h3145 u3148 eq x3141 h3149 eq h3138 u3147 eq x3137 h3155 eq h3138 u3153 eq x3137 |
+|               | x3171 eq x3137 h3164 eq h3175 u3163 eq x3171 h3164 eq h3170 x3162 eq x3169 x3176 |
+|               | eq x3169 h3168 eq h3180 x3167 eq x3176 h3136 eq h3133 e3135 eq e3130 h3133 eq    |
+|               | h3121 i3132 eq x3120 h3168 eq h3121 u3166 eq x3120 > ]                           |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3121                                                                     |
+|               |   INDEX: x3120                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3121 ARG0: e3165 ARG1: x3120 ARG2: x3162 ]           |
+|               |           [ def_implicit_q LBL: h3179 ARG0: x3162 RSTR: h3177 BODY: h3178 ]      |
+|               |           [ _east_a_1 LBL: h3164 ARG0: i3161 ARG1: x3162 ARG2: x3137 ]           |
+|               |           [ def_udef_a_q LBL: h3174 ARG0: x3137 RSTR: h3172 BODY: h3173 ]        |
+|               |           [ _with_p LBL: h3138 ARG0: e3152 ARG1: x3137 ARG2: x3150 ]             |
+|               |           [ def_udef_a_q LBL: h3159 ARG0: x3150 RSTR: h3157 BODY: h3158 ]        |
+|               |           [ _lock_n_1 LBL: h3151 ARG0: x3150 ]                                   |
+|               |           [ compound LBL: h3138 ARG0: e3146 [ e PROG: - ] ARG1: x3137 ARG2:      |
+|               | x3139 ]                                                                          |
+|               |           [ udef_q LBL: h3144 ARG0: x3139 RSTR: h3142 BODY: h3143 ]              |
+|               |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|               |           [ _door_n_1 LBL: h3138 ARG0: x3137 ]                                   |
+|               |           [ place_n LBL: h3164 ARG0: x3162 ]                                     |
+|               |           [ _un-_a_neg LBL: h3121 ARG0: i3134 ARG1: e3130 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3121 ARG0: e3130 ARG1: u3131 ARG2: x3120 ]           |
+|               |           [ _crib_n_1 LBL: h3121 ARG0: x3120 ] >                                 |
+|               |   HCONS: < h3157 qeq h3151 h3142 qeq h3140 h3172 qeq h3138 h3177 qeq h3164 >     |
+|               |   ICONS: < e3130 topic x3120 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3189                                                                     |
+|               |   INDEX: e3186                                                                   |
+|               |   RELS: < [ unknown LBL: h3185 ARG: x3120 ARG0: e3186 ]                          |
+|               |           [ def_udef_a_q LBL: h3184 ARG0: x3120 RSTR: h3182 BODY: h3183 ]        |
+|               |           [ loc_nonsp LBL: h3121 ARG0: e3165 ARG1: x3120 ARG2: x3162 ]           |
+|               |           [ def_implicit_q LBL: h3179 ARG0: x3162 RSTR: h3177 BODY: h3178 ]      |
+|               |           [ _east_a_1 LBL: h3164 ARG0: i3161 ARG1: x3162 ARG2: x3137 ]           |
+|               |           [ def_udef_a_q LBL: h3174 ARG0: x3137 RSTR: h3172 BODY: h3173 ]        |
+|               |           [ _with_p LBL: h3138 ARG0: e3152 ARG1: x3137 ARG2: x3150 ]             |
+|               |           [ def_udef_a_q LBL: h3159 ARG0: x3150 RSTR: h3157 BODY: h3158 ]        |
+|               |           [ _lock_n_1 LBL: h3151 ARG0: x3150 ]                                   |
+|               |           [ compound LBL: h3138 ARG0: e3146 [ e PROG: - ] ARG1: x3137 ARG2:      |
+|               | x3139 ]                                                                          |
+|               |           [ udef_q LBL: h3144 ARG0: x3139 RSTR: h3142 BODY: h3143 ]              |
+|               |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|               |           [ _door_n_1 LBL: h3138 ARG0: x3137 ]                                   |
+|               |           [ place_n LBL: h3164 ARG0: x3162 ]                                     |
+|               |           [ _un-_a_neg LBL: h3121 ARG0: i3134 ARG1: e3130 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3121 ARG0: e3130 ARG1: u3131 ARG2: x3120 ]           |
+|               |           [ _crib_n_1 LBL: h3121 ARG0: x3120 ] >                                 |
+|               |   HCONS: < h3157 qeq h3151 h3142 qeq h3140 h3172 qeq h3138 h3177 qeq h3164 h3182 |
+|               | qeq h3121 h3189 qeq h3185 >                                                      |
+|               |   ICONS: < e3130 topic x3120 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                             NODE SEMENTS                                            |
++------------------+----------------------------------------------------------------------------------+
+| Node             | Generated SEMENT                                                                 |
++------------------+----------------------------------------------------------------------------------+
+| idCrib1          | [ TOP: h3121                                                                     |
+|                  |   INDEX: x3120                                                                   |
+|                  |   RELS: < [ _crib_n_1 LBL: h3121 ARG0: x3120 ] > ]                               |
++------------------+----------------------------------------------------------------------------------+
+| true             | [ TOP: h3125                                                                     |
+|                  |   INDEX: e3122                                                                   |
+|                  |   RELS: < [ _true_a_of LBL: h3125 ARG0: e3122 ARG1: u3123 ARG2: u3124 ] >        |
+|                  |   SLOTS: < ARG1: u3123 ARG2: u3124 > ]                                           |
++------------------+----------------------------------------------------------------------------------+
+| idFrontDoor1     | [ TOP: h3138                                                                     |
+|                  |   INDEX: x3137                                                                   |
+|                  |   RELS: < [ compound LBL: h3149 ARG0: e3146 [ e PROG: - ] ARG1: u3147 ARG2:      |
+|                  | u3148 ]                                                                          |
+|                  |           [ udef_q LBL: h3144 ARG0: x3141 RSTR: h3142 BODY: h3143 ]              |
+|                  |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|                  |           [ _door_n_1 LBL: h3138 ARG0: x3137 ] >                                 |
+|                  |   HCONS: < h3142 qeq h3140 >                                                     |
+|                  |   EQS: < x3141 eq x3139 h3149 eq h3145 u3148 eq x3141 h3149 eq h3138 u3147 eq    |
+|                  | x3137 > ]                                                                        |
++------------------+----------------------------------------------------------------------------------+
+| idFrontDoor1Lock | [ TOP: h3151                                                                     |
+|                  |   INDEX: x3150                                                                   |
+|                  |   RELS: < [ _lock_n_1 LBL: h3151 ARG0: x3150 ] > ]                               |
++------------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                      EDGE SEMENTS                                                                      |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| Edge                              | Parent       | Child            | Generated SEMENT                                                                 |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| idCrib1_prop_idUnknownObject      | idCrib1      | true             | [ TOP: h3121                                                                     |
+|                                   |              |                  |   INDEX: x3120                                                                   |
+|                                   |              |                  |   RELS: < [ _un-_a_neg LBL: h3136 ARG0: i3134 ARG1: e3135 ]                      |
+|                                   |              |                  |           [ _know_v_1 LBL: h3133 ARG0: e3130 [ e PERF: - ] ARG1: u3131 ARG2:     |
+|                                   |              |                  | i3132 ]                                                                          |
+|                                   |              |                  |           [ _crib_n_1 LBL: h3121 ARG0: x3120 ] >                                 |
+|                                   |              |                  |   ICONS: < e3130 topic i3132 >                                                   |
+|                                   |              |                  |   EQS: < h3136 eq h3133 e3135 eq e3130 h3133 eq h3121 i3132 eq x3120 > ]         |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| isEastOf                          | idCrib1      | idFrontDoor1     | [ TOP: h3121                                                                     |
+|                                   |              |                  |   INDEX: x3120                                                                   |
+|                                   |              |                  |   RELS: < [ loc_nonsp LBL: h3168 ARG0: e3165 ARG1: u3166 ARG2: x3167 ]           |
+|                                   |              |                  |           [ def_implicit_q LBL: h3179 ARG0: x3176 RSTR: h3177 BODY: h3178 ]      |
+|                                   |              |                  |           [ _east_a_1 LBL: h3164 ARG0: i3161 ARG1: x3162 ARG2: u3163 ]           |
+|                                   |              |                  |           [ def_udef_a_q LBL: h3174 ARG0: x3171 RSTR: h3172 BODY: h3173 ]        |
+|                                   |              |                  |           [ _with_p LBL: h3155 ARG0: e3152 ARG1: u3153 ARG2: i3154 ]             |
+|                                   |              |                  |           [ def_udef_a_q LBL: h3159 ARG0: x3156 RSTR: h3157 BODY: h3158 ]        |
+|                                   |              |                  |           [ _lock_n_1 LBL: h3151 ARG0: x3150 ]                                   |
+|                                   |              |                  |           [ compound LBL: h3149 ARG0: e3146 [ e PROG: - ] ARG1: u3147 ARG2:      |
+|                                   |              |                  | u3148 ]                                                                          |
+|                                   |              |                  |           [ udef_q LBL: h3144 ARG0: x3141 RSTR: h3142 BODY: h3143 ]              |
+|                                   |              |                  |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|                                   |              |                  |           [ _door_n_1 LBL: h3138 ARG0: x3137 ]                                   |
+|                                   |              |                  |           [ place_n LBL: h3170 ARG0: x3169 ]                                     |
+|                                   |              |                  |           [ _un-_a_neg LBL: h3136 ARG0: i3134 ARG1: e3135 ]                      |
+|                                   |              |                  |           [ _know_v_1 LBL: h3133 ARG0: e3130 [ e PERF: - ] ARG1: u3131 ARG2:     |
+|                                   |              |                  | i3132 ]                                                                          |
+|                                   |              |                  |           [ _crib_n_1 LBL: h3121 ARG0: x3120 ] >                                 |
+|                                   |              |                  |   HCONS: < h3157 qeq h3151 h3142 qeq h3140 h3172 qeq h3138 h3177 qeq h3170 >     |
+|                                   |              |                  |   ICONS: < e3130 topic i3132 >                                                   |
+|                                   |              |                  |   EQS: < x3156 eq x3150 h3155 eq h3160 i3154 eq x3156 x3141 eq x3139 h3149 eq    |
+|                                   |              |                  | h3145 u3148 eq x3141 h3149 eq h3138 u3147 eq x3137 h3155 eq h3138 u3153 eq x3137 |
+|                                   |              |                  | x3171 eq x3137 h3164 eq h3175 u3163 eq x3171 h3164 eq h3170 x3162 eq x3169 x3176 |
+|                                   |              |                  | eq x3169 h3168 eq h3180 x3167 eq x3176 h3136 eq h3133 e3135 eq e3130 h3133 eq    |
+|                                   |              |                  | h3121 i3132 eq x3120 h3168 eq h3121 u3166 eq x3120 > ]                           |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+| idFrontDoor1_prop_idLockMechanism | idFrontDoor1 | idFrontDoor1Lock | [ TOP: h3138                                                                     |
+|                                   |              |                  |   INDEX: x3137                                                                   |
+|                                   |              |                  |   RELS: < [ _with_p LBL: h3155 ARG0: e3152 ARG1: u3153 ARG2: i3154 ]             |
+|                                   |              |                  |           [ def_udef_a_q LBL: h3159 ARG0: x3156 RSTR: h3157 BODY: h3158 ]        |
+|                                   |              |                  |           [ _lock_n_1 LBL: h3151 ARG0: x3150 ]                                   |
+|                                   |              |                  |           [ compound LBL: h3149 ARG0: e3146 [ e PROG: - ] ARG1: u3147 ARG2:      |
+|                                   |              |                  | u3148 ]                                                                          |
+|                                   |              |                  |           [ udef_q LBL: h3144 ARG0: x3141 RSTR: h3142 BODY: h3143 ]              |
+|                                   |              |                  |           [ _front_n_1 LBL: h3140 ARG0: x3139 ]                                  |
+|                                   |              |                  |           [ _door_n_1 LBL: h3138 ARG0: x3137 ] >                                 |
+|                                   |              |                  |   HCONS: < h3157 qeq h3151 h3142 qeq h3140 >                                     |
+|                                   |              |                  |   EQS: < x3156 eq x3150 h3155 eq h3160 i3154 eq x3156 x3141 eq x3139 h3149 eq    |
+|                                   |              |                  | h3145 u3148 eq x3141 h3149 eq h3138 u3147 eq x3137 h3155 eq h3138 u3153 eq x3137 |
+|                                   |              |                  | > ]                                                                              |
++-----------------------------------+--------------+------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------+
+|                      GENERATED ENGLISH TEXT                      |
++-----+------------------------------------------------------------+
+| #   | Generated Text                                             |
++-----+------------------------------------------------------------+
+| 1   | An unknown crib east of a front door with a lock           |
+| 2   | An unknown crib east of a front door with a lock.          |
+| 3   | An unknown crib east of a front door with lock             |
+| 4   | An unknown crib east of a front door with lock.            |
+| 5   | An unknown crib east of a front door with locks            |
+| 6   | An unknown crib east of a front door with locks.           |
+| 7   | An unknown crib east of a front door with the lock         |
+| 8   | An unknown crib east of a front door with the lock.        |
+| 9   | An unknown crib east of a front door with the locks        |
+| 10  | An unknown crib east of a front door with the locks.       |
+| 11  | An unknown crib east of a front door, with a lock          |
+| 12  | An unknown crib east of a front door, with lock            |
+| 13  | An unknown crib east of a front door, with locks           |
+| 14  | An unknown crib east of a front door, with the lock        |
+| 15  | An unknown crib east of a front door, with the locks       |
+| 16  | An unknown crib east of front doors with a lock            |
+| 17  | An unknown crib east of front doors with a lock.           |
+| 18  | An unknown crib east of front doors with lock              |
+| 19  | An unknown crib east of front doors with lock.             |
+| 20  | An unknown crib east of front doors with locks             |
+| 21  | An unknown crib east of front doors with locks.            |
+| 22  | An unknown crib east of front doors with the lock          |
+| 23  | An unknown crib east of front doors with the lock.         |
+| 24  | An unknown crib east of front doors with the locks         |
+| 25  | An unknown crib east of front doors with the locks.        |
+| 26  | An unknown crib east of front doors, with a lock           |
+| 27  | An unknown crib east of front doors, with lock             |
+| 28  | An unknown crib east of front doors, with locks            |
+| 29  | An unknown crib east of front doors, with the lock         |
+| 30  | An unknown crib east of front doors, with the locks        |
+| 31  | An unknown crib east of the front door with a lock         |
+| 32  | An unknown crib east of the front door with a lock.        |
+| 33  | An unknown crib east of the front door with lock           |
+| 34  | An unknown crib east of the front door with lock.          |
+| 35  | An unknown crib east of the front door with locks          |
+| 36  | An unknown crib east of the front door with locks.         |
+| 37  | An unknown crib east of the front door with the lock       |
+| 38  | An unknown crib east of the front door with the lock.      |
+| 39  | An unknown crib east of the front door with the locks      |
+| 40  | An unknown crib east of the front door with the locks.     |
+| 41  | An unknown crib east of the front door, with a lock        |
+| 42  | An unknown crib east of the front door, with lock          |
+| 43  | An unknown crib east of the front door, with locks         |
+| 44  | An unknown crib east of the front door, with the lock      |
+| 45  | An unknown crib east of the front door, with the locks     |
+| 46  | An unknown crib east of the front doors with a lock        |
+| 47  | An unknown crib east of the front doors with a lock.       |
+| 48  | An unknown crib east of the front doors with lock          |
+| 49  | An unknown crib east of the front doors with lock.         |
+| 50  | An unknown crib east of the front doors with locks         |
+| 51  | An unknown crib east of the front doors with locks.        |
+| 52  | An unknown crib east of the front doors with the lock      |
+| 53  | An unknown crib east of the front doors with the lock.     |
+| 54  | An unknown crib east of the front doors with the locks     |
+| 55  | An unknown crib east of the front doors with the locks.    |
+| 56  | An unknown crib east of the front doors, with a lock       |
+| 57  | An unknown crib east of the front doors, with lock         |
+| 58  | An unknown crib east of the front doors, with locks        |
+| 59  | An unknown crib east of the front doors, with the lock     |
+| 60  | An unknown crib east of the front doors, with the locks    |
+| 61  | An unknown crib, east of a front door with a lock          |
+| 62  | An unknown crib, east of a front door with lock            |
+| 63  | An unknown crib, east of a front door with locks           |
+| 64  | An unknown crib, east of a front door with the lock        |
+| 65  | An unknown crib, east of a front door with the locks       |
+| 66  | An unknown crib, east of a front door, with a lock         |
+| 67  | An unknown crib, east of a front door, with lock           |
+| 68  | An unknown crib, east of a front door, with locks          |
+| 69  | An unknown crib, east of a front door, with the lock       |
+| 70  | An unknown crib, east of a front door, with the locks      |
+| 71  | An unknown crib, east of front doors with a lock           |
+| 72  | An unknown crib, east of front doors with lock             |
+| 73  | An unknown crib, east of front doors with locks            |
+| 74  | An unknown crib, east of front doors with the lock         |
+| 75  | An unknown crib, east of front doors with the locks        |
+| 76  | An unknown crib, east of front doors, with a lock          |
+| 77  | An unknown crib, east of front doors, with lock            |
+| 78  | An unknown crib, east of front doors, with locks           |
+| 79  | An unknown crib, east of front doors, with the lock        |
+| 80  | An unknown crib, east of front doors, with the locks       |
+| 81  | An unknown crib, east of the front door with a lock        |
+| 82  | An unknown crib, east of the front door with lock          |
+| 83  | An unknown crib, east of the front door with locks         |
+| 84  | An unknown crib, east of the front door with the lock      |
+| 85  | An unknown crib, east of the front door with the locks     |
+| 86  | An unknown crib, east of the front door, with a lock       |
+| 87  | An unknown crib, east of the front door, with lock         |
+| 88  | An unknown crib, east of the front door, with locks        |
+| 89  | An unknown crib, east of the front door, with the lock     |
+| 90  | An unknown crib, east of the front door, with the locks    |
+| 91  | An unknown crib, east of the front doors with a lock       |
+| 92  | An unknown crib, east of the front doors with lock         |
+| 93  | An unknown crib, east of the front doors with locks        |
+| 94  | An unknown crib, east of the front doors with the lock     |
+| 95  | An unknown crib, east of the front doors with the locks    |
+| 96  | An unknown crib, east of the front doors, with a lock      |
+| 97  | An unknown crib, east of the front doors, with lock        |
+| 98  | An unknown crib, east of the front doors, with locks       |
+| 99  | An unknown crib, east of the front doors, with the lock    |
+| 100 | An unknown crib, east of the front doors, with the locks   |
+| 101 | The unknown crib east of a front door with a lock          |
+| 102 | The unknown crib east of a front door with a lock.         |
+| 103 | The unknown crib east of a front door with lock            |
+| 104 | The unknown crib east of a front door with lock.           |
+| 105 | The unknown crib east of a front door with locks           |
+| 106 | The unknown crib east of a front door with locks.          |
+| 107 | The unknown crib east of a front door with the lock        |
+| 108 | The unknown crib east of a front door with the lock.       |
+| 109 | The unknown crib east of a front door with the locks       |
+| 110 | The unknown crib east of a front door with the locks.      |
+| 111 | The unknown crib east of a front door, with a lock         |
+| 112 | The unknown crib east of a front door, with lock           |
+| 113 | The unknown crib east of a front door, with locks          |
+| 114 | The unknown crib east of a front door, with the lock       |
+| 115 | The unknown crib east of a front door, with the locks      |
+| 116 | The unknown crib east of front doors with a lock           |
+| 117 | The unknown crib east of front doors with a lock.          |
+| 118 | The unknown crib east of front doors with lock             |
+| 119 | The unknown crib east of front doors with lock.            |
+| 120 | The unknown crib east of front doors with locks            |
+| 121 | The unknown crib east of front doors with locks.           |
+| 122 | The unknown crib east of front doors with the lock         |
+| 123 | The unknown crib east of front doors with the lock.        |
+| 124 | The unknown crib east of front doors with the locks        |
+| 125 | The unknown crib east of front doors with the locks.       |
+| 126 | The unknown crib east of front doors, with a lock          |
+| 127 | The unknown crib east of front doors, with lock            |
+| 128 | The unknown crib east of front doors, with locks           |
+| 129 | The unknown crib east of front doors, with the lock        |
+| 130 | The unknown crib east of front doors, with the locks       |
+| 131 | The unknown crib east of the front door with a lock        |
+| 132 | The unknown crib east of the front door with a lock.       |
+| 133 | The unknown crib east of the front door with lock          |
+| 134 | The unknown crib east of the front door with lock.         |
+| 135 | The unknown crib east of the front door with locks         |
+| 136 | The unknown crib east of the front door with locks.        |
+| 137 | The unknown crib east of the front door with the lock      |
+| 138 | The unknown crib east of the front door with the lock.     |
+| 139 | The unknown crib east of the front door with the locks     |
+| 140 | The unknown crib east of the front door with the locks.    |
+| 141 | The unknown crib east of the front door, with a lock       |
+| 142 | The unknown crib east of the front door, with lock         |
+| 143 | The unknown crib east of the front door, with locks        |
+| 144 | The unknown crib east of the front door, with the lock     |
+| 145 | The unknown crib east of the front door, with the locks    |
+| 146 | The unknown crib east of the front doors with a lock       |
+| 147 | The unknown crib east of the front doors with a lock.      |
+| 148 | The unknown crib east of the front doors with lock         |
+| 149 | The unknown crib east of the front doors with lock.        |
+| 150 | The unknown crib east of the front doors with locks        |
+| 151 | The unknown crib east of the front doors with locks.       |
+| 152 | The unknown crib east of the front doors with the lock     |
+| 153 | The unknown crib east of the front doors with the lock.    |
+| 154 | The unknown crib east of the front doors with the locks    |
+| 155 | The unknown crib east of the front doors with the locks.   |
+| 156 | The unknown crib east of the front doors, with a lock      |
+| 157 | The unknown crib east of the front doors, with lock        |
+| 158 | The unknown crib east of the front doors, with locks       |
+| 159 | The unknown crib east of the front doors, with the lock    |
+| 160 | The unknown crib east of the front doors, with the locks   |
+| 161 | The unknown crib, east of a front door with a lock         |
+| 162 | The unknown crib, east of a front door with lock           |
+| 163 | The unknown crib, east of a front door with locks          |
+| 164 | The unknown crib, east of a front door with the lock       |
+| 165 | The unknown crib, east of a front door with the locks      |
+| 166 | The unknown crib, east of a front door, with a lock        |
+| 167 | The unknown crib, east of a front door, with lock          |
+| 168 | The unknown crib, east of a front door, with locks         |
+| 169 | The unknown crib, east of a front door, with the lock      |
+| 170 | The unknown crib, east of a front door, with the locks     |
+| 171 | The unknown crib, east of front doors with a lock          |
+| 172 | The unknown crib, east of front doors with lock            |
+| 173 | The unknown crib, east of front doors with locks           |
+| 174 | The unknown crib, east of front doors with the lock        |
+| 175 | The unknown crib, east of front doors with the locks       |
+| 176 | The unknown crib, east of front doors, with a lock         |
+| 177 | The unknown crib, east of front doors, with lock           |
+| 178 | The unknown crib, east of front doors, with locks          |
+| 179 | The unknown crib, east of front doors, with the lock       |
+| 180 | The unknown crib, east of front doors, with the locks      |
+| 181 | The unknown crib, east of the front door with a lock       |
+| 182 | The unknown crib, east of the front door with lock         |
+| 183 | The unknown crib, east of the front door with locks        |
+| 184 | The unknown crib, east of the front door with the lock     |
+| 185 | The unknown crib, east of the front door with the locks    |
+| 186 | The unknown crib, east of the front door, with a lock      |
+| 187 | The unknown crib, east of the front door, with lock        |
+| 188 | The unknown crib, east of the front door, with locks       |
+| 189 | The unknown crib, east of the front door, with the lock    |
+| 190 | The unknown crib, east of the front door, with the locks   |
+| 191 | The unknown crib, east of the front doors with a lock      |
+| 192 | The unknown crib, east of the front doors with lock        |
+| 193 | The unknown crib, east of the front doors with locks       |
+| 194 | The unknown crib, east of the front doors with the lock    |
+| 195 | The unknown crib, east of the front doors with the locks   |
+| 196 | The unknown crib, east of the front doors, with a lock     |
+| 197 | The unknown crib, east of the front doors, with lock       |
+| 198 | The unknown crib, east of the front doors, with locks      |
+| 199 | The unknown crib, east of the front doors, with the lock   |
+| 200 | The unknown crib, east of the front doors, with the locks  |
+| 201 | The unknown cribs east of a front door with a lock         |
+| 202 | The unknown cribs east of a front door with a lock.        |
+| 203 | The unknown cribs east of a front door with lock           |
+| 204 | The unknown cribs east of a front door with lock.          |
+| 205 | The unknown cribs east of a front door with locks          |
+| 206 | The unknown cribs east of a front door with locks.         |
+| 207 | The unknown cribs east of a front door with the lock       |
+| 208 | The unknown cribs east of a front door with the lock.      |
+| 209 | The unknown cribs east of a front door with the locks      |
+| 210 | The unknown cribs east of a front door with the locks.     |
+| 211 | The unknown cribs east of a front door, with a lock        |
+| 212 | The unknown cribs east of a front door, with lock          |
+| 213 | The unknown cribs east of a front door, with locks         |
+| 214 | The unknown cribs east of a front door, with the lock      |
+| 215 | The unknown cribs east of a front door, with the locks     |
+| 216 | The unknown cribs east of front doors with a lock          |
+| 217 | The unknown cribs east of front doors with a lock.         |
+| 218 | The unknown cribs east of front doors with lock            |
+| 219 | The unknown cribs east of front doors with lock.           |
+| 220 | The unknown cribs east of front doors with locks           |
+| 221 | The unknown cribs east of front doors with locks.          |
+| 222 | The unknown cribs east of front doors with the lock        |
+| 223 | The unknown cribs east of front doors with the lock.       |
+| 224 | The unknown cribs east of front doors with the locks       |
+| 225 | The unknown cribs east of front doors with the locks.      |
+| 226 | The unknown cribs east of front doors, with a lock         |
+| 227 | The unknown cribs east of front doors, with lock           |
+| 228 | The unknown cribs east of front doors, with locks          |
+| 229 | The unknown cribs east of front doors, with the lock       |
+| 230 | The unknown cribs east of front doors, with the locks      |
+| 231 | The unknown cribs east of the front door with a lock       |
+| 232 | The unknown cribs east of the front door with a lock.      |
+| 233 | The unknown cribs east of the front door with lock         |
+| 234 | The unknown cribs east of the front door with lock.        |
+| 235 | The unknown cribs east of the front door with locks        |
+| 236 | The unknown cribs east of the front door with locks.       |
+| 237 | The unknown cribs east of the front door with the lock     |
+| 238 | The unknown cribs east of the front door with the lock.    |
+| 239 | The unknown cribs east of the front door with the locks    |
+| 240 | The unknown cribs east of the front door with the locks.   |
+| 241 | The unknown cribs east of the front door, with a lock      |
+| 242 | The unknown cribs east of the front door, with lock        |
+| 243 | The unknown cribs east of the front door, with locks       |
+| 244 | The unknown cribs east of the front door, with the lock    |
+| 245 | The unknown cribs east of the front door, with the locks   |
+| 246 | The unknown cribs east of the front doors with a lock      |
+| 247 | The unknown cribs east of the front doors with a lock.     |
+| 248 | The unknown cribs east of the front doors with lock        |
+| 249 | The unknown cribs east of the front doors with lock.       |
+| 250 | The unknown cribs east of the front doors with locks       |
+| 251 | The unknown cribs east of the front doors with locks.      |
+| 252 | The unknown cribs east of the front doors with the lock    |
+| 253 | The unknown cribs east of the front doors with the lock.   |
+| 254 | The unknown cribs east of the front doors with the locks   |
+| 255 | The unknown cribs east of the front doors with the locks.  |
+| 256 | The unknown cribs east of the front doors, with a lock     |
+| 257 | The unknown cribs east of the front doors, with lock       |
+| 258 | The unknown cribs east of the front doors, with locks      |
+| 259 | The unknown cribs east of the front doors, with the lock   |
+| 260 | The unknown cribs east of the front doors, with the locks  |
+| 261 | The unknown cribs, east of a front door with a lock        |
+| 262 | The unknown cribs, east of a front door with lock          |
+| 263 | The unknown cribs, east of a front door with locks         |
+| 264 | The unknown cribs, east of a front door with the lock      |
+| 265 | The unknown cribs, east of a front door with the locks     |
+| 266 | The unknown cribs, east of a front door, with a lock       |
+| 267 | The unknown cribs, east of a front door, with lock         |
+| 268 | The unknown cribs, east of a front door, with locks        |
+| 269 | The unknown cribs, east of a front door, with the lock     |
+| 270 | The unknown cribs, east of a front door, with the locks    |
+| 271 | The unknown cribs, east of front doors with a lock         |
+| 272 | The unknown cribs, east of front doors with lock           |
+| 273 | The unknown cribs, east of front doors with locks          |
+| 274 | The unknown cribs, east of front doors with the lock       |
+| 275 | The unknown cribs, east of front doors with the locks      |
+| 276 | The unknown cribs, east of front doors, with a lock        |
+| 277 | The unknown cribs, east of front doors, with lock          |
+| 278 | The unknown cribs, east of front doors, with locks         |
+| 279 | The unknown cribs, east of front doors, with the lock      |
+| 280 | The unknown cribs, east of front doors, with the locks     |
+| 281 | The unknown cribs, east of the front door with a lock      |
+| 282 | The unknown cribs, east of the front door with lock        |
+| 283 | The unknown cribs, east of the front door with locks       |
+| 284 | The unknown cribs, east of the front door with the lock    |
+| 285 | The unknown cribs, east of the front door with the locks   |
+| 286 | The unknown cribs, east of the front door, with a lock     |
+| 287 | The unknown cribs, east of the front door, with lock       |
+| 288 | The unknown cribs, east of the front door, with locks      |
+| 289 | The unknown cribs, east of the front door, with the lock   |
+| 290 | The unknown cribs, east of the front door, with the locks  |
+| 291 | The unknown cribs, east of the front doors with a lock     |
+| 292 | The unknown cribs, east of the front doors with lock       |
+| 293 | The unknown cribs, east of the front doors with locks      |
+| 294 | The unknown cribs, east of the front doors with the lock   |
+| 295 | The unknown cribs, east of the front doors with the locks  |
+| 296 | The unknown cribs, east of the front doors, with a lock    |
+| 297 | The unknown cribs, east of the front doors, with lock      |
+| 298 | The unknown cribs, east of the front doors, with locks     |
+| 299 | The unknown cribs, east of the front doors, with the lock  |
+| 300 | The unknown cribs, east of the front doors, with the locks |
+| 301 | Unknown crib east of a front door with a lock              |
+| 302 | Unknown crib east of a front door with a lock.             |
+| 303 | Unknown crib east of a front door with lock                |
+| 304 | Unknown crib east of a front door with lock.               |
+| 305 | Unknown crib east of a front door with locks               |
+| 306 | Unknown crib east of a front door with locks.              |
+| 307 | Unknown crib east of a front door with the lock            |
+| 308 | Unknown crib east of a front door with the lock.           |
+| 309 | Unknown crib east of a front door with the locks           |
+| 310 | Unknown crib east of a front door with the locks.          |
+| 311 | Unknown crib east of a front door, with a lock             |
+| 312 | Unknown crib east of a front door, with lock               |
+| 313 | Unknown crib east of a front door, with locks              |
+| 314 | Unknown crib east of a front door, with the lock           |
+| 315 | Unknown crib east of a front door, with the locks          |
+| 316 | Unknown crib east of front doors with a lock               |
+| 317 | Unknown crib east of front doors with a lock.              |
+| 318 | Unknown crib east of front doors with lock                 |
+| 319 | Unknown crib east of front doors with lock.                |
+| 320 | Unknown crib east of front doors with locks                |
+| 321 | Unknown crib east of front doors with locks.               |
+| 322 | Unknown crib east of front doors with the lock             |
+| 323 | Unknown crib east of front doors with the lock.            |
+| 324 | Unknown crib east of front doors with the locks            |
+| 325 | Unknown crib east of front doors with the locks.           |
+| 326 | Unknown crib east of front doors, with a lock              |
+| 327 | Unknown crib east of front doors, with lock                |
+| 328 | Unknown crib east of front doors, with locks               |
+| 329 | Unknown crib east of front doors, with the lock            |
+| 330 | Unknown crib east of front doors, with the locks           |
+| 331 | Unknown crib east of the front door with a lock            |
+| 332 | Unknown crib east of the front door with a lock.           |
+| 333 | Unknown crib east of the front door with lock              |
+| 334 | Unknown crib east of the front door with lock.             |
+| 335 | Unknown crib east of the front door with locks             |
+| 336 | Unknown crib east of the front door with locks.            |
+| 337 | Unknown crib east of the front door with the lock          |
+| 338 | Unknown crib east of the front door with the lock.         |
+| 339 | Unknown crib east of the front door with the locks         |
+| 340 | Unknown crib east of the front door with the locks.        |
+| 341 | Unknown crib east of the front door, with a lock           |
+| 342 | Unknown crib east of the front door, with lock             |
+| 343 | Unknown crib east of the front door, with locks            |
+| 344 | Unknown crib east of the front door, with the lock         |
+| 345 | Unknown crib east of the front door, with the locks        |
+| 346 | Unknown crib east of the front doors with a lock           |
+| 347 | Unknown crib east of the front doors with a lock.          |
+| 348 | Unknown crib east of the front doors with lock             |
+| 349 | Unknown crib east of the front doors with lock.            |
+| 350 | Unknown crib east of the front doors with locks            |
+| 351 | Unknown crib east of the front doors with locks.           |
+| 352 | Unknown crib east of the front doors with the lock         |
+| 353 | Unknown crib east of the front doors with the lock.        |
+| 354 | Unknown crib east of the front doors with the locks        |
+| 355 | Unknown crib east of the front doors with the locks.       |
+| 356 | Unknown crib east of the front doors, with a lock          |
+| 357 | Unknown crib east of the front doors, with lock            |
+| 358 | Unknown crib east of the front doors, with locks           |
+| 359 | Unknown crib east of the front doors, with the lock        |
+| 360 | Unknown crib east of the front doors, with the locks       |
+| 361 | Unknown crib, east of a front door with a lock             |
+| 362 | Unknown crib, east of a front door with lock               |
+| 363 | Unknown crib, east of a front door with locks              |
+| 364 | Unknown crib, east of a front door with the lock           |
+| 365 | Unknown crib, east of a front door with the locks          |
+| 366 | Unknown crib, east of a front door, with a lock            |
+| 367 | Unknown crib, east of a front door, with lock              |
+| 368 | Unknown crib, east of a front door, with locks             |
+| 369 | Unknown crib, east of a front door, with the lock          |
+| 370 | Unknown crib, east of a front door, with the locks         |
+| 371 | Unknown crib, east of front doors with a lock              |
+| 372 | Unknown crib, east of front doors with lock                |
+| 373 | Unknown crib, east of front doors with locks               |
+| 374 | Unknown crib, east of front doors with the lock            |
+| 375 | Unknown crib, east of front doors with the locks           |
+| 376 | Unknown crib, east of front doors, with a lock             |
+| 377 | Unknown crib, east of front doors, with lock               |
+| 378 | Unknown crib, east of front doors, with locks              |
+| 379 | Unknown crib, east of front doors, with the lock           |
+| 380 | Unknown crib, east of front doors, with the locks          |
+| 381 | Unknown crib, east of the front door with a lock           |
+| 382 | Unknown crib, east of the front door with lock             |
+| 383 | Unknown crib, east of the front door with locks            |
+| 384 | Unknown crib, east of the front door with the lock         |
+| 385 | Unknown crib, east of the front door with the locks        |
+| 386 | Unknown crib, east of the front door, with a lock          |
+| 387 | Unknown crib, east of the front door, with lock            |
+| 388 | Unknown crib, east of the front door, with locks           |
+| 389 | Unknown crib, east of the front door, with the lock        |
+| 390 | Unknown crib, east of the front door, with the locks       |
+| 391 | Unknown crib, east of the front doors with a lock          |
+| 392 | Unknown crib, east of the front doors with lock            |
+| 393 | Unknown crib, east of the front doors with locks           |
+| 394 | Unknown crib, east of the front doors with the lock        |
+| 395 | Unknown crib, east of the front doors with the locks       |
+| 396 | Unknown crib, east of the front doors, with a lock         |
+| 397 | Unknown crib, east of the front doors, with lock           |
+| 398 | Unknown crib, east of the front doors, with locks          |
+| 399 | Unknown crib, east of the front doors, with the lock       |
+| 400 | Unknown crib, east of the front doors, with the locks      |
+| 401 | Unknown cribs east of a front door with a lock             |
+| 402 | Unknown cribs east of a front door with a lock.            |
+| 403 | Unknown cribs east of a front door with lock               |
+| 404 | Unknown cribs east of a front door with lock.              |
+| 405 | Unknown cribs east of a front door with locks              |
+| 406 | Unknown cribs east of a front door with locks.             |
+| 407 | Unknown cribs east of a front door with the lock           |
+| 408 | Unknown cribs east of a front door with the lock.          |
+| 409 | Unknown cribs east of a front door with the locks          |
+| 410 | Unknown cribs east of a front door with the locks.         |
+| 411 | Unknown cribs east of a front door, with a lock            |
+| 412 | Unknown cribs east of a front door, with lock              |
+| 413 | Unknown cribs east of a front door, with locks             |
+| 414 | Unknown cribs east of a front door, with the lock          |
+| 415 | Unknown cribs east of a front door, with the locks         |
+| 416 | Unknown cribs east of front doors with a lock              |
+| 417 | Unknown cribs east of front doors with a lock.             |
+| 418 | Unknown cribs east of front doors with lock                |
+| 419 | Unknown cribs east of front doors with lock.               |
+| 420 | Unknown cribs east of front doors with locks               |
+| 421 | Unknown cribs east of front doors with locks.              |
+| 422 | Unknown cribs east of front doors with the lock            |
+| 423 | Unknown cribs east of front doors with the lock.           |
+| 424 | Unknown cribs east of front doors with the locks           |
+| 425 | Unknown cribs east of front doors with the locks.          |
+| 426 | Unknown cribs east of front doors, with a lock             |
+| 427 | Unknown cribs east of front doors, with lock               |
+| 428 | Unknown cribs east of front doors, with locks              |
+| 429 | Unknown cribs east of front doors, with the lock           |
+| 430 | Unknown cribs east of front doors, with the locks          |
+| 431 | Unknown cribs east of the front door with a lock           |
+| 432 | Unknown cribs east of the front door with a lock.          |
+| 433 | Unknown cribs east of the front door with lock             |
+| 434 | Unknown cribs east of the front door with lock.            |
+| 435 | Unknown cribs east of the front door with locks            |
+| 436 | Unknown cribs east of the front door with locks.           |
+| 437 | Unknown cribs east of the front door with the lock         |
+| 438 | Unknown cribs east of the front door with the lock.        |
+| 439 | Unknown cribs east of the front door with the locks        |
+| 440 | Unknown cribs east of the front door with the locks.       |
+| 441 | Unknown cribs east of the front door, with a lock          |
+| 442 | Unknown cribs east of the front door, with lock            |
+| 443 | Unknown cribs east of the front door, with locks           |
+| 444 | Unknown cribs east of the front door, with the lock        |
+| 445 | Unknown cribs east of the front door, with the locks       |
+| 446 | Unknown cribs east of the front doors with a lock          |
+| 447 | Unknown cribs east of the front doors with a lock.         |
+| 448 | Unknown cribs east of the front doors with lock            |
+| 449 | Unknown cribs east of the front doors with lock.           |
+| 450 | Unknown cribs east of the front doors with locks           |
+| 451 | Unknown cribs east of the front doors with locks.          |
+| 452 | Unknown cribs east of the front doors with the lock        |
+| 453 | Unknown cribs east of the front doors with the lock.       |
+| 454 | Unknown cribs east of the front doors with the locks       |
+| 455 | Unknown cribs east of the front doors with the locks.      |
+| 456 | Unknown cribs east of the front doors, with a lock         |
+| 457 | Unknown cribs east of the front doors, with lock           |
+| 458 | Unknown cribs east of the front doors, with locks          |
+| 459 | Unknown cribs east of the front doors, with the lock       |
+| 460 | Unknown cribs east of the front doors, with the locks      |
+| 461 | Unknown cribs, east of a front door with a lock            |
+| 462 | Unknown cribs, east of a front door with lock              |
+| 463 | Unknown cribs, east of a front door with locks             |
+| 464 | Unknown cribs, east of a front door with the lock          |
+| 465 | Unknown cribs, east of a front door with the locks         |
+| 466 | Unknown cribs, east of a front door, with a lock           |
+| 467 | Unknown cribs, east of a front door, with lock             |
+| 468 | Unknown cribs, east of a front door, with locks            |
+| 469 | Unknown cribs, east of a front door, with the lock         |
+| 470 | Unknown cribs, east of a front door, with the locks        |
+| 471 | Unknown cribs, east of front doors with a lock             |
+| 472 | Unknown cribs, east of front doors with lock               |
+| 473 | Unknown cribs, east of front doors with locks              |
+| 474 | Unknown cribs, east of front doors with the lock           |
+| 475 | Unknown cribs, east of front doors with the locks          |
+| 476 | Unknown cribs, east of front doors, with a lock            |
+| 477 | Unknown cribs, east of front doors, with lock              |
+| 478 | Unknown cribs, east of front doors, with locks             |
+| 479 | Unknown cribs, east of front doors, with the lock          |
+| 480 | Unknown cribs, east of front doors, with the locks         |
+| 481 | Unknown cribs, east of the front door with a lock          |
+| 482 | Unknown cribs, east of the front door with lock            |
+| 483 | Unknown cribs, east of the front door with locks           |
+| 484 | Unknown cribs, east of the front door with the lock        |
+| 485 | Unknown cribs, east of the front door with the locks       |
+| 486 | Unknown cribs, east of the front door, with a lock         |
+| 487 | Unknown cribs, east of the front door, with lock           |
+| 488 | Unknown cribs, east of the front door, with locks          |
+| 489 | Unknown cribs, east of the front door, with the lock       |
+| 490 | Unknown cribs, east of the front door, with the locks      |
+| 491 | Unknown cribs, east of the front doors with a lock         |
+| 492 | Unknown cribs, east of the front doors with lock           |
+| 493 | Unknown cribs, east of the front doors with locks          |
+| 494 | Unknown cribs, east of the front doors with the lock       |
+| 495 | Unknown cribs, east of the front doors with the locks      |
+| 496 | Unknown cribs, east of the front doors, with a lock        |
+| 497 | Unknown cribs, east of the front doors, with lock          |
+| 498 | Unknown cribs, east of the front doors, with locks         |
+| 499 | Unknown cribs, east of the front doors, with the lock      |
+| 500 | Unknown cribs, east of the front doors, with the locks     |
++-----+------------------------------------------------------------+
+

@@ -1,0 +1,1356 @@
+GRAPH NAME: idBedroomToBathroomDoor1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1102  |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           GOLD OUTPUTS                                          |
++------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                        | Generated? |
++------------------------------------------------------------------------------------+------------+
+| the open door from the bedroom to the bathroom north of the closed medicine drawer | True       |
++------------------------------------------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------+
+|                                          NODE METRICS                                          |
++--------------------------+--------------+---------------+------------------+-------------------+
+| Node                     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------------------+--------------+---------------+------------------+-------------------+
+| idBedroomToBathroomDoor1 | True         | True          | Covered          | Included          |
+| open                     | True         | True          | Covered          | Included          |
+| idMedDrawer1             | True         | True          | Covered          | Included          |
+| closed                   | True         | True          | Covered          | Included          |
++--------------------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                        EDGE METRICS                                                                       |
++-------------------------------------------+--------------------------+--------------+--------------+---------------+------------------+-------------------+
+| Edge                                      | Parent                   | Child        | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-------------------------------------------+--------------------------+--------------+--------------+---------------+------------------+-------------------+
+| idBedroomToBathroomDoor1_prop_idOpenState | idBedroomToBathroomDoor1 | open         | True         | True          | Covered          | Included          |
+| isNorthOf                                 | idBedroomToBathroomDoor1 | idMedDrawer1 | True         | True          | Covered          | Included          |
+| idMedDrawer1_prop_idOpenState             | idMedDrawer1             | closed       | True         | True          | Covered          | Included          |
++-------------------------------------------+--------------------------+--------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1648                                                                     |
+|               |   INDEX: x1647                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1699 ARG0: e1696 ARG1: u1697 ARG2: x1698 ]           |
+|               |           [ def_implicit_q LBL: h1710 ARG0: x1707 RSTR: h1708 BODY: h1709 ]      |
+|               |           [ _north_a_1 LBL: h1695 ARG0: i1692 ARG1: x1693 ARG2: u1694 ]          |
+|               |           [ def_udef_a_q LBL: h1705 ARG0: x1702 RSTR: h1703 BODY: h1704 ]        |
+|               |           [ _closed_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                     |
+|               |           [ compound LBL: h1688 ARG0: e1685 [ e PROG: - ] ARG1: u1686 ARG2:      |
+|               | u1687 ]                                                                          |
+|               |           [ udef_q LBL: h1683 ARG0: x1680 RSTR: h1681 BODY: h1682 ]              |
+|               |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|               |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ]                    |
+|               |           [ place_n LBL: h1701 ARG0: x1700 ]                                     |
+|               |           [ _open_a_to LBL: h1674 ARG0: e1671 ARG1: u1672 ARG2: u1673 ]          |
+|               |           [ _to_p LBL: h1665 ARG0: e1662 ARG1: u1663 ARG2: i1664 ]               |
+|               |           [ def_udef_a_q LBL: h1669 ARG0: x1666 RSTR: h1667 BODY: h1668 ]        |
+|               |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|               |           [ _from_p LBL: h1654 ARG0: e1651 ARG1: u1652 ARG2: u1653 ]             |
+|               |           [ def_udef_a_q LBL: h1658 ARG0: x1655 RSTR: h1656 BODY: h1657 ]        |
+|               |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|               |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|               |   HCONS: < h1681 qeq h1679 h1703 qeq h1677 h1708 qeq h1701 h1667 qeq h1661 h1656 |
+|               | qeq h1650 >                                                                      |
+|               |   EQS: < x1680 eq x1678 h1688 eq h1684 u1687 eq x1680 h1688 eq h1677 u1686 eq    |
+|               | x1675 h1691 eq h1677 u1690 eq x1675 x1702 eq x1675 h1695 eq h1706 u1694 eq x1702 |
+|               | h1695 eq h1701 x1693 eq x1700 x1707 eq x1700 h1699 eq h1711 x1698 eq x1707 x1666 |
+|               | eq x1660 h1665 eq h1670 i1664 eq x1666 x1655 eq x1649 h1654 eq h1659 u1653 eq    |
+|               | x1655 h1654 eq h1648 u1652 eq x1647 h1665 eq h1648 u1663 eq x1647 h1674 eq h1648 |
+|               | u1672 eq x1647 h1699 eq h1648 u1697 eq x1647 > ]                                 |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1648                                                                     |
+|               |   INDEX: x1647                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1648 ARG0: e1696 ARG1: x1647 ARG2: x1693 ]           |
+|               |           [ def_implicit_q LBL: h1710 ARG0: x1693 RSTR: h1708 BODY: h1709 ]      |
+|               |           [ _north_a_1 LBL: h1695 ARG0: i1692 ARG1: x1693 ARG2: x1675 ]          |
+|               |           [ def_udef_a_q LBL: h1705 ARG0: x1675 RSTR: h1703 BODY: h1704 ]        |
+|               |           [ _closed_a_1 LBL: h1677 ARG0: e1689 ARG1: x1675 ]                     |
+|               |           [ compound LBL: h1677 ARG0: e1685 [ e PROG: - ] ARG1: x1675 ARG2:      |
+|               | x1678 ]                                                                          |
+|               |           [ udef_q LBL: h1683 ARG0: x1678 RSTR: h1681 BODY: h1682 ]              |
+|               |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|               |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ]                    |
+|               |           [ place_n LBL: h1695 ARG0: x1693 ]                                     |
+|               |           [ _open_a_to LBL: h1648 ARG0: e1671 ARG1: x1647 ARG2: u1673 ]          |
+|               |           [ _to_p LBL: h1648 ARG0: e1662 ARG1: x1647 ARG2: x1660 ]               |
+|               |           [ def_udef_a_q LBL: h1669 ARG0: x1660 RSTR: h1667 BODY: h1668 ]        |
+|               |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|               |           [ _from_p LBL: h1648 ARG0: e1651 ARG1: x1647 ARG2: x1649 ]             |
+|               |           [ def_udef_a_q LBL: h1658 ARG0: x1649 RSTR: h1656 BODY: h1657 ]        |
+|               |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|               |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|               |   HCONS: < h1681 qeq h1679 h1703 qeq h1677 h1708 qeq h1695 h1667 qeq h1661 h1656 |
+|               | qeq h1650 > ]                                                                    |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1720                                                                     |
+|               |   INDEX: e1717                                                                   |
+|               |   RELS: < [ unknown LBL: h1716 ARG: x1647 ARG0: e1717 ]                          |
+|               |           [ def_udef_a_q LBL: h1715 ARG0: x1647 RSTR: h1713 BODY: h1714 ]        |
+|               |           [ loc_nonsp LBL: h1648 ARG0: e1696 ARG1: x1647 ARG2: x1693 ]           |
+|               |           [ def_implicit_q LBL: h1710 ARG0: x1693 RSTR: h1708 BODY: h1709 ]      |
+|               |           [ _north_a_1 LBL: h1695 ARG0: i1692 ARG1: x1693 ARG2: x1675 ]          |
+|               |           [ def_udef_a_q LBL: h1705 ARG0: x1675 RSTR: h1703 BODY: h1704 ]        |
+|               |           [ _closed_a_1 LBL: h1677 ARG0: e1689 ARG1: x1675 ]                     |
+|               |           [ compound LBL: h1677 ARG0: e1685 [ e PROG: - ] ARG1: x1675 ARG2:      |
+|               | x1678 ]                                                                          |
+|               |           [ udef_q LBL: h1683 ARG0: x1678 RSTR: h1681 BODY: h1682 ]              |
+|               |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|               |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ]                    |
+|               |           [ place_n LBL: h1695 ARG0: x1693 ]                                     |
+|               |           [ _open_a_to LBL: h1648 ARG0: e1671 ARG1: x1647 ARG2: u1673 ]          |
+|               |           [ _to_p LBL: h1648 ARG0: e1662 ARG1: x1647 ARG2: x1660 ]               |
+|               |           [ def_udef_a_q LBL: h1669 ARG0: x1660 RSTR: h1667 BODY: h1668 ]        |
+|               |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|               |           [ _from_p LBL: h1648 ARG0: e1651 ARG1: x1647 ARG2: x1649 ]             |
+|               |           [ def_udef_a_q LBL: h1658 ARG0: x1649 RSTR: h1656 BODY: h1657 ]        |
+|               |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|               |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|               |   HCONS: < h1681 qeq h1679 h1703 qeq h1677 h1708 qeq h1695 h1667 qeq h1661 h1656 |
+|               | qeq h1650 h1713 qeq h1648 h1720 qeq h1716 > ]                                    |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                |
++--------------------------+----------------------------------------------------------------------------------+
+| Node                     | Generated SEMENT                                                                 |
++--------------------------+----------------------------------------------------------------------------------+
+| idBedroomToBathroomDoor1 | [ TOP: h1648                                                                     |
+|                          |   INDEX: x1647                                                                   |
+|                          |   RELS: < [ _to_p LBL: h1665 ARG0: e1662 ARG1: u1663 ARG2: i1664 ]               |
+|                          |           [ def_udef_a_q LBL: h1669 ARG0: x1666 RSTR: h1667 BODY: h1668 ]        |
+|                          |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|                          |           [ _from_p LBL: h1654 ARG0: e1651 ARG1: u1652 ARG2: u1653 ]             |
+|                          |           [ def_udef_a_q LBL: h1658 ARG0: x1655 RSTR: h1656 BODY: h1657 ]        |
+|                          |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|                          |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|                          |   HCONS: < h1667 qeq h1661 h1656 qeq h1650 >                                     |
+|                          |   EQS: < x1666 eq x1660 h1665 eq h1670 i1664 eq x1666 x1655 eq x1649 h1654 eq    |
+|                          | h1659 u1653 eq x1655 h1654 eq h1648 u1652 eq x1647 h1665 eq h1648 u1663 eq x1647 |
+|                          | > ]                                                                              |
++--------------------------+----------------------------------------------------------------------------------+
+| open                     | [ TOP: h1674                                                                     |
+|                          |   INDEX: e1671                                                                   |
+|                          |   RELS: < [ _open_a_to LBL: h1674 ARG0: e1671 ARG1: u1672 ARG2: u1673 ] >        |
+|                          |   SLOTS: < ARG1: u1672 ARG2: u1673 > ]                                           |
++--------------------------+----------------------------------------------------------------------------------+
+| idMedDrawer1             | [ TOP: h1677                                                                     |
+|                          |   INDEX: x1675                                                                   |
+|                          |   RELS: < [ compound LBL: h1688 ARG0: e1685 [ e PROG: - ] ARG1: u1686 ARG2:      |
+|                          | u1687 ]                                                                          |
+|                          |           [ udef_q LBL: h1683 ARG0: x1680 RSTR: h1681 BODY: h1682 ]              |
+|                          |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|                          |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ] >                  |
+|                          |   HCONS: < h1681 qeq h1679 >                                                     |
+|                          |   EQS: < x1680 eq x1678 h1688 eq h1684 u1687 eq x1680 h1688 eq h1677 u1686 eq    |
+|                          | x1675 >                                                                          |
+|                          |   SLOTS: < ARG1: i1676 > ]                                                       |
++--------------------------+----------------------------------------------------------------------------------+
+| closed                   | [ TOP: h1691                                                                     |
+|                          |   INDEX: e1689                                                                   |
+|                          |   RELS: < [ _closed_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ] >                   |
+|                          |   SLOTS: < ARG1: u1690 > ]                                                       |
++--------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                              EDGE SEMENTS                                                                              |
++-------------------------------------------+--------------------------+--------------+----------------------------------------------------------------------------------+
+| Edge                                      | Parent                   | Child        | Generated SEMENT                                                                 |
++-------------------------------------------+--------------------------+--------------+----------------------------------------------------------------------------------+
+| idBedroomToBathroomDoor1_prop_idOpenState | idBedroomToBathroomDoor1 | open         | [ TOP: h1648                                                                     |
+|                                           |                          |              |   INDEX: x1647                                                                   |
+|                                           |                          |              |   RELS: < [ _open_a_to LBL: h1674 ARG0: e1671 ARG1: u1672 ARG2: u1673 ]          |
+|                                           |                          |              |           [ _to_p LBL: h1665 ARG0: e1662 ARG1: u1663 ARG2: i1664 ]               |
+|                                           |                          |              |           [ def_udef_a_q LBL: h1669 ARG0: x1666 RSTR: h1667 BODY: h1668 ]        |
+|                                           |                          |              |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|                                           |                          |              |           [ _from_p LBL: h1654 ARG0: e1651 ARG1: u1652 ARG2: u1653 ]             |
+|                                           |                          |              |           [ def_udef_a_q LBL: h1658 ARG0: x1655 RSTR: h1656 BODY: h1657 ]        |
+|                                           |                          |              |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|                                           |                          |              |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|                                           |                          |              |   HCONS: < h1667 qeq h1661 h1656 qeq h1650 >                                     |
+|                                           |                          |              |   EQS: < x1666 eq x1660 h1665 eq h1670 i1664 eq x1666 x1655 eq x1649 h1654 eq    |
+|                                           |                          |              | h1659 u1653 eq x1655 h1654 eq h1648 u1652 eq x1647 h1665 eq h1648 u1663 eq x1647 |
+|                                           |                          |              | h1674 eq h1648 u1672 eq x1647 > ]                                                |
++-------------------------------------------+--------------------------+--------------+----------------------------------------------------------------------------------+
+| isNorthOf                                 | idBedroomToBathroomDoor1 | idMedDrawer1 | [ TOP: h1648                                                                     |
+|                                           |                          |              |   INDEX: x1647                                                                   |
+|                                           |                          |              |   RELS: < [ loc_nonsp LBL: h1699 ARG0: e1696 ARG1: u1697 ARG2: x1698 ]           |
+|                                           |                          |              |           [ def_implicit_q LBL: h1710 ARG0: x1707 RSTR: h1708 BODY: h1709 ]      |
+|                                           |                          |              |           [ _north_a_1 LBL: h1695 ARG0: i1692 ARG1: x1693 ARG2: u1694 ]          |
+|                                           |                          |              |           [ def_udef_a_q LBL: h1705 ARG0: x1702 RSTR: h1703 BODY: h1704 ]        |
+|                                           |                          |              |           [ _closed_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                     |
+|                                           |                          |              |           [ compound LBL: h1688 ARG0: e1685 [ e PROG: - ] ARG1: u1686 ARG2:      |
+|                                           |                          |              | u1687 ]                                                                          |
+|                                           |                          |              |           [ udef_q LBL: h1683 ARG0: x1680 RSTR: h1681 BODY: h1682 ]              |
+|                                           |                          |              |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|                                           |                          |              |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ]                    |
+|                                           |                          |              |           [ place_n LBL: h1701 ARG0: x1700 ]                                     |
+|                                           |                          |              |           [ _open_a_to LBL: h1674 ARG0: e1671 ARG1: u1672 ARG2: u1673 ]          |
+|                                           |                          |              |           [ _to_p LBL: h1665 ARG0: e1662 ARG1: u1663 ARG2: i1664 ]               |
+|                                           |                          |              |           [ def_udef_a_q LBL: h1669 ARG0: x1666 RSTR: h1667 BODY: h1668 ]        |
+|                                           |                          |              |           [ _bathroom_n_1 LBL: h1661 ARG0: x1660 ]                               |
+|                                           |                          |              |           [ _from_p LBL: h1654 ARG0: e1651 ARG1: u1652 ARG2: u1653 ]             |
+|                                           |                          |              |           [ def_udef_a_q LBL: h1658 ARG0: x1655 RSTR: h1656 BODY: h1657 ]        |
+|                                           |                          |              |           [ _bedroom_n_1 LBL: h1650 ARG0: x1649 ]                                |
+|                                           |                          |              |           [ _door_n_1 LBL: h1648 ARG0: x1647 ] >                                 |
+|                                           |                          |              |   HCONS: < h1681 qeq h1679 h1703 qeq h1677 h1708 qeq h1701 h1667 qeq h1661 h1656 |
+|                                           |                          |              | qeq h1650 >                                                                      |
+|                                           |                          |              |   EQS: < x1680 eq x1678 h1688 eq h1684 u1687 eq x1680 h1688 eq h1677 u1686 eq    |
+|                                           |                          |              | x1675 h1691 eq h1677 u1690 eq x1675 x1702 eq x1675 h1695 eq h1706 u1694 eq x1702 |
+|                                           |                          |              | h1695 eq h1701 x1693 eq x1700 x1707 eq x1700 h1699 eq h1711 x1698 eq x1707 x1666 |
+|                                           |                          |              | eq x1660 h1665 eq h1670 i1664 eq x1666 x1655 eq x1649 h1654 eq h1659 u1653 eq    |
+|                                           |                          |              | x1655 h1654 eq h1648 u1652 eq x1647 h1665 eq h1648 u1663 eq x1647 h1674 eq h1648 |
+|                                           |                          |              | u1672 eq x1647 h1699 eq h1648 u1697 eq x1647 > ]                                 |
++-------------------------------------------+--------------------------+--------------+----------------------------------------------------------------------------------+
+| idMedDrawer1_prop_idOpenState             | idMedDrawer1             | closed       | [ TOP: h1677                                                                     |
+|                                           |                          |              |   INDEX: x1675                                                                   |
+|                                           |                          |              |   RELS: < [ _closed_a_1 LBL: h1691 ARG0: e1689 ARG1: u1690 ]                     |
+|                                           |                          |              |           [ compound LBL: h1688 ARG0: e1685 [ e PROG: - ] ARG1: u1686 ARG2:      |
+|                                           |                          |              | u1687 ]                                                                          |
+|                                           |                          |              |           [ udef_q LBL: h1683 ARG0: x1680 RSTR: h1681 BODY: h1682 ]              |
+|                                           |                          |              |           [ _medicine_n_1 LBL: h1679 ARG0: x1678 ]                               |
+|                                           |                          |              |           [ _drawer_n_of LBL: h1677 ARG0: x1675 ARG1: i1676 ] >                  |
+|                                           |                          |              |   HCONS: < h1681 qeq h1679 >                                                     |
+|                                           |                          |              |   EQS: < x1680 eq x1678 h1688 eq h1684 u1687 eq x1680 h1688 eq h1677 u1686 eq    |
+|                                           |                          |              | x1675 h1691 eq h1677 u1690 eq x1675 >                                            |
+|                                           |                          |              |   SLOTS: < ARG1: i1676 > ]                                                       |
++-------------------------------------------+--------------------------+--------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------+
+|                                     GENERATED ENGLISH TEXT                                     |
++------+-----------------------------------------------------------------------------------------+
+| #    | Generated Text                                                                          |
++------+-----------------------------------------------------------------------------------------+
+| 1    | An open door from a bedroom north of a closed medicine drawer to a bathroom             |
+| 2    | An open door from a bedroom north of a closed medicine drawer to bathrooms              |
+| 3    | An open door from a bedroom north of a closed medicine drawer to the bathroom           |
+| 4    | An open door from a bedroom north of a closed medicine drawer to the bathrooms          |
+| 5    | An open door from a bedroom north of a closed medicine drawer to the bathrooms.         |
+| 6    | An open door from a bedroom north of the closed medicine drawer to a bathroom           |
+| 7    | An open door from a bedroom north of the closed medicine drawer to the bathroom         |
+| 8    | An open door from a bedroom north of the closed medicine drawer to the bathrooms        |
+| 9    | An open door from a bedroom north of the closed medicine drawer to the bathrooms.       |
+| 10   | An open door from a bedroom north of the closed medicine drawers to a bathroom          |
+| 11   | An open door from a bedroom north of the closed medicine drawers to the bathroom        |
+| 12   | An open door from a bedroom north of the closed medicine drawers to the bathrooms       |
+| 13   | An open door from a bedroom to a bathroom north of a closed medicine drawer             |
+| 14   | An open door from a bedroom to the bathroom north of a closed medicine drawer           |
+| 15   | An open door from a bedroom to the bathroom north of a closed medicine drawer.          |
+| 16   | An open door from a bedroom to the bathroom north of the closed medicine drawer         |
+| 17   | An open door from a bedroom to the bathroom north of the closed medicine drawers        |
+| 18   | An open door from bedrooms north of a closed medicine drawer to a bathroom              |
+| 19   | An open door from bedrooms north of a closed medicine drawer to bathrooms               |
+| 20   | An open door from bedrooms north of a closed medicine drawer to the bathroom            |
+| 21   | An open door from bedrooms north of a closed medicine drawer to the bathrooms           |
+| 22   | An open door from bedrooms north of a closed medicine drawer to the bathrooms.          |
+| 23   | An open door from bedrooms north of closed medicine drawers to the bathrooms            |
+| 24   | An open door from bedrooms north of the closed medicine drawer to a bathroom            |
+| 25   | An open door from bedrooms north of the closed medicine drawer to bathrooms             |
+| 26   | An open door from bedrooms north of the closed medicine drawer to the bathroom          |
+| 27   | An open door from bedrooms north of the closed medicine drawer to the bathrooms         |
+| 28   | An open door from bedrooms north of the closed medicine drawer to the bathrooms.        |
+| 29   | An open door from bedrooms north of the closed medicine drawers to a bathroom           |
+| 30   | An open door from bedrooms north of the closed medicine drawers to bathrooms            |
+| 31   | An open door from bedrooms north of the closed medicine drawers to the bathroom         |
+| 32   | An open door from bedrooms north of the closed medicine drawers to the bathrooms        |
+| 33   | An open door from bedrooms north of the closed medicine drawers to the bathrooms.       |
+| 34   | An open door from bedrooms to a bathroom north of a closed medicine drawer              |
+| 35   | An open door from bedrooms to a bathroom north of the closed medicine drawer            |
+| 36   | An open door from bedrooms to the bathroom north of a closed medicine drawer            |
+| 37   | An open door from bedrooms to the bathroom north of a closed medicine drawer.           |
+| 38   | An open door from bedrooms to the bathroom north of the closed medicine drawer          |
+| 39   | An open door from bedrooms to the bathroom north of the closed medicine drawer.         |
+| 40   | An open door from bedrooms to the bathroom north of the closed medicine drawers         |
+| 41   | An open door from bedrooms to the bathroom north of the closed medicine drawers.        |
+| 42   | An open door from bedrooms to the bathrooms north of a closed medicine drawer           |
+| 43   | An open door from the bedroom north of a closed medicine drawer to a bathroom           |
+| 44   | An open door from the bedroom north of a closed medicine drawer to a bathroom.          |
+| 45   | An open door from the bedroom north of a closed medicine drawer to bathrooms            |
+| 46   | An open door from the bedroom north of a closed medicine drawer to bathrooms.           |
+| 47   | An open door from the bedroom north of a closed medicine drawer to the bathroom         |
+| 48   | An open door from the bedroom north of a closed medicine drawer to the bathroom.        |
+| 49   | An open door from the bedroom north of a closed medicine drawer to the bathrooms        |
+| 50   | An open door from the bedroom north of a closed medicine drawer to the bathrooms.       |
+| 51   | An open door from the bedroom north of closed medicine drawers to the bathroom          |
+| 52   | An open door from the bedroom north of closed medicine drawers to the bathrooms         |
+| 53   | An open door from the bedroom north of the closed medicine drawer to a bathroom         |
+| 54   | An open door from the bedroom north of the closed medicine drawer to bathrooms          |
+| 55   | An open door from the bedroom north of the closed medicine drawer to the bathroom       |
+| 56   | An open door from the bedroom north of the closed medicine drawer to the bathrooms      |
+| 57   | An open door from the bedroom north of the closed medicine drawer to the bathrooms.     |
+| 58   | An open door from the bedroom north of the closed medicine drawers to a bathroom        |
+| 59   | An open door from the bedroom north of the closed medicine drawers to bathrooms         |
+| 60   | An open door from the bedroom north of the closed medicine drawers to the bathroom      |
+| 61   | An open door from the bedroom north of the closed medicine drawers to the bathrooms     |
+| 62   | An open door from the bedroom north of the closed medicine drawers to the bathrooms.    |
+| 63   | An open door from the bedroom to a bathroom north of a closed medicine drawer           |
+| 64   | An open door from the bedroom to a bathroom north of a closed medicine drawer.          |
+| 65   | An open door from the bedroom to a bathroom north of the closed medicine drawer         |
+| 66   | An open door from the bedroom to a bathroom north of the closed medicine drawers        |
+| 67   | An open door from the bedroom to bathrooms north of a closed medicine drawer            |
+| 68   | An open door from the bedroom to bathrooms north of the closed medicine drawer          |
+| 69   | An open door from the bedroom to the bathroom north of a closed medicine drawer         |
+| 70   | An open door from the bedroom to the bathroom north of a closed medicine drawer.        |
+| 71   | An open door from the bedroom to the bathroom north of closed medicine drawers          |
+| 72   | An open door from the bedroom to the bathroom north of the closed medicine drawer       |
+| 73   | An open door from the bedroom to the bathroom north of the closed medicine drawer.      |
+| 74   | An open door from the bedroom to the bathroom north of the closed medicine drawers      |
+| 75   | An open door from the bedroom to the bathroom north of the closed medicine drawers.     |
+| 76   | An open door from the bedroom to the bathrooms north of a closed medicine drawer        |
+| 77   | An open door from the bedroom to the bathrooms north of the closed medicine drawer      |
+| 78   | An open door from the bedrooms north of a closed medicine drawer to a bathroom          |
+| 79   | An open door from the bedrooms north of a closed medicine drawer to a bathroom.         |
+| 80   | An open door from the bedrooms north of a closed medicine drawer to bathrooms           |
+| 81   | An open door from the bedrooms north of a closed medicine drawer to bathrooms.          |
+| 82   | An open door from the bedrooms north of a closed medicine drawer to the bathroom        |
+| 83   | An open door from the bedrooms north of a closed medicine drawer to the bathroom.       |
+| 84   | An open door from the bedrooms north of a closed medicine drawer to the bathrooms       |
+| 85   | An open door from the bedrooms north of a closed medicine drawer to the bathrooms.      |
+| 86   | An open door from the bedrooms north of closed medicine drawers to the bathroom         |
+| 87   | An open door from the bedrooms north of closed medicine drawers to the bathrooms        |
+| 88   | An open door from the bedrooms north of the closed medicine drawer to a bathroom        |
+| 89   | An open door from the bedrooms north of the closed medicine drawer to bathrooms         |
+| 90   | An open door from the bedrooms north of the closed medicine drawer to the bathroom      |
+| 91   | An open door from the bedrooms north of the closed medicine drawer to the bathrooms     |
+| 92   | An open door from the bedrooms north of the closed medicine drawer to the bathrooms.    |
+| 93   | An open door from the bedrooms north of the closed medicine drawers to a bathroom       |
+| 94   | An open door from the bedrooms north of the closed medicine drawers to bathrooms        |
+| 95   | An open door from the bedrooms north of the closed medicine drawers to the bathroom     |
+| 96   | An open door from the bedrooms north of the closed medicine drawers to the bathrooms    |
+| 97   | An open door from the bedrooms north of the closed medicine drawers to the bathrooms.   |
+| 98   | An open door from the bedrooms to a bathroom north of a closed medicine drawer          |
+| 99   | An open door from the bedrooms to a bathroom north of a closed medicine drawer.         |
+| 100  | An open door from the bedrooms to a bathroom north of the closed medicine drawer        |
+| 101  | An open door from the bedrooms to a bathroom north of the closed medicine drawers       |
+| 102  | An open door from the bedrooms to bathrooms north of a closed medicine drawer           |
+| 103  | An open door from the bedrooms to the bathroom north of a closed medicine drawer        |
+| 104  | An open door from the bedrooms to the bathroom north of a closed medicine drawer.       |
+| 105  | An open door from the bedrooms to the bathroom north of closed medicine drawers         |
+| 106  | An open door from the bedrooms to the bathroom north of the closed medicine drawer      |
+| 107  | An open door from the bedrooms to the bathroom north of the closed medicine drawer.     |
+| 108  | An open door from the bedrooms to the bathroom north of the closed medicine drawers     |
+| 109  | An open door from the bedrooms to the bathroom north of the closed medicine drawers.    |
+| 110  | An open door from the bedrooms to the bathrooms north of a closed medicine drawer       |
+| 111  | An open door from the bedrooms to the bathrooms north of the closed medicine drawer     |
+| 112  | An open door north of a closed medicine drawer to a bathroom from the bedrooms          |
+| 113  | An open door north of a closed medicine drawer to bathrooms from the bedrooms           |
+| 114  | An open door north of a closed medicine drawer to the bathroom from the bedroom         |
+| 115  | An open door north of a closed medicine drawer to the bathroom from the bedrooms        |
+| 116  | An open door north of a closed medicine drawer to the bathroom from the bedrooms.       |
+| 117  | An open door north of a closed medicine drawer to the bathrooms from the bedrooms       |
+| 118  | An open door north of the closed medicine drawer to a bathroom from the bedrooms        |
+| 119  | An open door north of the closed medicine drawer to the bathroom from the bedrooms      |
+| 120  | An open door north of the closed medicine drawers to a bathroom from the bedrooms       |
+| 121  | An open door north of the closed medicine drawers to the bathroom from the bedrooms     |
+| 122  | An open door to a bathroom from a bedroom north of a closed medicine drawer             |
+| 123  | An open door to a bathroom from a bedroom north of the closed medicine drawer           |
+| 124  | An open door to a bathroom from bedrooms north of a closed medicine drawer              |
+| 125  | An open door to a bathroom from bedrooms north of the closed medicine drawer            |
+| 126  | An open door to a bathroom from the bedroom north of a closed medicine drawer           |
+| 127  | An open door to a bathroom from the bedroom north of a closed medicine drawer.          |
+| 128  | An open door to a bathroom from the bedroom north of the closed medicine drawer         |
+| 129  | An open door to a bathroom from the bedroom north of the closed medicine drawer.        |
+| 130  | An open door to a bathroom from the bedroom north of the closed medicine drawers        |
+| 131  | An open door to a bathroom from the bedroom north of the closed medicine drawers.       |
+| 132  | An open door to a bathroom from the bedrooms north of a closed medicine drawer          |
+| 133  | An open door to a bathroom from the bedrooms north of a closed medicine drawer.         |
+| 134  | An open door to a bathroom from the bedrooms north of the closed medicine drawer        |
+| 135  | An open door to a bathroom from the bedrooms north of the closed medicine drawer.       |
+| 136  | An open door to a bathroom from the bedrooms north of the closed medicine drawers       |
+| 137  | An open door to a bathroom from the bedrooms north of the closed medicine drawers.      |
+| 138  | An open door to a bathroom north of a closed medicine drawer from a bedroom             |
+| 139  | An open door to a bathroom north of a closed medicine drawer from a bedroom.            |
+| 140  | An open door to a bathroom north of a closed medicine drawer from bedrooms              |
+| 141  | An open door to a bathroom north of a closed medicine drawer from bedrooms.             |
+| 142  | An open door to a bathroom north of a closed medicine drawer from the bedroom           |
+| 143  | An open door to a bathroom north of a closed medicine drawer from the bedroom.          |
+| 144  | An open door to a bathroom north of a closed medicine drawer from the bedrooms          |
+| 145  | An open door to a bathroom north of a closed medicine drawer from the bedrooms.         |
+| 146  | An open door to a bathroom north of a medicines closed drawer from the bedrooms         |
+| 147  | An open door to a bathroom north of closed medicine drawers from a bedroom              |
+| 148  | An open door to a bathroom north of closed medicine drawers from bedrooms               |
+| 149  | An open door to a bathroom north of closed medicine drawers from the bedroom            |
+| 150  | An open door to a bathroom north of closed medicine drawers from the bedrooms           |
+| 151  | An open door to a bathroom north of closed medicine drawers from the bedrooms.          |
+| 152  | An open door to a bathroom north of the closed medicine drawer from a bedroom           |
+| 153  | An open door to a bathroom north of the closed medicine drawer from a bedroom.          |
+| 154  | An open door to a bathroom north of the closed medicine drawer from bedrooms            |
+| 155  | An open door to a bathroom north of the closed medicine drawer from bedrooms.           |
+| 156  | An open door to a bathroom north of the closed medicine drawer from the bedroom         |
+| 157  | An open door to a bathroom north of the closed medicine drawer from the bedroom.        |
+| 158  | An open door to a bathroom north of the closed medicine drawer from the bedrooms        |
+| 159  | An open door to a bathroom north of the closed medicine drawer from the bedrooms.       |
+| 160  | An open door to a bathroom north of the closed medicine drawers from a bedroom          |
+| 161  | An open door to a bathroom north of the closed medicine drawers from a bedroom.         |
+| 162  | An open door to a bathroom north of the closed medicine drawers from bedrooms           |
+| 163  | An open door to a bathroom north of the closed medicine drawers from bedrooms.          |
+| 164  | An open door to a bathroom north of the closed medicine drawers from the bedroom        |
+| 165  | An open door to a bathroom north of the closed medicine drawers from the bedrooms       |
+| 166  | An open door to a bathroom north of the closed medicine drawers from the bedrooms.      |
+| 167  | An open door to a bathroom north of the medicines closed drawer from the bedrooms       |
+| 168  | An open door to a bathroom north of the medicines closed drawers from the bedrooms      |
+| 169  | An open door to bathrooms from the bedroom north of a closed medicine drawer            |
+| 170  | An open door to bathrooms from the bedroom north of a closed medicine drawer.           |
+| 171  | An open door to bathrooms from the bedroom north of the closed medicine drawer          |
+| 172  | An open door to bathrooms from the bedroom north of the closed medicine drawers         |
+| 173  | An open door to bathrooms from the bedrooms north of a closed medicine drawer           |
+| 174  | An open door to bathrooms from the bedrooms north of the closed medicine drawer         |
+| 175  | An open door to bathrooms from the bedrooms north of the closed medicine drawers        |
+| 176  | An open door to bathrooms north of a closed medicine drawer from a bedroom              |
+| 177  | An open door to bathrooms north of a closed medicine drawer from a bedroom.             |
+| 178  | An open door to bathrooms north of a closed medicine drawer from bedrooms               |
+| 179  | An open door to bathrooms north of a closed medicine drawer from bedrooms.              |
+| 180  | An open door to bathrooms north of a closed medicine drawer from the bedroom            |
+| 181  | An open door to bathrooms north of a closed medicine drawer from the bedrooms           |
+| 182  | An open door to bathrooms north of a closed medicine drawer from the bedrooms.          |
+| 183  | An open door to bathrooms north of a medicines closed drawer from the bedrooms          |
+| 184  | An open door to bathrooms north of closed medicine drawers from the bedrooms            |
+| 185  | An open door to bathrooms north of the closed medicine drawer from a bedroom            |
+| 186  | An open door to bathrooms north of the closed medicine drawer from bedrooms             |
+| 187  | An open door to bathrooms north of the closed medicine drawer from bedrooms.            |
+| 188  | An open door to bathrooms north of the closed medicine drawer from the bedroom          |
+| 189  | An open door to bathrooms north of the closed medicine drawer from the bedrooms         |
+| 190  | An open door to bathrooms north of the closed medicine drawer from the bedrooms.        |
+| 191  | An open door to bathrooms north of the closed medicine drawers from a bedroom           |
+| 192  | An open door to bathrooms north of the closed medicine drawers from bedrooms            |
+| 193  | An open door to bathrooms north of the closed medicine drawers from bedrooms.           |
+| 194  | An open door to bathrooms north of the closed medicine drawers from the bedroom         |
+| 195  | An open door to bathrooms north of the closed medicine drawers from the bedrooms        |
+| 196  | An open door to bathrooms north of the closed medicine drawers from the bedrooms.       |
+| 197  | An open door to bathrooms north of the medicines closed drawer from the bedrooms        |
+| 198  | An open door to bathrooms north of the medicines closed drawers from the bedrooms       |
+| 199  | An open door to the bathroom from a bedroom north of a closed medicine drawer           |
+| 200  | An open door to the bathroom from a bedroom north of a closed medicine drawer.          |
+| 201  | An open door to the bathroom from a bedroom north of the closed medicine drawer         |
+| 202  | An open door to the bathroom from a bedroom north of the closed medicine drawer.        |
+| 203  | An open door to the bathroom from a bedroom north of the closed medicine drawers        |
+| 204  | An open door to the bathroom from a bedroom north of the closed medicine drawers.       |
+| 205  | An open door to the bathroom from bedrooms north of a closed medicine drawer            |
+| 206  | An open door to the bathroom from bedrooms north of a closed medicine drawer.           |
+| 207  | An open door to the bathroom from bedrooms north of the closed medicine drawer          |
+| 208  | An open door to the bathroom from bedrooms north of the closed medicine drawer.         |
+| 209  | An open door to the bathroom from bedrooms north of the closed medicine drawers         |
+| 210  | An open door to the bathroom from bedrooms north of the closed medicine drawers.        |
+| 211  | An open door to the bathroom from the bedroom north of a closed medicine drawer         |
+| 212  | An open door to the bathroom from the bedroom north of a closed medicine drawer.        |
+| 213  | An open door to the bathroom from the bedroom north of closed medicine drawers          |
+| 214  | An open door to the bathroom from the bedroom north of closed medicine drawers.         |
+| 215  | An open door to the bathroom from the bedroom north of the closed medicine drawer       |
+| 216  | An open door to the bathroom from the bedroom north of the closed medicine drawer.      |
+| 217  | An open door to the bathroom from the bedroom north of the closed medicine drawers      |
+| 218  | An open door to the bathroom from the bedroom north of the closed medicine drawers.     |
+| 219  | An open door to the bathroom from the bedrooms north of a closed medicine drawer        |
+| 220  | An open door to the bathroom from the bedrooms north of a closed medicine drawer.       |
+| 221  | An open door to the bathroom from the bedrooms north of closed medicine drawers         |
+| 222  | An open door to the bathroom from the bedrooms north of the closed medicine drawer      |
+| 223  | An open door to the bathroom from the bedrooms north of the closed medicine drawer.     |
+| 224  | An open door to the bathroom from the bedrooms north of the closed medicine drawers     |
+| 225  | An open door to the bathroom from the bedrooms north of the closed medicine drawers.    |
+| 226  | An open door to the bathroom north of a closed medicine drawer from a bedroom           |
+| 227  | An open door to the bathroom north of a closed medicine drawer from a bedroom.          |
+| 228  | An open door to the bathroom north of a closed medicine drawer from bedrooms            |
+| 229  | An open door to the bathroom north of a closed medicine drawer from bedrooms.           |
+| 230  | An open door to the bathroom north of a closed medicine drawer from the bedroom         |
+| 231  | An open door to the bathroom north of a closed medicine drawer from the bedroom.        |
+| 232  | An open door to the bathroom north of a closed medicine drawer from the bedrooms        |
+| 233  | An open door to the bathroom north of a closed medicine drawer from the bedrooms.       |
+| 234  | An open door to the bathroom north of a closed medicine drawer, from the bedrooms       |
+| 235  | An open door to the bathroom north of a medicines closed drawer from the bedroom        |
+| 236  | An open door to the bathroom north of a medicines closed drawer from the bedrooms       |
+| 237  | An open door to the bathroom north of a medicines closed drawer from the bedrooms.      |
+| 238  | An open door to the bathroom north of closed medicine drawers from a bedroom            |
+| 239  | An open door to the bathroom north of closed medicine drawers from bedrooms             |
+| 240  | An open door to the bathroom north of closed medicine drawers from bedrooms.            |
+| 241  | An open door to the bathroom north of closed medicine drawers from the bedroom          |
+| 242  | An open door to the bathroom north of closed medicine drawers from the bedrooms         |
+| 243  | An open door to the bathroom north of closed medicine drawers from the bedrooms.        |
+| 244  | An open door to the bathroom north of the closed medicine drawer from a bedroom         |
+| 245  | An open door to the bathroom north of the closed medicine drawer from a bedroom.        |
+| 246  | An open door to the bathroom north of the closed medicine drawer from bedrooms          |
+| 247  | An open door to the bathroom north of the closed medicine drawer from bedrooms.         |
+| 248  | An open door to the bathroom north of the closed medicine drawer from the bedroom       |
+| 249  | An open door to the bathroom north of the closed medicine drawer from the bedroom.      |
+| 250  | An open door to the bathroom north of the closed medicine drawer from the bedrooms      |
+| 251  | An open door to the bathroom north of the closed medicine drawer from the bedrooms.     |
+| 252  | An open door to the bathroom north of the closed medicine drawers from a bedroom        |
+| 253  | An open door to the bathroom north of the closed medicine drawers from a bedroom.       |
+| 254  | An open door to the bathroom north of the closed medicine drawers from bedrooms         |
+| 255  | An open door to the bathroom north of the closed medicine drawers from bedrooms.        |
+| 256  | An open door to the bathroom north of the closed medicine drawers from the bedroom      |
+| 257  | An open door to the bathroom north of the closed medicine drawers from the bedroom.     |
+| 258  | An open door to the bathroom north of the closed medicine drawers from the bedrooms     |
+| 259  | An open door to the bathroom north of the closed medicine drawers from the bedrooms.    |
+| 260  | An open door to the bathroom north of the medicines closed drawer from a bedroom        |
+| 261  | An open door to the bathroom north of the medicines closed drawer from bedrooms         |
+| 262  | An open door to the bathroom north of the medicines closed drawer from the bedroom      |
+| 263  | An open door to the bathroom north of the medicines closed drawer from the bedrooms     |
+| 264  | An open door to the bathroom north of the medicines closed drawer from the bedrooms.    |
+| 265  | An open door to the bathroom north of the medicines closed drawers from the bedroom     |
+| 266  | An open door to the bathroom north of the medicines closed drawers from the bedrooms    |
+| 267  | An open door to the bathroom north of the medicines closed drawers from the bedrooms.   |
+| 268  | An open door to the bathrooms from a bedroom north of a closed medicine drawer          |
+| 269  | An open door to the bathrooms from bedrooms north of a closed medicine drawer           |
+| 270  | An open door to the bathrooms from the bedroom north of a closed medicine drawer        |
+| 271  | An open door to the bathrooms from the bedroom north of a closed medicine drawer.       |
+| 272  | An open door to the bathrooms from the bedroom north of the closed medicine drawer      |
+| 273  | An open door to the bathrooms from the bedroom north of the closed medicine drawers     |
+| 274  | An open door to the bathrooms from the bedrooms north of a closed medicine drawer       |
+| 275  | An open door to the bathrooms from the bedrooms north of the closed medicine drawer     |
+| 276  | An open door to the bathrooms from the bedrooms north of the closed medicine drawers    |
+| 277  | An open door to the bathrooms north of a closed medicine drawer from a bedroom          |
+| 278  | An open door to the bathrooms north of a closed medicine drawer from a bedroom.         |
+| 279  | An open door to the bathrooms north of a closed medicine drawer from bedrooms           |
+| 280  | An open door to the bathrooms north of a closed medicine drawer from bedrooms.          |
+| 281  | An open door to the bathrooms north of a closed medicine drawer from the bedroom        |
+| 282  | An open door to the bathrooms north of a closed medicine drawer from the bedroom.       |
+| 283  | An open door to the bathrooms north of a closed medicine drawer from the bedrooms       |
+| 284  | An open door to the bathrooms north of a closed medicine drawer from the bedrooms.      |
+| 285  | An open door to the bathrooms north of a medicines closed drawer from the bedrooms      |
+| 286  | An open door to the bathrooms north of closed medicine drawers from the bedroom         |
+| 287  | An open door to the bathrooms north of closed medicine drawers from the bedrooms        |
+| 288  | An open door to the bathrooms north of closed medicine drawers from the bedrooms.       |
+| 289  | An open door to the bathrooms north of the closed medicine drawer from a bedroom        |
+| 290  | An open door to the bathrooms north of the closed medicine drawer from bedrooms         |
+| 291  | An open door to the bathrooms north of the closed medicine drawer from bedrooms.        |
+| 292  | An open door to the bathrooms north of the closed medicine drawer from the bedroom      |
+| 293  | An open door to the bathrooms north of the closed medicine drawer from the bedrooms     |
+| 294  | An open door to the bathrooms north of the closed medicine drawer from the bedrooms.    |
+| 295  | An open door to the bathrooms north of the closed medicine drawers from a bedroom       |
+| 296  | An open door to the bathrooms north of the closed medicine drawers from bedrooms        |
+| 297  | An open door to the bathrooms north of the closed medicine drawers from bedrooms.       |
+| 298  | An open door to the bathrooms north of the closed medicine drawers from the bedroom     |
+| 299  | An open door to the bathrooms north of the closed medicine drawers from the bedrooms    |
+| 300  | An open door to the bathrooms north of the closed medicine drawers from the bedrooms.   |
+| 301  | An open door to the bathrooms north of the medicines closed drawer from the bedrooms    |
+| 302  | An open door to the bathrooms north of the medicines closed drawers from the bedrooms   |
+| 303  | Open door to the bathroom from the bedroom north of a closed medicine drawer            |
+| 304  | Open door to the bathroom from the bedrooms north of a closed medicine drawer           |
+| 305  | Open door to the bathroom north of a closed medicine drawer from the bedrooms           |
+| 306  | Open door to the bathroom north of a closed medicine drawer, from the bedrooms          |
+| 307  | Open door to the bathroom north of the closed medicine drawer from the bedrooms         |
+| 308  | Open door to the bathroom north of the closed medicine drawer, from the bedrooms        |
+| 309  | Open doors from a bedroom to a bathroom north of a closed medicine drawer               |
+| 310  | Open doors from a bedroom to a bathroom north of a closed medicine drawer.              |
+| 311  | Open doors from a bedroom to a bathroom north of the closed medicine drawer             |
+| 312  | Open doors from a bedroom to a bathroom north of the closed medicine drawers            |
+| 313  | Open doors from a bedroom to bathrooms north of a closed medicine drawer                |
+| 314  | Open doors from a bedroom to the bathroom north of a closed medicine drawer             |
+| 315  | Open doors from a bedroom to the bathroom north of a closed medicine drawer.            |
+| 316  | Open doors from a bedroom to the bathroom north of the closed medicine drawer           |
+| 317  | Open doors from a bedroom to the bathroom north of the closed medicine drawer.          |
+| 318  | Open doors from a bedroom to the bathroom north of the closed medicine drawers          |
+| 319  | Open doors from a bedroom to the bathroom north of the closed medicine drawers.         |
+| 320  | Open doors from a bedroom to the bathrooms north of a closed medicine drawer            |
+| 321  | Open doors from bedrooms to a bathroom north of a closed medicine drawer                |
+| 322  | Open doors from bedrooms to a bathroom north of a closed medicine drawer.               |
+| 323  | Open doors from bedrooms to a bathroom north of the closed medicine drawer              |
+| 324  | Open doors from bedrooms to a bathroom north of the closed medicine drawers             |
+| 325  | Open doors from bedrooms to a bathroom north of the closed medicine drawers.            |
+| 326  | Open doors from bedrooms to bathrooms north of a closed medicine drawer                 |
+| 327  | Open doors from bedrooms to bathrooms north of the closed medicine drawer               |
+| 328  | Open doors from bedrooms to the bathroom north of a closed medicine drawer              |
+| 329  | Open doors from bedrooms to the bathroom north of a closed medicine drawer.             |
+| 330  | Open doors from bedrooms to the bathroom north of closed medicine drawers               |
+| 331  | Open doors from bedrooms to the bathroom north of the closed medicine drawer            |
+| 332  | Open doors from bedrooms to the bathroom north of the closed medicine drawer.           |
+| 333  | Open doors from bedrooms to the bathroom north of the closed medicine drawers           |
+| 334  | Open doors from bedrooms to the bathroom north of the closed medicine drawers.          |
+| 335  | Open doors from bedrooms to the bathrooms north of a closed medicine drawer             |
+| 336  | Open doors from bedrooms to the bathrooms north of the closed medicine drawer           |
+| 337  | Open doors from bedrooms to the bathrooms north of the closed medicine drawers          |
+| 338  | Open doors from bedrooms, to the bathrooms north of a closed medicine drawer            |
+| 339  | Open doors from bedrooms, to the bathrooms north of the closed medicine drawer          |
+| 340  | Open doors from the bedroom north of a closed medicine drawer to the bathrooms          |
+| 341  | Open doors from the bedroom to a bathroom north of a closed medicine drawer             |
+| 342  | Open doors from the bedroom to a bathroom north of a closed medicine drawer.            |
+| 343  | Open doors from the bedroom to a bathroom north of the closed medicine drawer           |
+| 344  | Open doors from the bedroom to a bathroom north of the closed medicine drawer.          |
+| 345  | Open doors from the bedroom to a bathroom north of the closed medicine drawers          |
+| 346  | Open doors from the bedroom to a bathroom north of the closed medicine drawers.         |
+| 347  | Open doors from the bedroom to bathrooms north of a closed medicine drawer              |
+| 348  | Open doors from the bedroom to bathrooms north of a closed medicine drawer.             |
+| 349  | Open doors from the bedroom to bathrooms north of the closed medicine drawer            |
+| 350  | Open doors from the bedroom to bathrooms north of the closed medicine drawers           |
+| 351  | Open doors from the bedroom to bathrooms north of the closed medicine drawers.          |
+| 352  | Open doors from the bedroom to the bathroom north of a closed medicine drawer           |
+| 353  | Open doors from the bedroom to the bathroom north of a closed medicine drawer.          |
+| 354  | Open doors from the bedroom to the bathroom north of closed medicine drawers            |
+| 355  | Open doors from the bedroom to the bathroom north of closed medicine drawers.           |
+| 356  | Open doors from the bedroom to the bathroom north of the closed medicine drawer         |
+| 357  | Open doors from the bedroom to the bathroom north of the closed medicine drawer.        |
+| 358  | Open doors from the bedroom to the bathroom north of the closed medicine drawers        |
+| 359  | Open doors from the bedroom to the bathroom north of the closed medicine drawers.       |
+| 360  | Open doors from the bedroom to the bathroom north of the medicines closed drawer        |
+| 361  | Open doors from the bedroom to the bathrooms north of a closed medicine drawer          |
+| 362  | Open doors from the bedroom to the bathrooms north of a closed medicine drawer.         |
+| 363  | Open doors from the bedroom to the bathrooms north of the closed medicine drawer        |
+| 364  | Open doors from the bedroom to the bathrooms north of the closed medicine drawers       |
+| 365  | Open doors from the bedroom to the bathrooms north of the closed medicine drawers.      |
+| 366  | Open doors from the bedrooms north of a closed medicine drawer to the bathrooms         |
+| 367  | Open doors from the bedrooms to a bathroom north of a closed medicine drawer            |
+| 368  | Open doors from the bedrooms to a bathroom north of a closed medicine drawer.           |
+| 369  | Open doors from the bedrooms to a bathroom north of the closed medicine drawer          |
+| 370  | Open doors from the bedrooms to a bathroom north of the closed medicine drawer.         |
+| 371  | Open doors from the bedrooms to a bathroom north of the closed medicine drawers         |
+| 372  | Open doors from the bedrooms to a bathroom north of the closed medicine drawers.        |
+| 373  | Open doors from the bedrooms to bathrooms north of a closed medicine drawer             |
+| 374  | Open doors from the bedrooms to bathrooms north of a closed medicine drawer.            |
+| 375  | Open doors from the bedrooms to bathrooms north of the closed medicine drawer           |
+| 376  | Open doors from the bedrooms to bathrooms north of the closed medicine drawers          |
+| 377  | Open doors from the bedrooms to the bathroom north of a closed medicine drawer          |
+| 378  | Open doors from the bedrooms to the bathroom north of a closed medicine drawer.         |
+| 379  | Open doors from the bedrooms to the bathroom north of closed medicine drawers           |
+| 380  | Open doors from the bedrooms to the bathroom north of closed medicine drawers.          |
+| 381  | Open doors from the bedrooms to the bathroom north of the closed medicine drawer        |
+| 382  | Open doors from the bedrooms to the bathroom north of the closed medicine drawer.       |
+| 383  | Open doors from the bedrooms to the bathroom north of the closed medicine drawers       |
+| 384  | Open doors from the bedrooms to the bathroom north of the closed medicine drawers.      |
+| 385  | Open doors from the bedrooms to the bathrooms north of a closed medicine drawer         |
+| 386  | Open doors from the bedrooms to the bathrooms north of a closed medicine drawer.        |
+| 387  | Open doors from the bedrooms to the bathrooms north of the closed medicine drawer       |
+| 388  | Open doors from the bedrooms to the bathrooms north of the closed medicine drawers      |
+| 389  | Open doors north of a closed medicine drawer to the bathroom from the bedrooms          |
+| 390  | Open doors to a bathroom from a bedroom north of a closed medicine drawer               |
+| 391  | Open doors to a bathroom from a bedroom north of a closed medicine drawer.              |
+| 392  | Open doors to a bathroom from a bedroom north of the closed medicine drawer             |
+| 393  | Open doors to a bathroom from a bedroom north of the closed medicine drawer.            |
+| 394  | Open doors to a bathroom from a bedroom north of the closed medicine drawers            |
+| 395  | Open doors to a bathroom from a bedroom north of the closed medicine drawers.           |
+| 396  | Open doors to a bathroom from bedrooms north of a closed medicine drawer                |
+| 397  | Open doors to a bathroom from bedrooms north of a closed medicine drawer.               |
+| 398  | Open doors to a bathroom from bedrooms north of the closed medicine drawer              |
+| 399  | Open doors to a bathroom from bedrooms north of the closed medicine drawers             |
+| 400  | Open doors to a bathroom from bedrooms north of the closed medicine drawers.            |
+| 401  | Open doors to a bathroom from the bedroom north of a closed medicine drawer             |
+| 402  | Open doors to a bathroom from the bedroom north of a closed medicine drawer.            |
+| 403  | Open doors to a bathroom from the bedroom north of closed medicine drawers              |
+| 404  | Open doors to a bathroom from the bedroom north of closed medicine drawers.             |
+| 405  | Open doors to a bathroom from the bedroom north of the closed medicine drawer           |
+| 406  | Open doors to a bathroom from the bedroom north of the closed medicine drawer.          |
+| 407  | Open doors to a bathroom from the bedroom north of the closed medicine drawers          |
+| 408  | Open doors to a bathroom from the bedroom north of the closed medicine drawers.         |
+| 409  | Open doors to a bathroom from the bedrooms north of a closed medicine drawer            |
+| 410  | Open doors to a bathroom from the bedrooms north of a closed medicine drawer.           |
+| 411  | Open doors to a bathroom from the bedrooms north of closed medicine drawers             |
+| 412  | Open doors to a bathroom from the bedrooms north of the closed medicine drawer          |
+| 413  | Open doors to a bathroom from the bedrooms north of the closed medicine drawer.         |
+| 414  | Open doors to a bathroom from the bedrooms north of the closed medicine drawers         |
+| 415  | Open doors to a bathroom from the bedrooms north of the closed medicine drawers.        |
+| 416  | Open doors to a bathroom north of a closed medicine drawer from the bedrooms            |
+| 417  | Open doors to a bathroom north of a closed medicine drawer from the bedrooms.           |
+| 418  | Open doors to a bathroom north of the closed medicine drawer from the bedrooms          |
+| 419  | Open doors to a bathroom north of the closed medicine drawers from the bedrooms         |
+| 420  | Open doors to bathrooms from a bedroom north of a closed medicine drawer                |
+| 421  | Open doors to bathrooms from a bedroom north of a closed medicine drawer.               |
+| 422  | Open doors to bathrooms from a bedroom north of the closed medicine drawer              |
+| 423  | Open doors to bathrooms from a bedroom north of the closed medicine drawers             |
+| 424  | Open doors to bathrooms from bedrooms north of a closed medicine drawer                 |
+| 425  | Open doors to bathrooms from bedrooms north of the closed medicine drawer               |
+| 426  | Open doors to bathrooms from bedrooms north of the closed medicine drawers              |
+| 427  | Open doors to bathrooms from the bedroom north of a closed medicine drawer              |
+| 428  | Open doors to bathrooms from the bedroom north of a closed medicine drawer.             |
+| 429  | Open doors to bathrooms from the bedroom north of the closed medicine drawer            |
+| 430  | Open doors to bathrooms from the bedroom north of the closed medicine drawer.           |
+| 431  | Open doors to bathrooms from the bedroom north of the closed medicine drawers           |
+| 432  | Open doors to bathrooms from the bedroom north of the closed medicine drawers.          |
+| 433  | Open doors to bathrooms from the bedrooms north of a closed medicine drawer             |
+| 434  | Open doors to bathrooms from the bedrooms north of a closed medicine drawer.            |
+| 435  | Open doors to bathrooms from the bedrooms north of the closed medicine drawer           |
+| 436  | Open doors to bathrooms from the bedrooms north of the closed medicine drawer.          |
+| 437  | Open doors to bathrooms from the bedrooms north of the closed medicine drawers          |
+| 438  | Open doors to bathrooms from the bedrooms north of the closed medicine drawers.         |
+| 439  | Open doors to bathrooms north of a closed medicine drawer from the bedrooms             |
+| 440  | Open doors to bathrooms north of the closed medicine drawer from the bedrooms           |
+| 441  | Open doors to bathrooms north of the closed medicine drawers from the bedrooms          |
+| 442  | Open doors to the bathroom from a bedroom north of a closed medicine drawer             |
+| 443  | Open doors to the bathroom from a bedroom north of a closed medicine drawer.            |
+| 444  | Open doors to the bathroom from a bedroom north of closed medicine drawers              |
+| 445  | Open doors to the bathroom from a bedroom north of closed medicine drawers.             |
+| 446  | Open doors to the bathroom from a bedroom north of the closed medicine drawer           |
+| 447  | Open doors to the bathroom from a bedroom north of the closed medicine drawer.          |
+| 448  | Open doors to the bathroom from a bedroom north of the closed medicine drawers          |
+| 449  | Open doors to the bathroom from a bedroom north of the closed medicine drawers.         |
+| 450  | Open doors to the bathroom from bedrooms north of a closed medicine drawer              |
+| 451  | Open doors to the bathroom from bedrooms north of a closed medicine drawer.             |
+| 452  | Open doors to the bathroom from bedrooms north of closed medicine drawers               |
+| 453  | Open doors to the bathroom from bedrooms north of the closed medicine drawer            |
+| 454  | Open doors to the bathroom from bedrooms north of the closed medicine drawer.           |
+| 455  | Open doors to the bathroom from bedrooms north of the closed medicine drawers           |
+| 456  | Open doors to the bathroom from bedrooms north of the closed medicine drawers.          |
+| 457  | Open doors to the bathroom from the bedroom north of a closed medicine drawer           |
+| 458  | Open doors to the bathroom from the bedroom north of a closed medicine drawer.          |
+| 459  | Open doors to the bathroom from the bedroom north of a medicines closed drawer          |
+| 460  | Open doors to the bathroom from the bedroom north of closed medicine drawers            |
+| 461  | Open doors to the bathroom from the bedroom north of closed medicine drawers.           |
+| 462  | Open doors to the bathroom from the bedroom north of the closed medicine drawer         |
+| 463  | Open doors to the bathroom from the bedroom north of the closed medicine drawer.        |
+| 464  | Open doors to the bathroom from the bedroom north of the closed medicine drawers        |
+| 465  | Open doors to the bathroom from the bedroom north of the closed medicine drawers.       |
+| 466  | Open doors to the bathroom from the bedroom north of the medicines closed drawer        |
+| 467  | Open doors to the bathroom from the bedroom north of the medicines closed drawers       |
+| 468  | Open doors to the bathroom from the bedroom north of the medicines closed drawers.      |
+| 469  | Open doors to the bathroom from the bedrooms north of a closed medicine drawer          |
+| 470  | Open doors to the bathroom from the bedrooms north of a closed medicine drawer.         |
+| 471  | Open doors to the bathroom from the bedrooms north of a medicines closed drawer         |
+| 472  | Open doors to the bathroom from the bedrooms north of closed medicine drawers           |
+| 473  | Open doors to the bathroom from the bedrooms north of closed medicine drawers.          |
+| 474  | Open doors to the bathroom from the bedrooms north of the closed medicine drawer        |
+| 475  | Open doors to the bathroom from the bedrooms north of the closed medicine drawer.       |
+| 476  | Open doors to the bathroom from the bedrooms north of the closed medicine drawers       |
+| 477  | Open doors to the bathroom from the bedrooms north of the closed medicine drawers.      |
+| 478  | Open doors to the bathroom from the bedrooms north of the medicines closed drawer       |
+| 479  | Open doors to the bathroom from the bedrooms north of the medicines closed drawers.     |
+| 480  | Open doors to the bathroom north of a closed medicine drawer from a bedroom             |
+| 481  | Open doors to the bathroom north of a closed medicine drawer from the bedroom           |
+| 482  | Open doors to the bathroom north of a closed medicine drawer from the bedrooms          |
+| 483  | Open doors to the bathroom north of a closed medicine drawer from the bedrooms.         |
+| 484  | Open doors to the bathroom north of a closed medicine drawer, from the bedrooms         |
+| 485  | Open doors to the bathroom north of closed medicine drawers from the bedrooms           |
+| 486  | Open doors to the bathroom north of the closed medicine drawer from the bedrooms        |
+| 487  | Open doors to the bathroom north of the closed medicine drawer from the bedrooms.       |
+| 488  | Open doors to the bathroom north of the closed medicine drawers from the bedrooms       |
+| 489  | Open doors to the bathroom north of the closed medicine drawers from the bedrooms.      |
+| 490  | Open doors to the bathroom north of the medicines closed drawer from the bedrooms       |
+| 491  | Open doors to the bathrooms from a bedroom north of a closed medicine drawer            |
+| 492  | Open doors to the bathrooms from a bedroom north of a closed medicine drawer.           |
+| 493  | Open doors to the bathrooms from a bedroom north of the closed medicine drawer          |
+| 494  | Open doors to the bathrooms from a bedroom north of the closed medicine drawers         |
+| 495  | Open doors to the bathrooms from bedrooms north of a closed medicine drawer             |
+| 496  | Open doors to the bathrooms from bedrooms north of the closed medicine drawer           |
+| 497  | Open doors to the bathrooms from bedrooms north of the closed medicine drawers          |
+| 498  | Open doors to the bathrooms from the bedroom north of a closed medicine drawer          |
+| 499  | Open doors to the bathrooms from the bedroom north of a closed medicine drawer.         |
+| 500  | Open doors to the bathrooms from the bedroom north of the closed medicine drawer        |
+| 501  | Open doors to the bathrooms from the bedroom north of the closed medicine drawer.       |
+| 502  | Open doors to the bathrooms from the bedroom north of the closed medicine drawers       |
+| 503  | Open doors to the bathrooms from the bedroom north of the closed medicine drawers.      |
+| 504  | Open doors to the bathrooms from the bedrooms north of a closed medicine drawer         |
+| 505  | Open doors to the bathrooms from the bedrooms north of a closed medicine drawer.        |
+| 506  | Open doors to the bathrooms from the bedrooms north of the closed medicine drawer       |
+| 507  | Open doors to the bathrooms from the bedrooms north of the closed medicine drawer.      |
+| 508  | Open doors to the bathrooms from the bedrooms north of the closed medicine drawers      |
+| 509  | Open doors to the bathrooms from the bedrooms north of the closed medicine drawers.     |
+| 510  | Open doors to the bathrooms north of a closed medicine drawer from the bedrooms         |
+| 511  | Open doors to the bathrooms north of the closed medicine drawer from the bedrooms       |
+| 512  | Open doors to the bathrooms north of the closed medicine drawers from the bedrooms      |
+| 513  | The open door from a bedroom north of a closed medicine drawer to a bathroom            |
+| 514  | The open door from a bedroom north of a closed medicine drawer to bathrooms             |
+| 515  | The open door from a bedroom north of a closed medicine drawer to the bathroom          |
+| 516  | The open door from a bedroom north of a closed medicine drawer to the bathrooms         |
+| 517  | The open door from a bedroom north of a closed medicine drawer to the bathrooms.        |
+| 518  | The open door from a bedroom north of closed medicine drawers to the bathrooms          |
+| 519  | The open door from a bedroom north of the closed medicine drawer to a bathroom          |
+| 520  | The open door from a bedroom north of the closed medicine drawer to bathrooms           |
+| 521  | The open door from a bedroom north of the closed medicine drawer to the bathroom        |
+| 522  | The open door from a bedroom north of the closed medicine drawer to the bathrooms       |
+| 523  | The open door from a bedroom north of the closed medicine drawer to the bathrooms.      |
+| 524  | The open door from a bedroom north of the closed medicine drawers to a bathroom         |
+| 525  | The open door from a bedroom north of the closed medicine drawers to bathrooms          |
+| 526  | The open door from a bedroom north of the closed medicine drawers to the bathroom       |
+| 527  | The open door from a bedroom north of the closed medicine drawers to the bathrooms      |
+| 528  | The open door from a bedroom north of the closed medicine drawers to the bathrooms.     |
+| 529  | The open door from a bedroom to a bathroom north of a closed medicine drawer            |
+| 530  | The open door from a bedroom to a bathroom north of the closed medicine drawer          |
+| 531  | The open door from a bedroom to bathrooms north of a closed medicine drawer             |
+| 532  | The open door from a bedroom to the bathroom north of a closed medicine drawer          |
+| 533  | The open door from a bedroom to the bathroom north of a closed medicine drawer.         |
+| 534  | The open door from a bedroom to the bathroom north of the closed medicine drawer        |
+| 535  | The open door from a bedroom to the bathroom north of the closed medicine drawer.       |
+| 536  | The open door from a bedroom to the bathroom north of the closed medicine drawers       |
+| 537  | The open door from a bedroom to the bathroom north of the closed medicine drawers.      |
+| 538  | The open door from a bedroom to the bathrooms north of a closed medicine drawer         |
+| 539  | The open door from bedrooms north of a closed medicine drawer to a bathroom             |
+| 540  | The open door from bedrooms north of a closed medicine drawer to a bathroom.            |
+| 541  | The open door from bedrooms north of a closed medicine drawer to bathrooms              |
+| 542  | The open door from bedrooms north of a closed medicine drawer to bathrooms.             |
+| 543  | The open door from bedrooms north of a closed medicine drawer to the bathroom           |
+| 544  | The open door from bedrooms north of a closed medicine drawer to the bathroom.          |
+| 545  | The open door from bedrooms north of a closed medicine drawer to the bathrooms          |
+| 546  | The open door from bedrooms north of a closed medicine drawer to the bathrooms.         |
+| 547  | The open door from bedrooms north of closed medicine drawers to the bathroom            |
+| 548  | The open door from bedrooms north of closed medicine drawers to the bathrooms           |
+| 549  | The open door from bedrooms north of the closed medicine drawer to a bathroom           |
+| 550  | The open door from bedrooms north of the closed medicine drawer to bathrooms            |
+| 551  | The open door from bedrooms north of the closed medicine drawer to the bathroom         |
+| 552  | The open door from bedrooms north of the closed medicine drawer to the bathrooms        |
+| 553  | The open door from bedrooms north of the closed medicine drawer to the bathrooms.       |
+| 554  | The open door from bedrooms north of the closed medicine drawers to a bathroom          |
+| 555  | The open door from bedrooms north of the closed medicine drawers to bathrooms           |
+| 556  | The open door from bedrooms north of the closed medicine drawers to the bathroom        |
+| 557  | The open door from bedrooms north of the closed medicine drawers to the bathrooms       |
+| 558  | The open door from bedrooms north of the closed medicine drawers to the bathrooms.      |
+| 559  | The open door from bedrooms to a bathroom north of a closed medicine drawer             |
+| 560  | The open door from bedrooms to a bathroom north of a closed medicine drawer.            |
+| 561  | The open door from bedrooms to a bathroom north of the closed medicine drawer           |
+| 562  | The open door from bedrooms to a bathroom north of the closed medicine drawers          |
+| 563  | The open door from bedrooms to bathrooms north of a closed medicine drawer              |
+| 564  | The open door from bedrooms to the bathroom north of a closed medicine drawer           |
+| 565  | The open door from bedrooms to the bathroom north of a closed medicine drawer.          |
+| 566  | The open door from bedrooms to the bathroom north of the closed medicine drawer         |
+| 567  | The open door from bedrooms to the bathroom north of the closed medicine drawer.        |
+| 568  | The open door from bedrooms to the bathroom north of the closed medicine drawers        |
+| 569  | The open door from bedrooms to the bathroom north of the closed medicine drawers.       |
+| 570  | The open door from bedrooms to the bathrooms north of a closed medicine drawer          |
+| 571  | The open door from bedrooms, to the bathrooms north of a closed medicine drawer         |
+| 572  | The open door from the bedroom north of a closed medicine drawer to a bathroom          |
+| 573  | The open door from the bedroom north of a closed medicine drawer to a bathroom.         |
+| 574  | The open door from the bedroom north of a closed medicine drawer to bathrooms           |
+| 575  | The open door from the bedroom north of a closed medicine drawer to bathrooms.          |
+| 576  | The open door from the bedroom north of a closed medicine drawer to the bathroom        |
+| 577  | The open door from the bedroom north of a closed medicine drawer to the bathroom.       |
+| 578  | The open door from the bedroom north of a closed medicine drawer to the bathrooms       |
+| 579  | The open door from the bedroom north of a closed medicine drawer to the bathrooms.      |
+| 580  | The open door from the bedroom north of a closed medicine drawer, to the bathrooms      |
+| 581  | The open door from the bedroom north of closed medicine drawers to a bathroom           |
+| 582  | The open door from the bedroom north of closed medicine drawers to the bathroom         |
+| 583  | The open door from the bedroom north of closed medicine drawers to the bathrooms        |
+| 584  | The open door from the bedroom north of the closed medicine drawer to a bathroom        |
+| 585  | The open door from the bedroom north of the closed medicine drawer to a bathroom.       |
+| 586  | The open door from the bedroom north of the closed medicine drawer to bathrooms         |
+| 587  | The open door from the bedroom north of the closed medicine drawer to bathrooms.        |
+| 588  | The open door from the bedroom north of the closed medicine drawer to the bathroom      |
+| 589  | The open door from the bedroom north of the closed medicine drawer to the bathroom.     |
+| 590  | The open door from the bedroom north of the closed medicine drawer to the bathrooms     |
+| 591  | The open door from the bedroom north of the closed medicine drawer to the bathrooms.    |
+| 592  | The open door from the bedroom north of the closed medicine drawers to a bathroom       |
+| 593  | The open door from the bedroom north of the closed medicine drawers to a bathroom.      |
+| 594  | The open door from the bedroom north of the closed medicine drawers to bathrooms        |
+| 595  | The open door from the bedroom north of the closed medicine drawers to the bathroom     |
+| 596  | The open door from the bedroom north of the closed medicine drawers to the bathrooms    |
+| 597  | The open door from the bedroom north of the closed medicine drawers to the bathrooms.   |
+| 598  | The open door from the bedroom north of the medicines closed drawer to the bathroom     |
+| 599  | The open door from the bedroom north of the medicines closed drawer to the bathrooms    |
+| 600  | The open door from the bedroom to a bathroom north of a closed medicine drawer          |
+| 601  | The open door from the bedroom to a bathroom north of a closed medicine drawer.         |
+| 602  | The open door from the bedroom to a bathroom north of the closed medicine drawer        |
+| 603  | The open door from the bedroom to a bathroom north of the closed medicine drawer.       |
+| 604  | The open door from the bedroom to a bathroom north of the closed medicine drawers       |
+| 605  | The open door from the bedroom to a bathroom north of the closed medicine drawers.      |
+| 606  | The open door from the bedroom to bathrooms north of a closed medicine drawer           |
+| 607  | The open door from the bedroom to bathrooms north of a closed medicine drawer.          |
+| 608  | The open door from the bedroom to bathrooms north of the closed medicine drawer         |
+| 609  | The open door from the bedroom to bathrooms north of the closed medicine drawers        |
+| 610  | The open door from the bedroom to the bathroom north of a closed medicine drawer        |
+| 611  | The open door from the bedroom to the bathroom north of a closed medicine drawer.       |
+| 612  | The open door from the bedroom to the bathroom north of closed medicine drawers         |
+| 613  | The open door from the bedroom to the bathroom north of closed medicine drawers.        |
+| 614  | The open door from the bedroom to the bathroom north of the closed medicine drawer      |
+| 615  | The open door from the bedroom to the bathroom north of the closed medicine drawer.     |
+| 616  | The open door from the bedroom to the bathroom north of the closed medicine drawers     |
+| 617  | The open door from the bedroom to the bathroom north of the closed medicine drawers.    |
+| 618  | The open door from the bedroom to the bathrooms north of a closed medicine drawer       |
+| 619  | The open door from the bedroom to the bathrooms north of a closed medicine drawer.      |
+| 620  | The open door from the bedroom to the bathrooms north of the closed medicine drawer     |
+| 621  | The open door from the bedroom to the bathrooms north of the closed medicine drawers    |
+| 622  | The open door from the bedrooms north of a closed medicine drawer to a bathroom         |
+| 623  | The open door from the bedrooms north of a closed medicine drawer to a bathroom.        |
+| 624  | The open door from the bedrooms north of a closed medicine drawer to bathrooms          |
+| 625  | The open door from the bedrooms north of a closed medicine drawer to bathrooms.         |
+| 626  | The open door from the bedrooms north of a closed medicine drawer to the bathroom       |
+| 627  | The open door from the bedrooms north of a closed medicine drawer to the bathroom.      |
+| 628  | The open door from the bedrooms north of a closed medicine drawer to the bathrooms      |
+| 629  | The open door from the bedrooms north of a closed medicine drawer to the bathrooms.     |
+| 630  | The open door from the bedrooms north of closed medicine drawers to a bathroom          |
+| 631  | The open door from the bedrooms north of closed medicine drawers to the bathroom        |
+| 632  | The open door from the bedrooms north of closed medicine drawers to the bathrooms       |
+| 633  | The open door from the bedrooms north of the closed medicine drawer to a bathroom       |
+| 634  | The open door from the bedrooms north of the closed medicine drawer to a bathroom.      |
+| 635  | The open door from the bedrooms north of the closed medicine drawer to bathrooms        |
+| 636  | The open door from the bedrooms north of the closed medicine drawer to bathrooms.       |
+| 637  | The open door from the bedrooms north of the closed medicine drawer to the bathroom     |
+| 638  | The open door from the bedrooms north of the closed medicine drawer to the bathrooms    |
+| 639  | The open door from the bedrooms north of the closed medicine drawer to the bathrooms.   |
+| 640  | The open door from the bedrooms north of the closed medicine drawers to a bathroom      |
+| 641  | The open door from the bedrooms north of the closed medicine drawers to bathrooms       |
+| 642  | The open door from the bedrooms north of the closed medicine drawers to the bathroom    |
+| 643  | The open door from the bedrooms north of the closed medicine drawers to the bathrooms   |
+| 644  | The open door from the bedrooms north of the closed medicine drawers to the bathrooms.  |
+| 645  | The open door from the bedrooms north of the medicines closed drawer to the bathrooms   |
+| 646  | The open door from the bedrooms to a bathroom north of a closed medicine drawer         |
+| 647  | The open door from the bedrooms to a bathroom north of a closed medicine drawer.        |
+| 648  | The open door from the bedrooms to a bathroom north of the closed medicine drawer       |
+| 649  | The open door from the bedrooms to a bathroom north of the closed medicine drawer.      |
+| 650  | The open door from the bedrooms to a bathroom north of the closed medicine drawers      |
+| 651  | The open door from the bedrooms to a bathroom north of the closed medicine drawers.     |
+| 652  | The open door from the bedrooms to bathrooms north of a closed medicine drawer          |
+| 653  | The open door from the bedrooms to bathrooms north of the closed medicine drawer        |
+| 654  | The open door from the bedrooms to bathrooms north of the closed medicine drawers       |
+| 655  | The open door from the bedrooms to the bathroom north of a closed medicine drawer       |
+| 656  | The open door from the bedrooms to the bathroom north of a closed medicine drawer.      |
+| 657  | The open door from the bedrooms to the bathroom north of closed medicine drawers        |
+| 658  | The open door from the bedrooms to the bathroom north of the closed medicine drawer     |
+| 659  | The open door from the bedrooms to the bathroom north of the closed medicine drawer.    |
+| 660  | The open door from the bedrooms to the bathroom north of the closed medicine drawers    |
+| 661  | The open door from the bedrooms to the bathroom north of the closed medicine drawers.   |
+| 662  | The open door from the bedrooms to the bathrooms north of a closed medicine drawer      |
+| 663  | The open door from the bedrooms to the bathrooms north of a closed medicine drawer.     |
+| 664  | The open door from the bedrooms to the bathrooms north of the closed medicine drawer    |
+| 665  | The open door from the bedrooms to the bathrooms north of the closed medicine drawers   |
+| 666  | The open door north of a closed medicine drawer from the bedroom to the bathroom        |
+| 667  | The open door north of a closed medicine drawer from the bedroom to the bathrooms       |
+| 668  | The open door north of a closed medicine drawer from the bedrooms to the bathrooms      |
+| 669  | The open door north of a closed medicine drawer to a bathroom from the bedrooms         |
+| 670  | The open door north of a closed medicine drawer to bathrooms from the bedrooms          |
+| 671  | The open door north of a closed medicine drawer to the bathroom from a bedroom          |
+| 672  | The open door north of a closed medicine drawer to the bathroom from bedrooms           |
+| 673  | The open door north of a closed medicine drawer to the bathroom from the bedroom        |
+| 674  | The open door north of a closed medicine drawer to the bathroom from the bedrooms       |
+| 675  | The open door north of a closed medicine drawer to the bathroom from the bedrooms.      |
+| 676  | The open door north of a closed medicine drawer to the bathrooms from the bedrooms      |
+| 677  | The open door north of closed medicine drawers to the bathroom from the bedrooms        |
+| 678  | The open door north of the closed medicine drawer to a bathroom from the bedrooms       |
+| 679  | The open door north of the closed medicine drawer to bathrooms from the bedrooms        |
+| 680  | The open door north of the closed medicine drawer to the bathroom from the bedroom      |
+| 681  | The open door north of the closed medicine drawer to the bathroom from the bedrooms     |
+| 682  | The open door north of the closed medicine drawer to the bathroom from the bedrooms.    |
+| 683  | The open door north of the closed medicine drawer to the bathrooms from the bedrooms    |
+| 684  | The open door north of the closed medicine drawers to a bathroom from the bedrooms      |
+| 685  | The open door north of the closed medicine drawers to the bathroom from the bedroom     |
+| 686  | The open door north of the closed medicine drawers to the bathroom from the bedrooms    |
+| 687  | The open door north of the closed medicine drawers to the bathroom from the bedrooms.   |
+| 688  | The open door north of the closed medicine drawers to the bathrooms from the bedrooms   |
+| 689  | The open door to a bathroom from a bedroom north of a closed medicine drawer            |
+| 690  | The open door to a bathroom from a bedroom north of a closed medicine drawer.           |
+| 691  | The open door to a bathroom from a bedroom north of the closed medicine drawer          |
+| 692  | The open door to a bathroom from a bedroom north of the closed medicine drawers         |
+| 693  | The open door to a bathroom from bedrooms north of a closed medicine drawer             |
+| 694  | The open door to a bathroom from bedrooms north of a closed medicine drawer.            |
+| 695  | The open door to a bathroom from bedrooms north of the closed medicine drawer           |
+| 696  | The open door to a bathroom from bedrooms north of the closed medicine drawers          |
+| 697  | The open door to a bathroom from the bedroom north of a closed medicine drawer          |
+| 698  | The open door to a bathroom from the bedroom north of a closed medicine drawer.         |
+| 699  | The open door to a bathroom from the bedroom north of the closed medicine drawer        |
+| 700  | The open door to a bathroom from the bedroom north of the closed medicine drawer.       |
+| 701  | The open door to a bathroom from the bedroom north of the closed medicine drawers       |
+| 702  | The open door to a bathroom from the bedroom north of the closed medicine drawers.      |
+| 703  | The open door to a bathroom from the bedrooms north of a closed medicine drawer         |
+| 704  | The open door to a bathroom from the bedrooms north of a closed medicine drawer.        |
+| 705  | The open door to a bathroom from the bedrooms north of the closed medicine drawer       |
+| 706  | The open door to a bathroom from the bedrooms north of the closed medicine drawer.      |
+| 707  | The open door to a bathroom from the bedrooms north of the closed medicine drawers      |
+| 708  | The open door to a bathroom from the bedrooms north of the closed medicine drawers.     |
+| 709  | The open door to a bathroom north of a closed medicine drawer from a bedroom            |
+| 710  | The open door to a bathroom north of a closed medicine drawer from a bedroom.           |
+| 711  | The open door to a bathroom north of a closed medicine drawer from bedrooms             |
+| 712  | The open door to a bathroom north of a closed medicine drawer from bedrooms.            |
+| 713  | The open door to a bathroom north of a closed medicine drawer from the bedroom          |
+| 714  | The open door to a bathroom north of a closed medicine drawer from the bedroom.         |
+| 715  | The open door to a bathroom north of a closed medicine drawer from the bedrooms         |
+| 716  | The open door to a bathroom north of a closed medicine drawer from the bedrooms.        |
+| 717  | The open door to a bathroom north of a medicines closed drawer from the bedrooms        |
+| 718  | The open door to a bathroom north of closed medicine drawers from a bedroom             |
+| 719  | The open door to a bathroom north of closed medicine drawers from bedrooms              |
+| 720  | The open door to a bathroom north of closed medicine drawers from bedrooms.             |
+| 721  | The open door to a bathroom north of closed medicine drawers from the bedroom           |
+| 722  | The open door to a bathroom north of closed medicine drawers from the bedrooms          |
+| 723  | The open door to a bathroom north of closed medicine drawers from the bedrooms.         |
+| 724  | The open door to a bathroom north of the closed medicine drawer from a bedroom          |
+| 725  | The open door to a bathroom north of the closed medicine drawer from a bedroom.         |
+| 726  | The open door to a bathroom north of the closed medicine drawer from bedrooms           |
+| 727  | The open door to a bathroom north of the closed medicine drawer from bedrooms.          |
+| 728  | The open door to a bathroom north of the closed medicine drawer from the bedroom        |
+| 729  | The open door to a bathroom north of the closed medicine drawer from the bedroom.       |
+| 730  | The open door to a bathroom north of the closed medicine drawer from the bedrooms       |
+| 731  | The open door to a bathroom north of the closed medicine drawer from the bedrooms.      |
+| 732  | The open door to a bathroom north of the closed medicine drawers from a bedroom         |
+| 733  | The open door to a bathroom north of the closed medicine drawers from a bedroom.        |
+| 734  | The open door to a bathroom north of the closed medicine drawers from bedrooms          |
+| 735  | The open door to a bathroom north of the closed medicine drawers from bedrooms.         |
+| 736  | The open door to a bathroom north of the closed medicine drawers from the bedroom       |
+| 737  | The open door to a bathroom north of the closed medicine drawers from the bedroom.      |
+| 738  | The open door to a bathroom north of the closed medicine drawers from the bedrooms      |
+| 739  | The open door to a bathroom north of the closed medicine drawers from the bedrooms.     |
+| 740  | The open door to a bathroom north of the medicines closed drawer from the bedroom       |
+| 741  | The open door to a bathroom north of the medicines closed drawer from the bedrooms      |
+| 742  | The open door to a bathroom north of the medicines closed drawer from the bedrooms.     |
+| 743  | The open door to a bathroom north of the medicines closed drawers from the bedrooms     |
+| 744  | The open door to bathrooms from a bedroom north of a closed medicine drawer             |
+| 745  | The open door to bathrooms from bedrooms north of a closed medicine drawer              |
+| 746  | The open door to bathrooms from the bedroom north of a closed medicine drawer           |
+| 747  | The open door to bathrooms from the bedroom north of a closed medicine drawer.          |
+| 748  | The open door to bathrooms from the bedroom north of the closed medicine drawer         |
+| 749  | The open door to bathrooms from the bedroom north of the closed medicine drawers        |
+| 750  | The open door to bathrooms from the bedroom north of the closed medicine drawers.       |
+| 751  | The open door to bathrooms from the bedrooms north of a closed medicine drawer          |
+| 752  | The open door to bathrooms from the bedrooms north of a closed medicine drawer.         |
+| 753  | The open door to bathrooms from the bedrooms north of the closed medicine drawer        |
+| 754  | The open door to bathrooms from the bedrooms north of the closed medicine drawers       |
+| 755  | The open door to bathrooms north of a closed medicine drawer from a bedroom             |
+| 756  | The open door to bathrooms north of a closed medicine drawer from a bedroom.            |
+| 757  | The open door to bathrooms north of a closed medicine drawer from bedrooms              |
+| 758  | The open door to bathrooms north of a closed medicine drawer from bedrooms.             |
+| 759  | The open door to bathrooms north of a closed medicine drawer from the bedroom           |
+| 760  | The open door to bathrooms north of a closed medicine drawer from the bedroom.          |
+| 761  | The open door to bathrooms north of a closed medicine drawer from the bedrooms          |
+| 762  | The open door to bathrooms north of a closed medicine drawer from the bedrooms.         |
+| 763  | The open door to bathrooms north of a medicines closed drawer from the bedrooms         |
+| 764  | The open door to bathrooms north of closed medicine drawers from the bedroom            |
+| 765  | The open door to bathrooms north of closed medicine drawers from the bedrooms           |
+| 766  | The open door to bathrooms north of closed medicine drawers from the bedrooms.          |
+| 767  | The open door to bathrooms north of the closed medicine drawer from a bedroom           |
+| 768  | The open door to bathrooms north of the closed medicine drawer from a bedroom.          |
+| 769  | The open door to bathrooms north of the closed medicine drawer from bedrooms            |
+| 770  | The open door to bathrooms north of the closed medicine drawer from bedrooms.           |
+| 771  | The open door to bathrooms north of the closed medicine drawer from the bedroom         |
+| 772  | The open door to bathrooms north of the closed medicine drawer from the bedrooms        |
+| 773  | The open door to bathrooms north of the closed medicine drawer from the bedrooms.       |
+| 774  | The open door to bathrooms north of the closed medicine drawers from a bedroom          |
+| 775  | The open door to bathrooms north of the closed medicine drawers from bedrooms           |
+| 776  | The open door to bathrooms north of the closed medicine drawers from bedrooms.          |
+| 777  | The open door to bathrooms north of the closed medicine drawers from the bedroom        |
+| 778  | The open door to bathrooms north of the closed medicine drawers from the bedrooms       |
+| 779  | The open door to bathrooms north of the closed medicine drawers from the bedrooms.      |
+| 780  | The open door to bathrooms north of the medicines closed drawer from the bedrooms       |
+| 781  | The open door to bathrooms north of the medicines closed drawers from the bedrooms      |
+| 782  | The open door to the bathroom from a bedroom north of a closed medicine drawer          |
+| 783  | The open door to the bathroom from a bedroom north of a closed medicine drawer.         |
+| 784  | The open door to the bathroom from a bedroom north of the closed medicine drawer        |
+| 785  | The open door to the bathroom from a bedroom north of the closed medicine drawer.       |
+| 786  | The open door to the bathroom from a bedroom north of the closed medicine drawers       |
+| 787  | The open door to the bathroom from a bedroom north of the closed medicine drawers.      |
+| 788  | The open door to the bathroom from bedrooms north of a closed medicine drawer           |
+| 789  | The open door to the bathroom from bedrooms north of a closed medicine drawer.          |
+| 790  | The open door to the bathroom from bedrooms north of the closed medicine drawer         |
+| 791  | The open door to the bathroom from bedrooms north of the closed medicine drawer.        |
+| 792  | The open door to the bathroom from bedrooms north of the closed medicine drawers        |
+| 793  | The open door to the bathroom from bedrooms north of the closed medicine drawers.       |
+| 794  | The open door to the bathroom from the bedroom north of a closed medicine drawer        |
+| 795  | The open door to the bathroom from the bedroom north of a closed medicine drawer.       |
+| 796  | The open door to the bathroom from the bedroom north of closed medicine drawers         |
+| 797  | The open door to the bathroom from the bedroom north of closed medicine drawers.        |
+| 798  | The open door to the bathroom from the bedroom north of the closed medicine drawer      |
+| 799  | The open door to the bathroom from the bedroom north of the closed medicine drawer.     |
+| 800  | The open door to the bathroom from the bedroom north of the closed medicine drawers     |
+| 801  | The open door to the bathroom from the bedroom north of the closed medicine drawers.    |
+| 802  | The open door to the bathroom from the bedroom north of the medicines closed drawer     |
+| 803  | The open door to the bathroom from the bedrooms north of a closed medicine drawer       |
+| 804  | The open door to the bathroom from the bedrooms north of a closed medicine drawer.      |
+| 805  | The open door to the bathroom from the bedrooms north of closed medicine drawers        |
+| 806  | The open door to the bathroom from the bedrooms north of closed medicine drawers.       |
+| 807  | The open door to the bathroom from the bedrooms north of the closed medicine drawer     |
+| 808  | The open door to the bathroom from the bedrooms north of the closed medicine drawer.    |
+| 809  | The open door to the bathroom from the bedrooms north of the closed medicine drawers    |
+| 810  | The open door to the bathroom from the bedrooms north of the closed medicine drawers.   |
+| 811  | The open door to the bathroom north of a closed medicine drawer from a bedroom          |
+| 812  | The open door to the bathroom north of a closed medicine drawer from a bedroom.         |
+| 813  | The open door to the bathroom north of a closed medicine drawer from bedrooms           |
+| 814  | The open door to the bathroom north of a closed medicine drawer from bedrooms.          |
+| 815  | The open door to the bathroom north of a closed medicine drawer from the bedroom        |
+| 816  | The open door to the bathroom north of a closed medicine drawer from the bedroom.       |
+| 817  | The open door to the bathroom north of a closed medicine drawer from the bedrooms       |
+| 818  | The open door to the bathroom north of a closed medicine drawer from the bedrooms.      |
+| 819  | The open door to the bathroom north of a closed medicine drawer, from the bedrooms      |
+| 820  | The open door to the bathroom north of a medicines closed drawer from a bedroom         |
+| 821  | The open door to the bathroom north of a medicines closed drawer from bedrooms          |
+| 822  | The open door to the bathroom north of a medicines closed drawer from the bedroom       |
+| 823  | The open door to the bathroom north of a medicines closed drawer from the bedrooms      |
+| 824  | The open door to the bathroom north of a medicines closed drawer from the bedrooms.     |
+| 825  | The open door to the bathroom north of closed medicine drawers from a bedroom           |
+| 826  | The open door to the bathroom north of closed medicine drawers from a bedroom.          |
+| 827  | The open door to the bathroom north of closed medicine drawers from bedrooms            |
+| 828  | The open door to the bathroom north of closed medicine drawers from bedrooms.           |
+| 829  | The open door to the bathroom north of closed medicine drawers from the bedroom         |
+| 830  | The open door to the bathroom north of closed medicine drawers from the bedrooms        |
+| 831  | The open door to the bathroom north of closed medicine drawers from the bedrooms.       |
+| 832  | The open door to the bathroom north of the closed medicine drawer from a bedroom        |
+| 833  | The open door to the bathroom north of the closed medicine drawer from a bedroom.       |
+| 834  | The open door to the bathroom north of the closed medicine drawer from bedrooms         |
+| 835  | The open door to the bathroom north of the closed medicine drawer from bedrooms.        |
+| 836  | The open door to the bathroom north of the closed medicine drawer from the bedroom      |
+| 837  | The open door to the bathroom north of the closed medicine drawer from the bedroom.     |
+| 838  | The open door to the bathroom north of the closed medicine drawer from the bedrooms     |
+| 839  | The open door to the bathroom north of the closed medicine drawer from the bedrooms.    |
+| 840  | The open door to the bathroom north of the closed medicine drawer, from the bedrooms    |
+| 841  | The open door to the bathroom north of the closed medicine drawers from a bedroom       |
+| 842  | The open door to the bathroom north of the closed medicine drawers from a bedroom.      |
+| 843  | The open door to the bathroom north of the closed medicine drawers from bedrooms        |
+| 844  | The open door to the bathroom north of the closed medicine drawers from bedrooms.       |
+| 845  | The open door to the bathroom north of the closed medicine drawers from the bedroom     |
+| 846  | The open door to the bathroom north of the closed medicine drawers from the bedroom.    |
+| 847  | The open door to the bathroom north of the closed medicine drawers from the bedrooms    |
+| 848  | The open door to the bathroom north of the closed medicine drawers from the bedrooms.   |
+| 849  | The open door to the bathroom north of the closed medicine drawers, from the bedrooms   |
+| 850  | The open door to the bathroom north of the medicines closed drawer from a bedroom       |
+| 851  | The open door to the bathroom north of the medicines closed drawer from bedrooms        |
+| 852  | The open door to the bathroom north of the medicines closed drawer from bedrooms.       |
+| 853  | The open door to the bathroom north of the medicines closed drawer from the bedroom     |
+| 854  | The open door to the bathroom north of the medicines closed drawer from the bedrooms    |
+| 855  | The open door to the bathroom north of the medicines closed drawer from the bedrooms.   |
+| 856  | The open door to the bathroom north of the medicines closed drawers from a bedroom      |
+| 857  | The open door to the bathroom north of the medicines closed drawers from bedrooms       |
+| 858  | The open door to the bathroom north of the medicines closed drawers from the bedroom    |
+| 859  | The open door to the bathroom north of the medicines closed drawers from the bedrooms   |
+| 860  | The open door to the bathroom north of the medicines closed drawers from the bedrooms.  |
+| 861  | The open door to the bathrooms from a bedroom north of a closed medicine drawer         |
+| 862  | The open door to the bathrooms from bedrooms north of a closed medicine drawer          |
+| 863  | The open door to the bathrooms from the bedroom north of a closed medicine drawer       |
+| 864  | The open door to the bathrooms from the bedroom north of a closed medicine drawer.      |
+| 865  | The open door to the bathrooms from the bedroom north of the closed medicine drawer     |
+| 866  | The open door to the bathrooms from the bedroom north of the closed medicine drawers    |
+| 867  | The open door to the bathrooms from the bedroom north of the closed medicine drawers.   |
+| 868  | The open door to the bathrooms from the bedrooms north of a closed medicine drawer      |
+| 869  | The open door to the bathrooms from the bedrooms north of a closed medicine drawer.     |
+| 870  | The open door to the bathrooms from the bedrooms north of the closed medicine drawer    |
+| 871  | The open door to the bathrooms from the bedrooms north of the closed medicine drawers   |
+| 872  | The open door to the bathrooms north of a closed medicine drawer from a bedroom         |
+| 873  | The open door to the bathrooms north of a closed medicine drawer from a bedroom.        |
+| 874  | The open door to the bathrooms north of a closed medicine drawer from bedrooms          |
+| 875  | The open door to the bathrooms north of a closed medicine drawer from bedrooms.         |
+| 876  | The open door to the bathrooms north of a closed medicine drawer from the bedroom       |
+| 877  | The open door to the bathrooms north of a closed medicine drawer from the bedroom.      |
+| 878  | The open door to the bathrooms north of a closed medicine drawer from the bedrooms      |
+| 879  | The open door to the bathrooms north of a closed medicine drawer from the bedrooms.     |
+| 880  | The open door to the bathrooms north of a medicines closed drawer from the bedrooms     |
+| 881  | The open door to the bathrooms north of closed medicine drawers from the bedroom        |
+| 882  | The open door to the bathrooms north of closed medicine drawers from the bedrooms       |
+| 883  | The open door to the bathrooms north of closed medicine drawers from the bedrooms.      |
+| 884  | The open door to the bathrooms north of the closed medicine drawer from a bedroom       |
+| 885  | The open door to the bathrooms north of the closed medicine drawer from a bedroom.      |
+| 886  | The open door to the bathrooms north of the closed medicine drawer from bedrooms        |
+| 887  | The open door to the bathrooms north of the closed medicine drawer from bedrooms.       |
+| 888  | The open door to the bathrooms north of the closed medicine drawer from the bedroom     |
+| 889  | The open door to the bathrooms north of the closed medicine drawer from the bedrooms    |
+| 890  | The open door to the bathrooms north of the closed medicine drawer from the bedrooms.   |
+| 891  | The open door to the bathrooms north of the closed medicine drawers from a bedroom      |
+| 892  | The open door to the bathrooms north of the closed medicine drawers from bedrooms       |
+| 893  | The open door to the bathrooms north of the closed medicine drawers from bedrooms.      |
+| 894  | The open door to the bathrooms north of the closed medicine drawers from the bedroom    |
+| 895  | The open door to the bathrooms north of the closed medicine drawers from the bedrooms   |
+| 896  | The open door to the bathrooms north of the closed medicine drawers from the bedrooms.  |
+| 897  | The open door to the bathrooms north of the medicines closed drawer from the bedrooms   |
+| 898  | The open door to the bathrooms north of the medicines closed drawers from the bedrooms  |
+| 899  | The open doors from a bedroom north of a closed medicine drawer to a bathroom           |
+| 900  | The open doors from a bedroom north of a closed medicine drawer to the bathroom         |
+| 901  | The open doors from a bedroom north of a closed medicine drawer to the bathrooms        |
+| 902  | The open doors from a bedroom north of the closed medicine drawer to the bathroom       |
+| 903  | The open doors from a bedroom north of the closed medicine drawer to the bathrooms      |
+| 904  | The open doors from a bedroom north of the closed medicine drawers to the bathroom      |
+| 905  | The open doors from a bedroom north of the closed medicine drawers to the bathrooms     |
+| 906  | The open doors from a bedroom to the bathroom north of a closed medicine drawer         |
+| 907  | The open doors from a bedroom to the bathroom north of the closed medicine drawer       |
+| 908  | The open doors from bedrooms north of a closed medicine drawer to a bathroom            |
+| 909  | The open doors from bedrooms north of a closed medicine drawer to bathrooms             |
+| 910  | The open doors from bedrooms north of a closed medicine drawer to the bathroom          |
+| 911  | The open doors from bedrooms north of a closed medicine drawer to the bathrooms         |
+| 912  | The open doors from bedrooms north of a closed medicine drawer to the bathrooms.        |
+| 913  | The open doors from bedrooms north of the closed medicine drawer to a bathroom          |
+| 914  | The open doors from bedrooms north of the closed medicine drawer to the bathroom        |
+| 915  | The open doors from bedrooms north of the closed medicine drawer to the bathrooms       |
+| 916  | The open doors from bedrooms north of the closed medicine drawers to a bathroom         |
+| 917  | The open doors from bedrooms north of the closed medicine drawers to the bathroom       |
+| 918  | The open doors from bedrooms north of the closed medicine drawers to the bathrooms      |
+| 919  | The open doors from bedrooms to a bathroom north of a closed medicine drawer            |
+| 920  | The open doors from bedrooms to the bathroom north of a closed medicine drawer          |
+| 921  | The open doors from bedrooms to the bathroom north of a closed medicine drawer.         |
+| 922  | The open doors from bedrooms to the bathroom north of the closed medicine drawer        |
+| 923  | The open doors from bedrooms to the bathroom north of the closed medicine drawers       |
+| 924  | The open doors from bedrooms, to the bathrooms north of a closed medicine drawer        |
+| 925  | The open doors from the bedroom north of a closed medicine drawer to a bathroom         |
+| 926  | The open doors from the bedroom north of a closed medicine drawer to bathrooms          |
+| 927  | The open doors from the bedroom north of a closed medicine drawer to the bathroom       |
+| 928  | The open doors from the bedroom north of a closed medicine drawer to the bathrooms      |
+| 929  | The open doors from the bedroom north of a closed medicine drawer to the bathrooms.     |
+| 930  | The open doors from the bedroom north of closed medicine drawers to the bathrooms       |
+| 931  | The open doors from the bedroom north of the closed medicine drawer to a bathroom       |
+| 932  | The open doors from the bedroom north of the closed medicine drawer to bathrooms        |
+| 933  | The open doors from the bedroom north of the closed medicine drawer to the bathroom     |
+| 934  | The open doors from the bedroom north of the closed medicine drawer to the bathrooms    |
+| 935  | The open doors from the bedroom north of the closed medicine drawer to the bathrooms.   |
+| 936  | The open doors from the bedroom north of the closed medicine drawers to a bathroom      |
+| 937  | The open doors from the bedroom north of the closed medicine drawers to bathrooms       |
+| 938  | The open doors from the bedroom north of the closed medicine drawers to the bathroom    |
+| 939  | The open doors from the bedroom north of the closed medicine drawers to the bathrooms   |
+| 940  | The open doors from the bedroom north of the closed medicine drawers to the bathrooms.  |
+| 941  | The open doors from the bedroom to a bathroom north of a closed medicine drawer         |
+| 942  | The open doors from the bedroom to a bathroom north of the closed medicine drawer       |
+| 943  | The open doors from the bedroom to bathrooms north of a closed medicine drawer          |
+| 944  | The open doors from the bedroom to the bathroom north of a closed medicine drawer       |
+| 945  | The open doors from the bedroom to the bathroom north of a closed medicine drawer.      |
+| 946  | The open doors from the bedroom to the bathroom north of the closed medicine drawer     |
+| 947  | The open doors from the bedroom to the bathroom north of the closed medicine drawer.    |
+| 948  | The open doors from the bedroom to the bathroom north of the closed medicine drawers    |
+| 949  | The open doors from the bedroom to the bathroom north of the closed medicine drawers.   |
+| 950  | The open doors from the bedroom to the bathrooms north of a closed medicine drawer      |
+| 951  | The open doors from the bedrooms north of a closed medicine drawer to a bathroom        |
+| 952  | The open doors from the bedrooms north of a closed medicine drawer to bathrooms         |
+| 953  | The open doors from the bedrooms north of a closed medicine drawer to the bathroom      |
+| 954  | The open doors from the bedrooms north of a closed medicine drawer to the bathrooms     |
+| 955  | The open doors from the bedrooms north of a closed medicine drawer to the bathrooms.    |
+| 956  | The open doors from the bedrooms north of the closed medicine drawer to a bathroom      |
+| 957  | The open doors from the bedrooms north of the closed medicine drawer to bathrooms       |
+| 958  | The open doors from the bedrooms north of the closed medicine drawer to the bathroom    |
+| 959  | The open doors from the bedrooms north of the closed medicine drawer to the bathrooms   |
+| 960  | The open doors from the bedrooms north of the closed medicine drawer to the bathrooms.  |
+| 961  | The open doors from the bedrooms north of the closed medicine drawers to a bathroom     |
+| 962  | The open doors from the bedrooms north of the closed medicine drawers to the bathroom   |
+| 963  | The open doors from the bedrooms north of the closed medicine drawers to the bathrooms  |
+| 964  | The open doors from the bedrooms north of the closed medicine drawers to the bathrooms. |
+| 965  | The open doors from the bedrooms to a bathroom north of a closed medicine drawer        |
+| 966  | The open doors from the bedrooms to the bathroom north of a closed medicine drawer      |
+| 967  | The open doors from the bedrooms to the bathroom north of a closed medicine drawer.     |
+| 968  | The open doors from the bedrooms to the bathroom north of the closed medicine drawer    |
+| 969  | The open doors from the bedrooms to the bathroom north of the closed medicine drawer.   |
+| 970  | The open doors from the bedrooms to the bathroom north of the closed medicine drawers   |
+| 971  | The open doors from the bedrooms to the bathroom north of the closed medicine drawers.  |
+| 972  | The open doors north of a closed medicine drawer to a bathroom from the bedrooms        |
+| 973  | The open doors north of a closed medicine drawer to the bathroom from the bedrooms      |
+| 974  | The open doors north of the closed medicine drawer to the bathroom from the bedrooms    |
+| 975  | The open doors north of the closed medicine drawers to the bathroom from the bedrooms   |
+| 976  | The open doors to a bathroom from the bedroom north of a closed medicine drawer         |
+| 977  | The open doors to a bathroom from the bedroom north of a closed medicine drawer.        |
+| 978  | The open doors to a bathroom from the bedroom north of the closed medicine drawer       |
+| 979  | The open doors to a bathroom from the bedroom north of the closed medicine drawers      |
+| 980  | The open doors to a bathroom from the bedrooms north of a closed medicine drawer        |
+| 981  | The open doors to a bathroom from the bedrooms north of the closed medicine drawer      |
+| 982  | The open doors to a bathroom from the bedrooms north of the closed medicine drawers     |
+| 983  | The open doors to a bathroom north of a closed medicine drawer from a bedroom           |
+| 984  | The open doors to a bathroom north of a closed medicine drawer from a bedroom.          |
+| 985  | The open doors to a bathroom north of a closed medicine drawer from bedrooms            |
+| 986  | The open doors to a bathroom north of a closed medicine drawer from bedrooms.           |
+| 987  | The open doors to a bathroom north of a closed medicine drawer from the bedroom         |
+| 988  | The open doors to a bathroom north of a closed medicine drawer from the bedrooms        |
+| 989  | The open doors to a bathroom north of a closed medicine drawer from the bedrooms.       |
+| 990  | The open doors to a bathroom north of a medicines closed drawer from the bedrooms       |
+| 991  | The open doors to a bathroom north of closed medicine drawers from the bedrooms         |
+| 992  | The open doors to a bathroom north of closed medicine drawers from the bedrooms.        |
+| 993  | The open doors to a bathroom north of the closed medicine drawer from a bedroom         |
+| 994  | The open doors to a bathroom north of the closed medicine drawer from bedrooms          |
+| 995  | The open doors to a bathroom north of the closed medicine drawer from bedrooms.         |
+| 996  | The open doors to a bathroom north of the closed medicine drawer from the bedroom       |
+| 997  | The open doors to a bathroom north of the closed medicine drawer from the bedrooms      |
+| 998  | The open doors to a bathroom north of the closed medicine drawer from the bedrooms.     |
+| 999  | The open doors to a bathroom north of the closed medicine drawers from a bedroom        |
+| 1000 | The open doors to a bathroom north of the closed medicine drawers from bedrooms         |
+| 1001 | The open doors to a bathroom north of the closed medicine drawers from bedrooms.        |
+| 1002 | The open doors to a bathroom north of the closed medicine drawers from the bedroom      |
+| 1003 | The open doors to a bathroom north of the closed medicine drawers from the bedrooms     |
+| 1004 | The open doors to a bathroom north of the closed medicine drawers from the bedrooms.    |
+| 1005 | The open doors to a bathroom north of the medicines closed drawer from the bedrooms     |
+| 1006 | The open doors to a bathroom north of the medicines closed drawers from the bedrooms    |
+| 1007 | The open doors to bathrooms from the bedroom north of a closed medicine drawer          |
+| 1008 | The open doors to bathrooms from the bedrooms north of a closed medicine drawer         |
+| 1009 | The open doors to bathrooms north of a closed medicine drawer from a bedroom            |
+| 1010 | The open doors to bathrooms north of a closed medicine drawer from bedrooms             |
+| 1011 | The open doors to bathrooms north of a closed medicine drawer from bedrooms.            |
+| 1012 | The open doors to bathrooms north of a closed medicine drawer from the bedroom          |
+| 1013 | The open doors to bathrooms north of a closed medicine drawer from the bedrooms         |
+| 1014 | The open doors to bathrooms north of a closed medicine drawer from the bedrooms.        |
+| 1015 | The open doors to bathrooms north of closed medicine drawers from the bedrooms          |
+| 1016 | The open doors to bathrooms north of the closed medicine drawer from a bedroom          |
+| 1017 | The open doors to bathrooms north of the closed medicine drawer from bedrooms           |
+| 1018 | The open doors to bathrooms north of the closed medicine drawer from the bedroom        |
+| 1019 | The open doors to bathrooms north of the closed medicine drawer from the bedrooms       |
+| 1020 | The open doors to bathrooms north of the closed medicine drawer from the bedrooms.      |
+| 1021 | The open doors to bathrooms north of the closed medicine drawers from a bedroom         |
+| 1022 | The open doors to bathrooms north of the closed medicine drawers from bedrooms          |
+| 1023 | The open doors to bathrooms north of the closed medicine drawers from the bedroom       |
+| 1024 | The open doors to bathrooms north of the closed medicine drawers from the bedrooms      |
+| 1025 | The open doors to bathrooms north of the closed medicine drawers from the bedrooms.     |
+| 1026 | The open doors to bathrooms north of the medicines closed drawer from the bedrooms      |
+| 1027 | The open doors to the bathroom from a bedroom north of a closed medicine drawer         |
+| 1028 | The open doors to the bathroom from a bedroom north of a closed medicine drawer.        |
+| 1029 | The open doors to the bathroom from a bedroom north of the closed medicine drawer       |
+| 1030 | The open doors to the bathroom from a bedroom north of the closed medicine drawers      |
+| 1031 | The open doors to the bathroom from bedrooms north of a closed medicine drawer          |
+| 1032 | The open doors to the bathroom from bedrooms north of a closed medicine drawer.         |
+| 1033 | The open doors to the bathroom from bedrooms north of the closed medicine drawer        |
+| 1034 | The open doors to the bathroom from bedrooms north of the closed medicine drawers       |
+| 1035 | The open doors to the bathroom from the bedroom north of a closed medicine drawer       |
+| 1036 | The open doors to the bathroom from the bedroom north of a closed medicine drawer.      |
+| 1037 | The open doors to the bathroom from the bedroom north of the closed medicine drawer     |
+| 1038 | The open doors to the bathroom from the bedroom north of the closed medicine drawer.    |
+| 1039 | The open doors to the bathroom from the bedroom north of the closed medicine drawers    |
+| 1040 | The open doors to the bathroom from the bedroom north of the closed medicine drawers.   |
+| 1041 | The open doors to the bathroom from the bedrooms north of a closed medicine drawer      |
+| 1042 | The open doors to the bathroom from the bedrooms north of a closed medicine drawer.     |
+| 1043 | The open doors to the bathroom from the bedrooms north of the closed medicine drawer    |
+| 1044 | The open doors to the bathroom from the bedrooms north of the closed medicine drawer.   |
+| 1045 | The open doors to the bathroom from the bedrooms north of the closed medicine drawers   |
+| 1046 | The open doors to the bathroom from the bedrooms north of the closed medicine drawers.  |
+| 1047 | The open doors to the bathroom north of a closed medicine drawer from a bedroom         |
+| 1048 | The open doors to the bathroom north of a closed medicine drawer from a bedroom.        |
+| 1049 | The open doors to the bathroom north of a closed medicine drawer from bedrooms          |
+| 1050 | The open doors to the bathroom north of a closed medicine drawer from bedrooms.         |
+| 1051 | The open doors to the bathroom north of a closed medicine drawer from the bedroom       |
+| 1052 | The open doors to the bathroom north of a closed medicine drawer from the bedroom.      |
+| 1053 | The open doors to the bathroom north of a closed medicine drawer from the bedrooms      |
+| 1054 | The open doors to the bathroom north of a closed medicine drawer from the bedrooms.     |
+| 1055 | The open doors to the bathroom north of a medicines closed drawer from the bedrooms     |
+| 1056 | The open doors to the bathroom north of closed medicine drawers from a bedroom          |
+| 1057 | The open doors to the bathroom north of closed medicine drawers from bedrooms           |
+| 1058 | The open doors to the bathroom north of closed medicine drawers from bedrooms.          |
+| 1059 | The open doors to the bathroom north of closed medicine drawers from the bedroom        |
+| 1060 | The open doors to the bathroom north of closed medicine drawers from the bedrooms       |
+| 1061 | The open doors to the bathroom north of closed medicine drawers from the bedrooms.      |
+| 1062 | The open doors to the bathroom north of the closed medicine drawer from a bedroom       |
+| 1063 | The open doors to the bathroom north of the closed medicine drawer from a bedroom.      |
+| 1064 | The open doors to the bathroom north of the closed medicine drawer from bedrooms        |
+| 1065 | The open doors to the bathroom north of the closed medicine drawer from bedrooms.       |
+| 1066 | The open doors to the bathroom north of the closed medicine drawer from the bedroom     |
+| 1067 | The open doors to the bathroom north of the closed medicine drawer from the bedroom.    |
+| 1068 | The open doors to the bathroom north of the closed medicine drawer from the bedrooms    |
+| 1069 | The open doors to the bathroom north of the closed medicine drawer from the bedrooms.   |
+| 1070 | The open doors to the bathroom north of the closed medicine drawers from a bedroom      |
+| 1071 | The open doors to the bathroom north of the closed medicine drawers from a bedroom.     |
+| 1072 | The open doors to the bathroom north of the closed medicine drawers from bedrooms       |
+| 1073 | The open doors to the bathroom north of the closed medicine drawers from bedrooms.      |
+| 1074 | The open doors to the bathroom north of the closed medicine drawers from the bedroom    |
+| 1075 | The open doors to the bathroom north of the closed medicine drawers from the bedroom.   |
+| 1076 | The open doors to the bathroom north of the closed medicine drawers from the bedrooms   |
+| 1077 | The open doors to the bathroom north of the closed medicine drawers from the bedrooms.  |
+| 1078 | The open doors to the bathroom north of the medicines closed drawer from the bedroom    |
+| 1079 | The open doors to the bathroom north of the medicines closed drawer from the bedrooms   |
+| 1080 | The open doors to the bathroom north of the medicines closed drawer from the bedrooms.  |
+| 1081 | The open doors to the bathroom north of the medicines closed drawers from the bedrooms  |
+| 1082 | The open doors to the bathrooms from the bedroom north of a closed medicine drawer      |
+| 1083 | The open doors to the bathrooms from the bedrooms north of a closed medicine drawer     |
+| 1084 | The open doors to the bathrooms north of a closed medicine drawer from a bedroom        |
+| 1085 | The open doors to the bathrooms north of a closed medicine drawer from bedrooms         |
+| 1086 | The open doors to the bathrooms north of a closed medicine drawer from bedrooms.        |
+| 1087 | The open doors to the bathrooms north of a closed medicine drawer from the bedroom      |
+| 1088 | The open doors to the bathrooms north of a closed medicine drawer from the bedrooms     |
+| 1089 | The open doors to the bathrooms north of a closed medicine drawer from the bedrooms.    |
+| 1090 | The open doors to the bathrooms north of closed medicine drawers from the bedrooms      |
+| 1091 | The open doors to the bathrooms north of the closed medicine drawer from a bedroom      |
+| 1092 | The open doors to the bathrooms north of the closed medicine drawer from bedrooms       |
+| 1093 | The open doors to the bathrooms north of the closed medicine drawer from bedrooms.      |
+| 1094 | The open doors to the bathrooms north of the closed medicine drawer from the bedroom    |
+| 1095 | The open doors to the bathrooms north of the closed medicine drawer from the bedrooms   |
+| 1096 | The open doors to the bathrooms north of the closed medicine drawer from the bedrooms.  |
+| 1097 | The open doors to the bathrooms north of the closed medicine drawers from a bedroom     |
+| 1098 | The open doors to the bathrooms north of the closed medicine drawers from bedrooms      |
+| 1099 | The open doors to the bathrooms north of the closed medicine drawers from the bedroom   |
+| 1100 | The open doors to the bathrooms north of the closed medicine drawers from the bedrooms  |
+| 1101 | The open doors to the bathrooms north of the closed medicine drawers from the bedrooms. |
+| 1102 | The open doors to the bathrooms north of the medicines closed drawer from the bedrooms  |
++------+-----------------------------------------------------------------------------------------+
+

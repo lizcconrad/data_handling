@@ -1,0 +1,221 @@
+GRAPH NAME: idDrawer1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------+
+|                      GOLD OUTPUTS                      |
++-------------------------------------------+------------+
+| Gold Output                               | Generated? |
++-------------------------------------------+------------+
+| the closed drawer near the immovable desk | True       |
++-------------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idDrawer1 | True         | True          | Covered          | Included          |
+| closed    | True         | True          | Covered          | Included          |
+| idDesk1   | True         | True          | Covered          | Included          |
+| yes       | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------+
+|                                                      EDGE METRICS                                                      |
++----------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent    | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+| idDrawer1_prop_idOpenState | idDrawer1 | closed  | True         | True          | Covered          | Included          |
+| isNear                     | idDrawer1 | idDesk1 | True         | True          | Covered          | Included          |
+| idDesk1_prop_idImmovable   | idDesk1   | yes     | True         | True          | Covered          | Included          |
++----------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h855                                                                      |
+|               |   INDEX: x853                                                                    |
+|               |   RELS: < [ _near_p LBL: h874 ARG0: e871 ARG1: u872 ARG2: i873 ]                 |
+|               |           [ def_udef_a_q LBL: h878 ARG0: x875 RSTR: h876 BODY: h877 ]            |
+|               |           [ _immovable_a_1 LBL: h870 ARG0: e868 ARG1: u869 ]                     |
+|               |           [ _desk_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|               |           [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >                     |
+|               |   HCONS: < h876 qeq h860 >                                                       |
+|               |   EQS: < h870 eq h860 u869 eq x859 x875 eq x859 h874 eq h879 i873 eq x875 h858   |
+|               | eq h855 u857 eq x853 h874 eq h855 u872 eq x853 >                                 |
+|               |   SLOTS: < ARG1: i854 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h855                                                                      |
+|               |   INDEX: x853                                                                    |
+|               |   RELS: < [ _near_p LBL: h855 ARG0: e871 ARG1: x853 ARG2: x859 ]                 |
+|               |           [ def_udef_a_q LBL: h878 ARG0: x859 RSTR: h876 BODY: h877 ]            |
+|               |           [ _immovable_a_1 LBL: h860 ARG0: e868 ARG1: x859 ]                     |
+|               |           [ _desk_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h855 ARG0: e856 ARG1: x853 ]                        |
+|               |           [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >                     |
+|               |   HCONS: < h876 qeq h860 >                                                       |
+|               |   SLOTS: < ARG1: i854 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h888                                                                      |
+|               |   INDEX: e885                                                                    |
+|               |   RELS: < [ unknown LBL: h884 ARG: x853 ARG0: e885 ]                             |
+|               |           [ def_udef_a_q LBL: h883 ARG0: x853 RSTR: h881 BODY: h882 ]            |
+|               |           [ _near_p LBL: h855 ARG0: e871 ARG1: x853 ARG2: x859 ]                 |
+|               |           [ def_udef_a_q LBL: h878 ARG0: x859 RSTR: h876 BODY: h877 ]            |
+|               |           [ _immovable_a_1 LBL: h860 ARG0: e868 ARG1: x859 ]                     |
+|               |           [ _desk_n_1 LBL: h860 ARG0: x859 ]                                     |
+|               |           [ _closed_a_1 LBL: h855 ARG0: e856 ARG1: x853 ]                        |
+|               |           [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >                     |
+|               |   HCONS: < h876 qeq h860 h881 qeq h855 h888 qeq h884 > ]                         |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                   |
++-----------+-----------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                      |
++-----------+-----------------------------------------------------------------------+
+| idDrawer1 | [ TOP: h855                                                           |
+|           |   INDEX: x853                                                         |
+|           |   RELS: < [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >          |
+|           |   SLOTS: < ARG1: i854 > ]                                             |
++-----------+-----------------------------------------------------------------------+
+| closed    | [ TOP: h858                                                           |
+|           |   INDEX: e856                                                         |
+|           |   RELS: < [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ] >           |
+|           |   SLOTS: < ARG1: u857 > ]                                             |
++-----------+-----------------------------------------------------------------------+
+| idDesk1   | [ TOP: h860                                                           |
+|           |   INDEX: x859                                                         |
+|           |   RELS: < [ _desk_n_1 LBL: h860 ARG0: x859 ] > ]                      |
++-----------+-----------------------------------------------------------------------+
+| yes       | [ TOP: h864                                                           |
+|           |   INDEX: e861                                                         |
+|           |   RELS: < [ _true_a_of LBL: h864 ARG0: e861 ARG1: u862 ARG2: u863 ] > |
+|           |   SLOTS: < ARG1: u862 ARG2: u863 > ]                                  |
++-----------+-----------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+|                                                             EDGE SEMENTS                                                            |
++----------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| Edge                       | Parent    | Child   | Generated SEMENT                                                                 |
++----------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| idDrawer1_prop_idOpenState | idDrawer1 | closed  | [ TOP: h855                                                                      |
+|                            |           |         |   INDEX: x853                                                                    |
+|                            |           |         |   RELS: < [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|                            |           |         |           [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >                     |
+|                            |           |         |   EQS: < h858 eq h855 u857 eq x853 >                                             |
+|                            |           |         |   SLOTS: < ARG1: i854 > ]                                                        |
++----------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| isNear                     | idDrawer1 | idDesk1 | [ TOP: h855                                                                      |
+|                            |           |         |   INDEX: x853                                                                    |
+|                            |           |         |   RELS: < [ _near_p LBL: h874 ARG0: e871 ARG1: u872 ARG2: i873 ]                 |
+|                            |           |         |           [ def_udef_a_q LBL: h878 ARG0: x875 RSTR: h876 BODY: h877 ]            |
+|                            |           |         |           [ _immovable_a_1 LBL: h870 ARG0: e868 ARG1: u869 ]                     |
+|                            |           |         |           [ _desk_n_1 LBL: h860 ARG0: x859 ]                                     |
+|                            |           |         |           [ _closed_a_1 LBL: h858 ARG0: e856 ARG1: u857 ]                        |
+|                            |           |         |           [ _drawer_n_of LBL: h855 ARG0: x853 ARG1: i854 ] >                     |
+|                            |           |         |   HCONS: < h876 qeq h860 >                                                       |
+|                            |           |         |   EQS: < h870 eq h860 u869 eq x859 x875 eq x859 h874 eq h879 i873 eq x875 h858   |
+|                            |           |         | eq h855 u857 eq x853 h874 eq h855 u872 eq x853 >                                 |
+|                            |           |         |   SLOTS: < ARG1: i854 > ]                                                        |
++----------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| idDesk1_prop_idImmovable   | idDesk1   | yes     | [ TOP: h860                                                                      |
+|                            |           |         |   INDEX: x859                                                                    |
+|                            |           |         |   RELS: < [ _immovable_a_1 LBL: h870 ARG0: e868 ARG1: u869 ]                     |
+|                            |           |         |           [ _desk_n_1 LBL: h860 ARG0: x859 ] >                                   |
+|                            |           |         |   EQS: < h870 eq h860 u869 eq x859 > ]                                           |
++----------------------------+-----------+---------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------+
+|               GENERATED ENGLISH TEXT              |
++----+----------------------------------------------+
+| #  | Generated Text                               |
++----+----------------------------------------------+
+| 1  | A closed drawer near an immovable desk       |
+| 2  | A closed drawer near an immovable desk.      |
+| 3  | A closed drawer near immovable desks         |
+| 4  | A closed drawer near immovable desks.        |
+| 5  | A closed drawer near the immovable desk      |
+| 6  | A closed drawer near the immovable desk.     |
+| 7  | A closed drawer near the immovable desks     |
+| 8  | A closed drawer near the immovable desks.    |
+| 9  | A closed drawer, near an immovable desk      |
+| 10 | A closed drawer, near immovable desks        |
+| 11 | A closed drawer, near the immovable desk     |
+| 12 | A closed drawer, near the immovable desks    |
+| 13 | Closed drawer near an immovable desk         |
+| 14 | Closed drawer near an immovable desk.        |
+| 15 | Closed drawer near immovable desks           |
+| 16 | Closed drawer near immovable desks.          |
+| 17 | Closed drawer near the immovable desk        |
+| 18 | Closed drawer near the immovable desk.       |
+| 19 | Closed drawer near the immovable desks       |
+| 20 | Closed drawer near the immovable desks.      |
+| 21 | Closed drawer, near an immovable desk        |
+| 22 | Closed drawer, near immovable desks          |
+| 23 | Closed drawer, near the immovable desk       |
+| 24 | Closed drawer, near the immovable desks      |
+| 25 | Closed drawers near an immovable desk        |
+| 26 | Closed drawers near an immovable desk.       |
+| 27 | Closed drawers near immovable desks          |
+| 28 | Closed drawers near immovable desks.         |
+| 29 | Closed drawers near the immovable desk       |
+| 30 | Closed drawers near the immovable desk.      |
+| 31 | Closed drawers near the immovable desks      |
+| 32 | Closed drawers near the immovable desks.     |
+| 33 | Closed drawers, near an immovable desk       |
+| 34 | Closed drawers, near immovable desks         |
+| 35 | Closed drawers, near the immovable desk      |
+| 36 | Closed drawers, near the immovable desks     |
+| 37 | The closed drawer near an immovable desk     |
+| 38 | The closed drawer near an immovable desk.    |
+| 39 | The closed drawer near immovable desks       |
+| 40 | The closed drawer near immovable desks.      |
+| 41 | The closed drawer near the immovable desk    |
+| 42 | The closed drawer near the immovable desk.   |
+| 43 | The closed drawer near the immovable desks   |
+| 44 | The closed drawer near the immovable desks.  |
+| 45 | The closed drawer, near an immovable desk    |
+| 46 | The closed drawer, near immovable desks      |
+| 47 | The closed drawer, near the immovable desk   |
+| 48 | The closed drawer, near the immovable desks  |
+| 49 | The closed drawers near an immovable desk    |
+| 50 | The closed drawers near an immovable desk.   |
+| 51 | The closed drawers near immovable desks      |
+| 52 | The closed drawers near immovable desks.     |
+| 53 | The closed drawers near the immovable desk   |
+| 54 | The closed drawers near the immovable desk.  |
+| 55 | The closed drawers near the immovable desks  |
+| 56 | The closed drawers near the immovable desks. |
+| 57 | The closed drawers, near an immovable desk   |
+| 58 | The closed drawers, near immovable desks     |
+| 59 | The closed drawers, near the immovable desk  |
+| 60 | The closed drawers, near the immovable desks |
++----+----------------------------------------------+
+

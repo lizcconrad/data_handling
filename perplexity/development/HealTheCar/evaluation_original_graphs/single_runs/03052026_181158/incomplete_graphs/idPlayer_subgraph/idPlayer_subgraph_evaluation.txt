@@ -1,0 +1,971 @@
+GRAPH NAME: idPlayer_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 800   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------+
+|                            GOLD OUTPUTS                           |
++------------------------------------------------------+------------+
+| Gold Output                                          | Generated? |
++------------------------------------------------------+------------+
+| the player who has not eaten a berry east of the den | False      |
++------------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------+
+|                                  NODE METRICS                                  |
++----------+--------------+---------------+------------------+-------------------+
+| Node     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------+--------------+---------------+------------------+-------------------+
+| idPlayer | True         | True          | Covered          | Included          |
+| false    | True         | True          | Covered          | Included          |
+| idDen1   | True         | True          | Covered          | Included          |
++----------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++----------------------------+----------+--------+--------------+---------------+------------------+-------------------+
+| Edge                       | Parent   | Child  | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------+----------+--------+--------------+---------------+------------------+-------------------+
+| idPlayer_prop_idEatenBerry | idPlayer | false  | True         | True          | Covered          | Included          |
+| isEastOf                   | idPlayer | idDen1 | True         | True          | Covered          | Included          |
++----------------------------+----------+--------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1300                                                                     |
+|               |   INDEX: x1298                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1335 ARG0: i1332 ARG1: u1333 ARG2: u1334 ]           |
+|               |           [ def_implicit_q LBL: h1346 ARG0: x1343 RSTR: h1344 BODY: h1345 ]      |
+|               |           [ _east_a_1 LBL: h1331 ARG0: i1328 ARG1: x1329 ARG2: u1330 ]           |
+|               |           [ def_udef_a_q LBL: h1341 ARG0: x1338 RSTR: h1339 BODY: h1340 ]        |
+|               |           [ _den_n_1 LBL: h1327 ARG0: x1326 ]                                    |
+|               |           [ place_n LBL: h1337 ARG0: x1336 ]                                     |
+|               |           [ _eat_v_1 LBL: h1318 ARG0: e1315 ARG1: i1316 ARG2: i1317 ]            |
+|               |           [ def_udef_a_q LBL: h1324 ARG0: x1321 RSTR: h1322 BODY: h1323 ]        |
+|               |           [ _berry_n_1 LBL: h1320 ARG0: x1319 ]                                  |
+|               |           [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] >                  |
+|               |   HCONS: < h1339 qeq h1327 h1344 qeq h1337 h1322 qeq h1320 >                     |
+|               |   EQS: < x1338 eq x1326 h1331 eq h1342 u1330 eq x1338 h1331 eq h1337 x1329 eq    |
+|               | x1336 x1343 eq x1336 h1335 eq h1347 u1334 eq x1343 x1321 eq x1319 h1318 eq h1325 |
+|               | i1317 eq x1321 h1318 eq h1300 i1316 eq x1298 h1335 eq h1300 u1333 eq x1298 >     |
+|               |   SLOTS: < ARG1: i1299 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1300                                                                     |
+|               |   INDEX: x1298                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1300 ARG0: i1332 ARG1: x1298 ARG2: x1329 ]           |
+|               |           [ def_implicit_q LBL: h1346 ARG0: x1329 RSTR: h1344 BODY: h1345 ]      |
+|               |           [ _east_a_1 LBL: h1331 ARG0: i1328 ARG1: x1329 ARG2: x1326 ]           |
+|               |           [ def_udef_a_q LBL: h1341 ARG0: x1326 RSTR: h1339 BODY: h1340 ]        |
+|               |           [ _den_n_1 LBL: h1327 ARG0: x1326 ]                                    |
+|               |           [ place_n LBL: h1331 ARG0: x1329 ]                                     |
+|               |           [ _eat_v_1 LBL: h1300 ARG0: e1315 ARG1: x1298 ARG2: x1319 ]            |
+|               |           [ def_udef_a_q LBL: h1324 ARG0: x1319 RSTR: h1322 BODY: h1323 ]        |
+|               |           [ _berry_n_1 LBL: h1320 ARG0: x1319 ]                                  |
+|               |           [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] >                  |
+|               |   HCONS: < h1339 qeq h1327 h1344 qeq h1331 h1322 qeq h1320 >                     |
+|               |   SLOTS: < ARG1: i1299 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1356                                                                     |
+|               |   INDEX: e1353                                                                   |
+|               |   RELS: < [ unknown LBL: h1352 ARG: x1298 ARG0: e1353 ]                          |
+|               |           [ def_udef_a_q LBL: h1351 ARG0: x1298 RSTR: h1349 BODY: h1350 ]        |
+|               |           [ loc_nonsp LBL: h1300 ARG0: i1332 ARG1: x1298 ARG2: x1329 ]           |
+|               |           [ def_implicit_q LBL: h1346 ARG0: x1329 RSTR: h1344 BODY: h1345 ]      |
+|               |           [ _east_a_1 LBL: h1331 ARG0: i1328 ARG1: x1329 ARG2: x1326 ]           |
+|               |           [ def_udef_a_q LBL: h1341 ARG0: x1326 RSTR: h1339 BODY: h1340 ]        |
+|               |           [ _den_n_1 LBL: h1327 ARG0: x1326 ]                                    |
+|               |           [ place_n LBL: h1331 ARG0: x1329 ]                                     |
+|               |           [ _eat_v_1 LBL: h1300 ARG0: e1315 ARG1: x1298 ARG2: x1319 ]            |
+|               |           [ def_udef_a_q LBL: h1324 ARG0: x1319 RSTR: h1322 BODY: h1323 ]        |
+|               |           [ _berry_n_1 LBL: h1320 ARG0: x1319 ]                                  |
+|               |           [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] >                  |
+|               |   HCONS: < h1339 qeq h1327 h1344 qeq h1331 h1322 qeq h1320 h1349 qeq h1300 h1356 |
+|               | qeq h1352 > ]                                                                    |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                                NODE SEMENTS                                |
++----------+-----------------------------------------------------------------+
+| Node     | Generated SEMENT                                                |
++----------+-----------------------------------------------------------------+
+| idPlayer | [ TOP: h1300                                                    |
+|          |   INDEX: x1298                                                  |
+|          |   RELS: < [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] > |
+|          |   SLOTS: < ARG1: i1299 > ]                                      |
++----------+-----------------------------------------------------------------+
+| false    | [ TOP: h1303                                                    |
+|          |   INDEX: e1301                                                  |
+|          |   RELS: < [ _false_a_of LBL: h1303 ARG0: e1301 ARG1: h1302 ] >  |
+|          |   SLOTS: < ARG1: h1302 > ]                                      |
++----------+-----------------------------------------------------------------+
+| idDen1   | [ TOP: h1327                                                    |
+|          |   INDEX: x1326                                                  |
+|          |   RELS: < [ _den_n_1 LBL: h1327 ARG0: x1326 ] > ]               |
++----------+-----------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++----------------------------+----------+--------+----------------------------------------------------------------------------------+
+| Edge                       | Parent   | Child  | Generated SEMENT                                                                 |
++----------------------------+----------+--------+----------------------------------------------------------------------------------+
+| idPlayer_prop_idEatenBerry | idPlayer | false  | [ TOP: h1300                                                                     |
+|                            |          |        |   INDEX: x1298                                                                   |
+|                            |          |        |   RELS: < [ _eat_v_1 LBL: h1318 ARG0: e1315 ARG1: i1316 ARG2: i1317 ]            |
+|                            |          |        |           [ def_udef_a_q LBL: h1324 ARG0: x1321 RSTR: h1322 BODY: h1323 ]        |
+|                            |          |        |           [ _berry_n_1 LBL: h1320 ARG0: x1319 ]                                  |
+|                            |          |        |           [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] >                  |
+|                            |          |        |   HCONS: < h1322 qeq h1320 >                                                     |
+|                            |          |        |   EQS: < x1321 eq x1319 h1318 eq h1325 i1317 eq x1321 h1318 eq h1300 i1316 eq    |
+|                            |          |        | x1298 >                                                                          |
+|                            |          |        |   SLOTS: < ARG1: i1299 > ]                                                       |
++----------------------------+----------+--------+----------------------------------------------------------------------------------+
+| isEastOf                   | idPlayer | idDen1 | [ TOP: h1300                                                                     |
+|                            |          |        |   INDEX: x1298                                                                   |
+|                            |          |        |   RELS: < [ loc_nonsp LBL: h1335 ARG0: i1332 ARG1: u1333 ARG2: u1334 ]           |
+|                            |          |        |           [ def_implicit_q LBL: h1346 ARG0: x1343 RSTR: h1344 BODY: h1345 ]      |
+|                            |          |        |           [ _east_a_1 LBL: h1331 ARG0: i1328 ARG1: x1329 ARG2: u1330 ]           |
+|                            |          |        |           [ def_udef_a_q LBL: h1341 ARG0: x1338 RSTR: h1339 BODY: h1340 ]        |
+|                            |          |        |           [ _den_n_1 LBL: h1327 ARG0: x1326 ]                                    |
+|                            |          |        |           [ place_n LBL: h1337 ARG0: x1336 ]                                     |
+|                            |          |        |           [ _eat_v_1 LBL: h1318 ARG0: e1315 ARG1: i1316 ARG2: i1317 ]            |
+|                            |          |        |           [ def_udef_a_q LBL: h1324 ARG0: x1321 RSTR: h1322 BODY: h1323 ]        |
+|                            |          |        |           [ _berry_n_1 LBL: h1320 ARG0: x1319 ]                                  |
+|                            |          |        |           [ _player_n_of LBL: h1300 ARG0: x1298 ARG1: i1299 ] >                  |
+|                            |          |        |   HCONS: < h1339 qeq h1327 h1344 qeq h1337 h1322 qeq h1320 >                     |
+|                            |          |        |   EQS: < x1338 eq x1326 h1331 eq h1342 u1330 eq x1338 h1331 eq h1337 x1329 eq    |
+|                            |          |        | x1336 x1343 eq x1336 h1335 eq h1347 u1334 eq x1343 x1321 eq x1319 h1318 eq h1325 |
+|                            |          |        | i1317 eq x1321 h1318 eq h1300 i1316 eq x1298 h1335 eq h1300 u1333 eq x1298 >     |
+|                            |          |        |   SLOTS: < ARG1: i1299 > ]                                                       |
++----------------------------+----------+--------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------+
+|                        GENERATED ENGLISH TEXT                       |
++-----+---------------------------------------------------------------+
+| #   | Generated Text                                                |
++-----+---------------------------------------------------------------+
+| 1   | A player east of a den for a berry to be eaten by             |
+| 2   | A player east of a den for a berry to be eaten by.            |
+| 3   | A player east of a den for berries to be eaten by             |
+| 4   | A player east of a den for berries to be eaten by.            |
+| 5   | A player east of a den for the berries to be eaten by         |
+| 6   | A player east of a den for the berries to be eaten by.        |
+| 7   | A player east of a den for the berry to be eaten by           |
+| 8   | A player east of a den for the berry to be eaten by.          |
+| 9   | A player east of a den, for a berry to be eaten by            |
+| 10  | A player east of a den, for a berry to be eaten by.           |
+| 11  | A player east of a den, for berries to be eaten by            |
+| 12  | A player east of a den, for berries to be eaten by.           |
+| 13  | A player east of a den, for the berries to be eaten by        |
+| 14  | A player east of a den, for the berries to be eaten by.       |
+| 15  | A player east of a den, for the berry to be eaten by          |
+| 16  | A player east of a den, for the berry to be eaten by.         |
+| 17  | A player east of dens for a berry to be eaten by              |
+| 18  | A player east of dens for a berry to be eaten by.             |
+| 19  | A player east of dens for berries to be eaten by              |
+| 20  | A player east of dens for berries to be eaten by.             |
+| 21  | A player east of dens for the berries to be eaten by          |
+| 22  | A player east of dens for the berries to be eaten by.         |
+| 23  | A player east of dens for the berry to be eaten by            |
+| 24  | A player east of dens for the berry to be eaten by.           |
+| 25  | A player east of dens, for a berry to be eaten by             |
+| 26  | A player east of dens, for a berry to be eaten by.            |
+| 27  | A player east of dens, for berries to be eaten by             |
+| 28  | A player east of dens, for berries to be eaten by.            |
+| 29  | A player east of dens, for the berries to be eaten by         |
+| 30  | A player east of dens, for the berries to be eaten by.        |
+| 31  | A player east of dens, for the berry to be eaten by           |
+| 32  | A player east of dens, for the berry to be eaten by.          |
+| 33  | A player east of the den for a berry to be eaten by           |
+| 34  | A player east of the den for a berry to be eaten by.          |
+| 35  | A player east of the den for berries to be eaten by           |
+| 36  | A player east of the den for berries to be eaten by.          |
+| 37  | A player east of the den for the berries to be eaten by       |
+| 38  | A player east of the den for the berries to be eaten by.      |
+| 39  | A player east of the den for the berry to be eaten by         |
+| 40  | A player east of the den for the berry to be eaten by.        |
+| 41  | A player east of the den, for a berry to be eaten by          |
+| 42  | A player east of the den, for a berry to be eaten by.         |
+| 43  | A player east of the den, for berries to be eaten by          |
+| 44  | A player east of the den, for berries to be eaten by.         |
+| 45  | A player east of the den, for the berries to be eaten by      |
+| 46  | A player east of the den, for the berries to be eaten by.     |
+| 47  | A player east of the den, for the berry to be eaten by        |
+| 48  | A player east of the den, for the berry to be eaten by.       |
+| 49  | A player east of the dens for a berry to be eaten by          |
+| 50  | A player east of the dens for a berry to be eaten by.         |
+| 51  | A player east of the dens for berries to be eaten by          |
+| 52  | A player east of the dens for berries to be eaten by.         |
+| 53  | A player east of the dens for the berries to be eaten by      |
+| 54  | A player east of the dens for the berries to be eaten by.     |
+| 55  | A player east of the dens for the berry to be eaten by        |
+| 56  | A player east of the dens for the berry to be eaten by.       |
+| 57  | A player east of the dens, for a berry to be eaten by         |
+| 58  | A player east of the dens, for a berry to be eaten by.        |
+| 59  | A player east of the dens, for berries to be eaten by         |
+| 60  | A player east of the dens, for berries to be eaten by.        |
+| 61  | A player east of the dens, for the berries to be eaten by     |
+| 62  | A player east of the dens, for the berries to be eaten by.    |
+| 63  | A player east of the dens, for the berry to be eaten by       |
+| 64  | A player east of the dens, for the berry to be eaten by.      |
+| 65  | A player for a berry to be eaten by east of a den             |
+| 66  | A player for a berry to be eaten by east of a den.            |
+| 67  | A player for a berry to be eaten by east of dens              |
+| 68  | A player for a berry to be eaten by east of dens.             |
+| 69  | A player for a berry to be eaten by east of the den           |
+| 70  | A player for a berry to be eaten by east of the den.          |
+| 71  | A player for a berry to be eaten by east of the dens          |
+| 72  | A player for a berry to be eaten by east of the dens.         |
+| 73  | A player for a berry to be eaten by, east of a den            |
+| 74  | A player for a berry to be eaten by, east of dens             |
+| 75  | A player for a berry to be eaten by, east of the den          |
+| 76  | A player for a berry to be eaten by, east of the dens         |
+| 77  | A player for berries to be eaten by east of a den             |
+| 78  | A player for berries to be eaten by east of a den.            |
+| 79  | A player for berries to be eaten by east of dens              |
+| 80  | A player for berries to be eaten by east of dens.             |
+| 81  | A player for berries to be eaten by east of the den           |
+| 82  | A player for berries to be eaten by east of the den.          |
+| 83  | A player for berries to be eaten by east of the dens          |
+| 84  | A player for berries to be eaten by east of the dens.         |
+| 85  | A player for berries to be eaten by, east of a den            |
+| 86  | A player for berries to be eaten by, east of dens             |
+| 87  | A player for berries to be eaten by, east of the den          |
+| 88  | A player for berries to be eaten by, east of the dens         |
+| 89  | A player for the berries to be eaten by east of a den         |
+| 90  | A player for the berries to be eaten by east of a den.        |
+| 91  | A player for the berries to be eaten by east of dens          |
+| 92  | A player for the berries to be eaten by east of dens.         |
+| 93  | A player for the berries to be eaten by east of the den       |
+| 94  | A player for the berries to be eaten by east of the den.      |
+| 95  | A player for the berries to be eaten by east of the dens      |
+| 96  | A player for the berries to be eaten by east of the dens.     |
+| 97  | A player for the berries to be eaten by, east of a den        |
+| 98  | A player for the berries to be eaten by, east of dens         |
+| 99  | A player for the berries to be eaten by, east of the den      |
+| 100 | A player for the berries to be eaten by, east of the dens     |
+| 101 | A player for the berry to be eaten by east of a den           |
+| 102 | A player for the berry to be eaten by east of a den.          |
+| 103 | A player for the berry to be eaten by east of dens            |
+| 104 | A player for the berry to be eaten by east of dens.           |
+| 105 | A player for the berry to be eaten by east of the den         |
+| 106 | A player for the berry to be eaten by east of the den.        |
+| 107 | A player for the berry to be eaten by east of the dens        |
+| 108 | A player for the berry to be eaten by east of the dens.       |
+| 109 | A player for the berry to be eaten by, east of a den          |
+| 110 | A player for the berry to be eaten by, east of dens           |
+| 111 | A player for the berry to be eaten by, east of the den        |
+| 112 | A player for the berry to be eaten by, east of the dens       |
+| 113 | A player, east of a den for a berry to be eaten by            |
+| 114 | A player, east of a den for a berry to be eaten by.           |
+| 115 | A player, east of a den for berries to be eaten by            |
+| 116 | A player, east of a den for berries to be eaten by.           |
+| 117 | A player, east of a den for the berries to be eaten by        |
+| 118 | A player, east of a den for the berries to be eaten by.       |
+| 119 | A player, east of a den for the berry to be eaten by          |
+| 120 | A player, east of a den for the berry to be eaten by.         |
+| 121 | A player, east of dens for a berry to be eaten by             |
+| 122 | A player, east of dens for a berry to be eaten by.            |
+| 123 | A player, east of dens for berries to be eaten by             |
+| 124 | A player, east of dens for berries to be eaten by.            |
+| 125 | A player, east of dens for the berries to be eaten by         |
+| 126 | A player, east of dens for the berries to be eaten by.        |
+| 127 | A player, east of dens for the berry to be eaten by           |
+| 128 | A player, east of dens for the berry to be eaten by.          |
+| 129 | A player, east of the den for a berry to be eaten by          |
+| 130 | A player, east of the den for a berry to be eaten by.         |
+| 131 | A player, east of the den for berries to be eaten by          |
+| 132 | A player, east of the den for berries to be eaten by.         |
+| 133 | A player, east of the den for the berries to be eaten by      |
+| 134 | A player, east of the den for the berries to be eaten by.     |
+| 135 | A player, east of the den for the berry to be eaten by        |
+| 136 | A player, east of the den for the berry to be eaten by.       |
+| 137 | A player, east of the dens for a berry to be eaten by         |
+| 138 | A player, east of the dens for a berry to be eaten by.        |
+| 139 | A player, east of the dens for berries to be eaten by         |
+| 140 | A player, east of the dens for berries to be eaten by.        |
+| 141 | A player, east of the dens for the berries to be eaten by     |
+| 142 | A player, east of the dens for the berries to be eaten by.    |
+| 143 | A player, east of the dens for the berry to be eaten by       |
+| 144 | A player, east of the dens for the berry to be eaten by.      |
+| 145 | A player, for a berry to be eaten by, east of a den           |
+| 146 | A player, for a berry to be eaten by, east of dens            |
+| 147 | A player, for a berry to be eaten by, east of the den         |
+| 148 | A player, for a berry to be eaten by, east of the dens        |
+| 149 | A player, for berries to be eaten by, east of a den           |
+| 150 | A player, for berries to be eaten by, east of dens            |
+| 151 | A player, for berries to be eaten by, east of the den         |
+| 152 | A player, for berries to be eaten by, east of the dens        |
+| 153 | A player, for the berries to be eaten by, east of a den       |
+| 154 | A player, for the berries to be eaten by, east of dens        |
+| 155 | A player, for the berries to be eaten by, east of the den     |
+| 156 | A player, for the berries to be eaten by, east of the dens    |
+| 157 | A player, for the berry to be eaten by, east of a den         |
+| 158 | A player, for the berry to be eaten by, east of dens          |
+| 159 | A player, for the berry to be eaten by, east of the den       |
+| 160 | A player, for the berry to be eaten by, east of the dens      |
+| 161 | Player east of a den for a berry to be eaten by               |
+| 162 | Player east of a den for a berry to be eaten by.              |
+| 163 | Player east of a den for berries to be eaten by               |
+| 164 | Player east of a den for berries to be eaten by.              |
+| 165 | Player east of a den for the berries to be eaten by           |
+| 166 | Player east of a den for the berries to be eaten by.          |
+| 167 | Player east of a den for the berry to be eaten by             |
+| 168 | Player east of a den for the berry to be eaten by.            |
+| 169 | Player east of a den, for a berry to be eaten by              |
+| 170 | Player east of a den, for a berry to be eaten by.             |
+| 171 | Player east of a den, for berries to be eaten by              |
+| 172 | Player east of a den, for berries to be eaten by.             |
+| 173 | Player east of a den, for the berries to be eaten by          |
+| 174 | Player east of a den, for the berries to be eaten by.         |
+| 175 | Player east of a den, for the berry to be eaten by            |
+| 176 | Player east of a den, for the berry to be eaten by.           |
+| 177 | Player east of dens for a berry to be eaten by                |
+| 178 | Player east of dens for a berry to be eaten by.               |
+| 179 | Player east of dens for berries to be eaten by                |
+| 180 | Player east of dens for berries to be eaten by.               |
+| 181 | Player east of dens for the berries to be eaten by            |
+| 182 | Player east of dens for the berries to be eaten by.           |
+| 183 | Player east of dens for the berry to be eaten by              |
+| 184 | Player east of dens for the berry to be eaten by.             |
+| 185 | Player east of dens, for a berry to be eaten by               |
+| 186 | Player east of dens, for a berry to be eaten by.              |
+| 187 | Player east of dens, for berries to be eaten by               |
+| 188 | Player east of dens, for berries to be eaten by.              |
+| 189 | Player east of dens, for the berries to be eaten by           |
+| 190 | Player east of dens, for the berries to be eaten by.          |
+| 191 | Player east of dens, for the berry to be eaten by             |
+| 192 | Player east of dens, for the berry to be eaten by.            |
+| 193 | Player east of the den for a berry to be eaten by             |
+| 194 | Player east of the den for a berry to be eaten by.            |
+| 195 | Player east of the den for berries to be eaten by             |
+| 196 | Player east of the den for berries to be eaten by.            |
+| 197 | Player east of the den for the berries to be eaten by         |
+| 198 | Player east of the den for the berries to be eaten by.        |
+| 199 | Player east of the den for the berry to be eaten by           |
+| 200 | Player east of the den for the berry to be eaten by.          |
+| 201 | Player east of the den, for a berry to be eaten by            |
+| 202 | Player east of the den, for a berry to be eaten by.           |
+| 203 | Player east of the den, for berries to be eaten by            |
+| 204 | Player east of the den, for berries to be eaten by.           |
+| 205 | Player east of the den, for the berries to be eaten by        |
+| 206 | Player east of the den, for the berries to be eaten by.       |
+| 207 | Player east of the den, for the berry to be eaten by          |
+| 208 | Player east of the den, for the berry to be eaten by.         |
+| 209 | Player east of the dens for a berry to be eaten by            |
+| 210 | Player east of the dens for a berry to be eaten by.           |
+| 211 | Player east of the dens for berries to be eaten by            |
+| 212 | Player east of the dens for berries to be eaten by.           |
+| 213 | Player east of the dens for the berries to be eaten by        |
+| 214 | Player east of the dens for the berries to be eaten by.       |
+| 215 | Player east of the dens for the berry to be eaten by          |
+| 216 | Player east of the dens for the berry to be eaten by.         |
+| 217 | Player east of the dens, for a berry to be eaten by           |
+| 218 | Player east of the dens, for a berry to be eaten by.          |
+| 219 | Player east of the dens, for berries to be eaten by           |
+| 220 | Player east of the dens, for berries to be eaten by.          |
+| 221 | Player east of the dens, for the berries to be eaten by       |
+| 222 | Player east of the dens, for the berries to be eaten by.      |
+| 223 | Player east of the dens, for the berry to be eaten by         |
+| 224 | Player east of the dens, for the berry to be eaten by.        |
+| 225 | Player for a berry to be eaten by east of a den               |
+| 226 | Player for a berry to be eaten by east of a den.              |
+| 227 | Player for a berry to be eaten by east of dens                |
+| 228 | Player for a berry to be eaten by east of dens.               |
+| 229 | Player for a berry to be eaten by east of the den             |
+| 230 | Player for a berry to be eaten by east of the den.            |
+| 231 | Player for a berry to be eaten by east of the dens            |
+| 232 | Player for a berry to be eaten by east of the dens.           |
+| 233 | Player for a berry to be eaten by, east of a den              |
+| 234 | Player for a berry to be eaten by, east of dens               |
+| 235 | Player for a berry to be eaten by, east of the den            |
+| 236 | Player for a berry to be eaten by, east of the dens           |
+| 237 | Player for berries to be eaten by east of a den               |
+| 238 | Player for berries to be eaten by east of a den.              |
+| 239 | Player for berries to be eaten by east of dens                |
+| 240 | Player for berries to be eaten by east of dens.               |
+| 241 | Player for berries to be eaten by east of the den             |
+| 242 | Player for berries to be eaten by east of the den.            |
+| 243 | Player for berries to be eaten by east of the dens            |
+| 244 | Player for berries to be eaten by east of the dens.           |
+| 245 | Player for berries to be eaten by, east of a den              |
+| 246 | Player for berries to be eaten by, east of dens               |
+| 247 | Player for berries to be eaten by, east of the den            |
+| 248 | Player for berries to be eaten by, east of the dens           |
+| 249 | Player for the berries to be eaten by east of a den           |
+| 250 | Player for the berries to be eaten by east of a den.          |
+| 251 | Player for the berries to be eaten by east of dens            |
+| 252 | Player for the berries to be eaten by east of dens.           |
+| 253 | Player for the berries to be eaten by east of the den         |
+| 254 | Player for the berries to be eaten by east of the den.        |
+| 255 | Player for the berries to be eaten by east of the dens        |
+| 256 | Player for the berries to be eaten by east of the dens.       |
+| 257 | Player for the berries to be eaten by, east of a den          |
+| 258 | Player for the berries to be eaten by, east of dens           |
+| 259 | Player for the berries to be eaten by, east of the den        |
+| 260 | Player for the berries to be eaten by, east of the dens       |
+| 261 | Player for the berry to be eaten by east of a den             |
+| 262 | Player for the berry to be eaten by east of a den.            |
+| 263 | Player for the berry to be eaten by east of dens              |
+| 264 | Player for the berry to be eaten by east of dens.             |
+| 265 | Player for the berry to be eaten by east of the den           |
+| 266 | Player for the berry to be eaten by east of the den.          |
+| 267 | Player for the berry to be eaten by east of the dens          |
+| 268 | Player for the berry to be eaten by east of the dens.         |
+| 269 | Player for the berry to be eaten by, east of a den            |
+| 270 | Player for the berry to be eaten by, east of dens             |
+| 271 | Player for the berry to be eaten by, east of the den          |
+| 272 | Player for the berry to be eaten by, east of the dens         |
+| 273 | Player, east of a den for a berry to be eaten by              |
+| 274 | Player, east of a den for a berry to be eaten by.             |
+| 275 | Player, east of a den for berries to be eaten by              |
+| 276 | Player, east of a den for berries to be eaten by.             |
+| 277 | Player, east of a den for the berries to be eaten by          |
+| 278 | Player, east of a den for the berries to be eaten by.         |
+| 279 | Player, east of a den for the berry to be eaten by            |
+| 280 | Player, east of a den for the berry to be eaten by.           |
+| 281 | Player, east of dens for a berry to be eaten by               |
+| 282 | Player, east of dens for a berry to be eaten by.              |
+| 283 | Player, east of dens for berries to be eaten by               |
+| 284 | Player, east of dens for berries to be eaten by.              |
+| 285 | Player, east of dens for the berries to be eaten by           |
+| 286 | Player, east of dens for the berries to be eaten by.          |
+| 287 | Player, east of dens for the berry to be eaten by             |
+| 288 | Player, east of dens for the berry to be eaten by.            |
+| 289 | Player, east of the den for a berry to be eaten by            |
+| 290 | Player, east of the den for a berry to be eaten by.           |
+| 291 | Player, east of the den for berries to be eaten by            |
+| 292 | Player, east of the den for berries to be eaten by.           |
+| 293 | Player, east of the den for the berries to be eaten by        |
+| 294 | Player, east of the den for the berries to be eaten by.       |
+| 295 | Player, east of the den for the berry to be eaten by          |
+| 296 | Player, east of the den for the berry to be eaten by.         |
+| 297 | Player, east of the dens for a berry to be eaten by           |
+| 298 | Player, east of the dens for a berry to be eaten by.          |
+| 299 | Player, east of the dens for berries to be eaten by           |
+| 300 | Player, east of the dens for berries to be eaten by.          |
+| 301 | Player, east of the dens for the berries to be eaten by       |
+| 302 | Player, east of the dens for the berries to be eaten by.      |
+| 303 | Player, east of the dens for the berry to be eaten by         |
+| 304 | Player, east of the dens for the berry to be eaten by.        |
+| 305 | Player, for a berry to be eaten by, east of a den             |
+| 306 | Player, for a berry to be eaten by, east of dens              |
+| 307 | Player, for a berry to be eaten by, east of the den           |
+| 308 | Player, for a berry to be eaten by, east of the dens          |
+| 309 | Player, for berries to be eaten by, east of a den             |
+| 310 | Player, for berries to be eaten by, east of dens              |
+| 311 | Player, for berries to be eaten by, east of the den           |
+| 312 | Player, for berries to be eaten by, east of the dens          |
+| 313 | Player, for the berries to be eaten by, east of a den         |
+| 314 | Player, for the berries to be eaten by, east of dens          |
+| 315 | Player, for the berries to be eaten by, east of the den       |
+| 316 | Player, for the berries to be eaten by, east of the dens      |
+| 317 | Player, for the berry to be eaten by, east of a den           |
+| 318 | Player, for the berry to be eaten by, east of dens            |
+| 319 | Player, for the berry to be eaten by, east of the den         |
+| 320 | Player, for the berry to be eaten by, east of the dens        |
+| 321 | Players east of a den for a berry to be eaten by              |
+| 322 | Players east of a den for a berry to be eaten by.             |
+| 323 | Players east of a den for berries to be eaten by              |
+| 324 | Players east of a den for berries to be eaten by.             |
+| 325 | Players east of a den for the berries to be eaten by          |
+| 326 | Players east of a den for the berries to be eaten by.         |
+| 327 | Players east of a den for the berry to be eaten by            |
+| 328 | Players east of a den for the berry to be eaten by.           |
+| 329 | Players east of a den, for a berry to be eaten by             |
+| 330 | Players east of a den, for a berry to be eaten by.            |
+| 331 | Players east of a den, for berries to be eaten by             |
+| 332 | Players east of a den, for berries to be eaten by.            |
+| 333 | Players east of a den, for the berries to be eaten by         |
+| 334 | Players east of a den, for the berries to be eaten by.        |
+| 335 | Players east of a den, for the berry to be eaten by           |
+| 336 | Players east of a den, for the berry to be eaten by.          |
+| 337 | Players east of dens for a berry to be eaten by               |
+| 338 | Players east of dens for a berry to be eaten by.              |
+| 339 | Players east of dens for berries to be eaten by               |
+| 340 | Players east of dens for berries to be eaten by.              |
+| 341 | Players east of dens for the berries to be eaten by           |
+| 342 | Players east of dens for the berries to be eaten by.          |
+| 343 | Players east of dens for the berry to be eaten by             |
+| 344 | Players east of dens for the berry to be eaten by.            |
+| 345 | Players east of dens, for a berry to be eaten by              |
+| 346 | Players east of dens, for a berry to be eaten by.             |
+| 347 | Players east of dens, for berries to be eaten by              |
+| 348 | Players east of dens, for berries to be eaten by.             |
+| 349 | Players east of dens, for the berries to be eaten by          |
+| 350 | Players east of dens, for the berries to be eaten by.         |
+| 351 | Players east of dens, for the berry to be eaten by            |
+| 352 | Players east of dens, for the berry to be eaten by.           |
+| 353 | Players east of the den for a berry to be eaten by            |
+| 354 | Players east of the den for a berry to be eaten by.           |
+| 355 | Players east of the den for berries to be eaten by            |
+| 356 | Players east of the den for berries to be eaten by.           |
+| 357 | Players east of the den for the berries to be eaten by        |
+| 358 | Players east of the den for the berries to be eaten by.       |
+| 359 | Players east of the den for the berry to be eaten by          |
+| 360 | Players east of the den for the berry to be eaten by.         |
+| 361 | Players east of the den, for a berry to be eaten by           |
+| 362 | Players east of the den, for a berry to be eaten by.          |
+| 363 | Players east of the den, for berries to be eaten by           |
+| 364 | Players east of the den, for berries to be eaten by.          |
+| 365 | Players east of the den, for the berries to be eaten by       |
+| 366 | Players east of the den, for the berries to be eaten by.      |
+| 367 | Players east of the den, for the berry to be eaten by         |
+| 368 | Players east of the den, for the berry to be eaten by.        |
+| 369 | Players east of the dens for a berry to be eaten by           |
+| 370 | Players east of the dens for a berry to be eaten by.          |
+| 371 | Players east of the dens for berries to be eaten by           |
+| 372 | Players east of the dens for berries to be eaten by.          |
+| 373 | Players east of the dens for the berries to be eaten by       |
+| 374 | Players east of the dens for the berries to be eaten by.      |
+| 375 | Players east of the dens for the berry to be eaten by         |
+| 376 | Players east of the dens for the berry to be eaten by.        |
+| 377 | Players east of the dens, for a berry to be eaten by          |
+| 378 | Players east of the dens, for a berry to be eaten by.         |
+| 379 | Players east of the dens, for berries to be eaten by          |
+| 380 | Players east of the dens, for berries to be eaten by.         |
+| 381 | Players east of the dens, for the berries to be eaten by      |
+| 382 | Players east of the dens, for the berries to be eaten by.     |
+| 383 | Players east of the dens, for the berry to be eaten by        |
+| 384 | Players east of the dens, for the berry to be eaten by.       |
+| 385 | Players for a berry to be eaten by east of a den              |
+| 386 | Players for a berry to be eaten by east of a den.             |
+| 387 | Players for a berry to be eaten by east of dens               |
+| 388 | Players for a berry to be eaten by east of dens.              |
+| 389 | Players for a berry to be eaten by east of the den            |
+| 390 | Players for a berry to be eaten by east of the den.           |
+| 391 | Players for a berry to be eaten by east of the dens           |
+| 392 | Players for a berry to be eaten by east of the dens.          |
+| 393 | Players for a berry to be eaten by, east of a den             |
+| 394 | Players for a berry to be eaten by, east of dens              |
+| 395 | Players for a berry to be eaten by, east of the den           |
+| 396 | Players for a berry to be eaten by, east of the dens          |
+| 397 | Players for berries to be eaten by east of a den              |
+| 398 | Players for berries to be eaten by east of a den.             |
+| 399 | Players for berries to be eaten by east of dens               |
+| 400 | Players for berries to be eaten by east of dens.              |
+| 401 | Players for berries to be eaten by east of the den            |
+| 402 | Players for berries to be eaten by east of the den.           |
+| 403 | Players for berries to be eaten by east of the dens           |
+| 404 | Players for berries to be eaten by east of the dens.          |
+| 405 | Players for berries to be eaten by, east of a den             |
+| 406 | Players for berries to be eaten by, east of dens              |
+| 407 | Players for berries to be eaten by, east of the den           |
+| 408 | Players for berries to be eaten by, east of the dens          |
+| 409 | Players for the berries to be eaten by east of a den          |
+| 410 | Players for the berries to be eaten by east of a den.         |
+| 411 | Players for the berries to be eaten by east of dens           |
+| 412 | Players for the berries to be eaten by east of dens.          |
+| 413 | Players for the berries to be eaten by east of the den        |
+| 414 | Players for the berries to be eaten by east of the den.       |
+| 415 | Players for the berries to be eaten by east of the dens       |
+| 416 | Players for the berries to be eaten by east of the dens.      |
+| 417 | Players for the berries to be eaten by, east of a den         |
+| 418 | Players for the berries to be eaten by, east of dens          |
+| 419 | Players for the berries to be eaten by, east of the den       |
+| 420 | Players for the berries to be eaten by, east of the dens      |
+| 421 | Players for the berry to be eaten by east of a den            |
+| 422 | Players for the berry to be eaten by east of a den.           |
+| 423 | Players for the berry to be eaten by east of dens             |
+| 424 | Players for the berry to be eaten by east of dens.            |
+| 425 | Players for the berry to be eaten by east of the den          |
+| 426 | Players for the berry to be eaten by east of the den.         |
+| 427 | Players for the berry to be eaten by east of the dens         |
+| 428 | Players for the berry to be eaten by east of the dens.        |
+| 429 | Players for the berry to be eaten by, east of a den           |
+| 430 | Players for the berry to be eaten by, east of dens            |
+| 431 | Players for the berry to be eaten by, east of the den         |
+| 432 | Players for the berry to be eaten by, east of the dens        |
+| 433 | Players, east of a den for a berry to be eaten by             |
+| 434 | Players, east of a den for a berry to be eaten by.            |
+| 435 | Players, east of a den for berries to be eaten by             |
+| 436 | Players, east of a den for berries to be eaten by.            |
+| 437 | Players, east of a den for the berries to be eaten by         |
+| 438 | Players, east of a den for the berries to be eaten by.        |
+| 439 | Players, east of a den for the berry to be eaten by           |
+| 440 | Players, east of a den for the berry to be eaten by.          |
+| 441 | Players, east of dens for a berry to be eaten by              |
+| 442 | Players, east of dens for a berry to be eaten by.             |
+| 443 | Players, east of dens for berries to be eaten by              |
+| 444 | Players, east of dens for berries to be eaten by.             |
+| 445 | Players, east of dens for the berries to be eaten by          |
+| 446 | Players, east of dens for the berries to be eaten by.         |
+| 447 | Players, east of dens for the berry to be eaten by            |
+| 448 | Players, east of dens for the berry to be eaten by.           |
+| 449 | Players, east of the den for a berry to be eaten by           |
+| 450 | Players, east of the den for a berry to be eaten by.          |
+| 451 | Players, east of the den for berries to be eaten by           |
+| 452 | Players, east of the den for berries to be eaten by.          |
+| 453 | Players, east of the den for the berries to be eaten by       |
+| 454 | Players, east of the den for the berries to be eaten by.      |
+| 455 | Players, east of the den for the berry to be eaten by         |
+| 456 | Players, east of the den for the berry to be eaten by.        |
+| 457 | Players, east of the dens for a berry to be eaten by          |
+| 458 | Players, east of the dens for a berry to be eaten by.         |
+| 459 | Players, east of the dens for berries to be eaten by          |
+| 460 | Players, east of the dens for berries to be eaten by.         |
+| 461 | Players, east of the dens for the berries to be eaten by      |
+| 462 | Players, east of the dens for the berries to be eaten by.     |
+| 463 | Players, east of the dens for the berry to be eaten by        |
+| 464 | Players, east of the dens for the berry to be eaten by.       |
+| 465 | Players, for a berry to be eaten by, east of a den            |
+| 466 | Players, for a berry to be eaten by, east of dens             |
+| 467 | Players, for a berry to be eaten by, east of the den          |
+| 468 | Players, for a berry to be eaten by, east of the dens         |
+| 469 | Players, for berries to be eaten by, east of a den            |
+| 470 | Players, for berries to be eaten by, east of dens             |
+| 471 | Players, for berries to be eaten by, east of the den          |
+| 472 | Players, for berries to be eaten by, east of the dens         |
+| 473 | Players, for the berries to be eaten by, east of a den        |
+| 474 | Players, for the berries to be eaten by, east of dens         |
+| 475 | Players, for the berries to be eaten by, east of the den      |
+| 476 | Players, for the berries to be eaten by, east of the dens     |
+| 477 | Players, for the berry to be eaten by, east of a den          |
+| 478 | Players, for the berry to be eaten by, east of dens           |
+| 479 | Players, for the berry to be eaten by, east of the den        |
+| 480 | Players, for the berry to be eaten by, east of the dens       |
+| 481 | The player east of a den for a berry to be eaten by           |
+| 482 | The player east of a den for a berry to be eaten by.          |
+| 483 | The player east of a den for berries to be eaten by           |
+| 484 | The player east of a den for berries to be eaten by.          |
+| 485 | The player east of a den for the berries to be eaten by       |
+| 486 | The player east of a den for the berries to be eaten by.      |
+| 487 | The player east of a den for the berry to be eaten by         |
+| 488 | The player east of a den for the berry to be eaten by.        |
+| 489 | The player east of a den, for a berry to be eaten by          |
+| 490 | The player east of a den, for a berry to be eaten by.         |
+| 491 | The player east of a den, for berries to be eaten by          |
+| 492 | The player east of a den, for berries to be eaten by.         |
+| 493 | The player east of a den, for the berries to be eaten by      |
+| 494 | The player east of a den, for the berries to be eaten by.     |
+| 495 | The player east of a den, for the berry to be eaten by        |
+| 496 | The player east of a den, for the berry to be eaten by.       |
+| 497 | The player east of dens for a berry to be eaten by            |
+| 498 | The player east of dens for a berry to be eaten by.           |
+| 499 | The player east of dens for berries to be eaten by            |
+| 500 | The player east of dens for berries to be eaten by.           |
+| 501 | The player east of dens for the berries to be eaten by        |
+| 502 | The player east of dens for the berries to be eaten by.       |
+| 503 | The player east of dens for the berry to be eaten by          |
+| 504 | The player east of dens for the berry to be eaten by.         |
+| 505 | The player east of dens, for a berry to be eaten by           |
+| 506 | The player east of dens, for a berry to be eaten by.          |
+| 507 | The player east of dens, for berries to be eaten by           |
+| 508 | The player east of dens, for berries to be eaten by.          |
+| 509 | The player east of dens, for the berries to be eaten by       |
+| 510 | The player east of dens, for the berries to be eaten by.      |
+| 511 | The player east of dens, for the berry to be eaten by         |
+| 512 | The player east of dens, for the berry to be eaten by.        |
+| 513 | The player east of the den for a berry to be eaten by         |
+| 514 | The player east of the den for a berry to be eaten by.        |
+| 515 | The player east of the den for berries to be eaten by         |
+| 516 | The player east of the den for berries to be eaten by.        |
+| 517 | The player east of the den for the berries to be eaten by     |
+| 518 | The player east of the den for the berries to be eaten by.    |
+| 519 | The player east of the den for the berry to be eaten by       |
+| 520 | The player east of the den for the berry to be eaten by.      |
+| 521 | The player east of the den, for a berry to be eaten by        |
+| 522 | The player east of the den, for a berry to be eaten by.       |
+| 523 | The player east of the den, for berries to be eaten by        |
+| 524 | The player east of the den, for berries to be eaten by.       |
+| 525 | The player east of the den, for the berries to be eaten by    |
+| 526 | The player east of the den, for the berries to be eaten by.   |
+| 527 | The player east of the den, for the berry to be eaten by      |
+| 528 | The player east of the den, for the berry to be eaten by.     |
+| 529 | The player east of the dens for a berry to be eaten by        |
+| 530 | The player east of the dens for a berry to be eaten by.       |
+| 531 | The player east of the dens for berries to be eaten by        |
+| 532 | The player east of the dens for berries to be eaten by.       |
+| 533 | The player east of the dens for the berries to be eaten by    |
+| 534 | The player east of the dens for the berries to be eaten by.   |
+| 535 | The player east of the dens for the berry to be eaten by      |
+| 536 | The player east of the dens for the berry to be eaten by.     |
+| 537 | The player east of the dens, for a berry to be eaten by       |
+| 538 | The player east of the dens, for a berry to be eaten by.      |
+| 539 | The player east of the dens, for berries to be eaten by       |
+| 540 | The player east of the dens, for berries to be eaten by.      |
+| 541 | The player east of the dens, for the berries to be eaten by   |
+| 542 | The player east of the dens, for the berries to be eaten by.  |
+| 543 | The player east of the dens, for the berry to be eaten by     |
+| 544 | The player east of the dens, for the berry to be eaten by.    |
+| 545 | The player for a berry to be eaten by east of a den           |
+| 546 | The player for a berry to be eaten by east of a den.          |
+| 547 | The player for a berry to be eaten by east of dens            |
+| 548 | The player for a berry to be eaten by east of dens.           |
+| 549 | The player for a berry to be eaten by east of the den         |
+| 550 | The player for a berry to be eaten by east of the den.        |
+| 551 | The player for a berry to be eaten by east of the dens        |
+| 552 | The player for a berry to be eaten by east of the dens.       |
+| 553 | The player for a berry to be eaten by, east of a den          |
+| 554 | The player for a berry to be eaten by, east of dens           |
+| 555 | The player for a berry to be eaten by, east of the den        |
+| 556 | The player for a berry to be eaten by, east of the dens       |
+| 557 | The player for berries to be eaten by east of a den           |
+| 558 | The player for berries to be eaten by east of a den.          |
+| 559 | The player for berries to be eaten by east of dens            |
+| 560 | The player for berries to be eaten by east of dens.           |
+| 561 | The player for berries to be eaten by east of the den         |
+| 562 | The player for berries to be eaten by east of the den.        |
+| 563 | The player for berries to be eaten by east of the dens        |
+| 564 | The player for berries to be eaten by east of the dens.       |
+| 565 | The player for berries to be eaten by, east of a den          |
+| 566 | The player for berries to be eaten by, east of dens           |
+| 567 | The player for berries to be eaten by, east of the den        |
+| 568 | The player for berries to be eaten by, east of the dens       |
+| 569 | The player for the berries to be eaten by east of a den       |
+| 570 | The player for the berries to be eaten by east of a den.      |
+| 571 | The player for the berries to be eaten by east of dens        |
+| 572 | The player for the berries to be eaten by east of dens.       |
+| 573 | The player for the berries to be eaten by east of the den     |
+| 574 | The player for the berries to be eaten by east of the den.    |
+| 575 | The player for the berries to be eaten by east of the dens    |
+| 576 | The player for the berries to be eaten by east of the dens.   |
+| 577 | The player for the berries to be eaten by, east of a den      |
+| 578 | The player for the berries to be eaten by, east of dens       |
+| 579 | The player for the berries to be eaten by, east of the den    |
+| 580 | The player for the berries to be eaten by, east of the dens   |
+| 581 | The player for the berry to be eaten by east of a den         |
+| 582 | The player for the berry to be eaten by east of a den.        |
+| 583 | The player for the berry to be eaten by east of dens          |
+| 584 | The player for the berry to be eaten by east of dens.         |
+| 585 | The player for the berry to be eaten by east of the den       |
+| 586 | The player for the berry to be eaten by east of the den.      |
+| 587 | The player for the berry to be eaten by east of the dens      |
+| 588 | The player for the berry to be eaten by east of the dens.     |
+| 589 | The player for the berry to be eaten by, east of a den        |
+| 590 | The player for the berry to be eaten by, east of dens         |
+| 591 | The player for the berry to be eaten by, east of the den      |
+| 592 | The player for the berry to be eaten by, east of the dens     |
+| 593 | The player, east of a den for a berry to be eaten by          |
+| 594 | The player, east of a den for a berry to be eaten by.         |
+| 595 | The player, east of a den for berries to be eaten by          |
+| 596 | The player, east of a den for berries to be eaten by.         |
+| 597 | The player, east of a den for the berries to be eaten by      |
+| 598 | The player, east of a den for the berries to be eaten by.     |
+| 599 | The player, east of a den for the berry to be eaten by        |
+| 600 | The player, east of a den for the berry to be eaten by.       |
+| 601 | The player, east of dens for a berry to be eaten by           |
+| 602 | The player, east of dens for a berry to be eaten by.          |
+| 603 | The player, east of dens for berries to be eaten by           |
+| 604 | The player, east of dens for berries to be eaten by.          |
+| 605 | The player, east of dens for the berries to be eaten by       |
+| 606 | The player, east of dens for the berries to be eaten by.      |
+| 607 | The player, east of dens for the berry to be eaten by         |
+| 608 | The player, east of dens for the berry to be eaten by.        |
+| 609 | The player, east of the den for a berry to be eaten by        |
+| 610 | The player, east of the den for a berry to be eaten by.       |
+| 611 | The player, east of the den for berries to be eaten by        |
+| 612 | The player, east of the den for berries to be eaten by.       |
+| 613 | The player, east of the den for the berries to be eaten by    |
+| 614 | The player, east of the den for the berries to be eaten by.   |
+| 615 | The player, east of the den for the berry to be eaten by      |
+| 616 | The player, east of the den for the berry to be eaten by.     |
+| 617 | The player, east of the dens for a berry to be eaten by       |
+| 618 | The player, east of the dens for a berry to be eaten by.      |
+| 619 | The player, east of the dens for berries to be eaten by       |
+| 620 | The player, east of the dens for berries to be eaten by.      |
+| 621 | The player, east of the dens for the berries to be eaten by   |
+| 622 | The player, east of the dens for the berries to be eaten by.  |
+| 623 | The player, east of the dens for the berry to be eaten by     |
+| 624 | The player, east of the dens for the berry to be eaten by.    |
+| 625 | The player, for a berry to be eaten by, east of a den         |
+| 626 | The player, for a berry to be eaten by, east of dens          |
+| 627 | The player, for a berry to be eaten by, east of the den       |
+| 628 | The player, for a berry to be eaten by, east of the dens      |
+| 629 | The player, for berries to be eaten by, east of a den         |
+| 630 | The player, for berries to be eaten by, east of dens          |
+| 631 | The player, for berries to be eaten by, east of the den       |
+| 632 | The player, for berries to be eaten by, east of the dens      |
+| 633 | The player, for the berries to be eaten by, east of a den     |
+| 634 | The player, for the berries to be eaten by, east of dens      |
+| 635 | The player, for the berries to be eaten by, east of the den   |
+| 636 | The player, for the berries to be eaten by, east of the dens  |
+| 637 | The player, for the berry to be eaten by, east of a den       |
+| 638 | The player, for the berry to be eaten by, east of dens        |
+| 639 | The player, for the berry to be eaten by, east of the den     |
+| 640 | The player, for the berry to be eaten by, east of the dens    |
+| 641 | The players east of a den for a berry to be eaten by          |
+| 642 | The players east of a den for a berry to be eaten by.         |
+| 643 | The players east of a den for berries to be eaten by          |
+| 644 | The players east of a den for berries to be eaten by.         |
+| 645 | The players east of a den for the berries to be eaten by      |
+| 646 | The players east of a den for the berries to be eaten by.     |
+| 647 | The players east of a den for the berry to be eaten by        |
+| 648 | The players east of a den for the berry to be eaten by.       |
+| 649 | The players east of a den, for a berry to be eaten by         |
+| 650 | The players east of a den, for a berry to be eaten by.        |
+| 651 | The players east of a den, for berries to be eaten by         |
+| 652 | The players east of a den, for berries to be eaten by.        |
+| 653 | The players east of a den, for the berries to be eaten by     |
+| 654 | The players east of a den, for the berries to be eaten by.    |
+| 655 | The players east of a den, for the berry to be eaten by       |
+| 656 | The players east of a den, for the berry to be eaten by.      |
+| 657 | The players east of dens for a berry to be eaten by           |
+| 658 | The players east of dens for a berry to be eaten by.          |
+| 659 | The players east of dens for berries to be eaten by           |
+| 660 | The players east of dens for berries to be eaten by.          |
+| 661 | The players east of dens for the berries to be eaten by       |
+| 662 | The players east of dens for the berries to be eaten by.      |
+| 663 | The players east of dens for the berry to be eaten by         |
+| 664 | The players east of dens for the berry to be eaten by.        |
+| 665 | The players east of dens, for a berry to be eaten by          |
+| 666 | The players east of dens, for a berry to be eaten by.         |
+| 667 | The players east of dens, for berries to be eaten by          |
+| 668 | The players east of dens, for berries to be eaten by.         |
+| 669 | The players east of dens, for the berries to be eaten by      |
+| 670 | The players east of dens, for the berries to be eaten by.     |
+| 671 | The players east of dens, for the berry to be eaten by        |
+| 672 | The players east of dens, for the berry to be eaten by.       |
+| 673 | The players east of the den for a berry to be eaten by        |
+| 674 | The players east of the den for a berry to be eaten by.       |
+| 675 | The players east of the den for berries to be eaten by        |
+| 676 | The players east of the den for berries to be eaten by.       |
+| 677 | The players east of the den for the berries to be eaten by    |
+| 678 | The players east of the den for the berries to be eaten by.   |
+| 679 | The players east of the den for the berry to be eaten by      |
+| 680 | The players east of the den for the berry to be eaten by.     |
+| 681 | The players east of the den, for a berry to be eaten by       |
+| 682 | The players east of the den, for a berry to be eaten by.      |
+| 683 | The players east of the den, for berries to be eaten by       |
+| 684 | The players east of the den, for berries to be eaten by.      |
+| 685 | The players east of the den, for the berries to be eaten by   |
+| 686 | The players east of the den, for the berries to be eaten by.  |
+| 687 | The players east of the den, for the berry to be eaten by     |
+| 688 | The players east of the den, for the berry to be eaten by.    |
+| 689 | The players east of the dens for a berry to be eaten by       |
+| 690 | The players east of the dens for a berry to be eaten by.      |
+| 691 | The players east of the dens for berries to be eaten by       |
+| 692 | The players east of the dens for berries to be eaten by.      |
+| 693 | The players east of the dens for the berries to be eaten by   |
+| 694 | The players east of the dens for the berries to be eaten by.  |
+| 695 | The players east of the dens for the berry to be eaten by     |
+| 696 | The players east of the dens for the berry to be eaten by.    |
+| 697 | The players east of the dens, for a berry to be eaten by      |
+| 698 | The players east of the dens, for a berry to be eaten by.     |
+| 699 | The players east of the dens, for berries to be eaten by      |
+| 700 | The players east of the dens, for berries to be eaten by.     |
+| 701 | The players east of the dens, for the berries to be eaten by  |
+| 702 | The players east of the dens, for the berries to be eaten by. |
+| 703 | The players east of the dens, for the berry to be eaten by    |
+| 704 | The players east of the dens, for the berry to be eaten by.   |
+| 705 | The players for a berry to be eaten by east of a den          |
+| 706 | The players for a berry to be eaten by east of a den.         |
+| 707 | The players for a berry to be eaten by east of dens           |
+| 708 | The players for a berry to be eaten by east of dens.          |
+| 709 | The players for a berry to be eaten by east of the den        |
+| 710 | The players for a berry to be eaten by east of the den.       |
+| 711 | The players for a berry to be eaten by east of the dens       |
+| 712 | The players for a berry to be eaten by east of the dens.      |
+| 713 | The players for a berry to be eaten by, east of a den         |
+| 714 | The players for a berry to be eaten by, east of dens          |
+| 715 | The players for a berry to be eaten by, east of the den       |
+| 716 | The players for a berry to be eaten by, east of the dens      |
+| 717 | The players for berries to be eaten by east of a den          |
+| 718 | The players for berries to be eaten by east of a den.         |
+| 719 | The players for berries to be eaten by east of dens           |
+| 720 | The players for berries to be eaten by east of dens.          |
+| 721 | The players for berries to be eaten by east of the den        |
+| 722 | The players for berries to be eaten by east of the den.       |
+| 723 | The players for berries to be eaten by east of the dens       |
+| 724 | The players for berries to be eaten by east of the dens.      |
+| 725 | The players for berries to be eaten by, east of a den         |
+| 726 | The players for berries to be eaten by, east of dens          |
+| 727 | The players for berries to be eaten by, east of the den       |
+| 728 | The players for berries to be eaten by, east of the dens      |
+| 729 | The players for the berries to be eaten by east of a den      |
+| 730 | The players for the berries to be eaten by east of a den.     |
+| 731 | The players for the berries to be eaten by east of dens       |
+| 732 | The players for the berries to be eaten by east of dens.      |
+| 733 | The players for the berries to be eaten by east of the den    |
+| 734 | The players for the berries to be eaten by east of the den.   |
+| 735 | The players for the berries to be eaten by east of the dens   |
+| 736 | The players for the berries to be eaten by east of the dens.  |
+| 737 | The players for the berries to be eaten by, east of a den     |
+| 738 | The players for the berries to be eaten by, east of dens      |
+| 739 | The players for the berries to be eaten by, east of the den   |
+| 740 | The players for the berries to be eaten by, east of the dens  |
+| 741 | The players for the berry to be eaten by east of a den        |
+| 742 | The players for the berry to be eaten by east of a den.       |
+| 743 | The players for the berry to be eaten by east of dens         |
+| 744 | The players for the berry to be eaten by east of dens.        |
+| 745 | The players for the berry to be eaten by east of the den      |
+| 746 | The players for the berry to be eaten by east of the den.     |
+| 747 | The players for the berry to be eaten by east of the dens     |
+| 748 | The players for the berry to be eaten by east of the dens.    |
+| 749 | The players for the berry to be eaten by, east of a den       |
+| 750 | The players for the berry to be eaten by, east of dens        |
+| 751 | The players for the berry to be eaten by, east of the den     |
+| 752 | The players for the berry to be eaten by, east of the dens    |
+| 753 | The players, east of a den for a berry to be eaten by         |
+| 754 | The players, east of a den for a berry to be eaten by.        |
+| 755 | The players, east of a den for berries to be eaten by         |
+| 756 | The players, east of a den for berries to be eaten by.        |
+| 757 | The players, east of a den for the berries to be eaten by     |
+| 758 | The players, east of a den for the berries to be eaten by.    |
+| 759 | The players, east of a den for the berry to be eaten by       |
+| 760 | The players, east of a den for the berry to be eaten by.      |
+| 761 | The players, east of dens for a berry to be eaten by          |
+| 762 | The players, east of dens for a berry to be eaten by.         |
+| 763 | The players, east of dens for berries to be eaten by          |
+| 764 | The players, east of dens for berries to be eaten by.         |
+| 765 | The players, east of dens for the berries to be eaten by      |
+| 766 | The players, east of dens for the berries to be eaten by.     |
+| 767 | The players, east of dens for the berry to be eaten by        |
+| 768 | The players, east of dens for the berry to be eaten by.       |
+| 769 | The players, east of the den for a berry to be eaten by       |
+| 770 | The players, east of the den for a berry to be eaten by.      |
+| 771 | The players, east of the den for berries to be eaten by       |
+| 772 | The players, east of the den for berries to be eaten by.      |
+| 773 | The players, east of the den for the berries to be eaten by   |
+| 774 | The players, east of the den for the berries to be eaten by.  |
+| 775 | The players, east of the den for the berry to be eaten by     |
+| 776 | The players, east of the den for the berry to be eaten by.    |
+| 777 | The players, east of the dens for a berry to be eaten by      |
+| 778 | The players, east of the dens for a berry to be eaten by.     |
+| 779 | The players, east of the dens for berries to be eaten by      |
+| 780 | The players, east of the dens for berries to be eaten by.     |
+| 781 | The players, east of the dens for the berries to be eaten by  |
+| 782 | The players, east of the dens for the berries to be eaten by. |
+| 783 | The players, east of the dens for the berry to be eaten by    |
+| 784 | The players, east of the dens for the berry to be eaten by.   |
+| 785 | The players, for a berry to be eaten by, east of a den        |
+| 786 | The players, for a berry to be eaten by, east of dens         |
+| 787 | The players, for a berry to be eaten by, east of the den      |
+| 788 | The players, for a berry to be eaten by, east of the dens     |
+| 789 | The players, for berries to be eaten by, east of a den        |
+| 790 | The players, for berries to be eaten by, east of dens         |
+| 791 | The players, for berries to be eaten by, east of the den      |
+| 792 | The players, for berries to be eaten by, east of the dens     |
+| 793 | The players, for the berries to be eaten by, east of a den    |
+| 794 | The players, for the berries to be eaten by, east of dens     |
+| 795 | The players, for the berries to be eaten by, east of the den  |
+| 796 | The players, for the berries to be eaten by, east of the dens |
+| 797 | The players, for the berry to be eaten by, east of a den      |
+| 798 | The players, for the berry to be eaten by, east of dens       |
+| 799 | The players, for the berry to be eaten by, east of the den    |
+| 800 | The players, for the berry to be eaten by, east of the dens   |
++-----+---------------------------------------------------------------+
+

@@ -1,0 +1,471 @@
+GRAPH NAME: idStomach1BackOpening_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 240   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------------+
+|                                 GOLD OUTPUTS                                 |
++-----------------------------------------------------------------+------------+
+| Gold Output                                                     | Generated? |
++-----------------------------------------------------------------+------------+
+| the stomach's back opening south of the closed throat sphincter | True       |
++-----------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                        |
++-----------------------+--------------+---------------+------------------+-------------------+
+| Node                  | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------------------+--------------+---------------+------------------+-------------------+
+| idStomach1BackOpening | True         | True          | Covered          | Included          |
+| idThroatSphincter1    | True         | True          | Covered          | Included          |
+| closed                | True         | True          | Covered          | Included          |
++-----------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                      EDGE METRICS                                                                      |
++-------------------------------------+-----------------------+--------------------+--------------+---------------+------------------+-------------------+
+| Edge                                | Parent                | Child              | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-------------------------------------+-----------------------+--------------------+--------------+---------------+------------------+-------------------+
+| isSouthOf                           | idStomach1BackOpening | idThroatSphincter1 | True         | True          | Covered          | Included          |
+| idThroatSphincter1_prop_idOpenState | idThroatSphincter1    | closed             | True         | True          | Covered          | Included          |
++-------------------------------------+-----------------------+--------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3123                                                                     |
+|               |   INDEX: x3122                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3167 ARG0: e3164 ARG1: u3165 ARG2: x3166 ]           |
+|               |           [ def_implicit_q LBL: h3178 ARG0: x3175 RSTR: h3176 BODY: h3177 ]      |
+|               |           [ _south_a_1 LBL: h3163 ARG0: i3160 ARG1: x3161 ARG2: u3162 ]          |
+|               |           [ def_udef_a_q LBL: h3173 ARG0: x3170 RSTR: h3171 BODY: h3172 ]        |
+|               |           [ _closed_a_1 LBL: h3159 ARG0: e3157 ARG1: u3158 ]                     |
+|               |           [ compound LBL: h3156 ARG0: e3153 [ e PROG: - ] ARG1: u3154 ARG2:      |
+|               | u3155 ]                                                                          |
+|               |           [ udef_q LBL: h3151 ARG0: x3148 RSTR: h3149 BODY: h3150 ]              |
+|               |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|               |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ]                              |
+|               |           [ place_n LBL: h3169 ARG0: x3168 ]                                     |
+|               |           [ poss LBL: h3143 ARG0: e3140 ARG1: x3141 ARG2: i3142 ]                |
+|               |           [ def_udef_a_q LBL: h3138 ARG0: x3135 RSTR: h3136 BODY: h3137 ]        |
+|               |           [ _stomach_n_1 LBL: h3121 ARG0: x3120 ]                                |
+|               |           [ compound LBL: h3134 ARG0: e3131 [ e PROG: - ] ARG1: u3132 ARG2:      |
+|               | u3133 ]                                                                          |
+|               |           [ udef_q LBL: h3129 ARG0: x3126 RSTR: h3127 BODY: h3128 ]              |
+|               |           [ _back_n_1 LBL: h3125 ARG0: x3124 ]                                   |
+|               |           [ _opening_n_1 LBL: h3123 ARG0: x3122 ] >                              |
+|               |   HCONS: < h3149 qeq h3147 h3171 qeq h3145 h3176 qeq h3169 h3136 qeq h3121 h3127 |
+|               | qeq h3125 >                                                                      |
+|               |   EQS: < x3148 eq x3146 h3156 eq h3152 u3155 eq x3148 h3156 eq h3145 u3154 eq    |
+|               | x3144 h3159 eq h3145 u3158 eq x3144 x3170 eq x3144 h3163 eq h3174 u3162 eq x3170 |
+|               | h3163 eq h3169 x3161 eq x3168 x3175 eq x3168 h3167 eq h3179 x3166 eq x3175 x3135 |
+|               | eq x3120 h3143 eq h3139 i3142 eq x3135 x3126 eq x3124 h3134 eq h3130 u3133 eq    |
+|               | x3126 h3134 eq h3123 u3132 eq x3122 h3143 eq h3123 x3141 eq x3122 h3167 eq h3123 |
+|               | u3165 eq x3122 > ]                                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3123                                                                     |
+|               |   INDEX: x3122                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h3123 ARG0: e3164 ARG1: x3122 ARG2: x3161 ]           |
+|               |           [ def_implicit_q LBL: h3178 ARG0: x3161 RSTR: h3176 BODY: h3177 ]      |
+|               |           [ _south_a_1 LBL: h3163 ARG0: i3160 ARG1: x3161 ARG2: x3144 ]          |
+|               |           [ def_udef_a_q LBL: h3173 ARG0: x3144 RSTR: h3171 BODY: h3172 ]        |
+|               |           [ _closed_a_1 LBL: h3145 ARG0: e3157 ARG1: x3144 ]                     |
+|               |           [ compound LBL: h3145 ARG0: e3153 [ e PROG: - ] ARG1: x3144 ARG2:      |
+|               | x3146 ]                                                                          |
+|               |           [ udef_q LBL: h3151 ARG0: x3146 RSTR: h3149 BODY: h3150 ]              |
+|               |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|               |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ]                              |
+|               |           [ place_n LBL: h3163 ARG0: x3161 ]                                     |
+|               |           [ poss LBL: h3123 ARG0: e3140 ARG1: x3122 ARG2: x3120 ]                |
+|               |           [ def_udef_a_q LBL: h3138 ARG0: x3120 RSTR: h3136 BODY: h3137 ]        |
+|               |           [ _stomach_n_1 LBL: h3121 ARG0: x3120 ]                                |
+|               |           [ compound LBL: h3123 ARG0: e3131 [ e PROG: - ] ARG1: x3122 ARG2:      |
+|               | x3124 ]                                                                          |
+|               |           [ udef_q LBL: h3129 ARG0: x3124 RSTR: h3127 BODY: h3128 ]              |
+|               |           [ _back_n_1 LBL: h3125 ARG0: x3124 ]                                   |
+|               |           [ _opening_n_1 LBL: h3123 ARG0: x3122 ] >                              |
+|               |   HCONS: < h3149 qeq h3147 h3171 qeq h3145 h3176 qeq h3163 h3136 qeq h3121 h3127 |
+|               | qeq h3125 > ]                                                                    |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3188                                                                     |
+|               |   INDEX: e3185                                                                   |
+|               |   RELS: < [ unknown LBL: h3184 ARG: x3122 ARG0: e3185 ]                          |
+|               |           [ def_udef_a_q LBL: h3183 ARG0: x3122 RSTR: h3181 BODY: h3182 ]        |
+|               |           [ loc_nonsp LBL: h3123 ARG0: e3164 ARG1: x3122 ARG2: x3161 ]           |
+|               |           [ def_implicit_q LBL: h3178 ARG0: x3161 RSTR: h3176 BODY: h3177 ]      |
+|               |           [ _south_a_1 LBL: h3163 ARG0: i3160 ARG1: x3161 ARG2: x3144 ]          |
+|               |           [ def_udef_a_q LBL: h3173 ARG0: x3144 RSTR: h3171 BODY: h3172 ]        |
+|               |           [ _closed_a_1 LBL: h3145 ARG0: e3157 ARG1: x3144 ]                     |
+|               |           [ compound LBL: h3145 ARG0: e3153 [ e PROG: - ] ARG1: x3144 ARG2:      |
+|               | x3146 ]                                                                          |
+|               |           [ udef_q LBL: h3151 ARG0: x3146 RSTR: h3149 BODY: h3150 ]              |
+|               |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|               |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ]                              |
+|               |           [ place_n LBL: h3163 ARG0: x3161 ]                                     |
+|               |           [ poss LBL: h3123 ARG0: e3140 ARG1: x3122 ARG2: x3120 ]                |
+|               |           [ def_udef_a_q LBL: h3138 ARG0: x3120 RSTR: h3136 BODY: h3137 ]        |
+|               |           [ _stomach_n_1 LBL: h3121 ARG0: x3120 ]                                |
+|               |           [ compound LBL: h3123 ARG0: e3131 [ e PROG: - ] ARG1: x3122 ARG2:      |
+|               | x3124 ]                                                                          |
+|               |           [ udef_q LBL: h3129 ARG0: x3124 RSTR: h3127 BODY: h3128 ]              |
+|               |           [ _back_n_1 LBL: h3125 ARG0: x3124 ]                                   |
+|               |           [ _opening_n_1 LBL: h3123 ARG0: x3122 ] >                              |
+|               |   HCONS: < h3149 qeq h3147 h3171 qeq h3145 h3176 qeq h3163 h3136 qeq h3121 h3127 |
+|               | qeq h3125 h3181 qeq h3123 h3188 qeq h3184 > ]                                    |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------+
+|                                               NODE SEMENTS                                               |
++-----------------------+----------------------------------------------------------------------------------+
+| Node                  | Generated SEMENT                                                                 |
++-----------------------+----------------------------------------------------------------------------------+
+| idStomach1BackOpening | [ TOP: h3123                                                                     |
+|                       |   INDEX: x3122                                                                   |
+|                       |   RELS: < [ poss LBL: h3143 ARG0: e3140 ARG1: x3141 ARG2: i3142 ]                |
+|                       |           [ def_udef_a_q LBL: h3138 ARG0: x3135 RSTR: h3136 BODY: h3137 ]        |
+|                       |           [ _stomach_n_1 LBL: h3121 ARG0: x3120 ]                                |
+|                       |           [ compound LBL: h3134 ARG0: e3131 [ e PROG: - ] ARG1: u3132 ARG2:      |
+|                       | u3133 ]                                                                          |
+|                       |           [ udef_q LBL: h3129 ARG0: x3126 RSTR: h3127 BODY: h3128 ]              |
+|                       |           [ _back_n_1 LBL: h3125 ARG0: x3124 ]                                   |
+|                       |           [ _opening_n_1 LBL: h3123 ARG0: x3122 ] >                              |
+|                       |   HCONS: < h3136 qeq h3121 h3127 qeq h3125 >                                     |
+|                       |   EQS: < x3135 eq x3120 h3143 eq h3139 i3142 eq x3135 x3126 eq x3124 h3134 eq    |
+|                       | h3130 u3133 eq x3126 h3134 eq h3123 u3132 eq x3122 h3143 eq h3123 x3141 eq x3122 |
+|                       | > ]                                                                              |
++-----------------------+----------------------------------------------------------------------------------+
+| idThroatSphincter1    | [ TOP: h3145                                                                     |
+|                       |   INDEX: x3144                                                                   |
+|                       |   RELS: < [ compound LBL: h3156 ARG0: e3153 [ e PROG: - ] ARG1: u3154 ARG2:      |
+|                       | u3155 ]                                                                          |
+|                       |           [ udef_q LBL: h3151 ARG0: x3148 RSTR: h3149 BODY: h3150 ]              |
+|                       |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|                       |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ] >                            |
+|                       |   HCONS: < h3149 qeq h3147 >                                                     |
+|                       |   EQS: < x3148 eq x3146 h3156 eq h3152 u3155 eq x3148 h3156 eq h3145 u3154 eq    |
+|                       | x3144 > ]                                                                        |
++-----------------------+----------------------------------------------------------------------------------+
+| closed                | [ TOP: h3159                                                                     |
+|                       |   INDEX: e3157                                                                   |
+|                       |   RELS: < [ _closed_a_1 LBL: h3159 ARG0: e3157 ARG1: u3158 ] >                   |
+|                       |   SLOTS: < ARG1: u3158 > ]                                                       |
++-----------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                             EDGE SEMENTS                                                                            |
++-------------------------------------+-----------------------+--------------------+----------------------------------------------------------------------------------+
+| Edge                                | Parent                | Child              | Generated SEMENT                                                                 |
++-------------------------------------+-----------------------+--------------------+----------------------------------------------------------------------------------+
+| isSouthOf                           | idStomach1BackOpening | idThroatSphincter1 | [ TOP: h3123                                                                     |
+|                                     |                       |                    |   INDEX: x3122                                                                   |
+|                                     |                       |                    |   RELS: < [ loc_nonsp LBL: h3167 ARG0: e3164 ARG1: u3165 ARG2: x3166 ]           |
+|                                     |                       |                    |           [ def_implicit_q LBL: h3178 ARG0: x3175 RSTR: h3176 BODY: h3177 ]      |
+|                                     |                       |                    |           [ _south_a_1 LBL: h3163 ARG0: i3160 ARG1: x3161 ARG2: u3162 ]          |
+|                                     |                       |                    |           [ def_udef_a_q LBL: h3173 ARG0: x3170 RSTR: h3171 BODY: h3172 ]        |
+|                                     |                       |                    |           [ _closed_a_1 LBL: h3159 ARG0: e3157 ARG1: u3158 ]                     |
+|                                     |                       |                    |           [ compound LBL: h3156 ARG0: e3153 [ e PROG: - ] ARG1: u3154 ARG2:      |
+|                                     |                       |                    | u3155 ]                                                                          |
+|                                     |                       |                    |           [ udef_q LBL: h3151 ARG0: x3148 RSTR: h3149 BODY: h3150 ]              |
+|                                     |                       |                    |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|                                     |                       |                    |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ]                              |
+|                                     |                       |                    |           [ place_n LBL: h3169 ARG0: x3168 ]                                     |
+|                                     |                       |                    |           [ poss LBL: h3143 ARG0: e3140 ARG1: x3141 ARG2: i3142 ]                |
+|                                     |                       |                    |           [ def_udef_a_q LBL: h3138 ARG0: x3135 RSTR: h3136 BODY: h3137 ]        |
+|                                     |                       |                    |           [ _stomach_n_1 LBL: h3121 ARG0: x3120 ]                                |
+|                                     |                       |                    |           [ compound LBL: h3134 ARG0: e3131 [ e PROG: - ] ARG1: u3132 ARG2:      |
+|                                     |                       |                    | u3133 ]                                                                          |
+|                                     |                       |                    |           [ udef_q LBL: h3129 ARG0: x3126 RSTR: h3127 BODY: h3128 ]              |
+|                                     |                       |                    |           [ _back_n_1 LBL: h3125 ARG0: x3124 ]                                   |
+|                                     |                       |                    |           [ _opening_n_1 LBL: h3123 ARG0: x3122 ] >                              |
+|                                     |                       |                    |   HCONS: < h3149 qeq h3147 h3171 qeq h3145 h3176 qeq h3169 h3136 qeq h3121 h3127 |
+|                                     |                       |                    | qeq h3125 >                                                                      |
+|                                     |                       |                    |   EQS: < x3148 eq x3146 h3156 eq h3152 u3155 eq x3148 h3156 eq h3145 u3154 eq    |
+|                                     |                       |                    | x3144 h3159 eq h3145 u3158 eq x3144 x3170 eq x3144 h3163 eq h3174 u3162 eq x3170 |
+|                                     |                       |                    | h3163 eq h3169 x3161 eq x3168 x3175 eq x3168 h3167 eq h3179 x3166 eq x3175 x3135 |
+|                                     |                       |                    | eq x3120 h3143 eq h3139 i3142 eq x3135 x3126 eq x3124 h3134 eq h3130 u3133 eq    |
+|                                     |                       |                    | x3126 h3134 eq h3123 u3132 eq x3122 h3143 eq h3123 x3141 eq x3122 h3167 eq h3123 |
+|                                     |                       |                    | u3165 eq x3122 > ]                                                               |
++-------------------------------------+-----------------------+--------------------+----------------------------------------------------------------------------------+
+| idThroatSphincter1_prop_idOpenState | idThroatSphincter1    | closed             | [ TOP: h3145                                                                     |
+|                                     |                       |                    |   INDEX: x3144                                                                   |
+|                                     |                       |                    |   RELS: < [ _closed_a_1 LBL: h3159 ARG0: e3157 ARG1: u3158 ]                     |
+|                                     |                       |                    |           [ compound LBL: h3156 ARG0: e3153 [ e PROG: - ] ARG1: u3154 ARG2:      |
+|                                     |                       |                    | u3155 ]                                                                          |
+|                                     |                       |                    |           [ udef_q LBL: h3151 ARG0: x3148 RSTR: h3149 BODY: h3150 ]              |
+|                                     |                       |                    |           [ _throat_n_1 LBL: h3147 ARG0: x3146 ]                                 |
+|                                     |                       |                    |           [ _sphincter_n_1 LBL: h3145 ARG0: x3144 ] >                            |
+|                                     |                       |                    |   HCONS: < h3149 qeq h3147 >                                                     |
+|                                     |                       |                    |   EQS: < x3148 eq x3146 h3156 eq h3152 u3155 eq x3148 h3156 eq h3145 u3154 eq    |
+|                                     |                       |                    | x3144 h3159 eq h3145 u3158 eq x3144 > ]                                          |
++-------------------------------------+-----------------------+--------------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                           GENERATED ENGLISH TEXT                           |
++-----+----------------------------------------------------------------------+
+| #   | Generated Text                                                       |
++-----+----------------------------------------------------------------------+
+| 1   | A stomach's back opening south of a closed throat sphincter          |
+| 2   | A stomach's back opening south of a closed throat sphincter.         |
+| 3   | A stomach's back opening south of a throats closed sphincter         |
+| 4   | A stomach's back opening south of a throats closed sphincter.        |
+| 5   | A stomach's back opening south of closed throat sphincters           |
+| 6   | A stomach's back opening south of closed throat sphincters.          |
+| 7   | A stomach's back opening south of the closed throat sphincter        |
+| 8   | A stomach's back opening south of the closed throat sphincter.       |
+| 9   | A stomach's back opening south of the closed throat sphincters       |
+| 10  | A stomach's back opening south of the closed throat sphincters.      |
+| 11  | A stomach's back opening south of the throats closed sphincter       |
+| 12  | A stomach's back opening south of the throats closed sphincter.      |
+| 13  | A stomach's back opening south of the throats closed sphincters      |
+| 14  | A stomach's back opening south of the throats closed sphincters.     |
+| 15  | A stomach's back opening south of throats closed sphincters          |
+| 16  | A stomach's back opening south of throats closed sphincters.         |
+| 17  | A stomach's back opening, south of a closed throat sphincter         |
+| 18  | A stomach's back opening, south of a throats closed sphincter        |
+| 19  | A stomach's back opening, south of closed throat sphincters          |
+| 20  | A stomach's back opening, south of the closed throat sphincter       |
+| 21  | A stomach's back opening, south of the closed throat sphincters      |
+| 22  | A stomach's back opening, south of the throats closed sphincter      |
+| 23  | A stomach's back opening, south of the throats closed sphincters     |
+| 24  | A stomach's back opening, south of throats closed sphincters         |
+| 25  | A stomach's back openings south of a closed throat sphincter         |
+| 26  | A stomach's back openings south of a closed throat sphincter.        |
+| 27  | A stomach's back openings south of a throats closed sphincter        |
+| 28  | A stomach's back openings south of a throats closed sphincter.       |
+| 29  | A stomach's back openings south of closed throat sphincters          |
+| 30  | A stomach's back openings south of closed throat sphincters.         |
+| 31  | A stomach's back openings south of the closed throat sphincter       |
+| 32  | A stomach's back openings south of the closed throat sphincter.      |
+| 33  | A stomach's back openings south of the closed throat sphincters      |
+| 34  | A stomach's back openings south of the closed throat sphincters.     |
+| 35  | A stomach's back openings south of the throats closed sphincter      |
+| 36  | A stomach's back openings south of the throats closed sphincter.     |
+| 37  | A stomach's back openings south of the throats closed sphincters     |
+| 38  | A stomach's back openings south of the throats closed sphincters.    |
+| 39  | A stomach's back openings south of throats closed sphincters         |
+| 40  | A stomach's back openings south of throats closed sphincters.        |
+| 41  | A stomach's back openings, south of a closed throat sphincter        |
+| 42  | A stomach's back openings, south of a throats closed sphincter       |
+| 43  | A stomach's back openings, south of closed throat sphincters         |
+| 44  | A stomach's back openings, south of the closed throat sphincter      |
+| 45  | A stomach's back openings, south of the closed throat sphincters     |
+| 46  | A stomach's back openings, south of the throats closed sphincter     |
+| 47  | A stomach's back openings, south of the throats closed sphincters    |
+| 48  | A stomach's back openings, south of throats closed sphincters        |
+| 49  | Stomach's back opening south of a closed throat sphincter            |
+| 50  | Stomach's back opening south of a closed throat sphincter.           |
+| 51  | Stomach's back opening south of a throats closed sphincter           |
+| 52  | Stomach's back opening south of a throats closed sphincter.          |
+| 53  | Stomach's back opening south of closed throat sphincters             |
+| 54  | Stomach's back opening south of closed throat sphincters.            |
+| 55  | Stomach's back opening south of the closed throat sphincter          |
+| 56  | Stomach's back opening south of the closed throat sphincter.         |
+| 57  | Stomach's back opening south of the closed throat sphincters         |
+| 58  | Stomach's back opening south of the closed throat sphincters.        |
+| 59  | Stomach's back opening south of the throats closed sphincter         |
+| 60  | Stomach's back opening south of the throats closed sphincter.        |
+| 61  | Stomach's back opening south of the throats closed sphincters        |
+| 62  | Stomach's back opening south of the throats closed sphincters.       |
+| 63  | Stomach's back opening south of throats closed sphincters            |
+| 64  | Stomach's back opening south of throats closed sphincters.           |
+| 65  | Stomach's back opening, south of a closed throat sphincter           |
+| 66  | Stomach's back opening, south of a throats closed sphincter          |
+| 67  | Stomach's back opening, south of closed throat sphincters            |
+| 68  | Stomach's back opening, south of the closed throat sphincter         |
+| 69  | Stomach's back opening, south of the closed throat sphincters        |
+| 70  | Stomach's back opening, south of the throats closed sphincter        |
+| 71  | Stomach's back opening, south of the throats closed sphincters       |
+| 72  | Stomach's back opening, south of throats closed sphincters           |
+| 73  | Stomach's back openings south of a closed throat sphincter           |
+| 74  | Stomach's back openings south of a closed throat sphincter.          |
+| 75  | Stomach's back openings south of a throats closed sphincter          |
+| 76  | Stomach's back openings south of a throats closed sphincter.         |
+| 77  | Stomach's back openings south of closed throat sphincters            |
+| 78  | Stomach's back openings south of closed throat sphincters.           |
+| 79  | Stomach's back openings south of the closed throat sphincter         |
+| 80  | Stomach's back openings south of the closed throat sphincter.        |
+| 81  | Stomach's back openings south of the closed throat sphincters        |
+| 82  | Stomach's back openings south of the closed throat sphincters.       |
+| 83  | Stomach's back openings south of the throats closed sphincter        |
+| 84  | Stomach's back openings south of the throats closed sphincter.       |
+| 85  | Stomach's back openings south of the throats closed sphincters       |
+| 86  | Stomach's back openings south of the throats closed sphincters.      |
+| 87  | Stomach's back openings south of throats closed sphincters           |
+| 88  | Stomach's back openings south of throats closed sphincters.          |
+| 89  | Stomach's back openings, south of a closed throat sphincter          |
+| 90  | Stomach's back openings, south of a throats closed sphincter         |
+| 91  | Stomach's back openings, south of closed throat sphincters           |
+| 92  | Stomach's back openings, south of the closed throat sphincter        |
+| 93  | Stomach's back openings, south of the closed throat sphincters       |
+| 94  | Stomach's back openings, south of the throats closed sphincter       |
+| 95  | Stomach's back openings, south of the throats closed sphincters      |
+| 96  | Stomach's back openings, south of throats closed sphincters          |
+| 97  | Stomaches' back opening south of a closed throat sphincter           |
+| 98  | Stomaches' back opening south of a closed throat sphincter.          |
+| 99  | Stomaches' back opening south of a throats closed sphincter          |
+| 100 | Stomaches' back opening south of a throats closed sphincter.         |
+| 101 | Stomaches' back opening south of closed throat sphincters            |
+| 102 | Stomaches' back opening south of closed throat sphincters.           |
+| 103 | Stomaches' back opening south of the closed throat sphincter         |
+| 104 | Stomaches' back opening south of the closed throat sphincter.        |
+| 105 | Stomaches' back opening south of the closed throat sphincters        |
+| 106 | Stomaches' back opening south of the closed throat sphincters.       |
+| 107 | Stomaches' back opening south of the throats closed sphincter        |
+| 108 | Stomaches' back opening south of the throats closed sphincter.       |
+| 109 | Stomaches' back opening south of the throats closed sphincters       |
+| 110 | Stomaches' back opening south of the throats closed sphincters.      |
+| 111 | Stomaches' back opening south of throats closed sphincters           |
+| 112 | Stomaches' back opening south of throats closed sphincters.          |
+| 113 | Stomaches' back opening, south of a closed throat sphincter          |
+| 114 | Stomaches' back opening, south of a throats closed sphincter         |
+| 115 | Stomaches' back opening, south of closed throat sphincters           |
+| 116 | Stomaches' back opening, south of the closed throat sphincter        |
+| 117 | Stomaches' back opening, south of the closed throat sphincters       |
+| 118 | Stomaches' back opening, south of the throats closed sphincter       |
+| 119 | Stomaches' back opening, south of the throats closed sphincters      |
+| 120 | Stomaches' back opening, south of throats closed sphincters          |
+| 121 | Stomaches' back openings south of a closed throat sphincter          |
+| 122 | Stomaches' back openings south of a closed throat sphincter.         |
+| 123 | Stomaches' back openings south of a throats closed sphincter         |
+| 124 | Stomaches' back openings south of a throats closed sphincter.        |
+| 125 | Stomaches' back openings south of closed throat sphincters           |
+| 126 | Stomaches' back openings south of closed throat sphincters.          |
+| 127 | Stomaches' back openings south of the closed throat sphincter        |
+| 128 | Stomaches' back openings south of the closed throat sphincter.       |
+| 129 | Stomaches' back openings south of the closed throat sphincters       |
+| 130 | Stomaches' back openings south of the closed throat sphincters.      |
+| 131 | Stomaches' back openings south of the throats closed sphincter       |
+| 132 | Stomaches' back openings south of the throats closed sphincter.      |
+| 133 | Stomaches' back openings south of the throats closed sphincters      |
+| 134 | Stomaches' back openings south of the throats closed sphincters.     |
+| 135 | Stomaches' back openings south of throats closed sphincters          |
+| 136 | Stomaches' back openings south of throats closed sphincters.         |
+| 137 | Stomaches' back openings, south of a closed throat sphincter         |
+| 138 | Stomaches' back openings, south of a throats closed sphincter        |
+| 139 | Stomaches' back openings, south of closed throat sphincters          |
+| 140 | Stomaches' back openings, south of the closed throat sphincter       |
+| 141 | Stomaches' back openings, south of the closed throat sphincters      |
+| 142 | Stomaches' back openings, south of the throats closed sphincter      |
+| 143 | Stomaches' back openings, south of the throats closed sphincters     |
+| 144 | Stomaches' back openings, south of throats closed sphincters         |
+| 145 | The stomach's back opening south of a closed throat sphincter        |
+| 146 | The stomach's back opening south of a closed throat sphincter.       |
+| 147 | The stomach's back opening south of a throats closed sphincter       |
+| 148 | The stomach's back opening south of a throats closed sphincter.      |
+| 149 | The stomach's back opening south of closed throat sphincters         |
+| 150 | The stomach's back opening south of closed throat sphincters.        |
+| 151 | The stomach's back opening south of the closed throat sphincter      |
+| 152 | The stomach's back opening south of the closed throat sphincter.     |
+| 153 | The stomach's back opening south of the closed throat sphincters     |
+| 154 | The stomach's back opening south of the closed throat sphincters.    |
+| 155 | The stomach's back opening south of the throats closed sphincter     |
+| 156 | The stomach's back opening south of the throats closed sphincter.    |
+| 157 | The stomach's back opening south of the throats closed sphincters    |
+| 158 | The stomach's back opening south of the throats closed sphincters.   |
+| 159 | The stomach's back opening south of throats closed sphincters        |
+| 160 | The stomach's back opening south of throats closed sphincters.       |
+| 161 | The stomach's back opening, south of a closed throat sphincter       |
+| 162 | The stomach's back opening, south of a throats closed sphincter      |
+| 163 | The stomach's back opening, south of closed throat sphincters        |
+| 164 | The stomach's back opening, south of the closed throat sphincter     |
+| 165 | The stomach's back opening, south of the closed throat sphincters    |
+| 166 | The stomach's back opening, south of the throats closed sphincter    |
+| 167 | The stomach's back opening, south of the throats closed sphincters   |
+| 168 | The stomach's back opening, south of throats closed sphincters       |
+| 169 | The stomach's back openings south of a closed throat sphincter       |
+| 170 | The stomach's back openings south of a closed throat sphincter.      |
+| 171 | The stomach's back openings south of a throats closed sphincter      |
+| 172 | The stomach's back openings south of a throats closed sphincter.     |
+| 173 | The stomach's back openings south of closed throat sphincters        |
+| 174 | The stomach's back openings south of closed throat sphincters.       |
+| 175 | The stomach's back openings south of the closed throat sphincter     |
+| 176 | The stomach's back openings south of the closed throat sphincter.    |
+| 177 | The stomach's back openings south of the closed throat sphincters    |
+| 178 | The stomach's back openings south of the closed throat sphincters.   |
+| 179 | The stomach's back openings south of the throats closed sphincter    |
+| 180 | The stomach's back openings south of the throats closed sphincter.   |
+| 181 | The stomach's back openings south of the throats closed sphincters   |
+| 182 | The stomach's back openings south of the throats closed sphincters.  |
+| 183 | The stomach's back openings south of throats closed sphincters       |
+| 184 | The stomach's back openings south of throats closed sphincters.      |
+| 185 | The stomach's back openings, south of a closed throat sphincter      |
+| 186 | The stomach's back openings, south of a throats closed sphincter     |
+| 187 | The stomach's back openings, south of closed throat sphincters       |
+| 188 | The stomach's back openings, south of the closed throat sphincter    |
+| 189 | The stomach's back openings, south of the closed throat sphincters   |
+| 190 | The stomach's back openings, south of the throats closed sphincter   |
+| 191 | The stomach's back openings, south of the throats closed sphincters  |
+| 192 | The stomach's back openings, south of throats closed sphincters      |
+| 193 | The stomaches' back opening south of a closed throat sphincter       |
+| 194 | The stomaches' back opening south of a closed throat sphincter.      |
+| 195 | The stomaches' back opening south of a throats closed sphincter      |
+| 196 | The stomaches' back opening south of a throats closed sphincter.     |
+| 197 | The stomaches' back opening south of closed throat sphincters        |
+| 198 | The stomaches' back opening south of closed throat sphincters.       |
+| 199 | The stomaches' back opening south of the closed throat sphincter     |
+| 200 | The stomaches' back opening south of the closed throat sphincter.    |
+| 201 | The stomaches' back opening south of the closed throat sphincters    |
+| 202 | The stomaches' back opening south of the closed throat sphincters.   |
+| 203 | The stomaches' back opening south of the throats closed sphincter    |
+| 204 | The stomaches' back opening south of the throats closed sphincter.   |
+| 205 | The stomaches' back opening south of the throats closed sphincters   |
+| 206 | The stomaches' back opening south of the throats closed sphincters.  |
+| 207 | The stomaches' back opening south of throats closed sphincters       |
+| 208 | The stomaches' back opening south of throats closed sphincters.      |
+| 209 | The stomaches' back opening, south of a closed throat sphincter      |
+| 210 | The stomaches' back opening, south of a throats closed sphincter     |
+| 211 | The stomaches' back opening, south of closed throat sphincters       |
+| 212 | The stomaches' back opening, south of the closed throat sphincter    |
+| 213 | The stomaches' back opening, south of the closed throat sphincters   |
+| 214 | The stomaches' back opening, south of the throats closed sphincter   |
+| 215 | The stomaches' back opening, south of the throats closed sphincters  |
+| 216 | The stomaches' back opening, south of throats closed sphincters      |
+| 217 | The stomaches' back openings south of a closed throat sphincter      |
+| 218 | The stomaches' back openings south of a closed throat sphincter.     |
+| 219 | The stomaches' back openings south of a throats closed sphincter     |
+| 220 | The stomaches' back openings south of a throats closed sphincter.    |
+| 221 | The stomaches' back openings south of closed throat sphincters       |
+| 222 | The stomaches' back openings south of closed throat sphincters.      |
+| 223 | The stomaches' back openings south of the closed throat sphincter    |
+| 224 | The stomaches' back openings south of the closed throat sphincter.   |
+| 225 | The stomaches' back openings south of the closed throat sphincters   |
+| 226 | The stomaches' back openings south of the closed throat sphincters.  |
+| 227 | The stomaches' back openings south of the throats closed sphincter   |
+| 228 | The stomaches' back openings south of the throats closed sphincter.  |
+| 229 | The stomaches' back openings south of the throats closed sphincters  |
+| 230 | The stomaches' back openings south of the throats closed sphincters. |
+| 231 | The stomaches' back openings south of throats closed sphincters      |
+| 232 | The stomaches' back openings south of throats closed sphincters.     |
+| 233 | The stomaches' back openings, south of a closed throat sphincter     |
+| 234 | The stomaches' back openings, south of a throats closed sphincter    |
+| 235 | The stomaches' back openings, south of closed throat sphincters      |
+| 236 | The stomaches' back openings, south of the closed throat sphincter   |
+| 237 | The stomaches' back openings, south of the closed throat sphincters  |
+| 238 | The stomaches' back openings, south of the throats closed sphincter  |
+| 239 | The stomaches' back openings, south of the throats closed sphincters |
+| 240 | The stomaches' back openings, south of throats closed sphincters     |
++-----+----------------------------------------------------------------------+
+
