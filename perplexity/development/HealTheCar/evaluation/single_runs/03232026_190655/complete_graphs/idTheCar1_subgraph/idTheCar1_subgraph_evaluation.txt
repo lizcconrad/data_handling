@@ -1,0 +1,199 @@
+GRAPH NAME: idTheCar1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------+
+|                GOLD OUTPUTS                |
++-------------------------------+------------+
+| Gold Output                   | Generated? |
++-------------------------------+------------+
+| The Car near the hollow stump | True       |
++-------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idTheCar1 | True         | True          | Covered          | Included          |
+| idStump1  | True         | True          | Covered          | Included          |
+| hollow    | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                       |
++------------------------------+-----------+----------+--------------+---------------+------------------+-------------------+
+| Edge                         | Parent    | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------+-----------+----------+--------------+---------------+------------------+-------------------+
+| isNear                       | idTheCar1 | idStump1 | True         | True          | Covered          | Included          |
+| idStump1_prop_idDescriptor_1 | idStump1  | hollow   | True         | True          | Covered          | Included          |
++------------------------------+-----------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h732                                                                      |
+|               |   INDEX: x731                                                                    |
+|               |   RELS: < [ _near_p LBL: h741 ARG0: e738 ARG1: u739 ARG2: i740 ]                 |
+|               |           [ def_udef_a_q LBL: h745 ARG0: x742 RSTR: h743 BODY: h744 ]            |
+|               |           [ _hollow_a_1 LBL: h737 ARG0: e735 ARG1: u736 ]                        |
+|               |           [ _stump_n_1 LBL: h734 ARG0: x733 ]                                    |
+|               |           [ named LBL: h732 ARG0: x731 CARG: "Car" ] >                           |
+|               |   HCONS: < h743 qeq h734 >                                                       |
+|               |   EQS: < h737 eq h734 u736 eq x733 x742 eq x733 h741 eq h746 i740 eq x742 h741   |
+|               | eq h732 u739 eq x731 > ]                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h732                                                                      |
+|               |   INDEX: x731                                                                    |
+|               |   RELS: < [ _near_p LBL: h732 ARG0: e738 ARG1: x731 ARG2: x733 ]                 |
+|               |           [ def_udef_a_q LBL: h745 ARG0: x733 RSTR: h743 BODY: h744 ]            |
+|               |           [ _hollow_a_1 LBL: h734 ARG0: e735 ARG1: x733 ]                        |
+|               |           [ _stump_n_1 LBL: h734 ARG0: x733 ]                                    |
+|               |           [ named LBL: h732 ARG0: x731 CARG: "Car" ] >                           |
+|               |   HCONS: < h743 qeq h734 > ]                                                     |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h755                                                                      |
+|               |   INDEX: e752                                                                    |
+|               |   RELS: < [ unknown LBL: h751 ARG: x731 ARG0: e752 ]                             |
+|               |           [ def_udef_a_q LBL: h750 ARG0: x731 RSTR: h748 BODY: h749 ]            |
+|               |           [ _near_p LBL: h732 ARG0: e738 ARG1: x731 ARG2: x733 ]                 |
+|               |           [ def_udef_a_q LBL: h745 ARG0: x733 RSTR: h743 BODY: h744 ]            |
+|               |           [ _hollow_a_1 LBL: h734 ARG0: e735 ARG1: x733 ]                        |
+|               |           [ _stump_n_1 LBL: h734 ARG0: x733 ]                                    |
+|               |           [ named LBL: h732 ARG0: x731 CARG: "Car" ] >                           |
+|               |   HCONS: < h743 qeq h734 h748 qeq h732 h755 qeq h751 > ]                         |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------+
+|                               NODE SEMENTS                              |
++-----------+-------------------------------------------------------------+
+| Node      | Generated SEMENT                                            |
++-----------+-------------------------------------------------------------+
+| idTheCar1 | [ TOP: h732                                                 |
+|           |   INDEX: x731                                               |
+|           |   RELS: < [ named LBL: h732 ARG0: x731 CARG: "Car" ] > ]    |
++-----------+-------------------------------------------------------------+
+| idStump1  | [ TOP: h734                                                 |
+|           |   INDEX: x733                                               |
+|           |   RELS: < [ _stump_n_1 LBL: h734 ARG0: x733 ] > ]           |
++-----------+-------------------------------------------------------------+
+| hollow    | [ TOP: h737                                                 |
+|           |   INDEX: e735                                               |
+|           |   RELS: < [ _hollow_a_1 LBL: h737 ARG0: e735 ARG1: u736 ] > |
+|           |   SLOTS: < ARG1: u736 > ]                                   |
++-----------+-------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE SEMENTS                                                              |
++------------------------------+-----------+----------+----------------------------------------------------------------------------------+
+| Edge                         | Parent    | Child    | Generated SEMENT                                                                 |
++------------------------------+-----------+----------+----------------------------------------------------------------------------------+
+| isNear                       | idTheCar1 | idStump1 | [ TOP: h732                                                                      |
+|                              |           |          |   INDEX: x731                                                                    |
+|                              |           |          |   RELS: < [ _near_p LBL: h741 ARG0: e738 ARG1: u739 ARG2: i740 ]                 |
+|                              |           |          |           [ def_udef_a_q LBL: h745 ARG0: x742 RSTR: h743 BODY: h744 ]            |
+|                              |           |          |           [ _hollow_a_1 LBL: h737 ARG0: e735 ARG1: u736 ]                        |
+|                              |           |          |           [ _stump_n_1 LBL: h734 ARG0: x733 ]                                    |
+|                              |           |          |           [ named LBL: h732 ARG0: x731 CARG: "Car" ] >                           |
+|                              |           |          |   HCONS: < h743 qeq h734 >                                                       |
+|                              |           |          |   EQS: < h737 eq h734 u736 eq x733 x742 eq x733 h741 eq h746 i740 eq x742 h741   |
+|                              |           |          | eq h732 u739 eq x731 > ]                                                         |
++------------------------------+-----------+----------+----------------------------------------------------------------------------------+
+| idStump1_prop_idDescriptor_1 | idStump1  | hollow   | [ TOP: h734                                                                      |
+|                              |           |          |   INDEX: x733                                                                    |
+|                              |           |          |   RELS: < [ _hollow_a_1 LBL: h737 ARG0: e735 ARG1: u736 ]                        |
+|                              |           |          |           [ _stump_n_1 LBL: h734 ARG0: x733 ] >                                  |
+|                              |           |          |   EQS: < h737 eq h734 u736 eq x733 > ]                                           |
++------------------------------+-----------+----------+----------------------------------------------------------------------------------+
+
++---------------------------------------+
+|         GENERATED ENGLISH TEXT        |
++----+----------------------------------+
+| #  | Generated Text                   |
++----+----------------------------------+
+| 1  | A Car near a hollow stump        |
+| 2  | A Car near a hollow stump.       |
+| 3  | A Car near hollow stumps         |
+| 4  | A Car near hollow stumps.        |
+| 5  | A Car near the hollow stump      |
+| 6  | A Car near the hollow stump.     |
+| 7  | A Car near the hollow stumps     |
+| 8  | A Car near the hollow stumps.    |
+| 9  | A Car, near a hollow stump       |
+| 10 | A Car, near hollow stumps        |
+| 11 | A Car, near the hollow stump     |
+| 12 | A Car, near the hollow stumps    |
+| 13 | An Car near a hollow stump       |
+| 14 | An Car near a hollow stump.      |
+| 15 | An Car near hollow stumps        |
+| 16 | An Car near hollow stumps.       |
+| 17 | An Car near the hollow stump     |
+| 18 | An Car near the hollow stump.    |
+| 19 | An Car near the hollow stumps    |
+| 20 | An Car near the hollow stumps.   |
+| 21 | An Car, near a hollow stump      |
+| 22 | An Car, near hollow stumps       |
+| 23 | An Car, near the hollow stump    |
+| 24 | An Car, near the hollow stumps   |
+| 25 | Cars near a hollow stump         |
+| 26 | Cars near a hollow stump.        |
+| 27 | Cars near hollow stumps          |
+| 28 | Cars near hollow stumps.         |
+| 29 | Cars near the hollow stump       |
+| 30 | Cars near the hollow stump.      |
+| 31 | Cars near the hollow stumps      |
+| 32 | Cars near the hollow stumps.     |
+| 33 | Cars, near a hollow stump        |
+| 34 | Cars, near hollow stumps         |
+| 35 | Cars, near the hollow stump      |
+| 36 | Cars, near the hollow stumps     |
+| 37 | The Car near a hollow stump      |
+| 38 | The Car near a hollow stump.     |
+| 39 | The Car near hollow stumps       |
+| 40 | The Car near hollow stumps.      |
+| 41 | The Car near the hollow stump    |
+| 42 | The Car near the hollow stump.   |
+| 43 | The Car near the hollow stumps   |
+| 44 | The Car near the hollow stumps.  |
+| 45 | The Car, near a hollow stump     |
+| 46 | The Car, near hollow stumps      |
+| 47 | The Car, near the hollow stump   |
+| 48 | The Car, near the hollow stumps  |
+| 49 | The Cars near a hollow stump     |
+| 50 | The Cars near a hollow stump.    |
+| 51 | The Cars near hollow stumps      |
+| 52 | The Cars near hollow stumps.     |
+| 53 | The Cars near the hollow stump   |
+| 54 | The Cars near the hollow stump.  |
+| 55 | The Cars near the hollow stumps  |
+| 56 | The Cars near the hollow stumps. |
+| 57 | The Cars, near a hollow stump    |
+| 58 | The Cars, near hollow stumps     |
+| 59 | The Cars, near the hollow stump  |
+| 60 | The Cars, near the hollow stumps |
++----+----------------------------------+
+

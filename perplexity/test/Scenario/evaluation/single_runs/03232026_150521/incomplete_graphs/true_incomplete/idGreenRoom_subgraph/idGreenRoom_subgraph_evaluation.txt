@@ -1,0 +1,386 @@
+GRAPH NAME: idGreenRoom_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 270                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 3                  |
+| Nodes Covered                   | 2                  |
+| Nodes Included                  | 2                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.6666666666666666 |
+| Node Inclusion                  | 0.6666666666666666 |
++---------------------------------+--------------------+
+| Edge Count                      | 2                  |
+| Edges Covered                   | 1                  |
+| Edges Included                  | 1                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.5                |
+| Edge Inclusion                  | 0.5                |
++---------------------------------+--------------------+
+
++------------------------------------------------------+
+|                     GOLD OUTPUTS                     |
++-----------------------------------------+------------+
+| Gold Output                             | Generated? |
++-----------------------------------------+------------+
+| the green green room south of the plage | False      |
++-----------------------------------------+------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+|                                                       NODE METRICS                                                       |
++-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                        | Inclusion Comment                 |
++-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| idGreenRoom | True         | True          | Covered                                 | Included                          |
+| green       | True         | True          | Covered                                 | Included                          |
+| idPlage     | False        | False         | 'idPlage' not in lexicon's node entries | No SEMENT generated for this node |
++-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                       EDGE METRICS                                                                       |
++--------------------------+-------------+---------+--------------+---------------+------------------------------------+-----------------------------------+
+| Edge                     | Parent      | Child   | Edge Covered | Edge Included | Coverage Comment                   | Inclusion Comment                 |
++--------------------------+-------------+---------+--------------+---------------+------------------------------------+-----------------------------------+
+| idGreenRoom_prop_idColor | idGreenRoom | green   | True         | True          | Covered                            | Included                          |
+| isSouthOf                | idGreenRoom | idPlage | False        | False         | child of 'isSouthOf' has no SEMENT | No SEMENT generated for this edge |
++--------------------------+-------------+---------+--------------+---------------+------------------------------------+-----------------------------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                        |
++---------------+---------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                          |
++---------------+---------------------------------------------------------------------------------+
+| Original      | [ TOP: h1212                                                                    |
+|               |   INDEX: x1211                                                                  |
+|               |   RELS: < [ _green_a_2 LBL: h1215 ARG0: i1213 [ i TENSE: tensed ] ARG1: i1214 ] |
+|               |           [ named LBL: h1212 ARG0: x1211 CARG: "Green Room" ] >                 |
+|               |   EQS: < h1215 eq h1212 i1214 eq x1211 > ]                                      |
++---------------+---------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1212                                                                    |
+|               |   INDEX: x1211                                                                  |
+|               |   RELS: < [ _green_a_2 LBL: h1212 ARG0: i1213 [ i TENSE: tensed ] ARG1: x1211 ] |
+|               |           [ named LBL: h1212 ARG0: x1211 CARG: "Green Room" ] > ]               |
++---------------+---------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1224                                                                    |
+|               |   INDEX: e1221                                                                  |
+|               |   RELS: < [ unknown LBL: h1220 ARG: x1211 ARG0: e1221 ]                         |
+|               |           [ def_udef_a_q LBL: h1219 ARG0: x1211 RSTR: h1217 BODY: h1218 ]       |
+|               |           [ _green_a_2 LBL: h1212 ARG0: i1213 [ i TENSE: tensed ] ARG1: x1211 ] |
+|               |           [ named LBL: h1212 ARG0: x1211 CARG: "Green Room" ] >                 |
+|               |   HCONS: < h1217 qeq h1212 h1224 qeq h1220 > ]                                  |
++---------------+---------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE SEMENTS                                  |
++-------------+-------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                  |
++-------------+-------------------------------------------------------------------+
+| idGreenRoom | [ TOP: h1212                                                      |
+|             |   INDEX: x1211                                                    |
+|             |   RELS: < [ named LBL: h1212 ARG0: x1211 CARG: "Green Room" ] > ] |
++-------------+-------------------------------------------------------------------+
+| green       | [ TOP: h1215                                                      |
+|             |   INDEX: i1213                                                    |
+|             |   RELS: < [ _green_a_2 LBL: h1215 ARG0: i1213 ARG1: i1214 ] >     |
+|             |   SLOTS: < ARG1: i1214 > ]                                        |
++-------------+-------------------------------------------------------------------+
+| idPlage     | None                                                              |
++-------------+-------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                            |
++--------------------------+-------------+---------+---------------------------------------------------------------------------------+
+| Edge                     | Parent      | Child   | Generated SEMENT                                                                |
++--------------------------+-------------+---------+---------------------------------------------------------------------------------+
+| idGreenRoom_prop_idColor | idGreenRoom | green   | [ TOP: h1212                                                                    |
+|                          |             |         |   INDEX: x1211                                                                  |
+|                          |             |         |   RELS: < [ _green_a_2 LBL: h1215 ARG0: i1213 [ i TENSE: tensed ] ARG1: i1214 ] |
+|                          |             |         |           [ named LBL: h1212 ARG0: x1211 CARG: "Green Room" ] >                 |
+|                          |             |         |   EQS: < h1215 eq h1212 i1214 eq x1211 > ]                                      |
++--------------------------+-------------+---------+---------------------------------------------------------------------------------+
+| isSouthOf                | idGreenRoom | idPlage | None                                                                            |
++--------------------------+-------------+---------+---------------------------------------------------------------------------------+
+
++----------------------------------------------------+
+|               GENERATED ENGLISH TEXT               |
++-----+----------------------------------------------+
+| #   | Generated Text                               |
++-----+----------------------------------------------+
+| 1   | A Green Room that had been green             |
+| 2   | A Green Room that had been green.            |
+| 3   | A Green Room that has been green             |
+| 4   | A Green Room that has been green.            |
+| 5   | A Green Room that is green                   |
+| 6   | A Green Room that is green.                  |
+| 7   | A Green Room that was green                  |
+| 8   | A Green Room that was green.                 |
+| 9   | A Green Room that will be green              |
+| 10  | A Green Room that will be green.             |
+| 11  | A Green Room that will have been green       |
+| 12  | A Green Room that will have been green.      |
+| 13  | A Green Room which had been green            |
+| 14  | A Green Room which had been green.           |
+| 15  | A Green Room which has been green            |
+| 16  | A Green Room which has been green.           |
+| 17  | A Green Room which is green                  |
+| 18  | A Green Room which is green.                 |
+| 19  | A Green Room which was green                 |
+| 20  | A Green Room which was green.                |
+| 21  | A Green Room which will be green             |
+| 22  | A Green Room which will be green.            |
+| 23  | A Green Room which will have been green      |
+| 24  | A Green Room which will have been green.     |
+| 25  | A Green Room who had been green              |
+| 26  | A Green Room who had been green.             |
+| 27  | A Green Room who has been green              |
+| 28  | A Green Room who has been green.             |
+| 29  | A Green Room who is green                    |
+| 30  | A Green Room who is green.                   |
+| 31  | A Green Room who was green                   |
+| 32  | A Green Room who was green.                  |
+| 33  | A Green Room who will be green               |
+| 34  | A Green Room who will be green.              |
+| 35  | A Green Room who will have been green        |
+| 36  | A Green Room who will have been green.       |
+| 37  | A Green Room, that had been green.           |
+| 38  | A Green Room, that has been green.           |
+| 39  | A Green Room, that is green.                 |
+| 40  | A Green Room, that was green.                |
+| 41  | A Green Room, that will be green.            |
+| 42  | A Green Room, that will have been green.     |
+| 43  | A Green Room, which had been green.          |
+| 44  | A Green Room, which has been green.          |
+| 45  | A Green Room, which is green.                |
+| 46  | A Green Room, which was green.               |
+| 47  | A Green Room, which will be green.           |
+| 48  | A Green Room, which will have been green.    |
+| 49  | A Green Room, who had been green.            |
+| 50  | A Green Room, who has been green.            |
+| 51  | A Green Room, who is green.                  |
+| 52  | A Green Room, who was green.                 |
+| 53  | A Green Room, who will be green.             |
+| 54  | A Green Room, who will have been green.      |
+| 55  | An Green Room that had been green            |
+| 56  | An Green Room that had been green.           |
+| 57  | An Green Room that has been green            |
+| 58  | An Green Room that has been green.           |
+| 59  | An Green Room that is green                  |
+| 60  | An Green Room that is green.                 |
+| 61  | An Green Room that was green                 |
+| 62  | An Green Room that was green.                |
+| 63  | An Green Room that will be green             |
+| 64  | An Green Room that will be green.            |
+| 65  | An Green Room that will have been green      |
+| 66  | An Green Room that will have been green.     |
+| 67  | An Green Room which had been green           |
+| 68  | An Green Room which had been green.          |
+| 69  | An Green Room which has been green           |
+| 70  | An Green Room which has been green.          |
+| 71  | An Green Room which is green                 |
+| 72  | An Green Room which is green.                |
+| 73  | An Green Room which was green                |
+| 74  | An Green Room which was green.               |
+| 75  | An Green Room which will be green            |
+| 76  | An Green Room which will be green.           |
+| 77  | An Green Room which will have been green     |
+| 78  | An Green Room which will have been green.    |
+| 79  | An Green Room who had been green             |
+| 80  | An Green Room who had been green.            |
+| 81  | An Green Room who has been green             |
+| 82  | An Green Room who has been green.            |
+| 83  | An Green Room who is green                   |
+| 84  | An Green Room who is green.                  |
+| 85  | An Green Room who was green                  |
+| 86  | An Green Room who was green.                 |
+| 87  | An Green Room who will be green              |
+| 88  | An Green Room who will be green.             |
+| 89  | An Green Room who will have been green       |
+| 90  | An Green Room who will have been green.      |
+| 91  | An Green Room, that had been green.          |
+| 92  | An Green Room, that has been green.          |
+| 93  | An Green Room, that is green.                |
+| 94  | An Green Room, that was green.               |
+| 95  | An Green Room, that will be green.           |
+| 96  | An Green Room, that will have been green.    |
+| 97  | An Green Room, which had been green.         |
+| 98  | An Green Room, which has been green.         |
+| 99  | An Green Room, which is green.               |
+| 100 | An Green Room, which was green.              |
+| 101 | An Green Room, which will be green.          |
+| 102 | An Green Room, which will have been green.   |
+| 103 | An Green Room, who had been green.           |
+| 104 | An Green Room, who has been green.           |
+| 105 | An Green Room, who is green.                 |
+| 106 | An Green Room, who was green.                |
+| 107 | An Green Room, who will be green.            |
+| 108 | An Green Room, who will have been green.     |
+| 109 | Green Rooms that are green                   |
+| 110 | Green Rooms that are green.                  |
+| 111 | Green Rooms that had been green              |
+| 112 | Green Rooms that had been green.             |
+| 113 | Green Rooms that have been green             |
+| 114 | Green Rooms that have been green.            |
+| 115 | Green Rooms that were green                  |
+| 116 | Green Rooms that were green.                 |
+| 117 | Green Rooms that will be green               |
+| 118 | Green Rooms that will be green.              |
+| 119 | Green Rooms that will have been green        |
+| 120 | Green Rooms that will have been green.       |
+| 121 | Green Rooms which are green                  |
+| 122 | Green Rooms which are green.                 |
+| 123 | Green Rooms which had been green             |
+| 124 | Green Rooms which had been green.            |
+| 125 | Green Rooms which have been green            |
+| 126 | Green Rooms which have been green.           |
+| 127 | Green Rooms which were green                 |
+| 128 | Green Rooms which were green.                |
+| 129 | Green Rooms which will be green              |
+| 130 | Green Rooms which will be green.             |
+| 131 | Green Rooms which will have been green       |
+| 132 | Green Rooms which will have been green.      |
+| 133 | Green Rooms who are green                    |
+| 134 | Green Rooms who are green.                   |
+| 135 | Green Rooms who had been green               |
+| 136 | Green Rooms who had been green.              |
+| 137 | Green Rooms who have been green              |
+| 138 | Green Rooms who have been green.             |
+| 139 | Green Rooms who were green                   |
+| 140 | Green Rooms who were green.                  |
+| 141 | Green Rooms who will be green                |
+| 142 | Green Rooms who will be green.               |
+| 143 | Green Rooms who will have been green         |
+| 144 | Green Rooms who will have been green.        |
+| 145 | Green Rooms, that are green.                 |
+| 146 | Green Rooms, that had been green.            |
+| 147 | Green Rooms, that have been green.           |
+| 148 | Green Rooms, that were green.                |
+| 149 | Green Rooms, that will be green.             |
+| 150 | Green Rooms, that will have been green.      |
+| 151 | Green Rooms, which are green.                |
+| 152 | Green Rooms, which had been green.           |
+| 153 | Green Rooms, which have been green.          |
+| 154 | Green Rooms, which were green.               |
+| 155 | Green Rooms, which will be green.            |
+| 156 | Green Rooms, which will have been green.     |
+| 157 | Green Rooms, who are green.                  |
+| 158 | Green Rooms, who had been green.             |
+| 159 | Green Rooms, who have been green.            |
+| 160 | Green Rooms, who were green.                 |
+| 161 | Green Rooms, who will be green.              |
+| 162 | Green Rooms, who will have been green.       |
+| 163 | The Green Room that had been green           |
+| 164 | The Green Room that had been green.          |
+| 165 | The Green Room that has been green           |
+| 166 | The Green Room that has been green.          |
+| 167 | The Green Room that is green                 |
+| 168 | The Green Room that is green.                |
+| 169 | The Green Room that was green                |
+| 170 | The Green Room that was green.               |
+| 171 | The Green Room that will be green            |
+| 172 | The Green Room that will be green.           |
+| 173 | The Green Room that will have been green     |
+| 174 | The Green Room that will have been green.    |
+| 175 | The Green Room which had been green          |
+| 176 | The Green Room which had been green.         |
+| 177 | The Green Room which has been green          |
+| 178 | The Green Room which has been green.         |
+| 179 | The Green Room which is green                |
+| 180 | The Green Room which is green.               |
+| 181 | The Green Room which was green               |
+| 182 | The Green Room which was green.              |
+| 183 | The Green Room which will be green           |
+| 184 | The Green Room which will be green.          |
+| 185 | The Green Room which will have been green    |
+| 186 | The Green Room which will have been green.   |
+| 187 | The Green Room who had been green            |
+| 188 | The Green Room who had been green.           |
+| 189 | The Green Room who has been green            |
+| 190 | The Green Room who has been green.           |
+| 191 | The Green Room who is green                  |
+| 192 | The Green Room who is green.                 |
+| 193 | The Green Room who was green                 |
+| 194 | The Green Room who was green.                |
+| 195 | The Green Room who will be green             |
+| 196 | The Green Room who will be green.            |
+| 197 | The Green Room who will have been green      |
+| 198 | The Green Room who will have been green.     |
+| 199 | The Green Room, that had been green.         |
+| 200 | The Green Room, that has been green.         |
+| 201 | The Green Room, that is green.               |
+| 202 | The Green Room, that was green.              |
+| 203 | The Green Room, that will be green.          |
+| 204 | The Green Room, that will have been green.   |
+| 205 | The Green Room, which had been green.        |
+| 206 | The Green Room, which has been green.        |
+| 207 | The Green Room, which is green.              |
+| 208 | The Green Room, which was green.             |
+| 209 | The Green Room, which will be green.         |
+| 210 | The Green Room, which will have been green.  |
+| 211 | The Green Room, who had been green.          |
+| 212 | The Green Room, who has been green.          |
+| 213 | The Green Room, who is green.                |
+| 214 | The Green Room, who was green.               |
+| 215 | The Green Room, who will be green.           |
+| 216 | The Green Room, who will have been green.    |
+| 217 | The Green Rooms that are green               |
+| 218 | The Green Rooms that are green.              |
+| 219 | The Green Rooms that had been green          |
+| 220 | The Green Rooms that had been green.         |
+| 221 | The Green Rooms that have been green         |
+| 222 | The Green Rooms that have been green.        |
+| 223 | The Green Rooms that were green              |
+| 224 | The Green Rooms that were green.             |
+| 225 | The Green Rooms that will be green           |
+| 226 | The Green Rooms that will be green.          |
+| 227 | The Green Rooms that will have been green    |
+| 228 | The Green Rooms that will have been green.   |
+| 229 | The Green Rooms which are green              |
+| 230 | The Green Rooms which are green.             |
+| 231 | The Green Rooms which had been green         |
+| 232 | The Green Rooms which had been green.        |
+| 233 | The Green Rooms which have been green        |
+| 234 | The Green Rooms which have been green.       |
+| 235 | The Green Rooms which were green             |
+| 236 | The Green Rooms which were green.            |
+| 237 | The Green Rooms which will be green          |
+| 238 | The Green Rooms which will be green.         |
+| 239 | The Green Rooms which will have been green   |
+| 240 | The Green Rooms which will have been green.  |
+| 241 | The Green Rooms who are green                |
+| 242 | The Green Rooms who are green.               |
+| 243 | The Green Rooms who had been green           |
+| 244 | The Green Rooms who had been green.          |
+| 245 | The Green Rooms who have been green          |
+| 246 | The Green Rooms who have been green.         |
+| 247 | The Green Rooms who were green               |
+| 248 | The Green Rooms who were green.              |
+| 249 | The Green Rooms who will be green            |
+| 250 | The Green Rooms who will be green.           |
+| 251 | The Green Rooms who will have been green     |
+| 252 | The Green Rooms who will have been green.    |
+| 253 | The Green Rooms, that are green.             |
+| 254 | The Green Rooms, that had been green.        |
+| 255 | The Green Rooms, that have been green.       |
+| 256 | The Green Rooms, that were green.            |
+| 257 | The Green Rooms, that will be green.         |
+| 258 | The Green Rooms, that will have been green.  |
+| 259 | The Green Rooms, which are green.            |
+| 260 | The Green Rooms, which had been green.       |
+| 261 | The Green Rooms, which have been green.      |
+| 262 | The Green Rooms, which were green.           |
+| 263 | The Green Rooms, which will be green.        |
+| 264 | The Green Rooms, which will have been green. |
+| 265 | The Green Rooms, who are green.              |
+| 266 | The Green Rooms, who had been green.         |
+| 267 | The Green Rooms, who have been green.        |
+| 268 | The Green Rooms, who were green.             |
+| 269 | The Green Rooms, who will be green.          |
+| 270 | The Green Rooms, who will have been green.   |
++-----+----------------------------------------------+
+

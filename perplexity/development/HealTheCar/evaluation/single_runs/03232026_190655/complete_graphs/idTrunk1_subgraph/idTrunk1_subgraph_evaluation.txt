@@ -1,0 +1,599 @@
+GRAPH NAME: idTrunk1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 360   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 6     |
+| Nodes Covered                   | 6     |
+| Nodes Included                  | 6     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 5     |
+| Edges Included                  | 5     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------+
+|                              GOLD OUTPUTS                              |
++-----------------------------------------------------------+------------+
+| Gold Output                                               | Generated? |
++-----------------------------------------------------------+------------+
+| the untouched unbroken black trunk west of the green bush | True       |
++-----------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idTrunk1  | True         | True          | Covered          | Included          |
+| black     | True         | True          | Covered          | Included          |
+| unbroken  | True         | True          | Covered          | Included          |
+| untouched | True         | True          | Covered          | Included          |
+| idBush1   | True         | True          | Covered          | Included          |
+| green     | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                       |
++------------------------------+----------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                         | Parent   | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------+----------+-----------+--------------+---------------+------------------+-------------------+
+| idTrunk1_prop_idColor        | idTrunk1 | black     | True         | True          | Covered          | Included          |
+| idTrunk1_prop_idDescriptor   | idTrunk1 | unbroken  | True         | True          | Covered          | Included          |
+| idTrunk1_prop_idDescriptor_1 | idTrunk1 | untouched | True         | True          | Covered          | Included          |
+| isWestOf                     | idTrunk1 | idBush1   | True         | True          | Covered          | Included          |
+| idBush1_prop_idColor         | idBush1  | green     | True         | True          | Covered          | Included          |
++------------------------------+----------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h810                                                                      |
+|               |   INDEX: x809                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h840 ARG0: e837 ARG1: u838 ARG2: x839 ]               |
+|               |           [ def_implicit_q LBL: h851 ARG0: x848 RSTR: h849 BODY: h850 ]          |
+|               |           [ _west_a_1 LBL: h836 ARG0: i833 ARG1: x834 ARG2: u835 ]               |
+|               |           [ def_udef_a_q LBL: h846 ARG0: x843 RSTR: h844 BODY: h845 ]            |
+|               |           [ _green_a_2 LBL: h832 ARG0: i830 ARG1: i831 ]                         |
+|               |           [ _bush_n_1 LBL: h829 ARG0: x828 ]                                     |
+|               |           [ place_n LBL: h842 ARG0: x841 ]                                       |
+|               |           [ _un-_a_neg LBL: h827 ARG0: i825 ARG1: e826 ]                         |
+|               |           [ _touch_v_1 LBL: h824 ARG0: e821 [ e PERF: - ] ARG1: i822 ARG2: i823  |
+|               | ]                                                                                |
+|               |           [ _un-_a_neg LBL: h820 ARG0: i818 ARG1: e819 ]                         |
+|               |           [ _break_v_cause LBL: h817 ARG0: e814 [ e PERF: - ] ARG1: i815 ARG2:   |
+|               | i816 ]                                                                           |
+|               |           [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ]                         |
+|               |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|               |   HCONS: < h844 qeq h829 h849 qeq h842 >                                         |
+|               |   ICONS: < e814 topic i816 e821 topic i823 >                                     |
+|               |   EQS: < h832 eq h829 i831 eq x828 x843 eq x828 h836 eq h847 u835 eq x843 h836   |
+|               | eq h842 x834 eq x841 x848 eq x841 h840 eq h852 x839 eq x848 h827 eq h824 e826 eq |
+|               | e821 h820 eq h817 e819 eq e814 h813 eq h810 i812 eq x809 h817 eq h810 i816 eq    |
+|               | x809 h824 eq h810 i823 eq x809 h840 eq h810 u838 eq x809 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h810                                                                      |
+|               |   INDEX: x809                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h810 ARG0: e837 ARG1: x809 ARG2: x834 ]               |
+|               |           [ def_implicit_q LBL: h851 ARG0: x834 RSTR: h849 BODY: h850 ]          |
+|               |           [ _west_a_1 LBL: h836 ARG0: i833 ARG1: x834 ARG2: x828 ]               |
+|               |           [ def_udef_a_q LBL: h846 ARG0: x828 RSTR: h844 BODY: h845 ]            |
+|               |           [ _green_a_2 LBL: h829 ARG0: i830 ARG1: x828 ]                         |
+|               |           [ _bush_n_1 LBL: h829 ARG0: x828 ]                                     |
+|               |           [ place_n LBL: h836 ARG0: x834 ]                                       |
+|               |           [ _un-_a_neg LBL: h810 ARG0: i825 ARG1: e821 [ e PERF: - ] ]           |
+|               |           [ _touch_v_1 LBL: h810 ARG0: e821 ARG1: i822 ARG2: x809 ]              |
+|               |           [ _un-_a_neg LBL: h810 ARG0: i818 ARG1: e814 [ e PERF: - ] ]           |
+|               |           [ _break_v_cause LBL: h810 ARG0: e814 ARG1: i815 ARG2: x809 ]          |
+|               |           [ _black_a_1 LBL: h810 ARG0: i811 ARG1: x809 ]                         |
+|               |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|               |   HCONS: < h844 qeq h829 h849 qeq h836 >                                         |
+|               |   ICONS: < e814 topic x809 e821 topic x809 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h861                                                                      |
+|               |   INDEX: e858                                                                    |
+|               |   RELS: < [ unknown LBL: h857 ARG: x809 ARG0: e858 ]                             |
+|               |           [ def_udef_a_q LBL: h856 ARG0: x809 RSTR: h854 BODY: h855 ]            |
+|               |           [ loc_nonsp LBL: h810 ARG0: e837 ARG1: x809 ARG2: x834 ]               |
+|               |           [ def_implicit_q LBL: h851 ARG0: x834 RSTR: h849 BODY: h850 ]          |
+|               |           [ _west_a_1 LBL: h836 ARG0: i833 ARG1: x834 ARG2: x828 ]               |
+|               |           [ def_udef_a_q LBL: h846 ARG0: x828 RSTR: h844 BODY: h845 ]            |
+|               |           [ _green_a_2 LBL: h829 ARG0: i830 ARG1: x828 ]                         |
+|               |           [ _bush_n_1 LBL: h829 ARG0: x828 ]                                     |
+|               |           [ place_n LBL: h836 ARG0: x834 ]                                       |
+|               |           [ _un-_a_neg LBL: h810 ARG0: i825 ARG1: e821 [ e PERF: - ] ]           |
+|               |           [ _touch_v_1 LBL: h810 ARG0: e821 ARG1: i822 ARG2: x809 ]              |
+|               |           [ _un-_a_neg LBL: h810 ARG0: i818 ARG1: e814 [ e PERF: - ] ]           |
+|               |           [ _break_v_cause LBL: h810 ARG0: e814 ARG1: i815 ARG2: x809 ]          |
+|               |           [ _black_a_1 LBL: h810 ARG0: i811 ARG1: x809 ]                         |
+|               |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|               |   HCONS: < h844 qeq h829 h849 qeq h836 h854 qeq h810 h861 qeq h857 >             |
+|               |   ICONS: < e814 topic x809 e821 topic x809 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                                      NODE SEMENTS                                     |
++-----------+---------------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                          |
++-----------+---------------------------------------------------------------------------+
+| idTrunk1  | [ TOP: h810                                                               |
+|           |   INDEX: x809                                                             |
+|           |   RELS: < [ _trunk_n_1 LBL: h810 ARG0: x809 ] > ]                         |
++-----------+---------------------------------------------------------------------------+
+| black     | [ TOP: h813                                                               |
+|           |   INDEX: i811                                                             |
+|           |   RELS: < [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ] >                |
+|           |   SLOTS: < ARG1: i812 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+| unbroken  | [ TOP: h817                                                               |
+|           |   INDEX: e814                                                             |
+|           |   RELS: < [ _un-_a_neg LBL: h820 ARG0: i818 ARG1: e819 ]                  |
+|           |           [ _break_v_cause LBL: h817 ARG0: e814 ARG1: i815 ARG2: i816 ] > |
+|           |   EQS: < h820 eq h817 e819 eq e814 >                                      |
+|           |   SLOTS: < ARG1: i815 ARG2: i816 > ]                                      |
++-----------+---------------------------------------------------------------------------+
+| untouched | [ TOP: h824                                                               |
+|           |   INDEX: e821                                                             |
+|           |   RELS: < [ _un-_a_neg LBL: h827 ARG0: i825 ARG1: e826 ]                  |
+|           |           [ _touch_v_1 LBL: h824 ARG0: e821 ARG1: i822 ARG2: i823 ] >     |
+|           |   EQS: < h827 eq h824 e826 eq e821 >                                      |
+|           |   SLOTS: < ARG1: i822 ARG2: i823 > ]                                      |
++-----------+---------------------------------------------------------------------------+
+| idBush1   | [ TOP: h829                                                               |
+|           |   INDEX: x828                                                             |
+|           |   RELS: < [ _bush_n_1 LBL: h829 ARG0: x828 ] > ]                          |
++-----------+---------------------------------------------------------------------------+
+| green     | [ TOP: h832                                                               |
+|           |   INDEX: i830                                                             |
+|           |   RELS: < [ _green_a_2 LBL: h832 ARG0: i830 ARG1: i831 ] >                |
+|           |   SLOTS: < ARG1: i831 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE SEMENTS                                                              |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| Edge                         | Parent   | Child     | Generated SEMENT                                                                 |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| idTrunk1_prop_idColor        | idTrunk1 | black     | [ TOP: h810                                                                      |
+|                              |          |           |   INDEX: x809                                                                    |
+|                              |          |           |   RELS: < [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ]                         |
+|                              |          |           |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|                              |          |           |   EQS: < h813 eq h810 i812 eq x809 > ]                                           |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| idTrunk1_prop_idDescriptor   | idTrunk1 | unbroken  | [ TOP: h810                                                                      |
+|                              |          |           |   INDEX: x809                                                                    |
+|                              |          |           |   RELS: < [ _un-_a_neg LBL: h820 ARG0: i818 ARG1: e819 ]                         |
+|                              |          |           |           [ _break_v_cause LBL: h817 ARG0: e814 [ e PERF: - ] ARG1: i815 ARG2:   |
+|                              |          |           | i816 ]                                                                           |
+|                              |          |           |           [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ]                         |
+|                              |          |           |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|                              |          |           |   ICONS: < e814 topic i816 >                                                     |
+|                              |          |           |   EQS: < h820 eq h817 e819 eq e814 h813 eq h810 i812 eq x809 h817 eq h810 i816   |
+|                              |          |           | eq x809 > ]                                                                      |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| idTrunk1_prop_idDescriptor_1 | idTrunk1 | untouched | [ TOP: h810                                                                      |
+|                              |          |           |   INDEX: x809                                                                    |
+|                              |          |           |   RELS: < [ _un-_a_neg LBL: h827 ARG0: i825 ARG1: e826 ]                         |
+|                              |          |           |           [ _touch_v_1 LBL: h824 ARG0: e821 [ e PERF: - ] ARG1: i822 ARG2: i823  |
+|                              |          |           | ]                                                                                |
+|                              |          |           |           [ _un-_a_neg LBL: h820 ARG0: i818 ARG1: e819 ]                         |
+|                              |          |           |           [ _break_v_cause LBL: h817 ARG0: e814 [ e PERF: - ] ARG1: i815 ARG2:   |
+|                              |          |           | i816 ]                                                                           |
+|                              |          |           |           [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ]                         |
+|                              |          |           |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|                              |          |           |   ICONS: < e814 topic i816 e821 topic i823 >                                     |
+|                              |          |           |   EQS: < h827 eq h824 e826 eq e821 h820 eq h817 e819 eq e814 h813 eq h810 i812   |
+|                              |          |           | eq x809 h817 eq h810 i816 eq x809 h824 eq h810 i823 eq x809 > ]                  |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| isWestOf                     | idTrunk1 | idBush1   | [ TOP: h810                                                                      |
+|                              |          |           |   INDEX: x809                                                                    |
+|                              |          |           |   RELS: < [ loc_nonsp LBL: h840 ARG0: e837 ARG1: u838 ARG2: x839 ]               |
+|                              |          |           |           [ def_implicit_q LBL: h851 ARG0: x848 RSTR: h849 BODY: h850 ]          |
+|                              |          |           |           [ _west_a_1 LBL: h836 ARG0: i833 ARG1: x834 ARG2: u835 ]               |
+|                              |          |           |           [ def_udef_a_q LBL: h846 ARG0: x843 RSTR: h844 BODY: h845 ]            |
+|                              |          |           |           [ _green_a_2 LBL: h832 ARG0: i830 ARG1: i831 ]                         |
+|                              |          |           |           [ _bush_n_1 LBL: h829 ARG0: x828 ]                                     |
+|                              |          |           |           [ place_n LBL: h842 ARG0: x841 ]                                       |
+|                              |          |           |           [ _un-_a_neg LBL: h827 ARG0: i825 ARG1: e826 ]                         |
+|                              |          |           |           [ _touch_v_1 LBL: h824 ARG0: e821 [ e PERF: - ] ARG1: i822 ARG2: i823  |
+|                              |          |           | ]                                                                                |
+|                              |          |           |           [ _un-_a_neg LBL: h820 ARG0: i818 ARG1: e819 ]                         |
+|                              |          |           |           [ _break_v_cause LBL: h817 ARG0: e814 [ e PERF: - ] ARG1: i815 ARG2:   |
+|                              |          |           | i816 ]                                                                           |
+|                              |          |           |           [ _black_a_1 LBL: h813 ARG0: i811 ARG1: i812 ]                         |
+|                              |          |           |           [ _trunk_n_1 LBL: h810 ARG0: x809 ] >                                  |
+|                              |          |           |   HCONS: < h844 qeq h829 h849 qeq h842 >                                         |
+|                              |          |           |   ICONS: < e814 topic i816 e821 topic i823 >                                     |
+|                              |          |           |   EQS: < h832 eq h829 i831 eq x828 x843 eq x828 h836 eq h847 u835 eq x843 h836   |
+|                              |          |           | eq h842 x834 eq x841 x848 eq x841 h840 eq h852 x839 eq x848 h827 eq h824 e826 eq |
+|                              |          |           | e821 h820 eq h817 e819 eq e814 h813 eq h810 i812 eq x809 h817 eq h810 i816 eq    |
+|                              |          |           | x809 h824 eq h810 i823 eq x809 h840 eq h810 u838 eq x809 > ]                     |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+| idBush1_prop_idColor         | idBush1  | green     | [ TOP: h829                                                                      |
+|                              |          |           |   INDEX: x828                                                                    |
+|                              |          |           |   RELS: < [ _green_a_2 LBL: h832 ARG0: i830 ARG1: i831 ]                         |
+|                              |          |           |           [ _bush_n_1 LBL: h829 ARG0: x828 ] >                                   |
+|                              |          |           |   EQS: < h832 eq h829 i831 eq x828 > ]                                           |
++------------------------------+----------+-----------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------+
+|                        GENERATED ENGLISH TEXT                       |
++-----+---------------------------------------------------------------+
+| #   | Generated Text                                                |
++-----+---------------------------------------------------------------+
+| 1   | A black unbroken untouched trunk west of a green bush         |
+| 2   | A black unbroken untouched trunk west of a green bush.        |
+| 3   | A black unbroken untouched trunk west of green bushes         |
+| 4   | A black unbroken untouched trunk west of green bushes.        |
+| 5   | A black unbroken untouched trunk west of the green bush       |
+| 6   | A black unbroken untouched trunk west of the green bush.      |
+| 7   | A black unbroken untouched trunk west of the green bushes     |
+| 8   | A black unbroken untouched trunk west of the green bushes.    |
+| 9   | A black unbroken untouched trunk, west of a green bush        |
+| 10  | A black unbroken untouched trunk, west of green bushes        |
+| 11  | A black unbroken untouched trunk, west of the green bush      |
+| 12  | A black unbroken untouched trunk, west of the green bushes    |
+| 13  | A black untouched unbroken trunk west of a green bush         |
+| 14  | A black untouched unbroken trunk west of a green bush.        |
+| 15  | A black untouched unbroken trunk west of green bushes         |
+| 16  | A black untouched unbroken trunk west of green bushes.        |
+| 17  | A black untouched unbroken trunk west of the green bush       |
+| 18  | A black untouched unbroken trunk west of the green bush.      |
+| 19  | A black untouched unbroken trunk west of the green bushes     |
+| 20  | A black untouched unbroken trunk west of the green bushes.    |
+| 21  | A black untouched unbroken trunk, west of a green bush        |
+| 22  | A black untouched unbroken trunk, west of green bushes        |
+| 23  | A black untouched unbroken trunk, west of the green bush      |
+| 24  | A black untouched unbroken trunk, west of the green bushes    |
+| 25  | An unbroken black untouched trunk west of a green bush        |
+| 26  | An unbroken black untouched trunk west of a green bush.       |
+| 27  | An unbroken black untouched trunk west of green bushes        |
+| 28  | An unbroken black untouched trunk west of green bushes.       |
+| 29  | An unbroken black untouched trunk west of the green bush      |
+| 30  | An unbroken black untouched trunk west of the green bush.     |
+| 31  | An unbroken black untouched trunk west of the green bushes    |
+| 32  | An unbroken black untouched trunk west of the green bushes.   |
+| 33  | An unbroken black untouched trunk, west of a green bush       |
+| 34  | An unbroken black untouched trunk, west of green bushes       |
+| 35  | An unbroken black untouched trunk, west of the green bush     |
+| 36  | An unbroken black untouched trunk, west of the green bushes   |
+| 37  | An unbroken untouched black trunk west of a green bush        |
+| 38  | An unbroken untouched black trunk west of a green bush.       |
+| 39  | An unbroken untouched black trunk west of green bushes        |
+| 40  | An unbroken untouched black trunk west of green bushes.       |
+| 41  | An unbroken untouched black trunk west of the green bush      |
+| 42  | An unbroken untouched black trunk west of the green bush.     |
+| 43  | An unbroken untouched black trunk west of the green bushes    |
+| 44  | An unbroken untouched black trunk west of the green bushes.   |
+| 45  | An unbroken untouched black trunk, west of a green bush       |
+| 46  | An unbroken untouched black trunk, west of green bushes       |
+| 47  | An unbroken untouched black trunk, west of the green bush     |
+| 48  | An unbroken untouched black trunk, west of the green bushes   |
+| 49  | An untouched black unbroken trunk west of a green bush        |
+| 50  | An untouched black unbroken trunk west of a green bush.       |
+| 51  | An untouched black unbroken trunk west of green bushes        |
+| 52  | An untouched black unbroken trunk west of green bushes.       |
+| 53  | An untouched black unbroken trunk west of the green bush      |
+| 54  | An untouched black unbroken trunk west of the green bush.     |
+| 55  | An untouched black unbroken trunk west of the green bushes    |
+| 56  | An untouched black unbroken trunk west of the green bushes.   |
+| 57  | An untouched black unbroken trunk, west of a green bush       |
+| 58  | An untouched black unbroken trunk, west of green bushes       |
+| 59  | An untouched black unbroken trunk, west of the green bush     |
+| 60  | An untouched black unbroken trunk, west of the green bushes   |
+| 61  | An untouched unbroken black trunk west of a green bush        |
+| 62  | An untouched unbroken black trunk west of a green bush.       |
+| 63  | An untouched unbroken black trunk west of green bushes        |
+| 64  | An untouched unbroken black trunk west of green bushes.       |
+| 65  | An untouched unbroken black trunk west of the green bush      |
+| 66  | An untouched unbroken black trunk west of the green bush.     |
+| 67  | An untouched unbroken black trunk west of the green bushes    |
+| 68  | An untouched unbroken black trunk west of the green bushes.   |
+| 69  | An untouched unbroken black trunk, west of a green bush       |
+| 70  | An untouched unbroken black trunk, west of green bushes       |
+| 71  | An untouched unbroken black trunk, west of the green bush     |
+| 72  | An untouched unbroken black trunk, west of the green bushes   |
+| 73  | Black unbroken untouched trunk west of a green bush           |
+| 74  | Black unbroken untouched trunk west of a green bush.          |
+| 75  | Black unbroken untouched trunk west of green bushes           |
+| 76  | Black unbroken untouched trunk west of green bushes.          |
+| 77  | Black unbroken untouched trunk west of the green bush         |
+| 78  | Black unbroken untouched trunk west of the green bush.        |
+| 79  | Black unbroken untouched trunk west of the green bushes       |
+| 80  | Black unbroken untouched trunk west of the green bushes.      |
+| 81  | Black unbroken untouched trunk, west of a green bush          |
+| 82  | Black unbroken untouched trunk, west of green bushes          |
+| 83  | Black unbroken untouched trunk, west of the green bush        |
+| 84  | Black unbroken untouched trunk, west of the green bushes      |
+| 85  | Black unbroken untouched trunks west of a green bush          |
+| 86  | Black unbroken untouched trunks west of a green bush.         |
+| 87  | Black unbroken untouched trunks west of green bushes          |
+| 88  | Black unbroken untouched trunks west of green bushes.         |
+| 89  | Black unbroken untouched trunks west of the green bush        |
+| 90  | Black unbroken untouched trunks west of the green bush.       |
+| 91  | Black unbroken untouched trunks west of the green bushes      |
+| 92  | Black unbroken untouched trunks west of the green bushes.     |
+| 93  | Black unbroken untouched trunks, west of a green bush         |
+| 94  | Black unbroken untouched trunks, west of green bushes         |
+| 95  | Black unbroken untouched trunks, west of the green bush       |
+| 96  | Black unbroken untouched trunks, west of the green bushes     |
+| 97  | Black untouched unbroken trunk west of a green bush           |
+| 98  | Black untouched unbroken trunk west of a green bush.          |
+| 99  | Black untouched unbroken trunk west of green bushes           |
+| 100 | Black untouched unbroken trunk west of green bushes.          |
+| 101 | Black untouched unbroken trunk west of the green bush         |
+| 102 | Black untouched unbroken trunk west of the green bush.        |
+| 103 | Black untouched unbroken trunk west of the green bushes       |
+| 104 | Black untouched unbroken trunk west of the green bushes.      |
+| 105 | Black untouched unbroken trunk, west of a green bush          |
+| 106 | Black untouched unbroken trunk, west of green bushes          |
+| 107 | Black untouched unbroken trunk, west of the green bush        |
+| 108 | Black untouched unbroken trunk, west of the green bushes      |
+| 109 | Black untouched unbroken trunks west of a green bush          |
+| 110 | Black untouched unbroken trunks west of a green bush.         |
+| 111 | Black untouched unbroken trunks west of green bushes          |
+| 112 | Black untouched unbroken trunks west of green bushes.         |
+| 113 | Black untouched unbroken trunks west of the green bush        |
+| 114 | Black untouched unbroken trunks west of the green bush.       |
+| 115 | Black untouched unbroken trunks west of the green bushes      |
+| 116 | Black untouched unbroken trunks west of the green bushes.     |
+| 117 | Black untouched unbroken trunks, west of a green bush         |
+| 118 | Black untouched unbroken trunks, west of green bushes         |
+| 119 | Black untouched unbroken trunks, west of the green bush       |
+| 120 | Black untouched unbroken trunks, west of the green bushes     |
+| 121 | The black unbroken untouched trunk west of a green bush       |
+| 122 | The black unbroken untouched trunk west of a green bush.      |
+| 123 | The black unbroken untouched trunk west of green bushes       |
+| 124 | The black unbroken untouched trunk west of green bushes.      |
+| 125 | The black unbroken untouched trunk west of the green bush     |
+| 126 | The black unbroken untouched trunk west of the green bush.    |
+| 127 | The black unbroken untouched trunk west of the green bushes   |
+| 128 | The black unbroken untouched trunk west of the green bushes.  |
+| 129 | The black unbroken untouched trunk, west of a green bush      |
+| 130 | The black unbroken untouched trunk, west of green bushes      |
+| 131 | The black unbroken untouched trunk, west of the green bush    |
+| 132 | The black unbroken untouched trunk, west of the green bushes  |
+| 133 | The black unbroken untouched trunks west of a green bush      |
+| 134 | The black unbroken untouched trunks west of a green bush.     |
+| 135 | The black unbroken untouched trunks west of green bushes      |
+| 136 | The black unbroken untouched trunks west of green bushes.     |
+| 137 | The black unbroken untouched trunks west of the green bush    |
+| 138 | The black unbroken untouched trunks west of the green bush.   |
+| 139 | The black unbroken untouched trunks west of the green bushes  |
+| 140 | The black unbroken untouched trunks west of the green bushes. |
+| 141 | The black unbroken untouched trunks, west of a green bush     |
+| 142 | The black unbroken untouched trunks, west of green bushes     |
+| 143 | The black unbroken untouched trunks, west of the green bush   |
+| 144 | The black unbroken untouched trunks, west of the green bushes |
+| 145 | The black untouched unbroken trunk west of a green bush       |
+| 146 | The black untouched unbroken trunk west of a green bush.      |
+| 147 | The black untouched unbroken trunk west of green bushes       |
+| 148 | The black untouched unbroken trunk west of green bushes.      |
+| 149 | The black untouched unbroken trunk west of the green bush     |
+| 150 | The black untouched unbroken trunk west of the green bush.    |
+| 151 | The black untouched unbroken trunk west of the green bushes   |
+| 152 | The black untouched unbroken trunk west of the green bushes.  |
+| 153 | The black untouched unbroken trunk, west of a green bush      |
+| 154 | The black untouched unbroken trunk, west of green bushes      |
+| 155 | The black untouched unbroken trunk, west of the green bush    |
+| 156 | The black untouched unbroken trunk, west of the green bushes  |
+| 157 | The black untouched unbroken trunks west of a green bush      |
+| 158 | The black untouched unbroken trunks west of a green bush.     |
+| 159 | The black untouched unbroken trunks west of green bushes      |
+| 160 | The black untouched unbroken trunks west of green bushes.     |
+| 161 | The black untouched unbroken trunks west of the green bush    |
+| 162 | The black untouched unbroken trunks west of the green bush.   |
+| 163 | The black untouched unbroken trunks west of the green bushes  |
+| 164 | The black untouched unbroken trunks west of the green bushes. |
+| 165 | The black untouched unbroken trunks, west of a green bush     |
+| 166 | The black untouched unbroken trunks, west of green bushes     |
+| 167 | The black untouched unbroken trunks, west of the green bush   |
+| 168 | The black untouched unbroken trunks, west of the green bushes |
+| 169 | The unbroken black untouched trunk west of a green bush       |
+| 170 | The unbroken black untouched trunk west of a green bush.      |
+| 171 | The unbroken black untouched trunk west of green bushes       |
+| 172 | The unbroken black untouched trunk west of green bushes.      |
+| 173 | The unbroken black untouched trunk west of the green bush     |
+| 174 | The unbroken black untouched trunk west of the green bush.    |
+| 175 | The unbroken black untouched trunk west of the green bushes   |
+| 176 | The unbroken black untouched trunk west of the green bushes.  |
+| 177 | The unbroken black untouched trunk, west of a green bush      |
+| 178 | The unbroken black untouched trunk, west of green bushes      |
+| 179 | The unbroken black untouched trunk, west of the green bush    |
+| 180 | The unbroken black untouched trunk, west of the green bushes  |
+| 181 | The unbroken black untouched trunks west of a green bush      |
+| 182 | The unbroken black untouched trunks west of a green bush.     |
+| 183 | The unbroken black untouched trunks west of green bushes      |
+| 184 | The unbroken black untouched trunks west of green bushes.     |
+| 185 | The unbroken black untouched trunks west of the green bush    |
+| 186 | The unbroken black untouched trunks west of the green bush.   |
+| 187 | The unbroken black untouched trunks west of the green bushes  |
+| 188 | The unbroken black untouched trunks west of the green bushes. |
+| 189 | The unbroken black untouched trunks, west of a green bush     |
+| 190 | The unbroken black untouched trunks, west of green bushes     |
+| 191 | The unbroken black untouched trunks, west of the green bush   |
+| 192 | The unbroken black untouched trunks, west of the green bushes |
+| 193 | The unbroken untouched black trunk west of a green bush       |
+| 194 | The unbroken untouched black trunk west of a green bush.      |
+| 195 | The unbroken untouched black trunk west of green bushes       |
+| 196 | The unbroken untouched black trunk west of green bushes.      |
+| 197 | The unbroken untouched black trunk west of the green bush     |
+| 198 | The unbroken untouched black trunk west of the green bush.    |
+| 199 | The unbroken untouched black trunk west of the green bushes   |
+| 200 | The unbroken untouched black trunk west of the green bushes.  |
+| 201 | The unbroken untouched black trunk, west of a green bush      |
+| 202 | The unbroken untouched black trunk, west of green bushes      |
+| 203 | The unbroken untouched black trunk, west of the green bush    |
+| 204 | The unbroken untouched black trunk, west of the green bushes  |
+| 205 | The unbroken untouched black trunks west of a green bush      |
+| 206 | The unbroken untouched black trunks west of a green bush.     |
+| 207 | The unbroken untouched black trunks west of green bushes      |
+| 208 | The unbroken untouched black trunks west of green bushes.     |
+| 209 | The unbroken untouched black trunks west of the green bush    |
+| 210 | The unbroken untouched black trunks west of the green bush.   |
+| 211 | The unbroken untouched black trunks west of the green bushes  |
+| 212 | The unbroken untouched black trunks west of the green bushes. |
+| 213 | The unbroken untouched black trunks, west of a green bush     |
+| 214 | The unbroken untouched black trunks, west of green bushes     |
+| 215 | The unbroken untouched black trunks, west of the green bush   |
+| 216 | The unbroken untouched black trunks, west of the green bushes |
+| 217 | The untouched black unbroken trunk west of a green bush       |
+| 218 | The untouched black unbroken trunk west of a green bush.      |
+| 219 | The untouched black unbroken trunk west of green bushes       |
+| 220 | The untouched black unbroken trunk west of green bushes.      |
+| 221 | The untouched black unbroken trunk west of the green bush     |
+| 222 | The untouched black unbroken trunk west of the green bush.    |
+| 223 | The untouched black unbroken trunk west of the green bushes   |
+| 224 | The untouched black unbroken trunk west of the green bushes.  |
+| 225 | The untouched black unbroken trunk, west of a green bush      |
+| 226 | The untouched black unbroken trunk, west of green bushes      |
+| 227 | The untouched black unbroken trunk, west of the green bush    |
+| 228 | The untouched black unbroken trunk, west of the green bushes  |
+| 229 | The untouched black unbroken trunks west of a green bush      |
+| 230 | The untouched black unbroken trunks west of a green bush.     |
+| 231 | The untouched black unbroken trunks west of green bushes      |
+| 232 | The untouched black unbroken trunks west of green bushes.     |
+| 233 | The untouched black unbroken trunks west of the green bush    |
+| 234 | The untouched black unbroken trunks west of the green bush.   |
+| 235 | The untouched black unbroken trunks west of the green bushes  |
+| 236 | The untouched black unbroken trunks west of the green bushes. |
+| 237 | The untouched black unbroken trunks, west of a green bush     |
+| 238 | The untouched black unbroken trunks, west of green bushes     |
+| 239 | The untouched black unbroken trunks, west of the green bush   |
+| 240 | The untouched black unbroken trunks, west of the green bushes |
+| 241 | The untouched unbroken black trunk west of a green bush       |
+| 242 | The untouched unbroken black trunk west of a green bush.      |
+| 243 | The untouched unbroken black trunk west of green bushes       |
+| 244 | The untouched unbroken black trunk west of green bushes.      |
+| 245 | The untouched unbroken black trunk west of the green bush     |
+| 246 | The untouched unbroken black trunk west of the green bush.    |
+| 247 | The untouched unbroken black trunk west of the green bushes   |
+| 248 | The untouched unbroken black trunk west of the green bushes.  |
+| 249 | The untouched unbroken black trunk, west of a green bush      |
+| 250 | The untouched unbroken black trunk, west of green bushes      |
+| 251 | The untouched unbroken black trunk, west of the green bush    |
+| 252 | The untouched unbroken black trunk, west of the green bushes  |
+| 253 | The untouched unbroken black trunks west of a green bush      |
+| 254 | The untouched unbroken black trunks west of a green bush.     |
+| 255 | The untouched unbroken black trunks west of green bushes      |
+| 256 | The untouched unbroken black trunks west of green bushes.     |
+| 257 | The untouched unbroken black trunks west of the green bush    |
+| 258 | The untouched unbroken black trunks west of the green bush.   |
+| 259 | The untouched unbroken black trunks west of the green bushes  |
+| 260 | The untouched unbroken black trunks west of the green bushes. |
+| 261 | The untouched unbroken black trunks, west of a green bush     |
+| 262 | The untouched unbroken black trunks, west of green bushes     |
+| 263 | The untouched unbroken black trunks, west of the green bush   |
+| 264 | The untouched unbroken black trunks, west of the green bushes |
+| 265 | Unbroken black untouched trunk west of a green bush           |
+| 266 | Unbroken black untouched trunk west of a green bush.          |
+| 267 | Unbroken black untouched trunk west of green bushes           |
+| 268 | Unbroken black untouched trunk west of green bushes.          |
+| 269 | Unbroken black untouched trunk west of the green bush         |
+| 270 | Unbroken black untouched trunk west of the green bush.        |
+| 271 | Unbroken black untouched trunk west of the green bushes       |
+| 272 | Unbroken black untouched trunk west of the green bushes.      |
+| 273 | Unbroken black untouched trunk, west of a green bush          |
+| 274 | Unbroken black untouched trunk, west of green bushes          |
+| 275 | Unbroken black untouched trunk, west of the green bush        |
+| 276 | Unbroken black untouched trunk, west of the green bushes      |
+| 277 | Unbroken black untouched trunks west of a green bush          |
+| 278 | Unbroken black untouched trunks west of a green bush.         |
+| 279 | Unbroken black untouched trunks west of green bushes          |
+| 280 | Unbroken black untouched trunks west of green bushes.         |
+| 281 | Unbroken black untouched trunks west of the green bush        |
+| 282 | Unbroken black untouched trunks west of the green bush.       |
+| 283 | Unbroken black untouched trunks west of the green bushes      |
+| 284 | Unbroken black untouched trunks west of the green bushes.     |
+| 285 | Unbroken black untouched trunks, west of a green bush         |
+| 286 | Unbroken black untouched trunks, west of green bushes         |
+| 287 | Unbroken black untouched trunks, west of the green bush       |
+| 288 | Unbroken black untouched trunks, west of the green bushes     |
+| 289 | Unbroken untouched black trunk west of a green bush           |
+| 290 | Unbroken untouched black trunk west of a green bush.          |
+| 291 | Unbroken untouched black trunk west of green bushes           |
+| 292 | Unbroken untouched black trunk west of green bushes.          |
+| 293 | Unbroken untouched black trunk west of the green bush         |
+| 294 | Unbroken untouched black trunk west of the green bush.        |
+| 295 | Unbroken untouched black trunk west of the green bushes       |
+| 296 | Unbroken untouched black trunk west of the green bushes.      |
+| 297 | Unbroken untouched black trunk, west of a green bush          |
+| 298 | Unbroken untouched black trunk, west of green bushes          |
+| 299 | Unbroken untouched black trunk, west of the green bush        |
+| 300 | Unbroken untouched black trunk, west of the green bushes      |
+| 301 | Unbroken untouched black trunks west of a green bush          |
+| 302 | Unbroken untouched black trunks west of a green bush.         |
+| 303 | Unbroken untouched black trunks west of green bushes          |
+| 304 | Unbroken untouched black trunks west of green bushes.         |
+| 305 | Unbroken untouched black trunks west of the green bush        |
+| 306 | Unbroken untouched black trunks west of the green bush.       |
+| 307 | Unbroken untouched black trunks west of the green bushes      |
+| 308 | Unbroken untouched black trunks west of the green bushes.     |
+| 309 | Unbroken untouched black trunks, west of a green bush         |
+| 310 | Unbroken untouched black trunks, west of green bushes         |
+| 311 | Unbroken untouched black trunks, west of the green bush       |
+| 312 | Unbroken untouched black trunks, west of the green bushes     |
+| 313 | Untouched black unbroken trunk west of a green bush           |
+| 314 | Untouched black unbroken trunk west of a green bush.          |
+| 315 | Untouched black unbroken trunk west of green bushes           |
+| 316 | Untouched black unbroken trunk west of green bushes.          |
+| 317 | Untouched black unbroken trunk west of the green bush         |
+| 318 | Untouched black unbroken trunk west of the green bush.        |
+| 319 | Untouched black unbroken trunk west of the green bushes       |
+| 320 | Untouched black unbroken trunk west of the green bushes.      |
+| 321 | Untouched black unbroken trunk, west of a green bush          |
+| 322 | Untouched black unbroken trunk, west of green bushes          |
+| 323 | Untouched black unbroken trunk, west of the green bush        |
+| 324 | Untouched black unbroken trunk, west of the green bushes      |
+| 325 | Untouched black unbroken trunks west of a green bush          |
+| 326 | Untouched black unbroken trunks west of a green bush.         |
+| 327 | Untouched black unbroken trunks west of green bushes          |
+| 328 | Untouched black unbroken trunks west of green bushes.         |
+| 329 | Untouched black unbroken trunks west of the green bush        |
+| 330 | Untouched black unbroken trunks west of the green bush.       |
+| 331 | Untouched black unbroken trunks west of the green bushes      |
+| 332 | Untouched black unbroken trunks west of the green bushes.     |
+| 333 | Untouched black unbroken trunks, west of a green bush         |
+| 334 | Untouched black unbroken trunks, west of green bushes         |
+| 335 | Untouched black unbroken trunks, west of the green bush       |
+| 336 | Untouched black unbroken trunks, west of the green bushes     |
+| 337 | Untouched unbroken black trunk west of a green bush           |
+| 338 | Untouched unbroken black trunk west of a green bush.          |
+| 339 | Untouched unbroken black trunk west of green bushes           |
+| 340 | Untouched unbroken black trunk west of green bushes.          |
+| 341 | Untouched unbroken black trunk west of the green bush         |
+| 342 | Untouched unbroken black trunk west of the green bush.        |
+| 343 | Untouched unbroken black trunk west of the green bushes       |
+| 344 | Untouched unbroken black trunk west of the green bushes.      |
+| 345 | Untouched unbroken black trunk, west of a green bush          |
+| 346 | Untouched unbroken black trunk, west of green bushes          |
+| 347 | Untouched unbroken black trunk, west of the green bush        |
+| 348 | Untouched unbroken black trunk, west of the green bushes      |
+| 349 | Untouched unbroken black trunks west of a green bush          |
+| 350 | Untouched unbroken black trunks west of a green bush.         |
+| 351 | Untouched unbroken black trunks west of green bushes          |
+| 352 | Untouched unbroken black trunks west of green bushes.         |
+| 353 | Untouched unbroken black trunks west of the green bush        |
+| 354 | Untouched unbroken black trunks west of the green bush.       |
+| 355 | Untouched unbroken black trunks west of the green bushes      |
+| 356 | Untouched unbroken black trunks west of the green bushes.     |
+| 357 | Untouched unbroken black trunks, west of a green bush         |
+| 358 | Untouched unbroken black trunks, west of green bushes         |
+| 359 | Untouched unbroken black trunks, west of the green bush       |
+| 360 | Untouched unbroken black trunks, west of the green bushes     |
++-----+---------------------------------------------------------------+
+

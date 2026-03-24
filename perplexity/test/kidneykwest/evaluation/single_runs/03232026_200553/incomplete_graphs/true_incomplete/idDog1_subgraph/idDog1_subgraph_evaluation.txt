@@ -1,0 +1,222 @@
+GRAPH NAME: idDog1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 60                 |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 4                  |
+| Nodes Covered                   | 4                  |
+| Nodes Included                  | 3                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 1.0                |
+| Node Inclusion                  | 0.75               |
++---------------------------------+--------------------+
+| Edge Count                      | 3                  |
+| Edges Covered                   | 2                  |
+| Edges Included                  | 2                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.6666666666666666 |
+| Edge Inclusion                  | 0.6666666666666666 |
++---------------------------------+--------------------+
+
++------------------------------------------------------------------------+
+|                              GOLD OUTPUTS                              |
++-----------------------------------------------------------+------------+
+| Gold Output                                               | Generated? |
++-----------------------------------------------------------+------------+
+| the black dog with nothing left to eat west of the carrot | False      |
++-----------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------+
+|                                        NODE METRICS                                       |
++-----------+--------------+---------------+------------------+-----------------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++-----------+--------------+---------------+------------------+-----------------------------+
+| idDog1    | True         | True          | Covered          | Included                    |
+| black     | True         | True          | Covered          | Included                    |
+| 0         | True         | False         | Covered          | Successor of failed element |
+| idCarrot1 | True         | True          | Covered          | Included                    |
++-----------+--------------+---------------+------------------+-----------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                         EDGE METRICS                                                                                        |
++----------------------------------------+--------+-----------+--------------+---------------+------------------------------------------------------------+-----------------------------------+
+| Edge                                   | Parent | Child     | Edge Covered | Edge Included | Coverage Comment                                           | Inclusion Comment                 |
++----------------------------------------+--------+-----------+--------------+---------------+------------------------------------------------------------+-----------------------------------+
+| idDog1_prop_idColor                    | idDog1 | black     | True         | True          | Covered                                                    | Included                          |
+| idDog1_prop_idEatingFoodTurnsRemaining | idDog1 | 0         | False        | False         | 'idEatingFoodTurnsRemaining' not in lexicon's edge entries | No SEMENT generated for this edge |
+| isWestOf                               | idDog1 | idCarrot1 | True         | True          | Covered                                                    | Included                          |
++----------------------------------------+--------+-----------+--------------+---------------+------------------------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h5297                                                                     |
+|               |   INDEX: x5296                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5313 ARG0: e5310 ARG1: u5311 ARG2: x5312 ]           |
+|               |           [ def_implicit_q LBL: h5324 ARG0: x5321 RSTR: h5322 BODY: h5323 ]      |
+|               |           [ _west_a_1 LBL: h5309 ARG0: i5306 ARG1: x5307 ARG2: u5308 ]           |
+|               |           [ def_udef_a_q LBL: h5319 ARG0: x5316 RSTR: h5317 BODY: h5318 ]        |
+|               |           [ _carrot_n_1 LBL: h5305 ARG0: x5304 ]                                 |
+|               |           [ place_n LBL: h5315 ARG0: x5314 ]                                     |
+|               |           [ _black_a_1 LBL: h5300 ARG0: i5298 ARG1: i5299 ]                      |
+|               |           [ _dog_n_1 LBL: h5297 ARG0: x5296 ] >                                  |
+|               |   HCONS: < h5317 qeq h5305 h5322 qeq h5315 >                                     |
+|               |   EQS: < x5316 eq x5304 h5309 eq h5320 u5308 eq x5316 h5309 eq h5315 x5307 eq    |
+|               | x5314 x5321 eq x5314 h5313 eq h5325 x5312 eq x5321 h5300 eq h5297 i5299 eq x5296 |
+|               | h5313 eq h5297 u5311 eq x5296 > ]                                                |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h5297                                                                     |
+|               |   INDEX: x5296                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5297 ARG0: e5310 ARG1: x5296 ARG2: x5307 ]           |
+|               |           [ def_implicit_q LBL: h5324 ARG0: x5307 RSTR: h5322 BODY: h5323 ]      |
+|               |           [ _west_a_1 LBL: h5309 ARG0: i5306 ARG1: x5307 ARG2: x5304 ]           |
+|               |           [ def_udef_a_q LBL: h5319 ARG0: x5304 RSTR: h5317 BODY: h5318 ]        |
+|               |           [ _carrot_n_1 LBL: h5305 ARG0: x5304 ]                                 |
+|               |           [ place_n LBL: h5309 ARG0: x5307 ]                                     |
+|               |           [ _black_a_1 LBL: h5297 ARG0: i5298 ARG1: x5296 ]                      |
+|               |           [ _dog_n_1 LBL: h5297 ARG0: x5296 ] >                                  |
+|               |   HCONS: < h5317 qeq h5305 h5322 qeq h5309 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h5334                                                                     |
+|               |   INDEX: e5331                                                                   |
+|               |   RELS: < [ unknown LBL: h5330 ARG: x5296 ARG0: e5331 ]                          |
+|               |           [ def_udef_a_q LBL: h5329 ARG0: x5296 RSTR: h5327 BODY: h5328 ]        |
+|               |           [ loc_nonsp LBL: h5297 ARG0: e5310 ARG1: x5296 ARG2: x5307 ]           |
+|               |           [ def_implicit_q LBL: h5324 ARG0: x5307 RSTR: h5322 BODY: h5323 ]      |
+|               |           [ _west_a_1 LBL: h5309 ARG0: i5306 ARG1: x5307 ARG2: x5304 ]           |
+|               |           [ def_udef_a_q LBL: h5319 ARG0: x5304 RSTR: h5317 BODY: h5318 ]        |
+|               |           [ _carrot_n_1 LBL: h5305 ARG0: x5304 ]                                 |
+|               |           [ place_n LBL: h5309 ARG0: x5307 ]                                     |
+|               |           [ _black_a_1 LBL: h5297 ARG0: i5298 ARG1: x5296 ]                      |
+|               |           [ _dog_n_1 LBL: h5297 ARG0: x5296 ] >                                  |
+|               |   HCONS: < h5317 qeq h5305 h5322 qeq h5309 h5327 qeq h5297 h5334 qeq h5330 > ]   |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE SEMENTS                                 |
++-----------+-------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                  |
++-----------+-------------------------------------------------------------------+
+| idDog1    | [ TOP: h5297                                                      |
+|           |   INDEX: x5296                                                    |
+|           |   RELS: < [ _dog_n_1 LBL: h5297 ARG0: x5296 ] > ]                 |
++-----------+-------------------------------------------------------------------+
+| black     | [ TOP: h5300                                                      |
+|           |   INDEX: i5298                                                    |
+|           |   RELS: < [ _black_a_1 LBL: h5300 ARG0: i5298 ARG1: i5299 ] >     |
+|           |   SLOTS: < ARG1: i5299 > ]                                        |
++-----------+-------------------------------------------------------------------+
+| 0         | [ TOP: h5303                                                      |
+|           |   INDEX: i5301                                                    |
+|           |   RELS: < [ card LBL: h5303 ARG0: i5301 ARG1: u5302 CARG: "0" ] > |
+|           |   SLOTS: < ARG1: u5302 > ]                                        |
++-----------+-------------------------------------------------------------------+
+| idCarrot1 | [ TOP: h5305                                                      |
+|           |   INDEX: x5304                                                    |
+|           |   RELS: < [ _carrot_n_1 LBL: h5305 ARG0: x5304 ] > ]              |
++-----------+-------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE SEMENTS                                                                  |
++----------------------------------------+--------+-----------+----------------------------------------------------------------------------------+
+| Edge                                   | Parent | Child     | Generated SEMENT                                                                 |
++----------------------------------------+--------+-----------+----------------------------------------------------------------------------------+
+| idDog1_prop_idColor                    | idDog1 | black     | [ TOP: h5297                                                                     |
+|                                        |        |           |   INDEX: x5296                                                                   |
+|                                        |        |           |   RELS: < [ _black_a_1 LBL: h5300 ARG0: i5298 ARG1: i5299 ]                      |
+|                                        |        |           |           [ _dog_n_1 LBL: h5297 ARG0: x5296 ] >                                  |
+|                                        |        |           |   EQS: < h5300 eq h5297 i5299 eq x5296 > ]                                       |
++----------------------------------------+--------+-----------+----------------------------------------------------------------------------------+
+| idDog1_prop_idEatingFoodTurnsRemaining | idDog1 | 0         | None                                                                             |
++----------------------------------------+--------+-----------+----------------------------------------------------------------------------------+
+| isWestOf                               | idDog1 | idCarrot1 | [ TOP: h5297                                                                     |
+|                                        |        |           |   INDEX: x5296                                                                   |
+|                                        |        |           |   RELS: < [ loc_nonsp LBL: h5313 ARG0: e5310 ARG1: u5311 ARG2: x5312 ]           |
+|                                        |        |           |           [ def_implicit_q LBL: h5324 ARG0: x5321 RSTR: h5322 BODY: h5323 ]      |
+|                                        |        |           |           [ _west_a_1 LBL: h5309 ARG0: i5306 ARG1: x5307 ARG2: u5308 ]           |
+|                                        |        |           |           [ def_udef_a_q LBL: h5319 ARG0: x5316 RSTR: h5317 BODY: h5318 ]        |
+|                                        |        |           |           [ _carrot_n_1 LBL: h5305 ARG0: x5304 ]                                 |
+|                                        |        |           |           [ place_n LBL: h5315 ARG0: x5314 ]                                     |
+|                                        |        |           |           [ _black_a_1 LBL: h5300 ARG0: i5298 ARG1: i5299 ]                      |
+|                                        |        |           |           [ _dog_n_1 LBL: h5297 ARG0: x5296 ] >                                  |
+|                                        |        |           |   HCONS: < h5317 qeq h5305 h5322 qeq h5315 >                                     |
+|                                        |        |           |   EQS: < x5316 eq x5304 h5309 eq h5320 u5308 eq x5316 h5309 eq h5315 x5307 eq    |
+|                                        |        |           | x5314 x5321 eq x5314 h5313 eq h5325 x5312 eq x5321 h5300 eq h5297 i5299 eq x5296 |
+|                                        |        |           | h5313 eq h5297 u5311 eq x5296 > ]                                                |
++----------------------------------------+--------+-----------+----------------------------------------------------------------------------------+
+
++------------------------------------------+
+|          GENERATED ENGLISH TEXT          |
++----+-------------------------------------+
+| #  | Generated Text                      |
++----+-------------------------------------+
+| 1  | A black dog west of a carrot        |
+| 2  | A black dog west of a carrot.       |
+| 3  | A black dog west of carrots         |
+| 4  | A black dog west of carrots.        |
+| 5  | A black dog west of the carrot      |
+| 6  | A black dog west of the carrot.     |
+| 7  | A black dog west of the carrots     |
+| 8  | A black dog west of the carrots.    |
+| 9  | A black dog, west of a carrot       |
+| 10 | A black dog, west of carrots        |
+| 11 | A black dog, west of the carrot     |
+| 12 | A black dog, west of the carrots    |
+| 13 | Black dog west of a carrot          |
+| 14 | Black dog west of a carrot.         |
+| 15 | Black dog west of carrots           |
+| 16 | Black dog west of carrots.          |
+| 17 | Black dog west of the carrot        |
+| 18 | Black dog west of the carrot.       |
+| 19 | Black dog west of the carrots       |
+| 20 | Black dog west of the carrots.      |
+| 21 | Black dog, west of a carrot         |
+| 22 | Black dog, west of carrots          |
+| 23 | Black dog, west of the carrot       |
+| 24 | Black dog, west of the carrots      |
+| 25 | Black dogs west of a carrot         |
+| 26 | Black dogs west of a carrot.        |
+| 27 | Black dogs west of carrots          |
+| 28 | Black dogs west of carrots.         |
+| 29 | Black dogs west of the carrot       |
+| 30 | Black dogs west of the carrot.      |
+| 31 | Black dogs west of the carrots      |
+| 32 | Black dogs west of the carrots.     |
+| 33 | Black dogs, west of a carrot        |
+| 34 | Black dogs, west of carrots         |
+| 35 | Black dogs, west of the carrot      |
+| 36 | Black dogs, west of the carrots     |
+| 37 | The black dog west of a carrot      |
+| 38 | The black dog west of a carrot.     |
+| 39 | The black dog west of carrots       |
+| 40 | The black dog west of carrots.      |
+| 41 | The black dog west of the carrot    |
+| 42 | The black dog west of the carrot.   |
+| 43 | The black dog west of the carrots   |
+| 44 | The black dog west of the carrots.  |
+| 45 | The black dog, west of a carrot     |
+| 46 | The black dog, west of carrots      |
+| 47 | The black dog, west of the carrot   |
+| 48 | The black dog, west of the carrots  |
+| 49 | The black dogs west of a carrot     |
+| 50 | The black dogs west of a carrot.    |
+| 51 | The black dogs west of carrots      |
+| 52 | The black dogs west of carrots.     |
+| 53 | The black dogs west of the carrot   |
+| 54 | The black dogs west of the carrot.  |
+| 55 | The black dogs west of the carrots  |
+| 56 | The black dogs west of the carrots. |
+| 57 | The black dogs, west of a carrot    |
+| 58 | The black dogs, west of carrots     |
+| 59 | The black dogs, west of the carrot  |
+| 60 | The black dogs, west of the carrots |
++----+-------------------------------------+
+

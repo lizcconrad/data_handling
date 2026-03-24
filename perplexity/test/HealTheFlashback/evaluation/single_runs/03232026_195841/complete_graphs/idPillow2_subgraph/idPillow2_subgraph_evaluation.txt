@@ -1,0 +1,291 @@
+GRAPH NAME: idPillow2_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------+
+|                      GOLD OUTPUTS                      |
++-------------------------------------------+------------+
+| Gold Output                               | Generated? |
++-------------------------------------------+------------+
+| the thin red pillow north of the bathroom | True       |
++-------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idPillow2   | True         | True          | Covered          | Included          |
+| red         | True         | True          | Covered          | Included          |
+| thin        | True         | True          | Covered          | Included          |
+| idBathroom1 | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                        |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                        | Parent    | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+| idPillow2_prop_idColor      | idPillow2 | red         | True         | True          | Covered          | Included          |
+| idPillow2_prop_idDescriptor | idPillow2 | thin        | True         | True          | Covered          | Included          |
+| isNorthOf                   | idPillow2 | idBathroom1 | True         | True          | Covered          | Included          |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1054                                                                     |
+|               |   INDEX: x1053                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1070 ARG0: e1067 ARG1: u1068 ARG2: x1069 ]           |
+|               |           [ def_implicit_q LBL: h1081 ARG0: x1078 RSTR: h1079 BODY: h1080 ]      |
+|               |           [ _north_a_1 LBL: h1066 ARG0: i1063 ARG1: x1064 ARG2: u1065 ]          |
+|               |           [ def_udef_a_q LBL: h1076 ARG0: x1073 RSTR: h1074 BODY: h1075 ]        |
+|               |           [ _bathroom_n_1 LBL: h1062 ARG0: x1061 ]                               |
+|               |           [ place_n LBL: h1072 ARG0: x1071 ]                                     |
+|               |           [ _thin_a_1 LBL: h1060 ARG0: e1058 ARG1: u1059 ]                       |
+|               |           [ _red_a_1 LBL: h1057 ARG0: i1055 ARG1: i1056 ]                        |
+|               |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|               |   HCONS: < h1074 qeq h1062 h1079 qeq h1072 >                                     |
+|               |   EQS: < x1073 eq x1061 h1066 eq h1077 u1065 eq x1073 h1066 eq h1072 x1064 eq    |
+|               | x1071 x1078 eq x1071 h1070 eq h1082 x1069 eq x1078 h1057 eq h1054 i1056 eq x1053 |
+|               | h1060 eq h1054 u1059 eq x1053 h1070 eq h1054 u1068 eq x1053 > ]                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1054                                                                     |
+|               |   INDEX: x1053                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1054 ARG0: e1067 ARG1: x1053 ARG2: x1064 ]           |
+|               |           [ def_implicit_q LBL: h1081 ARG0: x1064 RSTR: h1079 BODY: h1080 ]      |
+|               |           [ _north_a_1 LBL: h1066 ARG0: i1063 ARG1: x1064 ARG2: x1061 ]          |
+|               |           [ def_udef_a_q LBL: h1076 ARG0: x1061 RSTR: h1074 BODY: h1075 ]        |
+|               |           [ _bathroom_n_1 LBL: h1062 ARG0: x1061 ]                               |
+|               |           [ place_n LBL: h1066 ARG0: x1064 ]                                     |
+|               |           [ _thin_a_1 LBL: h1054 ARG0: e1058 ARG1: x1053 ]                       |
+|               |           [ _red_a_1 LBL: h1054 ARG0: i1055 ARG1: x1053 ]                        |
+|               |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|               |   HCONS: < h1074 qeq h1062 h1079 qeq h1066 > ]                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1091                                                                     |
+|               |   INDEX: e1088                                                                   |
+|               |   RELS: < [ unknown LBL: h1087 ARG: x1053 ARG0: e1088 ]                          |
+|               |           [ def_udef_a_q LBL: h1086 ARG0: x1053 RSTR: h1084 BODY: h1085 ]        |
+|               |           [ loc_nonsp LBL: h1054 ARG0: e1067 ARG1: x1053 ARG2: x1064 ]           |
+|               |           [ def_implicit_q LBL: h1081 ARG0: x1064 RSTR: h1079 BODY: h1080 ]      |
+|               |           [ _north_a_1 LBL: h1066 ARG0: i1063 ARG1: x1064 ARG2: x1061 ]          |
+|               |           [ def_udef_a_q LBL: h1076 ARG0: x1061 RSTR: h1074 BODY: h1075 ]        |
+|               |           [ _bathroom_n_1 LBL: h1062 ARG0: x1061 ]                               |
+|               |           [ place_n LBL: h1066 ARG0: x1064 ]                                     |
+|               |           [ _thin_a_1 LBL: h1054 ARG0: e1058 ARG1: x1053 ]                       |
+|               |           [ _red_a_1 LBL: h1054 ARG0: i1055 ARG1: x1053 ]                        |
+|               |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|               |   HCONS: < h1074 qeq h1062 h1079 qeq h1066 h1084 qeq h1054 h1091 qeq h1087 > ]   |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                                NODE SEMENTS                                |
++-------------+--------------------------------------------------------------+
+| Node        | Generated SEMENT                                             |
++-------------+--------------------------------------------------------------+
+| idPillow2   | [ TOP: h1054                                                 |
+|             |   INDEX: x1053                                               |
+|             |   RELS: < [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] > ]         |
++-------------+--------------------------------------------------------------+
+| red         | [ TOP: h1057                                                 |
+|             |   INDEX: i1055                                               |
+|             |   RELS: < [ _red_a_1 LBL: h1057 ARG0: i1055 ARG1: i1056 ] >  |
+|             |   SLOTS: < ARG1: i1056 > ]                                   |
++-------------+--------------------------------------------------------------+
+| thin        | [ TOP: h1060                                                 |
+|             |   INDEX: e1058                                               |
+|             |   RELS: < [ _thin_a_1 LBL: h1060 ARG0: e1058 ARG1: u1059 ] > |
+|             |   SLOTS: < ARG1: u1059 > ]                                   |
++-------------+--------------------------------------------------------------+
+| idBathroom1 | [ TOP: h1062                                                 |
+|             |   INDEX: x1061                                               |
+|             |   RELS: < [ _bathroom_n_1 LBL: h1062 ARG0: x1061 ] > ]       |
++-------------+--------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE SEMENTS                                                               |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| Edge                        | Parent    | Child       | Generated SEMENT                                                                 |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| idPillow2_prop_idColor      | idPillow2 | red         | [ TOP: h1054                                                                     |
+|                             |           |             |   INDEX: x1053                                                                   |
+|                             |           |             |   RELS: < [ _red_a_1 LBL: h1057 ARG0: i1055 ARG1: i1056 ]                        |
+|                             |           |             |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|                             |           |             |   EQS: < h1057 eq h1054 i1056 eq x1053 > ]                                       |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| idPillow2_prop_idDescriptor | idPillow2 | thin        | [ TOP: h1054                                                                     |
+|                             |           |             |   INDEX: x1053                                                                   |
+|                             |           |             |   RELS: < [ _thin_a_1 LBL: h1060 ARG0: e1058 ARG1: u1059 ]                       |
+|                             |           |             |           [ _red_a_1 LBL: h1057 ARG0: i1055 ARG1: i1056 ]                        |
+|                             |           |             |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|                             |           |             |   EQS: < h1057 eq h1054 i1056 eq x1053 h1060 eq h1054 u1059 eq x1053 > ]         |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| isNorthOf                   | idPillow2 | idBathroom1 | [ TOP: h1054                                                                     |
+|                             |           |             |   INDEX: x1053                                                                   |
+|                             |           |             |   RELS: < [ loc_nonsp LBL: h1070 ARG0: e1067 ARG1: u1068 ARG2: x1069 ]           |
+|                             |           |             |           [ def_implicit_q LBL: h1081 ARG0: x1078 RSTR: h1079 BODY: h1080 ]      |
+|                             |           |             |           [ _north_a_1 LBL: h1066 ARG0: i1063 ARG1: x1064 ARG2: u1065 ]          |
+|                             |           |             |           [ def_udef_a_q LBL: h1076 ARG0: x1073 RSTR: h1074 BODY: h1075 ]        |
+|                             |           |             |           [ _bathroom_n_1 LBL: h1062 ARG0: x1061 ]                               |
+|                             |           |             |           [ place_n LBL: h1072 ARG0: x1071 ]                                     |
+|                             |           |             |           [ _thin_a_1 LBL: h1060 ARG0: e1058 ARG1: u1059 ]                       |
+|                             |           |             |           [ _red_a_1 LBL: h1057 ARG0: i1055 ARG1: i1056 ]                        |
+|                             |           |             |           [ _pillow_n_1 LBL: h1054 ARG0: x1053 ] >                               |
+|                             |           |             |   HCONS: < h1074 qeq h1062 h1079 qeq h1072 >                                     |
+|                             |           |             |   EQS: < x1073 eq x1061 h1066 eq h1077 u1065 eq x1073 h1066 eq h1072 x1064 eq    |
+|                             |           |             | x1071 x1078 eq x1071 h1070 eq h1082 x1069 eq x1078 h1057 eq h1054 i1056 eq x1053 |
+|                             |           |             | h1060 eq h1054 u1059 eq x1053 h1070 eq h1054 u1068 eq x1053 > ]                  |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------+
+|               GENERATED ENGLISH TEXT               |
++-----+----------------------------------------------+
+| #   | Generated Text                               |
++-----+----------------------------------------------+
+| 1   | A red thin pillow north of a bathroom        |
+| 2   | A red thin pillow north of a bathroom.       |
+| 3   | A red thin pillow north of bathrooms         |
+| 4   | A red thin pillow north of bathrooms.        |
+| 5   | A red thin pillow north of the bathroom      |
+| 6   | A red thin pillow north of the bathroom.     |
+| 7   | A red thin pillow north of the bathrooms     |
+| 8   | A red thin pillow north of the bathrooms.    |
+| 9   | A red thin pillow, north of a bathroom       |
+| 10  | A red thin pillow, north of bathrooms        |
+| 11  | A red thin pillow, north of the bathroom     |
+| 12  | A red thin pillow, north of the bathrooms    |
+| 13  | A thin red pillow north of a bathroom        |
+| 14  | A thin red pillow north of a bathroom.       |
+| 15  | A thin red pillow north of bathrooms         |
+| 16  | A thin red pillow north of bathrooms.        |
+| 17  | A thin red pillow north of the bathroom      |
+| 18  | A thin red pillow north of the bathroom.     |
+| 19  | A thin red pillow north of the bathrooms     |
+| 20  | A thin red pillow north of the bathrooms.    |
+| 21  | A thin red pillow, north of a bathroom       |
+| 22  | A thin red pillow, north of bathrooms        |
+| 23  | A thin red pillow, north of the bathroom     |
+| 24  | A thin red pillow, north of the bathrooms    |
+| 25  | Red thin pillow north of a bathroom          |
+| 26  | Red thin pillow north of a bathroom.         |
+| 27  | Red thin pillow north of bathrooms           |
+| 28  | Red thin pillow north of bathrooms.          |
+| 29  | Red thin pillow north of the bathroom        |
+| 30  | Red thin pillow north of the bathroom.       |
+| 31  | Red thin pillow north of the bathrooms       |
+| 32  | Red thin pillow north of the bathrooms.      |
+| 33  | Red thin pillow, north of a bathroom         |
+| 34  | Red thin pillow, north of bathrooms          |
+| 35  | Red thin pillow, north of the bathroom       |
+| 36  | Red thin pillow, north of the bathrooms      |
+| 37  | Red thin pillows north of a bathroom         |
+| 38  | Red thin pillows north of a bathroom.        |
+| 39  | Red thin pillows north of bathrooms          |
+| 40  | Red thin pillows north of bathrooms.         |
+| 41  | Red thin pillows north of the bathroom       |
+| 42  | Red thin pillows north of the bathroom.      |
+| 43  | Red thin pillows north of the bathrooms      |
+| 44  | Red thin pillows north of the bathrooms.     |
+| 45  | Red thin pillows, north of a bathroom        |
+| 46  | Red thin pillows, north of bathrooms         |
+| 47  | Red thin pillows, north of the bathroom      |
+| 48  | Red thin pillows, north of the bathrooms     |
+| 49  | The red thin pillow north of a bathroom      |
+| 50  | The red thin pillow north of a bathroom.     |
+| 51  | The red thin pillow north of bathrooms       |
+| 52  | The red thin pillow north of bathrooms.      |
+| 53  | The red thin pillow north of the bathroom    |
+| 54  | The red thin pillow north of the bathroom.   |
+| 55  | The red thin pillow north of the bathrooms   |
+| 56  | The red thin pillow north of the bathrooms.  |
+| 57  | The red thin pillow, north of a bathroom     |
+| 58  | The red thin pillow, north of bathrooms      |
+| 59  | The red thin pillow, north of the bathroom   |
+| 60  | The red thin pillow, north of the bathrooms  |
+| 61  | The red thin pillows north of a bathroom     |
+| 62  | The red thin pillows north of a bathroom.    |
+| 63  | The red thin pillows north of bathrooms      |
+| 64  | The red thin pillows north of bathrooms.     |
+| 65  | The red thin pillows north of the bathroom   |
+| 66  | The red thin pillows north of the bathroom.  |
+| 67  | The red thin pillows north of the bathrooms  |
+| 68  | The red thin pillows north of the bathrooms. |
+| 69  | The red thin pillows, north of a bathroom    |
+| 70  | The red thin pillows, north of bathrooms     |
+| 71  | The red thin pillows, north of the bathroom  |
+| 72  | The red thin pillows, north of the bathrooms |
+| 73  | The thin red pillow north of a bathroom      |
+| 74  | The thin red pillow north of a bathroom.     |
+| 75  | The thin red pillow north of bathrooms       |
+| 76  | The thin red pillow north of bathrooms.      |
+| 77  | The thin red pillow north of the bathroom    |
+| 78  | The thin red pillow north of the bathroom.   |
+| 79  | The thin red pillow north of the bathrooms   |
+| 80  | The thin red pillow north of the bathrooms.  |
+| 81  | The thin red pillow, north of a bathroom     |
+| 82  | The thin red pillow, north of bathrooms      |
+| 83  | The thin red pillow, north of the bathroom   |
+| 84  | The thin red pillow, north of the bathrooms  |
+| 85  | The thin red pillows north of a bathroom     |
+| 86  | The thin red pillows north of a bathroom.    |
+| 87  | The thin red pillows north of bathrooms      |
+| 88  | The thin red pillows north of bathrooms.     |
+| 89  | The thin red pillows north of the bathroom   |
+| 90  | The thin red pillows north of the bathroom.  |
+| 91  | The thin red pillows north of the bathrooms  |
+| 92  | The thin red pillows north of the bathrooms. |
+| 93  | The thin red pillows, north of a bathroom    |
+| 94  | The thin red pillows, north of bathrooms     |
+| 95  | The thin red pillows, north of the bathroom  |
+| 96  | The thin red pillows, north of the bathrooms |
+| 97  | Thin red pillow north of a bathroom          |
+| 98  | Thin red pillow north of a bathroom.         |
+| 99  | Thin red pillow north of bathrooms           |
+| 100 | Thin red pillow north of bathrooms.          |
+| 101 | Thin red pillow north of the bathroom        |
+| 102 | Thin red pillow north of the bathroom.       |
+| 103 | Thin red pillow north of the bathrooms       |
+| 104 | Thin red pillow north of the bathrooms.      |
+| 105 | Thin red pillow, north of a bathroom         |
+| 106 | Thin red pillow, north of bathrooms          |
+| 107 | Thin red pillow, north of the bathroom       |
+| 108 | Thin red pillow, north of the bathrooms      |
+| 109 | Thin red pillows north of a bathroom         |
+| 110 | Thin red pillows north of a bathroom.        |
+| 111 | Thin red pillows north of bathrooms          |
+| 112 | Thin red pillows north of bathrooms.         |
+| 113 | Thin red pillows north of the bathroom       |
+| 114 | Thin red pillows north of the bathroom.      |
+| 115 | Thin red pillows north of the bathrooms      |
+| 116 | Thin red pillows north of the bathrooms.     |
+| 117 | Thin red pillows, north of a bathroom        |
+| 118 | Thin red pillows, north of bathrooms         |
+| 119 | Thin red pillows, north of the bathroom      |
+| 120 | Thin red pillows, north of the bathrooms     |
++-----+----------------------------------------------+
+

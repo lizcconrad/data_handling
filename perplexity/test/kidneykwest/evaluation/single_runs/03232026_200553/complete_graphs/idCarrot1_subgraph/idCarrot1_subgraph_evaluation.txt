@@ -1,0 +1,307 @@
+GRAPH NAME: idCarrot1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------+
+|                         GOLD OUTPUTS                         |
++-------------------------------------------------+------------+
+| Gold Output                                     | Generated? |
++-------------------------------------------------+------------+
+| the unknown orange carrot east of the hamburger | True       |
++-------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE METRICS                                    |
++--------------+--------------+---------------+------------------+-------------------+
+| Node         | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------+--------------+---------------+------------------+-------------------+
+| idCarrot1    | True         | True          | Covered          | Included          |
+| orange       | True         | True          | Covered          | Included          |
+| true         | True         | True          | Covered          | Included          |
+| idHamburger1 | True         | True          | Covered          | Included          |
++--------------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+|                                                           EDGE METRICS                                                          |
++--------------------------------+-----------+--------------+--------------+---------------+------------------+-------------------+
+| Edge                           | Parent    | Child        | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------+-----------+--------------+--------------+---------------+------------------+-------------------+
+| idCarrot1_prop_idColor         | idCarrot1 | orange       | True         | True          | Covered          | Included          |
+| idCarrot1_prop_idUnknownObject | idCarrot1 | true         | True         | True          | Covered          | Included          |
+| isEastOf                       | idCarrot1 | idHamburger1 | True         | True          | Covered          | Included          |
++--------------------------------+-----------+--------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1251                                                                     |
+|               |   INDEX: x1250                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1279 ARG0: e1276 ARG1: u1277 ARG2: x1278 ]           |
+|               |           [ def_implicit_q LBL: h1290 ARG0: x1287 RSTR: h1288 BODY: h1289 ]      |
+|               |           [ _east_a_1 LBL: h1275 ARG0: i1272 ARG1: x1273 ARG2: u1274 ]           |
+|               |           [ def_udef_a_q LBL: h1285 ARG0: x1282 RSTR: h1283 BODY: h1284 ]        |
+|               |           [ _hamburger_n_1 LBL: h1271 ARG0: x1270 ]                              |
+|               |           [ place_n LBL: h1281 ARG0: x1280 ]                                     |
+|               |           [ _un-_a_neg LBL: h1269 ARG0: i1267 ARG1: e1268 ]                      |
+|               |           [ _know_v_1 LBL: h1266 ARG0: e1263 [ e PERF: - ] ARG1: u1264 ARG2:     |
+|               | i1265 ]                                                                          |
+|               |           [ _orange_a_1 LBL: h1254 ARG0: i1252 ARG1: i1253 ]                     |
+|               |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|               |   HCONS: < h1283 qeq h1271 h1288 qeq h1281 >                                     |
+|               |   ICONS: < e1263 topic i1265 >                                                   |
+|               |   EQS: < x1282 eq x1270 h1275 eq h1286 u1274 eq x1282 h1275 eq h1281 x1273 eq    |
+|               | x1280 x1287 eq x1280 h1279 eq h1291 x1278 eq x1287 h1269 eq h1266 e1268 eq e1263 |
+|               | h1254 eq h1251 i1253 eq x1250 h1266 eq h1251 i1265 eq x1250 h1279 eq h1251 u1277 |
+|               | eq x1250 > ]                                                                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1251                                                                     |
+|               |   INDEX: x1250                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1251 ARG0: e1276 ARG1: x1250 ARG2: x1273 ]           |
+|               |           [ def_implicit_q LBL: h1290 ARG0: x1273 RSTR: h1288 BODY: h1289 ]      |
+|               |           [ _east_a_1 LBL: h1275 ARG0: i1272 ARG1: x1273 ARG2: x1270 ]           |
+|               |           [ def_udef_a_q LBL: h1285 ARG0: x1270 RSTR: h1283 BODY: h1284 ]        |
+|               |           [ _hamburger_n_1 LBL: h1271 ARG0: x1270 ]                              |
+|               |           [ place_n LBL: h1275 ARG0: x1273 ]                                     |
+|               |           [ _un-_a_neg LBL: h1251 ARG0: i1267 ARG1: e1263 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1251 ARG0: e1263 ARG1: u1264 ARG2: x1250 ]           |
+|               |           [ _orange_a_1 LBL: h1251 ARG0: i1252 ARG1: x1250 ]                     |
+|               |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|               |   HCONS: < h1283 qeq h1271 h1288 qeq h1275 >                                     |
+|               |   ICONS: < e1263 topic x1250 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1300                                                                     |
+|               |   INDEX: e1297                                                                   |
+|               |   RELS: < [ unknown LBL: h1296 ARG: x1250 ARG0: e1297 ]                          |
+|               |           [ def_udef_a_q LBL: h1295 ARG0: x1250 RSTR: h1293 BODY: h1294 ]        |
+|               |           [ loc_nonsp LBL: h1251 ARG0: e1276 ARG1: x1250 ARG2: x1273 ]           |
+|               |           [ def_implicit_q LBL: h1290 ARG0: x1273 RSTR: h1288 BODY: h1289 ]      |
+|               |           [ _east_a_1 LBL: h1275 ARG0: i1272 ARG1: x1273 ARG2: x1270 ]           |
+|               |           [ def_udef_a_q LBL: h1285 ARG0: x1270 RSTR: h1283 BODY: h1284 ]        |
+|               |           [ _hamburger_n_1 LBL: h1271 ARG0: x1270 ]                              |
+|               |           [ place_n LBL: h1275 ARG0: x1273 ]                                     |
+|               |           [ _un-_a_neg LBL: h1251 ARG0: i1267 ARG1: e1263 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h1251 ARG0: e1263 ARG1: u1264 ARG2: x1250 ]           |
+|               |           [ _orange_a_1 LBL: h1251 ARG0: i1252 ARG1: x1250 ]                     |
+|               |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|               |   HCONS: < h1283 qeq h1271 h1288 qeq h1275 h1293 qeq h1251 h1300 qeq h1296 >     |
+|               |   ICONS: < e1263 topic x1250 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------+
+|                                       NODE SEMENTS                                       |
++--------------+---------------------------------------------------------------------------+
+| Node         | Generated SEMENT                                                          |
++--------------+---------------------------------------------------------------------------+
+| idCarrot1    | [ TOP: h1251                                                              |
+|              |   INDEX: x1250                                                            |
+|              |   RELS: < [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] > ]                      |
++--------------+---------------------------------------------------------------------------+
+| orange       | [ TOP: h1254                                                              |
+|              |   INDEX: i1252                                                            |
+|              |   RELS: < [ _orange_a_1 LBL: h1254 ARG0: i1252 ARG1: i1253 ] >            |
+|              |   SLOTS: < ARG1: i1253 > ]                                                |
++--------------+---------------------------------------------------------------------------+
+| true         | [ TOP: h1258                                                              |
+|              |   INDEX: e1255                                                            |
+|              |   RELS: < [ _true_a_of LBL: h1258 ARG0: e1255 ARG1: u1256 ARG2: u1257 ] > |
+|              |   SLOTS: < ARG1: u1256 ARG2: u1257 > ]                                    |
++--------------+---------------------------------------------------------------------------+
+| idHamburger1 | [ TOP: h1271                                                              |
+|              |   INDEX: x1270                                                            |
+|              |   RELS: < [ _hamburger_n_1 LBL: h1271 ARG0: x1270 ] > ]                   |
++--------------+---------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                 |
++--------------------------------+-----------+--------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent    | Child        | Generated SEMENT                                                                 |
++--------------------------------+-----------+--------------+----------------------------------------------------------------------------------+
+| idCarrot1_prop_idColor         | idCarrot1 | orange       | [ TOP: h1251                                                                     |
+|                                |           |              |   INDEX: x1250                                                                   |
+|                                |           |              |   RELS: < [ _orange_a_1 LBL: h1254 ARG0: i1252 ARG1: i1253 ]                     |
+|                                |           |              |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|                                |           |              |   EQS: < h1254 eq h1251 i1253 eq x1250 > ]                                       |
++--------------------------------+-----------+--------------+----------------------------------------------------------------------------------+
+| idCarrot1_prop_idUnknownObject | idCarrot1 | true         | [ TOP: h1251                                                                     |
+|                                |           |              |   INDEX: x1250                                                                   |
+|                                |           |              |   RELS: < [ _un-_a_neg LBL: h1269 ARG0: i1267 ARG1: e1268 ]                      |
+|                                |           |              |           [ _know_v_1 LBL: h1266 ARG0: e1263 [ e PERF: - ] ARG1: u1264 ARG2:     |
+|                                |           |              | i1265 ]                                                                          |
+|                                |           |              |           [ _orange_a_1 LBL: h1254 ARG0: i1252 ARG1: i1253 ]                     |
+|                                |           |              |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|                                |           |              |   ICONS: < e1263 topic i1265 >                                                   |
+|                                |           |              |   EQS: < h1269 eq h1266 e1268 eq e1263 h1254 eq h1251 i1253 eq x1250 h1266 eq    |
+|                                |           |              | h1251 i1265 eq x1250 > ]                                                         |
++--------------------------------+-----------+--------------+----------------------------------------------------------------------------------+
+| isEastOf                       | idCarrot1 | idHamburger1 | [ TOP: h1251                                                                     |
+|                                |           |              |   INDEX: x1250                                                                   |
+|                                |           |              |   RELS: < [ loc_nonsp LBL: h1279 ARG0: e1276 ARG1: u1277 ARG2: x1278 ]           |
+|                                |           |              |           [ def_implicit_q LBL: h1290 ARG0: x1287 RSTR: h1288 BODY: h1289 ]      |
+|                                |           |              |           [ _east_a_1 LBL: h1275 ARG0: i1272 ARG1: x1273 ARG2: u1274 ]           |
+|                                |           |              |           [ def_udef_a_q LBL: h1285 ARG0: x1282 RSTR: h1283 BODY: h1284 ]        |
+|                                |           |              |           [ _hamburger_n_1 LBL: h1271 ARG0: x1270 ]                              |
+|                                |           |              |           [ place_n LBL: h1281 ARG0: x1280 ]                                     |
+|                                |           |              |           [ _un-_a_neg LBL: h1269 ARG0: i1267 ARG1: e1268 ]                      |
+|                                |           |              |           [ _know_v_1 LBL: h1266 ARG0: e1263 [ e PERF: - ] ARG1: u1264 ARG2:     |
+|                                |           |              | i1265 ]                                                                          |
+|                                |           |              |           [ _orange_a_1 LBL: h1254 ARG0: i1252 ARG1: i1253 ]                     |
+|                                |           |              |           [ _carrot_n_1 LBL: h1251 ARG0: x1250 ] >                               |
+|                                |           |              |   HCONS: < h1283 qeq h1271 h1288 qeq h1281 >                                     |
+|                                |           |              |   ICONS: < e1263 topic i1265 >                                                   |
+|                                |           |              |   EQS: < x1282 eq x1270 h1275 eq h1286 u1274 eq x1282 h1275 eq h1281 x1273 eq    |
+|                                |           |              | x1280 x1287 eq x1280 h1279 eq h1291 x1278 eq x1287 h1269 eq h1266 e1268 eq e1263 |
+|                                |           |              | h1254 eq h1251 i1253 eq x1250 h1266 eq h1251 i1265 eq x1250 h1279 eq h1251 u1277 |
+|                                |           |              | eq x1250 > ]                                                                     |
++--------------------------------+-----------+--------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                  |
++-----+----------------------------------------------------+
+| #   | Generated Text                                     |
++-----+----------------------------------------------------+
+| 1   | An orange unknown carrot east of a hamburger       |
+| 2   | An orange unknown carrot east of a hamburger.      |
+| 3   | An orange unknown carrot east of hamburgers        |
+| 4   | An orange unknown carrot east of hamburgers.       |
+| 5   | An orange unknown carrot east of the hamburger     |
+| 6   | An orange unknown carrot east of the hamburger.    |
+| 7   | An orange unknown carrot east of the hamburgers    |
+| 8   | An orange unknown carrot east of the hamburgers.   |
+| 9   | An orange unknown carrot, east of a hamburger      |
+| 10  | An orange unknown carrot, east of hamburgers       |
+| 11  | An orange unknown carrot, east of the hamburger    |
+| 12  | An orange unknown carrot, east of the hamburgers   |
+| 13  | An unknown orange carrot east of a hamburger       |
+| 14  | An unknown orange carrot east of a hamburger.      |
+| 15  | An unknown orange carrot east of hamburgers        |
+| 16  | An unknown orange carrot east of hamburgers.       |
+| 17  | An unknown orange carrot east of the hamburger     |
+| 18  | An unknown orange carrot east of the hamburger.    |
+| 19  | An unknown orange carrot east of the hamburgers    |
+| 20  | An unknown orange carrot east of the hamburgers.   |
+| 21  | An unknown orange carrot, east of a hamburger      |
+| 22  | An unknown orange carrot, east of hamburgers       |
+| 23  | An unknown orange carrot, east of the hamburger    |
+| 24  | An unknown orange carrot, east of the hamburgers   |
+| 25  | Orange unknown carrot east of a hamburger          |
+| 26  | Orange unknown carrot east of a hamburger.         |
+| 27  | Orange unknown carrot east of hamburgers           |
+| 28  | Orange unknown carrot east of hamburgers.          |
+| 29  | Orange unknown carrot east of the hamburger        |
+| 30  | Orange unknown carrot east of the hamburger.       |
+| 31  | Orange unknown carrot east of the hamburgers       |
+| 32  | Orange unknown carrot east of the hamburgers.      |
+| 33  | Orange unknown carrot, east of a hamburger         |
+| 34  | Orange unknown carrot, east of hamburgers          |
+| 35  | Orange unknown carrot, east of the hamburger       |
+| 36  | Orange unknown carrot, east of the hamburgers      |
+| 37  | Orange unknown carrots east of a hamburger         |
+| 38  | Orange unknown carrots east of a hamburger.        |
+| 39  | Orange unknown carrots east of hamburgers          |
+| 40  | Orange unknown carrots east of hamburgers.         |
+| 41  | Orange unknown carrots east of the hamburger       |
+| 42  | Orange unknown carrots east of the hamburger.      |
+| 43  | Orange unknown carrots east of the hamburgers      |
+| 44  | Orange unknown carrots east of the hamburgers.     |
+| 45  | Orange unknown carrots, east of a hamburger        |
+| 46  | Orange unknown carrots, east of hamburgers         |
+| 47  | Orange unknown carrots, east of the hamburger      |
+| 48  | Orange unknown carrots, east of the hamburgers     |
+| 49  | The orange unknown carrot east of a hamburger      |
+| 50  | The orange unknown carrot east of a hamburger.     |
+| 51  | The orange unknown carrot east of hamburgers       |
+| 52  | The orange unknown carrot east of hamburgers.      |
+| 53  | The orange unknown carrot east of the hamburger    |
+| 54  | The orange unknown carrot east of the hamburger.   |
+| 55  | The orange unknown carrot east of the hamburgers   |
+| 56  | The orange unknown carrot east of the hamburgers.  |
+| 57  | The orange unknown carrot, east of a hamburger     |
+| 58  | The orange unknown carrot, east of hamburgers      |
+| 59  | The orange unknown carrot, east of the hamburger   |
+| 60  | The orange unknown carrot, east of the hamburgers  |
+| 61  | The orange unknown carrots east of a hamburger     |
+| 62  | The orange unknown carrots east of a hamburger.    |
+| 63  | The orange unknown carrots east of hamburgers      |
+| 64  | The orange unknown carrots east of hamburgers.     |
+| 65  | The orange unknown carrots east of the hamburger   |
+| 66  | The orange unknown carrots east of the hamburger.  |
+| 67  | The orange unknown carrots east of the hamburgers  |
+| 68  | The orange unknown carrots east of the hamburgers. |
+| 69  | The orange unknown carrots, east of a hamburger    |
+| 70  | The orange unknown carrots, east of hamburgers     |
+| 71  | The orange unknown carrots, east of the hamburger  |
+| 72  | The orange unknown carrots, east of the hamburgers |
+| 73  | The unknown orange carrot east of a hamburger      |
+| 74  | The unknown orange carrot east of a hamburger.     |
+| 75  | The unknown orange carrot east of hamburgers       |
+| 76  | The unknown orange carrot east of hamburgers.      |
+| 77  | The unknown orange carrot east of the hamburger    |
+| 78  | The unknown orange carrot east of the hamburger.   |
+| 79  | The unknown orange carrot east of the hamburgers   |
+| 80  | The unknown orange carrot east of the hamburgers.  |
+| 81  | The unknown orange carrot, east of a hamburger     |
+| 82  | The unknown orange carrot, east of hamburgers      |
+| 83  | The unknown orange carrot, east of the hamburger   |
+| 84  | The unknown orange carrot, east of the hamburgers  |
+| 85  | The unknown orange carrots east of a hamburger     |
+| 86  | The unknown orange carrots east of a hamburger.    |
+| 87  | The unknown orange carrots east of hamburgers      |
+| 88  | The unknown orange carrots east of hamburgers.     |
+| 89  | The unknown orange carrots east of the hamburger   |
+| 90  | The unknown orange carrots east of the hamburger.  |
+| 91  | The unknown orange carrots east of the hamburgers  |
+| 92  | The unknown orange carrots east of the hamburgers. |
+| 93  | The unknown orange carrots, east of a hamburger    |
+| 94  | The unknown orange carrots, east of hamburgers     |
+| 95  | The unknown orange carrots, east of the hamburger  |
+| 96  | The unknown orange carrots, east of the hamburgers |
+| 97  | Unknown orange carrot east of a hamburger          |
+| 98  | Unknown orange carrot east of a hamburger.         |
+| 99  | Unknown orange carrot east of hamburgers           |
+| 100 | Unknown orange carrot east of hamburgers.          |
+| 101 | Unknown orange carrot east of the hamburger        |
+| 102 | Unknown orange carrot east of the hamburger.       |
+| 103 | Unknown orange carrot east of the hamburgers       |
+| 104 | Unknown orange carrot east of the hamburgers.      |
+| 105 | Unknown orange carrot, east of a hamburger         |
+| 106 | Unknown orange carrot, east of hamburgers          |
+| 107 | Unknown orange carrot, east of the hamburger       |
+| 108 | Unknown orange carrot, east of the hamburgers      |
+| 109 | Unknown orange carrots east of a hamburger         |
+| 110 | Unknown orange carrots east of a hamburger.        |
+| 111 | Unknown orange carrots east of hamburgers          |
+| 112 | Unknown orange carrots east of hamburgers.         |
+| 113 | Unknown orange carrots east of the hamburger       |
+| 114 | Unknown orange carrots east of the hamburger.      |
+| 115 | Unknown orange carrots east of the hamburgers      |
+| 116 | Unknown orange carrots east of the hamburgers.     |
+| 117 | Unknown orange carrots, east of a hamburger        |
+| 118 | Unknown orange carrots, east of hamburgers         |
+| 119 | Unknown orange carrots, east of the hamburger      |
+| 120 | Unknown orange carrots, east of the hamburgers     |
++-----+----------------------------------------------------+
+

@@ -1,0 +1,425 @@
+GRAPH NAME: idBook1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 240   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-----------------------------------------------------------------------+
+|                              GOLD OUTPUTS                             |
++----------------------------------------------------------+------------+
+| Gold Output                                              | Generated? |
++----------------------------------------------------------+------------+
+| the open book north of the flashlight that is turned off | True       |
++----------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------+
+|                                     NODE METRICS                                    |
++---------------+--------------+---------------+------------------+-------------------+
+| Node          | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------+--------------+---------------+------------------+-------------------+
+| idBook1       | True         | True          | Covered          | Included          |
+| open          | True         | True          | Covered          | Included          |
+| idFlashlight1 | True         | True          | Covered          | Included          |
+| off           | True         | True          | Covered          | Included          |
++---------------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE METRICS                                                             |
++---------------------------------+---------------+---------------+--------------+---------------+------------------+-------------------+
+| Edge                            | Parent        | Child         | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------+---------------+---------------+--------------+---------------+------------------+-------------------+
+| idBook1_prop_idOpenState        | idBook1       | open          | True         | True          | Covered          | Included          |
+| isNorthOf                       | idBook1       | idFlashlight1 | True         | True          | Covered          | Included          |
+| idFlashlight1_prop_idPowerState | idFlashlight1 | off           | True         | True          | Covered          | Included          |
++---------------------------------+---------------+---------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h433                                                                      |
+|               |   INDEX: x431                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h458 ARG0: e455 ARG1: u456 ARG2: x457 ]               |
+|               |           [ def_implicit_q LBL: h469 ARG0: x466 RSTR: h467 BODY: h468 ]          |
+|               |           [ _north_a_1 LBL: h454 ARG0: i451 ARG1: x452 ARG2: u453 ]              |
+|               |           [ def_udef_a_q LBL: h464 ARG0: x461 RSTR: h462 BODY: h463 ]            |
+|               |           [ _turn_v_off LBL: h450 ARG0: e447 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i448 ARG2: i449 ]                                                                |
+|               |           [ _flashlight_n_1 LBL: h439 ARG0: x438 ]                               |
+|               |           [ place_n LBL: h460 ARG0: x459 ]                                       |
+|               |           [ _open_a_to LBL: h437 ARG0: e434 ARG1: u435 ARG2: u436 ]              |
+|               |           [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >                       |
+|               |   HCONS: < h462 qeq h439 h467 qeq h460 >                                         |
+|               |   ICONS: < e447 topic i449 >                                                     |
+|               |   EQS: < h450 eq h439 i449 eq x438 x461 eq x438 h454 eq h465 u453 eq x461 h454   |
+|               | eq h460 x452 eq x459 x466 eq x459 h458 eq h470 x457 eq x466 h437 eq h433 u435 eq |
+|               | x431 h458 eq h433 u456 eq x431 >                                                 |
+|               |   SLOTS: < ARG1: i432 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h433                                                                      |
+|               |   INDEX: x431                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h433 ARG0: e455 ARG1: x431 ARG2: x452 ]               |
+|               |           [ def_implicit_q LBL: h469 ARG0: x452 RSTR: h467 BODY: h468 ]          |
+|               |           [ _north_a_1 LBL: h454 ARG0: i451 ARG1: x452 ARG2: x438 ]              |
+|               |           [ def_udef_a_q LBL: h464 ARG0: x438 RSTR: h462 BODY: h463 ]            |
+|               |           [ _turn_v_off LBL: h439 ARG0: e447 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i448 ARG2: x438 ]                                                                |
+|               |           [ _flashlight_n_1 LBL: h439 ARG0: x438 ]                               |
+|               |           [ place_n LBL: h454 ARG0: x452 ]                                       |
+|               |           [ _open_a_to LBL: h433 ARG0: e434 ARG1: x431 ARG2: u436 ]              |
+|               |           [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >                       |
+|               |   HCONS: < h462 qeq h439 h467 qeq h454 >                                         |
+|               |   ICONS: < e447 topic x438 >                                                     |
+|               |   SLOTS: < ARG1: i432 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h479                                                                      |
+|               |   INDEX: e476                                                                    |
+|               |   RELS: < [ unknown LBL: h475 ARG: x431 ARG0: e476 ]                             |
+|               |           [ def_udef_a_q LBL: h474 ARG0: x431 RSTR: h472 BODY: h473 ]            |
+|               |           [ loc_nonsp LBL: h433 ARG0: e455 ARG1: x431 ARG2: x452 ]               |
+|               |           [ def_implicit_q LBL: h469 ARG0: x452 RSTR: h467 BODY: h468 ]          |
+|               |           [ _north_a_1 LBL: h454 ARG0: i451 ARG1: x452 ARG2: x438 ]              |
+|               |           [ def_udef_a_q LBL: h464 ARG0: x438 RSTR: h462 BODY: h463 ]            |
+|               |           [ _turn_v_off LBL: h439 ARG0: e447 [ e TENSE: pres PERF: - ] ARG1:     |
+|               | i448 ARG2: x438 ]                                                                |
+|               |           [ _flashlight_n_1 LBL: h439 ARG0: x438 ]                               |
+|               |           [ place_n LBL: h454 ARG0: x452 ]                                       |
+|               |           [ _open_a_to LBL: h433 ARG0: e434 ARG1: x431 ARG2: u436 ]              |
+|               |           [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >                       |
+|               |   HCONS: < h462 qeq h439 h467 qeq h454 h472 qeq h433 h479 qeq h475 >             |
+|               |   ICONS: < e447 topic x438 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                                      NODE SEMENTS                                     |
++---------------+-----------------------------------------------------------------------+
+| Node          | Generated SEMENT                                                      |
++---------------+-----------------------------------------------------------------------+
+| idBook1       | [ TOP: h433                                                           |
+|               |   INDEX: x431                                                         |
+|               |   RELS: < [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >            |
+|               |   SLOTS: < ARG1: i432 > ]                                             |
++---------------+-----------------------------------------------------------------------+
+| open          | [ TOP: h437                                                           |
+|               |   INDEX: e434                                                         |
+|               |   RELS: < [ _open_a_to LBL: h437 ARG0: e434 ARG1: u435 ARG2: u436 ] > |
+|               |   SLOTS: < ARG1: u435 ARG2: u436 > ]                                  |
++---------------+-----------------------------------------------------------------------+
+| idFlashlight1 | [ TOP: h439                                                           |
+|               |   INDEX: x438                                                         |
+|               |   RELS: < [ _flashlight_n_1 LBL: h439 ARG0: x438 ] > ]                |
++---------------+-----------------------------------------------------------------------+
+| off           | [ TOP: h442                                                           |
+|               |   INDEX: e440                                                         |
+|               |   RELS: < [ _false_a_of LBL: h442 ARG0: e440 ARG1: h441 ] >           |
+|               |   SLOTS: < ARG1: h441 > ]                                             |
++---------------+-----------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                    EDGE SEMENTS                                                                    |
++---------------------------------+---------------+---------------+----------------------------------------------------------------------------------+
+| Edge                            | Parent        | Child         | Generated SEMENT                                                                 |
++---------------------------------+---------------+---------------+----------------------------------------------------------------------------------+
+| idBook1_prop_idOpenState        | idBook1       | open          | [ TOP: h433                                                                      |
+|                                 |               |               |   INDEX: x431                                                                    |
+|                                 |               |               |   RELS: < [ _open_a_to LBL: h437 ARG0: e434 ARG1: u435 ARG2: u436 ]              |
+|                                 |               |               |           [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >                       |
+|                                 |               |               |   EQS: < h437 eq h433 u435 eq x431 >                                             |
+|                                 |               |               |   SLOTS: < ARG1: i432 > ]                                                        |
++---------------------------------+---------------+---------------+----------------------------------------------------------------------------------+
+| isNorthOf                       | idBook1       | idFlashlight1 | [ TOP: h433                                                                      |
+|                                 |               |               |   INDEX: x431                                                                    |
+|                                 |               |               |   RELS: < [ loc_nonsp LBL: h458 ARG0: e455 ARG1: u456 ARG2: x457 ]               |
+|                                 |               |               |           [ def_implicit_q LBL: h469 ARG0: x466 RSTR: h467 BODY: h468 ]          |
+|                                 |               |               |           [ _north_a_1 LBL: h454 ARG0: i451 ARG1: x452 ARG2: u453 ]              |
+|                                 |               |               |           [ def_udef_a_q LBL: h464 ARG0: x461 RSTR: h462 BODY: h463 ]            |
+|                                 |               |               |           [ _turn_v_off LBL: h450 ARG0: e447 [ e TENSE: pres PERF: - ] ARG1:     |
+|                                 |               |               | i448 ARG2: i449 ]                                                                |
+|                                 |               |               |           [ _flashlight_n_1 LBL: h439 ARG0: x438 ]                               |
+|                                 |               |               |           [ place_n LBL: h460 ARG0: x459 ]                                       |
+|                                 |               |               |           [ _open_a_to LBL: h437 ARG0: e434 ARG1: u435 ARG2: u436 ]              |
+|                                 |               |               |           [ _book_n_of LBL: h433 ARG0: x431 ARG1: i432 ] >                       |
+|                                 |               |               |   HCONS: < h462 qeq h439 h467 qeq h460 >                                         |
+|                                 |               |               |   ICONS: < e447 topic i449 >                                                     |
+|                                 |               |               |   EQS: < h450 eq h439 i449 eq x438 x461 eq x438 h454 eq h465 u453 eq x461 h454   |
+|                                 |               |               | eq h460 x452 eq x459 x466 eq x459 h458 eq h470 x457 eq x466 h437 eq h433 u435 eq |
+|                                 |               |               | x431 h458 eq h433 u456 eq x431 >                                                 |
+|                                 |               |               |   SLOTS: < ARG1: i432 > ]                                                        |
++---------------------------------+---------------+---------------+----------------------------------------------------------------------------------+
+| idFlashlight1_prop_idPowerState | idFlashlight1 | off           | [ TOP: h439                                                                      |
+|                                 |               |               |   INDEX: x438                                                                    |
+|                                 |               |               |   RELS: < [ _turn_v_off LBL: h450 ARG0: e447 [ e TENSE: pres PERF: - ] ARG1:     |
+|                                 |               |               | i448 ARG2: i449 ]                                                                |
+|                                 |               |               |           [ _flashlight_n_1 LBL: h439 ARG0: x438 ] >                             |
+|                                 |               |               |   ICONS: < e447 topic i449 >                                                     |
+|                                 |               |               |   EQS: < h450 eq h439 i449 eq x438 > ]                                           |
++---------------------------------+---------------+---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------+
+|                        GENERATED ENGLISH TEXT                        |
++-----+----------------------------------------------------------------+
+| #   | Generated Text                                                 |
++-----+----------------------------------------------------------------+
+| 1   | An open book north of a flashlight that is turned off          |
+| 2   | An open book north of a flashlight that is turned off.         |
+| 3   | An open book north of a flashlight which is turned off         |
+| 4   | An open book north of a flashlight which is turned off.        |
+| 5   | An open book north of a flashlight who is turned off           |
+| 6   | An open book north of a flashlight who is turned off.          |
+| 7   | An open book north of a flashlight, that is turned off.        |
+| 8   | An open book north of a flashlight, which is turned off.       |
+| 9   | An open book north of a flashlight, who is turned off.         |
+| 10  | An open book north of flashlights that are turned off          |
+| 11  | An open book north of flashlights that are turned off.         |
+| 12  | An open book north of flashlights which are turned off         |
+| 13  | An open book north of flashlights which are turned off.        |
+| 14  | An open book north of flashlights who are turned off           |
+| 15  | An open book north of flashlights who are turned off.          |
+| 16  | An open book north of flashlights, that are turned off.        |
+| 17  | An open book north of flashlights, which are turned off.       |
+| 18  | An open book north of flashlights, who are turned off.         |
+| 19  | An open book north of the flashlight that is turned off        |
+| 20  | An open book north of the flashlight that is turned off.       |
+| 21  | An open book north of the flashlight which is turned off       |
+| 22  | An open book north of the flashlight which is turned off.      |
+| 23  | An open book north of the flashlight who is turned off         |
+| 24  | An open book north of the flashlight who is turned off.        |
+| 25  | An open book north of the flashlight, that is turned off.      |
+| 26  | An open book north of the flashlight, which is turned off.     |
+| 27  | An open book north of the flashlight, who is turned off.       |
+| 28  | An open book north of the flashlights that are turned off      |
+| 29  | An open book north of the flashlights that are turned off.     |
+| 30  | An open book north of the flashlights which are turned off     |
+| 31  | An open book north of the flashlights which are turned off.    |
+| 32  | An open book north of the flashlights who are turned off       |
+| 33  | An open book north of the flashlights who are turned off.      |
+| 34  | An open book north of the flashlights, that are turned off.    |
+| 35  | An open book north of the flashlights, which are turned off.   |
+| 36  | An open book north of the flashlights, who are turned off.     |
+| 37  | An open book, north of a flashlight that is turned off         |
+| 38  | An open book, north of a flashlight which is turned off        |
+| 39  | An open book, north of a flashlight who is turned off          |
+| 40  | An open book, north of flashlights that are turned off         |
+| 41  | An open book, north of flashlights which are turned off        |
+| 42  | An open book, north of flashlights who are turned off          |
+| 43  | An open book, north of the flashlight that is turned off       |
+| 44  | An open book, north of the flashlight which is turned off      |
+| 45  | An open book, north of the flashlight who is turned off        |
+| 46  | An open book, north of the flashlights that are turned off     |
+| 47  | An open book, north of the flashlights which are turned off    |
+| 48  | An open book, north of the flashlights who are turned off      |
+| 49  | Open book north of a flashlight that is turned off             |
+| 50  | Open book north of a flashlight that is turned off.            |
+| 51  | Open book north of a flashlight which is turned off            |
+| 52  | Open book north of a flashlight which is turned off.           |
+| 53  | Open book north of a flashlight who is turned off              |
+| 54  | Open book north of a flashlight who is turned off.             |
+| 55  | Open book north of a flashlight, that is turned off.           |
+| 56  | Open book north of a flashlight, which is turned off.          |
+| 57  | Open book north of a flashlight, who is turned off.            |
+| 58  | Open book north of flashlights that are turned off             |
+| 59  | Open book north of flashlights that are turned off.            |
+| 60  | Open book north of flashlights which are turned off            |
+| 61  | Open book north of flashlights which are turned off.           |
+| 62  | Open book north of flashlights who are turned off              |
+| 63  | Open book north of flashlights who are turned off.             |
+| 64  | Open book north of flashlights, that are turned off.           |
+| 65  | Open book north of flashlights, which are turned off.          |
+| 66  | Open book north of flashlights, who are turned off.            |
+| 67  | Open book north of the flashlight that is turned off           |
+| 68  | Open book north of the flashlight that is turned off.          |
+| 69  | Open book north of the flashlight which is turned off          |
+| 70  | Open book north of the flashlight which is turned off.         |
+| 71  | Open book north of the flashlight who is turned off            |
+| 72  | Open book north of the flashlight who is turned off.           |
+| 73  | Open book north of the flashlight, that is turned off.         |
+| 74  | Open book north of the flashlight, which is turned off.        |
+| 75  | Open book north of the flashlight, who is turned off.          |
+| 76  | Open book north of the flashlights that are turned off         |
+| 77  | Open book north of the flashlights that are turned off.        |
+| 78  | Open book north of the flashlights which are turned off        |
+| 79  | Open book north of the flashlights which are turned off.       |
+| 80  | Open book north of the flashlights who are turned off          |
+| 81  | Open book north of the flashlights who are turned off.         |
+| 82  | Open book north of the flashlights, that are turned off.       |
+| 83  | Open book north of the flashlights, which are turned off.      |
+| 84  | Open book north of the flashlights, who are turned off.        |
+| 85  | Open book, north of a flashlight that is turned off            |
+| 86  | Open book, north of a flashlight which is turned off           |
+| 87  | Open book, north of a flashlight who is turned off             |
+| 88  | Open book, north of flashlights that are turned off            |
+| 89  | Open book, north of flashlights which are turned off           |
+| 90  | Open book, north of flashlights who are turned off             |
+| 91  | Open book, north of the flashlight that is turned off          |
+| 92  | Open book, north of the flashlight which is turned off         |
+| 93  | Open book, north of the flashlight who is turned off           |
+| 94  | Open book, north of the flashlights that are turned off        |
+| 95  | Open book, north of the flashlights which are turned off       |
+| 96  | Open book, north of the flashlights who are turned off         |
+| 97  | Open books north of a flashlight that is turned off            |
+| 98  | Open books north of a flashlight that is turned off.           |
+| 99  | Open books north of a flashlight which is turned off           |
+| 100 | Open books north of a flashlight which is turned off.          |
+| 101 | Open books north of a flashlight who is turned off             |
+| 102 | Open books north of a flashlight who is turned off.            |
+| 103 | Open books north of a flashlight, that is turned off.          |
+| 104 | Open books north of a flashlight, which is turned off.         |
+| 105 | Open books north of a flashlight, who is turned off.           |
+| 106 | Open books north of flashlights that are turned off            |
+| 107 | Open books north of flashlights that are turned off.           |
+| 108 | Open books north of flashlights which are turned off           |
+| 109 | Open books north of flashlights which are turned off.          |
+| 110 | Open books north of flashlights who are turned off             |
+| 111 | Open books north of flashlights who are turned off.            |
+| 112 | Open books north of flashlights, that are turned off.          |
+| 113 | Open books north of flashlights, which are turned off.         |
+| 114 | Open books north of flashlights, who are turned off.           |
+| 115 | Open books north of the flashlight that is turned off          |
+| 116 | Open books north of the flashlight that is turned off.         |
+| 117 | Open books north of the flashlight which is turned off         |
+| 118 | Open books north of the flashlight which is turned off.        |
+| 119 | Open books north of the flashlight who is turned off           |
+| 120 | Open books north of the flashlight who is turned off.          |
+| 121 | Open books north of the flashlight, that is turned off.        |
+| 122 | Open books north of the flashlight, which is turned off.       |
+| 123 | Open books north of the flashlight, who is turned off.         |
+| 124 | Open books north of the flashlights that are turned off        |
+| 125 | Open books north of the flashlights that are turned off.       |
+| 126 | Open books north of the flashlights which are turned off       |
+| 127 | Open books north of the flashlights which are turned off.      |
+| 128 | Open books north of the flashlights who are turned off         |
+| 129 | Open books north of the flashlights who are turned off.        |
+| 130 | Open books north of the flashlights, that are turned off.      |
+| 131 | Open books north of the flashlights, which are turned off.     |
+| 132 | Open books north of the flashlights, who are turned off.       |
+| 133 | Open books, north of a flashlight that is turned off           |
+| 134 | Open books, north of a flashlight which is turned off          |
+| 135 | Open books, north of a flashlight who is turned off            |
+| 136 | Open books, north of flashlights that are turned off           |
+| 137 | Open books, north of flashlights which are turned off          |
+| 138 | Open books, north of flashlights who are turned off            |
+| 139 | Open books, north of the flashlight that is turned off         |
+| 140 | Open books, north of the flashlight which is turned off        |
+| 141 | Open books, north of the flashlight who is turned off          |
+| 142 | Open books, north of the flashlights that are turned off       |
+| 143 | Open books, north of the flashlights which are turned off      |
+| 144 | Open books, north of the flashlights who are turned off        |
+| 145 | The open book north of a flashlight that is turned off         |
+| 146 | The open book north of a flashlight that is turned off.        |
+| 147 | The open book north of a flashlight which is turned off        |
+| 148 | The open book north of a flashlight which is turned off.       |
+| 149 | The open book north of a flashlight who is turned off          |
+| 150 | The open book north of a flashlight who is turned off.         |
+| 151 | The open book north of a flashlight, that is turned off.       |
+| 152 | The open book north of a flashlight, which is turned off.      |
+| 153 | The open book north of a flashlight, who is turned off.        |
+| 154 | The open book north of flashlights that are turned off         |
+| 155 | The open book north of flashlights that are turned off.        |
+| 156 | The open book north of flashlights which are turned off        |
+| 157 | The open book north of flashlights which are turned off.       |
+| 158 | The open book north of flashlights who are turned off          |
+| 159 | The open book north of flashlights who are turned off.         |
+| 160 | The open book north of flashlights, that are turned off.       |
+| 161 | The open book north of flashlights, which are turned off.      |
+| 162 | The open book north of flashlights, who are turned off.        |
+| 163 | The open book north of the flashlight that is turned off       |
+| 164 | The open book north of the flashlight that is turned off.      |
+| 165 | The open book north of the flashlight which is turned off      |
+| 166 | The open book north of the flashlight which is turned off.     |
+| 167 | The open book north of the flashlight who is turned off        |
+| 168 | The open book north of the flashlight who is turned off.       |
+| 169 | The open book north of the flashlight, that is turned off.     |
+| 170 | The open book north of the flashlight, which is turned off.    |
+| 171 | The open book north of the flashlight, who is turned off.      |
+| 172 | The open book north of the flashlights that are turned off     |
+| 173 | The open book north of the flashlights that are turned off.    |
+| 174 | The open book north of the flashlights which are turned off    |
+| 175 | The open book north of the flashlights which are turned off.   |
+| 176 | The open book north of the flashlights who are turned off      |
+| 177 | The open book north of the flashlights who are turned off.     |
+| 178 | The open book north of the flashlights, that are turned off.   |
+| 179 | The open book north of the flashlights, which are turned off.  |
+| 180 | The open book north of the flashlights, who are turned off.    |
+| 181 | The open book, north of a flashlight that is turned off        |
+| 182 | The open book, north of a flashlight which is turned off       |
+| 183 | The open book, north of a flashlight who is turned off         |
+| 184 | The open book, north of flashlights that are turned off        |
+| 185 | The open book, north of flashlights which are turned off       |
+| 186 | The open book, north of flashlights who are turned off         |
+| 187 | The open book, north of the flashlight that is turned off      |
+| 188 | The open book, north of the flashlight which is turned off     |
+| 189 | The open book, north of the flashlight who is turned off       |
+| 190 | The open book, north of the flashlights that are turned off    |
+| 191 | The open book, north of the flashlights which are turned off   |
+| 192 | The open book, north of the flashlights who are turned off     |
+| 193 | The open books north of a flashlight that is turned off        |
+| 194 | The open books north of a flashlight that is turned off.       |
+| 195 | The open books north of a flashlight which is turned off       |
+| 196 | The open books north of a flashlight which is turned off.      |
+| 197 | The open books north of a flashlight who is turned off         |
+| 198 | The open books north of a flashlight who is turned off.        |
+| 199 | The open books north of a flashlight, that is turned off.      |
+| 200 | The open books north of a flashlight, which is turned off.     |
+| 201 | The open books north of a flashlight, who is turned off.       |
+| 202 | The open books north of flashlights that are turned off        |
+| 203 | The open books north of flashlights that are turned off.       |
+| 204 | The open books north of flashlights which are turned off       |
+| 205 | The open books north of flashlights which are turned off.      |
+| 206 | The open books north of flashlights who are turned off         |
+| 207 | The open books north of flashlights who are turned off.        |
+| 208 | The open books north of flashlights, that are turned off.      |
+| 209 | The open books north of flashlights, which are turned off.     |
+| 210 | The open books north of flashlights, who are turned off.       |
+| 211 | The open books north of the flashlight that is turned off      |
+| 212 | The open books north of the flashlight that is turned off.     |
+| 213 | The open books north of the flashlight which is turned off     |
+| 214 | The open books north of the flashlight which is turned off.    |
+| 215 | The open books north of the flashlight who is turned off       |
+| 216 | The open books north of the flashlight who is turned off.      |
+| 217 | The open books north of the flashlight, that is turned off.    |
+| 218 | The open books north of the flashlight, which is turned off.   |
+| 219 | The open books north of the flashlight, who is turned off.     |
+| 220 | The open books north of the flashlights that are turned off    |
+| 221 | The open books north of the flashlights that are turned off.   |
+| 222 | The open books north of the flashlights which are turned off   |
+| 223 | The open books north of the flashlights which are turned off.  |
+| 224 | The open books north of the flashlights who are turned off     |
+| 225 | The open books north of the flashlights who are turned off.    |
+| 226 | The open books north of the flashlights, that are turned off.  |
+| 227 | The open books north of the flashlights, which are turned off. |
+| 228 | The open books north of the flashlights, who are turned off.   |
+| 229 | The open books, north of a flashlight that is turned off       |
+| 230 | The open books, north of a flashlight which is turned off      |
+| 231 | The open books, north of a flashlight who is turned off        |
+| 232 | The open books, north of flashlights that are turned off       |
+| 233 | The open books, north of flashlights which are turned off      |
+| 234 | The open books, north of flashlights who are turned off        |
+| 235 | The open books, north of the flashlight that is turned off     |
+| 236 | The open books, north of the flashlight which is turned off    |
+| 237 | The open books, north of the flashlight who is turned off      |
+| 238 | The open books, north of the flashlights that are turned off   |
+| 239 | The open books, north of the flashlights which are turned off  |
+| 240 | The open books, north of the flashlights who are turned off    |
++-----+----------------------------------------------------------------+
+

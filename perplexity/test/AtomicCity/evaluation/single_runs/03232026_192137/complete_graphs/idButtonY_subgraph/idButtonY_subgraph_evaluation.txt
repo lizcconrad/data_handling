@@ -1,0 +1,259 @@
+GRAPH NAME: idButtonY_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------+
+|                   GOLD OUTPUTS                  |
++------------------------------------+------------+
+| Gold Output                        | Generated? |
++------------------------------------+------------+
+| the third button near the elevator | True       |
++------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idButtonY   | True         | True          | Covered          | Included          |
+| 3           | True         | True          | Covered          | Included          |
+| idElevator1 | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                        |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                        | Parent    | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+| idButtonY_prop_idOrdinality | idButtonY | 3           | True         | True          | Covered          | Included          |
+| isNear                      | idButtonY | idElevator1 | True         | True          | Covered          | Included          |
++-----------------------------+-----------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3273                                                                     |
+|               |   INDEX: x3272                                                                   |
+|               |   RELS: < [ _near_p LBL: h3285 ARG0: e3282 ARG1: u3283 ARG2: i3284 ]             |
+|               |           [ def_udef_a_q LBL: h3289 ARG0: x3286 RSTR: h3287 BODY: h3288 ]        |
+|               |           [ _elevator_n_1 LBL: h3281 ARG0: x3280 ]                               |
+|               |           [ ord LBL: h3279 ARG0: i3277 ARG1: u3278 CARG: "3" ]                   |
+|               |           [ _button_n_1 LBL: h3273 ARG0: x3272 ] >                               |
+|               |   HCONS: < h3287 qeq h3281 >                                                     |
+|               |   EQS: < x3286 eq x3280 h3285 eq h3290 i3284 eq x3286 h3279 eq h3273 u3278 eq    |
+|               | x3272 h3285 eq h3273 u3283 eq x3272 > ]                                          |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3273                                                                     |
+|               |   INDEX: x3272                                                                   |
+|               |   RELS: < [ _near_p LBL: h3273 ARG0: e3282 ARG1: x3272 ARG2: x3280 ]             |
+|               |           [ def_udef_a_q LBL: h3289 ARG0: x3280 RSTR: h3287 BODY: h3288 ]        |
+|               |           [ _elevator_n_1 LBL: h3281 ARG0: x3280 ]                               |
+|               |           [ ord LBL: h3273 ARG0: i3277 ARG1: x3272 CARG: "3" ]                   |
+|               |           [ _button_n_1 LBL: h3273 ARG0: x3272 ] >                               |
+|               |   HCONS: < h3287 qeq h3281 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3299                                                                     |
+|               |   INDEX: e3296                                                                   |
+|               |   RELS: < [ unknown LBL: h3295 ARG: x3272 ARG0: e3296 ]                          |
+|               |           [ def_udef_a_q LBL: h3294 ARG0: x3272 RSTR: h3292 BODY: h3293 ]        |
+|               |           [ _near_p LBL: h3273 ARG0: e3282 ARG1: x3272 ARG2: x3280 ]             |
+|               |           [ def_udef_a_q LBL: h3289 ARG0: x3280 RSTR: h3287 BODY: h3288 ]        |
+|               |           [ _elevator_n_1 LBL: h3281 ARG0: x3280 ]                               |
+|               |           [ ord LBL: h3273 ARG0: i3277 ARG1: x3272 CARG: "3" ]                   |
+|               |           [ _button_n_1 LBL: h3273 ARG0: x3272 ] >                               |
+|               |   HCONS: < h3287 qeq h3281 h3292 qeq h3273 h3299 qeq h3295 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE SEMENTS                                  |
++-------------+-------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                  |
++-------------+-------------------------------------------------------------------+
+| idButtonY   | [ TOP: h3273                                                      |
+|             |   INDEX: x3272                                                    |
+|             |   RELS: < [ _button_n_1 LBL: h3273 ARG0: x3272 ] > ]              |
++-------------+-------------------------------------------------------------------+
+| 3           | [ TOP: h3276                                                      |
+|             |   INDEX: i3274                                                    |
+|             |   RELS: < [ card LBL: h3276 ARG0: i3274 ARG1: u3275 CARG: "3" ] > |
+|             |   SLOTS: < ARG1: u3275 > ]                                        |
++-------------+-------------------------------------------------------------------+
+| idElevator1 | [ TOP: h3281                                                      |
+|             |   INDEX: x3280                                                    |
+|             |   RELS: < [ _elevator_n_1 LBL: h3281 ARG0: x3280 ] > ]            |
++-------------+-------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE SEMENTS                                                               |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| Edge                        | Parent    | Child       | Generated SEMENT                                                                 |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| idButtonY_prop_idOrdinality | idButtonY | 3           | [ TOP: h3273                                                                     |
+|                             |           |             |   INDEX: x3272                                                                   |
+|                             |           |             |   RELS: < [ ord LBL: h3279 ARG0: i3277 ARG1: u3278 CARG: "3" ]                   |
+|                             |           |             |           [ _button_n_1 LBL: h3273 ARG0: x3272 ] >                               |
+|                             |           |             |   EQS: < h3279 eq h3273 u3278 eq x3272 > ]                                       |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+| isNear                      | idButtonY | idElevator1 | [ TOP: h3273                                                                     |
+|                             |           |             |   INDEX: x3272                                                                   |
+|                             |           |             |   RELS: < [ _near_p LBL: h3285 ARG0: e3282 ARG1: u3283 ARG2: i3284 ]             |
+|                             |           |             |           [ def_udef_a_q LBL: h3289 ARG0: x3286 RSTR: h3287 BODY: h3288 ]        |
+|                             |           |             |           [ _elevator_n_1 LBL: h3281 ARG0: x3280 ]                               |
+|                             |           |             |           [ ord LBL: h3279 ARG0: i3277 ARG1: u3278 CARG: "3" ]                   |
+|                             |           |             |           [ _button_n_1 LBL: h3273 ARG0: x3272 ] >                               |
+|                             |           |             |   HCONS: < h3287 qeq h3281 >                                                     |
+|                             |           |             |   EQS: < x3286 eq x3280 h3285 eq h3290 i3284 eq x3286 h3279 eq h3273 u3278 eq    |
+|                             |           |             | x3272 h3285 eq h3273 u3283 eq x3272 > ]                                          |
++-----------------------------+-----------+-------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------+
+|            GENERATED ENGLISH TEXT            |
++-----+----------------------------------------+
+| #   | Generated Text                         |
++-----+----------------------------------------+
+| 1   | A third button near an elevator        |
+| 2   | A third button near an elevator.       |
+| 3   | A third button near elevators          |
+| 4   | A third button near elevators.         |
+| 5   | A third button near the elevator       |
+| 6   | A third button near the elevator.      |
+| 7   | A third button near the elevators      |
+| 8   | A third button near the elevators.     |
+| 9   | A third button, near an elevator       |
+| 10  | A third button, near elevators         |
+| 11  | A third button, near the elevator      |
+| 12  | A third button, near the elevators     |
+| 13  | A third, button near an elevator       |
+| 14  | A third, button near an elevator.      |
+| 15  | A third, button near elevators         |
+| 16  | A third, button near elevators.        |
+| 17  | A third, button near the elevator      |
+| 18  | A third, button near the elevator.     |
+| 19  | A third, button near the elevators     |
+| 20  | A third, button near the elevators.    |
+| 21  | A third, button, near an elevator      |
+| 22  | A third, button, near elevators        |
+| 23  | A third, button, near the elevator     |
+| 24  | A third, button, near the elevators    |
+| 25  | The third button near an elevator      |
+| 26  | The third button near an elevator.     |
+| 27  | The third button near elevators        |
+| 28  | The third button near elevators.       |
+| 29  | The third button near the elevator     |
+| 30  | The third button near the elevator.    |
+| 31  | The third button near the elevators    |
+| 32  | The third button near the elevators.   |
+| 33  | The third button, near an elevator     |
+| 34  | The third button, near elevators       |
+| 35  | The third button, near the elevator    |
+| 36  | The third button, near the elevators   |
+| 37  | The third buttons near an elevator     |
+| 38  | The third buttons near an elevator.    |
+| 39  | The third buttons near elevators       |
+| 40  | The third buttons near elevators.      |
+| 41  | The third buttons near the elevator    |
+| 42  | The third buttons near the elevator.   |
+| 43  | The third buttons near the elevators   |
+| 44  | The third buttons near the elevators.  |
+| 45  | The third buttons, near an elevator    |
+| 46  | The third buttons, near elevators      |
+| 47  | The third buttons, near the elevator   |
+| 48  | The third buttons, near the elevators  |
+| 49  | The third, button near an elevator     |
+| 50  | The third, button near an elevator.    |
+| 51  | The third, button near elevators       |
+| 52  | The third, button near elevators.      |
+| 53  | The third, button near the elevator    |
+| 54  | The third, button near the elevator.   |
+| 55  | The third, button near the elevators   |
+| 56  | The third, button near the elevators.  |
+| 57  | The third, button, near an elevator    |
+| 58  | The third, button, near elevators      |
+| 59  | The third, button, near the elevator   |
+| 60  | The third, button, near the elevators  |
+| 61  | The third, buttons near an elevator    |
+| 62  | The third, buttons near an elevator.   |
+| 63  | The third, buttons near elevators      |
+| 64  | The third, buttons near elevators.     |
+| 65  | The third, buttons near the elevator   |
+| 66  | The third, buttons near the elevator.  |
+| 67  | The third, buttons near the elevators  |
+| 68  | The third, buttons near the elevators. |
+| 69  | The third, buttons, near an elevator   |
+| 70  | The third, buttons, near elevators     |
+| 71  | The third, buttons, near the elevator  |
+| 72  | The third, buttons, near the elevators |
+| 73  | Third button near an elevator          |
+| 74  | Third button near an elevator.         |
+| 75  | Third button near elevators            |
+| 76  | Third button near elevators.           |
+| 77  | Third button near the elevator         |
+| 78  | Third button near the elevator.        |
+| 79  | Third button near the elevators        |
+| 80  | Third button near the elevators.       |
+| 81  | Third button, near an elevator         |
+| 82  | Third button, near elevators           |
+| 83  | Third button, near the elevator        |
+| 84  | Third button, near the elevators       |
+| 85  | Third buttons near an elevator         |
+| 86  | Third buttons near an elevator.        |
+| 87  | Third buttons near elevators           |
+| 88  | Third buttons near elevators.          |
+| 89  | Third buttons near the elevator        |
+| 90  | Third buttons near the elevator.       |
+| 91  | Third buttons near the elevators       |
+| 92  | Third buttons near the elevators.      |
+| 93  | Third buttons, near an elevator        |
+| 94  | Third buttons, near elevators          |
+| 95  | Third buttons, near the elevator       |
+| 96  | Third buttons, near the elevators      |
+| 97  | Third, button near an elevator         |
+| 98  | Third, button near an elevator.        |
+| 99  | Third, button near elevators           |
+| 100 | Third, button near elevators.          |
+| 101 | Third, button near the elevator        |
+| 102 | Third, button near the elevator.       |
+| 103 | Third, button near the elevators       |
+| 104 | Third, button near the elevators.      |
+| 105 | Third, button, near an elevator        |
+| 106 | Third, button, near elevators          |
+| 107 | Third, button, near the elevator       |
+| 108 | Third, button, near the elevators      |
+| 109 | Third, buttons near an elevator        |
+| 110 | Third, buttons near an elevator.       |
+| 111 | Third, buttons near elevators          |
+| 112 | Third, buttons near elevators.         |
+| 113 | Third, buttons near the elevator       |
+| 114 | Third, buttons near the elevator.      |
+| 115 | Third, buttons near the elevators      |
+| 116 | Third, buttons near the elevators.     |
+| 117 | Third, buttons, near an elevator       |
+| 118 | Third, buttons, near elevators         |
+| 119 | Third, buttons, near the elevator      |
+| 120 | Third, buttons, near the elevators     |
++-----+----------------------------------------+
+

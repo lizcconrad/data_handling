@@ -1,0 +1,689 @@
+GRAPH NAME: idDrawer1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 480                |
+| Generated Gold Results          | 1                  |
+| Generated Gold Results Coverage | 1.0                |
++---------------------------------+--------------------+
+| Node Count                      | 6                  |
+| Nodes Covered                   | 6                  |
+| Nodes Included                  | 5                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 1.0                |
+| Node Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+| Edge Count                      | 5                  |
+| Edges Covered                   | 4                  |
+| Edges Included                  | 4                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8                |
+| Edge Inclusion                  | 0.8                |
++---------------------------------+--------------------+
+
++-----------------------------------------------------------------+
+|                           GOLD OUTPUTS                          |
++----------------------------------------------------+------------+
+| Gold Output                                        | Generated? |
++----------------------------------------------------+------------+
+| the first closed upper drawer south of the machine | True       |
++----------------------------------------------------+------------+
+
++--------------------------------------------------------------------------------------------+
+|                                        NODE METRICS                                        |
++------------+--------------+---------------+------------------+-----------------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment           |
++------------+--------------+---------------+------------------+-----------------------------+
+| idDrawer1  | True         | True          | Covered          | Included                    |
+| closed     | True         | True          | Covered          | Included                    |
+| 1          | True         | True          | Covered          | Included                    |
+| upper      | True         | True          | Covered          | Included                    |
+| idMachine1 | True         | True          | Covered          | Included                    |
+| idThing    | True         | False         | Covered          | Successor of failed element |
++------------+--------------+---------------+------------------+-----------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                     EDGE METRICS                                                                                    |
++--------------------------------------+------------+------------+--------------+---------------+-------------------------------------------------+-----------------------------------+
+| Edge                                 | Parent     | Child      | Edge Covered | Edge Included | Coverage Comment                                | Inclusion Comment                 |
++--------------------------------------+------------+------------+--------------+---------------+-------------------------------------------------+-----------------------------------+
+| idDrawer1_prop_idOpenState           | idDrawer1  | closed     | True         | True          | Covered                                         | Included                          |
+| idDrawer1_prop_idOrdinality          | idDrawer1  | 1          | True         | True          | Covered                                         | Included                          |
+| idDrawer1_prop_idVerticalArrangement | idDrawer1  | upper      | True         | True          | Covered                                         | Included                          |
+| isSouthOf                            | idDrawer1  | idMachine1 | True         | True          | Covered                                         | Included                          |
+| idMachine1_prop_idButtonsPushed      | idMachine1 | idThing    | False        | False         | 'idButtonsPushed' not in lexicon's edge entries | No SEMENT generated for this edge |
++--------------------------------------+------------+------------+--------------+---------------+-------------------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h5192                                                                     |
+|               |   INDEX: x5190                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5217 ARG0: e5214 ARG1: u5215 ARG2: x5216 ]           |
+|               |           [ def_implicit_q LBL: h5228 ARG0: x5225 RSTR: h5226 BODY: h5227 ]      |
+|               |           [ _south_a_1 LBL: h5213 ARG0: i5210 ARG1: x5211 ARG2: u5212 ]          |
+|               |           [ def_udef_a_q LBL: h5223 ARG0: x5220 RSTR: h5221 BODY: h5222 ]        |
+|               |           [ _machine_n_1 LBL: h5206 ARG0: x5205 ]                                |
+|               |           [ place_n LBL: h5219 ARG0: x5218 ]                                     |
+|               |           [ _upper_a_1 LBL: h5204 ARG0: e5202 ARG1: u5203 ]                      |
+|               |           [ ord LBL: h5201 ARG0: i5199 ARG1: u5200 CARG: "1" ]                   |
+|               |           [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ]                     |
+|               |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|               |   HCONS: < h5221 qeq h5206 h5226 qeq h5219 >                                     |
+|               |   EQS: < x5220 eq x5205 h5213 eq h5224 u5212 eq x5220 h5213 eq h5219 x5211 eq    |
+|               | x5218 x5225 eq x5218 h5217 eq h5229 x5216 eq x5225 h5195 eq h5192 u5194 eq x5190 |
+|               | h5201 eq h5192 u5200 eq x5190 h5204 eq h5192 u5203 eq x5190 h5217 eq h5192 u5215 |
+|               | eq x5190 >                                                                       |
+|               |   SLOTS: < ARG1: i5191 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h5192                                                                     |
+|               |   INDEX: x5190                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5192 ARG0: e5214 ARG1: x5190 ARG2: x5211 ]           |
+|               |           [ def_implicit_q LBL: h5228 ARG0: x5211 RSTR: h5226 BODY: h5227 ]      |
+|               |           [ _south_a_1 LBL: h5213 ARG0: i5210 ARG1: x5211 ARG2: x5205 ]          |
+|               |           [ def_udef_a_q LBL: h5223 ARG0: x5205 RSTR: h5221 BODY: h5222 ]        |
+|               |           [ _machine_n_1 LBL: h5206 ARG0: x5205 ]                                |
+|               |           [ place_n LBL: h5213 ARG0: x5211 ]                                     |
+|               |           [ _upper_a_1 LBL: h5192 ARG0: e5202 ARG1: x5190 ]                      |
+|               |           [ ord LBL: h5192 ARG0: i5199 ARG1: x5190 CARG: "1" ]                   |
+|               |           [ _closed_a_1 LBL: h5192 ARG0: e5193 ARG1: x5190 ]                     |
+|               |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|               |   HCONS: < h5221 qeq h5206 h5226 qeq h5213 >                                     |
+|               |   SLOTS: < ARG1: i5191 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h5238                                                                     |
+|               |   INDEX: e5235                                                                   |
+|               |   RELS: < [ unknown LBL: h5234 ARG: x5190 ARG0: e5235 ]                          |
+|               |           [ def_udef_a_q LBL: h5233 ARG0: x5190 RSTR: h5231 BODY: h5232 ]        |
+|               |           [ loc_nonsp LBL: h5192 ARG0: e5214 ARG1: x5190 ARG2: x5211 ]           |
+|               |           [ def_implicit_q LBL: h5228 ARG0: x5211 RSTR: h5226 BODY: h5227 ]      |
+|               |           [ _south_a_1 LBL: h5213 ARG0: i5210 ARG1: x5211 ARG2: x5205 ]          |
+|               |           [ def_udef_a_q LBL: h5223 ARG0: x5205 RSTR: h5221 BODY: h5222 ]        |
+|               |           [ _machine_n_1 LBL: h5206 ARG0: x5205 ]                                |
+|               |           [ place_n LBL: h5213 ARG0: x5211 ]                                     |
+|               |           [ _upper_a_1 LBL: h5192 ARG0: e5202 ARG1: x5190 ]                      |
+|               |           [ ord LBL: h5192 ARG0: i5199 ARG1: x5190 CARG: "1" ]                   |
+|               |           [ _closed_a_1 LBL: h5192 ARG0: e5193 ARG1: x5190 ]                     |
+|               |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|               |   HCONS: < h5221 qeq h5206 h5226 qeq h5213 h5231 qeq h5192 h5238 qeq h5234 > ]   |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE SEMENTS                                   |
++------------+----------------------------------------------------------------------+
+| Node       | Generated SEMENT                                                     |
++------------+----------------------------------------------------------------------+
+| idDrawer1  | [ TOP: h5192                                                         |
+|            |   INDEX: x5190                                                       |
+|            |   RELS: < [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >      |
+|            |   SLOTS: < ARG1: i5191 > ]                                           |
++------------+----------------------------------------------------------------------+
+| closed     | [ TOP: h5195                                                         |
+|            |   INDEX: e5193                                                       |
+|            |   RELS: < [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ] >       |
+|            |   SLOTS: < ARG1: u5194 > ]                                           |
++------------+----------------------------------------------------------------------+
+| 1          | [ TOP: h5198                                                         |
+|            |   INDEX: i5196                                                       |
+|            |   RELS: < [ card LBL: h5198 ARG0: i5196 ARG1: u5197 CARG: "1" ] >    |
+|            |   SLOTS: < ARG1: u5197 > ]                                           |
++------------+----------------------------------------------------------------------+
+| upper      | [ TOP: h5204                                                         |
+|            |   INDEX: e5202                                                       |
+|            |   RELS: < [ _upper_a_1 LBL: h5204 ARG0: e5202 ARG1: u5203 ] >        |
+|            |   SLOTS: < ARG1: u5203 > ]                                           |
++------------+----------------------------------------------------------------------+
+| idMachine1 | [ TOP: h5206                                                         |
+|            |   INDEX: x5205                                                       |
+|            |   RELS: < [ _machine_n_1 LBL: h5206 ARG0: x5205 ] > ]                |
++------------+----------------------------------------------------------------------+
+| idThing    | [ TOP: h5209                                                         |
+|            |   INDEX: x5207                                                       |
+|            |   RELS: < [ _thing_n_of-about LBL: h5209 ARG0: x5207 ARG1: i5208 ] > |
+|            |   SLOTS: < ARG1: i5208 > ]                                           |
++------------+----------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                    EDGE SEMENTS                                                                   |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| Edge                                 | Parent     | Child      | Generated SEMENT                                                                 |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idDrawer1_prop_idOpenState           | idDrawer1  | closed     | [ TOP: h5192                                                                     |
+|                                      |            |            |   INDEX: x5190                                                                   |
+|                                      |            |            |   RELS: < [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ]                     |
+|                                      |            |            |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|                                      |            |            |   EQS: < h5195 eq h5192 u5194 eq x5190 >                                         |
+|                                      |            |            |   SLOTS: < ARG1: i5191 > ]                                                       |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idDrawer1_prop_idOrdinality          | idDrawer1  | 1          | [ TOP: h5192                                                                     |
+|                                      |            |            |   INDEX: x5190                                                                   |
+|                                      |            |            |   RELS: < [ ord LBL: h5201 ARG0: i5199 ARG1: u5200 CARG: "1" ]                   |
+|                                      |            |            |           [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ]                     |
+|                                      |            |            |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|                                      |            |            |   EQS: < h5195 eq h5192 u5194 eq x5190 h5201 eq h5192 u5200 eq x5190 >           |
+|                                      |            |            |   SLOTS: < ARG1: i5191 > ]                                                       |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idDrawer1_prop_idVerticalArrangement | idDrawer1  | upper      | [ TOP: h5192                                                                     |
+|                                      |            |            |   INDEX: x5190                                                                   |
+|                                      |            |            |   RELS: < [ _upper_a_1 LBL: h5204 ARG0: e5202 ARG1: u5203 ]                      |
+|                                      |            |            |           [ ord LBL: h5201 ARG0: i5199 ARG1: u5200 CARG: "1" ]                   |
+|                                      |            |            |           [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ]                     |
+|                                      |            |            |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|                                      |            |            |   EQS: < h5195 eq h5192 u5194 eq x5190 h5201 eq h5192 u5200 eq x5190 h5204 eq    |
+|                                      |            |            | h5192 u5203 eq x5190 >                                                           |
+|                                      |            |            |   SLOTS: < ARG1: i5191 > ]                                                       |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| isSouthOf                            | idDrawer1  | idMachine1 | [ TOP: h5192                                                                     |
+|                                      |            |            |   INDEX: x5190                                                                   |
+|                                      |            |            |   RELS: < [ loc_nonsp LBL: h5217 ARG0: e5214 ARG1: u5215 ARG2: x5216 ]           |
+|                                      |            |            |           [ def_implicit_q LBL: h5228 ARG0: x5225 RSTR: h5226 BODY: h5227 ]      |
+|                                      |            |            |           [ _south_a_1 LBL: h5213 ARG0: i5210 ARG1: x5211 ARG2: u5212 ]          |
+|                                      |            |            |           [ def_udef_a_q LBL: h5223 ARG0: x5220 RSTR: h5221 BODY: h5222 ]        |
+|                                      |            |            |           [ _machine_n_1 LBL: h5206 ARG0: x5205 ]                                |
+|                                      |            |            |           [ place_n LBL: h5219 ARG0: x5218 ]                                     |
+|                                      |            |            |           [ _upper_a_1 LBL: h5204 ARG0: e5202 ARG1: u5203 ]                      |
+|                                      |            |            |           [ ord LBL: h5201 ARG0: i5199 ARG1: u5200 CARG: "1" ]                   |
+|                                      |            |            |           [ _closed_a_1 LBL: h5195 ARG0: e5193 ARG1: u5194 ]                     |
+|                                      |            |            |           [ _drawer_n_of LBL: h5192 ARG0: x5190 ARG1: i5191 ] >                  |
+|                                      |            |            |   HCONS: < h5221 qeq h5206 h5226 qeq h5219 >                                     |
+|                                      |            |            |   EQS: < x5220 eq x5205 h5213 eq h5224 u5212 eq x5220 h5213 eq h5219 x5211 eq    |
+|                                      |            |            | x5218 x5225 eq x5218 h5217 eq h5229 x5216 eq x5225 h5195 eq h5192 u5194 eq x5190 |
+|                                      |            |            | h5201 eq h5192 u5200 eq x5190 h5204 eq h5192 u5203 eq x5190 h5217 eq h5192 u5215 |
+|                                      |            |            | eq x5190 >                                                                       |
+|                                      |            |            |   SLOTS: < ARG1: i5191 > ]                                                       |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idButtonsPushed      | idMachine1 | idThing    | None                                                                             |
++--------------------------------------+------------+------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------+
+|                    GENERATED ENGLISH TEXT                    |
++-----+--------------------------------------------------------+
+| #   | Generated Text                                         |
++-----+--------------------------------------------------------+
+| 1   | A closed first upper drawer south of a machine         |
+| 2   | A closed first upper drawer south of a machine.        |
+| 3   | A closed first upper drawer south of machines          |
+| 4   | A closed first upper drawer south of machines.         |
+| 5   | A closed first upper drawer south of the machine       |
+| 6   | A closed first upper drawer south of the machine.      |
+| 7   | A closed first upper drawer south of the machines      |
+| 8   | A closed first upper drawer south of the machines.     |
+| 9   | A closed first upper drawer, south of a machine        |
+| 10  | A closed first upper drawer, south of machines         |
+| 11  | A closed first upper drawer, south of the machine      |
+| 12  | A closed first upper drawer, south of the machines     |
+| 13  | A closed upper first drawer south of a machine         |
+| 14  | A closed upper first drawer south of a machine.        |
+| 15  | A closed upper first drawer south of machines          |
+| 16  | A closed upper first drawer south of machines.         |
+| 17  | A closed upper first drawer south of the machine       |
+| 18  | A closed upper first drawer south of the machine.      |
+| 19  | A closed upper first drawer south of the machines      |
+| 20  | A closed upper first drawer south of the machines.     |
+| 21  | A closed upper first drawer, south of a machine        |
+| 22  | A closed upper first drawer, south of machines         |
+| 23  | A closed upper first drawer, south of the machine      |
+| 24  | A closed upper first drawer, south of the machines     |
+| 25  | A closed upper first, drawer south of a machine        |
+| 26  | A closed upper first, drawer south of a machine.       |
+| 27  | A closed upper first, drawer south of machines         |
+| 28  | A closed upper first, drawer south of machines.        |
+| 29  | A closed upper first, drawer south of the machine      |
+| 30  | A closed upper first, drawer south of the machine.     |
+| 31  | A closed upper first, drawer south of the machines     |
+| 32  | A closed upper first, drawer south of the machines.    |
+| 33  | A closed upper first, drawer, south of a machine       |
+| 34  | A closed upper first, drawer, south of machines        |
+| 35  | A closed upper first, drawer, south of the machine     |
+| 36  | A closed upper first, drawer, south of the machines    |
+| 37  | A first closed upper drawer south of a machine         |
+| 38  | A first closed upper drawer south of a machine.        |
+| 39  | A first closed upper drawer south of machines          |
+| 40  | A first closed upper drawer south of machines.         |
+| 41  | A first closed upper drawer south of the machine       |
+| 42  | A first closed upper drawer south of the machine.      |
+| 43  | A first closed upper drawer south of the machines      |
+| 44  | A first closed upper drawer south of the machines.     |
+| 45  | A first closed upper drawer, south of a machine        |
+| 46  | A first closed upper drawer, south of machines         |
+| 47  | A first closed upper drawer, south of the machine      |
+| 48  | A first closed upper drawer, south of the machines     |
+| 49  | A first upper closed drawer south of a machine         |
+| 50  | A first upper closed drawer south of a machine.        |
+| 51  | A first upper closed drawer south of machines          |
+| 52  | A first upper closed drawer south of machines.         |
+| 53  | A first upper closed drawer south of the machine       |
+| 54  | A first upper closed drawer south of the machine.      |
+| 55  | A first upper closed drawer south of the machines      |
+| 56  | A first upper closed drawer south of the machines.     |
+| 57  | A first upper closed drawer, south of a machine        |
+| 58  | A first upper closed drawer, south of machines         |
+| 59  | A first upper closed drawer, south of the machine      |
+| 60  | A first upper closed drawer, south of the machines     |
+| 61  | An upper closed first drawer south of a machine        |
+| 62  | An upper closed first drawer south of a machine.       |
+| 63  | An upper closed first drawer south of machines         |
+| 64  | An upper closed first drawer south of machines.        |
+| 65  | An upper closed first drawer south of the machine      |
+| 66  | An upper closed first drawer south of the machine.     |
+| 67  | An upper closed first drawer south of the machines     |
+| 68  | An upper closed first drawer south of the machines.    |
+| 69  | An upper closed first drawer, south of a machine       |
+| 70  | An upper closed first drawer, south of machines        |
+| 71  | An upper closed first drawer, south of the machine     |
+| 72  | An upper closed first drawer, south of the machines    |
+| 73  | An upper closed first, drawer south of a machine       |
+| 74  | An upper closed first, drawer south of a machine.      |
+| 75  | An upper closed first, drawer south of machines        |
+| 76  | An upper closed first, drawer south of machines.       |
+| 77  | An upper closed first, drawer south of the machine     |
+| 78  | An upper closed first, drawer south of the machine.    |
+| 79  | An upper closed first, drawer south of the machines    |
+| 80  | An upper closed first, drawer south of the machines.   |
+| 81  | An upper closed first, drawer, south of a machine      |
+| 82  | An upper closed first, drawer, south of machines       |
+| 83  | An upper closed first, drawer, south of the machine    |
+| 84  | An upper closed first, drawer, south of the machines   |
+| 85  | An upper first closed drawer south of a machine        |
+| 86  | An upper first closed drawer south of a machine.       |
+| 87  | An upper first closed drawer south of machines         |
+| 88  | An upper first closed drawer south of machines.        |
+| 89  | An upper first closed drawer south of the machine      |
+| 90  | An upper first closed drawer south of the machine.     |
+| 91  | An upper first closed drawer south of the machines     |
+| 92  | An upper first closed drawer south of the machines.    |
+| 93  | An upper first closed drawer, south of a machine       |
+| 94  | An upper first closed drawer, south of machines        |
+| 95  | An upper first closed drawer, south of the machine     |
+| 96  | An upper first closed drawer, south of the machines    |
+| 97  | Closed first upper drawer south of a machine           |
+| 98  | Closed first upper drawer south of a machine.          |
+| 99  | Closed first upper drawer south of machines            |
+| 100 | Closed first upper drawer south of machines.           |
+| 101 | Closed first upper drawer south of the machine         |
+| 102 | Closed first upper drawer south of the machine.        |
+| 103 | Closed first upper drawer south of the machines        |
+| 104 | Closed first upper drawer south of the machines.       |
+| 105 | Closed first upper drawer, south of a machine          |
+| 106 | Closed first upper drawer, south of machines           |
+| 107 | Closed first upper drawer, south of the machine        |
+| 108 | Closed first upper drawer, south of the machines       |
+| 109 | Closed first upper drawers south of a machine          |
+| 110 | Closed first upper drawers south of a machine.         |
+| 111 | Closed first upper drawers south of machines           |
+| 112 | Closed first upper drawers south of machines.          |
+| 113 | Closed first upper drawers south of the machine        |
+| 114 | Closed first upper drawers south of the machine.       |
+| 115 | Closed first upper drawers south of the machines       |
+| 116 | Closed first upper drawers south of the machines.      |
+| 117 | Closed first upper drawers, south of a machine         |
+| 118 | Closed first upper drawers, south of machines          |
+| 119 | Closed first upper drawers, south of the machine       |
+| 120 | Closed first upper drawers, south of the machines      |
+| 121 | Closed upper first drawer south of a machine           |
+| 122 | Closed upper first drawer south of a machine.          |
+| 123 | Closed upper first drawer south of machines            |
+| 124 | Closed upper first drawer south of machines.           |
+| 125 | Closed upper first drawer south of the machine         |
+| 126 | Closed upper first drawer south of the machine.        |
+| 127 | Closed upper first drawer south of the machines        |
+| 128 | Closed upper first drawer south of the machines.       |
+| 129 | Closed upper first drawer, south of a machine          |
+| 130 | Closed upper first drawer, south of machines           |
+| 131 | Closed upper first drawer, south of the machine        |
+| 132 | Closed upper first drawer, south of the machines       |
+| 133 | Closed upper first drawers south of a machine          |
+| 134 | Closed upper first drawers south of a machine.         |
+| 135 | Closed upper first drawers south of machines           |
+| 136 | Closed upper first drawers south of machines.          |
+| 137 | Closed upper first drawers south of the machine        |
+| 138 | Closed upper first drawers south of the machine.       |
+| 139 | Closed upper first drawers south of the machines       |
+| 140 | Closed upper first drawers south of the machines.      |
+| 141 | Closed upper first drawers, south of a machine         |
+| 142 | Closed upper first drawers, south of machines          |
+| 143 | Closed upper first drawers, south of the machine       |
+| 144 | Closed upper first drawers, south of the machines      |
+| 145 | Closed upper first, drawer south of a machine          |
+| 146 | Closed upper first, drawer south of a machine.         |
+| 147 | Closed upper first, drawer south of machines           |
+| 148 | Closed upper first, drawer south of machines.          |
+| 149 | Closed upper first, drawer south of the machine        |
+| 150 | Closed upper first, drawer south of the machine.       |
+| 151 | Closed upper first, drawer south of the machines       |
+| 152 | Closed upper first, drawer south of the machines.      |
+| 153 | Closed upper first, drawer, south of a machine         |
+| 154 | Closed upper first, drawer, south of machines          |
+| 155 | Closed upper first, drawer, south of the machine       |
+| 156 | Closed upper first, drawer, south of the machines      |
+| 157 | Closed upper first, drawers south of a machine         |
+| 158 | Closed upper first, drawers south of a machine.        |
+| 159 | Closed upper first, drawers south of machines          |
+| 160 | Closed upper first, drawers south of machines.         |
+| 161 | Closed upper first, drawers south of the machine       |
+| 162 | Closed upper first, drawers south of the machine.      |
+| 163 | Closed upper first, drawers south of the machines      |
+| 164 | Closed upper first, drawers south of the machines.     |
+| 165 | Closed upper first, drawers, south of a machine        |
+| 166 | Closed upper first, drawers, south of machines         |
+| 167 | Closed upper first, drawers, south of the machine      |
+| 168 | Closed upper first, drawers, south of the machines     |
+| 169 | First closed upper drawer south of a machine           |
+| 170 | First closed upper drawer south of a machine.          |
+| 171 | First closed upper drawer south of machines            |
+| 172 | First closed upper drawer south of machines.           |
+| 173 | First closed upper drawer south of the machine         |
+| 174 | First closed upper drawer south of the machine.        |
+| 175 | First closed upper drawer south of the machines        |
+| 176 | First closed upper drawer south of the machines.       |
+| 177 | First closed upper drawer, south of a machine          |
+| 178 | First closed upper drawer, south of machines           |
+| 179 | First closed upper drawer, south of the machine        |
+| 180 | First closed upper drawer, south of the machines       |
+| 181 | First closed upper drawers south of a machine          |
+| 182 | First closed upper drawers south of a machine.         |
+| 183 | First closed upper drawers south of machines           |
+| 184 | First closed upper drawers south of machines.          |
+| 185 | First closed upper drawers south of the machine        |
+| 186 | First closed upper drawers south of the machine.       |
+| 187 | First closed upper drawers south of the machines       |
+| 188 | First closed upper drawers south of the machines.      |
+| 189 | First closed upper drawers, south of a machine         |
+| 190 | First closed upper drawers, south of machines          |
+| 191 | First closed upper drawers, south of the machine       |
+| 192 | First closed upper drawers, south of the machines      |
+| 193 | First upper closed drawer south of a machine           |
+| 194 | First upper closed drawer south of a machine.          |
+| 195 | First upper closed drawer south of machines            |
+| 196 | First upper closed drawer south of machines.           |
+| 197 | First upper closed drawer south of the machine         |
+| 198 | First upper closed drawer south of the machine.        |
+| 199 | First upper closed drawer south of the machines        |
+| 200 | First upper closed drawer south of the machines.       |
+| 201 | First upper closed drawer, south of a machine          |
+| 202 | First upper closed drawer, south of machines           |
+| 203 | First upper closed drawer, south of the machine        |
+| 204 | First upper closed drawer, south of the machines       |
+| 205 | First upper closed drawers south of a machine          |
+| 206 | First upper closed drawers south of a machine.         |
+| 207 | First upper closed drawers south of machines           |
+| 208 | First upper closed drawers south of machines.          |
+| 209 | First upper closed drawers south of the machine        |
+| 210 | First upper closed drawers south of the machine.       |
+| 211 | First upper closed drawers south of the machines       |
+| 212 | First upper closed drawers south of the machines.      |
+| 213 | First upper closed drawers, south of a machine         |
+| 214 | First upper closed drawers, south of machines          |
+| 215 | First upper closed drawers, south of the machine       |
+| 216 | First upper closed drawers, south of the machines      |
+| 217 | The closed first upper drawer south of a machine       |
+| 218 | The closed first upper drawer south of a machine.      |
+| 219 | The closed first upper drawer south of machines        |
+| 220 | The closed first upper drawer south of machines.       |
+| 221 | The closed first upper drawer south of the machine     |
+| 222 | The closed first upper drawer south of the machine.    |
+| 223 | The closed first upper drawer south of the machines    |
+| 224 | The closed first upper drawer south of the machines.   |
+| 225 | The closed first upper drawer, south of a machine      |
+| 226 | The closed first upper drawer, south of machines       |
+| 227 | The closed first upper drawer, south of the machine    |
+| 228 | The closed first upper drawer, south of the machines   |
+| 229 | The closed first upper drawers south of a machine      |
+| 230 | The closed first upper drawers south of a machine.     |
+| 231 | The closed first upper drawers south of machines       |
+| 232 | The closed first upper drawers south of machines.      |
+| 233 | The closed first upper drawers south of the machine    |
+| 234 | The closed first upper drawers south of the machine.   |
+| 235 | The closed first upper drawers south of the machines   |
+| 236 | The closed first upper drawers south of the machines.  |
+| 237 | The closed first upper drawers, south of a machine     |
+| 238 | The closed first upper drawers, south of machines      |
+| 239 | The closed first upper drawers, south of the machine   |
+| 240 | The closed first upper drawers, south of the machines  |
+| 241 | The closed upper first drawer south of a machine       |
+| 242 | The closed upper first drawer south of a machine.      |
+| 243 | The closed upper first drawer south of machines        |
+| 244 | The closed upper first drawer south of machines.       |
+| 245 | The closed upper first drawer south of the machine     |
+| 246 | The closed upper first drawer south of the machine.    |
+| 247 | The closed upper first drawer south of the machines    |
+| 248 | The closed upper first drawer south of the machines.   |
+| 249 | The closed upper first drawer, south of a machine      |
+| 250 | The closed upper first drawer, south of machines       |
+| 251 | The closed upper first drawer, south of the machine    |
+| 252 | The closed upper first drawer, south of the machines   |
+| 253 | The closed upper first drawers south of a machine      |
+| 254 | The closed upper first drawers south of a machine.     |
+| 255 | The closed upper first drawers south of machines       |
+| 256 | The closed upper first drawers south of machines.      |
+| 257 | The closed upper first drawers south of the machine    |
+| 258 | The closed upper first drawers south of the machine.   |
+| 259 | The closed upper first drawers south of the machines   |
+| 260 | The closed upper first drawers south of the machines.  |
+| 261 | The closed upper first drawers, south of a machine     |
+| 262 | The closed upper first drawers, south of machines      |
+| 263 | The closed upper first drawers, south of the machine   |
+| 264 | The closed upper first drawers, south of the machines  |
+| 265 | The closed upper first, drawer south of a machine      |
+| 266 | The closed upper first, drawer south of a machine.     |
+| 267 | The closed upper first, drawer south of machines       |
+| 268 | The closed upper first, drawer south of machines.      |
+| 269 | The closed upper first, drawer south of the machine    |
+| 270 | The closed upper first, drawer south of the machine.   |
+| 271 | The closed upper first, drawer south of the machines   |
+| 272 | The closed upper first, drawer south of the machines.  |
+| 273 | The closed upper first, drawer, south of a machine     |
+| 274 | The closed upper first, drawer, south of machines      |
+| 275 | The closed upper first, drawer, south of the machine   |
+| 276 | The closed upper first, drawer, south of the machines  |
+| 277 | The closed upper first, drawers south of a machine     |
+| 278 | The closed upper first, drawers south of a machine.    |
+| 279 | The closed upper first, drawers south of machines      |
+| 280 | The closed upper first, drawers south of machines.     |
+| 281 | The closed upper first, drawers south of the machine   |
+| 282 | The closed upper first, drawers south of the machine.  |
+| 283 | The closed upper first, drawers south of the machines  |
+| 284 | The closed upper first, drawers south of the machines. |
+| 285 | The closed upper first, drawers, south of a machine    |
+| 286 | The closed upper first, drawers, south of machines     |
+| 287 | The closed upper first, drawers, south of the machine  |
+| 288 | The closed upper first, drawers, south of the machines |
+| 289 | The first closed upper drawer south of a machine       |
+| 290 | The first closed upper drawer south of a machine.      |
+| 291 | The first closed upper drawer south of machines        |
+| 292 | The first closed upper drawer south of machines.       |
+| 293 | The first closed upper drawer south of the machine     |
+| 294 | The first closed upper drawer south of the machine.    |
+| 295 | The first closed upper drawer south of the machines    |
+| 296 | The first closed upper drawer south of the machines.   |
+| 297 | The first closed upper drawer, south of a machine      |
+| 298 | The first closed upper drawer, south of machines       |
+| 299 | The first closed upper drawer, south of the machine    |
+| 300 | The first closed upper drawer, south of the machines   |
+| 301 | The first closed upper drawers south of a machine      |
+| 302 | The first closed upper drawers south of a machine.     |
+| 303 | The first closed upper drawers south of machines       |
+| 304 | The first closed upper drawers south of machines.      |
+| 305 | The first closed upper drawers south of the machine    |
+| 306 | The first closed upper drawers south of the machine.   |
+| 307 | The first closed upper drawers south of the machines   |
+| 308 | The first closed upper drawers south of the machines.  |
+| 309 | The first closed upper drawers, south of a machine     |
+| 310 | The first closed upper drawers, south of machines      |
+| 311 | The first closed upper drawers, south of the machine   |
+| 312 | The first closed upper drawers, south of the machines  |
+| 313 | The first upper closed drawer south of a machine       |
+| 314 | The first upper closed drawer south of a machine.      |
+| 315 | The first upper closed drawer south of machines        |
+| 316 | The first upper closed drawer south of machines.       |
+| 317 | The first upper closed drawer south of the machine     |
+| 318 | The first upper closed drawer south of the machine.    |
+| 319 | The first upper closed drawer south of the machines    |
+| 320 | The first upper closed drawer south of the machines.   |
+| 321 | The first upper closed drawer, south of a machine      |
+| 322 | The first upper closed drawer, south of machines       |
+| 323 | The first upper closed drawer, south of the machine    |
+| 324 | The first upper closed drawer, south of the machines   |
+| 325 | The first upper closed drawers south of a machine      |
+| 326 | The first upper closed drawers south of a machine.     |
+| 327 | The first upper closed drawers south of machines       |
+| 328 | The first upper closed drawers south of machines.      |
+| 329 | The first upper closed drawers south of the machine    |
+| 330 | The first upper closed drawers south of the machine.   |
+| 331 | The first upper closed drawers south of the machines   |
+| 332 | The first upper closed drawers south of the machines.  |
+| 333 | The first upper closed drawers, south of a machine     |
+| 334 | The first upper closed drawers, south of machines      |
+| 335 | The first upper closed drawers, south of the machine   |
+| 336 | The first upper closed drawers, south of the machines  |
+| 337 | The upper closed first drawer south of a machine       |
+| 338 | The upper closed first drawer south of a machine.      |
+| 339 | The upper closed first drawer south of machines        |
+| 340 | The upper closed first drawer south of machines.       |
+| 341 | The upper closed first drawer south of the machine     |
+| 342 | The upper closed first drawer south of the machine.    |
+| 343 | The upper closed first drawer south of the machines    |
+| 344 | The upper closed first drawer south of the machines.   |
+| 345 | The upper closed first drawer, south of a machine      |
+| 346 | The upper closed first drawer, south of machines       |
+| 347 | The upper closed first drawer, south of the machine    |
+| 348 | The upper closed first drawer, south of the machines   |
+| 349 | The upper closed first drawers south of a machine      |
+| 350 | The upper closed first drawers south of a machine.     |
+| 351 | The upper closed first drawers south of machines       |
+| 352 | The upper closed first drawers south of machines.      |
+| 353 | The upper closed first drawers south of the machine    |
+| 354 | The upper closed first drawers south of the machine.   |
+| 355 | The upper closed first drawers south of the machines   |
+| 356 | The upper closed first drawers south of the machines.  |
+| 357 | The upper closed first drawers, south of a machine     |
+| 358 | The upper closed first drawers, south of machines      |
+| 359 | The upper closed first drawers, south of the machine   |
+| 360 | The upper closed first drawers, south of the machines  |
+| 361 | The upper closed first, drawer south of a machine      |
+| 362 | The upper closed first, drawer south of a machine.     |
+| 363 | The upper closed first, drawer south of machines       |
+| 364 | The upper closed first, drawer south of machines.      |
+| 365 | The upper closed first, drawer south of the machine    |
+| 366 | The upper closed first, drawer south of the machine.   |
+| 367 | The upper closed first, drawer south of the machines   |
+| 368 | The upper closed first, drawer south of the machines.  |
+| 369 | The upper closed first, drawer, south of a machine     |
+| 370 | The upper closed first, drawer, south of machines      |
+| 371 | The upper closed first, drawer, south of the machine   |
+| 372 | The upper closed first, drawer, south of the machines  |
+| 373 | The upper closed first, drawers south of a machine     |
+| 374 | The upper closed first, drawers south of a machine.    |
+| 375 | The upper closed first, drawers south of machines      |
+| 376 | The upper closed first, drawers south of machines.     |
+| 377 | The upper closed first, drawers south of the machine   |
+| 378 | The upper closed first, drawers south of the machine.  |
+| 379 | The upper closed first, drawers south of the machines  |
+| 380 | The upper closed first, drawers south of the machines. |
+| 381 | The upper closed first, drawers, south of a machine    |
+| 382 | The upper closed first, drawers, south of machines     |
+| 383 | The upper closed first, drawers, south of the machine  |
+| 384 | The upper closed first, drawers, south of the machines |
+| 385 | The upper first closed drawer south of a machine       |
+| 386 | The upper first closed drawer south of a machine.      |
+| 387 | The upper first closed drawer south of machines        |
+| 388 | The upper first closed drawer south of machines.       |
+| 389 | The upper first closed drawer south of the machine     |
+| 390 | The upper first closed drawer south of the machine.    |
+| 391 | The upper first closed drawer south of the machines    |
+| 392 | The upper first closed drawer south of the machines.   |
+| 393 | The upper first closed drawer, south of a machine      |
+| 394 | The upper first closed drawer, south of machines       |
+| 395 | The upper first closed drawer, south of the machine    |
+| 396 | The upper first closed drawer, south of the machines   |
+| 397 | The upper first closed drawers south of a machine      |
+| 398 | The upper first closed drawers south of a machine.     |
+| 399 | The upper first closed drawers south of machines       |
+| 400 | The upper first closed drawers south of machines.      |
+| 401 | The upper first closed drawers south of the machine    |
+| 402 | The upper first closed drawers south of the machine.   |
+| 403 | The upper first closed drawers south of the machines   |
+| 404 | The upper first closed drawers south of the machines.  |
+| 405 | The upper first closed drawers, south of a machine     |
+| 406 | The upper first closed drawers, south of machines      |
+| 407 | The upper first closed drawers, south of the machine   |
+| 408 | The upper first closed drawers, south of the machines  |
+| 409 | Upper closed first drawer south of a machine           |
+| 410 | Upper closed first drawer south of a machine.          |
+| 411 | Upper closed first drawer south of machines            |
+| 412 | Upper closed first drawer south of machines.           |
+| 413 | Upper closed first drawer south of the machine         |
+| 414 | Upper closed first drawer south of the machine.        |
+| 415 | Upper closed first drawer south of the machines        |
+| 416 | Upper closed first drawer south of the machines.       |
+| 417 | Upper closed first drawer, south of a machine          |
+| 418 | Upper closed first drawer, south of machines           |
+| 419 | Upper closed first drawer, south of the machine        |
+| 420 | Upper closed first drawer, south of the machines       |
+| 421 | Upper closed first drawers south of a machine          |
+| 422 | Upper closed first drawers south of a machine.         |
+| 423 | Upper closed first drawers south of machines           |
+| 424 | Upper closed first drawers south of machines.          |
+| 425 | Upper closed first drawers south of the machine        |
+| 426 | Upper closed first drawers south of the machine.       |
+| 427 | Upper closed first drawers south of the machines       |
+| 428 | Upper closed first drawers south of the machines.      |
+| 429 | Upper closed first drawers, south of a machine         |
+| 430 | Upper closed first drawers, south of machines          |
+| 431 | Upper closed first drawers, south of the machine       |
+| 432 | Upper closed first drawers, south of the machines      |
+| 433 | Upper closed first, drawer south of a machine          |
+| 434 | Upper closed first, drawer south of a machine.         |
+| 435 | Upper closed first, drawer south of machines           |
+| 436 | Upper closed first, drawer south of machines.          |
+| 437 | Upper closed first, drawer south of the machine        |
+| 438 | Upper closed first, drawer south of the machine.       |
+| 439 | Upper closed first, drawer south of the machines       |
+| 440 | Upper closed first, drawer south of the machines.      |
+| 441 | Upper closed first, drawer, south of a machine         |
+| 442 | Upper closed first, drawer, south of machines          |
+| 443 | Upper closed first, drawer, south of the machine       |
+| 444 | Upper closed first, drawer, south of the machines      |
+| 445 | Upper closed first, drawers south of a machine         |
+| 446 | Upper closed first, drawers south of a machine.        |
+| 447 | Upper closed first, drawers south of machines          |
+| 448 | Upper closed first, drawers south of machines.         |
+| 449 | Upper closed first, drawers south of the machine       |
+| 450 | Upper closed first, drawers south of the machine.      |
+| 451 | Upper closed first, drawers south of the machines      |
+| 452 | Upper closed first, drawers south of the machines.     |
+| 453 | Upper closed first, drawers, south of a machine        |
+| 454 | Upper closed first, drawers, south of machines         |
+| 455 | Upper closed first, drawers, south of the machine      |
+| 456 | Upper closed first, drawers, south of the machines     |
+| 457 | Upper first closed drawer south of a machine           |
+| 458 | Upper first closed drawer south of a machine.          |
+| 459 | Upper first closed drawer south of machines            |
+| 460 | Upper first closed drawer south of machines.           |
+| 461 | Upper first closed drawer south of the machine         |
+| 462 | Upper first closed drawer south of the machine.        |
+| 463 | Upper first closed drawer south of the machines        |
+| 464 | Upper first closed drawer south of the machines.       |
+| 465 | Upper first closed drawer, south of a machine          |
+| 466 | Upper first closed drawer, south of machines           |
+| 467 | Upper first closed drawer, south of the machine        |
+| 468 | Upper first closed drawer, south of the machines       |
+| 469 | Upper first closed drawers south of a machine          |
+| 470 | Upper first closed drawers south of a machine.         |
+| 471 | Upper first closed drawers south of machines           |
+| 472 | Upper first closed drawers south of machines.          |
+| 473 | Upper first closed drawers south of the machine        |
+| 474 | Upper first closed drawers south of the machine.       |
+| 475 | Upper first closed drawers south of the machines       |
+| 476 | Upper first closed drawers south of the machines.      |
+| 477 | Upper first closed drawers, south of a machine         |
+| 478 | Upper first closed drawers, south of machines          |
+| 479 | Upper first closed drawers, south of the machine       |
+| 480 | Upper first closed drawers, south of the machines      |
++-----+--------------------------------------------------------+
+

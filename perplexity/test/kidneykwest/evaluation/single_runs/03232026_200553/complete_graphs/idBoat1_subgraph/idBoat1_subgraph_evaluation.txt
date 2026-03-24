@@ -1,0 +1,182 @@
+GRAPH NAME: idBoat1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 2     |
+| Nodes Covered                   | 2     |
+| Nodes Included                  | 2     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 1     |
+| Edges Covered                   | 1     |
+| Edges Included                  | 1     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------+
+|             GOLD OUTPUTS             |
++-------------------------+------------+
+| Gold Output             | Generated? |
++-------------------------+------------+
+| the boat near the cabin | True       |
++-------------------------+------------+
+
++--------------------------------------------------------------------------------+
+|                                  NODE METRICS                                  |
++----------+--------------+---------------+------------------+-------------------+
+| Node     | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++----------+--------------+---------------+------------------+-------------------+
+| idBoat1  | True         | True          | Covered          | Included          |
+| idCabin1 | True         | True          | Covered          | Included          |
++----------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------+
+|                                            EDGE METRICS                                           |
++--------+---------+----------+--------------+---------------+------------------+-------------------+
+| Edge   | Parent  | Child    | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------+---------+----------+--------------+---------------+------------------+-------------------+
+| isNear | idBoat1 | idCabin1 | True         | True          | Covered          | Included          |
++--------+---------+----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3418                                                                     |
+|               |   INDEX: x3417                                                                   |
+|               |   RELS: < [ _near_p LBL: h3424 ARG0: e3421 ARG1: u3422 ARG2: i3423 ]             |
+|               |           [ def_udef_a_q LBL: h3428 ARG0: x3425 RSTR: h3426 BODY: h3427 ]        |
+|               |           [ _cabin_n_1 LBL: h3420 ARG0: x3419 ]                                  |
+|               |           [ _boat_n_1 LBL: h3418 ARG0: x3417 ] >                                 |
+|               |   HCONS: < h3426 qeq h3420 >                                                     |
+|               |   EQS: < x3425 eq x3419 h3424 eq h3429 i3423 eq x3425 h3424 eq h3418 u3422 eq    |
+|               | x3417 > ]                                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3418                                                                     |
+|               |   INDEX: x3417                                                                   |
+|               |   RELS: < [ _near_p LBL: h3418 ARG0: e3421 ARG1: x3417 ARG2: x3419 ]             |
+|               |           [ def_udef_a_q LBL: h3428 ARG0: x3419 RSTR: h3426 BODY: h3427 ]        |
+|               |           [ _cabin_n_1 LBL: h3420 ARG0: x3419 ]                                  |
+|               |           [ _boat_n_1 LBL: h3418 ARG0: x3417 ] >                                 |
+|               |   HCONS: < h3426 qeq h3420 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3438                                                                     |
+|               |   INDEX: e3435                                                                   |
+|               |   RELS: < [ unknown LBL: h3434 ARG: x3417 ARG0: e3435 ]                          |
+|               |           [ def_udef_a_q LBL: h3433 ARG0: x3417 RSTR: h3431 BODY: h3432 ]        |
+|               |           [ _near_p LBL: h3418 ARG0: e3421 ARG1: x3417 ARG2: x3419 ]             |
+|               |           [ def_udef_a_q LBL: h3428 ARG0: x3419 RSTR: h3426 BODY: h3427 ]        |
+|               |           [ _cabin_n_1 LBL: h3420 ARG0: x3419 ]                                  |
+|               |           [ _boat_n_1 LBL: h3418 ARG0: x3417 ] >                                 |
+|               |   HCONS: < h3426 qeq h3420 h3431 qeq h3418 h3438 qeq h3434 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------+
+|                          NODE SEMENTS                          |
++----------+-----------------------------------------------------+
+| Node     | Generated SEMENT                                    |
++----------+-----------------------------------------------------+
+| idBoat1  | [ TOP: h3418                                        |
+|          |   INDEX: x3417                                      |
+|          |   RELS: < [ _boat_n_1 LBL: h3418 ARG0: x3417 ] > ]  |
++----------+-----------------------------------------------------+
+| idCabin1 | [ TOP: h3420                                        |
+|          |   INDEX: x3419                                      |
+|          |   RELS: < [ _cabin_n_1 LBL: h3420 ARG0: x3419 ] > ] |
++----------+-----------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------+
+|                                                  EDGE SEMENTS                                                  |
++--------+---------+----------+----------------------------------------------------------------------------------+
+| Edge   | Parent  | Child    | Generated SEMENT                                                                 |
++--------+---------+----------+----------------------------------------------------------------------------------+
+| isNear | idBoat1 | idCabin1 | [ TOP: h3418                                                                     |
+|        |         |          |   INDEX: x3417                                                                   |
+|        |         |          |   RELS: < [ _near_p LBL: h3424 ARG0: e3421 ARG1: u3422 ARG2: i3423 ]             |
+|        |         |          |           [ def_udef_a_q LBL: h3428 ARG0: x3425 RSTR: h3426 BODY: h3427 ]        |
+|        |         |          |           [ _cabin_n_1 LBL: h3420 ARG0: x3419 ]                                  |
+|        |         |          |           [ _boat_n_1 LBL: h3418 ARG0: x3417 ] >                                 |
+|        |         |          |   HCONS: < h3426 qeq h3420 >                                                     |
+|        |         |          |   EQS: < x3425 eq x3419 h3424 eq h3429 i3423 eq x3425 h3424 eq h3418 u3422 eq    |
+|        |         |          | x3417 > ]                                                                        |
++--------+---------+----------+----------------------------------------------------------------------------------+
+
++---------------------------------+
+|      GENERATED ENGLISH TEXT     |
++----+----------------------------+
+| #  | Generated Text             |
++----+----------------------------+
+| 1  | A boat near a cabin        |
+| 2  | A boat near a cabin.       |
+| 3  | A boat near cabins         |
+| 4  | A boat near cabins.        |
+| 5  | A boat near the cabin      |
+| 6  | A boat near the cabin.     |
+| 7  | A boat near the cabins     |
+| 8  | A boat near the cabins.    |
+| 9  | A boat, near a cabin       |
+| 10 | A boat, near cabins        |
+| 11 | A boat, near the cabin     |
+| 12 | A boat, near the cabins    |
+| 13 | Boat near a cabin          |
+| 14 | Boat near a cabin.         |
+| 15 | Boat near cabins           |
+| 16 | Boat near cabins.          |
+| 17 | Boat near the cabin        |
+| 18 | Boat near the cabin.       |
+| 19 | Boat near the cabins       |
+| 20 | Boat near the cabins.      |
+| 21 | Boat, near a cabin         |
+| 22 | Boat, near cabins          |
+| 23 | Boat, near the cabin       |
+| 24 | Boat, near the cabins      |
+| 25 | Boats near a cabin         |
+| 26 | Boats near a cabin.        |
+| 27 | Boats near cabins          |
+| 28 | Boats near cabins.         |
+| 29 | Boats near the cabin       |
+| 30 | Boats near the cabin.      |
+| 31 | Boats near the cabins      |
+| 32 | Boats near the cabins.     |
+| 33 | Boats, near a cabin        |
+| 34 | Boats, near cabins         |
+| 35 | Boats, near the cabin      |
+| 36 | Boats, near the cabins     |
+| 37 | The boat near a cabin      |
+| 38 | The boat near a cabin.     |
+| 39 | The boat near cabins       |
+| 40 | The boat near cabins.      |
+| 41 | The boat near the cabin    |
+| 42 | The boat near the cabin.   |
+| 43 | The boat near the cabins   |
+| 44 | The boat near the cabins.  |
+| 45 | The boat, near a cabin     |
+| 46 | The boat, near cabins      |
+| 47 | The boat, near the cabin   |
+| 48 | The boat, near the cabins  |
+| 49 | The boats near a cabin     |
+| 50 | The boats near a cabin.    |
+| 51 | The boats near cabins      |
+| 52 | The boats near cabins.     |
+| 53 | The boats near the cabin   |
+| 54 | The boats near the cabin.  |
+| 55 | The boats near the cabins  |
+| 56 | The boats near the cabins. |
+| 57 | The boats, near a cabin    |
+| 58 | The boats, near cabins     |
+| 59 | The boats, near the cabin  |
+| 60 | The boats, near the cabins |
++----+----------------------------+
+

@@ -1,0 +1,976 @@
+GRAPH NAME: idPlayer_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 743   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 5     |
+| Nodes Included                  | 5     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 4     |
+| Edges Included                  | 4     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------------------+
+|                                     GOLD OUTPUTS                                     |
++-------------------------------------------------------------------------+------------+
+| Gold Output                                                             | Generated? |
++-------------------------------------------------------------------------+------------+
+| the player east of the sharp broken bottle who has not found the bottle | False      |
++-------------------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idPlayer  | True         | True          | Covered          | Included          |
+| false     | True         | True          | Covered          | Included          |
+| idBottle1 | True         | True          | Covered          | Included          |
+| broken    | True         | True          | Covered          | Included          |
+| sharp     | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        EDGE METRICS                                                       |
++-----------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                        | Parent    | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| idPlayer_prop_idBottleFound | idPlayer  | false     | True         | True          | Covered          | Included          |
+| isEastOf                    | idPlayer  | idBottle1 | True         | True          | Covered          | Included          |
+| idBottle1_prop_idIntegrity  | idBottle1 | broken    | True         | True          | Covered          | Included          |
+| idBottle1_prop_idDescriptor | idBottle1 | sharp     | True         | True          | Covered          | Included          |
++-----------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h530                                                                      |
+|               |   INDEX: x528 [ x NUM: sg ]                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h571 ARG0: e568 ARG1: u569 ARG2: x570 ]               |
+|               |           [ def_implicit_q LBL: h582 ARG0: x579 RSTR: h580 BODY: h581 ]          |
+|               |           [ _east_a_1 LBL: h567 ARG0: i564 ARG1: x565 ARG2: u566 ]               |
+|               |           [ def_udef_a_q LBL: h577 ARG0: x574 RSTR: h575 BODY: h576 ]            |
+|               |           [ _sharp_a_1 LBL: h563 ARG0: e561 ARG1: u562 ]                         |
+|               |           [ _break_v_cause LBL: h560 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|               | i559 ]                                                                           |
+|               |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ]                       |
+|               |           [ place_n LBL: h573 ARG0: x572 ]                                       |
+|               |           [ neg LBL: h547 ARG0: e545 [ e TENSE: tensed ] ARG1: h546 ]            |
+|               |           [ _find_v_1 LBL: h544 ARG0: e541 [ e TENSE: tensed ] ARG1: i542 ARG2:  |
+|               | i543 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h552 ARG0: x549 RSTR: h550 BODY: h551 ]            |
+|               |           [ _bottle_n_of LBL: h536 ARG0: x534 ARG1: i535 ]                       |
+|               |           [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >                     |
+|               |   HCONS: < h575 qeq h556 h580 qeq h573 h546 qeq h544 h550 qeq h536 >             |
+|               |   ICONS: < e557 topic i559 >                                                     |
+|               |   EQS: < h560 eq h556 i559 eq x554 h563 eq h556 u562 eq x554 x574 eq x554 h567   |
+|               | eq h578 u566 eq x574 h567 eq h573 x565 eq x572 x579 eq x572 h571 eq h583 x570 eq |
+|               | x579 h548 eq h546 x549 eq x534 h547 eq h553 i543 eq x549 h547 eq h530 i542 eq    |
+|               | x528 h571 eq h530 u569 eq x528 >                                                 |
+|               |   SLOTS: < ARG1: i529 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h530                                                                      |
+|               |   INDEX: x528 [ x NUM: sg ]                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h530 ARG0: e568 ARG1: x528 ARG2: x565 ]               |
+|               |           [ def_implicit_q LBL: h582 ARG0: x565 RSTR: h580 BODY: h581 ]          |
+|               |           [ _east_a_1 LBL: h567 ARG0: i564 ARG1: x565 ARG2: x554 ]               |
+|               |           [ def_udef_a_q LBL: h577 ARG0: x554 RSTR: h575 BODY: h576 ]            |
+|               |           [ _sharp_a_1 LBL: h556 ARG0: e561 ARG1: x554 ]                         |
+|               |           [ _break_v_cause LBL: h556 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|               | x554 ]                                                                           |
+|               |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ]                       |
+|               |           [ place_n LBL: h567 ARG0: x565 ]                                       |
+|               |           [ neg LBL: h530 ARG0: e545 [ e TENSE: tensed ] ARG1: h546 ]            |
+|               |           [ _find_v_1 LBL: h544 ARG0: e541 [ e TENSE: tensed ] ARG1: x528 ARG2:  |
+|               | x534 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h552 ARG0: x534 RSTR: h550 BODY: h551 ]            |
+|               |           [ _bottle_n_of LBL: h536 ARG0: x534 ARG1: i535 ]                       |
+|               |           [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >                     |
+|               |   HCONS: < h575 qeq h556 h580 qeq h567 h546 qeq h544 h550 qeq h536 >             |
+|               |   ICONS: < e557 topic x554 >                                                     |
+|               |   SLOTS: < ARG1: i529 > ]                                                        |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h592                                                                      |
+|               |   INDEX: e589                                                                    |
+|               |   RELS: < [ unknown LBL: h588 ARG: x528 [ x NUM: sg ] ARG0: e589 ]               |
+|               |           [ def_udef_a_q LBL: h587 ARG0: x528 RSTR: h585 BODY: h586 ]            |
+|               |           [ loc_nonsp LBL: h530 ARG0: e568 ARG1: x528 ARG2: x565 ]               |
+|               |           [ def_implicit_q LBL: h582 ARG0: x565 RSTR: h580 BODY: h581 ]          |
+|               |           [ _east_a_1 LBL: h567 ARG0: i564 ARG1: x565 ARG2: x554 ]               |
+|               |           [ def_udef_a_q LBL: h577 ARG0: x554 RSTR: h575 BODY: h576 ]            |
+|               |           [ _sharp_a_1 LBL: h556 ARG0: e561 ARG1: x554 ]                         |
+|               |           [ _break_v_cause LBL: h556 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|               | x554 ]                                                                           |
+|               |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ]                       |
+|               |           [ place_n LBL: h567 ARG0: x565 ]                                       |
+|               |           [ neg LBL: h530 ARG0: e545 [ e TENSE: tensed ] ARG1: h546 ]            |
+|               |           [ _find_v_1 LBL: h544 ARG0: e541 [ e TENSE: tensed ] ARG1: x528 ARG2:  |
+|               | x534 ]                                                                           |
+|               |           [ def_udef_a_q LBL: h552 ARG0: x534 RSTR: h550 BODY: h551 ]            |
+|               |           [ _bottle_n_of LBL: h536 ARG0: x534 ARG1: i535 ]                       |
+|               |           [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >                     |
+|               |   HCONS: < h575 qeq h556 h580 qeq h567 h546 qeq h544 h550 qeq h536 h585 qeq h530 |
+|               | h592 qeq h588 >                                                                  |
+|               |   ICONS: < e557 topic x554 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                                      NODE SEMENTS                                     |
++-----------+---------------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                          |
++-----------+---------------------------------------------------------------------------+
+| idPlayer  | [ TOP: h530                                                               |
+|           |   INDEX: x528 [ x NUM: sg ]                                               |
+|           |   RELS: < [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >              |
+|           |   SLOTS: < ARG1: i529 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+| false     | [ TOP: h533                                                               |
+|           |   INDEX: e531                                                             |
+|           |   RELS: < [ _false_a_of LBL: h533 ARG0: e531 ARG1: h532 ] >               |
+|           |   SLOTS: < ARG1: h532 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+| idBottle1 | [ TOP: h556                                                               |
+|           |   INDEX: x554                                                             |
+|           |   RELS: < [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ] >              |
+|           |   SLOTS: < ARG1: i555 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+| broken    | [ TOP: h560                                                               |
+|           |   INDEX: e557                                                             |
+|           |   RELS: < [ _break_v_cause LBL: h560 ARG0: e557 ARG1: i558 ARG2: i559 ] > |
+|           |   SLOTS: < ARG1: i558 ARG2: i559 > ]                                      |
++-----------+---------------------------------------------------------------------------+
+| sharp     | [ TOP: h563                                                               |
+|           |   INDEX: e561                                                             |
+|           |   RELS: < [ _sharp_a_1 LBL: h563 ARG0: e561 ARG1: u562 ] >                |
+|           |   SLOTS: < ARG1: u562 > ]                                                 |
++-----------+---------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                              EDGE SEMENTS                                                              |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| Edge                        | Parent    | Child     | Generated SEMENT                                                                 |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idPlayer_prop_idBottleFound | idPlayer  | false     | [ TOP: h530                                                                      |
+|                             |           |           |   INDEX: x528 [ x NUM: sg ]                                                      |
+|                             |           |           |   RELS: < [ neg LBL: h547 ARG0: e545 [ e TENSE: tensed ] ARG1: h546 ]            |
+|                             |           |           |           [ _find_v_1 LBL: h544 ARG0: e541 [ e TENSE: tensed ] ARG1: i542 ARG2:  |
+|                             |           |           | i543 ]                                                                           |
+|                             |           |           |           [ def_udef_a_q LBL: h552 ARG0: x549 RSTR: h550 BODY: h551 ]            |
+|                             |           |           |           [ _bottle_n_of LBL: h536 ARG0: x534 ARG1: i535 ]                       |
+|                             |           |           |           [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >                     |
+|                             |           |           |   HCONS: < h546 qeq h544 h550 qeq h536 >                                         |
+|                             |           |           |   EQS: < h548 eq h546 x549 eq x534 h547 eq h553 i543 eq x549 h547 eq h530 i542   |
+|                             |           |           | eq x528 >                                                                        |
+|                             |           |           |   SLOTS: < ARG1: i529 > ]                                                        |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| isEastOf                    | idPlayer  | idBottle1 | [ TOP: h530                                                                      |
+|                             |           |           |   INDEX: x528 [ x NUM: sg ]                                                      |
+|                             |           |           |   RELS: < [ loc_nonsp LBL: h571 ARG0: e568 ARG1: u569 ARG2: x570 ]               |
+|                             |           |           |           [ def_implicit_q LBL: h582 ARG0: x579 RSTR: h580 BODY: h581 ]          |
+|                             |           |           |           [ _east_a_1 LBL: h567 ARG0: i564 ARG1: x565 ARG2: u566 ]               |
+|                             |           |           |           [ def_udef_a_q LBL: h577 ARG0: x574 RSTR: h575 BODY: h576 ]            |
+|                             |           |           |           [ _sharp_a_1 LBL: h563 ARG0: e561 ARG1: u562 ]                         |
+|                             |           |           |           [ _break_v_cause LBL: h560 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|                             |           |           | i559 ]                                                                           |
+|                             |           |           |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ]                       |
+|                             |           |           |           [ place_n LBL: h573 ARG0: x572 ]                                       |
+|                             |           |           |           [ neg LBL: h547 ARG0: e545 [ e TENSE: tensed ] ARG1: h546 ]            |
+|                             |           |           |           [ _find_v_1 LBL: h544 ARG0: e541 [ e TENSE: tensed ] ARG1: i542 ARG2:  |
+|                             |           |           | i543 ]                                                                           |
+|                             |           |           |           [ def_udef_a_q LBL: h552 ARG0: x549 RSTR: h550 BODY: h551 ]            |
+|                             |           |           |           [ _bottle_n_of LBL: h536 ARG0: x534 ARG1: i535 ]                       |
+|                             |           |           |           [ _player_n_of LBL: h530 ARG0: x528 ARG1: i529 ] >                     |
+|                             |           |           |   HCONS: < h575 qeq h556 h580 qeq h573 h546 qeq h544 h550 qeq h536 >             |
+|                             |           |           |   ICONS: < e557 topic i559 >                                                     |
+|                             |           |           |   EQS: < h560 eq h556 i559 eq x554 h563 eq h556 u562 eq x554 x574 eq x554 h567   |
+|                             |           |           | eq h578 u566 eq x574 h567 eq h573 x565 eq x572 x579 eq x572 h571 eq h583 x570 eq |
+|                             |           |           | x579 h548 eq h546 x549 eq x534 h547 eq h553 i543 eq x549 h547 eq h530 i542 eq    |
+|                             |           |           | x528 h571 eq h530 u569 eq x528 >                                                 |
+|                             |           |           |   SLOTS: < ARG1: i529 > ]                                                        |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idBottle1_prop_idIntegrity  | idBottle1 | broken    | [ TOP: h556                                                                      |
+|                             |           |           |   INDEX: x554                                                                    |
+|                             |           |           |   RELS: < [ _break_v_cause LBL: h560 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|                             |           |           | i559 ]                                                                           |
+|                             |           |           |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ] >                     |
+|                             |           |           |   ICONS: < e557 topic i559 >                                                     |
+|                             |           |           |   EQS: < h560 eq h556 i559 eq x554 >                                             |
+|                             |           |           |   SLOTS: < ARG1: i555 > ]                                                        |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idBottle1_prop_idDescriptor | idBottle1 | sharp     | [ TOP: h556                                                                      |
+|                             |           |           |   INDEX: x554                                                                    |
+|                             |           |           |   RELS: < [ _sharp_a_1 LBL: h563 ARG0: e561 ARG1: u562 ]                         |
+|                             |           |           |           [ _break_v_cause LBL: h560 ARG0: e557 [ e PERF: - ] ARG1: i558 ARG2:   |
+|                             |           |           | i559 ]                                                                           |
+|                             |           |           |           [ _bottle_n_of LBL: h556 ARG0: x554 ARG1: i555 ] >                     |
+|                             |           |           |   ICONS: < e557 topic i559 >                                                     |
+|                             |           |           |   EQS: < h560 eq h556 i559 eq x554 h563 eq h556 u562 eq x554 >                   |
+|                             |           |           |   SLOTS: < ARG1: i555 > ]                                                        |
++-----------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------+
+|                                GENERATED ENGLISH TEXT                                |
++-----+--------------------------------------------------------------------------------+
+| #   | Generated Text                                                                 |
++-----+--------------------------------------------------------------------------------+
+| 1   | A player east of a broken sharp bottle a bottle is not found by                |
+| 2   | A player east of a broken sharp bottle a bottle is not found by.               |
+| 3   | A player east of a broken sharp bottle a bottle was not found by               |
+| 4   | A player east of a broken sharp bottle a bottle was not found by.              |
+| 5   | A player east of a broken sharp bottle a bottle will not be found by           |
+| 6   | A player east of a broken sharp bottle a bottle will not be found by           |
+| 7   | A player east of a broken sharp bottle a bottle will not be found by.          |
+| 8   | A player east of a broken sharp bottle a bottle will not be found by.          |
+| 9   | A player east of a broken sharp bottle the bottle is not found by              |
+| 10  | A player east of a broken sharp bottle the bottle is not found by              |
+| 11  | A player east of a broken sharp bottle the bottle is not found by.             |
+| 12  | A player east of a broken sharp bottle the bottle is not found by.             |
+| 13  | A player east of a broken sharp bottle the bottle was not found by             |
+| 14  | A player east of a broken sharp bottle the bottle was not found by             |
+| 15  | A player east of a broken sharp bottle the bottle was not found by.            |
+| 16  | A player east of a broken sharp bottle the bottle was not found by.            |
+| 17  | A player east of a broken sharp bottle the bottle will be not found by         |
+| 18  | A player east of a broken sharp bottle the bottle will be not found by.        |
+| 19  | A player east of a broken sharp bottle the bottle will not be found by         |
+| 20  | A player east of a broken sharp bottle the bottle will not be found by         |
+| 21  | A player east of a broken sharp bottle the bottle will not be found by.        |
+| 22  | A player east of a broken sharp bottle the bottle will not be found by.        |
+| 23  | A player east of a broken sharp bottle the bottle won't be found by            |
+| 24  | A player east of a broken sharp bottle the bottle won't be found by.           |
+| 25  | A player east of a broken sharp bottle the bottles are non found by            |
+| 26  | A player east of a broken sharp bottle the bottles are non found by.           |
+| 27  | A player east of a broken sharp bottle the bottles are not found by            |
+| 28  | A player east of a broken sharp bottle the bottles are not found by            |
+| 29  | A player east of a broken sharp bottle the bottles are not found by.           |
+| 30  | A player east of a broken sharp bottle the bottles are not found by.           |
+| 31  | A player east of a broken sharp bottle the bottles aren't found by             |
+| 32  | A player east of a broken sharp bottle the bottles were non found by           |
+| 33  | A player east of a broken sharp bottle the bottles were non found by.          |
+| 34  | A player east of a broken sharp bottle the bottles were not found by           |
+| 35  | A player east of a broken sharp bottle the bottles were not found by           |
+| 36  | A player east of a broken sharp bottle the bottles were not found by.          |
+| 37  | A player east of a broken sharp bottle the bottles were not found by.          |
+| 38  | A player east of a broken sharp bottle the bottles weren't found by            |
+| 39  | A player east of a broken sharp bottle the bottles weren't found by.           |
+| 40  | A player east of a broken sharp bottle the bottles will be non found by        |
+| 41  | A player east of a broken sharp bottle the bottles will be non found by.       |
+| 42  | A player east of a broken sharp bottle the bottles will be not found by        |
+| 43  | A player east of a broken sharp bottle the bottles will be not found by.       |
+| 44  | A player east of a broken sharp bottle the bottles will not be found by        |
+| 45  | A player east of a broken sharp bottle the bottles will not be found by        |
+| 46  | A player east of a broken sharp bottle the bottles will not be found by.       |
+| 47  | A player east of a broken sharp bottle the bottles will not be found by.       |
+| 48  | A player east of a broken sharp bottle the bottles won't be found by           |
+| 49  | A player east of a broken sharp bottle the bottles won't be found by.          |
+| 50  | A player east of a sharp broken bottle a bottle is not found by                |
+| 51  | A player east of a sharp broken bottle a bottle is not found by.               |
+| 52  | A player east of a sharp broken bottle a bottle was not found by               |
+| 53  | A player east of a sharp broken bottle a bottle was not found by               |
+| 54  | A player east of a sharp broken bottle a bottle was not found by.              |
+| 55  | A player east of a sharp broken bottle a bottle will be not found by           |
+| 56  | A player east of a sharp broken bottle a bottle will be not found by.          |
+| 57  | A player east of a sharp broken bottle a bottle will not be found by           |
+| 58  | A player east of a sharp broken bottle a bottle will not be found by           |
+| 59  | A player east of a sharp broken bottle a bottle will not be found by.          |
+| 60  | A player east of a sharp broken bottle a bottle will not be found by.          |
+| 61  | A player east of a sharp broken bottle bottles are not found by                |
+| 62  | A player east of a sharp broken bottle the bottle is non found by              |
+| 63  | A player east of a sharp broken bottle the bottle is non found by.             |
+| 64  | A player east of a sharp broken bottle the bottle is not found by              |
+| 65  | A player east of a sharp broken bottle the bottle is not found by              |
+| 66  | A player east of a sharp broken bottle the bottle is not found by.             |
+| 67  | A player east of a sharp broken bottle the bottle is not found by.             |
+| 68  | A player east of a sharp broken bottle the bottle was non found by             |
+| 69  | A player east of a sharp broken bottle the bottle was non found by.            |
+| 70  | A player east of a sharp broken bottle the bottle was not found by             |
+| 71  | A player east of a sharp broken bottle the bottle was not found by             |
+| 72  | A player east of a sharp broken bottle the bottle was not found by.            |
+| 73  | A player east of a sharp broken bottle the bottle was not found by.            |
+| 74  | A player east of a sharp broken bottle the bottle wasn't found by              |
+| 75  | A player east of a sharp broken bottle the bottle will be non found by         |
+| 76  | A player east of a sharp broken bottle the bottle will be non found by.        |
+| 77  | A player east of a sharp broken bottle the bottle will be not found by         |
+| 78  | A player east of a sharp broken bottle the bottle will be not found by.        |
+| 79  | A player east of a sharp broken bottle the bottle will not be found by         |
+| 80  | A player east of a sharp broken bottle the bottle will not be found by         |
+| 81  | A player east of a sharp broken bottle the bottle will not be found by.        |
+| 82  | A player east of a sharp broken bottle the bottle will not be found by.        |
+| 83  | A player east of a sharp broken bottle the bottle won't be found by            |
+| 84  | A player east of a sharp broken bottle the bottle won't be found by.           |
+| 85  | A player east of a sharp broken bottle the bottles are non found by            |
+| 86  | A player east of a sharp broken bottle the bottles are non found by.           |
+| 87  | A player east of a sharp broken bottle the bottles are not found by            |
+| 88  | A player east of a sharp broken bottle the bottles are not found by            |
+| 89  | A player east of a sharp broken bottle the bottles are not found by.           |
+| 90  | A player east of a sharp broken bottle the bottles are not found by.           |
+| 91  | A player east of a sharp broken bottle the bottles aren't found by             |
+| 92  | A player east of a sharp broken bottle the bottles aren't found by.            |
+| 93  | A player east of a sharp broken bottle the bottles were non found by           |
+| 94  | A player east of a sharp broken bottle the bottles were non found by.          |
+| 95  | A player east of a sharp broken bottle the bottles were not found by           |
+| 96  | A player east of a sharp broken bottle the bottles were not found by           |
+| 97  | A player east of a sharp broken bottle the bottles were not found by.          |
+| 98  | A player east of a sharp broken bottle the bottles were not found by.          |
+| 99  | A player east of a sharp broken bottle the bottles weren't found by            |
+| 100 | A player east of a sharp broken bottle the bottles weren't found by.           |
+| 101 | A player east of a sharp broken bottle the bottles will be non found by        |
+| 102 | A player east of a sharp broken bottle the bottles will be non found by.       |
+| 103 | A player east of a sharp broken bottle the bottles will be not found by        |
+| 104 | A player east of a sharp broken bottle the bottles will be not found by.       |
+| 105 | A player east of a sharp broken bottle the bottles will not be found by        |
+| 106 | A player east of a sharp broken bottle the bottles will not be found by        |
+| 107 | A player east of a sharp broken bottle the bottles will not be found by.       |
+| 108 | A player east of a sharp broken bottle the bottles will not be found by.       |
+| 109 | A player east of a sharp broken bottle the bottles won't be found by           |
+| 110 | A player east of a sharp broken bottle the bottles won't be found by.          |
+| 111 | A player east of broken sharp bottles a bottle is not found by                 |
+| 112 | A player east of broken sharp bottles the bottle is not found by               |
+| 113 | A player east of broken sharp bottles the bottle is not found by.              |
+| 114 | A player east of broken sharp bottles the bottle was not found by              |
+| 115 | A player east of broken sharp bottles the bottle was not found by              |
+| 116 | A player east of broken sharp bottles the bottle was not found by.             |
+| 117 | A player east of broken sharp bottles the bottle will be not found by          |
+| 118 | A player east of broken sharp bottles the bottle will be not found by.         |
+| 119 | A player east of broken sharp bottles the bottle will not be found by          |
+| 120 | A player east of broken sharp bottles the bottle will not be found by          |
+| 121 | A player east of broken sharp bottles the bottle will not be found by.         |
+| 122 | A player east of broken sharp bottles the bottle will not be found by.         |
+| 123 | A player east of broken sharp bottles the bottles are non found by             |
+| 124 | A player east of broken sharp bottles the bottles are non found by.            |
+| 125 | A player east of broken sharp bottles the bottles are not found by             |
+| 126 | A player east of broken sharp bottles the bottles are not found by             |
+| 127 | A player east of broken sharp bottles the bottles are not found by.            |
+| 128 | A player east of broken sharp bottles the bottles are not found by.            |
+| 129 | A player east of broken sharp bottles the bottles were not found by            |
+| 130 | A player east of broken sharp bottles the bottles were not found by            |
+| 131 | A player east of broken sharp bottles the bottles were not found by.           |
+| 132 | A player east of broken sharp bottles the bottles were not found by.           |
+| 133 | A player east of broken sharp bottles the bottles will be non found by         |
+| 134 | A player east of broken sharp bottles the bottles will be non found by.        |
+| 135 | A player east of broken sharp bottles the bottles will be not found by         |
+| 136 | A player east of broken sharp bottles the bottles will be not found by.        |
+| 137 | A player east of broken sharp bottles the bottles will not be found by         |
+| 138 | A player east of broken sharp bottles the bottles will not be found by         |
+| 139 | A player east of broken sharp bottles the bottles will not be found by.        |
+| 140 | A player east of broken sharp bottles the bottles will not be found by.        |
+| 141 | A player east of broken sharp bottles the bottles won't be found by            |
+| 142 | A player east of broken sharp bottles the bottles won't be found by.           |
+| 143 | A player east of sharp broken bottles the bottles are not found by             |
+| 144 | A player east of sharp broken bottles the bottles are not found by.            |
+| 145 | A player east of sharp broken bottles the bottles were not found by            |
+| 146 | A player east of sharp broken bottles the bottles were not found by.           |
+| 147 | A player east of sharp broken bottles the bottles will be not found by         |
+| 148 | A player east of sharp broken bottles the bottles will not be found by         |
+| 149 | A player east of sharp broken bottles the bottles will not be found by         |
+| 150 | A player east of sharp broken bottles the bottles will not be found by.        |
+| 151 | A player east of sharp broken bottles the bottles will not be found by.        |
+| 152 | A player east of the broken sharp bottle a bottle is not found by              |
+| 153 | A player east of the broken sharp bottle a bottle is not found by.             |
+| 154 | A player east of the broken sharp bottle a bottle will not be found by         |
+| 155 | A player east of the broken sharp bottle a bottle will not be found by         |
+| 156 | A player east of the broken sharp bottle the bottle is not found by            |
+| 157 | A player east of the broken sharp bottle the bottle is not found by            |
+| 158 | A player east of the broken sharp bottle the bottle is not found by.           |
+| 159 | A player east of the broken sharp bottle the bottle is not found by.           |
+| 160 | A player east of the broken sharp bottle the bottle was not found by           |
+| 161 | A player east of the broken sharp bottle the bottle was not found by           |
+| 162 | A player east of the broken sharp bottle the bottle was not found by.          |
+| 163 | A player east of the broken sharp bottle the bottle was not found by.          |
+| 164 | A player east of the broken sharp bottle the bottle will be not found by       |
+| 165 | A player east of the broken sharp bottle the bottle will be not found by.      |
+| 166 | A player east of the broken sharp bottle the bottle will not be found by       |
+| 167 | A player east of the broken sharp bottle the bottle will not be found by       |
+| 168 | A player east of the broken sharp bottle the bottle will not be found by.      |
+| 169 | A player east of the broken sharp bottle the bottle will not be found by.      |
+| 170 | A player east of the broken sharp bottle the bottle won't be found by          |
+| 171 | A player east of the broken sharp bottle the bottles are non found by          |
+| 172 | A player east of the broken sharp bottle the bottles are non found by.         |
+| 173 | A player east of the broken sharp bottle the bottles are not found by          |
+| 174 | A player east of the broken sharp bottle the bottles are not found by          |
+| 175 | A player east of the broken sharp bottle the bottles are not found by.         |
+| 176 | A player east of the broken sharp bottle the bottles are not found by.         |
+| 177 | A player east of the broken sharp bottle the bottles were non found by         |
+| 178 | A player east of the broken sharp bottle the bottles were non found by.        |
+| 179 | A player east of the broken sharp bottle the bottles were not found by         |
+| 180 | A player east of the broken sharp bottle the bottles were not found by         |
+| 181 | A player east of the broken sharp bottle the bottles were not found by.        |
+| 182 | A player east of the broken sharp bottle the bottles were not found by.        |
+| 183 | A player east of the broken sharp bottle the bottles weren't found by          |
+| 184 | A player east of the broken sharp bottle the bottles will be non found by      |
+| 185 | A player east of the broken sharp bottle the bottles will be non found by.     |
+| 186 | A player east of the broken sharp bottle the bottles will be not found by      |
+| 187 | A player east of the broken sharp bottle the bottles will be not found by.     |
+| 188 | A player east of the broken sharp bottle the bottles will not be found by      |
+| 189 | A player east of the broken sharp bottle the bottles will not be found by      |
+| 190 | A player east of the broken sharp bottle the bottles will not be found by.     |
+| 191 | A player east of the broken sharp bottle the bottles will not be found by.     |
+| 192 | A player east of the broken sharp bottle the bottles won't be found by         |
+| 193 | A player east of the broken sharp bottle the bottles won't be found by.        |
+| 194 | A player east of the broken sharp bottles a bottle is not found by             |
+| 195 | A player east of the broken sharp bottles a bottle is not found by.            |
+| 196 | A player east of the broken sharp bottles a bottle will not be found by        |
+| 197 | A player east of the broken sharp bottles the bottle is not found by           |
+| 198 | A player east of the broken sharp bottles the bottle is not found by           |
+| 199 | A player east of the broken sharp bottles the bottle is not found by.          |
+| 200 | A player east of the broken sharp bottles the bottle was not found by          |
+| 201 | A player east of the broken sharp bottles the bottle was not found by          |
+| 202 | A player east of the broken sharp bottles the bottle was not found by.         |
+| 203 | A player east of the broken sharp bottles the bottle was not found by.         |
+| 204 | A player east of the broken sharp bottles the bottle will be not found by      |
+| 205 | A player east of the broken sharp bottles the bottle will be not found by.     |
+| 206 | A player east of the broken sharp bottles the bottle will not be found by      |
+| 207 | A player east of the broken sharp bottles the bottle will not be found by      |
+| 208 | A player east of the broken sharp bottles the bottle will not be found by.     |
+| 209 | A player east of the broken sharp bottles the bottle will not be found by.     |
+| 210 | A player east of the broken sharp bottles the bottles are non found by         |
+| 211 | A player east of the broken sharp bottles the bottles are non found by.        |
+| 212 | A player east of the broken sharp bottles the bottles are not found by         |
+| 213 | A player east of the broken sharp bottles the bottles are not found by         |
+| 214 | A player east of the broken sharp bottles the bottles are not found by.        |
+| 215 | A player east of the broken sharp bottles the bottles are not found by.        |
+| 216 | A player east of the broken sharp bottles the bottles were non found by        |
+| 217 | A player east of the broken sharp bottles the bottles were not found by        |
+| 218 | A player east of the broken sharp bottles the bottles were not found by        |
+| 219 | A player east of the broken sharp bottles the bottles were not found by.       |
+| 220 | A player east of the broken sharp bottles the bottles were not found by.       |
+| 221 | A player east of the broken sharp bottles the bottles will be non found by     |
+| 222 | A player east of the broken sharp bottles the bottles will be non found by.    |
+| 223 | A player east of the broken sharp bottles the bottles will be not found by     |
+| 224 | A player east of the broken sharp bottles the bottles will be not found by.    |
+| 225 | A player east of the broken sharp bottles the bottles will not be found by     |
+| 226 | A player east of the broken sharp bottles the bottles will not be found by     |
+| 227 | A player east of the broken sharp bottles the bottles will not be found by.    |
+| 228 | A player east of the broken sharp bottles the bottles will not be found by.    |
+| 229 | A player east of the broken sharp bottles the bottles won't be found by        |
+| 230 | A player east of the broken sharp bottles the bottles won't be found by.       |
+| 231 | A player east of the sharp broken bottle a bottle is not found by              |
+| 232 | A player east of the sharp broken bottle a bottle is not found by.             |
+| 233 | A player east of the sharp broken bottle a bottle was not found by             |
+| 234 | A player east of the sharp broken bottle a bottle was not found by.            |
+| 235 | A player east of the sharp broken bottle a bottle will not be found by         |
+| 236 | A player east of the sharp broken bottle a bottle will not be found by         |
+| 237 | A player east of the sharp broken bottle a bottle will not be found by.        |
+| 238 | A player east of the sharp broken bottle a bottle will not be found by.        |
+| 239 | A player east of the sharp broken bottle the bottle is not found by            |
+| 240 | A player east of the sharp broken bottle the bottle is not found by            |
+| 241 | A player east of the sharp broken bottle the bottle is not found by.           |
+| 242 | A player east of the sharp broken bottle the bottle is not found by.           |
+| 243 | A player east of the sharp broken bottle the bottle was non found by           |
+| 244 | A player east of the sharp broken bottle the bottle was not found by           |
+| 245 | A player east of the sharp broken bottle the bottle was not found by           |
+| 246 | A player east of the sharp broken bottle the bottle was not found by.          |
+| 247 | A player east of the sharp broken bottle the bottle was not found by.          |
+| 248 | A player east of the sharp broken bottle the bottle will be not found by       |
+| 249 | A player east of the sharp broken bottle the bottle will be not found by.      |
+| 250 | A player east of the sharp broken bottle the bottle will not be found by       |
+| 251 | A player east of the sharp broken bottle the bottle will not be found by       |
+| 252 | A player east of the sharp broken bottle the bottle will not be found by.      |
+| 253 | A player east of the sharp broken bottle the bottle will not be found by.      |
+| 254 | A player east of the sharp broken bottle the bottle won't be found by          |
+| 255 | A player east of the sharp broken bottle the bottle won't be found by.         |
+| 256 | A player east of the sharp broken bottle the bottles are non found by          |
+| 257 | A player east of the sharp broken bottle the bottles are non found by.         |
+| 258 | A player east of the sharp broken bottle the bottles are not found by          |
+| 259 | A player east of the sharp broken bottle the bottles are not found by          |
+| 260 | A player east of the sharp broken bottle the bottles are not found by.         |
+| 261 | A player east of the sharp broken bottle the bottles are not found by.         |
+| 262 | A player east of the sharp broken bottle the bottles aren't found by           |
+| 263 | A player east of the sharp broken bottle the bottles were non found by         |
+| 264 | A player east of the sharp broken bottle the bottles were non found by.        |
+| 265 | A player east of the sharp broken bottle the bottles were not found by         |
+| 266 | A player east of the sharp broken bottle the bottles were not found by         |
+| 267 | A player east of the sharp broken bottle the bottles were not found by.        |
+| 268 | A player east of the sharp broken bottle the bottles were not found by.        |
+| 269 | A player east of the sharp broken bottle the bottles weren't found by          |
+| 270 | A player east of the sharp broken bottle the bottles weren't found by.         |
+| 271 | A player east of the sharp broken bottle the bottles will be non found by      |
+| 272 | A player east of the sharp broken bottle the bottles will be non found by.     |
+| 273 | A player east of the sharp broken bottle the bottles will be not found by      |
+| 274 | A player east of the sharp broken bottle the bottles will be not found by.     |
+| 275 | A player east of the sharp broken bottle the bottles will not be found by      |
+| 276 | A player east of the sharp broken bottle the bottles will not be found by      |
+| 277 | A player east of the sharp broken bottle the bottles will not be found by.     |
+| 278 | A player east of the sharp broken bottle the bottles will not be found by.     |
+| 279 | A player east of the sharp broken bottle the bottles won't be found by         |
+| 280 | A player east of the sharp broken bottle the bottles won't be found by.        |
+| 281 | A player east of the sharp broken bottles a bottle is not found by             |
+| 282 | A player east of the sharp broken bottles a bottle is not found by.            |
+| 283 | A player east of the sharp broken bottles a bottle was not found by            |
+| 284 | A player east of the sharp broken bottles a bottle will not be found by        |
+| 285 | A player east of the sharp broken bottles a bottle will not be found by        |
+| 286 | A player east of the sharp broken bottles a bottle will not be found by.       |
+| 287 | A player east of the sharp broken bottles a bottle will not be found by.       |
+| 288 | A player east of the sharp broken bottles the bottle is not found by           |
+| 289 | A player east of the sharp broken bottles the bottle is not found by           |
+| 290 | A player east of the sharp broken bottles the bottle is not found by.          |
+| 291 | A player east of the sharp broken bottles the bottle is not found by.          |
+| 292 | A player east of the sharp broken bottles the bottle was not found by          |
+| 293 | A player east of the sharp broken bottles the bottle was not found by          |
+| 294 | A player east of the sharp broken bottles the bottle was not found by.         |
+| 295 | A player east of the sharp broken bottles the bottle was not found by.         |
+| 296 | A player east of the sharp broken bottles the bottle will be not found by      |
+| 297 | A player east of the sharp broken bottles the bottle will be not found by.     |
+| 298 | A player east of the sharp broken bottles the bottle will not be found by      |
+| 299 | A player east of the sharp broken bottles the bottle will not be found by      |
+| 300 | A player east of the sharp broken bottles the bottle will not be found by.     |
+| 301 | A player east of the sharp broken bottles the bottle will not be found by.     |
+| 302 | A player east of the sharp broken bottles the bottle won't be found by         |
+| 303 | A player east of the sharp broken bottles the bottle won't be found by.        |
+| 304 | A player east of the sharp broken bottles the bottles are non found by         |
+| 305 | A player east of the sharp broken bottles the bottles are non found by.        |
+| 306 | A player east of the sharp broken bottles the bottles are not found by         |
+| 307 | A player east of the sharp broken bottles the bottles are not found by         |
+| 308 | A player east of the sharp broken bottles the bottles are not found by.        |
+| 309 | A player east of the sharp broken bottles the bottles are not found by.        |
+| 310 | A player east of the sharp broken bottles the bottles aren't found by          |
+| 311 | A player east of the sharp broken bottles the bottles were non found by        |
+| 312 | A player east of the sharp broken bottles the bottles were non found by.       |
+| 313 | A player east of the sharp broken bottles the bottles were not found by        |
+| 314 | A player east of the sharp broken bottles the bottles were not found by        |
+| 315 | A player east of the sharp broken bottles the bottles were not found by.       |
+| 316 | A player east of the sharp broken bottles the bottles were not found by.       |
+| 317 | A player east of the sharp broken bottles the bottles weren't found by         |
+| 318 | A player east of the sharp broken bottles the bottles will be non found by     |
+| 319 | A player east of the sharp broken bottles the bottles will be non found by.    |
+| 320 | A player east of the sharp broken bottles the bottles will be not found by     |
+| 321 | A player east of the sharp broken bottles the bottles will be not found by.    |
+| 322 | A player east of the sharp broken bottles the bottles will not be found by     |
+| 323 | A player east of the sharp broken bottles the bottles will not be found by     |
+| 324 | A player east of the sharp broken bottles the bottles will not be found by.    |
+| 325 | A player east of the sharp broken bottles the bottles will not be found by.    |
+| 326 | A player east of the sharp broken bottles the bottles won't be found by        |
+| 327 | A player east of the sharp broken bottles the bottles won't be found by.       |
+| 328 | A player the bottles are not found by east of a broken sharp bottle            |
+| 329 | A player the bottles are not found by east of a sharp broken bottle            |
+| 330 | A player the bottles are not found by east of the sharp broken bottle          |
+| 331 | A player the bottles will not be found by east of a sharp broken bottle        |
+| 332 | A player the bottles will not be found by east of a sharp broken bottle        |
+| 333 | A player, east of a broken sharp bottle the bottle is not found by             |
+| 334 | A player, east of a broken sharp bottle the bottle is not found by.            |
+| 335 | A player, east of a broken sharp bottle the bottle was not found by            |
+| 336 | A player, east of a broken sharp bottle the bottle will not be found by        |
+| 337 | A player, east of a broken sharp bottle the bottle will not be found by        |
+| 338 | A player, east of a broken sharp bottle the bottle will not be found by.       |
+| 339 | A player, east of a broken sharp bottle the bottles are not found by           |
+| 340 | A player, east of a broken sharp bottle the bottles are not found by           |
+| 341 | A player, east of a broken sharp bottle the bottles are not found by.          |
+| 342 | A player, east of a broken sharp bottle the bottles are not found by.          |
+| 343 | A player, east of a broken sharp bottle the bottles were not found by          |
+| 344 | A player, east of a broken sharp bottle the bottles were not found by          |
+| 345 | A player, east of a broken sharp bottle the bottles were not found by.         |
+| 346 | A player, east of a broken sharp bottle the bottles will be not found by       |
+| 347 | A player, east of a broken sharp bottle the bottles will be not found by.      |
+| 348 | A player, east of a broken sharp bottle the bottles will not be found by       |
+| 349 | A player, east of a broken sharp bottle the bottles will not be found by       |
+| 350 | A player, east of a broken sharp bottle the bottles will not be found by.      |
+| 351 | A player, east of a broken sharp bottle the bottles will not be found by.      |
+| 352 | A player, east of a broken sharp bottle the bottles won't be found by          |
+| 353 | A player, east of a broken sharp bottle the bottles won't be found by.         |
+| 354 | A player, east of a sharp broken bottle a bottle is not found by               |
+| 355 | A player, east of a sharp broken bottle the bottle is not found by             |
+| 356 | A player, east of a sharp broken bottle the bottle is not found by.            |
+| 357 | A player, east of a sharp broken bottle the bottle was not found by            |
+| 358 | A player, east of a sharp broken bottle the bottle was not found by.           |
+| 359 | A player, east of a sharp broken bottle the bottle will be not found by        |
+| 360 | A player, east of a sharp broken bottle the bottle will not be found by        |
+| 361 | A player, east of a sharp broken bottle the bottle will not be found by        |
+| 362 | A player, east of a sharp broken bottle the bottle will not be found by.       |
+| 363 | A player, east of a sharp broken bottle the bottle will not be found by.       |
+| 364 | A player, east of a sharp broken bottle the bottles are non found by           |
+| 365 | A player, east of a sharp broken bottle the bottles are non found by.          |
+| 366 | A player, east of a sharp broken bottle the bottles are not found by           |
+| 367 | A player, east of a sharp broken bottle the bottles are not found by           |
+| 368 | A player, east of a sharp broken bottle the bottles are not found by.          |
+| 369 | A player, east of a sharp broken bottle the bottles are not found by.          |
+| 370 | A player, east of a sharp broken bottle the bottles were not found by          |
+| 371 | A player, east of a sharp broken bottle the bottles were not found by          |
+| 372 | A player, east of a sharp broken bottle the bottles were not found by.         |
+| 373 | A player, east of a sharp broken bottle the bottles were not found by.         |
+| 374 | A player, east of a sharp broken bottle the bottles will be non found by       |
+| 375 | A player, east of a sharp broken bottle the bottles will be not found by       |
+| 376 | A player, east of a sharp broken bottle the bottles will be not found by.      |
+| 377 | A player, east of a sharp broken bottle the bottles will not be found by       |
+| 378 | A player, east of a sharp broken bottle the bottles will not be found by       |
+| 379 | A player, east of a sharp broken bottle the bottles will not be found by.      |
+| 380 | A player, east of a sharp broken bottle the bottles will not be found by.      |
+| 381 | A player, east of a sharp broken bottle the bottles won't be found by          |
+| 382 | A player, east of a sharp broken bottle the bottles won't be found by.         |
+| 383 | A player, east of broken sharp bottles the bottle is not found by              |
+| 384 | A player, east of broken sharp bottles the bottles are not found by            |
+| 385 | A player, east of broken sharp bottles the bottles are not found by.           |
+| 386 | A player, east of broken sharp bottles the bottles were not found by           |
+| 387 | A player, east of broken sharp bottles the bottles were not found by.          |
+| 388 | A player, east of broken sharp bottles the bottles will be not found by        |
+| 389 | A player, east of broken sharp bottles the bottles will not be found by        |
+| 390 | A player, east of broken sharp bottles the bottles will not be found by        |
+| 391 | A player, east of broken sharp bottles the bottles will not be found by.       |
+| 392 | A player, east of broken sharp bottles the bottles will not be found by.       |
+| 393 | A player, east of the broken sharp bottle the bottle is not found by           |
+| 394 | A player, east of the broken sharp bottle the bottle is not found by.          |
+| 395 | A player, east of the broken sharp bottle the bottles are not found by         |
+| 396 | A player, east of the broken sharp bottle the bottles are not found by         |
+| 397 | A player, east of the broken sharp bottle the bottles are not found by.        |
+| 398 | A player, east of the broken sharp bottle the bottles are not found by.        |
+| 399 | A player, east of the broken sharp bottle the bottles were not found by        |
+| 400 | A player, east of the broken sharp bottle the bottles were not found by.       |
+| 401 | A player, east of the broken sharp bottle the bottles will be not found by     |
+| 402 | A player, east of the broken sharp bottle the bottles will be not found by.    |
+| 403 | A player, east of the broken sharp bottle the bottles will not be found by     |
+| 404 | A player, east of the broken sharp bottle the bottles will not be found by     |
+| 405 | A player, east of the broken sharp bottle the bottles will not be found by.    |
+| 406 | A player, east of the broken sharp bottle the bottles will not be found by.    |
+| 407 | A player, east of the broken sharp bottle the bottles won't be found by        |
+| 408 | A player, east of the broken sharp bottles the bottle is not found by          |
+| 409 | A player, east of the broken sharp bottles the bottles are not found by        |
+| 410 | A player, east of the broken sharp bottles the bottles are not found by        |
+| 411 | A player, east of the broken sharp bottles the bottles are not found by.       |
+| 412 | A player, east of the broken sharp bottles the bottles were not found by       |
+| 413 | A player, east of the broken sharp bottles the bottles were not found by.      |
+| 414 | A player, east of the broken sharp bottles the bottles will be not found by    |
+| 415 | A player, east of the broken sharp bottles the bottles will be not found by.   |
+| 416 | A player, east of the broken sharp bottles the bottles will not be found by    |
+| 417 | A player, east of the broken sharp bottles the bottles will not be found by    |
+| 418 | A player, east of the broken sharp bottles the bottles will not be found by.   |
+| 419 | A player, east of the broken sharp bottles the bottles will not be found by.   |
+| 420 | A player, east of the sharp broken bottle the bottle is not found by           |
+| 421 | A player, east of the sharp broken bottle the bottle is not found by.          |
+| 422 | A player, east of the sharp broken bottle the bottle was not found by          |
+| 423 | A player, east of the sharp broken bottle the bottle will not be found by      |
+| 424 | A player, east of the sharp broken bottle the bottle will not be found by      |
+| 425 | A player, east of the sharp broken bottle the bottle will not be found by.     |
+| 426 | A player, east of the sharp broken bottle the bottle will not be found by.     |
+| 427 | A player, east of the sharp broken bottle the bottles are not found by         |
+| 428 | A player, east of the sharp broken bottle the bottles are not found by         |
+| 429 | A player, east of the sharp broken bottle the bottles are not found by.        |
+| 430 | A player, east of the sharp broken bottle the bottles are not found by.        |
+| 431 | A player, east of the sharp broken bottle the bottles were not found by        |
+| 432 | A player, east of the sharp broken bottle the bottles were not found by        |
+| 433 | A player, east of the sharp broken bottle the bottles were not found by.       |
+| 434 | A player, east of the sharp broken bottle the bottles were not found by.       |
+| 435 | A player, east of the sharp broken bottle the bottles will be not found by     |
+| 436 | A player, east of the sharp broken bottle the bottles will be not found by.    |
+| 437 | A player, east of the sharp broken bottle the bottles will not be found by     |
+| 438 | A player, east of the sharp broken bottle the bottles will not be found by     |
+| 439 | A player, east of the sharp broken bottle the bottles will not be found by.    |
+| 440 | A player, east of the sharp broken bottle the bottles will not be found by.    |
+| 441 | A player, east of the sharp broken bottle the bottles won't be found by        |
+| 442 | A player, east of the sharp broken bottle the bottles won't be found by.       |
+| 443 | A player, east of the sharp broken bottles the bottle is not found by          |
+| 444 | A player, east of the sharp broken bottles the bottle is not found by.         |
+| 445 | A player, east of the sharp broken bottles the bottle was not found by         |
+| 446 | A player, east of the sharp broken bottles the bottle will not be found by     |
+| 447 | A player, east of the sharp broken bottles the bottle will not be found by     |
+| 448 | A player, east of the sharp broken bottles the bottles are not found by        |
+| 449 | A player, east of the sharp broken bottles the bottles are not found by        |
+| 450 | A player, east of the sharp broken bottles the bottles are not found by.       |
+| 451 | A player, east of the sharp broken bottles the bottles are not found by.       |
+| 452 | A player, east of the sharp broken bottles the bottles were not found by       |
+| 453 | A player, east of the sharp broken bottles the bottles were not found by       |
+| 454 | A player, east of the sharp broken bottles the bottles were not found by.      |
+| 455 | A player, east of the sharp broken bottles the bottles will be not found by    |
+| 456 | A player, east of the sharp broken bottles the bottles will be not found by.   |
+| 457 | A player, east of the sharp broken bottles the bottles will not be found by    |
+| 458 | A player, east of the sharp broken bottles the bottles will not be found by    |
+| 459 | A player, east of the sharp broken bottles the bottles will not be found by.   |
+| 460 | A player, east of the sharp broken bottles the bottles will not be found by.   |
+| 461 | A player, east of the sharp broken bottles the bottles won't be found by       |
+| 462 | Player east of a broken sharp bottle the bottles are not found by              |
+| 463 | Player east of a sharp broken bottle the bottles are not found by              |
+| 464 | Player east of a sharp broken bottle the bottles are not found by.             |
+| 465 | Player east of a sharp broken bottle the bottles will not be found by          |
+| 466 | Player east of a sharp broken bottle the bottles will not be found by          |
+| 467 | Player east of the sharp broken bottle the bottles are not found by            |
+| 468 | Player east of the sharp broken bottles the bottles are not found by           |
+| 469 | The player east of a broken sharp bottle a bottle is not found by              |
+| 470 | The player east of a broken sharp bottle the bottle is not found by            |
+| 471 | The player east of a broken sharp bottle the bottle is not found by.           |
+| 472 | The player east of a broken sharp bottle the bottle was not found by           |
+| 473 | The player east of a broken sharp bottle the bottle was not found by           |
+| 474 | The player east of a broken sharp bottle the bottle was not found by.          |
+| 475 | The player east of a broken sharp bottle the bottle will be not found by       |
+| 476 | The player east of a broken sharp bottle the bottle will be not found by.      |
+| 477 | The player east of a broken sharp bottle the bottle will not be found by       |
+| 478 | The player east of a broken sharp bottle the bottle will not be found by       |
+| 479 | The player east of a broken sharp bottle the bottle will not be found by.      |
+| 480 | The player east of a broken sharp bottle the bottle will not be found by.      |
+| 481 | The player east of a broken sharp bottle the bottles are non found by          |
+| 482 | The player east of a broken sharp bottle the bottles are non found by.         |
+| 483 | The player east of a broken sharp bottle the bottles are not found by          |
+| 484 | The player east of a broken sharp bottle the bottles are not found by          |
+| 485 | The player east of a broken sharp bottle the bottles are not found by.         |
+| 486 | The player east of a broken sharp bottle the bottles are not found by.         |
+| 487 | The player east of a broken sharp bottle the bottles were not found by         |
+| 488 | The player east of a broken sharp bottle the bottles were not found by         |
+| 489 | The player east of a broken sharp bottle the bottles were not found by.        |
+| 490 | The player east of a broken sharp bottle the bottles were not found by.        |
+| 491 | The player east of a broken sharp bottle the bottles will be non found by      |
+| 492 | The player east of a broken sharp bottle the bottles will be non found by.     |
+| 493 | The player east of a broken sharp bottle the bottles will be not found by      |
+| 494 | The player east of a broken sharp bottle the bottles will be not found by.     |
+| 495 | The player east of a broken sharp bottle the bottles will not be found by      |
+| 496 | The player east of a broken sharp bottle the bottles will not be found by      |
+| 497 | The player east of a broken sharp bottle the bottles will not be found by.     |
+| 498 | The player east of a broken sharp bottle the bottles will not be found by.     |
+| 499 | The player east of a broken sharp bottle the bottles won't be found by         |
+| 500 | The player east of a broken sharp bottle the bottles won't be found by.        |
+| 501 | The player east of a sharp broken bottle a bottle is not found by              |
+| 502 | The player east of a sharp broken bottle a bottle is not found by.             |
+| 503 | The player east of a sharp broken bottle a bottle was not found by             |
+| 504 | The player east of a sharp broken bottle a bottle will not be found by         |
+| 505 | The player east of a sharp broken bottle a bottle will not be found by         |
+| 506 | The player east of a sharp broken bottle the bottle is not found by            |
+| 507 | The player east of a sharp broken bottle the bottle is not found by            |
+| 508 | The player east of a sharp broken bottle the bottle is not found by.           |
+| 509 | The player east of a sharp broken bottle the bottle is not found by.           |
+| 510 | The player east of a sharp broken bottle the bottle was not found by           |
+| 511 | The player east of a sharp broken bottle the bottle was not found by           |
+| 512 | The player east of a sharp broken bottle the bottle was not found by.          |
+| 513 | The player east of a sharp broken bottle the bottle was not found by.          |
+| 514 | The player east of a sharp broken bottle the bottle will be not found by       |
+| 515 | The player east of a sharp broken bottle the bottle will be not found by.      |
+| 516 | The player east of a sharp broken bottle the bottle will not be found by       |
+| 517 | The player east of a sharp broken bottle the bottle will not be found by       |
+| 518 | The player east of a sharp broken bottle the bottle will not be found by.      |
+| 519 | The player east of a sharp broken bottle the bottle will not be found by.      |
+| 520 | The player east of a sharp broken bottle the bottle won't be found by          |
+| 521 | The player east of a sharp broken bottle the bottles are non found by          |
+| 522 | The player east of a sharp broken bottle the bottles are non found by.         |
+| 523 | The player east of a sharp broken bottle the bottles are not found by          |
+| 524 | The player east of a sharp broken bottle the bottles are not found by          |
+| 525 | The player east of a sharp broken bottle the bottles are not found by.         |
+| 526 | The player east of a sharp broken bottle the bottles are not found by.         |
+| 527 | The player east of a sharp broken bottle the bottles were non found by         |
+| 528 | The player east of a sharp broken bottle the bottles were non found by.        |
+| 529 | The player east of a sharp broken bottle the bottles were not found by         |
+| 530 | The player east of a sharp broken bottle the bottles were not found by         |
+| 531 | The player east of a sharp broken bottle the bottles were not found by.        |
+| 532 | The player east of a sharp broken bottle the bottles were not found by.        |
+| 533 | The player east of a sharp broken bottle the bottles weren't found by          |
+| 534 | The player east of a sharp broken bottle the bottles will be non found by      |
+| 535 | The player east of a sharp broken bottle the bottles will be non found by.     |
+| 536 | The player east of a sharp broken bottle the bottles will be not found by      |
+| 537 | The player east of a sharp broken bottle the bottles will be not found by.     |
+| 538 | The player east of a sharp broken bottle the bottles will not be found by      |
+| 539 | The player east of a sharp broken bottle the bottles will not be found by      |
+| 540 | The player east of a sharp broken bottle the bottles will not be found by.     |
+| 541 | The player east of a sharp broken bottle the bottles will not be found by.     |
+| 542 | The player east of a sharp broken bottle the bottles won't be found by         |
+| 543 | The player east of a sharp broken bottle the bottles won't be found by.        |
+| 544 | The player east of broken sharp bottles the bottle is not found by             |
+| 545 | The player east of broken sharp bottles the bottle is not found by.            |
+| 546 | The player east of broken sharp bottles the bottle was not found by            |
+| 547 | The player east of broken sharp bottles the bottle will not be found by        |
+| 548 | The player east of broken sharp bottles the bottle will not be found by        |
+| 549 | The player east of broken sharp bottles the bottles are not found by           |
+| 550 | The player east of broken sharp bottles the bottles are not found by           |
+| 551 | The player east of broken sharp bottles the bottles are not found by.          |
+| 552 | The player east of broken sharp bottles the bottles are not found by.          |
+| 553 | The player east of broken sharp bottles the bottles were not found by          |
+| 554 | The player east of broken sharp bottles the bottles were not found by          |
+| 555 | The player east of broken sharp bottles the bottles were not found by.         |
+| 556 | The player east of broken sharp bottles the bottles will be not found by       |
+| 557 | The player east of broken sharp bottles the bottles will be not found by.      |
+| 558 | The player east of broken sharp bottles the bottles will not be found by       |
+| 559 | The player east of broken sharp bottles the bottles will not be found by       |
+| 560 | The player east of broken sharp bottles the bottles will not be found by.      |
+| 561 | The player east of broken sharp bottles the bottles will not be found by.      |
+| 562 | The player east of broken sharp bottles the bottles won't be found by          |
+| 563 | The player east of sharp broken bottles the bottles are not found by           |
+| 564 | The player east of sharp broken bottles the bottles are not found by.          |
+| 565 | The player east of sharp broken bottles the bottles will not be found by       |
+| 566 | The player east of the broken sharp bottle the bottle is not found by          |
+| 567 | The player east of the broken sharp bottle the bottle is not found by.         |
+| 568 | The player east of the broken sharp bottle the bottle was not found by         |
+| 569 | The player east of the broken sharp bottle the bottle was not found by.        |
+| 570 | The player east of the broken sharp bottle the bottle will not be found by     |
+| 571 | The player east of the broken sharp bottle the bottle will not be found by     |
+| 572 | The player east of the broken sharp bottle the bottle will not be found by.    |
+| 573 | The player east of the broken sharp bottle the bottle will not be found by.    |
+| 574 | The player east of the broken sharp bottle the bottles are non found by        |
+| 575 | The player east of the broken sharp bottle the bottles are not found by        |
+| 576 | The player east of the broken sharp bottle the bottles are not found by        |
+| 577 | The player east of the broken sharp bottle the bottles are not found by.       |
+| 578 | The player east of the broken sharp bottle the bottles are not found by.       |
+| 579 | The player east of the broken sharp bottle the bottles were not found by       |
+| 580 | The player east of the broken sharp bottle the bottles were not found by       |
+| 581 | The player east of the broken sharp bottle the bottles were not found by.      |
+| 582 | The player east of the broken sharp bottle the bottles were not found by.      |
+| 583 | The player east of the broken sharp bottle the bottles will be not found by    |
+| 584 | The player east of the broken sharp bottle the bottles will be not found by.   |
+| 585 | The player east of the broken sharp bottle the bottles will not be found by    |
+| 586 | The player east of the broken sharp bottle the bottles will not be found by    |
+| 587 | The player east of the broken sharp bottle the bottles will not be found by.   |
+| 588 | The player east of the broken sharp bottle the bottles will not be found by.   |
+| 589 | The player east of the broken sharp bottle the bottles won't be found by       |
+| 590 | The player east of the broken sharp bottle the bottles won't be found by.      |
+| 591 | The player east of the broken sharp bottles the bottle is not found by         |
+| 592 | The player east of the broken sharp bottles the bottle is not found by.        |
+| 593 | The player east of the broken sharp bottles the bottle was not found by        |
+| 594 | The player east of the broken sharp bottles the bottle will not be found by    |
+| 595 | The player east of the broken sharp bottles the bottle will not be found by    |
+| 596 | The player east of the broken sharp bottles the bottle will not be found by.   |
+| 597 | The player east of the broken sharp bottles the bottle will not be found by.   |
+| 598 | The player east of the broken sharp bottles the bottles are not found by       |
+| 599 | The player east of the broken sharp bottles the bottles are not found by       |
+| 600 | The player east of the broken sharp bottles the bottles are not found by.      |
+| 601 | The player east of the broken sharp bottles the bottles are not found by.      |
+| 602 | The player east of the broken sharp bottles the bottles were not found by      |
+| 603 | The player east of the broken sharp bottles the bottles were not found by      |
+| 604 | The player east of the broken sharp bottles the bottles were not found by.     |
+| 605 | The player east of the broken sharp bottles the bottles were not found by.     |
+| 606 | The player east of the broken sharp bottles the bottles will be not found by   |
+| 607 | The player east of the broken sharp bottles the bottles will be not found by.  |
+| 608 | The player east of the broken sharp bottles the bottles will not be found by   |
+| 609 | The player east of the broken sharp bottles the bottles will not be found by   |
+| 610 | The player east of the broken sharp bottles the bottles will not be found by.  |
+| 611 | The player east of the broken sharp bottles the bottles will not be found by.  |
+| 612 | The player east of the broken sharp bottles the bottles won't be found by      |
+| 613 | The player east of the broken sharp bottles the bottles won't be found by.     |
+| 614 | The player east of the sharp broken bottle a bottle is not found by            |
+| 615 | The player east of the sharp broken bottle the bottle is not found by          |
+| 616 | The player east of the sharp broken bottle the bottle is not found by          |
+| 617 | The player east of the sharp broken bottle the bottle is not found by.         |
+| 618 | The player east of the sharp broken bottle the bottle was not found by         |
+| 619 | The player east of the sharp broken bottle the bottle was not found by         |
+| 620 | The player east of the sharp broken bottle the bottle was not found by.        |
+| 621 | The player east of the sharp broken bottle the bottle will be not found by     |
+| 622 | The player east of the sharp broken bottle the bottle will be not found by.    |
+| 623 | The player east of the sharp broken bottle the bottle will not be found by     |
+| 624 | The player east of the sharp broken bottle the bottle will not be found by     |
+| 625 | The player east of the sharp broken bottle the bottle will not be found by.    |
+| 626 | The player east of the sharp broken bottle the bottle will not be found by.    |
+| 627 | The player east of the sharp broken bottle the bottles are non found by        |
+| 628 | The player east of the sharp broken bottle the bottles are non found by.       |
+| 629 | The player east of the sharp broken bottle the bottles are not found by        |
+| 630 | The player east of the sharp broken bottle the bottles are not found by        |
+| 631 | The player east of the sharp broken bottle the bottles are not found by.       |
+| 632 | The player east of the sharp broken bottle the bottles are not found by.       |
+| 633 | The player east of the sharp broken bottle the bottles were not found by       |
+| 634 | The player east of the sharp broken bottle the bottles were not found by       |
+| 635 | The player east of the sharp broken bottle the bottles were not found by.      |
+| 636 | The player east of the sharp broken bottle the bottles were not found by.      |
+| 637 | The player east of the sharp broken bottle the bottles will be non found by    |
+| 638 | The player east of the sharp broken bottle the bottles will be non found by.   |
+| 639 | The player east of the sharp broken bottle the bottles will be not found by    |
+| 640 | The player east of the sharp broken bottle the bottles will be not found by.   |
+| 641 | The player east of the sharp broken bottle the bottles will not be found by    |
+| 642 | The player east of the sharp broken bottle the bottles will not be found by    |
+| 643 | The player east of the sharp broken bottle the bottles will not be found by.   |
+| 644 | The player east of the sharp broken bottle the bottles will not be found by.   |
+| 645 | The player east of the sharp broken bottle the bottles won't be found by       |
+| 646 | The player east of the sharp broken bottle the bottles won't be found by.      |
+| 647 | The player east of the sharp broken bottles a bottle is not found by           |
+| 648 | The player east of the sharp broken bottles the bottle is not found by         |
+| 649 | The player east of the sharp broken bottles the bottle is not found by.        |
+| 650 | The player east of the sharp broken bottles the bottle was not found by        |
+| 651 | The player east of the sharp broken bottles the bottle was not found by        |
+| 652 | The player east of the sharp broken bottles the bottle was not found by.       |
+| 653 | The player east of the sharp broken bottles the bottle will be not found by    |
+| 654 | The player east of the sharp broken bottles the bottle will not be found by    |
+| 655 | The player east of the sharp broken bottles the bottle will not be found by    |
+| 656 | The player east of the sharp broken bottles the bottle will not be found by.   |
+| 657 | The player east of the sharp broken bottles the bottle will not be found by.   |
+| 658 | The player east of the sharp broken bottles the bottles are non found by       |
+| 659 | The player east of the sharp broken bottles the bottles are non found by.      |
+| 660 | The player east of the sharp broken bottles the bottles are not found by       |
+| 661 | The player east of the sharp broken bottles the bottles are not found by       |
+| 662 | The player east of the sharp broken bottles the bottles are not found by.      |
+| 663 | The player east of the sharp broken bottles the bottles are not found by.      |
+| 664 | The player east of the sharp broken bottles the bottles were not found by      |
+| 665 | The player east of the sharp broken bottles the bottles were not found by      |
+| 666 | The player east of the sharp broken bottles the bottles were not found by.     |
+| 667 | The player east of the sharp broken bottles the bottles were not found by.     |
+| 668 | The player east of the sharp broken bottles the bottles will be non found by   |
+| 669 | The player east of the sharp broken bottles the bottles will be not found by   |
+| 670 | The player east of the sharp broken bottles the bottles will be not found by.  |
+| 671 | The player east of the sharp broken bottles the bottles will not be found by   |
+| 672 | The player east of the sharp broken bottles the bottles will not be found by   |
+| 673 | The player east of the sharp broken bottles the bottles will not be found by.  |
+| 674 | The player east of the sharp broken bottles the bottles will not be found by.  |
+| 675 | The player east of the sharp broken bottles the bottles won't be found by      |
+| 676 | The player east of the sharp broken bottles the bottles won't be found by.     |
+| 677 | The player the bottles are not found by east of a broken sharp bottle          |
+| 678 | The player the bottles are not found by east of a sharp broken bottle          |
+| 679 | The player the bottles are not found by east of the sharp broken bottle        |
+| 680 | The player the bottles will not be found by east of a sharp broken bottle      |
+| 681 | The player the bottles will not be found by east of a sharp broken bottle      |
+| 682 | The player, east of a broken sharp bottle the bottle is not found by           |
+| 683 | The player, east of a broken sharp bottle the bottles are not found by         |
+| 684 | The player, east of a broken sharp bottle the bottles are not found by.        |
+| 685 | The player, east of a broken sharp bottle the bottles were not found by        |
+| 686 | The player, east of a broken sharp bottle the bottles were not found by.       |
+| 687 | The player, east of a broken sharp bottle the bottles will be not found by     |
+| 688 | The player, east of a broken sharp bottle the bottles will not be found by     |
+| 689 | The player, east of a broken sharp bottle the bottles will not be found by     |
+| 690 | The player, east of a broken sharp bottle the bottles will not be found by.    |
+| 691 | The player, east of a broken sharp bottle the bottles will not be found by.    |
+| 692 | The player, east of a sharp broken bottle the bottle is not found by           |
+| 693 | The player, east of a sharp broken bottle the bottle is not found by.          |
+| 694 | The player, east of a sharp broken bottle the bottle will not be found by      |
+| 695 | The player, east of a sharp broken bottle the bottle will not be found by      |
+| 696 | The player, east of a sharp broken bottle the bottles are not found by         |
+| 697 | The player, east of a sharp broken bottle the bottles are not found by         |
+| 698 | The player, east of a sharp broken bottle the bottles are not found by.        |
+| 699 | The player, east of a sharp broken bottle the bottles are not found by.        |
+| 700 | The player, east of a sharp broken bottle the bottles were not found by        |
+| 701 | The player, east of a sharp broken bottle the bottles were not found by.       |
+| 702 | The player, east of a sharp broken bottle the bottles will be not found by     |
+| 703 | The player, east of a sharp broken bottle the bottles will be not found by.    |
+| 704 | The player, east of a sharp broken bottle the bottles will not be found by     |
+| 705 | The player, east of a sharp broken bottle the bottles will not be found by     |
+| 706 | The player, east of a sharp broken bottle the bottles will not be found by.    |
+| 707 | The player, east of a sharp broken bottle the bottles will not be found by.    |
+| 708 | The player, east of a sharp broken bottle the bottles won't be found by        |
+| 709 | The player, east of broken sharp bottles the bottles are not found by          |
+| 710 | The player, east of broken sharp bottles the bottles are not found by.         |
+| 711 | The player, east of broken sharp bottles the bottles will not be found by      |
+| 712 | The player, east of broken sharp bottles the bottles will not be found by      |
+| 713 | The player, east of the broken sharp bottle the bottles are not found by       |
+| 714 | The player, east of the broken sharp bottle the bottles are not found by.      |
+| 715 | The player, east of the broken sharp bottle the bottles were not found by      |
+| 716 | The player, east of the broken sharp bottle the bottles will not be found by   |
+| 717 | The player, east of the broken sharp bottle the bottles will not be found by   |
+| 718 | The player, east of the broken sharp bottle the bottles will not be found by.  |
+| 719 | The player, east of the broken sharp bottle the bottles will not be found by.  |
+| 720 | The player, east of the broken sharp bottles the bottles are not found by      |
+| 721 | The player, east of the broken sharp bottles the bottles are not found by.     |
+| 722 | The player, east of the broken sharp bottles the bottles will not be found by  |
+| 723 | The player, east of the broken sharp bottles the bottles will not be found by  |
+| 724 | The player, east of the sharp broken bottle the bottle is not found by         |
+| 725 | The player, east of the sharp broken bottle the bottles are not found by       |
+| 726 | The player, east of the sharp broken bottle the bottles are not found by       |
+| 727 | The player, east of the sharp broken bottle the bottles are not found by.      |
+| 728 | The player, east of the sharp broken bottle the bottles were not found by      |
+| 729 | The player, east of the sharp broken bottle the bottles were not found by.     |
+| 730 | The player, east of the sharp broken bottle the bottles will be not found by   |
+| 731 | The player, east of the sharp broken bottle the bottles will not be found by   |
+| 732 | The player, east of the sharp broken bottle the bottles will not be found by   |
+| 733 | The player, east of the sharp broken bottle the bottles will not be found by.  |
+| 734 | The player, east of the sharp broken bottle the bottles will not be found by.  |
+| 735 | The player, east of the sharp broken bottles the bottles are not found by      |
+| 736 | The player, east of the sharp broken bottles the bottles are not found by.     |
+| 737 | The player, east of the sharp broken bottles the bottles were not found by     |
+| 738 | The player, east of the sharp broken bottles the bottles were not found by.    |
+| 739 | The player, east of the sharp broken bottles the bottles will be not found by  |
+| 740 | The player, east of the sharp broken bottles the bottles will not be found by  |
+| 741 | The player, east of the sharp broken bottles the bottles will not be found by  |
+| 742 | The player, east of the sharp broken bottles the bottles will not be found by. |
+| 743 | The player, east of the sharp broken bottles the bottles will not be found by. |
++-----+--------------------------------------------------------------------------------+
+

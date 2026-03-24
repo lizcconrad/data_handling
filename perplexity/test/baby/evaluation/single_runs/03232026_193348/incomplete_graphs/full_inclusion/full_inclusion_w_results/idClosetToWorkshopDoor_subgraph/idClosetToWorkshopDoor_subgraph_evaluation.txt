@@ -1,0 +1,1435 @@
+GRAPH NAME: idClosetToWorkshopDoor_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 1136  |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 6     |
+| Nodes Covered                   | 6     |
+| Nodes Included                  | 6     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 5     |
+| Edges Included                  | 5     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------------------------------------------------------------+
+|                                             GOLD OUTPUTS                                             |
++-----------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                             | Generated? |
++-----------------------------------------------------------------------------------------+------------+
+| the small metal unknown door from the closet to the workshop west of the immovable dock | False      |
++-----------------------------------------------------------------------------------------+------------+
+
++----------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                         |
++------------------------+--------------+---------------+------------------+-------------------+
+| Node                   | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------------------+--------------+---------------+------------------+-------------------+
+| idClosetToWorkshopDoor | True         | True          | Covered          | Included          |
+| small                  | True         | True          | Covered          | Included          |
+| idmetal                | True         | True          | Covered          | Included          |
+| true                   | True         | True          | Covered          | Included          |
+| idDock1                | True         | True          | Covered          | Included          |
+| yes                    | True         | True          | Covered          | Included          |
++------------------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     EDGE METRICS                                                                     |
++---------------------------------------------+------------------------+---------+--------------+---------------+------------------+-------------------+
+| Edge                                        | Parent                 | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------------------+------------------------+---------+--------------+---------------+------------------+-------------------+
+| idClosetToWorkshopDoor_prop_idSize          | idClosetToWorkshopDoor | small   | True         | True          | Covered          | Included          |
+| idClosetToWorkshopDoor_prop_idMaterial      | idClosetToWorkshopDoor | idmetal | True         | True          | Covered          | Included          |
+| idClosetToWorkshopDoor_prop_idUnknownObject | idClosetToWorkshopDoor | true    | True         | True          | Covered          | Included          |
+| isWestOf                                    | idClosetToWorkshopDoor | idDock1 | True         | True          | Covered          | Included          |
+| idDock1_prop_idImmovable                    | idDock1                | yes     | True         | True          | Covered          | Included          |
++---------------------------------------------+------------------------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h332                                                                      |
+|               |   INDEX: x331                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h403 ARG0: e400 ARG1: u401 ARG2: x402 ]               |
+|               |           [ def_implicit_q LBL: h414 ARG0: x411 RSTR: h412 BODY: h413 ]          |
+|               |           [ _west_a_1 LBL: h399 ARG0: i396 ARG1: x397 ARG2: u398 ]               |
+|               |           [ def_udef_a_q LBL: h409 ARG0: x406 RSTR: h407 BODY: h408 ]            |
+|               |           [ _immovable_a_1 LBL: h395 ARG0: e393 ARG1: u394 ]                     |
+|               |           [ _dock_n_1 LBL: h385 ARG0: x384 ]                                     |
+|               |           [ place_n LBL: h405 ARG0: x404 ]                                       |
+|               |           [ _un-_a_neg LBL: h383 ARG0: i381 ARG1: e382 ]                         |
+|               |           [ _know_v_1 LBL: h380 ARG0: e377 [ e PERF: - ] ARG1: u378 ARG2: i379 ] |
+|               |           [ compound LBL: h368 ARG0: e365 [ e PROG: - ] ARG1: u366 ARG2: u367 ]  |
+|               |           [ udef_q LBL: h363 ARG0: x360 RSTR: h361 BODY: h362 ]                  |
+|               |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|               |           [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ]                         |
+|               |           [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|               |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|               |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|               |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|               |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|               |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|               |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|               |   HCONS: < h407 qeq h385 h412 qeq h405 h361 qeq h359 h351 qeq h345 h340 qeq h334 |
+|               | >                                                                                |
+|               |   ICONS: < e377 topic i379 >                                                     |
+|               |   EQS: < h395 eq h385 u394 eq x384 x406 eq x384 h399 eq h410 u398 eq x406 h399   |
+|               | eq h405 x397 eq x404 x411 eq x404 h403 eq h415 x402 eq x411 h383 eq h380 e382 eq |
+|               | e377 x360 eq x358 h368 eq h364 u367 eq x360 x350 eq x344 h349 eq h354 i348 eq    |
+|               | x350 x339 eq x333 h338 eq h343 u337 eq x339 h338 eq h332 u336 eq x331 h349 eq    |
+|               | h332 u347 eq x331 h357 eq h332 u356 eq x331 h368 eq h332 u366 eq x331 h380 eq    |
+|               | h332 i379 eq x331 h403 eq h332 u401 eq x331 > ]                                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h332                                                                      |
+|               |   INDEX: x331                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h332 ARG0: e400 ARG1: x331 ARG2: x397 ]               |
+|               |           [ def_implicit_q LBL: h414 ARG0: x397 RSTR: h412 BODY: h413 ]          |
+|               |           [ _west_a_1 LBL: h399 ARG0: i396 ARG1: x397 ARG2: x384 ]               |
+|               |           [ def_udef_a_q LBL: h409 ARG0: x384 RSTR: h407 BODY: h408 ]            |
+|               |           [ _immovable_a_1 LBL: h385 ARG0: e393 ARG1: x384 ]                     |
+|               |           [ _dock_n_1 LBL: h385 ARG0: x384 ]                                     |
+|               |           [ place_n LBL: h399 ARG0: x397 ]                                       |
+|               |           [ _un-_a_neg LBL: h332 ARG0: i381 ARG1: e377 [ e PERF: - ] ]           |
+|               |           [ _know_v_1 LBL: h332 ARG0: e377 ARG1: u378 ARG2: x331 ]               |
+|               |           [ compound LBL: h332 ARG0: e365 [ e PROG: - ] ARG1: x331 ARG2: x358 ]  |
+|               |           [ udef_q LBL: h363 ARG0: x358 RSTR: h361 BODY: h362 ]                  |
+|               |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|               |           [ _small_a_1 LBL: h332 ARG0: e355 ARG1: x331 ]                         |
+|               |           [ _to_p LBL: h332 ARG0: e346 ARG1: x331 ARG2: x344 ]                   |
+|               |           [ def_udef_a_q LBL: h353 ARG0: x344 RSTR: h351 BODY: h352 ]            |
+|               |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|               |           [ _from_p LBL: h332 ARG0: e335 ARG1: x331 ARG2: x333 ]                 |
+|               |           [ def_udef_a_q LBL: h342 ARG0: x333 RSTR: h340 BODY: h341 ]            |
+|               |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|               |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|               |   HCONS: < h407 qeq h385 h412 qeq h399 h361 qeq h359 h351 qeq h345 h340 qeq h334 |
+|               | >                                                                                |
+|               |   ICONS: < e377 topic x331 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h424                                                                      |
+|               |   INDEX: e421                                                                    |
+|               |   RELS: < [ unknown LBL: h420 ARG: x331 ARG0: e421 ]                             |
+|               |           [ def_udef_a_q LBL: h419 ARG0: x331 RSTR: h417 BODY: h418 ]            |
+|               |           [ loc_nonsp LBL: h332 ARG0: e400 ARG1: x331 ARG2: x397 ]               |
+|               |           [ def_implicit_q LBL: h414 ARG0: x397 RSTR: h412 BODY: h413 ]          |
+|               |           [ _west_a_1 LBL: h399 ARG0: i396 ARG1: x397 ARG2: x384 ]               |
+|               |           [ def_udef_a_q LBL: h409 ARG0: x384 RSTR: h407 BODY: h408 ]            |
+|               |           [ _immovable_a_1 LBL: h385 ARG0: e393 ARG1: x384 ]                     |
+|               |           [ _dock_n_1 LBL: h385 ARG0: x384 ]                                     |
+|               |           [ place_n LBL: h399 ARG0: x397 ]                                       |
+|               |           [ _un-_a_neg LBL: h332 ARG0: i381 ARG1: e377 [ e PERF: - ] ]           |
+|               |           [ _know_v_1 LBL: h332 ARG0: e377 ARG1: u378 ARG2: x331 ]               |
+|               |           [ compound LBL: h332 ARG0: e365 [ e PROG: - ] ARG1: x331 ARG2: x358 ]  |
+|               |           [ udef_q LBL: h363 ARG0: x358 RSTR: h361 BODY: h362 ]                  |
+|               |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|               |           [ _small_a_1 LBL: h332 ARG0: e355 ARG1: x331 ]                         |
+|               |           [ _to_p LBL: h332 ARG0: e346 ARG1: x331 ARG2: x344 ]                   |
+|               |           [ def_udef_a_q LBL: h353 ARG0: x344 RSTR: h351 BODY: h352 ]            |
+|               |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|               |           [ _from_p LBL: h332 ARG0: e335 ARG1: x331 ARG2: x333 ]                 |
+|               |           [ def_udef_a_q LBL: h342 ARG0: x333 RSTR: h340 BODY: h341 ]            |
+|               |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|               |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|               |   HCONS: < h407 qeq h385 h412 qeq h399 h361 qeq h359 h351 qeq h345 h340 qeq h334 |
+|               | h417 qeq h332 h424 qeq h420 >                                                    |
+|               |   ICONS: < e377 topic x331 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------+
+|                                                NODE SEMENTS                                               |
++------------------------+----------------------------------------------------------------------------------+
+| Node                   | Generated SEMENT                                                                 |
++------------------------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor | [ TOP: h332                                                                      |
+|                        |   INDEX: x331                                                                    |
+|                        |   RELS: < [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|                        |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|                        |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|                        |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|                        |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|                        |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|                        |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|                        |   HCONS: < h351 qeq h345 h340 qeq h334 >                                         |
+|                        |   EQS: < x350 eq x344 h349 eq h354 i348 eq x350 x339 eq x333 h338 eq h343 u337   |
+|                        | eq x339 h338 eq h332 u336 eq x331 h349 eq h332 u347 eq x331 > ]                  |
++------------------------+----------------------------------------------------------------------------------+
+| small                  | [ TOP: h357                                                                      |
+|                        |   INDEX: e355                                                                    |
+|                        |   RELS: < [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ] >                       |
+|                        |   SLOTS: < ARG1: u356 > ]                                                        |
++------------------------+----------------------------------------------------------------------------------+
+| idmetal                | [ TOP: h359                                                                      |
+|                        |   INDEX: x358                                                                    |
+|                        |   RELS: < [ _metal_n_1 LBL: h359 ARG0: x358 ] > ]                                |
++------------------------+----------------------------------------------------------------------------------+
+| true                   | [ TOP: h372                                                                      |
+|                        |   INDEX: e369                                                                    |
+|                        |   RELS: < [ _true_a_of LBL: h372 ARG0: e369 ARG1: u370 ARG2: u371 ] >            |
+|                        |   SLOTS: < ARG1: u370 ARG2: u371 > ]                                             |
++------------------------+----------------------------------------------------------------------------------+
+| idDock1                | [ TOP: h385                                                                      |
+|                        |   INDEX: x384                                                                    |
+|                        |   RELS: < [ _dock_n_1 LBL: h385 ARG0: x384 ] > ]                                 |
++------------------------+----------------------------------------------------------------------------------+
+| yes                    | [ TOP: h389                                                                      |
+|                        |   INDEX: e386                                                                    |
+|                        |   RELS: < [ _true_a_of LBL: h389 ARG0: e386 ARG1: u387 ARG2: u388 ] >            |
+|                        |   SLOTS: < ARG1: u387 ARG2: u388 > ]                                             |
++------------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                            EDGE SEMENTS                                                                           |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| Edge                                        | Parent                 | Child   | Generated SEMENT                                                                 |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor_prop_idSize          | idClosetToWorkshopDoor | small   | [ TOP: h332                                                                      |
+|                                             |                        |         |   INDEX: x331                                                                    |
+|                                             |                        |         |   RELS: < [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ]                         |
+|                                             |                        |         |           [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|                                             |                        |         |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|                                             |                        |         |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|                                             |                        |         |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|                                             |                        |         |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|                                             |                        |         |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|                                             |                        |         |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|                                             |                        |         |   HCONS: < h351 qeq h345 h340 qeq h334 >                                         |
+|                                             |                        |         |   EQS: < x350 eq x344 h349 eq h354 i348 eq x350 x339 eq x333 h338 eq h343 u337   |
+|                                             |                        |         | eq x339 h338 eq h332 u336 eq x331 h349 eq h332 u347 eq x331 h357 eq h332 u356 eq |
+|                                             |                        |         | x331 > ]                                                                         |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor_prop_idMaterial      | idClosetToWorkshopDoor | idmetal | [ TOP: h332                                                                      |
+|                                             |                        |         |   INDEX: x331                                                                    |
+|                                             |                        |         |   RELS: < [ compound LBL: h368 ARG0: e365 [ e PROG: - ] ARG1: u366 ARG2: u367 ]  |
+|                                             |                        |         |           [ udef_q LBL: h363 ARG0: x360 RSTR: h361 BODY: h362 ]                  |
+|                                             |                        |         |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|                                             |                        |         |           [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ]                         |
+|                                             |                        |         |           [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|                                             |                        |         |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|                                             |                        |         |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|                                             |                        |         |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|                                             |                        |         |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|                                             |                        |         |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|                                             |                        |         |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|                                             |                        |         |   HCONS: < h361 qeq h359 h351 qeq h345 h340 qeq h334 >                           |
+|                                             |                        |         |   EQS: < x360 eq x358 h368 eq h364 u367 eq x360 x350 eq x344 h349 eq h354 i348   |
+|                                             |                        |         | eq x350 x339 eq x333 h338 eq h343 u337 eq x339 h338 eq h332 u336 eq x331 h349 eq |
+|                                             |                        |         | h332 u347 eq x331 h357 eq h332 u356 eq x331 h368 eq h332 u366 eq x331 > ]        |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| idClosetToWorkshopDoor_prop_idUnknownObject | idClosetToWorkshopDoor | true    | [ TOP: h332                                                                      |
+|                                             |                        |         |   INDEX: x331                                                                    |
+|                                             |                        |         |   RELS: < [ _un-_a_neg LBL: h383 ARG0: i381 ARG1: e382 ]                         |
+|                                             |                        |         |           [ _know_v_1 LBL: h380 ARG0: e377 [ e PERF: - ] ARG1: u378 ARG2: i379 ] |
+|                                             |                        |         |           [ compound LBL: h368 ARG0: e365 [ e PROG: - ] ARG1: u366 ARG2: u367 ]  |
+|                                             |                        |         |           [ udef_q LBL: h363 ARG0: x360 RSTR: h361 BODY: h362 ]                  |
+|                                             |                        |         |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|                                             |                        |         |           [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ]                         |
+|                                             |                        |         |           [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|                                             |                        |         |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|                                             |                        |         |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|                                             |                        |         |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|                                             |                        |         |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|                                             |                        |         |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|                                             |                        |         |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|                                             |                        |         |   HCONS: < h361 qeq h359 h351 qeq h345 h340 qeq h334 >                           |
+|                                             |                        |         |   ICONS: < e377 topic i379 >                                                     |
+|                                             |                        |         |   EQS: < h383 eq h380 e382 eq e377 x360 eq x358 h368 eq h364 u367 eq x360 x350   |
+|                                             |                        |         | eq x344 h349 eq h354 i348 eq x350 x339 eq x333 h338 eq h343 u337 eq x339 h338 eq |
+|                                             |                        |         | h332 u336 eq x331 h349 eq h332 u347 eq x331 h357 eq h332 u356 eq x331 h368 eq    |
+|                                             |                        |         | h332 u366 eq x331 h380 eq h332 i379 eq x331 > ]                                  |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| isWestOf                                    | idClosetToWorkshopDoor | idDock1 | [ TOP: h332                                                                      |
+|                                             |                        |         |   INDEX: x331                                                                    |
+|                                             |                        |         |   RELS: < [ loc_nonsp LBL: h403 ARG0: e400 ARG1: u401 ARG2: x402 ]               |
+|                                             |                        |         |           [ def_implicit_q LBL: h414 ARG0: x411 RSTR: h412 BODY: h413 ]          |
+|                                             |                        |         |           [ _west_a_1 LBL: h399 ARG0: i396 ARG1: x397 ARG2: u398 ]               |
+|                                             |                        |         |           [ def_udef_a_q LBL: h409 ARG0: x406 RSTR: h407 BODY: h408 ]            |
+|                                             |                        |         |           [ _immovable_a_1 LBL: h395 ARG0: e393 ARG1: u394 ]                     |
+|                                             |                        |         |           [ _dock_n_1 LBL: h385 ARG0: x384 ]                                     |
+|                                             |                        |         |           [ place_n LBL: h405 ARG0: x404 ]                                       |
+|                                             |                        |         |           [ _un-_a_neg LBL: h383 ARG0: i381 ARG1: e382 ]                         |
+|                                             |                        |         |           [ _know_v_1 LBL: h380 ARG0: e377 [ e PERF: - ] ARG1: u378 ARG2: i379 ] |
+|                                             |                        |         |           [ compound LBL: h368 ARG0: e365 [ e PROG: - ] ARG1: u366 ARG2: u367 ]  |
+|                                             |                        |         |           [ udef_q LBL: h363 ARG0: x360 RSTR: h361 BODY: h362 ]                  |
+|                                             |                        |         |           [ _metal_n_1 LBL: h359 ARG0: x358 ]                                    |
+|                                             |                        |         |           [ _small_a_1 LBL: h357 ARG0: e355 ARG1: u356 ]                         |
+|                                             |                        |         |           [ _to_p LBL: h349 ARG0: e346 ARG1: u347 ARG2: i348 ]                   |
+|                                             |                        |         |           [ def_udef_a_q LBL: h353 ARG0: x350 RSTR: h351 BODY: h352 ]            |
+|                                             |                        |         |           [ _workshop_n_1 LBL: h345 ARG0: x344 ]                                 |
+|                                             |                        |         |           [ _from_p LBL: h338 ARG0: e335 ARG1: u336 ARG2: u337 ]                 |
+|                                             |                        |         |           [ def_udef_a_q LBL: h342 ARG0: x339 RSTR: h340 BODY: h341 ]            |
+|                                             |                        |         |           [ _closet_n_1 LBL: h334 ARG0: x333 ]                                   |
+|                                             |                        |         |           [ _door_n_1 LBL: h332 ARG0: x331 ] >                                   |
+|                                             |                        |         |   HCONS: < h407 qeq h385 h412 qeq h405 h361 qeq h359 h351 qeq h345 h340 qeq h334 |
+|                                             |                        |         | >                                                                                |
+|                                             |                        |         |   ICONS: < e377 topic i379 >                                                     |
+|                                             |                        |         |   EQS: < h395 eq h385 u394 eq x384 x406 eq x384 h399 eq h410 u398 eq x406 h399   |
+|                                             |                        |         | eq h405 x397 eq x404 x411 eq x404 h403 eq h415 x402 eq x411 h383 eq h380 e382 eq |
+|                                             |                        |         | e377 x360 eq x358 h368 eq h364 u367 eq x360 x350 eq x344 h349 eq h354 i348 eq    |
+|                                             |                        |         | x350 x339 eq x333 h338 eq h343 u337 eq x339 h338 eq h332 u336 eq x331 h349 eq    |
+|                                             |                        |         | h332 u347 eq x331 h357 eq h332 u356 eq x331 h368 eq h332 u366 eq x331 h380 eq    |
+|                                             |                        |         | h332 i379 eq x331 h403 eq h332 u401 eq x331 > ]                                  |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+| idDock1_prop_idImmovable                    | idDock1                | yes     | [ TOP: h385                                                                      |
+|                                             |                        |         |   INDEX: x384                                                                    |
+|                                             |                        |         |   RELS: < [ _immovable_a_1 LBL: h395 ARG0: e393 ARG1: u394 ]                     |
+|                                             |                        |         |           [ _dock_n_1 LBL: h385 ARG0: x384 ] >                                   |
+|                                             |                        |         |   EQS: < h395 eq h385 u394 eq x384 > ]                                           |
++---------------------------------------------+------------------------+---------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------+
+|                                        GENERATED ENGLISH TEXT                                       |
++------+----------------------------------------------------------------------------------------------+
+| #    | Generated Text                                                                               |
++------+----------------------------------------------------------------------------------------------+
+| 1    | A metals small unknown door to the workshop west of an immovable dock from the closet        |
+| 2    | A metals small unknown door to the workshop west of an immovable dock from the closets       |
+| 3    | A metals small unknown door to the workshop west of the immovable dock from the closet       |
+| 4    | A metals small unknown door to the workshop west of the immovable dock from the closets      |
+| 5    | A metals small unknown door to the workshop west of the immovable docks from the closet      |
+| 6    | A metals small unknown door to the workshop west of the immovable docks from the closets     |
+| 7    | A small unknown metal door from a closet to the workshop west of an immovable dock           |
+| 8    | A small unknown metal door from a closet to the workshop west of the immovable dock          |
+| 9    | A small unknown metal door from a closet to the workshop west of the immovable docks         |
+| 10   | A small unknown metal door from a closet west of an immovable dock to a workshop             |
+| 11   | A small unknown metal door from a closet west of an immovable dock to the workshop           |
+| 12   | A small unknown metal door from a closet west of an immovable dock to the workshops          |
+| 13   | A small unknown metal door from a closet west of the immovable dock to a workshop            |
+| 14   | A small unknown metal door from a closet west of the immovable dock to the workshop          |
+| 15   | A small unknown metal door from a closet west of the immovable dock to the workshops         |
+| 16   | A small unknown metal door from a closet west of the immovable docks to a workshop           |
+| 17   | A small unknown metal door from a closet west of the immovable docks to the workshop         |
+| 18   | A small unknown metal door from a closet west of the immovable docks to the workshops        |
+| 19   | A small unknown metal door from closets to the workshop west of an immovable dock            |
+| 20   | A small unknown metal door from closets to the workshop west of the immovable dock           |
+| 21   | A small unknown metal door from closets to the workshop west of the immovable docks          |
+| 22   | A small unknown metal door from closets west of an immovable dock to a workshop              |
+| 23   | A small unknown metal door from closets west of an immovable dock to the workshop            |
+| 24   | A small unknown metal door from closets west of an immovable dock to the workshops           |
+| 25   | A small unknown metal door from closets west of the immovable dock to a workshop             |
+| 26   | A small unknown metal door from closets west of the immovable dock to the workshop           |
+| 27   | A small unknown metal door from closets west of the immovable dock to the workshops          |
+| 28   | A small unknown metal door from closets west of the immovable docks to a workshop            |
+| 29   | A small unknown metal door from closets west of the immovable docks to the workshop          |
+| 30   | A small unknown metal door from closets west of the immovable docks to the workshops         |
+| 31   | A small unknown metal door from the closet to a workshop west of an immovable dock           |
+| 32   | A small unknown metal door from the closet to a workshop west of the immovable dock          |
+| 33   | A small unknown metal door from the closet to a workshop west of the immovable docks         |
+| 34   | A small unknown metal door from the closet to the workshop west of an immovable dock         |
+| 35   | A small unknown metal door from the closet to the workshop west of the immovable dock        |
+| 36   | A small unknown metal door from the closet to the workshop west of the immovable docks       |
+| 37   | A small unknown metal door from the closet to the workshop west of the immovable docks.      |
+| 38   | A small unknown metal door from the closet west of an immovable dock to a workshop           |
+| 39   | A small unknown metal door from the closet west of an immovable dock to the workshop         |
+| 40   | A small unknown metal door from the closet west of an immovable dock to the workshops        |
+| 41   | A small unknown metal door from the closet west of an immovable dock to the workshops.       |
+| 42   | A small unknown metal door from the closet west of an immovable dock to workshops            |
+| 43   | A small unknown metal door from the closet west of immovable docks to the workshop           |
+| 44   | A small unknown metal door from the closet west of immovable docks to the workshops          |
+| 45   | A small unknown metal door from the closet west of the immovable dock to a workshop          |
+| 46   | A small unknown metal door from the closet west of the immovable dock to the workshop        |
+| 47   | A small unknown metal door from the closet west of the immovable dock to the workshops       |
+| 48   | A small unknown metal door from the closet west of the immovable dock to the workshops.      |
+| 49   | A small unknown metal door from the closet west of the immovable dock to workshops           |
+| 50   | A small unknown metal door from the closet west of the immovable docks to a workshop         |
+| 51   | A small unknown metal door from the closet west of the immovable docks to the workshop       |
+| 52   | A small unknown metal door from the closet west of the immovable docks to the workshops      |
+| 53   | A small unknown metal door from the closet west of the immovable docks to the workshops.     |
+| 54   | A small unknown metal door from the closet west of the immovable docks to workshops          |
+| 55   | A small unknown metal door from the closets west of an immovable dock to the workshop        |
+| 56   | A small unknown metal door from the closets west of an immovable dock to the workshops       |
+| 57   | A small unknown metal door from the closets west of the immovable dock to the workshop       |
+| 58   | A small unknown metal door from the closets west of the immovable dock to the workshops      |
+| 59   | A small unknown metal door from the closets west of the immovable docks to the workshop      |
+| 60   | A small unknown metal door from the closets west of the immovable docks to the workshops     |
+| 61   | A small unknown metal door to a workshop from the closet west of an immovable dock           |
+| 62   | A small unknown metal door to a workshop from the closet west of the immovable dock          |
+| 63   | A small unknown metal door to a workshop from the closet west of the immovable docks         |
+| 64   | A small unknown metal door to a workshop west of an immovable dock from a closet             |
+| 65   | A small unknown metal door to a workshop west of an immovable dock from closets              |
+| 66   | A small unknown metal door to a workshop west of an immovable dock from the closet           |
+| 67   | A small unknown metal door to a workshop west of an immovable dock from the closets          |
+| 68   | A small unknown metal door to a workshop west of an immovable dock from the closets.         |
+| 69   | A small unknown metal door to a workshop west of immovable docks from the closet             |
+| 70   | A small unknown metal door to a workshop west of immovable docks from the closets            |
+| 71   | A small unknown metal door to a workshop west of the immovable dock from a closet            |
+| 72   | A small unknown metal door to a workshop west of the immovable dock from closets             |
+| 73   | A small unknown metal door to a workshop west of the immovable dock from the closet          |
+| 74   | A small unknown metal door to a workshop west of the immovable dock from the closets         |
+| 75   | A small unknown metal door to a workshop west of the immovable dock from the closets.        |
+| 76   | A small unknown metal door to a workshop west of the immovable docks from a closet           |
+| 77   | A small unknown metal door to a workshop west of the immovable docks from closets            |
+| 78   | A small unknown metal door to a workshop west of the immovable docks from the closet         |
+| 79   | A small unknown metal door to a workshop west of the immovable docks from the closets        |
+| 80   | A small unknown metal door to a workshop west of the immovable docks from the closets.       |
+| 81   | A small unknown metal door to the workshop from a closet west of an immovable dock           |
+| 82   | A small unknown metal door to the workshop from a closet west of the immovable dock          |
+| 83   | A small unknown metal door to the workshop from a closet west of the immovable docks         |
+| 84   | A small unknown metal door to the workshop from closets west of an immovable dock            |
+| 85   | A small unknown metal door to the workshop from closets west of the immovable dock           |
+| 86   | A small unknown metal door to the workshop from closets west of the immovable docks          |
+| 87   | A small unknown metal door to the workshop from the closet west of an immovable dock         |
+| 88   | A small unknown metal door to the workshop from the closet west of immovable docks           |
+| 89   | A small unknown metal door to the workshop from the closet west of the immovable dock        |
+| 90   | A small unknown metal door to the workshop from the closet west of the immovable docks       |
+| 91   | A small unknown metal door to the workshop from the closet west of the immovable docks.      |
+| 92   | A small unknown metal door to the workshop from the closets west of an immovable dock        |
+| 93   | A small unknown metal door to the workshop from the closets west of the immovable dock       |
+| 94   | A small unknown metal door to the workshop from the closets west of the immovable docks      |
+| 95   | A small unknown metal door to the workshop west of an immovable dock from a closet           |
+| 96   | A small unknown metal door to the workshop west of an immovable dock from a closet.          |
+| 97   | A small unknown metal door to the workshop west of an immovable dock from closets            |
+| 98   | A small unknown metal door to the workshop west of an immovable dock from closets.           |
+| 99   | A small unknown metal door to the workshop west of an immovable dock from the closet         |
+| 100  | A small unknown metal door to the workshop west of an immovable dock from the closet.        |
+| 101  | A small unknown metal door to the workshop west of an immovable dock from the closets        |
+| 102  | A small unknown metal door to the workshop west of an immovable dock from the closets.       |
+| 103  | A small unknown metal door to the workshop west of immovable docks from a closet             |
+| 104  | A small unknown metal door to the workshop west of immovable docks from closets              |
+| 105  | A small unknown metal door to the workshop west of immovable docks from the closet           |
+| 106  | A small unknown metal door to the workshop west of immovable docks from the closets          |
+| 107  | A small unknown metal door to the workshop west of immovable docks from the closets.         |
+| 108  | A small unknown metal door to the workshop west of the immovable dock from a closet          |
+| 109  | A small unknown metal door to the workshop west of the immovable dock from a closet.         |
+| 110  | A small unknown metal door to the workshop west of the immovable dock from closets           |
+| 111  | A small unknown metal door to the workshop west of the immovable dock from closets.          |
+| 112  | A small unknown metal door to the workshop west of the immovable dock from the closet        |
+| 113  | A small unknown metal door to the workshop west of the immovable dock from the closet.       |
+| 114  | A small unknown metal door to the workshop west of the immovable dock from the closets       |
+| 115  | A small unknown metal door to the workshop west of the immovable dock from the closets.      |
+| 116  | A small unknown metal door to the workshop west of the immovable docks from a closet         |
+| 117  | A small unknown metal door to the workshop west of the immovable docks from a closet.        |
+| 118  | A small unknown metal door to the workshop west of the immovable docks from closets          |
+| 119  | A small unknown metal door to the workshop west of the immovable docks from closets.         |
+| 120  | A small unknown metal door to the workshop west of the immovable docks from the closet       |
+| 121  | A small unknown metal door to the workshop west of the immovable docks from the closet.      |
+| 122  | A small unknown metal door to the workshop west of the immovable docks from the closets      |
+| 123  | A small unknown metal door to the workshop west of the immovable docks from the closets.     |
+| 124  | A small unknown metal door to the workshops from the closet west of an immovable dock        |
+| 125  | A small unknown metal door to the workshops from the closet west of the immovable dock       |
+| 126  | A small unknown metal door to the workshops from the closet west of the immovable docks      |
+| 127  | A small unknown metal door to the workshops west of an immovable dock from a closet          |
+| 128  | A small unknown metal door to the workshops west of an immovable dock from closets           |
+| 129  | A small unknown metal door to the workshops west of an immovable dock from the closet        |
+| 130  | A small unknown metal door to the workshops west of an immovable dock from the closets       |
+| 131  | A small unknown metal door to the workshops west of an immovable dock from the closets.      |
+| 132  | A small unknown metal door to the workshops west of the immovable dock from a closet         |
+| 133  | A small unknown metal door to the workshops west of the immovable dock from closets          |
+| 134  | A small unknown metal door to the workshops west of the immovable dock from the closet       |
+| 135  | A small unknown metal door to the workshops west of the immovable dock from the closets      |
+| 136  | A small unknown metal door to the workshops west of the immovable dock from the closets.     |
+| 137  | A small unknown metal door to the workshops west of the immovable docks from a closet        |
+| 138  | A small unknown metal door to the workshops west of the immovable docks from closets         |
+| 139  | A small unknown metal door to the workshops west of the immovable docks from the closet      |
+| 140  | A small unknown metal door to the workshops west of the immovable docks from the closets     |
+| 141  | A small unknown metal door to the workshops west of the immovable docks from the closets.    |
+| 142  | A small unknown metal door to workshops from the closet west of an immovable dock            |
+| 143  | A small unknown metal door to workshops from the closet west of the immovable dock           |
+| 144  | A small unknown metal door to workshops from the closet west of the immovable docks          |
+| 145  | A small unknown metal door to workshops west of an immovable dock from a closet              |
+| 146  | A small unknown metal door to workshops west of an immovable dock from closets               |
+| 147  | A small unknown metal door to workshops west of an immovable dock from the closet            |
+| 148  | A small unknown metal door to workshops west of an immovable dock from the closets           |
+| 149  | A small unknown metal door to workshops west of an immovable dock from the closets.          |
+| 150  | A small unknown metal door to workshops west of the immovable dock from a closet             |
+| 151  | A small unknown metal door to workshops west of the immovable dock from closets              |
+| 152  | A small unknown metal door to workshops west of the immovable dock from the closet           |
+| 153  | A small unknown metal door to workshops west of the immovable dock from the closets          |
+| 154  | A small unknown metal door to workshops west of the immovable dock from the closets.         |
+| 155  | A small unknown metal door to workshops west of the immovable docks from a closet            |
+| 156  | A small unknown metal door to workshops west of the immovable docks from closets             |
+| 157  | A small unknown metal door to workshops west of the immovable docks from the closet          |
+| 158  | A small unknown metal door to workshops west of the immovable docks from the closets         |
+| 159  | A small unknown metal door to workshops west of the immovable docks from the closets.        |
+| 160  | A small unknown metal door west of an immovable dock from the closet to the workshops        |
+| 161  | A small unknown metal door west of an immovable dock to the workshop from a closet           |
+| 162  | A small unknown metal door west of an immovable dock to the workshop from the closet         |
+| 163  | A small unknown metal door west of an immovable dock to the workshop from the closets        |
+| 164  | A small unknown metal door west of the immovable dock from the closet to the workshops       |
+| 165  | A small unknown metal door west of the immovable dock to the workshop from a closet          |
+| 166  | A small unknown metal door west of the immovable dock to the workshop from the closet        |
+| 167  | A small unknown metal door west of the immovable dock to the workshop from the closets       |
+| 168  | A small unknown metal door west of the immovable docks from the closet to the workshop       |
+| 169  | A small unknown metal door west of the immovable docks from the closet to the workshops      |
+| 170  | A small unknown metal door west of the immovable docks to the workshop from a closet         |
+| 171  | A small unknown metal door west of the immovable docks to the workshop from the closet       |
+| 172  | A small unknown metal door west of the immovable docks to the workshop from the closets      |
+| 173  | An unknown small metal door from a closet to the workshop west of an immovable dock          |
+| 174  | An unknown small metal door from a closet to the workshop west of the immovable dock         |
+| 175  | An unknown small metal door from a closet to the workshop west of the immovable docks        |
+| 176  | An unknown small metal door from a closet west of an immovable dock to a workshop            |
+| 177  | An unknown small metal door from a closet west of an immovable dock to the workshop          |
+| 178  | An unknown small metal door from a closet west of an immovable dock to the workshops         |
+| 179  | An unknown small metal door from a closet west of the immovable dock to a workshop           |
+| 180  | An unknown small metal door from a closet west of the immovable dock to the workshop         |
+| 181  | An unknown small metal door from a closet west of the immovable dock to the workshops        |
+| 182  | An unknown small metal door from a closet west of the immovable docks to a workshop          |
+| 183  | An unknown small metal door from a closet west of the immovable docks to the workshop        |
+| 184  | An unknown small metal door from a closet west of the immovable docks to the workshops       |
+| 185  | An unknown small metal door from a closet west of the immovable docks to the workshops.      |
+| 186  | An unknown small metal door from closets to the workshop west of an immovable dock           |
+| 187  | An unknown small metal door from closets to the workshop west of the immovable dock          |
+| 188  | An unknown small metal door from closets to the workshop west of the immovable docks         |
+| 189  | An unknown small metal door from closets west of an immovable dock to a workshop             |
+| 190  | An unknown small metal door from closets west of an immovable dock to the workshop           |
+| 191  | An unknown small metal door from closets west of an immovable dock to the workshops          |
+| 192  | An unknown small metal door from closets west of the immovable dock to a workshop            |
+| 193  | An unknown small metal door from closets west of the immovable dock to the workshop          |
+| 194  | An unknown small metal door from closets west of the immovable dock to the workshops         |
+| 195  | An unknown small metal door from closets west of the immovable docks to a workshop           |
+| 196  | An unknown small metal door from closets west of the immovable docks to the workshop         |
+| 197  | An unknown small metal door from closets west of the immovable docks to the workshops        |
+| 198  | An unknown small metal door from closets west of the immovable docks to the workshops.       |
+| 199  | An unknown small metal door from the closet to a workshop west of an immovable dock          |
+| 200  | An unknown small metal door from the closet to a workshop west of the immovable dock         |
+| 201  | An unknown small metal door from the closet to a workshop west of the immovable docks        |
+| 202  | An unknown small metal door from the closet to the workshop west of an immovable dock        |
+| 203  | An unknown small metal door from the closet to the workshop west of immovable docks          |
+| 204  | An unknown small metal door from the closet to the workshop west of the immovable dock       |
+| 205  | An unknown small metal door from the closet to the workshop west of the immovable docks      |
+| 206  | An unknown small metal door from the closet to the workshop west of the immovable docks.     |
+| 207  | An unknown small metal door from the closet to the workshops west of an immovable dock       |
+| 208  | An unknown small metal door from the closet to the workshops west of the immovable dock      |
+| 209  | An unknown small metal door from the closet to the workshops west of the immovable docks     |
+| 210  | An unknown small metal door from the closet to workshops west of the immovable dock          |
+| 211  | An unknown small metal door from the closet to workshops west of the immovable docks         |
+| 212  | An unknown small metal door from the closet west of an immovable dock to a workshop          |
+| 213  | An unknown small metal door from the closet west of an immovable dock to the workshop        |
+| 214  | An unknown small metal door from the closet west of an immovable dock to the workshops       |
+| 215  | An unknown small metal door from the closet west of an immovable dock to the workshops.      |
+| 216  | An unknown small metal door from the closet west of an immovable dock to workshops           |
+| 217  | An unknown small metal door from the closet west of immovable docks to the workshop          |
+| 218  | An unknown small metal door from the closet west of immovable docks to the workshops         |
+| 219  | An unknown small metal door from the closet west of the immovable dock to a workshop         |
+| 220  | An unknown small metal door from the closet west of the immovable dock to the workshop       |
+| 221  | An unknown small metal door from the closet west of the immovable dock to the workshops      |
+| 222  | An unknown small metal door from the closet west of the immovable dock to the workshops.     |
+| 223  | An unknown small metal door from the closet west of the immovable dock to workshops          |
+| 224  | An unknown small metal door from the closet west of the immovable docks to a workshop        |
+| 225  | An unknown small metal door from the closet west of the immovable docks to the workshop      |
+| 226  | An unknown small metal door from the closet west of the immovable docks to the workshops     |
+| 227  | An unknown small metal door from the closet west of the immovable docks to the workshops.    |
+| 228  | An unknown small metal door from the closet west of the immovable docks to workshops         |
+| 229  | An unknown small metal door from the closets to the workshop west of an immovable dock       |
+| 230  | An unknown small metal door from the closets to the workshop west of the immovable dock      |
+| 231  | An unknown small metal door from the closets to the workshop west of the immovable docks     |
+| 232  | An unknown small metal door from the closets west of an immovable dock to the workshop       |
+| 233  | An unknown small metal door from the closets west of an immovable dock to the workshops      |
+| 234  | An unknown small metal door from the closets west of the immovable dock to the workshop      |
+| 235  | An unknown small metal door from the closets west of the immovable dock to the workshops     |
+| 236  | An unknown small metal door from the closets west of the immovable docks to the workshop     |
+| 237  | An unknown small metal door from the closets west of the immovable docks to the workshops    |
+| 238  | An unknown small metal door to a workshop from a closet west of the immovable docks          |
+| 239  | An unknown small metal door to a workshop from the closet west of an immovable dock          |
+| 240  | An unknown small metal door to a workshop from the closet west of the immovable dock         |
+| 241  | An unknown small metal door to a workshop from the closet west of the immovable docks        |
+| 242  | An unknown small metal door to a workshop west of an immovable dock from a closet            |
+| 243  | An unknown small metal door to a workshop west of an immovable dock from closets             |
+| 244  | An unknown small metal door to a workshop west of an immovable dock from closets.            |
+| 245  | An unknown small metal door to a workshop west of an immovable dock from the closet          |
+| 246  | An unknown small metal door to a workshop west of an immovable dock from the closets         |
+| 247  | An unknown small metal door to a workshop west of an immovable dock from the closets.        |
+| 248  | An unknown small metal door to a workshop west of immovable docks from a closet              |
+| 249  | An unknown small metal door to a workshop west of immovable docks from the closet            |
+| 250  | An unknown small metal door to a workshop west of immovable docks from the closets           |
+| 251  | An unknown small metal door to a workshop west of the immovable dock from a closet           |
+| 252  | An unknown small metal door to a workshop west of the immovable dock from closets            |
+| 253  | An unknown small metal door to a workshop west of the immovable dock from closets.           |
+| 254  | An unknown small metal door to a workshop west of the immovable dock from the closet         |
+| 255  | An unknown small metal door to a workshop west of the immovable dock from the closets        |
+| 256  | An unknown small metal door to a workshop west of the immovable dock from the closets.       |
+| 257  | An unknown small metal door to a workshop west of the immovable docks from a closet          |
+| 258  | An unknown small metal door to a workshop west of the immovable docks from a closet.         |
+| 259  | An unknown small metal door to a workshop west of the immovable docks from closets           |
+| 260  | An unknown small metal door to a workshop west of the immovable docks from closets.          |
+| 261  | An unknown small metal door to a workshop west of the immovable docks from the closet        |
+| 262  | An unknown small metal door to a workshop west of the immovable docks from the closets       |
+| 263  | An unknown small metal door to a workshop west of the immovable docks from the closets.      |
+| 264  | An unknown small metal door to the workshop from a closet west of an immovable dock          |
+| 265  | An unknown small metal door to the workshop from a closet west of the immovable dock         |
+| 266  | An unknown small metal door to the workshop from a closet west of the immovable docks        |
+| 267  | An unknown small metal door to the workshop from closets west of an immovable dock           |
+| 268  | An unknown small metal door to the workshop from closets west of the immovable dock          |
+| 269  | An unknown small metal door to the workshop from closets west of the immovable docks         |
+| 270  | An unknown small metal door to the workshop from the closet west of an immovable dock        |
+| 271  | An unknown small metal door to the workshop from the closet west of immovable docks          |
+| 272  | An unknown small metal door to the workshop from the closet west of the immovable dock       |
+| 273  | An unknown small metal door to the workshop from the closet west of the immovable docks      |
+| 274  | An unknown small metal door to the workshop from the closet west of the immovable docks.     |
+| 275  | An unknown small metal door to the workshop from the closets west of an immovable dock       |
+| 276  | An unknown small metal door to the workshop from the closets west of the immovable dock      |
+| 277  | An unknown small metal door to the workshop from the closets west of the immovable docks     |
+| 278  | An unknown small metal door to the workshop west of an immovable dock from a closet          |
+| 279  | An unknown small metal door to the workshop west of an immovable dock from a closet.         |
+| 280  | An unknown small metal door to the workshop west of an immovable dock from closets           |
+| 281  | An unknown small metal door to the workshop west of an immovable dock from closets.          |
+| 282  | An unknown small metal door to the workshop west of an immovable dock from the closet        |
+| 283  | An unknown small metal door to the workshop west of an immovable dock from the closet.       |
+| 284  | An unknown small metal door to the workshop west of an immovable dock from the closets       |
+| 285  | An unknown small metal door to the workshop west of an immovable dock from the closets.      |
+| 286  | An unknown small metal door to the workshop west of immovable docks from a closet            |
+| 287  | An unknown small metal door to the workshop west of immovable docks from closets             |
+| 288  | An unknown small metal door to the workshop west of immovable docks from the closet          |
+| 289  | An unknown small metal door to the workshop west of immovable docks from the closets         |
+| 290  | An unknown small metal door to the workshop west of immovable docks from the closets.        |
+| 291  | An unknown small metal door to the workshop west of the immovable dock from a closet         |
+| 292  | An unknown small metal door to the workshop west of the immovable dock from a closet.        |
+| 293  | An unknown small metal door to the workshop west of the immovable dock from closets          |
+| 294  | An unknown small metal door to the workshop west of the immovable dock from closets.         |
+| 295  | An unknown small metal door to the workshop west of the immovable dock from the closet       |
+| 296  | An unknown small metal door to the workshop west of the immovable dock from the closet.      |
+| 297  | An unknown small metal door to the workshop west of the immovable dock from the closets      |
+| 298  | An unknown small metal door to the workshop west of the immovable dock from the closets.     |
+| 299  | An unknown small metal door to the workshop west of the immovable docks from a closet        |
+| 300  | An unknown small metal door to the workshop west of the immovable docks from a closet.       |
+| 301  | An unknown small metal door to the workshop west of the immovable docks from closets         |
+| 302  | An unknown small metal door to the workshop west of the immovable docks from closets.        |
+| 303  | An unknown small metal door to the workshop west of the immovable docks from the closet      |
+| 304  | An unknown small metal door to the workshop west of the immovable docks from the closet.     |
+| 305  | An unknown small metal door to the workshop west of the immovable docks from the closets     |
+| 306  | An unknown small metal door to the workshop west of the immovable docks from the closets.    |
+| 307  | An unknown small metal door to the workshops from the closet west of an immovable dock       |
+| 308  | An unknown small metal door to the workshops from the closet west of the immovable dock      |
+| 309  | An unknown small metal door to the workshops from the closet west of the immovable docks     |
+| 310  | An unknown small metal door to the workshops west of an immovable dock from a closet         |
+| 311  | An unknown small metal door to the workshops west of an immovable dock from closets          |
+| 312  | An unknown small metal door to the workshops west of an immovable dock from the closet       |
+| 313  | An unknown small metal door to the workshops west of an immovable dock from the closets      |
+| 314  | An unknown small metal door to the workshops west of an immovable dock from the closets.     |
+| 315  | An unknown small metal door to the workshops west of immovable docks from the closets        |
+| 316  | An unknown small metal door to the workshops west of the immovable dock from a closet        |
+| 317  | An unknown small metal door to the workshops west of the immovable dock from closets         |
+| 318  | An unknown small metal door to the workshops west of the immovable dock from the closet      |
+| 319  | An unknown small metal door to the workshops west of the immovable dock from the closets     |
+| 320  | An unknown small metal door to the workshops west of the immovable dock from the closets.    |
+| 321  | An unknown small metal door to the workshops west of the immovable docks from a closet       |
+| 322  | An unknown small metal door to the workshops west of the immovable docks from closets        |
+| 323  | An unknown small metal door to the workshops west of the immovable docks from the closet     |
+| 324  | An unknown small metal door to the workshops west of the immovable docks from the closets    |
+| 325  | An unknown small metal door to the workshops west of the immovable docks from the closets.   |
+| 326  | An unknown small metal door to workshops from the closet west of an immovable dock           |
+| 327  | An unknown small metal door to workshops from the closet west of the immovable dock          |
+| 328  | An unknown small metal door to workshops from the closet west of the immovable docks         |
+| 329  | An unknown small metal door to workshops west of an immovable dock from a closet             |
+| 330  | An unknown small metal door to workshops west of an immovable dock from closets              |
+| 331  | An unknown small metal door to workshops west of an immovable dock from the closet           |
+| 332  | An unknown small metal door to workshops west of an immovable dock from the closets          |
+| 333  | An unknown small metal door to workshops west of an immovable dock from the closets.         |
+| 334  | An unknown small metal door to workshops west of immovable docks from the closets            |
+| 335  | An unknown small metal door to workshops west of the immovable dock from a closet            |
+| 336  | An unknown small metal door to workshops west of the immovable dock from closets             |
+| 337  | An unknown small metal door to workshops west of the immovable dock from the closet          |
+| 338  | An unknown small metal door to workshops west of the immovable dock from the closets         |
+| 339  | An unknown small metal door to workshops west of the immovable dock from the closets.        |
+| 340  | An unknown small metal door to workshops west of the immovable docks from a closet           |
+| 341  | An unknown small metal door to workshops west of the immovable docks from closets            |
+| 342  | An unknown small metal door to workshops west of the immovable docks from the closet         |
+| 343  | An unknown small metal door to workshops west of the immovable docks from the closets        |
+| 344  | An unknown small metal door to workshops west of the immovable docks from the closets.       |
+| 345  | An unknown small metal door west of an immovable dock from the closet to the workshop        |
+| 346  | An unknown small metal door west of an immovable dock from the closet to the workshops       |
+| 347  | An unknown small metal door west of an immovable dock to the workshop from a closet          |
+| 348  | An unknown small metal door west of an immovable dock to the workshop from the closet        |
+| 349  | An unknown small metal door west of an immovable dock to the workshop from the closets       |
+| 350  | An unknown small metal door west of the immovable dock from the closet to the workshop       |
+| 351  | An unknown small metal door west of the immovable dock from the closet to the workshops      |
+| 352  | An unknown small metal door west of the immovable dock to a workshop from the closets        |
+| 353  | An unknown small metal door west of the immovable dock to the workshop from a closet         |
+| 354  | An unknown small metal door west of the immovable dock to the workshop from the closet       |
+| 355  | An unknown small metal door west of the immovable dock to the workshop from the closets      |
+| 356  | An unknown small metal door west of the immovable docks from the closet to the workshop      |
+| 357  | An unknown small metal door west of the immovable docks from the closet to the workshops     |
+| 358  | An unknown small metal door west of the immovable docks to a workshop from the closets       |
+| 359  | An unknown small metal door west of the immovable docks to the workshop from a closet        |
+| 360  | An unknown small metal door west of the immovable docks to the workshop from closets         |
+| 361  | An unknown small metal door west of the immovable docks to the workshop from the closet      |
+| 362  | An unknown small metal door west of the immovable docks to the workshop from the closets     |
+| 363  | Metals small unknown doors from a closet to the workshop west of an immovable dock           |
+| 364  | Metals small unknown doors from a closet to the workshop west of the immovable dock          |
+| 365  | Metals small unknown doors from a closet to the workshop west of the immovable docks         |
+| 366  | Metals small unknown doors from closets to the workshop west of an immovable dock            |
+| 367  | Metals small unknown doors from closets to the workshop west of the immovable dock           |
+| 368  | Metals small unknown doors from closets to the workshop west of the immovable docks          |
+| 369  | Metals small unknown doors from the closet to a workshop west of an immovable dock           |
+| 370  | Metals small unknown doors from the closet to a workshop west of the immovable dock          |
+| 371  | Metals small unknown doors from the closet to a workshop west of the immovable docks         |
+| 372  | Metals small unknown doors from the closet to the workshop west of an immovable dock         |
+| 373  | Metals small unknown doors from the closet to the workshop west of the immovable dock        |
+| 374  | Metals small unknown doors from the closet to the workshop west of the immovable docks       |
+| 375  | Metals small unknown doors from the closet to the workshop west of the immovable docks.      |
+| 376  | Metals small unknown doors to a workshop from the closet west of an immovable dock           |
+| 377  | Metals small unknown doors to a workshop from the closet west of the immovable dock          |
+| 378  | Metals small unknown doors to a workshop from the closet west of the immovable docks         |
+| 379  | Metals small unknown doors to the workshop from a closet west of an immovable dock           |
+| 380  | Metals small unknown doors to the workshop from a closet west of the immovable dock          |
+| 381  | Metals small unknown doors to the workshop from a closet west of the immovable docks         |
+| 382  | Metals small unknown doors to the workshop from closets west of an immovable dock            |
+| 383  | Metals small unknown doors to the workshop from closets west of the immovable dock           |
+| 384  | Metals small unknown doors to the workshop from closets west of the immovable docks          |
+| 385  | Metals small unknown doors to the workshop from the closet west of an immovable dock         |
+| 386  | Metals small unknown doors to the workshop from the closet west of immovable docks           |
+| 387  | Metals small unknown doors to the workshop from the closet west of the immovable dock        |
+| 388  | Metals small unknown doors to the workshop from the closet west of the immovable docks       |
+| 389  | Metals small unknown doors to the workshop from the closet west of the immovable docks.      |
+| 390  | Metals small unknown doors to the workshop from the closets west of an immovable dock        |
+| 391  | Metals small unknown doors to the workshop from the closets west of the immovable dock       |
+| 392  | Metals small unknown doors to the workshop from the closets west of the immovable docks      |
+| 393  | Metals small unknown doors to the workshop west of the immovable docks from the closets      |
+| 394  | Metals small unknown doors to the workshops from the closet west of an immovable dock        |
+| 395  | Metals small unknown doors to the workshops from the closet west of the immovable dock       |
+| 396  | Metals small unknown doors to the workshops from the closet west of the immovable docks      |
+| 397  | Metals small unknown doors to workshops from the closet west of an immovable dock            |
+| 398  | Metals small unknown doors to workshops from the closet west of the immovable dock           |
+| 399  | Metals small unknown doors to workshops from the closet west of the immovable docks          |
+| 400  | Small metals unknown doors from the closet to the workshop west of an immovable dock         |
+| 401  | Small metals unknown doors from the closet to the workshop west of the immovable dock        |
+| 402  | Small metals unknown doors from the closet to the workshop west of the immovable docks       |
+| 403  | Small metals unknown doors to the workshop from the closet west of an immovable dock         |
+| 404  | Small metals unknown doors to the workshop from the closet west of the immovable dock        |
+| 405  | Small metals unknown doors to the workshop from the closet west of the immovable docks       |
+| 406  | Small unknown metal doors from a closet to a workshop west of the immovable dock             |
+| 407  | Small unknown metal doors from a closet to a workshop west of the immovable docks            |
+| 408  | Small unknown metal doors from a closet to the workshop west of an immovable dock            |
+| 409  | Small unknown metal doors from a closet to the workshop west of the immovable dock           |
+| 410  | Small unknown metal doors from a closet to the workshop west of the immovable docks          |
+| 411  | Small unknown metal doors from closets to a workshop west of the immovable dock              |
+| 412  | Small unknown metal doors from closets to a workshop west of the immovable docks             |
+| 413  | Small unknown metal doors from closets to the workshop west of an immovable dock             |
+| 414  | Small unknown metal doors from closets to the workshop west of the immovable dock            |
+| 415  | Small unknown metal doors from closets to the workshop west of the immovable docks           |
+| 416  | Small unknown metal doors from the closet to a workshop west of an immovable dock            |
+| 417  | Small unknown metal doors from the closet to a workshop west of the immovable dock           |
+| 418  | Small unknown metal doors from the closet to a workshop west of the immovable docks          |
+| 419  | Small unknown metal doors from the closet to the workshop west of an immovable dock          |
+| 420  | Small unknown metal doors from the closet to the workshop west of immovable docks            |
+| 421  | Small unknown metal doors from the closet to the workshop west of the immovable dock         |
+| 422  | Small unknown metal doors from the closet to the workshop west of the immovable docks        |
+| 423  | Small unknown metal doors from the closet to the workshop west of the immovable docks.       |
+| 424  | Small unknown metal doors from the closet to the workshops west of an immovable dock         |
+| 425  | Small unknown metal doors from the closet to the workshops west of the immovable dock        |
+| 426  | Small unknown metal doors from the closet to the workshops west of the immovable docks       |
+| 427  | Small unknown metal doors from the closet to workshops west of an immovable dock             |
+| 428  | Small unknown metal doors from the closet to workshops west of the immovable dock            |
+| 429  | Small unknown metal doors from the closet to workshops west of the immovable docks           |
+| 430  | Small unknown metal doors from the closets to the workshop west of an immovable dock         |
+| 431  | Small unknown metal doors from the closets to the workshop west of the immovable dock        |
+| 432  | Small unknown metal doors from the closets to the workshop west of the immovable docks       |
+| 433  | Small unknown metal doors to a workshop from a closet west of an immovable dock              |
+| 434  | Small unknown metal doors to a workshop from a closet west of the immovable dock             |
+| 435  | Small unknown metal doors to a workshop from a closet west of the immovable docks            |
+| 436  | Small unknown metal doors to a workshop from closets west of an immovable dock               |
+| 437  | Small unknown metal doors to a workshop from closets west of the immovable dock              |
+| 438  | Small unknown metal doors to a workshop from closets west of the immovable docks             |
+| 439  | Small unknown metal doors to a workshop from the closet west of an immovable dock            |
+| 440  | Small unknown metal doors to a workshop from the closet west of immovable docks              |
+| 441  | Small unknown metal doors to a workshop from the closet west of the immovable dock           |
+| 442  | Small unknown metal doors to a workshop from the closet west of the immovable docks          |
+| 443  | Small unknown metal doors to a workshop from the closet west of the immovable docks.         |
+| 444  | Small unknown metal doors to a workshop from the closets west of the immovable dock          |
+| 445  | Small unknown metal doors to a workshop from the closets west of the immovable docks         |
+| 446  | Small unknown metal doors to the workshop from a closet west of an immovable dock            |
+| 447  | Small unknown metal doors to the workshop from a closet west of immovable docks              |
+| 448  | Small unknown metal doors to the workshop from a closet west of the immovable dock           |
+| 449  | Small unknown metal doors to the workshop from a closet west of the immovable docks          |
+| 450  | Small unknown metal doors to the workshop from a closet west of the immovable docks.         |
+| 451  | Small unknown metal doors to the workshop from closets west of an immovable dock             |
+| 452  | Small unknown metal doors to the workshop from closets west of the immovable dock            |
+| 453  | Small unknown metal doors to the workshop from closets west of the immovable docks           |
+| 454  | Small unknown metal doors to the workshop from the closet west of an immovable dock          |
+| 455  | Small unknown metal doors to the workshop from the closet west of immovable docks            |
+| 456  | Small unknown metal doors to the workshop from the closet west of immovable docks.           |
+| 457  | Small unknown metal doors to the workshop from the closet west of the immovable dock         |
+| 458  | Small unknown metal doors to the workshop from the closet west of the immovable docks        |
+| 459  | Small unknown metal doors to the workshop from the closet west of the immovable docks.       |
+| 460  | Small unknown metal doors to the workshop from the closets west of an immovable dock         |
+| 461  | Small unknown metal doors to the workshop from the closets west of the immovable dock        |
+| 462  | Small unknown metal doors to the workshop from the closets west of the immovable docks       |
+| 463  | Small unknown metal doors to the workshop west of an immovable dock from the closets         |
+| 464  | Small unknown metal doors to the workshop west of the immovable dock from the closets        |
+| 465  | Small unknown metal doors to the workshop west of the immovable docks from the closets       |
+| 466  | Small unknown metal doors to the workshops from a closet west of the immovable dock          |
+| 467  | Small unknown metal doors to the workshops from a closet west of the immovable docks         |
+| 468  | Small unknown metal doors to the workshops from the closet west of an immovable dock         |
+| 469  | Small unknown metal doors to the workshops from the closet west of the immovable dock        |
+| 470  | Small unknown metal doors to the workshops from the closet west of the immovable docks       |
+| 471  | Small unknown metal doors to workshops from a closet west of the immovable docks             |
+| 472  | Small unknown metal doors to workshops from the closet west of an immovable dock             |
+| 473  | Small unknown metal doors to workshops from the closet west of the immovable dock            |
+| 474  | Small unknown metal doors to workshops from the closet west of the immovable docks           |
+| 475  | The metals small unknown door to the workshop west of an immovable dock from the closet      |
+| 476  | The metals small unknown door to the workshop west of an immovable dock from the closets     |
+| 477  | The metals small unknown door to the workshop west of the immovable dock from the closet     |
+| 478  | The metals small unknown door to the workshop west of the immovable dock from the closets    |
+| 479  | The metals small unknown door to the workshop west of the immovable docks from the closet    |
+| 480  | The metals small unknown door to the workshop west of the immovable docks from the closets   |
+| 481  | The metals small unknown doors from the closet west of an immovable dock to the workshops    |
+| 482  | The metals small unknown doors from the closet west of the immovable dock to the workshops   |
+| 483  | The metals small unknown doors from the closet west of the immovable docks to the workshop   |
+| 484  | The metals small unknown doors from the closet west of the immovable docks to the workshops  |
+| 485  | The metals small unknown doors to a workshop west of an immovable dock from the closets      |
+| 486  | The metals small unknown doors to a workshop west of the immovable dock from the closet      |
+| 487  | The metals small unknown doors to a workshop west of the immovable dock from the closets     |
+| 488  | The metals small unknown doors to a workshop west of the immovable docks from the closet     |
+| 489  | The metals small unknown doors to a workshop west of the immovable docks from the closets    |
+| 490  | The metals small unknown doors to the workshop from the closet west of the immovable docks   |
+| 491  | The metals small unknown doors to the workshop west of an immovable dock from a closet       |
+| 492  | The metals small unknown doors to the workshop west of an immovable dock from closets        |
+| 493  | The metals small unknown doors to the workshop west of an immovable dock from the closet     |
+| 494  | The metals small unknown doors to the workshop west of an immovable dock from the closets    |
+| 495  | The metals small unknown doors to the workshop west of the immovable dock from a closet      |
+| 496  | The metals small unknown doors to the workshop west of the immovable dock from closets       |
+| 497  | The metals small unknown doors to the workshop west of the immovable dock from the closet    |
+| 498  | The metals small unknown doors to the workshop west of the immovable dock from the closets   |
+| 499  | The metals small unknown doors to the workshop west of the immovable dock from the closets.  |
+| 500  | The metals small unknown doors to the workshop west of the immovable docks from a closet     |
+| 501  | The metals small unknown doors to the workshop west of the immovable docks from closets      |
+| 502  | The metals small unknown doors to the workshop west of the immovable docks from the closet   |
+| 503  | The metals small unknown doors to the workshop west of the immovable docks from the closets  |
+| 504  | The metals small unknown doors to the workshop west of the immovable docks from the closets. |
+| 505  | The metals small unknown doors west of an immovable dock to the workshop from the closet     |
+| 506  | The metals small unknown doors west of an immovable dock to the workshop from the closets    |
+| 507  | The metals small unknown doors west of the immovable dock to the workshop from the closet    |
+| 508  | The metals small unknown doors west of the immovable dock to the workshop from the closets   |
+| 509  | The metals small unknown doors west of the immovable docks to the workshop from the closet   |
+| 510  | The metals small unknown doors west of the immovable docks to the workshop from the closets  |
+| 511  | The small unknown metal door from a closet to the workshop west of an immovable dock         |
+| 512  | The small unknown metal door from a closet to the workshop west of the immovable dock        |
+| 513  | The small unknown metal door from a closet to the workshop west of the immovable docks       |
+| 514  | The small unknown metal door from a closet west of an immovable dock to a workshop           |
+| 515  | The small unknown metal door from a closet west of an immovable dock to the workshop         |
+| 516  | The small unknown metal door from a closet west of an immovable dock to the workshops        |
+| 517  | The small unknown metal door from a closet west of the immovable dock to a workshop          |
+| 518  | The small unknown metal door from a closet west of the immovable dock to the workshop        |
+| 519  | The small unknown metal door from a closet west of the immovable dock to the workshops       |
+| 520  | The small unknown metal door from a closet west of the immovable docks to a workshop         |
+| 521  | The small unknown metal door from a closet west of the immovable docks to the workshop       |
+| 522  | The small unknown metal door from a closet west of the immovable docks to the workshops      |
+| 523  | The small unknown metal door from closets to the workshop west of an immovable dock          |
+| 524  | The small unknown metal door from closets to the workshop west of the immovable dock         |
+| 525  | The small unknown metal door from closets to the workshop west of the immovable docks        |
+| 526  | The small unknown metal door from closets west of an immovable dock to a workshop            |
+| 527  | The small unknown metal door from closets west of an immovable dock to the workshop          |
+| 528  | The small unknown metal door from closets west of an immovable dock to the workshops         |
+| 529  | The small unknown metal door from closets west of the immovable dock to a workshop           |
+| 530  | The small unknown metal door from closets west of the immovable dock to the workshop         |
+| 531  | The small unknown metal door from closets west of the immovable dock to the workshops        |
+| 532  | The small unknown metal door from closets west of the immovable docks to a workshop          |
+| 533  | The small unknown metal door from closets west of the immovable docks to the workshop        |
+| 534  | The small unknown metal door from closets west of the immovable docks to the workshops       |
+| 535  | The small unknown metal door from the closet to a workshop west of an immovable dock         |
+| 536  | The small unknown metal door from the closet to a workshop west of the immovable dock        |
+| 537  | The small unknown metal door from the closet to a workshop west of the immovable docks       |
+| 538  | The small unknown metal door from the closet to the workshop west of an immovable dock       |
+| 539  | The small unknown metal door from the closet to the workshop west of the immovable dock      |
+| 540  | The small unknown metal door from the closet to the workshop west of the immovable docks     |
+| 541  | The small unknown metal door from the closet to the workshop west of the immovable docks.    |
+| 542  | The small unknown metal door from the closet west of an immovable dock to a workshop         |
+| 543  | The small unknown metal door from the closet west of an immovable dock to the workshop       |
+| 544  | The small unknown metal door from the closet west of an immovable dock to the workshops      |
+| 545  | The small unknown metal door from the closet west of an immovable dock to the workshops.     |
+| 546  | The small unknown metal door from the closet west of an immovable dock to workshops          |
+| 547  | The small unknown metal door from the closet west of immovable docks to the workshop         |
+| 548  | The small unknown metal door from the closet west of immovable docks to the workshops        |
+| 549  | The small unknown metal door from the closet west of the immovable dock to a workshop        |
+| 550  | The small unknown metal door from the closet west of the immovable dock to the workshop      |
+| 551  | The small unknown metal door from the closet west of the immovable dock to the workshops     |
+| 552  | The small unknown metal door from the closet west of the immovable dock to the workshops.    |
+| 553  | The small unknown metal door from the closet west of the immovable dock to workshops         |
+| 554  | The small unknown metal door from the closet west of the immovable docks to a workshop       |
+| 555  | The small unknown metal door from the closet west of the immovable docks to the workshop     |
+| 556  | The small unknown metal door from the closet west of the immovable docks to the workshops    |
+| 557  | The small unknown metal door from the closet west of the immovable docks to the workshops.   |
+| 558  | The small unknown metal door from the closet west of the immovable docks to workshops        |
+| 559  | The small unknown metal door from the closets west of an immovable dock to the workshop      |
+| 560  | The small unknown metal door from the closets west of an immovable dock to the workshops     |
+| 561  | The small unknown metal door from the closets west of the immovable dock to the workshop     |
+| 562  | The small unknown metal door from the closets west of the immovable dock to the workshops    |
+| 563  | The small unknown metal door from the closets west of the immovable docks to the workshop    |
+| 564  | The small unknown metal door from the closets west of the immovable docks to the workshops   |
+| 565  | The small unknown metal door to a workshop from the closet west of an immovable dock         |
+| 566  | The small unknown metal door to a workshop from the closet west of the immovable dock        |
+| 567  | The small unknown metal door to a workshop from the closet west of the immovable docks       |
+| 568  | The small unknown metal door to a workshop west of an immovable dock from a closet           |
+| 569  | The small unknown metal door to a workshop west of an immovable dock from closets            |
+| 570  | The small unknown metal door to a workshop west of an immovable dock from the closet         |
+| 571  | The small unknown metal door to a workshop west of an immovable dock from the closets        |
+| 572  | The small unknown metal door to a workshop west of an immovable dock from the closets.       |
+| 573  | The small unknown metal door to a workshop west of immovable docks from the closet           |
+| 574  | The small unknown metal door to a workshop west of immovable docks from the closets          |
+| 575  | The small unknown metal door to a workshop west of the immovable dock from a closet          |
+| 576  | The small unknown metal door to a workshop west of the immovable dock from closets           |
+| 577  | The small unknown metal door to a workshop west of the immovable dock from the closet        |
+| 578  | The small unknown metal door to a workshop west of the immovable dock from the closets       |
+| 579  | The small unknown metal door to a workshop west of the immovable dock from the closets.      |
+| 580  | The small unknown metal door to a workshop west of the immovable docks from a closet         |
+| 581  | The small unknown metal door to a workshop west of the immovable docks from closets          |
+| 582  | The small unknown metal door to a workshop west of the immovable docks from the closet       |
+| 583  | The small unknown metal door to a workshop west of the immovable docks from the closets      |
+| 584  | The small unknown metal door to a workshop west of the immovable docks from the closets.     |
+| 585  | The small unknown metal door to the workshop from a closet west of an immovable dock         |
+| 586  | The small unknown metal door to the workshop from a closet west of the immovable dock        |
+| 587  | The small unknown metal door to the workshop from a closet west of the immovable docks       |
+| 588  | The small unknown metal door to the workshop from closets west of an immovable dock          |
+| 589  | The small unknown metal door to the workshop from closets west of the immovable dock         |
+| 590  | The small unknown metal door to the workshop from closets west of the immovable docks        |
+| 591  | The small unknown metal door to the workshop from the closet west of an immovable dock       |
+| 592  | The small unknown metal door to the workshop from the closet west of immovable docks         |
+| 593  | The small unknown metal door to the workshop from the closet west of the immovable dock      |
+| 594  | The small unknown metal door to the workshop from the closet west of the immovable docks     |
+| 595  | The small unknown metal door to the workshop from the closet west of the immovable docks.    |
+| 596  | The small unknown metal door to the workshop from the closets west of an immovable dock      |
+| 597  | The small unknown metal door to the workshop from the closets west of the immovable dock     |
+| 598  | The small unknown metal door to the workshop from the closets west of the immovable docks    |
+| 599  | The small unknown metal door to the workshop west of an immovable dock from a closet         |
+| 600  | The small unknown metal door to the workshop west of an immovable dock from a closet.        |
+| 601  | The small unknown metal door to the workshop west of an immovable dock from closets          |
+| 602  | The small unknown metal door to the workshop west of an immovable dock from closets.         |
+| 603  | The small unknown metal door to the workshop west of an immovable dock from the closet       |
+| 604  | The small unknown metal door to the workshop west of an immovable dock from the closet.      |
+| 605  | The small unknown metal door to the workshop west of an immovable dock from the closets      |
+| 606  | The small unknown metal door to the workshop west of an immovable dock from the closets.     |
+| 607  | The small unknown metal door to the workshop west of immovable docks from a closet           |
+| 608  | The small unknown metal door to the workshop west of immovable docks from closets            |
+| 609  | The small unknown metal door to the workshop west of immovable docks from the closet         |
+| 610  | The small unknown metal door to the workshop west of immovable docks from the closets        |
+| 611  | The small unknown metal door to the workshop west of immovable docks from the closets.       |
+| 612  | The small unknown metal door to the workshop west of the immovable dock from a closet        |
+| 613  | The small unknown metal door to the workshop west of the immovable dock from a closet.       |
+| 614  | The small unknown metal door to the workshop west of the immovable dock from closets         |
+| 615  | The small unknown metal door to the workshop west of the immovable dock from closets.        |
+| 616  | The small unknown metal door to the workshop west of the immovable dock from the closet      |
+| 617  | The small unknown metal door to the workshop west of the immovable dock from the closet.     |
+| 618  | The small unknown metal door to the workshop west of the immovable dock from the closets     |
+| 619  | The small unknown metal door to the workshop west of the immovable dock from the closets.    |
+| 620  | The small unknown metal door to the workshop west of the immovable docks from a closet       |
+| 621  | The small unknown metal door to the workshop west of the immovable docks from a closet.      |
+| 622  | The small unknown metal door to the workshop west of the immovable docks from closets        |
+| 623  | The small unknown metal door to the workshop west of the immovable docks from closets.       |
+| 624  | The small unknown metal door to the workshop west of the immovable docks from the closet     |
+| 625  | The small unknown metal door to the workshop west of the immovable docks from the closet.    |
+| 626  | The small unknown metal door to the workshop west of the immovable docks from the closets    |
+| 627  | The small unknown metal door to the workshop west of the immovable docks from the closets.   |
+| 628  | The small unknown metal door to the workshops from the closet west of an immovable dock      |
+| 629  | The small unknown metal door to the workshops from the closet west of the immovable dock     |
+| 630  | The small unknown metal door to the workshops from the closet west of the immovable docks    |
+| 631  | The small unknown metal door to the workshops west of an immovable dock from a closet        |
+| 632  | The small unknown metal door to the workshops west of an immovable dock from closets         |
+| 633  | The small unknown metal door to the workshops west of an immovable dock from the closet      |
+| 634  | The small unknown metal door to the workshops west of an immovable dock from the closets     |
+| 635  | The small unknown metal door to the workshops west of an immovable dock from the closets.    |
+| 636  | The small unknown metal door to the workshops west of the immovable dock from a closet       |
+| 637  | The small unknown metal door to the workshops west of the immovable dock from closets        |
+| 638  | The small unknown metal door to the workshops west of the immovable dock from the closet     |
+| 639  | The small unknown metal door to the workshops west of the immovable dock from the closets    |
+| 640  | The small unknown metal door to the workshops west of the immovable dock from the closets.   |
+| 641  | The small unknown metal door to the workshops west of the immovable docks from a closet      |
+| 642  | The small unknown metal door to the workshops west of the immovable docks from closets       |
+| 643  | The small unknown metal door to the workshops west of the immovable docks from the closet    |
+| 644  | The small unknown metal door to the workshops west of the immovable docks from the closets   |
+| 645  | The small unknown metal door to the workshops west of the immovable docks from the closets.  |
+| 646  | The small unknown metal door to workshops from the closet west of an immovable dock          |
+| 647  | The small unknown metal door to workshops from the closet west of the immovable dock         |
+| 648  | The small unknown metal door to workshops from the closet west of the immovable docks        |
+| 649  | The small unknown metal door to workshops west of an immovable dock from a closet            |
+| 650  | The small unknown metal door to workshops west of an immovable dock from closets             |
+| 651  | The small unknown metal door to workshops west of an immovable dock from the closet          |
+| 652  | The small unknown metal door to workshops west of an immovable dock from the closets         |
+| 653  | The small unknown metal door to workshops west of an immovable dock from the closets.        |
+| 654  | The small unknown metal door to workshops west of the immovable dock from a closet           |
+| 655  | The small unknown metal door to workshops west of the immovable dock from closets            |
+| 656  | The small unknown metal door to workshops west of the immovable dock from the closet         |
+| 657  | The small unknown metal door to workshops west of the immovable dock from the closets        |
+| 658  | The small unknown metal door to workshops west of the immovable dock from the closets.       |
+| 659  | The small unknown metal door to workshops west of the immovable docks from a closet          |
+| 660  | The small unknown metal door to workshops west of the immovable docks from closets           |
+| 661  | The small unknown metal door to workshops west of the immovable docks from the closet        |
+| 662  | The small unknown metal door to workshops west of the immovable docks from the closets       |
+| 663  | The small unknown metal door to workshops west of the immovable docks from the closets.      |
+| 664  | The small unknown metal door west of an immovable dock from the closet to the workshops      |
+| 665  | The small unknown metal door west of an immovable dock to the workshop from a closet         |
+| 666  | The small unknown metal door west of an immovable dock to the workshop from the closet       |
+| 667  | The small unknown metal door west of an immovable dock to the workshop from the closets      |
+| 668  | The small unknown metal door west of the immovable dock from the closet to the workshops     |
+| 669  | The small unknown metal door west of the immovable dock to the workshop from a closet        |
+| 670  | The small unknown metal door west of the immovable dock to the workshop from the closet      |
+| 671  | The small unknown metal door west of the immovable dock to the workshop from the closets     |
+| 672  | The small unknown metal door west of the immovable docks from the closet to the workshop     |
+| 673  | The small unknown metal door west of the immovable docks from the closet to the workshops    |
+| 674  | The small unknown metal door west of the immovable docks to the workshop from a closet       |
+| 675  | The small unknown metal door west of the immovable docks to the workshop from the closet     |
+| 676  | The small unknown metal door west of the immovable docks to the workshop from the closets    |
+| 677  | The small unknown metal doors from the closet to the workshop west of the immovable docks    |
+| 678  | The small unknown metal doors from the closet west of an immovable dock to the workshop      |
+| 679  | The small unknown metal doors from the closet west of an immovable dock to the workshops     |
+| 680  | The small unknown metal doors from the closet west of the immovable dock to the workshop     |
+| 681  | The small unknown metal doors from the closet west of the immovable dock to the workshops    |
+| 682  | The small unknown metal doors from the closet west of the immovable docks to the workshop    |
+| 683  | The small unknown metal doors from the closet west of the immovable docks to the workshops   |
+| 684  | The small unknown metal doors to a workshop west of an immovable dock from the closet        |
+| 685  | The small unknown metal doors to a workshop west of an immovable dock from the closets       |
+| 686  | The small unknown metal doors to a workshop west of the immovable dock from the closet       |
+| 687  | The small unknown metal doors to a workshop west of the immovable dock from the closets      |
+| 688  | The small unknown metal doors to a workshop west of the immovable docks from the closet      |
+| 689  | The small unknown metal doors to a workshop west of the immovable docks from the closets     |
+| 690  | The small unknown metal doors to the workshop from the closet west of an immovable dock      |
+| 691  | The small unknown metal doors to the workshop from the closet west of the immovable dock     |
+| 692  | The small unknown metal doors to the workshop from the closet west of the immovable docks    |
+| 693  | The small unknown metal doors to the workshop west of an immovable dock from a closet        |
+| 694  | The small unknown metal doors to the workshop west of an immovable dock from closets         |
+| 695  | The small unknown metal doors to the workshop west of an immovable dock from the closet      |
+| 696  | The small unknown metal doors to the workshop west of an immovable dock from the closets     |
+| 697  | The small unknown metal doors to the workshop west of an immovable dock from the closets.    |
+| 698  | The small unknown metal doors to the workshop west of immovable docks from the closets       |
+| 699  | The small unknown metal doors to the workshop west of the immovable dock from a closet       |
+| 700  | The small unknown metal doors to the workshop west of the immovable dock from closets        |
+| 701  | The small unknown metal doors to the workshop west of the immovable dock from the closet     |
+| 702  | The small unknown metal doors to the workshop west of the immovable dock from the closets    |
+| 703  | The small unknown metal doors to the workshop west of the immovable dock from the closets.   |
+| 704  | The small unknown metal doors to the workshop west of the immovable docks from a closet      |
+| 705  | The small unknown metal doors to the workshop west of the immovable docks from closets       |
+| 706  | The small unknown metal doors to the workshop west of the immovable docks from the closet    |
+| 707  | The small unknown metal doors to the workshop west of the immovable docks from the closets   |
+| 708  | The small unknown metal doors to the workshop west of the immovable docks from the closets.  |
+| 709  | The small unknown metal doors to the workshops west of the immovable docks from the closets  |
+| 710  | The unknown small metal door from a closet to a workshop west of the immovable dock          |
+| 711  | The unknown small metal door from a closet to a workshop west of the immovable docks         |
+| 712  | The unknown small metal door from a closet to the workshop west of an immovable dock         |
+| 713  | The unknown small metal door from a closet to the workshop west of the immovable dock        |
+| 714  | The unknown small metal door from a closet to the workshop west of the immovable docks       |
+| 715  | The unknown small metal door from a closet west of an immovable dock to a workshop           |
+| 716  | The unknown small metal door from a closet west of an immovable dock to the workshop         |
+| 717  | The unknown small metal door from a closet west of an immovable dock to the workshops        |
+| 718  | The unknown small metal door from a closet west of an immovable dock to the workshops.       |
+| 719  | The unknown small metal door from a closet west of an immovable dock to workshops            |
+| 720  | The unknown small metal door from a closet west of immovable docks to the workshops          |
+| 721  | The unknown small metal door from a closet west of the immovable dock to a workshop          |
+| 722  | The unknown small metal door from a closet west of the immovable dock to the workshop        |
+| 723  | The unknown small metal door from a closet west of the immovable dock to the workshops       |
+| 724  | The unknown small metal door from a closet west of the immovable dock to the workshops.      |
+| 725  | The unknown small metal door from a closet west of the immovable dock to workshops           |
+| 726  | The unknown small metal door from a closet west of the immovable docks to a workshop         |
+| 727  | The unknown small metal door from a closet west of the immovable docks to the workshop       |
+| 728  | The unknown small metal door from a closet west of the immovable docks to the workshops      |
+| 729  | The unknown small metal door from a closet west of the immovable docks to the workshops.     |
+| 730  | The unknown small metal door from a closet west of the immovable docks to workshops          |
+| 731  | The unknown small metal door from closets to a workshop west of the immovable dock           |
+| 732  | The unknown small metal door from closets to a workshop west of the immovable docks          |
+| 733  | The unknown small metal door from closets to the workshop west of an immovable dock          |
+| 734  | The unknown small metal door from closets to the workshop west of the immovable dock         |
+| 735  | The unknown small metal door from closets to the workshop west of the immovable docks        |
+| 736  | The unknown small metal door from closets west of an immovable dock to a workshop            |
+| 737  | The unknown small metal door from closets west of an immovable dock to the workshop          |
+| 738  | The unknown small metal door from closets west of an immovable dock to the workshops         |
+| 739  | The unknown small metal door from closets west of an immovable dock to the workshops.        |
+| 740  | The unknown small metal door from closets west of an immovable dock to workshops             |
+| 741  | The unknown small metal door from closets west of the immovable dock to a workshop           |
+| 742  | The unknown small metal door from closets west of the immovable dock to the workshop         |
+| 743  | The unknown small metal door from closets west of the immovable dock to the workshops        |
+| 744  | The unknown small metal door from closets west of the immovable dock to the workshops.       |
+| 745  | The unknown small metal door from closets west of the immovable dock to workshops            |
+| 746  | The unknown small metal door from closets west of the immovable docks to a workshop          |
+| 747  | The unknown small metal door from closets west of the immovable docks to the workshop        |
+| 748  | The unknown small metal door from closets west of the immovable docks to the workshops       |
+| 749  | The unknown small metal door from closets west of the immovable docks to the workshops.      |
+| 750  | The unknown small metal door from closets west of the immovable docks to workshops           |
+| 751  | The unknown small metal door from the closet to a workshop west of an immovable dock         |
+| 752  | The unknown small metal door from the closet to a workshop west of the immovable dock        |
+| 753  | The unknown small metal door from the closet to a workshop west of the immovable docks       |
+| 754  | The unknown small metal door from the closet to the workshop west of an immovable dock       |
+| 755  | The unknown small metal door from the closet to the workshop west of immovable docks         |
+| 756  | The unknown small metal door from the closet to the workshop west of the immovable dock      |
+| 757  | The unknown small metal door from the closet to the workshop west of the immovable docks     |
+| 758  | The unknown small metal door from the closet to the workshop west of the immovable docks.    |
+| 759  | The unknown small metal door from the closet to the workshops west of an immovable dock      |
+| 760  | The unknown small metal door from the closet to the workshops west of the immovable dock     |
+| 761  | The unknown small metal door from the closet to the workshops west of the immovable docks    |
+| 762  | The unknown small metal door from the closet to workshops west of an immovable dock          |
+| 763  | The unknown small metal door from the closet to workshops west of the immovable dock         |
+| 764  | The unknown small metal door from the closet to workshops west of the immovable docks        |
+| 765  | The unknown small metal door from the closet west of an immovable dock to a workshop         |
+| 766  | The unknown small metal door from the closet west of an immovable dock to a workshop.        |
+| 767  | The unknown small metal door from the closet west of an immovable dock to the workshop       |
+| 768  | The unknown small metal door from the closet west of an immovable dock to the workshops      |
+| 769  | The unknown small metal door from the closet west of an immovable dock to the workshops.     |
+| 770  | The unknown small metal door from the closet west of an immovable dock to workshops          |
+| 771  | The unknown small metal door from the closet west of an immovable dock to workshops.         |
+| 772  | The unknown small metal door from the closet west of immovable docks to a workshop           |
+| 773  | The unknown small metal door from the closet west of immovable docks to the workshop         |
+| 774  | The unknown small metal door from the closet west of immovable docks to the workshops        |
+| 775  | The unknown small metal door from the closet west of the immovable dock to a workshop        |
+| 776  | The unknown small metal door from the closet west of the immovable dock to a workshop.       |
+| 777  | The unknown small metal door from the closet west of the immovable dock to the workshop      |
+| 778  | The unknown small metal door from the closet west of the immovable dock to the workshop.     |
+| 779  | The unknown small metal door from the closet west of the immovable dock to the workshops     |
+| 780  | The unknown small metal door from the closet west of the immovable dock to the workshops.    |
+| 781  | The unknown small metal door from the closet west of the immovable dock to workshops         |
+| 782  | The unknown small metal door from the closet west of the immovable dock to workshops.        |
+| 783  | The unknown small metal door from the closet west of the immovable docks to a workshop       |
+| 784  | The unknown small metal door from the closet west of the immovable docks to a workshop.      |
+| 785  | The unknown small metal door from the closet west of the immovable docks to the workshop     |
+| 786  | The unknown small metal door from the closet west of the immovable docks to the workshop.    |
+| 787  | The unknown small metal door from the closet west of the immovable docks to the workshops    |
+| 788  | The unknown small metal door from the closet west of the immovable docks to the workshops.   |
+| 789  | The unknown small metal door from the closet west of the immovable docks to workshops        |
+| 790  | The unknown small metal door from the closet west of the immovable docks to workshops.       |
+| 791  | The unknown small metal door from the closets to the workshop west of an immovable dock      |
+| 792  | The unknown small metal door from the closets to the workshop west of the immovable dock     |
+| 793  | The unknown small metal door from the closets to the workshop west of the immovable docks    |
+| 794  | The unknown small metal door from the closets west of an immovable dock to a workshop        |
+| 795  | The unknown small metal door from the closets west of an immovable dock to the workshop      |
+| 796  | The unknown small metal door from the closets west of an immovable dock to the workshops     |
+| 797  | The unknown small metal door from the closets west of the immovable dock to a workshop       |
+| 798  | The unknown small metal door from the closets west of the immovable dock to the workshop     |
+| 799  | The unknown small metal door from the closets west of the immovable dock to the workshops    |
+| 800  | The unknown small metal door from the closets west of the immovable docks to a workshop      |
+| 801  | The unknown small metal door from the closets west of the immovable docks to the workshop    |
+| 802  | The unknown small metal door from the closets west of the immovable docks to the workshops   |
+| 803  | The unknown small metal door to a workshop from a closet west of an immovable dock           |
+| 804  | The unknown small metal door to a workshop from a closet west of the immovable dock          |
+| 805  | The unknown small metal door to a workshop from a closet west of the immovable docks         |
+| 806  | The unknown small metal door to a workshop from closets west of the immovable docks          |
+| 807  | The unknown small metal door to a workshop from the closet west of an immovable dock         |
+| 808  | The unknown small metal door to a workshop from the closet west of the immovable dock        |
+| 809  | The unknown small metal door to a workshop from the closet west of the immovable docks       |
+| 810  | The unknown small metal door to a workshop from the closet west of the immovable docks.      |
+| 811  | The unknown small metal door to a workshop west of an immovable dock from a closet           |
+| 812  | The unknown small metal door to a workshop west of an immovable dock from a closet.          |
+| 813  | The unknown small metal door to a workshop west of an immovable dock from closets            |
+| 814  | The unknown small metal door to a workshop west of an immovable dock from closets.           |
+| 815  | The unknown small metal door to a workshop west of an immovable dock from the closet         |
+| 816  | The unknown small metal door to a workshop west of an immovable dock from the closet.        |
+| 817  | The unknown small metal door to a workshop west of an immovable dock from the closets        |
+| 818  | The unknown small metal door to a workshop west of an immovable dock from the closets.       |
+| 819  | The unknown small metal door to a workshop west of immovable docks from a closet             |
+| 820  | The unknown small metal door to a workshop west of immovable docks from the closet           |
+| 821  | The unknown small metal door to a workshop west of immovable docks from the closets          |
+| 822  | The unknown small metal door to a workshop west of the immovable dock from a closet          |
+| 823  | The unknown small metal door to a workshop west of the immovable dock from a closet.         |
+| 824  | The unknown small metal door to a workshop west of the immovable dock from closets           |
+| 825  | The unknown small metal door to a workshop west of the immovable dock from closets.          |
+| 826  | The unknown small metal door to a workshop west of the immovable dock from the closet        |
+| 827  | The unknown small metal door to a workshop west of the immovable dock from the closet.       |
+| 828  | The unknown small metal door to a workshop west of the immovable dock from the closets       |
+| 829  | The unknown small metal door to a workshop west of the immovable dock from the closets.      |
+| 830  | The unknown small metal door to a workshop west of the immovable docks from a closet         |
+| 831  | The unknown small metal door to a workshop west of the immovable docks from a closet.        |
+| 832  | The unknown small metal door to a workshop west of the immovable docks from closets          |
+| 833  | The unknown small metal door to a workshop west of the immovable docks from closets.         |
+| 834  | The unknown small metal door to a workshop west of the immovable docks from the closet       |
+| 835  | The unknown small metal door to a workshop west of the immovable docks from the closet.      |
+| 836  | The unknown small metal door to a workshop west of the immovable docks from the closets      |
+| 837  | The unknown small metal door to a workshop west of the immovable docks from the closets.     |
+| 838  | The unknown small metal door to the workshop from a closet west of an immovable dock         |
+| 839  | The unknown small metal door to the workshop from a closet west of the immovable dock        |
+| 840  | The unknown small metal door to the workshop from a closet west of the immovable docks       |
+| 841  | The unknown small metal door to the workshop from a closet west of the immovable docks.      |
+| 842  | The unknown small metal door to the workshop from closets west of an immovable dock          |
+| 843  | The unknown small metal door to the workshop from closets west of the immovable dock         |
+| 844  | The unknown small metal door to the workshop from closets west of the immovable docks        |
+| 845  | The unknown small metal door to the workshop from the closet west of an immovable dock       |
+| 846  | The unknown small metal door to the workshop from the closet west of immovable docks         |
+| 847  | The unknown small metal door to the workshop from the closet west of the immovable dock      |
+| 848  | The unknown small metal door to the workshop from the closet west of the immovable docks     |
+| 849  | The unknown small metal door to the workshop from the closet west of the immovable docks.    |
+| 850  | The unknown small metal door to the workshop from the closets west of an immovable dock      |
+| 851  | The unknown small metal door to the workshop from the closets west of the immovable dock     |
+| 852  | The unknown small metal door to the workshop from the closets west of the immovable docks    |
+| 853  | The unknown small metal door to the workshop west of an immovable dock from a closet         |
+| 854  | The unknown small metal door to the workshop west of an immovable dock from a closet.        |
+| 855  | The unknown small metal door to the workshop west of an immovable dock from closets          |
+| 856  | The unknown small metal door to the workshop west of an immovable dock from closets.         |
+| 857  | The unknown small metal door to the workshop west of an immovable dock from the closet       |
+| 858  | The unknown small metal door to the workshop west of an immovable dock from the closet.      |
+| 859  | The unknown small metal door to the workshop west of an immovable dock from the closets      |
+| 860  | The unknown small metal door to the workshop west of an immovable dock from the closets.     |
+| 861  | The unknown small metal door to the workshop west of immovable docks from a closet           |
+| 862  | The unknown small metal door to the workshop west of immovable docks from closets            |
+| 863  | The unknown small metal door to the workshop west of immovable docks from the closet         |
+| 864  | The unknown small metal door to the workshop west of immovable docks from the closets        |
+| 865  | The unknown small metal door to the workshop west of immovable docks from the closets.       |
+| 866  | The unknown small metal door to the workshop west of the immovable dock from a closet        |
+| 867  | The unknown small metal door to the workshop west of the immovable dock from a closet.       |
+| 868  | The unknown small metal door to the workshop west of the immovable dock from closets         |
+| 869  | The unknown small metal door to the workshop west of the immovable dock from closets.        |
+| 870  | The unknown small metal door to the workshop west of the immovable dock from the closet      |
+| 871  | The unknown small metal door to the workshop west of the immovable dock from the closet.     |
+| 872  | The unknown small metal door to the workshop west of the immovable dock from the closets     |
+| 873  | The unknown small metal door to the workshop west of the immovable dock from the closets.    |
+| 874  | The unknown small metal door to the workshop west of the immovable docks from a closet       |
+| 875  | The unknown small metal door to the workshop west of the immovable docks from a closet.      |
+| 876  | The unknown small metal door to the workshop west of the immovable docks from closets        |
+| 877  | The unknown small metal door to the workshop west of the immovable docks from closets.       |
+| 878  | The unknown small metal door to the workshop west of the immovable docks from the closet     |
+| 879  | The unknown small metal door to the workshop west of the immovable docks from the closet.    |
+| 880  | The unknown small metal door to the workshop west of the immovable docks from the closets    |
+| 881  | The unknown small metal door to the workshop west of the immovable docks from the closets.   |
+| 882  | The unknown small metal door to the workshops from the closet west of an immovable dock      |
+| 883  | The unknown small metal door to the workshops from the closet west of the immovable dock     |
+| 884  | The unknown small metal door to the workshops from the closet west of the immovable docks    |
+| 885  | The unknown small metal door to the workshops west of an immovable dock from a closet        |
+| 886  | The unknown small metal door to the workshops west of an immovable dock from closets         |
+| 887  | The unknown small metal door to the workshops west of an immovable dock from the closet      |
+| 888  | The unknown small metal door to the workshops west of an immovable dock from the closets     |
+| 889  | The unknown small metal door to the workshops west of an immovable dock from the closets.    |
+| 890  | The unknown small metal door to the workshops west of immovable docks from the closet        |
+| 891  | The unknown small metal door to the workshops west of immovable docks from the closets       |
+| 892  | The unknown small metal door to the workshops west of the immovable dock from a closet       |
+| 893  | The unknown small metal door to the workshops west of the immovable dock from closets        |
+| 894  | The unknown small metal door to the workshops west of the immovable dock from the closet     |
+| 895  | The unknown small metal door to the workshops west of the immovable dock from the closets    |
+| 896  | The unknown small metal door to the workshops west of the immovable dock from the closets.   |
+| 897  | The unknown small metal door to the workshops west of the immovable docks from a closet      |
+| 898  | The unknown small metal door to the workshops west of the immovable docks from closets       |
+| 899  | The unknown small metal door to the workshops west of the immovable docks from the closet    |
+| 900  | The unknown small metal door to the workshops west of the immovable docks from the closets   |
+| 901  | The unknown small metal door to the workshops west of the immovable docks from the closets.  |
+| 902  | The unknown small metal door to workshops from the closet west of an immovable dock          |
+| 903  | The unknown small metal door to workshops from the closet west of the immovable dock         |
+| 904  | The unknown small metal door to workshops from the closet west of the immovable docks        |
+| 905  | The unknown small metal door to workshops west of an immovable dock from a closet            |
+| 906  | The unknown small metal door to workshops west of an immovable dock from closets             |
+| 907  | The unknown small metal door to workshops west of an immovable dock from the closet          |
+| 908  | The unknown small metal door to workshops west of an immovable dock from the closets         |
+| 909  | The unknown small metal door to workshops west of an immovable dock from the closets.        |
+| 910  | The unknown small metal door to workshops west of immovable docks from the closet            |
+| 911  | The unknown small metal door to workshops west of immovable docks from the closets           |
+| 912  | The unknown small metal door to workshops west of the immovable dock from a closet           |
+| 913  | The unknown small metal door to workshops west of the immovable dock from closets            |
+| 914  | The unknown small metal door to workshops west of the immovable dock from the closet         |
+| 915  | The unknown small metal door to workshops west of the immovable dock from the closets        |
+| 916  | The unknown small metal door to workshops west of the immovable dock from the closets.       |
+| 917  | The unknown small metal door to workshops west of the immovable docks from a closet          |
+| 918  | The unknown small metal door to workshops west of the immovable docks from closets           |
+| 919  | The unknown small metal door to workshops west of the immovable docks from the closet        |
+| 920  | The unknown small metal door to workshops west of the immovable docks from the closets       |
+| 921  | The unknown small metal door to workshops west of the immovable docks from the closets.      |
+| 922  | The unknown small metal door west of an immovable dock from the closet to the workshop       |
+| 923  | The unknown small metal door west of an immovable dock from the closet to the workshops      |
+| 924  | The unknown small metal door west of an immovable dock to a workshop from the closet         |
+| 925  | The unknown small metal door west of an immovable dock to a workshop from the closets        |
+| 926  | The unknown small metal door west of an immovable dock to the workshop from a closet         |
+| 927  | The unknown small metal door west of an immovable dock to the workshop from closets          |
+| 928  | The unknown small metal door west of an immovable dock to the workshop from the closet       |
+| 929  | The unknown small metal door west of an immovable dock to the workshop from the closets      |
+| 930  | The unknown small metal door west of an immovable dock to the workshop from the closets.     |
+| 931  | The unknown small metal door west of the immovable dock from the closet to the workshop      |
+| 932  | The unknown small metal door west of the immovable dock from the closet to the workshops     |
+| 933  | The unknown small metal door west of the immovable dock to a workshop from the closet        |
+| 934  | The unknown small metal door west of the immovable dock to a workshop from the closets       |
+| 935  | The unknown small metal door west of the immovable dock to the workshop from a closet        |
+| 936  | The unknown small metal door west of the immovable dock to the workshop from closets         |
+| 937  | The unknown small metal door west of the immovable dock to the workshop from the closet      |
+| 938  | The unknown small metal door west of the immovable dock to the workshop from the closets     |
+| 939  | The unknown small metal door west of the immovable dock to the workshop from the closets.    |
+| 940  | The unknown small metal door west of the immovable docks from the closet to a workshop       |
+| 941  | The unknown small metal door west of the immovable docks from the closet to the workshop     |
+| 942  | The unknown small metal door west of the immovable docks from the closet to the workshops    |
+| 943  | The unknown small metal door west of the immovable docks to a workshop from the closet       |
+| 944  | The unknown small metal door west of the immovable docks to a workshop from the closets      |
+| 945  | The unknown small metal door west of the immovable docks to the workshop from a closet       |
+| 946  | The unknown small metal door west of the immovable docks to the workshop from closets        |
+| 947  | The unknown small metal door west of the immovable docks to the workshop from the closet     |
+| 948  | The unknown small metal door west of the immovable docks to the workshop from the closets    |
+| 949  | The unknown small metal door west of the immovable docks to the workshop from the closets.   |
+| 950  | The unknown small metal doors from a closet west of the immovable dock to the workshops      |
+| 951  | The unknown small metal doors from a closet west of the immovable docks to the workshops     |
+| 952  | The unknown small metal doors from closets west of the immovable dock to the workshops       |
+| 953  | The unknown small metal doors from closets west of the immovable docks to the workshops      |
+| 954  | The unknown small metal doors from the closet to the workshop west of an immovable dock      |
+| 955  | The unknown small metal doors from the closet to the workshop west of the immovable dock     |
+| 956  | The unknown small metal doors from the closet to the workshop west of the immovable docks    |
+| 957  | The unknown small metal doors from the closet west of an immovable dock to a workshop        |
+| 958  | The unknown small metal doors from the closet west of an immovable dock to the workshop      |
+| 959  | The unknown small metal doors from the closet west of an immovable dock to the workshops     |
+| 960  | The unknown small metal doors from the closet west of the immovable dock to a workshop       |
+| 961  | The unknown small metal doors from the closet west of the immovable dock to the workshop     |
+| 962  | The unknown small metal doors from the closet west of the immovable dock to the workshops    |
+| 963  | The unknown small metal doors from the closet west of the immovable docks to a workshop      |
+| 964  | The unknown small metal doors from the closet west of the immovable docks to the workshop    |
+| 965  | The unknown small metal doors from the closet west of the immovable docks to the workshops   |
+| 966  | The unknown small metal doors to a workshop west of an immovable dock from a closet          |
+| 967  | The unknown small metal doors to a workshop west of an immovable dock from the closet        |
+| 968  | The unknown small metal doors to a workshop west of an immovable dock from the closets       |
+| 969  | The unknown small metal doors to a workshop west of the immovable dock from a closet         |
+| 970  | The unknown small metal doors to a workshop west of the immovable dock from closets          |
+| 971  | The unknown small metal doors to a workshop west of the immovable dock from the closet       |
+| 972  | The unknown small metal doors to a workshop west of the immovable dock from the closets      |
+| 973  | The unknown small metal doors to a workshop west of the immovable docks from a closet        |
+| 974  | The unknown small metal doors to a workshop west of the immovable docks from closets         |
+| 975  | The unknown small metal doors to a workshop west of the immovable docks from the closet      |
+| 976  | The unknown small metal doors to a workshop west of the immovable docks from the closets     |
+| 977  | The unknown small metal doors to a workshop west of the immovable docks from the closets.    |
+| 978  | The unknown small metal doors to the workshop from the closet west of an immovable dock      |
+| 979  | The unknown small metal doors to the workshop from the closet west of the immovable dock     |
+| 980  | The unknown small metal doors to the workshop from the closet west of the immovable docks    |
+| 981  | The unknown small metal doors to the workshop west of an immovable dock from a closet        |
+| 982  | The unknown small metal doors to the workshop west of an immovable dock from closets         |
+| 983  | The unknown small metal doors to the workshop west of an immovable dock from the closet      |
+| 984  | The unknown small metal doors to the workshop west of an immovable dock from the closets     |
+| 985  | The unknown small metal doors to the workshop west of an immovable dock from the closets.    |
+| 986  | The unknown small metal doors to the workshop west of immovable docks from the closet        |
+| 987  | The unknown small metal doors to the workshop west of immovable docks from the closets       |
+| 988  | The unknown small metal doors to the workshop west of the immovable dock from a closet       |
+| 989  | The unknown small metal doors to the workshop west of the immovable dock from closets        |
+| 990  | The unknown small metal doors to the workshop west of the immovable dock from the closet     |
+| 991  | The unknown small metal doors to the workshop west of the immovable dock from the closets    |
+| 992  | The unknown small metal doors to the workshop west of the immovable dock from the closets.   |
+| 993  | The unknown small metal doors to the workshop west of the immovable docks from a closet      |
+| 994  | The unknown small metal doors to the workshop west of the immovable docks from closets       |
+| 995  | The unknown small metal doors to the workshop west of the immovable docks from closets.      |
+| 996  | The unknown small metal doors to the workshop west of the immovable docks from the closet    |
+| 997  | The unknown small metal doors to the workshop west of the immovable docks from the closets   |
+| 998  | The unknown small metal doors to the workshop west of the immovable docks from the closets.  |
+| 999  | The unknown small metal doors to the workshops west of an immovable dock from the closet     |
+| 1000 | The unknown small metal doors to the workshops west of an immovable dock from the closets    |
+| 1001 | The unknown small metal doors to the workshops west of the immovable dock from the closet    |
+| 1002 | The unknown small metal doors to the workshops west of the immovable dock from the closets   |
+| 1003 | The unknown small metal doors to the workshops west of the immovable docks from the closet   |
+| 1004 | The unknown small metal doors to the workshops west of the immovable docks from the closets  |
+| 1005 | The unknown small metal doors to workshops west of an immovable dock from the closet         |
+| 1006 | The unknown small metal doors to workshops west of an immovable dock from the closets        |
+| 1007 | The unknown small metal doors to workshops west of the immovable dock from the closet        |
+| 1008 | The unknown small metal doors to workshops west of the immovable dock from the closets       |
+| 1009 | The unknown small metal doors to workshops west of the immovable docks from the closet       |
+| 1010 | The unknown small metal doors to workshops west of the immovable docks from the closets      |
+| 1011 | The unknown small metal doors west of the immovable docks to the workshop from the closets   |
+| 1012 | Unknown metals small doors to the workshop from the closet west of an immovable dock         |
+| 1013 | Unknown metals small doors to the workshop from the closet west of the immovable dock        |
+| 1014 | Unknown metals small doors to the workshop from the closet west of the immovable docks       |
+| 1015 | Unknown small metal door to the workshop from the closet west of an immovable dock           |
+| 1016 | Unknown small metal door to the workshop from the closet west of the immovable dock          |
+| 1017 | Unknown small metal door to the workshop from the closet west of the immovable docks         |
+| 1018 | Unknown small metal doors from a closet to a workshop west of an immovable dock              |
+| 1019 | Unknown small metal doors from a closet to a workshop west of the immovable dock             |
+| 1020 | Unknown small metal doors from a closet to a workshop west of the immovable docks            |
+| 1021 | Unknown small metal doors from a closet to the workshop west of an immovable dock            |
+| 1022 | Unknown small metal doors from a closet to the workshop west of immovable docks              |
+| 1023 | Unknown small metal doors from a closet to the workshop west of the immovable dock           |
+| 1024 | Unknown small metal doors from a closet to the workshop west of the immovable docks          |
+| 1025 | Unknown small metal doors from a closet to the workshop west of the immovable docks.         |
+| 1026 | Unknown small metal doors from a closet to the workshops west of the immovable dock          |
+| 1027 | Unknown small metal doors from a closet to the workshops west of the immovable docks         |
+| 1028 | Unknown small metal doors from a closet to workshops west of the immovable docks             |
+| 1029 | Unknown small metal doors from closets to a workshop west of an immovable dock               |
+| 1030 | Unknown small metal doors from closets to a workshop west of the immovable dock              |
+| 1031 | Unknown small metal doors from closets to a workshop west of the immovable docks             |
+| 1032 | Unknown small metal doors from closets to the workshop west of an immovable dock             |
+| 1033 | Unknown small metal doors from closets to the workshop west of immovable docks               |
+| 1034 | Unknown small metal doors from closets to the workshop west of the immovable dock            |
+| 1035 | Unknown small metal doors from closets to the workshop west of the immovable docks           |
+| 1036 | Unknown small metal doors from closets to the workshop west of the immovable docks.          |
+| 1037 | Unknown small metal doors from closets to the workshops west of the immovable dock           |
+| 1038 | Unknown small metal doors from closets to the workshops west of the immovable docks          |
+| 1039 | Unknown small metal doors from closets to workshops west of the immovable docks              |
+| 1040 | Unknown small metal doors from the closet to a workshop west of an immovable dock            |
+| 1041 | Unknown small metal doors from the closet to a workshop west of immovable docks              |
+| 1042 | Unknown small metal doors from the closet to a workshop west of the immovable dock           |
+| 1043 | Unknown small metal doors from the closet to a workshop west of the immovable docks          |
+| 1044 | Unknown small metal doors from the closet to a workshop west of the immovable docks.         |
+| 1045 | Unknown small metal doors from the closet to the workshop west of an immovable dock          |
+| 1046 | Unknown small metal doors from the closet to the workshop west of immovable docks            |
+| 1047 | Unknown small metal doors from the closet to the workshop west of immovable docks.           |
+| 1048 | Unknown small metal doors from the closet to the workshop west of the immovable dock         |
+| 1049 | Unknown small metal doors from the closet to the workshop west of the immovable docks        |
+| 1050 | Unknown small metal doors from the closet to the workshop west of the immovable docks.       |
+| 1051 | Unknown small metal doors from the closet to the workshops west of an immovable dock         |
+| 1052 | Unknown small metal doors from the closet to the workshops west of the immovable dock        |
+| 1053 | Unknown small metal doors from the closet to the workshops west of the immovable docks       |
+| 1054 | Unknown small metal doors from the closet to workshops west of an immovable dock             |
+| 1055 | Unknown small metal doors from the closet to workshops west of the immovable dock            |
+| 1056 | Unknown small metal doors from the closet to workshops west of the immovable docks           |
+| 1057 | Unknown small metal doors from the closet west of the immovable dock to the workshops        |
+| 1058 | Unknown small metal doors from the closet west of the immovable docks to the workshops       |
+| 1059 | Unknown small metal doors from the closets to a workshop west of the immovable dock          |
+| 1060 | Unknown small metal doors from the closets to a workshop west of the immovable docks         |
+| 1061 | Unknown small metal doors from the closets to the workshop west of an immovable dock         |
+| 1062 | Unknown small metal doors from the closets to the workshop west of the immovable dock        |
+| 1063 | Unknown small metal doors from the closets to the workshop west of the immovable docks       |
+| 1064 | Unknown small metal doors to a workshop from a closet west of an immovable dock              |
+| 1065 | Unknown small metal doors to a workshop from a closet west of the immovable dock             |
+| 1066 | Unknown small metal doors to a workshop from a closet west of the immovable docks            |
+| 1067 | Unknown small metal doors to a workshop from closets west of an immovable dock               |
+| 1068 | Unknown small metal doors to a workshop from closets west of the immovable dock              |
+| 1069 | Unknown small metal doors to a workshop from closets west of the immovable docks             |
+| 1070 | Unknown small metal doors to a workshop from the closet west of an immovable dock            |
+| 1071 | Unknown small metal doors to a workshop from the closet west of immovable docks              |
+| 1072 | Unknown small metal doors to a workshop from the closet west of the immovable dock           |
+| 1073 | Unknown small metal doors to a workshop from the closet west of the immovable docks          |
+| 1074 | Unknown small metal doors to a workshop from the closet west of the immovable docks.         |
+| 1075 | Unknown small metal doors to a workshop from the closets west of an immovable dock           |
+| 1076 | Unknown small metal doors to a workshop from the closets west of the immovable dock          |
+| 1077 | Unknown small metal doors to a workshop from the closets west of the immovable docks         |
+| 1078 | Unknown small metal doors to a workshop west of an immovable dock from the closets           |
+| 1079 | Unknown small metal doors to a workshop west of the immovable dock from the closets          |
+| 1080 | Unknown small metal doors to a workshop west of the immovable docks from the closets         |
+| 1081 | Unknown small metal doors to the workshop from a closet west of an immovable dock            |
+| 1082 | Unknown small metal doors to the workshop from a closet west of immovable docks              |
+| 1083 | Unknown small metal doors to the workshop from a closet west of the immovable dock           |
+| 1084 | Unknown small metal doors to the workshop from a closet west of the immovable docks          |
+| 1085 | Unknown small metal doors to the workshop from a closet west of the immovable docks.         |
+| 1086 | Unknown small metal doors to the workshop from closets west of an immovable dock             |
+| 1087 | Unknown small metal doors to the workshop from closets west of immovable docks               |
+| 1088 | Unknown small metal doors to the workshop from closets west of the immovable dock            |
+| 1089 | Unknown small metal doors to the workshop from closets west of the immovable docks           |
+| 1090 | Unknown small metal doors to the workshop from closets west of the immovable docks.          |
+| 1091 | Unknown small metal doors to the workshop from the closet west of an immovable dock          |
+| 1092 | Unknown small metal doors to the workshop from the closet west of an immovable dock.         |
+| 1093 | Unknown small metal doors to the workshop from the closet west of immovable docks            |
+| 1094 | Unknown small metal doors to the workshop from the closet west of immovable docks.           |
+| 1095 | Unknown small metal doors to the workshop from the closet west of the immovable dock         |
+| 1096 | Unknown small metal doors to the workshop from the closet west of the immovable dock.        |
+| 1097 | Unknown small metal doors to the workshop from the closet west of the immovable docks        |
+| 1098 | Unknown small metal doors to the workshop from the closet west of the immovable docks.       |
+| 1099 | Unknown small metal doors to the workshop from the closets west of an immovable dock         |
+| 1100 | Unknown small metal doors to the workshop from the closets west of immovable docks           |
+| 1101 | Unknown small metal doors to the workshop from the closets west of the immovable dock        |
+| 1102 | Unknown small metal doors to the workshop from the closets west of the immovable docks       |
+| 1103 | Unknown small metal doors to the workshop from the closets west of the immovable docks.      |
+| 1104 | Unknown small metal doors to the workshop west of an immovable dock from the closet          |
+| 1105 | Unknown small metal doors to the workshop west of an immovable dock from the closets         |
+| 1106 | Unknown small metal doors to the workshop west of an immovable dock from the closets.        |
+| 1107 | Unknown small metal doors to the workshop west of the immovable dock from the closet         |
+| 1108 | Unknown small metal doors to the workshop west of the immovable dock from the closets        |
+| 1109 | Unknown small metal doors to the workshop west of the immovable dock from the closets.       |
+| 1110 | Unknown small metal doors to the workshop west of the immovable docks from the closet        |
+| 1111 | Unknown small metal doors to the workshop west of the immovable docks from the closets       |
+| 1112 | Unknown small metal doors to the workshop west of the immovable docks from the closets.      |
+| 1113 | Unknown small metal doors to the workshops from a closet west of an immovable dock           |
+| 1114 | Unknown small metal doors to the workshops from a closet west of the immovable dock          |
+| 1115 | Unknown small metal doors to the workshops from a closet west of the immovable docks         |
+| 1116 | Unknown small metal doors to the workshops from closets west of an immovable dock            |
+| 1117 | Unknown small metal doors to the workshops from closets west of the immovable dock           |
+| 1118 | Unknown small metal doors to the workshops from closets west of the immovable docks          |
+| 1119 | Unknown small metal doors to the workshops from the closet west of an immovable dock         |
+| 1120 | Unknown small metal doors to the workshops from the closet west of immovable docks           |
+| 1121 | Unknown small metal doors to the workshops from the closet west of the immovable dock        |
+| 1122 | Unknown small metal doors to the workshops from the closet west of the immovable docks       |
+| 1123 | Unknown small metal doors to the workshops from the closet west of the immovable docks.      |
+| 1124 | Unknown small metal doors to the workshops from the closets west of the immovable dock       |
+| 1125 | Unknown small metal doors to the workshops from the closets west of the immovable docks      |
+| 1126 | Unknown small metal doors to workshops from a closet west of an immovable dock               |
+| 1127 | Unknown small metal doors to workshops from a closet west of the immovable dock              |
+| 1128 | Unknown small metal doors to workshops from a closet west of the immovable docks             |
+| 1129 | Unknown small metal doors to workshops from closets west of the immovable dock               |
+| 1130 | Unknown small metal doors to workshops from closets west of the immovable docks              |
+| 1131 | Unknown small metal doors to workshops from the closet west of an immovable dock             |
+| 1132 | Unknown small metal doors to workshops from the closet west of immovable docks               |
+| 1133 | Unknown small metal doors to workshops from the closet west of the immovable dock            |
+| 1134 | Unknown small metal doors to workshops from the closet west of the immovable docks           |
+| 1135 | Unknown small metal doors to workshops from the closet west of the immovable docks.          |
+| 1136 | Unknown small metal doors to workshops from the closets west of the immovable docks          |
++------+----------------------------------------------------------------------------------------------+
+

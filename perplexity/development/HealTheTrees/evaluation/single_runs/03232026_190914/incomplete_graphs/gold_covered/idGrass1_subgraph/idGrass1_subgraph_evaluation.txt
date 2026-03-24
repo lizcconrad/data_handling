@@ -1,0 +1,324 @@
+GRAPH NAME: idGrass1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 144                |
+| Generated Gold Results          | 1                  |
+| Generated Gold Results Coverage | 1.0                |
++---------------------------------+--------------------+
+| Node Count                      | 6                  |
+| Nodes Covered                   | 5                  |
+| Nodes Included                  | 5                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.8333333333333334 |
+| Node Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+| Edge Count                      | 5                  |
+| Edges Covered                   | 4                  |
+| Edges Included                  | 4                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8                |
+| Edge Inclusion                  | 0.8                |
++---------------------------------+--------------------+
+
++------------------------------------------------------------+
+|                        GOLD OUTPUTS                        |
++-----------------------------------------------+------------+
+| Gold Output                                   | Generated? |
++-----------------------------------------------+------------+
+| the tall green grass near the grassy clearing | True       |
++-----------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         NODE METRICS                                                         |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                            | Inclusion Comment                 |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| idGrass1    | True         | True          | Covered                                     | Included                          |
+| tall        | True         | True          | Covered                                     | Included                          |
+| green       | True         | True          | Covered                                     | Included                          |
+| uncountable | False        | False         | 'uncountable' not in lexicon's node entries | No SEMENT generated for this node |
+| idClearing1 | True         | True          | Covered                                     | Included                          |
+| grassy      | True         | True          | Covered                                     | Included                          |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                              EDGE METRICS                                                                             |
++-------------------------------+-------------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Edge                          | Parent      | Child       | Edge Covered | Edge Included | Coverage Comment                       | Inclusion Comment                 |
++-------------------------------+-------------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idGrass1_prop_idHeight        | idGrass1    | tall        | True         | True          | Covered                                | Included                          |
+| idGrass1_prop_idColor         | idGrass1    | green       | True         | True          | Covered                                | Included                          |
+| idGrass1_prop_idArticleType   | idGrass1    | uncountable | False        | False         | child of 'idArticleType' has no SEMENT | No SEMENT generated for this edge |
+| isNear                        | idGrass1    | idClearing1 | True         | True          | Covered                                | Included                          |
+| idClearing1_prop_idDescriptor | idClearing1 | grassy      | True         | True          | Covered                                | Included                          |
++-------------------------------+-------------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h447                                                                      |
+|               |   INDEX: x446                                                                    |
+|               |   RELS: < [ _near_p LBL: h462 ARG0: e459 ARG1: u460 ARG2: i461 ]                 |
+|               |           [ def_udef_a_q LBL: h466 ARG0: x463 RSTR: h464 BODY: h465 ]            |
+|               |           [ _grassy_a_1 LBL: h458 ARG0: e456 ARG1: u457 ]                        |
+|               |           [ _clearing_n_1 LBL: h455 ARG0: x454 ]                                 |
+|               |           [ _green_a_2 LBL: h453 ARG0: i451 ARG1: i452 ]                         |
+|               |           [ _tall_a_1 LBL: h450 ARG0: e448 ARG1: u449 ]                          |
+|               |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|               |   HCONS: < h464 qeq h455 >                                                       |
+|               |   EQS: < h458 eq h455 u457 eq x454 x463 eq x454 h462 eq h467 i461 eq x463 h450   |
+|               | eq h447 u449 eq x446 h453 eq h447 i452 eq x446 h462 eq h447 u460 eq x446 > ]     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h447                                                                      |
+|               |   INDEX: x446                                                                    |
+|               |   RELS: < [ _near_p LBL: h447 ARG0: e459 ARG1: x446 ARG2: x454 ]                 |
+|               |           [ def_udef_a_q LBL: h466 ARG0: x454 RSTR: h464 BODY: h465 ]            |
+|               |           [ _grassy_a_1 LBL: h455 ARG0: e456 ARG1: x454 ]                        |
+|               |           [ _clearing_n_1 LBL: h455 ARG0: x454 ]                                 |
+|               |           [ _green_a_2 LBL: h447 ARG0: i451 ARG1: x446 ]                         |
+|               |           [ _tall_a_1 LBL: h447 ARG0: e448 ARG1: x446 ]                          |
+|               |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|               |   HCONS: < h464 qeq h455 > ]                                                     |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h476                                                                      |
+|               |   INDEX: e473                                                                    |
+|               |   RELS: < [ unknown LBL: h472 ARG: x446 ARG0: e473 ]                             |
+|               |           [ def_udef_a_q LBL: h471 ARG0: x446 RSTR: h469 BODY: h470 ]            |
+|               |           [ _near_p LBL: h447 ARG0: e459 ARG1: x446 ARG2: x454 ]                 |
+|               |           [ def_udef_a_q LBL: h466 ARG0: x454 RSTR: h464 BODY: h465 ]            |
+|               |           [ _grassy_a_1 LBL: h455 ARG0: e456 ARG1: x454 ]                        |
+|               |           [ _clearing_n_1 LBL: h455 ARG0: x454 ]                                 |
+|               |           [ _green_a_2 LBL: h447 ARG0: i451 ARG1: x446 ]                         |
+|               |           [ _tall_a_1 LBL: h447 ARG0: e448 ARG1: x446 ]                          |
+|               |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|               |   HCONS: < h464 qeq h455 h469 qeq h447 h476 qeq h472 > ]                         |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------+
+|                                NODE SEMENTS                               |
++-------------+-------------------------------------------------------------+
+| Node        | Generated SEMENT                                            |
++-------------+-------------------------------------------------------------+
+| idGrass1    | [ TOP: h447                                                 |
+|             |   INDEX: x446                                               |
+|             |   RELS: < [ _grass_n_1 LBL: h447 ARG0: x446 ] > ]           |
++-------------+-------------------------------------------------------------+
+| tall        | [ TOP: h450                                                 |
+|             |   INDEX: e448                                               |
+|             |   RELS: < [ _tall_a_1 LBL: h450 ARG0: e448 ARG1: u449 ] >   |
+|             |   SLOTS: < ARG1: u449 > ]                                   |
++-------------+-------------------------------------------------------------+
+| green       | [ TOP: h453                                                 |
+|             |   INDEX: i451                                               |
+|             |   RELS: < [ _green_a_2 LBL: h453 ARG0: i451 ARG1: i452 ] >  |
+|             |   SLOTS: < ARG1: i452 > ]                                   |
++-------------+-------------------------------------------------------------+
+| uncountable | None                                                        |
++-------------+-------------------------------------------------------------+
+| idClearing1 | [ TOP: h455                                                 |
+|             |   INDEX: x454                                               |
+|             |   RELS: < [ _clearing_n_1 LBL: h455 ARG0: x454 ] > ]        |
++-------------+-------------------------------------------------------------+
+| grassy      | [ TOP: h458                                                 |
+|             |   INDEX: e456                                               |
+|             |   RELS: < [ _grassy_a_1 LBL: h458 ARG0: e456 ARG1: u457 ] > |
+|             |   SLOTS: < ARG1: u457 > ]                                   |
++-------------+-------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                 |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| Edge                          | Parent      | Child       | Generated SEMENT                                                                 |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idHeight        | idGrass1    | tall        | [ TOP: h447                                                                      |
+|                               |             |             |   INDEX: x446                                                                    |
+|                               |             |             |   RELS: < [ _tall_a_1 LBL: h450 ARG0: e448 ARG1: u449 ]                          |
+|                               |             |             |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|                               |             |             |   EQS: < h450 eq h447 u449 eq x446 > ]                                           |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idColor         | idGrass1    | green       | [ TOP: h447                                                                      |
+|                               |             |             |   INDEX: x446                                                                    |
+|                               |             |             |   RELS: < [ _green_a_2 LBL: h453 ARG0: i451 ARG1: i452 ]                         |
+|                               |             |             |           [ _tall_a_1 LBL: h450 ARG0: e448 ARG1: u449 ]                          |
+|                               |             |             |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|                               |             |             |   EQS: < h450 eq h447 u449 eq x446 h453 eq h447 i452 eq x446 > ]                 |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idArticleType   | idGrass1    | uncountable | None                                                                             |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| isNear                        | idGrass1    | idClearing1 | [ TOP: h447                                                                      |
+|                               |             |             |   INDEX: x446                                                                    |
+|                               |             |             |   RELS: < [ _near_p LBL: h462 ARG0: e459 ARG1: u460 ARG2: i461 ]                 |
+|                               |             |             |           [ def_udef_a_q LBL: h466 ARG0: x463 RSTR: h464 BODY: h465 ]            |
+|                               |             |             |           [ _grassy_a_1 LBL: h458 ARG0: e456 ARG1: u457 ]                        |
+|                               |             |             |           [ _clearing_n_1 LBL: h455 ARG0: x454 ]                                 |
+|                               |             |             |           [ _green_a_2 LBL: h453 ARG0: i451 ARG1: i452 ]                         |
+|                               |             |             |           [ _tall_a_1 LBL: h450 ARG0: e448 ARG1: u449 ]                          |
+|                               |             |             |           [ _grass_n_1 LBL: h447 ARG0: x446 ] >                                  |
+|                               |             |             |   HCONS: < h464 qeq h455 >                                                       |
+|                               |             |             |   EQS: < h458 eq h455 u457 eq x454 x463 eq x454 h462 eq h467 i461 eq x463 h450   |
+|                               |             |             | eq h447 u449 eq x446 h453 eq h447 i452 eq x446 h462 eq h447 u460 eq x446 > ]     |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+| idClearing1_prop_idDescriptor | idClearing1 | grassy      | [ TOP: h455                                                                      |
+|                               |             |             |   INDEX: x454                                                                    |
+|                               |             |             |   RELS: < [ _grassy_a_1 LBL: h458 ARG0: e456 ARG1: u457 ]                        |
+|                               |             |             |           [ _clearing_n_1 LBL: h455 ARG0: x454 ] >                               |
+|                               |             |             |   EQS: < h458 eq h455 u457 eq x454 > ]                                           |
++-------------------------------+-------------+-------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                 |
++-----+---------------------------------------------------+
+| #   | Generated Text                                    |
++-----+---------------------------------------------------+
+| 1   | A green tall grass near a grassy clearing         |
+| 2   | A green tall grass near a grassy clearing.        |
+| 3   | A green tall grass near grassy clearings          |
+| 4   | A green tall grass near grassy clearings.         |
+| 5   | A green tall grass near the grassy clearing       |
+| 6   | A green tall grass near the grassy clearing.      |
+| 7   | A green tall grass near the grassy clearings      |
+| 8   | A green tall grass near the grassy clearings.     |
+| 9   | A green tall grass, near a grassy clearing        |
+| 10  | A green tall grass, near grassy clearings         |
+| 11  | A green tall grass, near the grassy clearing      |
+| 12  | A green tall grass, near the grassy clearings     |
+| 13  | A tall green grass near a grassy clearing         |
+| 14  | A tall green grass near a grassy clearing.        |
+| 15  | A tall green grass near grassy clearings          |
+| 16  | A tall green grass near grassy clearings.         |
+| 17  | A tall green grass near the grassy clearing       |
+| 18  | A tall green grass near the grassy clearing.      |
+| 19  | A tall green grass near the grassy clearings      |
+| 20  | A tall green grass near the grassy clearings.     |
+| 21  | A tall green grass, near a grassy clearing        |
+| 22  | A tall green grass, near grassy clearings         |
+| 23  | A tall green grass, near the grassy clearing      |
+| 24  | A tall green grass, near the grassy clearings     |
+| 25  | Green tall grass near a grassy clearing           |
+| 26  | Green tall grass near a grassy clearing           |
+| 27  | Green tall grass near a grassy clearing.          |
+| 28  | Green tall grass near a grassy clearing.          |
+| 29  | Green tall grass near grassy clearings            |
+| 30  | Green tall grass near grassy clearings            |
+| 31  | Green tall grass near grassy clearings.           |
+| 32  | Green tall grass near grassy clearings.           |
+| 33  | Green tall grass near the grassy clearing         |
+| 34  | Green tall grass near the grassy clearing         |
+| 35  | Green tall grass near the grassy clearing.        |
+| 36  | Green tall grass near the grassy clearing.        |
+| 37  | Green tall grass near the grassy clearings        |
+| 38  | Green tall grass near the grassy clearings        |
+| 39  | Green tall grass near the grassy clearings.       |
+| 40  | Green tall grass near the grassy clearings.       |
+| 41  | Green tall grass, near a grassy clearing          |
+| 42  | Green tall grass, near a grassy clearing          |
+| 43  | Green tall grass, near grassy clearings           |
+| 44  | Green tall grass, near grassy clearings           |
+| 45  | Green tall grass, near the grassy clearing        |
+| 46  | Green tall grass, near the grassy clearing        |
+| 47  | Green tall grass, near the grassy clearings       |
+| 48  | Green tall grass, near the grassy clearings       |
+| 49  | Green tall grasses near a grassy clearing         |
+| 50  | Green tall grasses near a grassy clearing.        |
+| 51  | Green tall grasses near grassy clearings          |
+| 52  | Green tall grasses near grassy clearings.         |
+| 53  | Green tall grasses near the grassy clearing       |
+| 54  | Green tall grasses near the grassy clearing.      |
+| 55  | Green tall grasses near the grassy clearings      |
+| 56  | Green tall grasses near the grassy clearings.     |
+| 57  | Green tall grasses, near a grassy clearing        |
+| 58  | Green tall grasses, near grassy clearings         |
+| 59  | Green tall grasses, near the grassy clearing      |
+| 60  | Green tall grasses, near the grassy clearings     |
+| 61  | Tall green grass near a grassy clearing           |
+| 62  | Tall green grass near a grassy clearing           |
+| 63  | Tall green grass near a grassy clearing.          |
+| 64  | Tall green grass near a grassy clearing.          |
+| 65  | Tall green grass near grassy clearings            |
+| 66  | Tall green grass near grassy clearings            |
+| 67  | Tall green grass near grassy clearings.           |
+| 68  | Tall green grass near grassy clearings.           |
+| 69  | Tall green grass near the grassy clearing         |
+| 70  | Tall green grass near the grassy clearing         |
+| 71  | Tall green grass near the grassy clearing.        |
+| 72  | Tall green grass near the grassy clearing.        |
+| 73  | Tall green grass near the grassy clearings        |
+| 74  | Tall green grass near the grassy clearings        |
+| 75  | Tall green grass near the grassy clearings.       |
+| 76  | Tall green grass near the grassy clearings.       |
+| 77  | Tall green grass, near a grassy clearing          |
+| 78  | Tall green grass, near a grassy clearing          |
+| 79  | Tall green grass, near grassy clearings           |
+| 80  | Tall green grass, near grassy clearings           |
+| 81  | Tall green grass, near the grassy clearing        |
+| 82  | Tall green grass, near the grassy clearing        |
+| 83  | Tall green grass, near the grassy clearings       |
+| 84  | Tall green grass, near the grassy clearings       |
+| 85  | Tall green grasses near a grassy clearing         |
+| 86  | Tall green grasses near a grassy clearing.        |
+| 87  | Tall green grasses near grassy clearings          |
+| 88  | Tall green grasses near grassy clearings.         |
+| 89  | Tall green grasses near the grassy clearing       |
+| 90  | Tall green grasses near the grassy clearing.      |
+| 91  | Tall green grasses near the grassy clearings      |
+| 92  | Tall green grasses near the grassy clearings.     |
+| 93  | Tall green grasses, near a grassy clearing        |
+| 94  | Tall green grasses, near grassy clearings         |
+| 95  | Tall green grasses, near the grassy clearing      |
+| 96  | Tall green grasses, near the grassy clearings     |
+| 97  | The green tall grass near a grassy clearing       |
+| 98  | The green tall grass near a grassy clearing.      |
+| 99  | The green tall grass near grassy clearings        |
+| 100 | The green tall grass near grassy clearings.       |
+| 101 | The green tall grass near the grassy clearing     |
+| 102 | The green tall grass near the grassy clearing.    |
+| 103 | The green tall grass near the grassy clearings    |
+| 104 | The green tall grass near the grassy clearings.   |
+| 105 | The green tall grass, near a grassy clearing      |
+| 106 | The green tall grass, near grassy clearings       |
+| 107 | The green tall grass, near the grassy clearing    |
+| 108 | The green tall grass, near the grassy clearings   |
+| 109 | The green tall grasses near a grassy clearing     |
+| 110 | The green tall grasses near a grassy clearing.    |
+| 111 | The green tall grasses near grassy clearings      |
+| 112 | The green tall grasses near grassy clearings.     |
+| 113 | The green tall grasses near the grassy clearing   |
+| 114 | The green tall grasses near the grassy clearing.  |
+| 115 | The green tall grasses near the grassy clearings  |
+| 116 | The green tall grasses near the grassy clearings. |
+| 117 | The green tall grasses, near a grassy clearing    |
+| 118 | The green tall grasses, near grassy clearings     |
+| 119 | The green tall grasses, near the grassy clearing  |
+| 120 | The green tall grasses, near the grassy clearings |
+| 121 | The tall green grass near a grassy clearing       |
+| 122 | The tall green grass near a grassy clearing.      |
+| 123 | The tall green grass near grassy clearings        |
+| 124 | The tall green grass near grassy clearings.       |
+| 125 | The tall green grass near the grassy clearing     |
+| 126 | The tall green grass near the grassy clearing.    |
+| 127 | The tall green grass near the grassy clearings    |
+| 128 | The tall green grass near the grassy clearings.   |
+| 129 | The tall green grass, near a grassy clearing      |
+| 130 | The tall green grass, near grassy clearings       |
+| 131 | The tall green grass, near the grassy clearing    |
+| 132 | The tall green grass, near the grassy clearings   |
+| 133 | The tall green grasses near a grassy clearing     |
+| 134 | The tall green grasses near a grassy clearing.    |
+| 135 | The tall green grasses near grassy clearings      |
+| 136 | The tall green grasses near grassy clearings.     |
+| 137 | The tall green grasses near the grassy clearing   |
+| 138 | The tall green grasses near the grassy clearing.  |
+| 139 | The tall green grasses near the grassy clearings  |
+| 140 | The tall green grasses near the grassy clearings. |
+| 141 | The tall green grasses, near a grassy clearing    |
+| 142 | The tall green grasses, near grassy clearings     |
+| 143 | The tall green grasses, near the grassy clearing  |
+| 144 | The tall green grasses, near the grassy clearings |
++-----+---------------------------------------------------+
+

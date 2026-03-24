@@ -1,0 +1,327 @@
+GRAPH NAME: idClearing1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 150   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++---------------------------------------------------------------+
+|                          GOLD OUTPUTS                         |
++--------------------------------------------------+------------+
+| Gold Output                                      | Generated? |
++--------------------------------------------------+------------+
+| the grassy clearing east of the rocky rocky area | True       |
++--------------------------------------------------+------------+
+
++------------------------------------------------------------------------------------+
+|                                    NODE METRICS                                    |
++--------------+--------------+---------------+------------------+-------------------+
+| Node         | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++--------------+--------------+---------------+------------------+-------------------+
+| idClearing1  | True         | True          | Covered          | Included          |
+| grassy       | True         | True          | Covered          | Included          |
+| idRockyArea1 | True         | True          | Covered          | Included          |
+| rocky        | True         | True          | Covered          | Included          |
++--------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE METRICS                                                            |
++--------------------------------+--------------+--------------+--------------+---------------+------------------+-------------------+
+| Edge                           | Parent       | Child        | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------+--------------+--------------+--------------+---------------+------------------+-------------------+
+| idClearing1_prop_idDescriptor  | idClearing1  | grassy       | True         | True          | Covered          | Included          |
+| isEastOf                       | idClearing1  | idRockyArea1 | True         | True          | Covered          | Included          |
+| idRockyArea1_prop_idDescriptor | idRockyArea1 | rocky        | True         | True          | Covered          | Included          |
++--------------------------------+--------------+--------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h405                                                                      |
+|               |   INDEX: x404                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h424 ARG0: e421 ARG1: u422 ARG2: x423 ]               |
+|               |           [ def_implicit_q LBL: h435 ARG0: x432 RSTR: h433 BODY: h434 ]          |
+|               |           [ _east_a_1 LBL: h420 ARG0: i417 ARG1: x418 ARG2: u419 ]               |
+|               |           [ def_udef_a_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]            |
+|               |           [ _rocky_a_1 LBL: h416 ARG0: e414 ARG1: u415 ]                         |
+|               |           [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: u410 ]                         |
+|               |           [ _area_n_of LBL: h413 ARG0: x412 ]                                    |
+|               |           [ place_n LBL: h426 ARG0: x425 ]                                       |
+|               |           [ _grassy_a_1 LBL: h408 ARG0: e406 ARG1: u407 ]                        |
+|               |           [ _clearing_n_1 LBL: h405 ARG0: x404 ] >                               |
+|               |   HCONS: < h428 qeq h413 h433 qeq h426 >                                         |
+|               |   EQS: < h411 eq h413 u410 eq x412 h416 eq h413 u415 eq x412 x427 eq x412 h420   |
+|               | eq h431 u419 eq x427 h420 eq h426 x418 eq x425 x432 eq x425 h424 eq h436 x423 eq |
+|               | x432 h408 eq h405 u407 eq x404 h424 eq h405 u422 eq x404 > ]                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h405                                                                      |
+|               |   INDEX: x404                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h405 ARG0: e421 ARG1: x404 ARG2: x418 ]               |
+|               |           [ def_implicit_q LBL: h435 ARG0: x418 RSTR: h433 BODY: h434 ]          |
+|               |           [ _east_a_1 LBL: h420 ARG0: i417 ARG1: x418 ARG2: x412 ]               |
+|               |           [ def_udef_a_q LBL: h430 ARG0: x412 RSTR: h428 BODY: h429 ]            |
+|               |           [ _rocky_a_1 LBL: h411 ARG0: e414 ARG1: x412 ]                         |
+|               |           [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: x412 ]                         |
+|               |           [ _area_n_of LBL: h411 ARG0: x412 ]                                    |
+|               |           [ place_n LBL: h420 ARG0: x418 ]                                       |
+|               |           [ _grassy_a_1 LBL: h405 ARG0: e406 ARG1: x404 ]                        |
+|               |           [ _clearing_n_1 LBL: h405 ARG0: x404 ] >                               |
+|               |   HCONS: < h428 qeq h411 h433 qeq h420 > ]                                       |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h445                                                                      |
+|               |   INDEX: e442                                                                    |
+|               |   RELS: < [ unknown LBL: h441 ARG: x404 ARG0: e442 ]                             |
+|               |           [ def_udef_a_q LBL: h440 ARG0: x404 RSTR: h438 BODY: h439 ]            |
+|               |           [ loc_nonsp LBL: h405 ARG0: e421 ARG1: x404 ARG2: x418 ]               |
+|               |           [ def_implicit_q LBL: h435 ARG0: x418 RSTR: h433 BODY: h434 ]          |
+|               |           [ _east_a_1 LBL: h420 ARG0: i417 ARG1: x418 ARG2: x412 ]               |
+|               |           [ def_udef_a_q LBL: h430 ARG0: x412 RSTR: h428 BODY: h429 ]            |
+|               |           [ _rocky_a_1 LBL: h411 ARG0: e414 ARG1: x412 ]                         |
+|               |           [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: x412 ]                         |
+|               |           [ _area_n_of LBL: h411 ARG0: x412 ]                                    |
+|               |           [ place_n LBL: h420 ARG0: x418 ]                                       |
+|               |           [ _grassy_a_1 LBL: h405 ARG0: e406 ARG1: x404 ]                        |
+|               |           [ _clearing_n_1 LBL: h405 ARG0: x404 ] >                               |
+|               |   HCONS: < h428 qeq h411 h433 qeq h420 h438 qeq h405 h445 qeq h441 > ]           |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                                NODE SEMENTS                                |
++--------------+-------------------------------------------------------------+
+| Node         | Generated SEMENT                                            |
++--------------+-------------------------------------------------------------+
+| idClearing1  | [ TOP: h405                                                 |
+|              |   INDEX: x404                                               |
+|              |   RELS: < [ _clearing_n_1 LBL: h405 ARG0: x404 ] > ]        |
++--------------+-------------------------------------------------------------+
+| grassy       | [ TOP: h408                                                 |
+|              |   INDEX: e406                                               |
+|              |   RELS: < [ _grassy_a_1 LBL: h408 ARG0: e406 ARG1: u407 ] > |
+|              |   SLOTS: < ARG1: u407 > ]                                   |
++--------------+-------------------------------------------------------------+
+| idRockyArea1 | [ TOP: h413                                                 |
+|              |   INDEX: x412                                               |
+|              |   RELS: < [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: u410 ]    |
+|              |           [ _area_n_of LBL: h413 ARG0: x412 ] >             |
+|              |   EQS: < h411 eq h413 u410 eq x412 > ]                      |
++--------------+-------------------------------------------------------------+
+| rocky        | [ TOP: h416                                                 |
+|              |   INDEX: e414                                               |
+|              |   RELS: < [ _rocky_a_1 LBL: h416 ARG0: e414 ARG1: u415 ] >  |
+|              |   SLOTS: < ARG1: u415 > ]                                   |
++--------------+-------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE SEMENTS                                                                  |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent       | Child        | Generated SEMENT                                                                 |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idClearing1_prop_idDescriptor  | idClearing1  | grassy       | [ TOP: h405                                                                      |
+|                                |              |              |   INDEX: x404                                                                    |
+|                                |              |              |   RELS: < [ _grassy_a_1 LBL: h408 ARG0: e406 ARG1: u407 ]                        |
+|                                |              |              |           [ _clearing_n_1 LBL: h405 ARG0: x404 ] >                               |
+|                                |              |              |   EQS: < h408 eq h405 u407 eq x404 > ]                                           |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| isEastOf                       | idClearing1  | idRockyArea1 | [ TOP: h405                                                                      |
+|                                |              |              |   INDEX: x404                                                                    |
+|                                |              |              |   RELS: < [ loc_nonsp LBL: h424 ARG0: e421 ARG1: u422 ARG2: x423 ]               |
+|                                |              |              |           [ def_implicit_q LBL: h435 ARG0: x432 RSTR: h433 BODY: h434 ]          |
+|                                |              |              |           [ _east_a_1 LBL: h420 ARG0: i417 ARG1: x418 ARG2: u419 ]               |
+|                                |              |              |           [ def_udef_a_q LBL: h430 ARG0: x427 RSTR: h428 BODY: h429 ]            |
+|                                |              |              |           [ _rocky_a_1 LBL: h416 ARG0: e414 ARG1: u415 ]                         |
+|                                |              |              |           [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: u410 ]                         |
+|                                |              |              |           [ _area_n_of LBL: h413 ARG0: x412 ]                                    |
+|                                |              |              |           [ place_n LBL: h426 ARG0: x425 ]                                       |
+|                                |              |              |           [ _grassy_a_1 LBL: h408 ARG0: e406 ARG1: u407 ]                        |
+|                                |              |              |           [ _clearing_n_1 LBL: h405 ARG0: x404 ] >                               |
+|                                |              |              |   HCONS: < h428 qeq h413 h433 qeq h426 >                                         |
+|                                |              |              |   EQS: < h411 eq h413 u410 eq x412 h416 eq h413 u415 eq x412 x427 eq x412 h420   |
+|                                |              |              | eq h431 u419 eq x427 h420 eq h426 x418 eq x425 x432 eq x425 h424 eq h436 x423 eq |
+|                                |              |              | x432 h408 eq h405 u407 eq x404 h424 eq h405 u422 eq x404 > ]                     |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+| idRockyArea1_prop_idDescriptor | idRockyArea1 | rocky        | [ TOP: h413                                                                      |
+|                                |              |              |   INDEX: x412                                                                    |
+|                                |              |              |   RELS: < [ _rocky_a_1 LBL: h416 ARG0: e414 ARG1: u415 ]                         |
+|                                |              |              |           [ _rocky_a_1 LBL: h411 ARG0: e409 ARG1: u410 ]                         |
+|                                |              |              |           [ _area_n_of LBL: h413 ARG0: x412 ] >                                  |
+|                                |              |              |   EQS: < h411 eq h413 u410 eq x412 h416 eq h413 u415 eq x412 > ]                 |
++--------------------------------+--------------+--------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------+
+|                   GENERATED ENGLISH TEXT                  |
++-----+-----------------------------------------------------+
+| #   | Generated Text                                      |
++-----+-----------------------------------------------------+
+| 1   | A grassy clearing east of a rocky rocky area        |
+| 2   | A grassy clearing east of a rocky rocky area        |
+| 3   | A grassy clearing east of a rocky rocky area.       |
+| 4   | A grassy clearing east of a rocky rocky area.       |
+| 5   | A grassy clearing east of rocky rocky area          |
+| 6   | A grassy clearing east of rocky rocky area          |
+| 7   | A grassy clearing east of rocky rocky area.         |
+| 8   | A grassy clearing east of rocky rocky area.         |
+| 9   | A grassy clearing east of rocky rocky areas         |
+| 10  | A grassy clearing east of rocky rocky areas         |
+| 11  | A grassy clearing east of rocky rocky areas.        |
+| 12  | A grassy clearing east of rocky rocky areas.        |
+| 13  | A grassy clearing east of the rocky rocky area      |
+| 14  | A grassy clearing east of the rocky rocky area      |
+| 15  | A grassy clearing east of the rocky rocky area.     |
+| 16  | A grassy clearing east of the rocky rocky area.     |
+| 17  | A grassy clearing east of the rocky rocky areas     |
+| 18  | A grassy clearing east of the rocky rocky areas     |
+| 19  | A grassy clearing east of the rocky rocky areas.    |
+| 20  | A grassy clearing east of the rocky rocky areas.    |
+| 21  | A grassy clearing, east of a rocky rocky area       |
+| 22  | A grassy clearing, east of a rocky rocky area       |
+| 23  | A grassy clearing, east of rocky rocky area         |
+| 24  | A grassy clearing, east of rocky rocky area         |
+| 25  | A grassy clearing, east of rocky rocky areas        |
+| 26  | A grassy clearing, east of rocky rocky areas        |
+| 27  | A grassy clearing, east of the rocky rocky area     |
+| 28  | A grassy clearing, east of the rocky rocky area     |
+| 29  | A grassy clearing, east of the rocky rocky areas    |
+| 30  | A grassy clearing, east of the rocky rocky areas    |
+| 31  | Grassy clearing east of a rocky rocky area          |
+| 32  | Grassy clearing east of a rocky rocky area          |
+| 33  | Grassy clearing east of a rocky rocky area.         |
+| 34  | Grassy clearing east of a rocky rocky area.         |
+| 35  | Grassy clearing east of rocky rocky area            |
+| 36  | Grassy clearing east of rocky rocky area            |
+| 37  | Grassy clearing east of rocky rocky area.           |
+| 38  | Grassy clearing east of rocky rocky area.           |
+| 39  | Grassy clearing east of rocky rocky areas           |
+| 40  | Grassy clearing east of rocky rocky areas           |
+| 41  | Grassy clearing east of rocky rocky areas.          |
+| 42  | Grassy clearing east of rocky rocky areas.          |
+| 43  | Grassy clearing east of the rocky rocky area        |
+| 44  | Grassy clearing east of the rocky rocky area        |
+| 45  | Grassy clearing east of the rocky rocky area.       |
+| 46  | Grassy clearing east of the rocky rocky area.       |
+| 47  | Grassy clearing east of the rocky rocky areas       |
+| 48  | Grassy clearing east of the rocky rocky areas       |
+| 49  | Grassy clearing east of the rocky rocky areas.      |
+| 50  | Grassy clearing east of the rocky rocky areas.      |
+| 51  | Grassy clearing, east of a rocky rocky area         |
+| 52  | Grassy clearing, east of a rocky rocky area         |
+| 53  | Grassy clearing, east of rocky rocky area           |
+| 54  | Grassy clearing, east of rocky rocky area           |
+| 55  | Grassy clearing, east of rocky rocky areas          |
+| 56  | Grassy clearing, east of rocky rocky areas          |
+| 57  | Grassy clearing, east of the rocky rocky area       |
+| 58  | Grassy clearing, east of the rocky rocky area       |
+| 59  | Grassy clearing, east of the rocky rocky areas      |
+| 60  | Grassy clearing, east of the rocky rocky areas      |
+| 61  | Grassy clearings east of a rocky rocky area         |
+| 62  | Grassy clearings east of a rocky rocky area         |
+| 63  | Grassy clearings east of a rocky rocky area.        |
+| 64  | Grassy clearings east of a rocky rocky area.        |
+| 65  | Grassy clearings east of rocky rocky area           |
+| 66  | Grassy clearings east of rocky rocky area           |
+| 67  | Grassy clearings east of rocky rocky area.          |
+| 68  | Grassy clearings east of rocky rocky area.          |
+| 69  | Grassy clearings east of rocky rocky areas          |
+| 70  | Grassy clearings east of rocky rocky areas          |
+| 71  | Grassy clearings east of rocky rocky areas.         |
+| 72  | Grassy clearings east of rocky rocky areas.         |
+| 73  | Grassy clearings east of the rocky rocky area       |
+| 74  | Grassy clearings east of the rocky rocky area       |
+| 75  | Grassy clearings east of the rocky rocky area.      |
+| 76  | Grassy clearings east of the rocky rocky area.      |
+| 77  | Grassy clearings east of the rocky rocky areas      |
+| 78  | Grassy clearings east of the rocky rocky areas      |
+| 79  | Grassy clearings east of the rocky rocky areas.     |
+| 80  | Grassy clearings east of the rocky rocky areas.     |
+| 81  | Grassy clearings, east of a rocky rocky area        |
+| 82  | Grassy clearings, east of a rocky rocky area        |
+| 83  | Grassy clearings, east of rocky rocky area          |
+| 84  | Grassy clearings, east of rocky rocky area          |
+| 85  | Grassy clearings, east of rocky rocky areas         |
+| 86  | Grassy clearings, east of rocky rocky areas         |
+| 87  | Grassy clearings, east of the rocky rocky area      |
+| 88  | Grassy clearings, east of the rocky rocky area      |
+| 89  | Grassy clearings, east of the rocky rocky areas     |
+| 90  | Grassy clearings, east of the rocky rocky areas     |
+| 91  | The grassy clearing east of a rocky rocky area      |
+| 92  | The grassy clearing east of a rocky rocky area      |
+| 93  | The grassy clearing east of a rocky rocky area.     |
+| 94  | The grassy clearing east of a rocky rocky area.     |
+| 95  | The grassy clearing east of rocky rocky area        |
+| 96  | The grassy clearing east of rocky rocky area        |
+| 97  | The grassy clearing east of rocky rocky area.       |
+| 98  | The grassy clearing east of rocky rocky area.       |
+| 99  | The grassy clearing east of rocky rocky areas       |
+| 100 | The grassy clearing east of rocky rocky areas       |
+| 101 | The grassy clearing east of rocky rocky areas.      |
+| 102 | The grassy clearing east of rocky rocky areas.      |
+| 103 | The grassy clearing east of the rocky rocky area    |
+| 104 | The grassy clearing east of the rocky rocky area    |
+| 105 | The grassy clearing east of the rocky rocky area.   |
+| 106 | The grassy clearing east of the rocky rocky area.   |
+| 107 | The grassy clearing east of the rocky rocky areas   |
+| 108 | The grassy clearing east of the rocky rocky areas   |
+| 109 | The grassy clearing east of the rocky rocky areas.  |
+| 110 | The grassy clearing east of the rocky rocky areas.  |
+| 111 | The grassy clearing, east of a rocky rocky area     |
+| 112 | The grassy clearing, east of a rocky rocky area     |
+| 113 | The grassy clearing, east of rocky rocky area       |
+| 114 | The grassy clearing, east of rocky rocky area       |
+| 115 | The grassy clearing, east of rocky rocky areas      |
+| 116 | The grassy clearing, east of rocky rocky areas      |
+| 117 | The grassy clearing, east of the rocky rocky area   |
+| 118 | The grassy clearing, east of the rocky rocky area   |
+| 119 | The grassy clearing, east of the rocky rocky areas  |
+| 120 | The grassy clearing, east of the rocky rocky areas  |
+| 121 | The grassy clearings east of a rocky rocky area     |
+| 122 | The grassy clearings east of a rocky rocky area     |
+| 123 | The grassy clearings east of a rocky rocky area.    |
+| 124 | The grassy clearings east of a rocky rocky area.    |
+| 125 | The grassy clearings east of rocky rocky area       |
+| 126 | The grassy clearings east of rocky rocky area       |
+| 127 | The grassy clearings east of rocky rocky area.      |
+| 128 | The grassy clearings east of rocky rocky area.      |
+| 129 | The grassy clearings east of rocky rocky areas      |
+| 130 | The grassy clearings east of rocky rocky areas      |
+| 131 | The grassy clearings east of rocky rocky areas.     |
+| 132 | The grassy clearings east of rocky rocky areas.     |
+| 133 | The grassy clearings east of the rocky rocky area   |
+| 134 | The grassy clearings east of the rocky rocky area   |
+| 135 | The grassy clearings east of the rocky rocky area.  |
+| 136 | The grassy clearings east of the rocky rocky area.  |
+| 137 | The grassy clearings east of the rocky rocky areas  |
+| 138 | The grassy clearings east of the rocky rocky areas  |
+| 139 | The grassy clearings east of the rocky rocky areas. |
+| 140 | The grassy clearings east of the rocky rocky areas. |
+| 141 | The grassy clearings, east of a rocky rocky area    |
+| 142 | The grassy clearings, east of a rocky rocky area    |
+| 143 | The grassy clearings, east of rocky rocky area      |
+| 144 | The grassy clearings, east of rocky rocky area      |
+| 145 | The grassy clearings, east of rocky rocky areas     |
+| 146 | The grassy clearings, east of rocky rocky areas     |
+| 147 | The grassy clearings, east of the rocky rocky area  |
+| 148 | The grassy clearings, east of the rocky rocky area  |
+| 149 | The grassy clearings, east of the rocky rocky areas |
+| 150 | The grassy clearings, east of the rocky rocky areas |
++-----+-----------------------------------------------------+
+

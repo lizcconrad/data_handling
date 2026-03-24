@@ -1,0 +1,594 @@
+GRAPH NAME: idMachineDoorHandle_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 360   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------+
+|                               GOLD OUTPUTS                               |
++-------------------------------------------------------------+------------+
+| Gold Output                                                 | Generated? |
++-------------------------------------------------------------+------------+
+| the machine door handle near the closed locked machine door | True       |
++-------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------+
+|                                        NODE METRICS                                       |
++---------------------+--------------+---------------+------------------+-------------------+
+| Node                | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------------+--------------+---------------+------------------+-------------------+
+| idMachineDoorHandle | True         | True          | Covered          | Included          |
+| idMachineDoor       | True         | True          | Covered          | Included          |
+| closed              | True         | True          | Covered          | Included          |
+| locked              | True         | True          | Covered          | Included          |
++---------------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE METRICS                                                                 |
++----------------------------------+---------------------+---------------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent              | Child         | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+---------------------+---------------+--------------+---------------+------------------+-------------------+
+| isNear                           | idMachineDoorHandle | idMachineDoor | True         | True          | Covered          | Included          |
+| idMachineDoor_prop_idOpenState   | idMachineDoor       | closed        | True         | True          | Covered          | Included          |
+| idMachineDoor_prop_idLockedState | idMachineDoor       | locked        | True         | True          | Covered          | Included          |
++----------------------------------+---------------------+---------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h326                                                                      |
+|               |   INDEX: x325                                                                    |
+|               |   RELS: < [ _near_p LBL: h372 ARG0: e369 ARG1: u370 ARG2: i371 ]                 |
+|               |           [ def_udef_a_q LBL: h376 ARG0: x373 RSTR: h374 BODY: h375 ]            |
+|               |           [ _lock_v_cause LBL: h368 ARG0: e365 [ e PERF: - ] ARG1: i366 ARG2:    |
+|               | i367 ]                                                                           |
+|               |           [ _closed_a_1 LBL: h364 ARG0: e362 ARG1: u363 ]                        |
+|               |           [ compound LBL: h361 ARG0: e358 [ e PROG: - ] ARG1: u359 ARG2: u360 ]  |
+|               |           [ udef_q LBL: h356 ARG0: x353 RSTR: h354 BODY: h355 ]                  |
+|               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|               |           [ _door_n_1 LBL: h350 ARG0: x349 ]                                     |
+|               |           [ compound LBL: h348 ARG0: e345 [ e PROG: - ] ARG1: u346 ARG2: u347 ]  |
+|               |           [ udef_q LBL: h343 ARG0: x340 RSTR: h341 BODY: h342 ]                  |
+|               |           [ compound LBL: h339 ARG0: e336 [ e PROG: - ] ARG1: u337 ARG2: u338 ]  |
+|               |           [ udef_q LBL: h334 ARG0: x331 RSTR: h332 BODY: h333 ]                  |
+|               |           [ _machine_n_1 LBL: h330 ARG0: x329 ]                                  |
+|               |           [ _door_n_1 LBL: h328 ARG0: x327 ]                                     |
+|               |           [ _handle_n_1 LBL: h326 ARG0: x325 ] >                                 |
+|               |   HCONS: < h354 qeq h352 h374 qeq h350 h332 qeq h330 h341 qeq h328 >             |
+|               |   ICONS: < e365 topic i367 >                                                     |
+|               |   EQS: < x353 eq x351 h361 eq h357 u360 eq x353 h361 eq h350 u359 eq x349 h364   |
+|               | eq h350 u363 eq x349 h368 eq h350 i367 eq x349 x373 eq x349 h372 eq h377 i371 eq |
+|               | x373 x331 eq x329 h339 eq h335 u338 eq x331 h339 eq h328 u337 eq x327 x340 eq    |
+|               | x327 h348 eq h344 u347 eq x340 h348 eq h326 u346 eq x325 h372 eq h326 u370 eq    |
+|               | x325 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h326                                                                      |
+|               |   INDEX: x325                                                                    |
+|               |   RELS: < [ _near_p LBL: h326 ARG0: e369 ARG1: x325 ARG2: x349 ]                 |
+|               |           [ def_udef_a_q LBL: h376 ARG0: x349 RSTR: h374 BODY: h375 ]            |
+|               |           [ _lock_v_cause LBL: h350 ARG0: e365 [ e PERF: - ] ARG1: i366 ARG2:    |
+|               | x349 ]                                                                           |
+|               |           [ _closed_a_1 LBL: h350 ARG0: e362 ARG1: x349 ]                        |
+|               |           [ compound LBL: h350 ARG0: e358 [ e PROG: - ] ARG1: x349 ARG2: x351 ]  |
+|               |           [ udef_q LBL: h356 ARG0: x351 RSTR: h354 BODY: h355 ]                  |
+|               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|               |           [ _door_n_1 LBL: h350 ARG0: x349 ]                                     |
+|               |           [ compound LBL: h326 ARG0: e345 [ e PROG: - ] ARG1: x325 ARG2: x327 ]  |
+|               |           [ udef_q LBL: h343 ARG0: x327 RSTR: h341 BODY: h342 ]                  |
+|               |           [ compound LBL: h328 ARG0: e336 [ e PROG: - ] ARG1: x327 ARG2: x329 ]  |
+|               |           [ udef_q LBL: h334 ARG0: x329 RSTR: h332 BODY: h333 ]                  |
+|               |           [ _machine_n_1 LBL: h330 ARG0: x329 ]                                  |
+|               |           [ _door_n_1 LBL: h328 ARG0: x327 ]                                     |
+|               |           [ _handle_n_1 LBL: h326 ARG0: x325 ] >                                 |
+|               |   HCONS: < h354 qeq h352 h374 qeq h350 h332 qeq h330 h341 qeq h328 >             |
+|               |   ICONS: < e365 topic x349 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h386                                                                      |
+|               |   INDEX: e383                                                                    |
+|               |   RELS: < [ unknown LBL: h382 ARG: x325 ARG0: e383 ]                             |
+|               |           [ def_udef_a_q LBL: h381 ARG0: x325 RSTR: h379 BODY: h380 ]            |
+|               |           [ _near_p LBL: h326 ARG0: e369 ARG1: x325 ARG2: x349 ]                 |
+|               |           [ def_udef_a_q LBL: h376 ARG0: x349 RSTR: h374 BODY: h375 ]            |
+|               |           [ _lock_v_cause LBL: h350 ARG0: e365 [ e PERF: - ] ARG1: i366 ARG2:    |
+|               | x349 ]                                                                           |
+|               |           [ _closed_a_1 LBL: h350 ARG0: e362 ARG1: x349 ]                        |
+|               |           [ compound LBL: h350 ARG0: e358 [ e PROG: - ] ARG1: x349 ARG2: x351 ]  |
+|               |           [ udef_q LBL: h356 ARG0: x351 RSTR: h354 BODY: h355 ]                  |
+|               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|               |           [ _door_n_1 LBL: h350 ARG0: x349 ]                                     |
+|               |           [ compound LBL: h326 ARG0: e345 [ e PROG: - ] ARG1: x325 ARG2: x327 ]  |
+|               |           [ udef_q LBL: h343 ARG0: x327 RSTR: h341 BODY: h342 ]                  |
+|               |           [ compound LBL: h328 ARG0: e336 [ e PROG: - ] ARG1: x327 ARG2: x329 ]  |
+|               |           [ udef_q LBL: h334 ARG0: x329 RSTR: h332 BODY: h333 ]                  |
+|               |           [ _machine_n_1 LBL: h330 ARG0: x329 ]                                  |
+|               |           [ _door_n_1 LBL: h328 ARG0: x327 ]                                     |
+|               |           [ _handle_n_1 LBL: h326 ARG0: x325 ] >                                 |
+|               |   HCONS: < h354 qeq h352 h374 qeq h350 h332 qeq h330 h341 qeq h328 h379 qeq h326 |
+|               | h386 qeq h382 >                                                                  |
+|               |   ICONS: < e365 topic x349 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------+
+|                                              NODE SEMENTS                                              |
++---------------------+----------------------------------------------------------------------------------+
+| Node                | Generated SEMENT                                                                 |
++---------------------+----------------------------------------------------------------------------------+
+| idMachineDoorHandle | [ TOP: h326                                                                      |
+|                     |   INDEX: x325                                                                    |
+|                     |   RELS: < [ compound LBL: h348 ARG0: e345 [ e PROG: - ] ARG1: u346 ARG2: u347 ]  |
+|                     |           [ udef_q LBL: h343 ARG0: x340 RSTR: h341 BODY: h342 ]                  |
+|                     |           [ compound LBL: h339 ARG0: e336 [ e PROG: - ] ARG1: u337 ARG2: u338 ]  |
+|                     |           [ udef_q LBL: h334 ARG0: x331 RSTR: h332 BODY: h333 ]                  |
+|                     |           [ _machine_n_1 LBL: h330 ARG0: x329 ]                                  |
+|                     |           [ _door_n_1 LBL: h328 ARG0: x327 ]                                     |
+|                     |           [ _handle_n_1 LBL: h326 ARG0: x325 ] >                                 |
+|                     |   HCONS: < h332 qeq h330 h341 qeq h328 >                                         |
+|                     |   EQS: < x331 eq x329 h339 eq h335 u338 eq x331 h339 eq h328 u337 eq x327 x340   |
+|                     | eq x327 h348 eq h344 u347 eq x340 h348 eq h326 u346 eq x325 > ]                  |
++---------------------+----------------------------------------------------------------------------------+
+| idMachineDoor       | [ TOP: h350                                                                      |
+|                     |   INDEX: x349                                                                    |
+|                     |   RELS: < [ compound LBL: h361 ARG0: e358 [ e PROG: - ] ARG1: u359 ARG2: u360 ]  |
+|                     |           [ udef_q LBL: h356 ARG0: x353 RSTR: h354 BODY: h355 ]                  |
+|                     |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|                     |           [ _door_n_1 LBL: h350 ARG0: x349 ] >                                   |
+|                     |   HCONS: < h354 qeq h352 >                                                       |
+|                     |   EQS: < x353 eq x351 h361 eq h357 u360 eq x353 h361 eq h350 u359 eq x349 > ]    |
++---------------------+----------------------------------------------------------------------------------+
+| closed              | [ TOP: h364                                                                      |
+|                     |   INDEX: e362                                                                    |
+|                     |   RELS: < [ _closed_a_1 LBL: h364 ARG0: e362 ARG1: u363 ] >                      |
+|                     |   SLOTS: < ARG1: u363 > ]                                                        |
++---------------------+----------------------------------------------------------------------------------+
+| locked              | [ TOP: h368                                                                      |
+|                     |   INDEX: e365                                                                    |
+|                     |   RELS: < [ _lock_v_cause LBL: h368 ARG0: e365 ARG1: i366 ARG2: i367 ] >         |
+|                     |   SLOTS: < ARG1: i366 ARG2: i367 > ]                                             |
++---------------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                        EDGE SEMENTS                                                                       |
++----------------------------------+---------------------+---------------+----------------------------------------------------------------------------------+
+| Edge                             | Parent              | Child         | Generated SEMENT                                                                 |
++----------------------------------+---------------------+---------------+----------------------------------------------------------------------------------+
+| isNear                           | idMachineDoorHandle | idMachineDoor | [ TOP: h326                                                                      |
+|                                  |                     |               |   INDEX: x325                                                                    |
+|                                  |                     |               |   RELS: < [ _near_p LBL: h372 ARG0: e369 ARG1: u370 ARG2: i371 ]                 |
+|                                  |                     |               |           [ def_udef_a_q LBL: h376 ARG0: x373 RSTR: h374 BODY: h375 ]            |
+|                                  |                     |               |           [ _lock_v_cause LBL: h368 ARG0: e365 [ e PERF: - ] ARG1: i366 ARG2:    |
+|                                  |                     |               | i367 ]                                                                           |
+|                                  |                     |               |           [ _closed_a_1 LBL: h364 ARG0: e362 ARG1: u363 ]                        |
+|                                  |                     |               |           [ compound LBL: h361 ARG0: e358 [ e PROG: - ] ARG1: u359 ARG2: u360 ]  |
+|                                  |                     |               |           [ udef_q LBL: h356 ARG0: x353 RSTR: h354 BODY: h355 ]                  |
+|                                  |                     |               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|                                  |                     |               |           [ _door_n_1 LBL: h350 ARG0: x349 ]                                     |
+|                                  |                     |               |           [ compound LBL: h348 ARG0: e345 [ e PROG: - ] ARG1: u346 ARG2: u347 ]  |
+|                                  |                     |               |           [ udef_q LBL: h343 ARG0: x340 RSTR: h341 BODY: h342 ]                  |
+|                                  |                     |               |           [ compound LBL: h339 ARG0: e336 [ e PROG: - ] ARG1: u337 ARG2: u338 ]  |
+|                                  |                     |               |           [ udef_q LBL: h334 ARG0: x331 RSTR: h332 BODY: h333 ]                  |
+|                                  |                     |               |           [ _machine_n_1 LBL: h330 ARG0: x329 ]                                  |
+|                                  |                     |               |           [ _door_n_1 LBL: h328 ARG0: x327 ]                                     |
+|                                  |                     |               |           [ _handle_n_1 LBL: h326 ARG0: x325 ] >                                 |
+|                                  |                     |               |   HCONS: < h354 qeq h352 h374 qeq h350 h332 qeq h330 h341 qeq h328 >             |
+|                                  |                     |               |   ICONS: < e365 topic i367 >                                                     |
+|                                  |                     |               |   EQS: < x353 eq x351 h361 eq h357 u360 eq x353 h361 eq h350 u359 eq x349 h364   |
+|                                  |                     |               | eq h350 u363 eq x349 h368 eq h350 i367 eq x349 x373 eq x349 h372 eq h377 i371 eq |
+|                                  |                     |               | x373 x331 eq x329 h339 eq h335 u338 eq x331 h339 eq h328 u337 eq x327 x340 eq    |
+|                                  |                     |               | x327 h348 eq h344 u347 eq x340 h348 eq h326 u346 eq x325 h372 eq h326 u370 eq    |
+|                                  |                     |               | x325 > ]                                                                         |
++----------------------------------+---------------------+---------------+----------------------------------------------------------------------------------+
+| idMachineDoor_prop_idOpenState   | idMachineDoor       | closed        | [ TOP: h350                                                                      |
+|                                  |                     |               |   INDEX: x349                                                                    |
+|                                  |                     |               |   RELS: < [ _closed_a_1 LBL: h364 ARG0: e362 ARG1: u363 ]                        |
+|                                  |                     |               |           [ compound LBL: h361 ARG0: e358 [ e PROG: - ] ARG1: u359 ARG2: u360 ]  |
+|                                  |                     |               |           [ udef_q LBL: h356 ARG0: x353 RSTR: h354 BODY: h355 ]                  |
+|                                  |                     |               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|                                  |                     |               |           [ _door_n_1 LBL: h350 ARG0: x349 ] >                                   |
+|                                  |                     |               |   HCONS: < h354 qeq h352 >                                                       |
+|                                  |                     |               |   EQS: < x353 eq x351 h361 eq h357 u360 eq x353 h361 eq h350 u359 eq x349 h364   |
+|                                  |                     |               | eq h350 u363 eq x349 > ]                                                         |
++----------------------------------+---------------------+---------------+----------------------------------------------------------------------------------+
+| idMachineDoor_prop_idLockedState | idMachineDoor       | locked        | [ TOP: h350                                                                      |
+|                                  |                     |               |   INDEX: x349                                                                    |
+|                                  |                     |               |   RELS: < [ _lock_v_cause LBL: h368 ARG0: e365 [ e PERF: - ] ARG1: i366 ARG2:    |
+|                                  |                     |               | i367 ]                                                                           |
+|                                  |                     |               |           [ _closed_a_1 LBL: h364 ARG0: e362 ARG1: u363 ]                        |
+|                                  |                     |               |           [ compound LBL: h361 ARG0: e358 [ e PROG: - ] ARG1: u359 ARG2: u360 ]  |
+|                                  |                     |               |           [ udef_q LBL: h356 ARG0: x353 RSTR: h354 BODY: h355 ]                  |
+|                                  |                     |               |           [ _machine_n_1 LBL: h352 ARG0: x351 ]                                  |
+|                                  |                     |               |           [ _door_n_1 LBL: h350 ARG0: x349 ] >                                   |
+|                                  |                     |               |   HCONS: < h354 qeq h352 >                                                       |
+|                                  |                     |               |   ICONS: < e365 topic i367 >                                                     |
+|                                  |                     |               |   EQS: < x353 eq x351 h361 eq h357 u360 eq x353 h361 eq h350 u359 eq x349 h364   |
+|                                  |                     |               | eq h350 u363 eq x349 h368 eq h350 i367 eq x349 > ]                               |
++----------------------------------+---------------------+---------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+|                         GENERATED ENGLISH TEXT                        |
++-----+-----------------------------------------------------------------+
+| #   | Generated Text                                                  |
++-----+-----------------------------------------------------------------+
+| 1   | A machine door handle near a closed locked machine door         |
+| 2   | A machine door handle near a closed locked machine door.        |
+| 3   | A machine door handle near a closed machines locked door        |
+| 4   | A machine door handle near a closed machines locked door.       |
+| 5   | A machine door handle near a locked closed machine door         |
+| 6   | A machine door handle near a locked closed machine door.        |
+| 7   | A machine door handle near a locked machines closed door        |
+| 8   | A machine door handle near a locked machines closed door.       |
+| 9   | A machine door handle near a machines closed locked door        |
+| 10  | A machine door handle near a machines closed locked door.       |
+| 11  | A machine door handle near a machines locked closed door        |
+| 12  | A machine door handle near a machines locked closed door.       |
+| 13  | A machine door handle near closed locked machine doors          |
+| 14  | A machine door handle near closed locked machine doors.         |
+| 15  | A machine door handle near closed machines locked doors         |
+| 16  | A machine door handle near closed machines locked doors.        |
+| 17  | A machine door handle near locked closed machine doors          |
+| 18  | A machine door handle near locked closed machine doors.         |
+| 19  | A machine door handle near locked machines closed doors         |
+| 20  | A machine door handle near locked machines closed doors.        |
+| 21  | A machine door handle near machines closed locked doors         |
+| 22  | A machine door handle near machines closed locked doors.        |
+| 23  | A machine door handle near machines locked closed doors         |
+| 24  | A machine door handle near machines locked closed doors.        |
+| 25  | A machine door handle near the closed locked machine door       |
+| 26  | A machine door handle near the closed locked machine door.      |
+| 27  | A machine door handle near the closed locked machine doors      |
+| 28  | A machine door handle near the closed locked machine doors.     |
+| 29  | A machine door handle near the closed machines locked door      |
+| 30  | A machine door handle near the closed machines locked door.     |
+| 31  | A machine door handle near the closed machines locked doors     |
+| 32  | A machine door handle near the closed machines locked doors.    |
+| 33  | A machine door handle near the locked closed machine door       |
+| 34  | A machine door handle near the locked closed machine door.      |
+| 35  | A machine door handle near the locked closed machine doors      |
+| 36  | A machine door handle near the locked closed machine doors.     |
+| 37  | A machine door handle near the locked machines closed door      |
+| 38  | A machine door handle near the locked machines closed door.     |
+| 39  | A machine door handle near the locked machines closed doors     |
+| 40  | A machine door handle near the locked machines closed doors.    |
+| 41  | A machine door handle near the machines closed locked door      |
+| 42  | A machine door handle near the machines closed locked door.     |
+| 43  | A machine door handle near the machines closed locked doors     |
+| 44  | A machine door handle near the machines closed locked doors.    |
+| 45  | A machine door handle near the machines locked closed door      |
+| 46  | A machine door handle near the machines locked closed door.     |
+| 47  | A machine door handle near the machines locked closed doors     |
+| 48  | A machine door handle near the machines locked closed doors.    |
+| 49  | A machine door handle, near a closed locked machine door        |
+| 50  | A machine door handle, near a closed machines locked door       |
+| 51  | A machine door handle, near a locked closed machine door        |
+| 52  | A machine door handle, near a locked machines closed door       |
+| 53  | A machine door handle, near a machines closed locked door       |
+| 54  | A machine door handle, near a machines locked closed door       |
+| 55  | A machine door handle, near closed locked machine doors         |
+| 56  | A machine door handle, near closed machines locked doors        |
+| 57  | A machine door handle, near locked closed machine doors         |
+| 58  | A machine door handle, near locked machines closed doors        |
+| 59  | A machine door handle, near machines closed locked doors        |
+| 60  | A machine door handle, near machines locked closed doors        |
+| 61  | A machine door handle, near the closed locked machine door      |
+| 62  | A machine door handle, near the closed locked machine doors     |
+| 63  | A machine door handle, near the closed machines locked door     |
+| 64  | A machine door handle, near the closed machines locked doors    |
+| 65  | A machine door handle, near the locked closed machine door      |
+| 66  | A machine door handle, near the locked closed machine doors     |
+| 67  | A machine door handle, near the locked machines closed door     |
+| 68  | A machine door handle, near the locked machines closed doors    |
+| 69  | A machine door handle, near the machines closed locked door     |
+| 70  | A machine door handle, near the machines closed locked doors    |
+| 71  | A machine door handle, near the machines locked closed door     |
+| 72  | A machine door handle, near the machines locked closed doors    |
+| 73  | Machine door handle near a closed locked machine door           |
+| 74  | Machine door handle near a closed locked machine door.          |
+| 75  | Machine door handle near a closed machines locked door          |
+| 76  | Machine door handle near a closed machines locked door.         |
+| 77  | Machine door handle near a locked closed machine door           |
+| 78  | Machine door handle near a locked closed machine door.          |
+| 79  | Machine door handle near a locked machines closed door          |
+| 80  | Machine door handle near a locked machines closed door.         |
+| 81  | Machine door handle near a machines closed locked door          |
+| 82  | Machine door handle near a machines closed locked door.         |
+| 83  | Machine door handle near a machines locked closed door          |
+| 84  | Machine door handle near a machines locked closed door.         |
+| 85  | Machine door handle near closed locked machine doors            |
+| 86  | Machine door handle near closed locked machine doors.           |
+| 87  | Machine door handle near closed machines locked doors           |
+| 88  | Machine door handle near closed machines locked doors.          |
+| 89  | Machine door handle near locked closed machine doors            |
+| 90  | Machine door handle near locked closed machine doors.           |
+| 91  | Machine door handle near locked machines closed doors           |
+| 92  | Machine door handle near locked machines closed doors.          |
+| 93  | Machine door handle near machines closed locked doors           |
+| 94  | Machine door handle near machines closed locked doors.          |
+| 95  | Machine door handle near machines locked closed doors           |
+| 96  | Machine door handle near machines locked closed doors.          |
+| 97  | Machine door handle near the closed locked machine door         |
+| 98  | Machine door handle near the closed locked machine door.        |
+| 99  | Machine door handle near the closed locked machine doors        |
+| 100 | Machine door handle near the closed locked machine doors.       |
+| 101 | Machine door handle near the closed machines locked door        |
+| 102 | Machine door handle near the closed machines locked door.       |
+| 103 | Machine door handle near the closed machines locked doors       |
+| 104 | Machine door handle near the closed machines locked doors.      |
+| 105 | Machine door handle near the locked closed machine door         |
+| 106 | Machine door handle near the locked closed machine door.        |
+| 107 | Machine door handle near the locked closed machine doors        |
+| 108 | Machine door handle near the locked closed machine doors.       |
+| 109 | Machine door handle near the locked machines closed door        |
+| 110 | Machine door handle near the locked machines closed door.       |
+| 111 | Machine door handle near the locked machines closed doors       |
+| 112 | Machine door handle near the locked machines closed doors.      |
+| 113 | Machine door handle near the machines closed locked door        |
+| 114 | Machine door handle near the machines closed locked door.       |
+| 115 | Machine door handle near the machines closed locked doors       |
+| 116 | Machine door handle near the machines closed locked doors.      |
+| 117 | Machine door handle near the machines locked closed door        |
+| 118 | Machine door handle near the machines locked closed door.       |
+| 119 | Machine door handle near the machines locked closed doors       |
+| 120 | Machine door handle near the machines locked closed doors.      |
+| 121 | Machine door handle, near a closed locked machine door          |
+| 122 | Machine door handle, near a closed machines locked door         |
+| 123 | Machine door handle, near a locked closed machine door          |
+| 124 | Machine door handle, near a locked machines closed door         |
+| 125 | Machine door handle, near a machines closed locked door         |
+| 126 | Machine door handle, near a machines locked closed door         |
+| 127 | Machine door handle, near closed locked machine doors           |
+| 128 | Machine door handle, near closed machines locked doors          |
+| 129 | Machine door handle, near locked closed machine doors           |
+| 130 | Machine door handle, near locked machines closed doors          |
+| 131 | Machine door handle, near machines closed locked doors          |
+| 132 | Machine door handle, near machines locked closed doors          |
+| 133 | Machine door handle, near the closed locked machine door        |
+| 134 | Machine door handle, near the closed locked machine doors       |
+| 135 | Machine door handle, near the closed machines locked door       |
+| 136 | Machine door handle, near the closed machines locked doors      |
+| 137 | Machine door handle, near the locked closed machine door        |
+| 138 | Machine door handle, near the locked closed machine doors       |
+| 139 | Machine door handle, near the locked machines closed door       |
+| 140 | Machine door handle, near the locked machines closed doors      |
+| 141 | Machine door handle, near the machines closed locked door       |
+| 142 | Machine door handle, near the machines closed locked doors      |
+| 143 | Machine door handle, near the machines locked closed door       |
+| 144 | Machine door handle, near the machines locked closed doors      |
+| 145 | Machine door handles near a closed locked machine door          |
+| 146 | Machine door handles near a closed locked machine door.         |
+| 147 | Machine door handles near a closed machines locked door         |
+| 148 | Machine door handles near a closed machines locked door.        |
+| 149 | Machine door handles near a locked closed machine door          |
+| 150 | Machine door handles near a locked closed machine door.         |
+| 151 | Machine door handles near a locked machines closed door         |
+| 152 | Machine door handles near a locked machines closed door.        |
+| 153 | Machine door handles near a machines closed locked door         |
+| 154 | Machine door handles near a machines closed locked door.        |
+| 155 | Machine door handles near a machines locked closed door         |
+| 156 | Machine door handles near a machines locked closed door.        |
+| 157 | Machine door handles near closed locked machine doors           |
+| 158 | Machine door handles near closed locked machine doors.          |
+| 159 | Machine door handles near closed machines locked doors          |
+| 160 | Machine door handles near closed machines locked doors.         |
+| 161 | Machine door handles near locked closed machine doors           |
+| 162 | Machine door handles near locked closed machine doors.          |
+| 163 | Machine door handles near locked machines closed doors          |
+| 164 | Machine door handles near locked machines closed doors.         |
+| 165 | Machine door handles near machines closed locked doors          |
+| 166 | Machine door handles near machines closed locked doors.         |
+| 167 | Machine door handles near machines locked closed doors          |
+| 168 | Machine door handles near machines locked closed doors.         |
+| 169 | Machine door handles near the closed locked machine door        |
+| 170 | Machine door handles near the closed locked machine door.       |
+| 171 | Machine door handles near the closed locked machine doors       |
+| 172 | Machine door handles near the closed locked machine doors.      |
+| 173 | Machine door handles near the closed machines locked door       |
+| 174 | Machine door handles near the closed machines locked door.      |
+| 175 | Machine door handles near the closed machines locked doors      |
+| 176 | Machine door handles near the closed machines locked doors.     |
+| 177 | Machine door handles near the locked closed machine door        |
+| 178 | Machine door handles near the locked closed machine door.       |
+| 179 | Machine door handles near the locked closed machine doors       |
+| 180 | Machine door handles near the locked closed machine doors.      |
+| 181 | Machine door handles near the locked machines closed door       |
+| 182 | Machine door handles near the locked machines closed door.      |
+| 183 | Machine door handles near the locked machines closed doors      |
+| 184 | Machine door handles near the locked machines closed doors.     |
+| 185 | Machine door handles near the machines closed locked door       |
+| 186 | Machine door handles near the machines closed locked door.      |
+| 187 | Machine door handles near the machines closed locked doors      |
+| 188 | Machine door handles near the machines closed locked doors.     |
+| 189 | Machine door handles near the machines locked closed door       |
+| 190 | Machine door handles near the machines locked closed door.      |
+| 191 | Machine door handles near the machines locked closed doors      |
+| 192 | Machine door handles near the machines locked closed doors.     |
+| 193 | Machine door handles, near a closed locked machine door         |
+| 194 | Machine door handles, near a closed machines locked door        |
+| 195 | Machine door handles, near a locked closed machine door         |
+| 196 | Machine door handles, near a locked machines closed door        |
+| 197 | Machine door handles, near a machines closed locked door        |
+| 198 | Machine door handles, near a machines locked closed door        |
+| 199 | Machine door handles, near closed locked machine doors          |
+| 200 | Machine door handles, near closed machines locked doors         |
+| 201 | Machine door handles, near locked closed machine doors          |
+| 202 | Machine door handles, near locked machines closed doors         |
+| 203 | Machine door handles, near machines closed locked doors         |
+| 204 | Machine door handles, near machines locked closed doors         |
+| 205 | Machine door handles, near the closed locked machine door       |
+| 206 | Machine door handles, near the closed locked machine doors      |
+| 207 | Machine door handles, near the closed machines locked door      |
+| 208 | Machine door handles, near the closed machines locked doors     |
+| 209 | Machine door handles, near the locked closed machine door       |
+| 210 | Machine door handles, near the locked closed machine doors      |
+| 211 | Machine door handles, near the locked machines closed door      |
+| 212 | Machine door handles, near the locked machines closed doors     |
+| 213 | Machine door handles, near the machines closed locked door      |
+| 214 | Machine door handles, near the machines closed locked doors     |
+| 215 | Machine door handles, near the machines locked closed door      |
+| 216 | Machine door handles, near the machines locked closed doors     |
+| 217 | The machine door handle near a closed locked machine door       |
+| 218 | The machine door handle near a closed locked machine door.      |
+| 219 | The machine door handle near a closed machines locked door      |
+| 220 | The machine door handle near a closed machines locked door.     |
+| 221 | The machine door handle near a locked closed machine door       |
+| 222 | The machine door handle near a locked closed machine door.      |
+| 223 | The machine door handle near a locked machines closed door      |
+| 224 | The machine door handle near a locked machines closed door.     |
+| 225 | The machine door handle near a machines closed locked door      |
+| 226 | The machine door handle near a machines closed locked door.     |
+| 227 | The machine door handle near a machines locked closed door      |
+| 228 | The machine door handle near a machines locked closed door.     |
+| 229 | The machine door handle near closed locked machine doors        |
+| 230 | The machine door handle near closed locked machine doors.       |
+| 231 | The machine door handle near closed machines locked doors       |
+| 232 | The machine door handle near closed machines locked doors.      |
+| 233 | The machine door handle near locked closed machine doors        |
+| 234 | The machine door handle near locked closed machine doors.       |
+| 235 | The machine door handle near locked machines closed doors       |
+| 236 | The machine door handle near locked machines closed doors.      |
+| 237 | The machine door handle near machines closed locked doors       |
+| 238 | The machine door handle near machines closed locked doors.      |
+| 239 | The machine door handle near machines locked closed doors       |
+| 240 | The machine door handle near machines locked closed doors.      |
+| 241 | The machine door handle near the closed locked machine door     |
+| 242 | The machine door handle near the closed locked machine door.    |
+| 243 | The machine door handle near the closed locked machine doors    |
+| 244 | The machine door handle near the closed locked machine doors.   |
+| 245 | The machine door handle near the closed machines locked door    |
+| 246 | The machine door handle near the closed machines locked door.   |
+| 247 | The machine door handle near the closed machines locked doors   |
+| 248 | The machine door handle near the closed machines locked doors.  |
+| 249 | The machine door handle near the locked closed machine door     |
+| 250 | The machine door handle near the locked closed machine door.    |
+| 251 | The machine door handle near the locked closed machine doors    |
+| 252 | The machine door handle near the locked closed machine doors.   |
+| 253 | The machine door handle near the locked machines closed door    |
+| 254 | The machine door handle near the locked machines closed door.   |
+| 255 | The machine door handle near the locked machines closed doors   |
+| 256 | The machine door handle near the locked machines closed doors.  |
+| 257 | The machine door handle near the machines closed locked door    |
+| 258 | The machine door handle near the machines closed locked door.   |
+| 259 | The machine door handle near the machines closed locked doors   |
+| 260 | The machine door handle near the machines closed locked doors.  |
+| 261 | The machine door handle near the machines locked closed door    |
+| 262 | The machine door handle near the machines locked closed door.   |
+| 263 | The machine door handle near the machines locked closed doors   |
+| 264 | The machine door handle near the machines locked closed doors.  |
+| 265 | The machine door handle, near a closed locked machine door      |
+| 266 | The machine door handle, near a closed machines locked door     |
+| 267 | The machine door handle, near a locked closed machine door      |
+| 268 | The machine door handle, near a locked machines closed door     |
+| 269 | The machine door handle, near a machines closed locked door     |
+| 270 | The machine door handle, near a machines locked closed door     |
+| 271 | The machine door handle, near closed locked machine doors       |
+| 272 | The machine door handle, near closed machines locked doors      |
+| 273 | The machine door handle, near locked closed machine doors       |
+| 274 | The machine door handle, near locked machines closed doors      |
+| 275 | The machine door handle, near machines closed locked doors      |
+| 276 | The machine door handle, near machines locked closed doors      |
+| 277 | The machine door handle, near the closed locked machine door    |
+| 278 | The machine door handle, near the closed locked machine doors   |
+| 279 | The machine door handle, near the closed machines locked door   |
+| 280 | The machine door handle, near the closed machines locked doors  |
+| 281 | The machine door handle, near the locked closed machine door    |
+| 282 | The machine door handle, near the locked closed machine doors   |
+| 283 | The machine door handle, near the locked machines closed door   |
+| 284 | The machine door handle, near the locked machines closed doors  |
+| 285 | The machine door handle, near the machines closed locked door   |
+| 286 | The machine door handle, near the machines closed locked doors  |
+| 287 | The machine door handle, near the machines locked closed door   |
+| 288 | The machine door handle, near the machines locked closed doors  |
+| 289 | The machine door handles near a closed locked machine door      |
+| 290 | The machine door handles near a closed locked machine door.     |
+| 291 | The machine door handles near a closed machines locked door     |
+| 292 | The machine door handles near a closed machines locked door.    |
+| 293 | The machine door handles near a locked closed machine door      |
+| 294 | The machine door handles near a locked closed machine door.     |
+| 295 | The machine door handles near a locked machines closed door     |
+| 296 | The machine door handles near a locked machines closed door.    |
+| 297 | The machine door handles near a machines closed locked door     |
+| 298 | The machine door handles near a machines closed locked door.    |
+| 299 | The machine door handles near a machines locked closed door     |
+| 300 | The machine door handles near a machines locked closed door.    |
+| 301 | The machine door handles near closed locked machine doors       |
+| 302 | The machine door handles near closed locked machine doors.      |
+| 303 | The machine door handles near closed machines locked doors      |
+| 304 | The machine door handles near closed machines locked doors.     |
+| 305 | The machine door handles near locked closed machine doors       |
+| 306 | The machine door handles near locked closed machine doors.      |
+| 307 | The machine door handles near locked machines closed doors      |
+| 308 | The machine door handles near locked machines closed doors.     |
+| 309 | The machine door handles near machines closed locked doors      |
+| 310 | The machine door handles near machines closed locked doors.     |
+| 311 | The machine door handles near machines locked closed doors      |
+| 312 | The machine door handles near machines locked closed doors.     |
+| 313 | The machine door handles near the closed locked machine door    |
+| 314 | The machine door handles near the closed locked machine door.   |
+| 315 | The machine door handles near the closed locked machine doors   |
+| 316 | The machine door handles near the closed locked machine doors.  |
+| 317 | The machine door handles near the closed machines locked door   |
+| 318 | The machine door handles near the closed machines locked door.  |
+| 319 | The machine door handles near the closed machines locked doors  |
+| 320 | The machine door handles near the closed machines locked doors. |
+| 321 | The machine door handles near the locked closed machine door    |
+| 322 | The machine door handles near the locked closed machine door.   |
+| 323 | The machine door handles near the locked closed machine doors   |
+| 324 | The machine door handles near the locked closed machine doors.  |
+| 325 | The machine door handles near the locked machines closed door   |
+| 326 | The machine door handles near the locked machines closed door.  |
+| 327 | The machine door handles near the locked machines closed doors  |
+| 328 | The machine door handles near the locked machines closed doors. |
+| 329 | The machine door handles near the machines closed locked door   |
+| 330 | The machine door handles near the machines closed locked door.  |
+| 331 | The machine door handles near the machines closed locked doors  |
+| 332 | The machine door handles near the machines closed locked doors. |
+| 333 | The machine door handles near the machines locked closed door   |
+| 334 | The machine door handles near the machines locked closed door.  |
+| 335 | The machine door handles near the machines locked closed doors  |
+| 336 | The machine door handles near the machines locked closed doors. |
+| 337 | The machine door handles, near a closed locked machine door     |
+| 338 | The machine door handles, near a closed machines locked door    |
+| 339 | The machine door handles, near a locked closed machine door     |
+| 340 | The machine door handles, near a locked machines closed door    |
+| 341 | The machine door handles, near a machines closed locked door    |
+| 342 | The machine door handles, near a machines locked closed door    |
+| 343 | The machine door handles, near closed locked machine doors      |
+| 344 | The machine door handles, near closed machines locked doors     |
+| 345 | The machine door handles, near locked closed machine doors      |
+| 346 | The machine door handles, near locked machines closed doors     |
+| 347 | The machine door handles, near machines closed locked doors     |
+| 348 | The machine door handles, near machines locked closed doors     |
+| 349 | The machine door handles, near the closed locked machine door   |
+| 350 | The machine door handles, near the closed locked machine doors  |
+| 351 | The machine door handles, near the closed machines locked door  |
+| 352 | The machine door handles, near the closed machines locked doors |
+| 353 | The machine door handles, near the locked closed machine door   |
+| 354 | The machine door handles, near the locked closed machine doors  |
+| 355 | The machine door handles, near the locked machines closed door  |
+| 356 | The machine door handles, near the locked machines closed doors |
+| 357 | The machine door handles, near the machines closed locked door  |
+| 358 | The machine door handles, near the machines closed locked doors |
+| 359 | The machine door handles, near the machines locked closed door  |
+| 360 | The machine door handles, near the machines locked closed doors |
++-----+-----------------------------------------------------------------+
+

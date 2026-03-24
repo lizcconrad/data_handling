@@ -1,0 +1,782 @@
+GRAPH NAME: idRock2_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 576                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 6                  |
+| Nodes Covered                   | 5                  |
+| Nodes Included                  | 5                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.8333333333333334 |
+| Node Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+| Edge Count                      | 5                  |
+| Edges Covered                   | 4                  |
+| Edges Included                  | 4                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8                |
+| Edge Inclusion                  | 0.8                |
++---------------------------------+--------------------+
+
++-------------------------------------------------------------------------------------------+
+|                                        GOLD OUTPUTS                                       |
++------------------------------------------------------------------------------+------------+
+| Gold Output                                                                  | Generated? |
++------------------------------------------------------------------------------+------------+
+| the rough red rock north of the machine with an on switch that is turned off | False      |
++------------------------------------------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+|                                                         NODE METRICS                                                        |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                           | Inclusion Comment                 |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+| idRock2     | True         | True          | Covered                                    | Included                          |
+| red         | True         | True          | Covered                                    | Included                          |
+| rough       | True         | True          | Covered                                    | Included                          |
+| idMachine1  | True         | True          | Covered                                    | Included                          |
+| off         | True         | True          | Covered                                    | Included                          |
+| idOnSwitch1 | False        | False         | 'idOnSwitch' not in lexicon's node entries | No SEMENT generated for this node |
++-------------+--------------+---------------+--------------------------------------------+-----------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                              EDGE METRICS                                                                              |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| Edge                           | Parent     | Child       | Edge Covered | Edge Included | Coverage Comment                        | Inclusion Comment                 |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| idRock2_prop_idColor           | idRock2    | red         | True         | True          | Covered                                 | Included                          |
+| idRock2_prop_idTexture         | idRock2    | rough       | True         | True          | Covered                                 | Included                          |
+| isNorthOf                      | idRock2    | idMachine1  | True         | True          | Covered                                 | Included                          |
+| idMachine1_prop_idPowerState   | idMachine1 | off         | True         | True          | Covered                                 | Included                          |
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1 | False        | False         | child of 'idPowerControl' has no SEMENT | No SEMENT generated for this edge |
++--------------------------------+------------+-------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1051                                                                     |
+|               |   INDEX: x1050                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1078 ARG0: e1075 ARG1: u1076 ARG2: x1077 ]           |
+|               |           [ def_implicit_q LBL: h1089 ARG0: x1086 RSTR: h1087 BODY: h1088 ]      |
+|               |           [ _north_a_1 LBL: h1074 ARG0: i1071 ARG1: x1072 ARG2: u1073 ]          |
+|               |           [ def_udef_a_q LBL: h1084 ARG0: x1081 RSTR: h1082 BODY: h1083 ]        |
+|               |           [ _turn_v_off LBL: h1070 ARG0: e1067 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1068 ARG2: i1069 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1059 ARG0: x1058 ]                                |
+|               |           [ place_n LBL: h1080 ARG0: x1079 ]                                     |
+|               |           [ _rough_a_1 LBL: h1057 ARG0: e1055 ARG1: u1056 ]                      |
+|               |           [ _red_a_1 LBL: h1054 ARG0: i1052 ARG1: i1053 ]                        |
+|               |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|               |   HCONS: < h1082 qeq h1059 h1087 qeq h1080 >                                     |
+|               |   ICONS: < e1067 topic i1069 >                                                   |
+|               |   EQS: < h1070 eq h1059 i1069 eq x1058 x1081 eq x1058 h1074 eq h1085 u1073 eq    |
+|               | x1081 h1074 eq h1080 x1072 eq x1079 x1086 eq x1079 h1078 eq h1090 x1077 eq x1086 |
+|               | h1054 eq h1051 i1053 eq x1050 h1057 eq h1051 u1056 eq x1050 h1078 eq h1051 u1076 |
+|               | eq x1050 > ]                                                                     |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1051                                                                     |
+|               |   INDEX: x1050                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h1051 ARG0: e1075 ARG1: x1050 ARG2: x1072 ]           |
+|               |           [ def_implicit_q LBL: h1089 ARG0: x1072 RSTR: h1087 BODY: h1088 ]      |
+|               |           [ _north_a_1 LBL: h1074 ARG0: i1071 ARG1: x1072 ARG2: x1058 ]          |
+|               |           [ def_udef_a_q LBL: h1084 ARG0: x1058 RSTR: h1082 BODY: h1083 ]        |
+|               |           [ _turn_v_off LBL: h1059 ARG0: e1067 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1068 ARG2: x1058 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1059 ARG0: x1058 ]                                |
+|               |           [ place_n LBL: h1074 ARG0: x1072 ]                                     |
+|               |           [ _rough_a_1 LBL: h1051 ARG0: e1055 ARG1: x1050 ]                      |
+|               |           [ _red_a_1 LBL: h1051 ARG0: i1052 ARG1: x1050 ]                        |
+|               |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|               |   HCONS: < h1082 qeq h1059 h1087 qeq h1074 >                                     |
+|               |   ICONS: < e1067 topic x1058 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1099                                                                     |
+|               |   INDEX: e1096                                                                   |
+|               |   RELS: < [ unknown LBL: h1095 ARG: x1050 ARG0: e1096 ]                          |
+|               |           [ def_udef_a_q LBL: h1094 ARG0: x1050 RSTR: h1092 BODY: h1093 ]        |
+|               |           [ loc_nonsp LBL: h1051 ARG0: e1075 ARG1: x1050 ARG2: x1072 ]           |
+|               |           [ def_implicit_q LBL: h1089 ARG0: x1072 RSTR: h1087 BODY: h1088 ]      |
+|               |           [ _north_a_1 LBL: h1074 ARG0: i1071 ARG1: x1072 ARG2: x1058 ]          |
+|               |           [ def_udef_a_q LBL: h1084 ARG0: x1058 RSTR: h1082 BODY: h1083 ]        |
+|               |           [ _turn_v_off LBL: h1059 ARG0: e1067 [ e TENSE: pres PERF: - ] ARG1:   |
+|               | i1068 ARG2: x1058 ]                                                              |
+|               |           [ _machine_n_1 LBL: h1059 ARG0: x1058 ]                                |
+|               |           [ place_n LBL: h1074 ARG0: x1072 ]                                     |
+|               |           [ _rough_a_1 LBL: h1051 ARG0: e1055 ARG1: x1050 ]                      |
+|               |           [ _red_a_1 LBL: h1051 ARG0: i1052 ARG1: x1050 ]                        |
+|               |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|               |   HCONS: < h1082 qeq h1059 h1087 qeq h1074 h1092 qeq h1051 h1099 qeq h1095 >     |
+|               |   ICONS: < e1067 topic x1058 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                 NODE SEMENTS                                 |
++-------------+----------------------------------------------------------------+
+| Node        | Generated SEMENT                                               |
++-------------+----------------------------------------------------------------+
+| idRock2     | [ TOP: h1051                                                   |
+|             |   INDEX: x1050                                                 |
+|             |   RELS: < [ _rock_n_1 LBL: h1051 ARG0: x1050 ] > ]             |
++-------------+----------------------------------------------------------------+
+| red         | [ TOP: h1054                                                   |
+|             |   INDEX: i1052                                                 |
+|             |   RELS: < [ _red_a_1 LBL: h1054 ARG0: i1052 ARG1: i1053 ] >    |
+|             |   SLOTS: < ARG1: i1053 > ]                                     |
++-------------+----------------------------------------------------------------+
+| rough       | [ TOP: h1057                                                   |
+|             |   INDEX: e1055                                                 |
+|             |   RELS: < [ _rough_a_1 LBL: h1057 ARG0: e1055 ARG1: u1056 ] >  |
+|             |   SLOTS: < ARG1: u1056 > ]                                     |
++-------------+----------------------------------------------------------------+
+| idMachine1  | [ TOP: h1059                                                   |
+|             |   INDEX: x1058                                                 |
+|             |   RELS: < [ _machine_n_1 LBL: h1059 ARG0: x1058 ] > ]          |
++-------------+----------------------------------------------------------------+
+| off         | [ TOP: h1062                                                   |
+|             |   INDEX: e1060                                                 |
+|             |   RELS: < [ _false_a_of LBL: h1062 ARG0: e1060 ARG1: h1061 ] > |
+|             |   SLOTS: < ARG1: h1061 > ]                                     |
++-------------+----------------------------------------------------------------+
+| idOnSwitch1 | None                                                           |
++-------------+----------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                 EDGE SEMENTS                                                                 |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| Edge                           | Parent     | Child       | Generated SEMENT                                                                 |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idRock2_prop_idColor           | idRock2    | red         | [ TOP: h1051                                                                     |
+|                                |            |             |   INDEX: x1050                                                                   |
+|                                |            |             |   RELS: < [ _red_a_1 LBL: h1054 ARG0: i1052 ARG1: i1053 ]                        |
+|                                |            |             |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|                                |            |             |   EQS: < h1054 eq h1051 i1053 eq x1050 > ]                                       |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idRock2_prop_idTexture         | idRock2    | rough       | [ TOP: h1051                                                                     |
+|                                |            |             |   INDEX: x1050                                                                   |
+|                                |            |             |   RELS: < [ _rough_a_1 LBL: h1057 ARG0: e1055 ARG1: u1056 ]                      |
+|                                |            |             |           [ _red_a_1 LBL: h1054 ARG0: i1052 ARG1: i1053 ]                        |
+|                                |            |             |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|                                |            |             |   EQS: < h1054 eq h1051 i1053 eq x1050 h1057 eq h1051 u1056 eq x1050 > ]         |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| isNorthOf                      | idRock2    | idMachine1  | [ TOP: h1051                                                                     |
+|                                |            |             |   INDEX: x1050                                                                   |
+|                                |            |             |   RELS: < [ loc_nonsp LBL: h1078 ARG0: e1075 ARG1: u1076 ARG2: x1077 ]           |
+|                                |            |             |           [ def_implicit_q LBL: h1089 ARG0: x1086 RSTR: h1087 BODY: h1088 ]      |
+|                                |            |             |           [ _north_a_1 LBL: h1074 ARG0: i1071 ARG1: x1072 ARG2: u1073 ]          |
+|                                |            |             |           [ def_udef_a_q LBL: h1084 ARG0: x1081 RSTR: h1082 BODY: h1083 ]        |
+|                                |            |             |           [ _turn_v_off LBL: h1070 ARG0: e1067 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |             | i1068 ARG2: i1069 ]                                                              |
+|                                |            |             |           [ _machine_n_1 LBL: h1059 ARG0: x1058 ]                                |
+|                                |            |             |           [ place_n LBL: h1080 ARG0: x1079 ]                                     |
+|                                |            |             |           [ _rough_a_1 LBL: h1057 ARG0: e1055 ARG1: u1056 ]                      |
+|                                |            |             |           [ _red_a_1 LBL: h1054 ARG0: i1052 ARG1: i1053 ]                        |
+|                                |            |             |           [ _rock_n_1 LBL: h1051 ARG0: x1050 ] >                                 |
+|                                |            |             |   HCONS: < h1082 qeq h1059 h1087 qeq h1080 >                                     |
+|                                |            |             |   ICONS: < e1067 topic i1069 >                                                   |
+|                                |            |             |   EQS: < h1070 eq h1059 i1069 eq x1058 x1081 eq x1058 h1074 eq h1085 u1073 eq    |
+|                                |            |             | x1081 h1074 eq h1080 x1072 eq x1079 x1086 eq x1079 h1078 eq h1090 x1077 eq x1086 |
+|                                |            |             | h1054 eq h1051 i1053 eq x1050 h1057 eq h1051 u1056 eq x1050 h1078 eq h1051 u1076 |
+|                                |            |             | eq x1050 > ]                                                                     |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerState   | idMachine1 | off         | [ TOP: h1059                                                                     |
+|                                |            |             |   INDEX: x1058                                                                   |
+|                                |            |             |   RELS: < [ _turn_v_off LBL: h1070 ARG0: e1067 [ e TENSE: pres PERF: - ] ARG1:   |
+|                                |            |             | i1068 ARG2: i1069 ]                                                              |
+|                                |            |             |           [ _machine_n_1 LBL: h1059 ARG0: x1058 ] >                              |
+|                                |            |             |   ICONS: < e1067 topic i1069 >                                                   |
+|                                |            |             |   EQS: < h1070 eq h1059 i1069 eq x1058 > ]                                       |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idMachine1_prop_idPowerControl | idMachine1 | idOnSwitch1 | None                                                                             |
++--------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------+
+|                         GENERATED ENGLISH TEXT                         |
++-----+------------------------------------------------------------------+
+| #   | Generated Text                                                   |
++-----+------------------------------------------------------------------+
+| 1   | A red rough rock north of a machine that is turned off           |
+| 2   | A red rough rock north of a machine that is turned off.          |
+| 3   | A red rough rock north of a machine which is turned off          |
+| 4   | A red rough rock north of a machine which is turned off.         |
+| 5   | A red rough rock north of a machine who is turned off            |
+| 6   | A red rough rock north of a machine who is turned off.           |
+| 7   | A red rough rock north of a machine, that is turned off.         |
+| 8   | A red rough rock north of a machine, which is turned off.        |
+| 9   | A red rough rock north of a machine, who is turned off.          |
+| 10  | A red rough rock north of machines that are turned off           |
+| 11  | A red rough rock north of machines that are turned off.          |
+| 12  | A red rough rock north of machines which are turned off          |
+| 13  | A red rough rock north of machines which are turned off.         |
+| 14  | A red rough rock north of machines who are turned off            |
+| 15  | A red rough rock north of machines who are turned off.           |
+| 16  | A red rough rock north of machines, that are turned off.         |
+| 17  | A red rough rock north of machines, which are turned off.        |
+| 18  | A red rough rock north of machines, who are turned off.          |
+| 19  | A red rough rock north of the machine that is turned off         |
+| 20  | A red rough rock north of the machine that is turned off.        |
+| 21  | A red rough rock north of the machine which is turned off        |
+| 22  | A red rough rock north of the machine which is turned off.       |
+| 23  | A red rough rock north of the machine who is turned off          |
+| 24  | A red rough rock north of the machine who is turned off.         |
+| 25  | A red rough rock north of the machine, that is turned off.       |
+| 26  | A red rough rock north of the machine, which is turned off.      |
+| 27  | A red rough rock north of the machine, who is turned off.        |
+| 28  | A red rough rock north of the machines that are turned off       |
+| 29  | A red rough rock north of the machines that are turned off.      |
+| 30  | A red rough rock north of the machines which are turned off      |
+| 31  | A red rough rock north of the machines which are turned off.     |
+| 32  | A red rough rock north of the machines who are turned off        |
+| 33  | A red rough rock north of the machines who are turned off.       |
+| 34  | A red rough rock north of the machines, that are turned off.     |
+| 35  | A red rough rock north of the machines, which are turned off.    |
+| 36  | A red rough rock north of the machines, who are turned off.      |
+| 37  | A red rough rock, north of a machine that is turned off          |
+| 38  | A red rough rock, north of a machine which is turned off         |
+| 39  | A red rough rock, north of a machine who is turned off           |
+| 40  | A red rough rock, north of machines that are turned off          |
+| 41  | A red rough rock, north of machines which are turned off         |
+| 42  | A red rough rock, north of machines who are turned off           |
+| 43  | A red rough rock, north of the machine that is turned off        |
+| 44  | A red rough rock, north of the machine which is turned off       |
+| 45  | A red rough rock, north of the machine who is turned off         |
+| 46  | A red rough rock, north of the machines that are turned off      |
+| 47  | A red rough rock, north of the machines which are turned off     |
+| 48  | A red rough rock, north of the machines who are turned off       |
+| 49  | A rough red rock north of a machine that is turned off           |
+| 50  | A rough red rock north of a machine that is turned off.          |
+| 51  | A rough red rock north of a machine which is turned off          |
+| 52  | A rough red rock north of a machine which is turned off.         |
+| 53  | A rough red rock north of a machine who is turned off            |
+| 54  | A rough red rock north of a machine who is turned off.           |
+| 55  | A rough red rock north of a machine, that is turned off.         |
+| 56  | A rough red rock north of a machine, which is turned off.        |
+| 57  | A rough red rock north of a machine, who is turned off.          |
+| 58  | A rough red rock north of machines that are turned off           |
+| 59  | A rough red rock north of machines that are turned off.          |
+| 60  | A rough red rock north of machines which are turned off          |
+| 61  | A rough red rock north of machines which are turned off.         |
+| 62  | A rough red rock north of machines who are turned off            |
+| 63  | A rough red rock north of machines who are turned off.           |
+| 64  | A rough red rock north of machines, that are turned off.         |
+| 65  | A rough red rock north of machines, which are turned off.        |
+| 66  | A rough red rock north of machines, who are turned off.          |
+| 67  | A rough red rock north of the machine that is turned off         |
+| 68  | A rough red rock north of the machine that is turned off.        |
+| 69  | A rough red rock north of the machine which is turned off        |
+| 70  | A rough red rock north of the machine which is turned off.       |
+| 71  | A rough red rock north of the machine who is turned off          |
+| 72  | A rough red rock north of the machine who is turned off.         |
+| 73  | A rough red rock north of the machine, that is turned off.       |
+| 74  | A rough red rock north of the machine, which is turned off.      |
+| 75  | A rough red rock north of the machine, who is turned off.        |
+| 76  | A rough red rock north of the machines that are turned off       |
+| 77  | A rough red rock north of the machines that are turned off.      |
+| 78  | A rough red rock north of the machines which are turned off      |
+| 79  | A rough red rock north of the machines which are turned off.     |
+| 80  | A rough red rock north of the machines who are turned off        |
+| 81  | A rough red rock north of the machines who are turned off.       |
+| 82  | A rough red rock north of the machines, that are turned off.     |
+| 83  | A rough red rock north of the machines, which are turned off.    |
+| 84  | A rough red rock north of the machines, who are turned off.      |
+| 85  | A rough red rock, north of a machine that is turned off          |
+| 86  | A rough red rock, north of a machine which is turned off         |
+| 87  | A rough red rock, north of a machine who is turned off           |
+| 88  | A rough red rock, north of machines that are turned off          |
+| 89  | A rough red rock, north of machines which are turned off         |
+| 90  | A rough red rock, north of machines who are turned off           |
+| 91  | A rough red rock, north of the machine that is turned off        |
+| 92  | A rough red rock, north of the machine which is turned off       |
+| 93  | A rough red rock, north of the machine who is turned off         |
+| 94  | A rough red rock, north of the machines that are turned off      |
+| 95  | A rough red rock, north of the machines which are turned off     |
+| 96  | A rough red rock, north of the machines who are turned off       |
+| 97  | Red rough rock north of a machine that is turned off             |
+| 98  | Red rough rock north of a machine that is turned off             |
+| 99  | Red rough rock north of a machine that is turned off.            |
+| 100 | Red rough rock north of a machine that is turned off.            |
+| 101 | Red rough rock north of a machine which is turned off            |
+| 102 | Red rough rock north of a machine which is turned off            |
+| 103 | Red rough rock north of a machine which is turned off.           |
+| 104 | Red rough rock north of a machine which is turned off.           |
+| 105 | Red rough rock north of a machine who is turned off              |
+| 106 | Red rough rock north of a machine who is turned off              |
+| 107 | Red rough rock north of a machine who is turned off.             |
+| 108 | Red rough rock north of a machine who is turned off.             |
+| 109 | Red rough rock north of a machine, that is turned off.           |
+| 110 | Red rough rock north of a machine, that is turned off.           |
+| 111 | Red rough rock north of a machine, which is turned off.          |
+| 112 | Red rough rock north of a machine, which is turned off.          |
+| 113 | Red rough rock north of a machine, who is turned off.            |
+| 114 | Red rough rock north of a machine, who is turned off.            |
+| 115 | Red rough rock north of machines that are turned off             |
+| 116 | Red rough rock north of machines that are turned off             |
+| 117 | Red rough rock north of machines that are turned off.            |
+| 118 | Red rough rock north of machines that are turned off.            |
+| 119 | Red rough rock north of machines which are turned off            |
+| 120 | Red rough rock north of machines which are turned off            |
+| 121 | Red rough rock north of machines which are turned off.           |
+| 122 | Red rough rock north of machines which are turned off.           |
+| 123 | Red rough rock north of machines who are turned off              |
+| 124 | Red rough rock north of machines who are turned off              |
+| 125 | Red rough rock north of machines who are turned off.             |
+| 126 | Red rough rock north of machines who are turned off.             |
+| 127 | Red rough rock north of machines, that are turned off.           |
+| 128 | Red rough rock north of machines, that are turned off.           |
+| 129 | Red rough rock north of machines, which are turned off.          |
+| 130 | Red rough rock north of machines, which are turned off.          |
+| 131 | Red rough rock north of machines, who are turned off.            |
+| 132 | Red rough rock north of machines, who are turned off.            |
+| 133 | Red rough rock north of the machine that is turned off           |
+| 134 | Red rough rock north of the machine that is turned off           |
+| 135 | Red rough rock north of the machine that is turned off.          |
+| 136 | Red rough rock north of the machine that is turned off.          |
+| 137 | Red rough rock north of the machine which is turned off          |
+| 138 | Red rough rock north of the machine which is turned off          |
+| 139 | Red rough rock north of the machine which is turned off.         |
+| 140 | Red rough rock north of the machine which is turned off.         |
+| 141 | Red rough rock north of the machine who is turned off            |
+| 142 | Red rough rock north of the machine who is turned off            |
+| 143 | Red rough rock north of the machine who is turned off.           |
+| 144 | Red rough rock north of the machine who is turned off.           |
+| 145 | Red rough rock north of the machine, that is turned off.         |
+| 146 | Red rough rock north of the machine, that is turned off.         |
+| 147 | Red rough rock north of the machine, which is turned off.        |
+| 148 | Red rough rock north of the machine, which is turned off.        |
+| 149 | Red rough rock north of the machine, who is turned off.          |
+| 150 | Red rough rock north of the machine, who is turned off.          |
+| 151 | Red rough rock north of the machines that are turned off         |
+| 152 | Red rough rock north of the machines that are turned off         |
+| 153 | Red rough rock north of the machines that are turned off.        |
+| 154 | Red rough rock north of the machines that are turned off.        |
+| 155 | Red rough rock north of the machines which are turned off        |
+| 156 | Red rough rock north of the machines which are turned off        |
+| 157 | Red rough rock north of the machines which are turned off.       |
+| 158 | Red rough rock north of the machines which are turned off.       |
+| 159 | Red rough rock north of the machines who are turned off          |
+| 160 | Red rough rock north of the machines who are turned off          |
+| 161 | Red rough rock north of the machines who are turned off.         |
+| 162 | Red rough rock north of the machines who are turned off.         |
+| 163 | Red rough rock north of the machines, that are turned off.       |
+| 164 | Red rough rock north of the machines, that are turned off.       |
+| 165 | Red rough rock north of the machines, which are turned off.      |
+| 166 | Red rough rock north of the machines, which are turned off.      |
+| 167 | Red rough rock north of the machines, who are turned off.        |
+| 168 | Red rough rock north of the machines, who are turned off.        |
+| 169 | Red rough rock, north of a machine that is turned off            |
+| 170 | Red rough rock, north of a machine that is turned off            |
+| 171 | Red rough rock, north of a machine which is turned off           |
+| 172 | Red rough rock, north of a machine which is turned off           |
+| 173 | Red rough rock, north of a machine who is turned off             |
+| 174 | Red rough rock, north of a machine who is turned off             |
+| 175 | Red rough rock, north of machines that are turned off            |
+| 176 | Red rough rock, north of machines that are turned off            |
+| 177 | Red rough rock, north of machines which are turned off           |
+| 178 | Red rough rock, north of machines which are turned off           |
+| 179 | Red rough rock, north of machines who are turned off             |
+| 180 | Red rough rock, north of machines who are turned off             |
+| 181 | Red rough rock, north of the machine that is turned off          |
+| 182 | Red rough rock, north of the machine that is turned off          |
+| 183 | Red rough rock, north of the machine which is turned off         |
+| 184 | Red rough rock, north of the machine which is turned off         |
+| 185 | Red rough rock, north of the machine who is turned off           |
+| 186 | Red rough rock, north of the machine who is turned off           |
+| 187 | Red rough rock, north of the machines that are turned off        |
+| 188 | Red rough rock, north of the machines that are turned off        |
+| 189 | Red rough rock, north of the machines which are turned off       |
+| 190 | Red rough rock, north of the machines which are turned off       |
+| 191 | Red rough rock, north of the machines who are turned off         |
+| 192 | Red rough rock, north of the machines who are turned off         |
+| 193 | Red rough rocks north of a machine that is turned off            |
+| 194 | Red rough rocks north of a machine that is turned off.           |
+| 195 | Red rough rocks north of a machine which is turned off           |
+| 196 | Red rough rocks north of a machine which is turned off.          |
+| 197 | Red rough rocks north of a machine who is turned off             |
+| 198 | Red rough rocks north of a machine who is turned off.            |
+| 199 | Red rough rocks north of a machine, that is turned off.          |
+| 200 | Red rough rocks north of a machine, which is turned off.         |
+| 201 | Red rough rocks north of a machine, who is turned off.           |
+| 202 | Red rough rocks north of machines that are turned off            |
+| 203 | Red rough rocks north of machines that are turned off.           |
+| 204 | Red rough rocks north of machines which are turned off           |
+| 205 | Red rough rocks north of machines which are turned off.          |
+| 206 | Red rough rocks north of machines who are turned off             |
+| 207 | Red rough rocks north of machines who are turned off.            |
+| 208 | Red rough rocks north of machines, that are turned off.          |
+| 209 | Red rough rocks north of machines, which are turned off.         |
+| 210 | Red rough rocks north of machines, who are turned off.           |
+| 211 | Red rough rocks north of the machine that is turned off          |
+| 212 | Red rough rocks north of the machine that is turned off.         |
+| 213 | Red rough rocks north of the machine which is turned off         |
+| 214 | Red rough rocks north of the machine which is turned off.        |
+| 215 | Red rough rocks north of the machine who is turned off           |
+| 216 | Red rough rocks north of the machine who is turned off.          |
+| 217 | Red rough rocks north of the machine, that is turned off.        |
+| 218 | Red rough rocks north of the machine, which is turned off.       |
+| 219 | Red rough rocks north of the machine, who is turned off.         |
+| 220 | Red rough rocks north of the machines that are turned off        |
+| 221 | Red rough rocks north of the machines that are turned off.       |
+| 222 | Red rough rocks north of the machines which are turned off       |
+| 223 | Red rough rocks north of the machines which are turned off.      |
+| 224 | Red rough rocks north of the machines who are turned off         |
+| 225 | Red rough rocks north of the machines who are turned off.        |
+| 226 | Red rough rocks north of the machines, that are turned off.      |
+| 227 | Red rough rocks north of the machines, which are turned off.     |
+| 228 | Red rough rocks north of the machines, who are turned off.       |
+| 229 | Red rough rocks, north of a machine that is turned off           |
+| 230 | Red rough rocks, north of a machine which is turned off          |
+| 231 | Red rough rocks, north of a machine who is turned off            |
+| 232 | Red rough rocks, north of machines that are turned off           |
+| 233 | Red rough rocks, north of machines which are turned off          |
+| 234 | Red rough rocks, north of machines who are turned off            |
+| 235 | Red rough rocks, north of the machine that is turned off         |
+| 236 | Red rough rocks, north of the machine which is turned off        |
+| 237 | Red rough rocks, north of the machine who is turned off          |
+| 238 | Red rough rocks, north of the machines that are turned off       |
+| 239 | Red rough rocks, north of the machines which are turned off      |
+| 240 | Red rough rocks, north of the machines who are turned off        |
+| 241 | Rough red rock north of a machine that is turned off             |
+| 242 | Rough red rock north of a machine that is turned off             |
+| 243 | Rough red rock north of a machine that is turned off.            |
+| 244 | Rough red rock north of a machine that is turned off.            |
+| 245 | Rough red rock north of a machine which is turned off            |
+| 246 | Rough red rock north of a machine which is turned off            |
+| 247 | Rough red rock north of a machine which is turned off.           |
+| 248 | Rough red rock north of a machine which is turned off.           |
+| 249 | Rough red rock north of a machine who is turned off              |
+| 250 | Rough red rock north of a machine who is turned off              |
+| 251 | Rough red rock north of a machine who is turned off.             |
+| 252 | Rough red rock north of a machine who is turned off.             |
+| 253 | Rough red rock north of a machine, that is turned off.           |
+| 254 | Rough red rock north of a machine, that is turned off.           |
+| 255 | Rough red rock north of a machine, which is turned off.          |
+| 256 | Rough red rock north of a machine, which is turned off.          |
+| 257 | Rough red rock north of a machine, who is turned off.            |
+| 258 | Rough red rock north of a machine, who is turned off.            |
+| 259 | Rough red rock north of machines that are turned off             |
+| 260 | Rough red rock north of machines that are turned off             |
+| 261 | Rough red rock north of machines that are turned off.            |
+| 262 | Rough red rock north of machines that are turned off.            |
+| 263 | Rough red rock north of machines which are turned off            |
+| 264 | Rough red rock north of machines which are turned off            |
+| 265 | Rough red rock north of machines which are turned off.           |
+| 266 | Rough red rock north of machines which are turned off.           |
+| 267 | Rough red rock north of machines who are turned off              |
+| 268 | Rough red rock north of machines who are turned off              |
+| 269 | Rough red rock north of machines who are turned off.             |
+| 270 | Rough red rock north of machines who are turned off.             |
+| 271 | Rough red rock north of machines, that are turned off.           |
+| 272 | Rough red rock north of machines, that are turned off.           |
+| 273 | Rough red rock north of machines, which are turned off.          |
+| 274 | Rough red rock north of machines, which are turned off.          |
+| 275 | Rough red rock north of machines, who are turned off.            |
+| 276 | Rough red rock north of machines, who are turned off.            |
+| 277 | Rough red rock north of the machine that is turned off           |
+| 278 | Rough red rock north of the machine that is turned off           |
+| 279 | Rough red rock north of the machine that is turned off.          |
+| 280 | Rough red rock north of the machine that is turned off.          |
+| 281 | Rough red rock north of the machine which is turned off          |
+| 282 | Rough red rock north of the machine which is turned off          |
+| 283 | Rough red rock north of the machine which is turned off.         |
+| 284 | Rough red rock north of the machine which is turned off.         |
+| 285 | Rough red rock north of the machine who is turned off            |
+| 286 | Rough red rock north of the machine who is turned off            |
+| 287 | Rough red rock north of the machine who is turned off.           |
+| 288 | Rough red rock north of the machine who is turned off.           |
+| 289 | Rough red rock north of the machine, that is turned off.         |
+| 290 | Rough red rock north of the machine, that is turned off.         |
+| 291 | Rough red rock north of the machine, which is turned off.        |
+| 292 | Rough red rock north of the machine, which is turned off.        |
+| 293 | Rough red rock north of the machine, who is turned off.          |
+| 294 | Rough red rock north of the machine, who is turned off.          |
+| 295 | Rough red rock north of the machines that are turned off         |
+| 296 | Rough red rock north of the machines that are turned off         |
+| 297 | Rough red rock north of the machines that are turned off.        |
+| 298 | Rough red rock north of the machines that are turned off.        |
+| 299 | Rough red rock north of the machines which are turned off        |
+| 300 | Rough red rock north of the machines which are turned off        |
+| 301 | Rough red rock north of the machines which are turned off.       |
+| 302 | Rough red rock north of the machines which are turned off.       |
+| 303 | Rough red rock north of the machines who are turned off          |
+| 304 | Rough red rock north of the machines who are turned off          |
+| 305 | Rough red rock north of the machines who are turned off.         |
+| 306 | Rough red rock north of the machines who are turned off.         |
+| 307 | Rough red rock north of the machines, that are turned off.       |
+| 308 | Rough red rock north of the machines, that are turned off.       |
+| 309 | Rough red rock north of the machines, which are turned off.      |
+| 310 | Rough red rock north of the machines, which are turned off.      |
+| 311 | Rough red rock north of the machines, who are turned off.        |
+| 312 | Rough red rock north of the machines, who are turned off.        |
+| 313 | Rough red rock, north of a machine that is turned off            |
+| 314 | Rough red rock, north of a machine that is turned off            |
+| 315 | Rough red rock, north of a machine which is turned off           |
+| 316 | Rough red rock, north of a machine which is turned off           |
+| 317 | Rough red rock, north of a machine who is turned off             |
+| 318 | Rough red rock, north of a machine who is turned off             |
+| 319 | Rough red rock, north of machines that are turned off            |
+| 320 | Rough red rock, north of machines that are turned off            |
+| 321 | Rough red rock, north of machines which are turned off           |
+| 322 | Rough red rock, north of machines which are turned off           |
+| 323 | Rough red rock, north of machines who are turned off             |
+| 324 | Rough red rock, north of machines who are turned off             |
+| 325 | Rough red rock, north of the machine that is turned off          |
+| 326 | Rough red rock, north of the machine that is turned off          |
+| 327 | Rough red rock, north of the machine which is turned off         |
+| 328 | Rough red rock, north of the machine which is turned off         |
+| 329 | Rough red rock, north of the machine who is turned off           |
+| 330 | Rough red rock, north of the machine who is turned off           |
+| 331 | Rough red rock, north of the machines that are turned off        |
+| 332 | Rough red rock, north of the machines that are turned off        |
+| 333 | Rough red rock, north of the machines which are turned off       |
+| 334 | Rough red rock, north of the machines which are turned off       |
+| 335 | Rough red rock, north of the machines who are turned off         |
+| 336 | Rough red rock, north of the machines who are turned off         |
+| 337 | Rough red rocks north of a machine that is turned off            |
+| 338 | Rough red rocks north of a machine that is turned off.           |
+| 339 | Rough red rocks north of a machine which is turned off           |
+| 340 | Rough red rocks north of a machine which is turned off.          |
+| 341 | Rough red rocks north of a machine who is turned off             |
+| 342 | Rough red rocks north of a machine who is turned off.            |
+| 343 | Rough red rocks north of a machine, that is turned off.          |
+| 344 | Rough red rocks north of a machine, which is turned off.         |
+| 345 | Rough red rocks north of a machine, who is turned off.           |
+| 346 | Rough red rocks north of machines that are turned off            |
+| 347 | Rough red rocks north of machines that are turned off.           |
+| 348 | Rough red rocks north of machines which are turned off           |
+| 349 | Rough red rocks north of machines which are turned off.          |
+| 350 | Rough red rocks north of machines who are turned off             |
+| 351 | Rough red rocks north of machines who are turned off.            |
+| 352 | Rough red rocks north of machines, that are turned off.          |
+| 353 | Rough red rocks north of machines, which are turned off.         |
+| 354 | Rough red rocks north of machines, who are turned off.           |
+| 355 | Rough red rocks north of the machine that is turned off          |
+| 356 | Rough red rocks north of the machine that is turned off.         |
+| 357 | Rough red rocks north of the machine which is turned off         |
+| 358 | Rough red rocks north of the machine which is turned off.        |
+| 359 | Rough red rocks north of the machine who is turned off           |
+| 360 | Rough red rocks north of the machine who is turned off.          |
+| 361 | Rough red rocks north of the machine, that is turned off.        |
+| 362 | Rough red rocks north of the machine, which is turned off.       |
+| 363 | Rough red rocks north of the machine, who is turned off.         |
+| 364 | Rough red rocks north of the machines that are turned off        |
+| 365 | Rough red rocks north of the machines that are turned off.       |
+| 366 | Rough red rocks north of the machines which are turned off       |
+| 367 | Rough red rocks north of the machines which are turned off.      |
+| 368 | Rough red rocks north of the machines who are turned off         |
+| 369 | Rough red rocks north of the machines who are turned off.        |
+| 370 | Rough red rocks north of the machines, that are turned off.      |
+| 371 | Rough red rocks north of the machines, which are turned off.     |
+| 372 | Rough red rocks north of the machines, who are turned off.       |
+| 373 | Rough red rocks, north of a machine that is turned off           |
+| 374 | Rough red rocks, north of a machine which is turned off          |
+| 375 | Rough red rocks, north of a machine who is turned off            |
+| 376 | Rough red rocks, north of machines that are turned off           |
+| 377 | Rough red rocks, north of machines which are turned off          |
+| 378 | Rough red rocks, north of machines who are turned off            |
+| 379 | Rough red rocks, north of the machine that is turned off         |
+| 380 | Rough red rocks, north of the machine which is turned off        |
+| 381 | Rough red rocks, north of the machine who is turned off          |
+| 382 | Rough red rocks, north of the machines that are turned off       |
+| 383 | Rough red rocks, north of the machines which are turned off      |
+| 384 | Rough red rocks, north of the machines who are turned off        |
+| 385 | The red rough rock north of a machine that is turned off         |
+| 386 | The red rough rock north of a machine that is turned off.        |
+| 387 | The red rough rock north of a machine which is turned off        |
+| 388 | The red rough rock north of a machine which is turned off.       |
+| 389 | The red rough rock north of a machine who is turned off          |
+| 390 | The red rough rock north of a machine who is turned off.         |
+| 391 | The red rough rock north of a machine, that is turned off.       |
+| 392 | The red rough rock north of a machine, which is turned off.      |
+| 393 | The red rough rock north of a machine, who is turned off.        |
+| 394 | The red rough rock north of machines that are turned off         |
+| 395 | The red rough rock north of machines that are turned off.        |
+| 396 | The red rough rock north of machines which are turned off        |
+| 397 | The red rough rock north of machines which are turned off.       |
+| 398 | The red rough rock north of machines who are turned off          |
+| 399 | The red rough rock north of machines who are turned off.         |
+| 400 | The red rough rock north of machines, that are turned off.       |
+| 401 | The red rough rock north of machines, which are turned off.      |
+| 402 | The red rough rock north of machines, who are turned off.        |
+| 403 | The red rough rock north of the machine that is turned off       |
+| 404 | The red rough rock north of the machine that is turned off.      |
+| 405 | The red rough rock north of the machine which is turned off      |
+| 406 | The red rough rock north of the machine which is turned off.     |
+| 407 | The red rough rock north of the machine who is turned off        |
+| 408 | The red rough rock north of the machine who is turned off.       |
+| 409 | The red rough rock north of the machine, that is turned off.     |
+| 410 | The red rough rock north of the machine, which is turned off.    |
+| 411 | The red rough rock north of the machine, who is turned off.      |
+| 412 | The red rough rock north of the machines that are turned off     |
+| 413 | The red rough rock north of the machines that are turned off.    |
+| 414 | The red rough rock north of the machines which are turned off    |
+| 415 | The red rough rock north of the machines which are turned off.   |
+| 416 | The red rough rock north of the machines who are turned off      |
+| 417 | The red rough rock north of the machines who are turned off.     |
+| 418 | The red rough rock north of the machines, that are turned off.   |
+| 419 | The red rough rock north of the machines, which are turned off.  |
+| 420 | The red rough rock north of the machines, who are turned off.    |
+| 421 | The red rough rock, north of a machine that is turned off        |
+| 422 | The red rough rock, north of a machine which is turned off       |
+| 423 | The red rough rock, north of a machine who is turned off         |
+| 424 | The red rough rock, north of machines that are turned off        |
+| 425 | The red rough rock, north of machines which are turned off       |
+| 426 | The red rough rock, north of machines who are turned off         |
+| 427 | The red rough rock, north of the machine that is turned off      |
+| 428 | The red rough rock, north of the machine which is turned off     |
+| 429 | The red rough rock, north of the machine who is turned off       |
+| 430 | The red rough rock, north of the machines that are turned off    |
+| 431 | The red rough rock, north of the machines which are turned off   |
+| 432 | The red rough rock, north of the machines who are turned off     |
+| 433 | The red rough rocks north of a machine that is turned off        |
+| 434 | The red rough rocks north of a machine that is turned off.       |
+| 435 | The red rough rocks north of a machine which is turned off       |
+| 436 | The red rough rocks north of a machine which is turned off.      |
+| 437 | The red rough rocks north of a machine who is turned off         |
+| 438 | The red rough rocks north of a machine who is turned off.        |
+| 439 | The red rough rocks north of a machine, that is turned off.      |
+| 440 | The red rough rocks north of a machine, which is turned off.     |
+| 441 | The red rough rocks north of a machine, who is turned off.       |
+| 442 | The red rough rocks north of machines that are turned off        |
+| 443 | The red rough rocks north of machines that are turned off.       |
+| 444 | The red rough rocks north of machines which are turned off       |
+| 445 | The red rough rocks north of machines which are turned off.      |
+| 446 | The red rough rocks north of machines who are turned off         |
+| 447 | The red rough rocks north of machines who are turned off.        |
+| 448 | The red rough rocks north of machines, that are turned off.      |
+| 449 | The red rough rocks north of machines, which are turned off.     |
+| 450 | The red rough rocks north of machines, who are turned off.       |
+| 451 | The red rough rocks north of the machine that is turned off      |
+| 452 | The red rough rocks north of the machine that is turned off.     |
+| 453 | The red rough rocks north of the machine which is turned off     |
+| 454 | The red rough rocks north of the machine which is turned off.    |
+| 455 | The red rough rocks north of the machine who is turned off       |
+| 456 | The red rough rocks north of the machine who is turned off.      |
+| 457 | The red rough rocks north of the machine, that is turned off.    |
+| 458 | The red rough rocks north of the machine, which is turned off.   |
+| 459 | The red rough rocks north of the machine, who is turned off.     |
+| 460 | The red rough rocks north of the machines that are turned off    |
+| 461 | The red rough rocks north of the machines that are turned off.   |
+| 462 | The red rough rocks north of the machines which are turned off   |
+| 463 | The red rough rocks north of the machines which are turned off.  |
+| 464 | The red rough rocks north of the machines who are turned off     |
+| 465 | The red rough rocks north of the machines who are turned off.    |
+| 466 | The red rough rocks north of the machines, that are turned off.  |
+| 467 | The red rough rocks north of the machines, which are turned off. |
+| 468 | The red rough rocks north of the machines, who are turned off.   |
+| 469 | The red rough rocks, north of a machine that is turned off       |
+| 470 | The red rough rocks, north of a machine which is turned off      |
+| 471 | The red rough rocks, north of a machine who is turned off        |
+| 472 | The red rough rocks, north of machines that are turned off       |
+| 473 | The red rough rocks, north of machines which are turned off      |
+| 474 | The red rough rocks, north of machines who are turned off        |
+| 475 | The red rough rocks, north of the machine that is turned off     |
+| 476 | The red rough rocks, north of the machine which is turned off    |
+| 477 | The red rough rocks, north of the machine who is turned off      |
+| 478 | The red rough rocks, north of the machines that are turned off   |
+| 479 | The red rough rocks, north of the machines which are turned off  |
+| 480 | The red rough rocks, north of the machines who are turned off    |
+| 481 | The rough red rock north of a machine that is turned off         |
+| 482 | The rough red rock north of a machine that is turned off.        |
+| 483 | The rough red rock north of a machine which is turned off        |
+| 484 | The rough red rock north of a machine which is turned off.       |
+| 485 | The rough red rock north of a machine who is turned off          |
+| 486 | The rough red rock north of a machine who is turned off.         |
+| 487 | The rough red rock north of a machine, that is turned off.       |
+| 488 | The rough red rock north of a machine, which is turned off.      |
+| 489 | The rough red rock north of a machine, who is turned off.        |
+| 490 | The rough red rock north of machines that are turned off         |
+| 491 | The rough red rock north of machines that are turned off.        |
+| 492 | The rough red rock north of machines which are turned off        |
+| 493 | The rough red rock north of machines which are turned off.       |
+| 494 | The rough red rock north of machines who are turned off          |
+| 495 | The rough red rock north of machines who are turned off.         |
+| 496 | The rough red rock north of machines, that are turned off.       |
+| 497 | The rough red rock north of machines, which are turned off.      |
+| 498 | The rough red rock north of machines, who are turned off.        |
+| 499 | The rough red rock north of the machine that is turned off       |
+| 500 | The rough red rock north of the machine that is turned off.      |
+| 501 | The rough red rock north of the machine which is turned off      |
+| 502 | The rough red rock north of the machine which is turned off.     |
+| 503 | The rough red rock north of the machine who is turned off        |
+| 504 | The rough red rock north of the machine who is turned off.       |
+| 505 | The rough red rock north of the machine, that is turned off.     |
+| 506 | The rough red rock north of the machine, which is turned off.    |
+| 507 | The rough red rock north of the machine, who is turned off.      |
+| 508 | The rough red rock north of the machines that are turned off     |
+| 509 | The rough red rock north of the machines that are turned off.    |
+| 510 | The rough red rock north of the machines which are turned off    |
+| 511 | The rough red rock north of the machines which are turned off.   |
+| 512 | The rough red rock north of the machines who are turned off      |
+| 513 | The rough red rock north of the machines who are turned off.     |
+| 514 | The rough red rock north of the machines, that are turned off.   |
+| 515 | The rough red rock north of the machines, which are turned off.  |
+| 516 | The rough red rock north of the machines, who are turned off.    |
+| 517 | The rough red rock, north of a machine that is turned off        |
+| 518 | The rough red rock, north of a machine which is turned off       |
+| 519 | The rough red rock, north of a machine who is turned off         |
+| 520 | The rough red rock, north of machines that are turned off        |
+| 521 | The rough red rock, north of machines which are turned off       |
+| 522 | The rough red rock, north of machines who are turned off         |
+| 523 | The rough red rock, north of the machine that is turned off      |
+| 524 | The rough red rock, north of the machine which is turned off     |
+| 525 | The rough red rock, north of the machine who is turned off       |
+| 526 | The rough red rock, north of the machines that are turned off    |
+| 527 | The rough red rock, north of the machines which are turned off   |
+| 528 | The rough red rock, north of the machines who are turned off     |
+| 529 | The rough red rocks north of a machine that is turned off        |
+| 530 | The rough red rocks north of a machine that is turned off.       |
+| 531 | The rough red rocks north of a machine which is turned off       |
+| 532 | The rough red rocks north of a machine which is turned off.      |
+| 533 | The rough red rocks north of a machine who is turned off         |
+| 534 | The rough red rocks north of a machine who is turned off.        |
+| 535 | The rough red rocks north of a machine, that is turned off.      |
+| 536 | The rough red rocks north of a machine, which is turned off.     |
+| 537 | The rough red rocks north of a machine, who is turned off.       |
+| 538 | The rough red rocks north of machines that are turned off        |
+| 539 | The rough red rocks north of machines that are turned off.       |
+| 540 | The rough red rocks north of machines which are turned off       |
+| 541 | The rough red rocks north of machines which are turned off.      |
+| 542 | The rough red rocks north of machines who are turned off         |
+| 543 | The rough red rocks north of machines who are turned off.        |
+| 544 | The rough red rocks north of machines, that are turned off.      |
+| 545 | The rough red rocks north of machines, which are turned off.     |
+| 546 | The rough red rocks north of machines, who are turned off.       |
+| 547 | The rough red rocks north of the machine that is turned off      |
+| 548 | The rough red rocks north of the machine that is turned off.     |
+| 549 | The rough red rocks north of the machine which is turned off     |
+| 550 | The rough red rocks north of the machine which is turned off.    |
+| 551 | The rough red rocks north of the machine who is turned off       |
+| 552 | The rough red rocks north of the machine who is turned off.      |
+| 553 | The rough red rocks north of the machine, that is turned off.    |
+| 554 | The rough red rocks north of the machine, which is turned off.   |
+| 555 | The rough red rocks north of the machine, who is turned off.     |
+| 556 | The rough red rocks north of the machines that are turned off    |
+| 557 | The rough red rocks north of the machines that are turned off.   |
+| 558 | The rough red rocks north of the machines which are turned off   |
+| 559 | The rough red rocks north of the machines which are turned off.  |
+| 560 | The rough red rocks north of the machines who are turned off     |
+| 561 | The rough red rocks north of the machines who are turned off.    |
+| 562 | The rough red rocks north of the machines, that are turned off.  |
+| 563 | The rough red rocks north of the machines, which are turned off. |
+| 564 | The rough red rocks north of the machines, who are turned off.   |
+| 565 | The rough red rocks, north of a machine that is turned off       |
+| 566 | The rough red rocks, north of a machine which is turned off      |
+| 567 | The rough red rocks, north of a machine who is turned off        |
+| 568 | The rough red rocks, north of machines that are turned off       |
+| 569 | The rough red rocks, north of machines which are turned off      |
+| 570 | The rough red rocks, north of machines who are turned off        |
+| 571 | The rough red rocks, north of the machine that is turned off     |
+| 572 | The rough red rocks, north of the machine which is turned off    |
+| 573 | The rough red rocks, north of the machine who is turned off      |
+| 574 | The rough red rocks, north of the machines that are turned off   |
+| 575 | The rough red rocks, north of the machines which are turned off  |
+| 576 | The rough red rocks, north of the machines who are turned off    |
++-----+------------------------------------------------------------------+
+

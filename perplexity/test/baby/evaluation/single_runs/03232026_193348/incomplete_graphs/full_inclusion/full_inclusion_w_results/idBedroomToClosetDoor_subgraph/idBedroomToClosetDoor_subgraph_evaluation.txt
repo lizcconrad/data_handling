@@ -1,0 +1,683 @@
+GRAPH NAME: idBedroomToClosetDoor_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 315   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 5     |
+| Edges Included                  | 5     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------------------------------------------------------------------------+
+|                                                        GOLD OUTPUTS                                                        |
++---------------------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                                   | Generated? |
++---------------------------------------------------------------------------------------------------------------+------------+
+| the unknown open door from the bedroom to the closet east of unknown door from the living room to the bedroom | False      |
++---------------------------------------------------------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           NODE METRICS                                          |
++---------------------------+--------------+---------------+------------------+-------------------+
+| Node                      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------------------+--------------+---------------+------------------+-------------------+
+| idBedroomToClosetDoor     | True         | True          | Covered          | Included          |
+| open                      | True         | True          | Covered          | Included          |
+| true                      | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor | True         | True          | Covered          | Included          |
++---------------------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                 EDGE METRICS                                                                                 |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+------------------+-------------------+
+| Edge                                           | Parent                    | Child                     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+------------------+-------------------+
+| idBedroomToClosetDoor_prop_idOpenState         | idBedroomToClosetDoor     | open                      | True         | True          | Covered          | Included          |
+| idBedroomToClosetDoor_prop_idUnknownObject     | idBedroomToClosetDoor     | true                      | True         | True          | Covered          | Included          |
+| isEastOf                                       | idBedroomToClosetDoor     | idLivingRoomToBedroomDoor | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor_prop_idOpenState     | idLivingRoomToBedroomDoor | open                      | True         | True          | Covered          | Included          |
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true                      | True         | True          | Covered          | Included          |
++------------------------------------------------+---------------------------+---------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h4644                                                                     |
+|               |   INDEX: x4643                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4747 ARG0: e4744 ARG1: u4745 ARG2: x4746 ]           |
+|               |           [ def_implicit_q LBL: h4758 ARG0: x4755 RSTR: h4756 BODY: h4757 ]      |
+|               |           [ _east_a_1 LBL: h4743 ARG0: i4740 ARG1: x4741 ARG2: u4742 ]           |
+|               |           [ def_udef_a_q LBL: h4753 ARG0: x4750 RSTR: h4751 BODY: h4752 ]        |
+|               |           [ _un-_a_neg LBL: h4739 ARG0: i4737 ARG1: e4738 ]                      |
+|               |           [ _know_v_1 LBL: h4736 ARG0: e4733 [ e PERF: - ] ARG1: u4734 ARG2:     |
+|               | i4735 ]                                                                          |
+|               |           [ _open_a_to LBL: h4724 ARG0: e4721 ARG1: u4722 ARG2: u4723 ]          |
+|               |           [ _to_p LBL: h4715 ARG0: e4712 ARG1: u4713 ARG2: i4714 ]               |
+|               |           [ def_udef_a_q LBL: h4719 ARG0: x4716 RSTR: h4717 BODY: h4718 ]        |
+|               |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|               |           [ _from_p LBL: h4704 ARG0: e4701 ARG1: u4702 ARG2: u4703 ]             |
+|               |           [ def_udef_a_q LBL: h4708 ARG0: x4705 RSTR: h4706 BODY: h4707 ]        |
+|               |           [ compound LBL: h4700 ARG0: e4697 [ e PROG: - ] ARG1: u4698 ARG2:      |
+|               | u4699 ]                                                                          |
+|               |           [ udef_q LBL: h4695 ARG0: x4692 RSTR: h4693 BODY: h4694 ]              |
+|               |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|               |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|               |           [ _door_n_1 LBL: h4687 ARG0: x4686 ]                                   |
+|               |           [ place_n LBL: h4749 ARG0: x4748 ]                                     |
+|               |           [ _un-_a_neg LBL: h4685 ARG0: i4683 ARG1: e4684 ]                      |
+|               |           [ _know_v_1 LBL: h4682 ARG0: e4679 [ e PERF: - ] ARG1: u4680 ARG2:     |
+|               | i4681 ]                                                                          |
+|               |           [ _open_a_to LBL: h4670 ARG0: e4667 ARG1: u4668 ARG2: u4669 ]          |
+|               |           [ _to_p LBL: h4661 ARG0: e4658 ARG1: u4659 ARG2: i4660 ]               |
+|               |           [ def_udef_a_q LBL: h4665 ARG0: x4662 RSTR: h4663 BODY: h4664 ]        |
+|               |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|               |           [ _from_p LBL: h4650 ARG0: e4647 ARG1: u4648 ARG2: u4649 ]             |
+|               |           [ def_udef_a_q LBL: h4654 ARG0: x4651 RSTR: h4652 BODY: h4653 ]        |
+|               |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|               |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|               |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 h4751 qeq h4687 h4756 |
+|               | qeq h4749 h4663 qeq h4657 h4652 qeq h4646 >                                      |
+|               |   ICONS: < e4733 topic i4735 e4679 topic i4681 >                                 |
+|               |   EQS: < h4739 eq h4736 e4738 eq e4733 x4716 eq x4710 h4715 eq h4720 i4714 eq    |
+|               | x4716 x4692 eq x4690 h4700 eq h4696 u4699 eq x4692 h4700 eq h4689 u4698 eq x4688 |
+|               | x4705 eq x4688 h4704 eq h4709 u4703 eq x4705 h4704 eq h4687 u4702 eq x4686 h4715 |
+|               | eq h4687 u4713 eq x4686 h4724 eq h4687 u4722 eq x4686 h4736 eq h4687 i4735 eq    |
+|               | x4686 x4750 eq x4686 h4743 eq h4754 u4742 eq x4750 h4743 eq h4749 x4741 eq x4748 |
+|               | x4755 eq x4748 h4747 eq h4759 x4746 eq x4755 h4685 eq h4682 e4684 eq e4679 x4662 |
+|               | eq x4656 h4661 eq h4666 i4660 eq x4662 x4651 eq x4645 h4650 eq h4655 u4649 eq    |
+|               | x4651 h4650 eq h4644 u4648 eq x4643 h4661 eq h4644 u4659 eq x4643 h4670 eq h4644 |
+|               | u4668 eq x4643 h4682 eq h4644 i4681 eq x4643 h4747 eq h4644 u4745 eq x4643 > ]   |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h4644                                                                     |
+|               |   INDEX: x4643                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h4644 ARG0: e4744 ARG1: x4643 ARG2: x4741 ]           |
+|               |           [ def_implicit_q LBL: h4758 ARG0: x4741 RSTR: h4756 BODY: h4757 ]      |
+|               |           [ _east_a_1 LBL: h4743 ARG0: i4740 ARG1: x4741 ARG2: x4686 ]           |
+|               |           [ def_udef_a_q LBL: h4753 ARG0: x4686 RSTR: h4751 BODY: h4752 ]        |
+|               |           [ _un-_a_neg LBL: h4687 ARG0: i4737 ARG1: e4733 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4687 ARG0: e4733 ARG1: u4734 ARG2: x4686 ]           |
+|               |           [ _open_a_to LBL: h4687 ARG0: e4721 ARG1: x4686 ARG2: u4723 ]          |
+|               |           [ _to_p LBL: h4687 ARG0: e4712 ARG1: x4686 ARG2: x4710 ]               |
+|               |           [ def_udef_a_q LBL: h4719 ARG0: x4710 RSTR: h4717 BODY: h4718 ]        |
+|               |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|               |           [ _from_p LBL: h4687 ARG0: e4701 ARG1: x4686 ARG2: x4688 ]             |
+|               |           [ def_udef_a_q LBL: h4708 ARG0: x4688 RSTR: h4706 BODY: h4707 ]        |
+|               |           [ compound LBL: h4689 ARG0: e4697 [ e PROG: - ] ARG1: x4688 ARG2:      |
+|               | x4690 ]                                                                          |
+|               |           [ udef_q LBL: h4695 ARG0: x4690 RSTR: h4693 BODY: h4694 ]              |
+|               |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|               |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|               |           [ _door_n_1 LBL: h4687 ARG0: x4686 ]                                   |
+|               |           [ place_n LBL: h4743 ARG0: x4741 ]                                     |
+|               |           [ _un-_a_neg LBL: h4644 ARG0: i4683 ARG1: e4679 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4644 ARG0: e4679 ARG1: u4680 ARG2: x4643 ]           |
+|               |           [ _open_a_to LBL: h4644 ARG0: e4667 ARG1: x4643 ARG2: u4669 ]          |
+|               |           [ _to_p LBL: h4644 ARG0: e4658 ARG1: x4643 ARG2: x4656 ]               |
+|               |           [ def_udef_a_q LBL: h4665 ARG0: x4656 RSTR: h4663 BODY: h4664 ]        |
+|               |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|               |           [ _from_p LBL: h4644 ARG0: e4647 ARG1: x4643 ARG2: x4645 ]             |
+|               |           [ def_udef_a_q LBL: h4654 ARG0: x4645 RSTR: h4652 BODY: h4653 ]        |
+|               |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|               |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|               |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 h4751 qeq h4687 h4756 |
+|               | qeq h4743 h4663 qeq h4657 h4652 qeq h4646 >                                      |
+|               |   ICONS: < e4733 topic x4686 e4679 topic x4643 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h4768                                                                     |
+|               |   INDEX: e4765                                                                   |
+|               |   RELS: < [ unknown LBL: h4764 ARG: x4643 ARG0: e4765 ]                          |
+|               |           [ def_udef_a_q LBL: h4763 ARG0: x4643 RSTR: h4761 BODY: h4762 ]        |
+|               |           [ loc_nonsp LBL: h4644 ARG0: e4744 ARG1: x4643 ARG2: x4741 ]           |
+|               |           [ def_implicit_q LBL: h4758 ARG0: x4741 RSTR: h4756 BODY: h4757 ]      |
+|               |           [ _east_a_1 LBL: h4743 ARG0: i4740 ARG1: x4741 ARG2: x4686 ]           |
+|               |           [ def_udef_a_q LBL: h4753 ARG0: x4686 RSTR: h4751 BODY: h4752 ]        |
+|               |           [ _un-_a_neg LBL: h4687 ARG0: i4737 ARG1: e4733 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4687 ARG0: e4733 ARG1: u4734 ARG2: x4686 ]           |
+|               |           [ _open_a_to LBL: h4687 ARG0: e4721 ARG1: x4686 ARG2: u4723 ]          |
+|               |           [ _to_p LBL: h4687 ARG0: e4712 ARG1: x4686 ARG2: x4710 ]               |
+|               |           [ def_udef_a_q LBL: h4719 ARG0: x4710 RSTR: h4717 BODY: h4718 ]        |
+|               |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|               |           [ _from_p LBL: h4687 ARG0: e4701 ARG1: x4686 ARG2: x4688 ]             |
+|               |           [ def_udef_a_q LBL: h4708 ARG0: x4688 RSTR: h4706 BODY: h4707 ]        |
+|               |           [ compound LBL: h4689 ARG0: e4697 [ e PROG: - ] ARG1: x4688 ARG2:      |
+|               | x4690 ]                                                                          |
+|               |           [ udef_q LBL: h4695 ARG0: x4690 RSTR: h4693 BODY: h4694 ]              |
+|               |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|               |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|               |           [ _door_n_1 LBL: h4687 ARG0: x4686 ]                                   |
+|               |           [ place_n LBL: h4743 ARG0: x4741 ]                                     |
+|               |           [ _un-_a_neg LBL: h4644 ARG0: i4683 ARG1: e4679 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h4644 ARG0: e4679 ARG1: u4680 ARG2: x4643 ]           |
+|               |           [ _open_a_to LBL: h4644 ARG0: e4667 ARG1: x4643 ARG2: u4669 ]          |
+|               |           [ _to_p LBL: h4644 ARG0: e4658 ARG1: x4643 ARG2: x4656 ]               |
+|               |           [ def_udef_a_q LBL: h4665 ARG0: x4656 RSTR: h4663 BODY: h4664 ]        |
+|               |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|               |           [ _from_p LBL: h4644 ARG0: e4647 ARG1: x4643 ARG2: x4645 ]             |
+|               |           [ def_udef_a_q LBL: h4654 ARG0: x4645 RSTR: h4652 BODY: h4653 ]        |
+|               |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|               |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|               |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 h4751 qeq h4687 h4756 |
+|               | qeq h4743 h4663 qeq h4657 h4652 qeq h4646 h4761 qeq h4644 h4768 qeq h4764 >      |
+|               |   ICONS: < e4733 topic x4686 e4679 topic x4643 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| Node                      | Generated SEMENT                                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor     | [ TOP: h4644                                                                     |
+|                           |   INDEX: x4643                                                                   |
+|                           |   RELS: < [ _to_p LBL: h4661 ARG0: e4658 ARG1: u4659 ARG2: i4660 ]               |
+|                           |           [ def_udef_a_q LBL: h4665 ARG0: x4662 RSTR: h4663 BODY: h4664 ]        |
+|                           |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|                           |           [ _from_p LBL: h4650 ARG0: e4647 ARG1: u4648 ARG2: u4649 ]             |
+|                           |           [ def_udef_a_q LBL: h4654 ARG0: x4651 RSTR: h4652 BODY: h4653 ]        |
+|                           |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|                           |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|                           |   HCONS: < h4663 qeq h4657 h4652 qeq h4646 >                                     |
+|                           |   EQS: < x4662 eq x4656 h4661 eq h4666 i4660 eq x4662 x4651 eq x4645 h4650 eq    |
+|                           | h4655 u4649 eq x4651 h4650 eq h4644 u4648 eq x4643 h4661 eq h4644 u4659 eq x4643 |
+|                           | > ]                                                                              |
++---------------------------+----------------------------------------------------------------------------------+
+| open                      | [ TOP: h4724                                                                     |
+|                           |   INDEX: e4721                                                                   |
+|                           |   RELS: < [ _open_a_to LBL: h4724 ARG0: e4721 ARG1: u4722 ARG2: u4723 ] >        |
+|                           |   SLOTS: < ARG1: u4722 ARG2: u4723 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| true                      | [ TOP: h4728                                                                     |
+|                           |   INDEX: e4725                                                                   |
+|                           |   RELS: < [ _true_a_of LBL: h4728 ARG0: e4725 ARG1: u4726 ARG2: u4727 ] >        |
+|                           |   SLOTS: < ARG1: u4726 ARG2: u4727 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor | [ TOP: h4687                                                                     |
+|                           |   INDEX: x4686                                                                   |
+|                           |   RELS: < [ _to_p LBL: h4715 ARG0: e4712 ARG1: u4713 ARG2: i4714 ]               |
+|                           |           [ def_udef_a_q LBL: h4719 ARG0: x4716 RSTR: h4717 BODY: h4718 ]        |
+|                           |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|                           |           [ _from_p LBL: h4704 ARG0: e4701 ARG1: u4702 ARG2: u4703 ]             |
+|                           |           [ def_udef_a_q LBL: h4708 ARG0: x4705 RSTR: h4706 BODY: h4707 ]        |
+|                           |           [ compound LBL: h4700 ARG0: e4697 [ e PROG: - ] ARG1: u4698 ARG2:      |
+|                           | u4699 ]                                                                          |
+|                           |           [ udef_q LBL: h4695 ARG0: x4692 RSTR: h4693 BODY: h4694 ]              |
+|                           |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|                           |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|                           |           [ _door_n_1 LBL: h4687 ARG0: x4686 ] >                                 |
+|                           |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 >                     |
+|                           |   EQS: < x4716 eq x4710 h4715 eq h4720 i4714 eq x4716 x4692 eq x4690 h4700 eq    |
+|                           | h4696 u4699 eq x4692 h4700 eq h4689 u4698 eq x4688 x4705 eq x4688 h4704 eq h4709 |
+|                           | u4703 eq x4705 h4704 eq h4687 u4702 eq x4686 h4715 eq h4687 u4713 eq x4686 > ]   |
++---------------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                        EDGE SEMENTS                                                                                       |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| Edge                                           | Parent                    | Child                     | Generated SEMENT                                                                 |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor_prop_idOpenState         | idBedroomToClosetDoor     | open                      | [ TOP: h4644                                                                     |
+|                                                |                           |                           |   INDEX: x4643                                                                   |
+|                                                |                           |                           |   RELS: < [ _open_a_to LBL: h4670 ARG0: e4667 ARG1: u4668 ARG2: u4669 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4661 ARG0: e4658 ARG1: u4659 ARG2: i4660 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4665 ARG0: x4662 RSTR: h4663 BODY: h4664 ]        |
+|                                                |                           |                           |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|                                                |                           |                           |           [ _from_p LBL: h4650 ARG0: e4647 ARG1: u4648 ARG2: u4649 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4654 ARG0: x4651 RSTR: h4652 BODY: h4653 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|                                                |                           |                           |   HCONS: < h4663 qeq h4657 h4652 qeq h4646 >                                     |
+|                                                |                           |                           |   EQS: < x4662 eq x4656 h4661 eq h4666 i4660 eq x4662 x4651 eq x4645 h4650 eq    |
+|                                                |                           |                           | h4655 u4649 eq x4651 h4650 eq h4644 u4648 eq x4643 h4661 eq h4644 u4659 eq x4643 |
+|                                                |                           |                           | h4670 eq h4644 u4668 eq x4643 > ]                                                |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor_prop_idUnknownObject     | idBedroomToClosetDoor     | true                      | [ TOP: h4644                                                                     |
+|                                                |                           |                           |   INDEX: x4643                                                                   |
+|                                                |                           |                           |   RELS: < [ _un-_a_neg LBL: h4685 ARG0: i4683 ARG1: e4684 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h4682 ARG0: e4679 [ e PERF: - ] ARG1: u4680 ARG2:     |
+|                                                |                           |                           | i4681 ]                                                                          |
+|                                                |                           |                           |           [ _open_a_to LBL: h4670 ARG0: e4667 ARG1: u4668 ARG2: u4669 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4661 ARG0: e4658 ARG1: u4659 ARG2: i4660 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4665 ARG0: x4662 RSTR: h4663 BODY: h4664 ]        |
+|                                                |                           |                           |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|                                                |                           |                           |           [ _from_p LBL: h4650 ARG0: e4647 ARG1: u4648 ARG2: u4649 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4654 ARG0: x4651 RSTR: h4652 BODY: h4653 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|                                                |                           |                           |   HCONS: < h4663 qeq h4657 h4652 qeq h4646 >                                     |
+|                                                |                           |                           |   ICONS: < e4679 topic i4681 >                                                   |
+|                                                |                           |                           |   EQS: < h4685 eq h4682 e4684 eq e4679 x4662 eq x4656 h4661 eq h4666 i4660 eq    |
+|                                                |                           |                           | x4662 x4651 eq x4645 h4650 eq h4655 u4649 eq x4651 h4650 eq h4644 u4648 eq x4643 |
+|                                                |                           |                           | h4661 eq h4644 u4659 eq x4643 h4670 eq h4644 u4668 eq x4643 h4682 eq h4644 i4681 |
+|                                                |                           |                           | eq x4643 > ]                                                                     |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| isEastOf                                       | idBedroomToClosetDoor     | idLivingRoomToBedroomDoor | [ TOP: h4644                                                                     |
+|                                                |                           |                           |   INDEX: x4643                                                                   |
+|                                                |                           |                           |   RELS: < [ loc_nonsp LBL: h4747 ARG0: e4744 ARG1: u4745 ARG2: x4746 ]           |
+|                                                |                           |                           |           [ def_implicit_q LBL: h4758 ARG0: x4755 RSTR: h4756 BODY: h4757 ]      |
+|                                                |                           |                           |           [ _east_a_1 LBL: h4743 ARG0: i4740 ARG1: x4741 ARG2: u4742 ]           |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4753 ARG0: x4750 RSTR: h4751 BODY: h4752 ]        |
+|                                                |                           |                           |           [ _un-_a_neg LBL: h4739 ARG0: i4737 ARG1: e4738 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h4736 ARG0: e4733 [ e PERF: - ] ARG1: u4734 ARG2:     |
+|                                                |                           |                           | i4735 ]                                                                          |
+|                                                |                           |                           |           [ _open_a_to LBL: h4724 ARG0: e4721 ARG1: u4722 ARG2: u4723 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4715 ARG0: e4712 ARG1: u4713 ARG2: i4714 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4719 ARG0: x4716 RSTR: h4717 BODY: h4718 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|                                                |                           |                           |           [ _from_p LBL: h4704 ARG0: e4701 ARG1: u4702 ARG2: u4703 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4708 ARG0: x4705 RSTR: h4706 BODY: h4707 ]        |
+|                                                |                           |                           |           [ compound LBL: h4700 ARG0: e4697 [ e PROG: - ] ARG1: u4698 ARG2:      |
+|                                                |                           |                           | u4699 ]                                                                          |
+|                                                |                           |                           |           [ udef_q LBL: h4695 ARG0: x4692 RSTR: h4693 BODY: h4694 ]              |
+|                                                |                           |                           |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|                                                |                           |                           |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4687 ARG0: x4686 ]                                   |
+|                                                |                           |                           |           [ place_n LBL: h4749 ARG0: x4748 ]                                     |
+|                                                |                           |                           |           [ _un-_a_neg LBL: h4685 ARG0: i4683 ARG1: e4684 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h4682 ARG0: e4679 [ e PERF: - ] ARG1: u4680 ARG2:     |
+|                                                |                           |                           | i4681 ]                                                                          |
+|                                                |                           |                           |           [ _open_a_to LBL: h4670 ARG0: e4667 ARG1: u4668 ARG2: u4669 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4661 ARG0: e4658 ARG1: u4659 ARG2: i4660 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4665 ARG0: x4662 RSTR: h4663 BODY: h4664 ]        |
+|                                                |                           |                           |           [ _closet_n_1 LBL: h4657 ARG0: x4656 ]                                 |
+|                                                |                           |                           |           [ _from_p LBL: h4650 ARG0: e4647 ARG1: u4648 ARG2: u4649 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4654 ARG0: x4651 RSTR: h4652 BODY: h4653 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4646 ARG0: x4645 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4644 ARG0: x4643 ] >                                 |
+|                                                |                           |                           |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 h4751 qeq h4687 h4756 |
+|                                                |                           |                           | qeq h4749 h4663 qeq h4657 h4652 qeq h4646 >                                      |
+|                                                |                           |                           |   ICONS: < e4733 topic i4735 e4679 topic i4681 >                                 |
+|                                                |                           |                           |   EQS: < h4739 eq h4736 e4738 eq e4733 x4716 eq x4710 h4715 eq h4720 i4714 eq    |
+|                                                |                           |                           | x4716 x4692 eq x4690 h4700 eq h4696 u4699 eq x4692 h4700 eq h4689 u4698 eq x4688 |
+|                                                |                           |                           | x4705 eq x4688 h4704 eq h4709 u4703 eq x4705 h4704 eq h4687 u4702 eq x4686 h4715 |
+|                                                |                           |                           | eq h4687 u4713 eq x4686 h4724 eq h4687 u4722 eq x4686 h4736 eq h4687 i4735 eq    |
+|                                                |                           |                           | x4686 x4750 eq x4686 h4743 eq h4754 u4742 eq x4750 h4743 eq h4749 x4741 eq x4748 |
+|                                                |                           |                           | x4755 eq x4748 h4747 eq h4759 x4746 eq x4755 h4685 eq h4682 e4684 eq e4679 x4662 |
+|                                                |                           |                           | eq x4656 h4661 eq h4666 i4660 eq x4662 x4651 eq x4645 h4650 eq h4655 u4649 eq    |
+|                                                |                           |                           | x4651 h4650 eq h4644 u4648 eq x4643 h4661 eq h4644 u4659 eq x4643 h4670 eq h4644 |
+|                                                |                           |                           | u4668 eq x4643 h4682 eq h4644 i4681 eq x4643 h4747 eq h4644 u4745 eq x4643 > ]   |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor_prop_idOpenState     | idLivingRoomToBedroomDoor | open                      | [ TOP: h4687                                                                     |
+|                                                |                           |                           |   INDEX: x4686                                                                   |
+|                                                |                           |                           |   RELS: < [ _open_a_to LBL: h4724 ARG0: e4721 ARG1: u4722 ARG2: u4723 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4715 ARG0: e4712 ARG1: u4713 ARG2: i4714 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4719 ARG0: x4716 RSTR: h4717 BODY: h4718 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|                                                |                           |                           |           [ _from_p LBL: h4704 ARG0: e4701 ARG1: u4702 ARG2: u4703 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4708 ARG0: x4705 RSTR: h4706 BODY: h4707 ]        |
+|                                                |                           |                           |           [ compound LBL: h4700 ARG0: e4697 [ e PROG: - ] ARG1: u4698 ARG2:      |
+|                                                |                           |                           | u4699 ]                                                                          |
+|                                                |                           |                           |           [ udef_q LBL: h4695 ARG0: x4692 RSTR: h4693 BODY: h4694 ]              |
+|                                                |                           |                           |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|                                                |                           |                           |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4687 ARG0: x4686 ] >                                 |
+|                                                |                           |                           |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 >                     |
+|                                                |                           |                           |   EQS: < x4716 eq x4710 h4715 eq h4720 i4714 eq x4716 x4692 eq x4690 h4700 eq    |
+|                                                |                           |                           | h4696 u4699 eq x4692 h4700 eq h4689 u4698 eq x4688 x4705 eq x4688 h4704 eq h4709 |
+|                                                |                           |                           | u4703 eq x4705 h4704 eq h4687 u4702 eq x4686 h4715 eq h4687 u4713 eq x4686 h4724 |
+|                                                |                           |                           | eq h4687 u4722 eq x4686 > ]                                                      |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToBedroomDoor_prop_idUnknownObject | idLivingRoomToBedroomDoor | true                      | [ TOP: h4687                                                                     |
+|                                                |                           |                           |   INDEX: x4686                                                                   |
+|                                                |                           |                           |   RELS: < [ _un-_a_neg LBL: h4739 ARG0: i4737 ARG1: e4738 ]                      |
+|                                                |                           |                           |           [ _know_v_1 LBL: h4736 ARG0: e4733 [ e PERF: - ] ARG1: u4734 ARG2:     |
+|                                                |                           |                           | i4735 ]                                                                          |
+|                                                |                           |                           |           [ _open_a_to LBL: h4724 ARG0: e4721 ARG1: u4722 ARG2: u4723 ]          |
+|                                                |                           |                           |           [ _to_p LBL: h4715 ARG0: e4712 ARG1: u4713 ARG2: i4714 ]               |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4719 ARG0: x4716 RSTR: h4717 BODY: h4718 ]        |
+|                                                |                           |                           |           [ _bedroom_n_1 LBL: h4711 ARG0: x4710 ]                                |
+|                                                |                           |                           |           [ _from_p LBL: h4704 ARG0: e4701 ARG1: u4702 ARG2: u4703 ]             |
+|                                                |                           |                           |           [ def_udef_a_q LBL: h4708 ARG0: x4705 RSTR: h4706 BODY: h4707 ]        |
+|                                                |                           |                           |           [ compound LBL: h4700 ARG0: e4697 [ e PROG: - ] ARG1: u4698 ARG2:      |
+|                                                |                           |                           | u4699 ]                                                                          |
+|                                                |                           |                           |           [ udef_q LBL: h4695 ARG0: x4692 RSTR: h4693 BODY: h4694 ]              |
+|                                                |                           |                           |           [ _living_n_1 LBL: h4691 ARG0: x4690 ]                                 |
+|                                                |                           |                           |           [ _room_n_unit LBL: h4689 ARG0: x4688 ]                                |
+|                                                |                           |                           |           [ _door_n_1 LBL: h4687 ARG0: x4686 ] >                                 |
+|                                                |                           |                           |   HCONS: < h4717 qeq h4711 h4693 qeq h4691 h4706 qeq h4689 >                     |
+|                                                |                           |                           |   ICONS: < e4733 topic i4735 >                                                   |
+|                                                |                           |                           |   EQS: < h4739 eq h4736 e4738 eq e4733 x4716 eq x4710 h4715 eq h4720 i4714 eq    |
+|                                                |                           |                           | x4716 x4692 eq x4690 h4700 eq h4696 u4699 eq x4692 h4700 eq h4689 u4698 eq x4688 |
+|                                                |                           |                           | x4705 eq x4688 h4704 eq h4709 u4703 eq x4705 h4704 eq h4687 u4702 eq x4686 h4715 |
+|                                                |                           |                           | eq h4687 u4713 eq x4686 h4724 eq h4687 u4722 eq x4686 h4736 eq h4687 i4735 eq    |
+|                                                |                           |                           | x4686 > ]                                                                        |
++------------------------------------------------+---------------------------+---------------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                       GENERATED ENGLISH TEXT                                                       |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                                                               |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+| 1   | An open unknown door to a closet east of the open unknown doors from a living room to the bedrooms from the bedrooms         |
+| 2   | An open unknown door to a closet east of the open unknown doors from the living room to the bedrooms from the bedrooms       |
+| 3   | An open unknown door to a closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms      |
+| 4   | An open unknown door to the closet east of the open unknown door from a living room to the bedrooms from the bedrooms        |
+| 5   | An open unknown door to the closet east of the open unknown door from the living room to the bedrooms from the bedrooms      |
+| 6   | An open unknown door to the closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms     |
+| 7   | An open unknown door to the closet east of the open unknown doors from a living room to the bedrooms from the bedrooms       |
+| 8   | An open unknown door to the closet east of the open unknown doors from living rooms to the bedrooms from the bedrooms        |
+| 9   | An open unknown door to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms     |
+| 10  | An open unknown door to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms    |
+| 11  | An open unknown door to the closet east of the open unknown doors to the bedroom from a living room from the bedrooms        |
+| 12  | An open unknown door to the closet east of the open unknown doors to the bedroom from the living room from the bedrooms      |
+| 13  | An open unknown door to the closet east of the open unknown doors to the bedroom from the living rooms from the bedrooms     |
+| 14  | An open unknown door to the closet east of the open unknown doors to the bedrooms from a living room from the bedrooms       |
+| 15  | An open unknown door to the closet east of the open unknown doors to the bedrooms from the living room from the bedrooms     |
+| 16  | An open unknown door to the closet east of the open unknown doors to the bedrooms from the living rooms from the bedrooms    |
+| 17  | Open unknown doors from a bedroom to the closet east of the open unknown doors from a living room to the bedrooms            |
+| 18  | Open unknown doors from a bedroom to the closet east of the open unknown doors from the living room to the bedrooms          |
+| 19  | Open unknown doors from a bedroom to the closet east of the open unknown doors from the living rooms to the bedrooms         |
+| 20  | Open unknown doors from bedrooms to the closet east of the open unknown door from the living room to the bedrooms            |
+| 21  | Open unknown doors from bedrooms to the closet east of the open unknown door from the living rooms to the bedrooms           |
+| 22  | Open unknown doors from bedrooms to the closet east of the open unknown doors from a living room to the bedrooms             |
+| 23  | Open unknown doors from bedrooms to the closet east of the open unknown doors from the living room to the bedrooms           |
+| 24  | Open unknown doors from bedrooms to the closet east of the open unknown doors from the living rooms to the bedrooms          |
+| 25  | Open unknown doors from the bedroom to a closet east of the open unknown doors from a living room to the bedrooms            |
+| 26  | Open unknown doors from the bedroom to a closet east of the open unknown doors from the living room to the bedrooms          |
+| 27  | Open unknown doors from the bedroom to a closet east of the open unknown doors from the living rooms to the bedrooms         |
+| 28  | Open unknown doors from the bedroom to the closet east of the open unknown door from a living room to the bedrooms           |
+| 29  | Open unknown doors from the bedroom to the closet east of the open unknown door from the living room to the bedrooms         |
+| 30  | Open unknown doors from the bedroom to the closet east of the open unknown door from the living rooms to the bedrooms        |
+| 31  | Open unknown doors from the bedroom to the closet east of the open unknown doors from a living room to the bedrooms          |
+| 32  | Open unknown doors from the bedroom to the closet east of the open unknown doors from living rooms to the bedrooms           |
+| 33  | Open unknown doors from the bedroom to the closet east of the open unknown doors from the living room to the bedrooms        |
+| 34  | Open unknown doors from the bedroom to the closet east of the open unknown doors from the living rooms to the bedrooms       |
+| 35  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedroom from a living room           |
+| 36  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedroom from the living room         |
+| 37  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedroom from the living rooms        |
+| 38  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedrooms from a living room          |
+| 39  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedrooms from the living room        |
+| 40  | Open unknown doors from the bedroom to the closet east of the open unknown doors to the bedrooms from the living rooms       |
+| 41  | Open unknown doors from the bedrooms to a closet east of the open unknown doors from the living room to the bedrooms         |
+| 42  | Open unknown doors from the bedrooms to a closet east of the open unknown doors from the living rooms to the bedrooms        |
+| 43  | Open unknown doors from the bedrooms to the closet east of the open unknown door from a living room to the bedrooms          |
+| 44  | Open unknown doors from the bedrooms to the closet east of the open unknown door from the living room to the bedrooms        |
+| 45  | Open unknown doors from the bedrooms to the closet east of the open unknown door from the living rooms to the bedrooms       |
+| 46  | Open unknown doors from the bedrooms to the closet east of the open unknown doors from a living room to the bedrooms         |
+| 47  | Open unknown doors from the bedrooms to the closet east of the open unknown doors from living rooms to the bedrooms          |
+| 48  | Open unknown doors from the bedrooms to the closet east of the open unknown doors from the living room to the bedrooms       |
+| 49  | Open unknown doors from the bedrooms to the closet east of the open unknown doors from the living rooms to the bedrooms      |
+| 50  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedroom from a living room          |
+| 51  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedroom from the living room        |
+| 52  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedroom from the living rooms       |
+| 53  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedrooms from a living room         |
+| 54  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedrooms from the living room       |
+| 55  | Open unknown doors from the bedrooms to the closet east of the open unknown doors to the bedrooms from the living rooms      |
+| 56  | Open unknown doors to a closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms         |
+| 57  | Open unknown doors to a closet east of the open unknown doors from a living room to the bedrooms from the bedrooms           |
+| 58  | Open unknown doors to a closet east of the open unknown doors from the living room to the bedrooms from the bedrooms         |
+| 59  | Open unknown doors to a closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms        |
+| 60  | Open unknown doors to a closet from a bedroom east of the open unknown doors from the living room to the bedrooms            |
+| 61  | Open unknown doors to a closet from a bedroom east of the open unknown doors from the living rooms to the bedrooms           |
+| 62  | Open unknown doors to a closet from the bedroom east of the open unknown door from a living room to the bedrooms             |
+| 63  | Open unknown doors to a closet from the bedroom east of the open unknown door from the living room to the bedrooms           |
+| 64  | Open unknown doors to a closet from the bedroom east of the open unknown door from the living rooms to the bedrooms          |
+| 65  | Open unknown doors to a closet from the bedroom east of the open unknown doors from a living room to the bedrooms            |
+| 66  | Open unknown doors to a closet from the bedroom east of the open unknown doors from living rooms to the bedrooms             |
+| 67  | Open unknown doors to a closet from the bedroom east of the open unknown doors from the living room to the bedrooms          |
+| 68  | Open unknown doors to a closet from the bedroom east of the open unknown doors from the living rooms to the bedrooms         |
+| 69  | Open unknown doors to a closet from the bedroom east of the open unknown doors to the bedroom from a living room             |
+| 70  | Open unknown doors to a closet from the bedroom east of the open unknown doors to the bedroom from the living room           |
+| 71  | Open unknown doors to a closet from the bedroom east of the open unknown doors to the bedroom from the living rooms          |
+| 72  | Open unknown doors to a closet from the bedrooms east of the open unknown door from a living room to the bedrooms            |
+| 73  | Open unknown doors to a closet from the bedrooms east of the open unknown door from the living room to the bedrooms          |
+| 74  | Open unknown doors to a closet from the bedrooms east of the open unknown door from the living rooms to the bedrooms         |
+| 75  | Open unknown doors to a closet from the bedrooms east of the open unknown doors from a living room to the bedrooms           |
+| 76  | Open unknown doors to a closet from the bedrooms east of the open unknown doors from the living room to the bedrooms         |
+| 77  | Open unknown doors to a closet from the bedrooms east of the open unknown doors from the living rooms to the bedrooms        |
+| 78  | Open unknown doors to closets from the bedroom east of the open unknown doors from a living room to the bedrooms             |
+| 79  | Open unknown doors to closets from the bedroom east of the open unknown doors from the living room to the bedrooms           |
+| 80  | Open unknown doors to closets from the bedroom east of the open unknown doors from the living rooms to the bedrooms          |
+| 81  | Open unknown doors to closets from the bedrooms east of the open unknown doors from the living room to the bedrooms          |
+| 82  | Open unknown doors to closets from the bedrooms east of the open unknown doors from the living rooms to the bedrooms         |
+| 83  | Open unknown doors to the closet east of the open unknown door from a living room to the bedrooms from the bedrooms          |
+| 84  | Open unknown doors to the closet east of the open unknown door from the living room to the bedrooms from the bedrooms        |
+| 85  | Open unknown doors to the closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms       |
+| 86  | Open unknown doors to the closet east of the open unknown door to the bedroom from a living room from the bedrooms           |
+| 87  | Open unknown doors to the closet east of the open unknown doors from a living room to the bedrooms from the bedrooms         |
+| 88  | Open unknown doors to the closet east of the open unknown doors from living rooms to the bedrooms from the bedrooms          |
+| 89  | Open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms       |
+| 90  | Open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms      |
+| 91  | Open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms.     |
+| 92  | Open unknown doors to the closet east of the open unknown doors to the bedroom from a living room from the bedrooms          |
+| 93  | Open unknown doors to the closet east of the open unknown doors to the bedroom from the living room from the bedrooms        |
+| 94  | Open unknown doors to the closet east of the open unknown doors to the bedroom from the living rooms from the bedrooms       |
+| 95  | Open unknown doors to the closet east of the open unknown doors to the bedrooms from a living room from the bedrooms         |
+| 96  | Open unknown doors to the closet east of the open unknown doors to the bedrooms from the living room from the bedrooms       |
+| 97  | Open unknown doors to the closet east of the open unknown doors to the bedrooms from the living rooms from the bedrooms      |
+| 98  | Open unknown doors to the closet from a bedroom east of the open unknown door from a living room to the bedrooms             |
+| 99  | Open unknown doors to the closet from a bedroom east of the open unknown door from the living room to the bedrooms           |
+| 100 | Open unknown doors to the closet from a bedroom east of the open unknown door from the living rooms to the bedrooms          |
+| 101 | Open unknown doors to the closet from a bedroom east of the open unknown doors from a living room to the bedrooms            |
+| 102 | Open unknown doors to the closet from a bedroom east of the open unknown doors from living rooms to the bedrooms             |
+| 103 | Open unknown doors to the closet from a bedroom east of the open unknown doors from the living room to the bedrooms          |
+| 104 | Open unknown doors to the closet from a bedroom east of the open unknown doors from the living rooms to the bedrooms         |
+| 105 | Open unknown doors to the closet from a bedroom east of the open unknown doors to the bedroom from a living room             |
+| 106 | Open unknown doors to the closet from a bedroom east of the open unknown doors to the bedroom from the living room           |
+| 107 | Open unknown doors to the closet from a bedroom east of the open unknown doors to the bedroom from the living rooms          |
+| 108 | Open unknown doors to the closet from bedrooms east of the open unknown door from a living room to the bedrooms              |
+| 109 | Open unknown doors to the closet from bedrooms east of the open unknown door from the living room to the bedrooms            |
+| 110 | Open unknown doors to the closet from bedrooms east of the open unknown door from the living rooms to the bedrooms           |
+| 111 | Open unknown doors to the closet from bedrooms east of the open unknown doors from a living room to the bedrooms             |
+| 112 | Open unknown doors to the closet from bedrooms east of the open unknown doors from the living room to the bedrooms           |
+| 113 | Open unknown doors to the closet from bedrooms east of the open unknown doors from the living rooms to the bedrooms          |
+| 114 | Open unknown doors to the closet from the bedroom east of an open unknown door from a living room to the bedrooms            |
+| 115 | Open unknown doors to the closet from the bedroom east of an open unknown door from the living room to the bedrooms          |
+| 116 | Open unknown doors to the closet from the bedroom east of an open unknown door from the living rooms to the bedrooms         |
+| 117 | Open unknown doors to the closet from the bedroom east of the open unknown door from a living room to the bedrooms           |
+| 118 | Open unknown doors to the closet from the bedroom east of the open unknown door from living rooms to the bedrooms            |
+| 119 | Open unknown doors to the closet from the bedroom east of the open unknown door from the living room to the bedrooms         |
+| 120 | Open unknown doors to the closet from the bedroom east of the open unknown door from the living rooms to the bedrooms        |
+| 121 | Open unknown doors to the closet from the bedroom east of the open unknown door from the living rooms to the bedrooms.       |
+| 122 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedroom from a living room            |
+| 123 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedroom from the living room          |
+| 124 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedroom from the living rooms         |
+| 125 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedrooms from a living room           |
+| 126 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedrooms from the living room         |
+| 127 | Open unknown doors to the closet from the bedroom east of the open unknown door to the bedrooms from the living rooms        |
+| 128 | Open unknown doors to the closet from the bedroom east of the open unknown doors from a living room to the bedroom           |
+| 129 | Open unknown doors to the closet from the bedroom east of the open unknown doors from a living room to the bedrooms          |
+| 130 | Open unknown doors to the closet from the bedroom east of the open unknown doors from a living room to the bedrooms.         |
+| 131 | Open unknown doors to the closet from the bedroom east of the open unknown doors from living rooms to the bedrooms           |
+| 132 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living room to the bedroom         |
+| 133 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living room to the bedrooms        |
+| 134 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living room to the bedrooms.       |
+| 135 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living rooms to the bedroom        |
+| 136 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living rooms to the bedrooms       |
+| 137 | Open unknown doors to the closet from the bedroom east of the open unknown doors from the living rooms to the bedrooms.      |
+| 138 | Open unknown doors to the closet from the bedroom east of the open unknown doors to a bedroom from a living room             |
+| 139 | Open unknown doors to the closet from the bedroom east of the open unknown doors to a bedroom from the living room           |
+| 140 | Open unknown doors to the closet from the bedroom east of the open unknown doors to a bedroom from the living rooms          |
+| 141 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedroom from a living room           |
+| 142 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedroom from the living room         |
+| 143 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedroom from the living rooms        |
+| 144 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedrooms from a living room          |
+| 145 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedrooms from the living room        |
+| 146 | Open unknown doors to the closet from the bedroom east of the open unknown doors to the bedrooms from the living rooms       |
+| 147 | Open unknown doors to the closet from the bedroom east of the unknown open door from the living room to the bedrooms         |
+| 148 | Open unknown doors to the closet from the bedroom east of the unknown open door from the living rooms to the bedrooms        |
+| 149 | Open unknown doors to the closet from the bedroom east of the unknown open doors from the living room to the bedrooms        |
+| 150 | Open unknown doors to the closet from the bedroom east of the unknown open doors from the living rooms to the bedrooms       |
+| 151 | Open unknown doors to the closet from the bedrooms east of an open unknown door from a living room to the bedrooms           |
+| 152 | Open unknown doors to the closet from the bedrooms east of an open unknown door from the living room to the bedrooms         |
+| 153 | Open unknown doors to the closet from the bedrooms east of an open unknown door from the living rooms to the bedrooms        |
+| 154 | Open unknown doors to the closet from the bedrooms east of the open unknown door from a living room to the bedrooms          |
+| 155 | Open unknown doors to the closet from the bedrooms east of the open unknown door from living rooms to the bedrooms           |
+| 156 | Open unknown doors to the closet from the bedrooms east of the open unknown door from the living room to the bedrooms        |
+| 157 | Open unknown doors to the closet from the bedrooms east of the open unknown door from the living rooms to the bedrooms       |
+| 158 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedroom from a living room           |
+| 159 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedroom from the living room         |
+| 160 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedroom from the living rooms        |
+| 161 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedrooms from a living room          |
+| 162 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedrooms from the living room        |
+| 163 | Open unknown doors to the closet from the bedrooms east of the open unknown door to the bedrooms from the living rooms       |
+| 164 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from a living room to the bedrooms         |
+| 165 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from a living room to the bedrooms.        |
+| 166 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from living rooms to the bedrooms          |
+| 167 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living room to the bedroom        |
+| 168 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living room to the bedrooms       |
+| 169 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living room to the bedrooms.      |
+| 170 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living rooms to the bedroom       |
+| 171 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living rooms to the bedrooms      |
+| 172 | Open unknown doors to the closet from the bedrooms east of the open unknown doors from the living rooms to the bedrooms.     |
+| 173 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedroom from a living room          |
+| 174 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedroom from the living room        |
+| 175 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedroom from the living rooms       |
+| 176 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedrooms from a living room         |
+| 177 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedrooms from the living room       |
+| 178 | Open unknown doors to the closet from the bedrooms east of the open unknown doors to the bedrooms from the living rooms      |
+| 179 | Open unknown doors to the closet from the bedrooms east of the unknown open door from the living room to the bedrooms        |
+| 180 | Open unknown doors to the closet from the bedrooms east of the unknown open door from the living rooms to the bedrooms       |
+| 181 | Open unknown doors to the closets from the bedroom east of the open unknown doors from a living room to the bedrooms         |
+| 182 | Open unknown doors to the closets from the bedroom east of the open unknown doors from the living room to the bedrooms       |
+| 183 | Open unknown doors to the closets from the bedroom east of the open unknown doors from the living rooms to the bedrooms      |
+| 184 | Open unknown doors to the closets from the bedrooms east of the open unknown doors from a living room to the bedrooms        |
+| 185 | Open unknown doors to the closets from the bedrooms east of the open unknown doors from the living room to the bedrooms      |
+| 186 | Open unknown doors to the closets from the bedrooms east of the open unknown doors from the living rooms to the bedrooms     |
+| 187 | The open unknown door to a closet east of the open unknown door from the living room to the bedrooms from the bedrooms       |
+| 188 | The open unknown door to a closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms      |
+| 189 | The open unknown door to a closet east of the open unknown doors from a living room to the bedrooms from the bedrooms        |
+| 190 | The open unknown door to a closet east of the open unknown doors from the living room to the bedrooms from the bedrooms      |
+| 191 | The open unknown door to a closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms     |
+| 192 | The open unknown door to closets east of the open unknown doors from the living room to the bedrooms from the bedrooms       |
+| 193 | The open unknown door to closets east of the open unknown doors from the living rooms to the bedrooms from the bedrooms      |
+| 194 | The open unknown door to the closet east of an open unknown door from the living room to the bedrooms from the bedrooms      |
+| 195 | The open unknown door to the closet east of an open unknown door from the living rooms to the bedrooms from the bedrooms     |
+| 196 | The open unknown door to the closet east of the open unknown door from a living room to the bedrooms from the bedrooms       |
+| 197 | The open unknown door to the closet east of the open unknown door from living rooms to the bedrooms from the bedrooms        |
+| 198 | The open unknown door to the closet east of the open unknown door from the living room to the bedrooms from the bedrooms     |
+| 199 | The open unknown door to the closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms    |
+| 200 | The open unknown door to the closet east of the open unknown door to the bedroom from a living room from the bedrooms        |
+| 201 | The open unknown door to the closet east of the open unknown door to the bedroom from the living room from the bedrooms      |
+| 202 | The open unknown door to the closet east of the open unknown door to the bedroom from the living rooms from the bedrooms     |
+| 203 | The open unknown door to the closet east of the open unknown door to the bedrooms from a living room from the bedrooms       |
+| 204 | The open unknown door to the closet east of the open unknown door to the bedrooms from the living room from the bedrooms     |
+| 205 | The open unknown door to the closet east of the open unknown door to the bedrooms from the living rooms from the bedrooms    |
+| 206 | The open unknown door to the closet east of the open unknown doors from a living room to the bedrooms from the bedrooms      |
+| 207 | The open unknown door to the closet east of the open unknown doors from living rooms to the bedrooms from the bedrooms       |
+| 208 | The open unknown door to the closet east of the open unknown doors from the living room to the bedroom from the bedrooms     |
+| 209 | The open unknown door to the closet east of the open unknown doors from the living room to the bedrooms from the bedroom     |
+| 210 | The open unknown door to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms    |
+| 211 | The open unknown door to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms.   |
+| 212 | The open unknown door to the closet east of the open unknown doors from the living rooms to the bedroom from the bedrooms    |
+| 213 | The open unknown door to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedroom    |
+| 214 | The open unknown door to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms   |
+| 215 | The open unknown door to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms.  |
+| 216 | The open unknown door to the closet east of the open unknown doors to the bedroom from a living room from the bedrooms       |
+| 217 | The open unknown door to the closet east of the open unknown doors to the bedroom from the living room from the bedrooms     |
+| 218 | The open unknown door to the closet east of the open unknown doors to the bedroom from the living rooms from the bedrooms    |
+| 219 | The open unknown door to the closet east of the open unknown doors to the bedrooms from a living room from the bedrooms      |
+| 220 | The open unknown door to the closet east of the open unknown doors to the bedrooms from the living room from the bedrooms    |
+| 221 | The open unknown door to the closet east of the open unknown doors to the bedrooms from the living rooms from the bedrooms   |
+| 222 | The open unknown door to the closet east of the unknown open door from the living room to the bedrooms from the bedrooms     |
+| 223 | The open unknown door to the closet east of the unknown open door from the living rooms to the bedrooms from the bedrooms    |
+| 224 | The open unknown door to the closets east of the open unknown doors from the living room to the bedrooms from the bedrooms   |
+| 225 | The open unknown door to the closets east of the open unknown doors from the living rooms to the bedrooms from the bedrooms  |
+| 226 | The open unknown doors east of the open unknown doors from the living room to the bedrooms to the closet from the bedrooms   |
+| 227 | The open unknown doors east of the open unknown doors from the living rooms to the bedrooms to the closet from the bedrooms  |
+| 228 | The open unknown doors to a closet east of the open unknown door from a living room to the bedrooms from the bedrooms        |
+| 229 | The open unknown doors to a closet east of the open unknown door from the living room to the bedrooms from the bedrooms      |
+| 230 | The open unknown doors to a closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms     |
+| 231 | The open unknown doors to a closet east of the open unknown doors from a living room to the bedrooms from the bedrooms       |
+| 232 | The open unknown doors to a closet east of the open unknown doors from living rooms to the bedrooms from the bedrooms        |
+| 233 | The open unknown doors to a closet east of the open unknown doors from the living room to the bedrooms from the bedrooms     |
+| 234 | The open unknown doors to a closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms    |
+| 235 | The open unknown doors to a closet east of the open unknown doors to the bedroom from a living room from the bedrooms        |
+| 236 | The open unknown doors to a closet east of the open unknown doors to the bedroom from the living room from the bedrooms      |
+| 237 | The open unknown doors to a closet east of the open unknown doors to the bedroom from the living rooms from the bedrooms     |
+| 238 | The open unknown doors to a closet east of the open unknown doors to the bedrooms from a living room from the bedrooms       |
+| 239 | The open unknown doors to a closet east of the open unknown doors to the bedrooms from the living room from the bedrooms     |
+| 240 | The open unknown doors to a closet east of the open unknown doors to the bedrooms from the living rooms from the bedrooms    |
+| 241 | The open unknown doors to closets east of the open unknown door from the living room to the bedrooms from the bedrooms       |
+| 242 | The open unknown doors to closets east of the open unknown door from the living rooms to the bedrooms from the bedrooms      |
+| 243 | The open unknown doors to closets east of the open unknown doors from a living room to the bedrooms from the bedrooms        |
+| 244 | The open unknown doors to closets east of the open unknown doors from the living room to the bedrooms from the bedrooms      |
+| 245 | The open unknown doors to closets east of the open unknown doors from the living rooms to the bedrooms from the bedrooms     |
+| 246 | The open unknown doors to the closet east of an open unknown door from a living room to the bedrooms from the bedrooms       |
+| 247 | The open unknown doors to the closet east of an open unknown door from the living room to the bedrooms from the bedrooms     |
+| 248 | The open unknown doors to the closet east of an open unknown door from the living rooms to the bedrooms from the bedrooms    |
+| 249 | The open unknown doors to the closet east of open unknown doors from the living room to the bedrooms from the bedrooms       |
+| 250 | The open unknown doors to the closet east of open unknown doors from the living rooms to the bedrooms from the bedrooms      |
+| 251 | The open unknown doors to the closet east of the open unknown door from a living room to the bedrooms from the bedrooms      |
+| 252 | The open unknown doors to the closet east of the open unknown door from living rooms to the bedrooms from the bedrooms       |
+| 253 | The open unknown doors to the closet east of the open unknown door from the living room to the bedroom from the bedrooms     |
+| 254 | The open unknown doors to the closet east of the open unknown door from the living room to the bedrooms from the bedroom     |
+| 255 | The open unknown doors to the closet east of the open unknown door from the living room to the bedrooms from the bedrooms    |
+| 256 | The open unknown doors to the closet east of the open unknown door from the living room to the bedrooms from the bedrooms.   |
+| 257 | The open unknown doors to the closet east of the open unknown door from the living rooms to the bedroom from the bedrooms    |
+| 258 | The open unknown doors to the closet east of the open unknown door from the living rooms to the bedrooms from the bedroom    |
+| 259 | The open unknown doors to the closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms   |
+| 260 | The open unknown doors to the closet east of the open unknown door from the living rooms to the bedrooms from the bedrooms.  |
+| 261 | The open unknown doors to the closet east of the open unknown door to the bedroom from a living room from the bedrooms       |
+| 262 | The open unknown doors to the closet east of the open unknown door to the bedroom from the living room from the bedrooms     |
+| 263 | The open unknown doors to the closet east of the open unknown door to the bedroom from the living rooms from the bedrooms    |
+| 264 | The open unknown doors to the closet east of the open unknown door to the bedrooms from a living room from the bedrooms      |
+| 265 | The open unknown doors to the closet east of the open unknown door to the bedrooms from the living room from the bedrooms    |
+| 266 | The open unknown doors to the closet east of the open unknown door to the bedrooms from the living rooms from the bedrooms   |
+| 267 | The open unknown doors to the closet east of the open unknown doors from a living room to the bedroom from the bedrooms      |
+| 268 | The open unknown doors to the closet east of the open unknown doors from a living room to the bedrooms from the bedroom      |
+| 269 | The open unknown doors to the closet east of the open unknown doors from a living room to the bedrooms from the bedrooms     |
+| 270 | The open unknown doors to the closet east of the open unknown doors from a living room to the bedrooms from the bedrooms.    |
+| 271 | The open unknown doors to the closet east of the open unknown doors from living rooms to the bedrooms from the bedrooms      |
+| 272 | The open unknown doors to the closet east of the open unknown doors from the living room to a bedroom from the bedrooms      |
+| 273 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedroom from the bedrooms    |
+| 274 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from a bedroom      |
+| 275 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from bedrooms       |
+| 276 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from the bedroom    |
+| 277 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms   |
+| 278 | The open unknown doors to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms.  |
+| 279 | The open unknown doors to the closet east of the open unknown doors from the living rooms to a bedroom from the bedrooms     |
+| 280 | The open unknown doors to the closet east of the open unknown doors from the living rooms to bedrooms from the bedrooms      |
+| 281 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedroom from the bedrooms   |
+| 282 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from a bedroom     |
+| 283 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from bedrooms      |
+| 284 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedroom   |
+| 285 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms  |
+| 286 | The open unknown doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms. |
+| 287 | The open unknown doors to the closet east of the open unknown doors to a bedroom from a living room from the bedrooms        |
+| 288 | The open unknown doors to the closet east of the open unknown doors to a bedroom from the living room from the bedrooms      |
+| 289 | The open unknown doors to the closet east of the open unknown doors to a bedroom from the living rooms from the bedrooms     |
+| 290 | The open unknown doors to the closet east of the open unknown doors to bedrooms from a living room from the bedrooms         |
+| 291 | The open unknown doors to the closet east of the open unknown doors to bedrooms from the living room from the bedrooms       |
+| 292 | The open unknown doors to the closet east of the open unknown doors to bedrooms from the living rooms from the bedrooms      |
+| 293 | The open unknown doors to the closet east of the open unknown doors to the bedroom from a living room from the bedrooms      |
+| 294 | The open unknown doors to the closet east of the open unknown doors to the bedroom from living rooms from the bedrooms       |
+| 295 | The open unknown doors to the closet east of the open unknown doors to the bedroom from the living room from the bedrooms    |
+| 296 | The open unknown doors to the closet east of the open unknown doors to the bedroom from the living rooms from the bedrooms   |
+| 297 | The open unknown doors to the closet east of the open unknown doors to the bedrooms from a living room from the bedrooms     |
+| 298 | The open unknown doors to the closet east of the open unknown doors to the bedrooms from living rooms from the bedrooms      |
+| 299 | The open unknown doors to the closet east of the open unknown doors to the bedrooms from the living room from the bedrooms   |
+| 300 | The open unknown doors to the closet east of the open unknown doors to the bedrooms from the living rooms from the bedrooms  |
+| 301 | The open unknown doors to the closet east of the unknown open door from a living room to the bedrooms from the bedrooms      |
+| 302 | The open unknown doors to the closet east of the unknown open door from the living room to the bedrooms from the bedrooms    |
+| 303 | The open unknown doors to the closet east of the unknown open door from the living rooms to the bedrooms from the bedrooms   |
+| 304 | The open unknown doors to the closet east of the unknown open doors from a living room to the bedrooms from the bedrooms     |
+| 305 | The open unknown doors to the closet east of the unknown open doors from the living room to the bedrooms from the bedrooms   |
+| 306 | The open unknown doors to the closet east of the unknown open doors from the living rooms to the bedrooms from the bedrooms  |
+| 307 | The open unknown doors to the closets east of the open unknown door from the living room to the bedrooms from the bedrooms   |
+| 308 | The open unknown doors to the closets east of the open unknown door from the living rooms to the bedrooms from the bedrooms  |
+| 309 | The open unknown doors to the closets east of the open unknown doors from a living room to the bedrooms from the bedrooms    |
+| 310 | The open unknown doors to the closets east of the open unknown doors from the living room to the bedrooms from the bedrooms  |
+| 311 | The open unknown doors to the closets east of the open unknown doors from the living rooms to the bedrooms from the bedrooms |
+| 312 | The unknown open door to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms    |
+| 313 | The unknown open door to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms   |
+| 314 | The unknown open doors to the closet east of the open unknown doors from the living room to the bedrooms from the bedrooms   |
+| 315 | The unknown open doors to the closet east of the open unknown doors from the living rooms to the bedrooms from the bedrooms  |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+

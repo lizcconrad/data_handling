@@ -1,0 +1,276 @@
+GRAPH NAME: building1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------+
+|                   GOLD OUTPUTS                   |
++-------------------------------------+------------+
+| Gold Output                         | Generated? |
++-------------------------------------+------------+
+| the old building near the grey wolf | True       |
++-------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| building1 | True         | True          | Covered          | Included          |
+| old       | True         | True          | Covered          | Included          |
+| idWolf3   | True         | True          | Covered          | Included          |
+| grey      | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                         |
++----------------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent    | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+| building1_prop_oldAdjectiveType3 | building1 | old     | True         | True          | Covered          | Included          |
+| isNear                           | building1 | idWolf3 | True         | True          | Covered          | Included          |
+| idWolf3_prop_idColor             | idWolf3   | grey    | True         | True          | Covered          | Included          |
++----------------------------------+-----------+---------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1968                                                                     |
+|               |   INDEX: x1967                                                                   |
+|               |   RELS: < [ _near_p LBL: h1980 ARG0: e1977 ARG1: u1978 ARG2: i1979 ]             |
+|               |           [ def_udef_a_q LBL: h1984 ARG0: x1981 RSTR: h1982 BODY: h1983 ]        |
+|               |           [ _grey_a_1 LBL: h1976 ARG0: i1974 ARG1: i1975 ]                       |
+|               |           [ _wolf_n_1 LBL: h1973 ARG0: x1972 ]                                   |
+|               |           [ _old_a_1 LBL: h1971 ARG0: e1969 ARG1: u1970 ]                        |
+|               |           [ _building_n_1 LBL: h1968 ARG0: x1967 ] >                             |
+|               |   HCONS: < h1982 qeq h1973 >                                                     |
+|               |   EQS: < h1976 eq h1973 i1975 eq x1972 x1981 eq x1972 h1980 eq h1985 i1979 eq    |
+|               | x1981 h1971 eq h1968 u1970 eq x1967 h1980 eq h1968 u1978 eq x1967 > ]            |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1968                                                                     |
+|               |   INDEX: x1967                                                                   |
+|               |   RELS: < [ _near_p LBL: h1968 ARG0: e1977 ARG1: x1967 ARG2: x1972 ]             |
+|               |           [ def_udef_a_q LBL: h1984 ARG0: x1972 RSTR: h1982 BODY: h1983 ]        |
+|               |           [ _grey_a_1 LBL: h1973 ARG0: i1974 ARG1: x1972 ]                       |
+|               |           [ _wolf_n_1 LBL: h1973 ARG0: x1972 ]                                   |
+|               |           [ _old_a_1 LBL: h1968 ARG0: e1969 ARG1: x1967 ]                        |
+|               |           [ _building_n_1 LBL: h1968 ARG0: x1967 ] >                             |
+|               |   HCONS: < h1982 qeq h1973 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1994                                                                     |
+|               |   INDEX: e1991                                                                   |
+|               |   RELS: < [ unknown LBL: h1990 ARG: x1967 ARG0: e1991 ]                          |
+|               |           [ def_udef_a_q LBL: h1989 ARG0: x1967 RSTR: h1987 BODY: h1988 ]        |
+|               |           [ _near_p LBL: h1968 ARG0: e1977 ARG1: x1967 ARG2: x1972 ]             |
+|               |           [ def_udef_a_q LBL: h1984 ARG0: x1972 RSTR: h1982 BODY: h1983 ]        |
+|               |           [ _grey_a_1 LBL: h1973 ARG0: i1974 ARG1: x1972 ]                       |
+|               |           [ _wolf_n_1 LBL: h1973 ARG0: x1972 ]                                   |
+|               |           [ _old_a_1 LBL: h1968 ARG0: e1969 ARG1: x1967 ]                        |
+|               |           [ _building_n_1 LBL: h1968 ARG0: x1967 ] >                             |
+|               |   HCONS: < h1982 qeq h1973 h1987 qeq h1968 h1994 qeq h1990 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------+
+|                               NODE SEMENTS                               |
++-----------+--------------------------------------------------------------+
+| Node      | Generated SEMENT                                             |
++-----------+--------------------------------------------------------------+
+| building1 | [ TOP: h1968                                                 |
+|           |   INDEX: x1967                                               |
+|           |   RELS: < [ _building_n_1 LBL: h1968 ARG0: x1967 ] > ]       |
++-----------+--------------------------------------------------------------+
+| old       | [ TOP: h1971                                                 |
+|           |   INDEX: e1969                                               |
+|           |   RELS: < [ _old_a_1 LBL: h1971 ARG0: e1969 ARG1: u1970 ] >  |
+|           |   SLOTS: < ARG1: u1970 > ]                                   |
++-----------+--------------------------------------------------------------+
+| idWolf3   | [ TOP: h1973                                                 |
+|           |   INDEX: x1972                                               |
+|           |   RELS: < [ _wolf_n_1 LBL: h1973 ARG0: x1972 ] > ]           |
++-----------+--------------------------------------------------------------+
+| grey      | [ TOP: h1976                                                 |
+|           |   INDEX: i1974                                               |
+|           |   RELS: < [ _grey_a_1 LBL: h1976 ARG0: i1974 ARG1: i1975 ] > |
+|           |   SLOTS: < ARG1: i1975 > ]                                   |
++-----------+--------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                               |
++----------------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| Edge                             | Parent    | Child   | Generated SEMENT                                                                 |
++----------------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| building1_prop_oldAdjectiveType3 | building1 | old     | [ TOP: h1968                                                                     |
+|                                  |           |         |   INDEX: x1967                                                                   |
+|                                  |           |         |   RELS: < [ _old_a_1 LBL: h1971 ARG0: e1969 ARG1: u1970 ]                        |
+|                                  |           |         |           [ _building_n_1 LBL: h1968 ARG0: x1967 ] >                             |
+|                                  |           |         |   EQS: < h1971 eq h1968 u1970 eq x1967 > ]                                       |
++----------------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| isNear                           | building1 | idWolf3 | [ TOP: h1968                                                                     |
+|                                  |           |         |   INDEX: x1967                                                                   |
+|                                  |           |         |   RELS: < [ _near_p LBL: h1980 ARG0: e1977 ARG1: u1978 ARG2: i1979 ]             |
+|                                  |           |         |           [ def_udef_a_q LBL: h1984 ARG0: x1981 RSTR: h1982 BODY: h1983 ]        |
+|                                  |           |         |           [ _grey_a_1 LBL: h1976 ARG0: i1974 ARG1: i1975 ]                       |
+|                                  |           |         |           [ _wolf_n_1 LBL: h1973 ARG0: x1972 ]                                   |
+|                                  |           |         |           [ _old_a_1 LBL: h1971 ARG0: e1969 ARG1: u1970 ]                        |
+|                                  |           |         |           [ _building_n_1 LBL: h1968 ARG0: x1967 ] >                             |
+|                                  |           |         |   HCONS: < h1982 qeq h1973 >                                                     |
+|                                  |           |         |   EQS: < h1976 eq h1973 i1975 eq x1972 x1981 eq x1972 h1980 eq h1985 i1979 eq    |
+|                                  |           |         | x1981 h1971 eq h1968 u1970 eq x1967 h1980 eq h1968 u1978 eq x1967 > ]            |
++----------------------------------+-----------+---------+----------------------------------------------------------------------------------+
+| idWolf3_prop_idColor             | idWolf3   | grey    | [ TOP: h1973                                                                     |
+|                                  |           |         |   INDEX: x1972                                                                   |
+|                                  |           |         |   RELS: < [ _grey_a_1 LBL: h1976 ARG0: i1974 ARG1: i1975 ]                       |
+|                                  |           |         |           [ _wolf_n_1 LBL: h1973 ARG0: x1972 ] >                                 |
+|                                  |           |         |   EQS: < h1976 eq h1973 i1975 eq x1972 > ]                                       |
++----------------------------------+-----------+---------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------+
+|             GENERATED ENGLISH TEXT            |
++-----+-----------------------------------------+
+| #   | Generated Text                          |
++-----+-----------------------------------------+
+| 1   | An old building near a gray wolf        |
+| 2   | An old building near a gray wolf.       |
+| 3   | An old building near a grey wolf        |
+| 4   | An old building near a grey wolf.       |
+| 5   | An old building near gray wolves        |
+| 6   | An old building near gray wolves.       |
+| 7   | An old building near grey wolves        |
+| 8   | An old building near grey wolves.       |
+| 9   | An old building near the gray wolf      |
+| 10  | An old building near the gray wolf.     |
+| 11  | An old building near the gray wolves    |
+| 12  | An old building near the gray wolves.   |
+| 13  | An old building near the grey wolf      |
+| 14  | An old building near the grey wolf.     |
+| 15  | An old building near the grey wolves    |
+| 16  | An old building near the grey wolves.   |
+| 17  | An old building, near a gray wolf       |
+| 18  | An old building, near a grey wolf       |
+| 19  | An old building, near gray wolves       |
+| 20  | An old building, near grey wolves       |
+| 21  | An old building, near the gray wolf     |
+| 22  | An old building, near the gray wolves   |
+| 23  | An old building, near the grey wolf     |
+| 24  | An old building, near the grey wolves   |
+| 25  | Old building near a gray wolf           |
+| 26  | Old building near a gray wolf.          |
+| 27  | Old building near a grey wolf           |
+| 28  | Old building near a grey wolf.          |
+| 29  | Old building near gray wolves           |
+| 30  | Old building near gray wolves.          |
+| 31  | Old building near grey wolves           |
+| 32  | Old building near grey wolves.          |
+| 33  | Old building near the gray wolf         |
+| 34  | Old building near the gray wolf.        |
+| 35  | Old building near the gray wolves       |
+| 36  | Old building near the gray wolves.      |
+| 37  | Old building near the grey wolf         |
+| 38  | Old building near the grey wolf.        |
+| 39  | Old building near the grey wolves       |
+| 40  | Old building near the grey wolves.      |
+| 41  | Old building, near a gray wolf          |
+| 42  | Old building, near a grey wolf          |
+| 43  | Old building, near gray wolves          |
+| 44  | Old building, near grey wolves          |
+| 45  | Old building, near the gray wolf        |
+| 46  | Old building, near the gray wolves      |
+| 47  | Old building, near the grey wolf        |
+| 48  | Old building, near the grey wolves      |
+| 49  | Old buildings near a gray wolf          |
+| 50  | Old buildings near a gray wolf.         |
+| 51  | Old buildings near a grey wolf          |
+| 52  | Old buildings near a grey wolf.         |
+| 53  | Old buildings near gray wolves          |
+| 54  | Old buildings near gray wolves.         |
+| 55  | Old buildings near grey wolves          |
+| 56  | Old buildings near grey wolves.         |
+| 57  | Old buildings near the gray wolf        |
+| 58  | Old buildings near the gray wolf.       |
+| 59  | Old buildings near the gray wolves      |
+| 60  | Old buildings near the gray wolves.     |
+| 61  | Old buildings near the grey wolf        |
+| 62  | Old buildings near the grey wolf.       |
+| 63  | Old buildings near the grey wolves      |
+| 64  | Old buildings near the grey wolves.     |
+| 65  | Old buildings, near a gray wolf         |
+| 66  | Old buildings, near a grey wolf         |
+| 67  | Old buildings, near gray wolves         |
+| 68  | Old buildings, near grey wolves         |
+| 69  | Old buildings, near the gray wolf       |
+| 70  | Old buildings, near the gray wolves     |
+| 71  | Old buildings, near the grey wolf       |
+| 72  | Old buildings, near the grey wolves     |
+| 73  | The old building near a gray wolf       |
+| 74  | The old building near a gray wolf.      |
+| 75  | The old building near a grey wolf       |
+| 76  | The old building near a grey wolf.      |
+| 77  | The old building near gray wolves       |
+| 78  | The old building near gray wolves.      |
+| 79  | The old building near grey wolves       |
+| 80  | The old building near grey wolves.      |
+| 81  | The old building near the gray wolf     |
+| 82  | The old building near the gray wolf.    |
+| 83  | The old building near the gray wolves   |
+| 84  | The old building near the gray wolves.  |
+| 85  | The old building near the grey wolf     |
+| 86  | The old building near the grey wolf.    |
+| 87  | The old building near the grey wolves   |
+| 88  | The old building near the grey wolves.  |
+| 89  | The old building, near a gray wolf      |
+| 90  | The old building, near a grey wolf      |
+| 91  | The old building, near gray wolves      |
+| 92  | The old building, near grey wolves      |
+| 93  | The old building, near the gray wolf    |
+| 94  | The old building, near the gray wolves  |
+| 95  | The old building, near the grey wolf    |
+| 96  | The old building, near the grey wolves  |
+| 97  | The old buildings near a gray wolf      |
+| 98  | The old buildings near a gray wolf.     |
+| 99  | The old buildings near a grey wolf      |
+| 100 | The old buildings near a grey wolf.     |
+| 101 | The old buildings near gray wolves      |
+| 102 | The old buildings near gray wolves.     |
+| 103 | The old buildings near grey wolves      |
+| 104 | The old buildings near grey wolves.     |
+| 105 | The old buildings near the gray wolf    |
+| 106 | The old buildings near the gray wolf.   |
+| 107 | The old buildings near the gray wolves  |
+| 108 | The old buildings near the gray wolves. |
+| 109 | The old buildings near the grey wolf    |
+| 110 | The old buildings near the grey wolf.   |
+| 111 | The old buildings near the grey wolves  |
+| 112 | The old buildings near the grey wolves. |
+| 113 | The old buildings, near a gray wolf     |
+| 114 | The old buildings, near a grey wolf     |
+| 115 | The old buildings, near gray wolves     |
+| 116 | The old buildings, near grey wolves     |
+| 117 | The old buildings, near the gray wolf   |
+| 118 | The old buildings, near the gray wolves |
+| 119 | The old buildings, near the grey wolf   |
+| 120 | The old buildings, near the grey wolves |
++-----+-----------------------------------------+
+

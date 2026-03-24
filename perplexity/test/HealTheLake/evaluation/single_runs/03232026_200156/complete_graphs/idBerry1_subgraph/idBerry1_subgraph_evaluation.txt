@@ -1,0 +1,214 @@
+GRAPH NAME: idBerry1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 75    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------------+
+|                  GOLD OUTPUTS                  |
++-----------------------------------+------------+
+| Gold Output                       | Generated? |
++-----------------------------------+------------+
+| the red berry inside of the cliff | True       |
++-----------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idBerry1    | True         | True          | Covered          | Included          |
+| red         | True         | True          | Covered          | Included          |
+| idTheCliff1 | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------+
+|                                                     EDGE METRICS                                                     |
++-----------------------+----------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                  | Parent   | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++-----------------------+----------+-------------+--------------+---------------+------------------+-------------------+
+| idBerry1_prop_idColor | idBerry1 | red         | True         | True          | Covered          | Included          |
+| isInsideOf            | idBerry1 | idTheCliff1 | True         | True          | Covered          | Included          |
++-----------------------+----------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1093                                                                     |
+|               |   INDEX: x1092                                                                   |
+|               |   RELS: < [ _inside+of_p LBL: h1102 ARG0: e1099 ARG1: u1100 ARG2: i1101 ]        |
+|               |           [ def_udef_a_q LBL: h1106 ARG0: x1103 RSTR: h1104 BODY: h1105 ]        |
+|               |           [ named LBL: h1098 ARG0: x1097 CARG: "Cliff" ]                         |
+|               |           [ _red_a_1 LBL: h1096 ARG0: i1094 ARG1: i1095 ]                        |
+|               |           [ _berry_n_1 LBL: h1093 ARG0: x1092 ] >                                |
+|               |   HCONS: < h1104 qeq h1098 >                                                     |
+|               |   EQS: < x1103 eq x1097 h1102 eq h1107 i1101 eq x1103 h1096 eq h1093 i1095 eq    |
+|               | x1092 h1102 eq h1093 u1100 eq x1092 > ]                                          |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1093                                                                     |
+|               |   INDEX: x1092                                                                   |
+|               |   RELS: < [ _inside+of_p LBL: h1093 ARG0: e1099 ARG1: x1092 ARG2: x1097 ]        |
+|               |           [ def_udef_a_q LBL: h1106 ARG0: x1097 RSTR: h1104 BODY: h1105 ]        |
+|               |           [ named LBL: h1098 ARG0: x1097 CARG: "Cliff" ]                         |
+|               |           [ _red_a_1 LBL: h1093 ARG0: i1094 ARG1: x1092 ]                        |
+|               |           [ _berry_n_1 LBL: h1093 ARG0: x1092 ] >                                |
+|               |   HCONS: < h1104 qeq h1098 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1116                                                                     |
+|               |   INDEX: e1113                                                                   |
+|               |   RELS: < [ unknown LBL: h1112 ARG: x1092 ARG0: e1113 ]                          |
+|               |           [ def_udef_a_q LBL: h1111 ARG0: x1092 RSTR: h1109 BODY: h1110 ]        |
+|               |           [ _inside+of_p LBL: h1093 ARG0: e1099 ARG1: x1092 ARG2: x1097 ]        |
+|               |           [ def_udef_a_q LBL: h1106 ARG0: x1097 RSTR: h1104 BODY: h1105 ]        |
+|               |           [ named LBL: h1098 ARG0: x1097 CARG: "Cliff" ]                         |
+|               |           [ _red_a_1 LBL: h1093 ARG0: i1094 ARG1: x1092 ]                        |
+|               |           [ _berry_n_1 LBL: h1093 ARG0: x1092 ] >                                |
+|               |   HCONS: < h1104 qeq h1098 h1109 qeq h1093 h1116 qeq h1112 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+|                                NODE SEMENTS                                |
++-------------+--------------------------------------------------------------+
+| Node        | Generated SEMENT                                             |
++-------------+--------------------------------------------------------------+
+| idBerry1    | [ TOP: h1093                                                 |
+|             |   INDEX: x1092                                               |
+|             |   RELS: < [ _berry_n_1 LBL: h1093 ARG0: x1092 ] > ]          |
++-------------+--------------------------------------------------------------+
+| red         | [ TOP: h1096                                                 |
+|             |   INDEX: i1094                                               |
+|             |   RELS: < [ _red_a_1 LBL: h1096 ARG0: i1094 ARG1: i1095 ] >  |
+|             |   SLOTS: < ARG1: i1095 > ]                                   |
++-------------+--------------------------------------------------------------+
+| idTheCliff1 | [ TOP: h1098                                                 |
+|             |   INDEX: x1097                                               |
+|             |   RELS: < [ named LBL: h1098 ARG0: x1097 CARG: "Cliff" ] > ] |
++-------------+--------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                           |
++-----------------------+----------+-------------+----------------------------------------------------------------------------------+
+| Edge                  | Parent   | Child       | Generated SEMENT                                                                 |
++-----------------------+----------+-------------+----------------------------------------------------------------------------------+
+| idBerry1_prop_idColor | idBerry1 | red         | [ TOP: h1093                                                                     |
+|                       |          |             |   INDEX: x1092                                                                   |
+|                       |          |             |   RELS: < [ _red_a_1 LBL: h1096 ARG0: i1094 ARG1: i1095 ]                        |
+|                       |          |             |           [ _berry_n_1 LBL: h1093 ARG0: x1092 ] >                                |
+|                       |          |             |   EQS: < h1096 eq h1093 i1095 eq x1092 > ]                                       |
++-----------------------+----------+-------------+----------------------------------------------------------------------------------+
+| isInsideOf            | idBerry1 | idTheCliff1 | [ TOP: h1093                                                                     |
+|                       |          |             |   INDEX: x1092                                                                   |
+|                       |          |             |   RELS: < [ _inside+of_p LBL: h1102 ARG0: e1099 ARG1: u1100 ARG2: i1101 ]        |
+|                       |          |             |           [ def_udef_a_q LBL: h1106 ARG0: x1103 RSTR: h1104 BODY: h1105 ]        |
+|                       |          |             |           [ named LBL: h1098 ARG0: x1097 CARG: "Cliff" ]                         |
+|                       |          |             |           [ _red_a_1 LBL: h1096 ARG0: i1094 ARG1: i1095 ]                        |
+|                       |          |             |           [ _berry_n_1 LBL: h1093 ARG0: x1092 ] >                                |
+|                       |          |             |   HCONS: < h1104 qeq h1098 >                                                     |
+|                       |          |             |   EQS: < x1103 eq x1097 h1102 eq h1107 i1101 eq x1103 h1096 eq h1093 i1095 eq    |
+|                       |          |             | x1092 h1102 eq h1093 u1100 eq x1092 > ]                                          |
++-----------------------+----------+-------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------+
+|           GENERATED ENGLISH TEXT           |
++----+---------------------------------------+
+| #  | Generated Text                        |
++----+---------------------------------------+
+| 1  | A red berry inside of Cliffs          |
+| 2  | A red berry inside of Cliffs.         |
+| 3  | A red berry inside of a Cliff         |
+| 4  | A red berry inside of a Cliff.        |
+| 5  | A red berry inside of an Cliff        |
+| 6  | A red berry inside of an Cliff.       |
+| 7  | A red berry inside of the Cliff       |
+| 8  | A red berry inside of the Cliff.      |
+| 9  | A red berry inside of the Cliffs      |
+| 10 | A red berry inside of the Cliffs.     |
+| 11 | A red berry, inside of Cliffs         |
+| 12 | A red berry, inside of a Cliff        |
+| 13 | A red berry, inside of an Cliff       |
+| 14 | A red berry, inside of the Cliff      |
+| 15 | A red berry, inside of the Cliffs     |
+| 16 | Red berries inside of Cliffs          |
+| 17 | Red berries inside of Cliffs.         |
+| 18 | Red berries inside of a Cliff         |
+| 19 | Red berries inside of a Cliff.        |
+| 20 | Red berries inside of an Cliff        |
+| 21 | Red berries inside of an Cliff.       |
+| 22 | Red berries inside of the Cliff       |
+| 23 | Red berries inside of the Cliff.      |
+| 24 | Red berries inside of the Cliffs      |
+| 25 | Red berries inside of the Cliffs.     |
+| 26 | Red berries, inside of Cliffs         |
+| 27 | Red berries, inside of a Cliff        |
+| 28 | Red berries, inside of an Cliff       |
+| 29 | Red berries, inside of the Cliff      |
+| 30 | Red berries, inside of the Cliffs     |
+| 31 | Red berry inside of Cliffs            |
+| 32 | Red berry inside of Cliffs.           |
+| 33 | Red berry inside of a Cliff           |
+| 34 | Red berry inside of a Cliff.          |
+| 35 | Red berry inside of an Cliff          |
+| 36 | Red berry inside of an Cliff.         |
+| 37 | Red berry inside of the Cliff         |
+| 38 | Red berry inside of the Cliff.        |
+| 39 | Red berry inside of the Cliffs        |
+| 40 | Red berry inside of the Cliffs.       |
+| 41 | Red berry, inside of Cliffs           |
+| 42 | Red berry, inside of a Cliff          |
+| 43 | Red berry, inside of an Cliff         |
+| 44 | Red berry, inside of the Cliff        |
+| 45 | Red berry, inside of the Cliffs       |
+| 46 | The red berries inside of Cliffs      |
+| 47 | The red berries inside of Cliffs.     |
+| 48 | The red berries inside of a Cliff     |
+| 49 | The red berries inside of a Cliff.    |
+| 50 | The red berries inside of an Cliff    |
+| 51 | The red berries inside of an Cliff.   |
+| 52 | The red berries inside of the Cliff   |
+| 53 | The red berries inside of the Cliff.  |
+| 54 | The red berries inside of the Cliffs  |
+| 55 | The red berries inside of the Cliffs. |
+| 56 | The red berries, inside of Cliffs     |
+| 57 | The red berries, inside of a Cliff    |
+| 58 | The red berries, inside of an Cliff   |
+| 59 | The red berries, inside of the Cliff  |
+| 60 | The red berries, inside of the Cliffs |
+| 61 | The red berry inside of Cliffs        |
+| 62 | The red berry inside of Cliffs.       |
+| 63 | The red berry inside of a Cliff       |
+| 64 | The red berry inside of a Cliff.      |
+| 65 | The red berry inside of an Cliff      |
+| 66 | The red berry inside of an Cliff.     |
+| 67 | The red berry inside of the Cliff     |
+| 68 | The red berry inside of the Cliff.    |
+| 69 | The red berry inside of the Cliffs    |
+| 70 | The red berry inside of the Cliffs.   |
+| 71 | The red berry, inside of Cliffs       |
+| 72 | The red berry, inside of a Cliff      |
+| 73 | The red berry, inside of an Cliff     |
+| 74 | The red berry, inside of the Cliff    |
+| 75 | The red berry, inside of the Cliffs   |
++----+---------------------------------------+
+

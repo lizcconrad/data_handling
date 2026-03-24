@@ -1,0 +1,433 @@
+GRAPH NAME: idMachineFrontOpening_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 192   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++---------------------------------------------------------------------------+
+|                                GOLD OUTPUTS                               |
++--------------------------------------------------------------+------------+
+| Gold Output                                                  | Generated? |
++--------------------------------------------------------------+------------+
+| the machine's front opening south of the locked machine door | True       |
++--------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------+
+|                                         NODE METRICS                                        |
++-----------------------+--------------+---------------+------------------+-------------------+
+| Node                  | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------------------+--------------+---------------+------------------+-------------------+
+| idMachineFrontOpening | True         | True          | Covered          | Included          |
+| idMachineDoor         | True         | True          | Covered          | Included          |
+| locked                | True         | True          | Covered          | Included          |
++-----------------------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE METRICS                                                                  |
++----------------------------------+-----------------------+---------------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent                | Child         | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+-----------------------+---------------+--------------+---------------+------------------+-------------------+
+| isSouthOf                        | idMachineFrontOpening | idMachineDoor | True         | True          | Covered          | Included          |
+| idMachineDoor_prop_idLockedState | idMachineDoor         | locked        | True         | True          | Covered          | Included          |
++----------------------------------+-----------------------+---------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h5572                                                                     |
+|               |   INDEX: x5571                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5617 ARG0: e5614 ARG1: u5615 ARG2: x5616 ]           |
+|               |           [ def_implicit_q LBL: h5628 ARG0: x5625 RSTR: h5626 BODY: h5627 ]      |
+|               |           [ _south_a_1 LBL: h5613 ARG0: i5610 ARG1: x5611 ARG2: u5612 ]          |
+|               |           [ def_udef_a_q LBL: h5623 ARG0: x5620 RSTR: h5621 BODY: h5622 ]        |
+|               |           [ _lock_v_cause LBL: h5609 ARG0: e5606 [ e PERF: - ] ARG1: i5607 ARG2: |
+|               | i5608 ]                                                                          |
+|               |           [ compound LBL: h5605 ARG0: e5602 [ e PROG: - ] ARG1: u5603 ARG2:      |
+|               | u5604 ]                                                                          |
+|               |           [ udef_q LBL: h5600 ARG0: x5597 RSTR: h5598 BODY: h5599 ]              |
+|               |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|               |           [ _door_n_1 LBL: h5594 ARG0: x5593 ]                                   |
+|               |           [ place_n LBL: h5619 ARG0: x5618 ]                                     |
+|               |           [ poss LBL: h5592 ARG0: e5589 ARG1: x5590 ARG2: i5591 ]                |
+|               |           [ def_udef_a_q LBL: h5587 ARG0: x5584 RSTR: h5585 BODY: h5586 ]        |
+|               |           [ _machine_n_1 LBL: h5570 ARG0: x5569 ]                                |
+|               |           [ compound LBL: h5583 ARG0: e5580 [ e PROG: - ] ARG1: u5581 ARG2:      |
+|               | u5582 ]                                                                          |
+|               |           [ udef_q LBL: h5578 ARG0: x5575 RSTR: h5576 BODY: h5577 ]              |
+|               |           [ _front_n_1 LBL: h5574 ARG0: x5573 ]                                  |
+|               |           [ _opening_n_1 LBL: h5572 ARG0: x5571 ] >                              |
+|               |   HCONS: < h5598 qeq h5596 h5621 qeq h5594 h5626 qeq h5619 h5585 qeq h5570 h5576 |
+|               | qeq h5574 >                                                                      |
+|               |   ICONS: < e5606 topic i5608 >                                                   |
+|               |   EQS: < x5597 eq x5595 h5605 eq h5601 u5604 eq x5597 h5605 eq h5594 u5603 eq    |
+|               | x5593 h5609 eq h5594 i5608 eq x5593 x5620 eq x5593 h5613 eq h5624 u5612 eq x5620 |
+|               | h5613 eq h5619 x5611 eq x5618 x5625 eq x5618 h5617 eq h5629 x5616 eq x5625 x5584 |
+|               | eq x5569 h5592 eq h5588 i5591 eq x5584 x5575 eq x5573 h5583 eq h5579 u5582 eq    |
+|               | x5575 h5583 eq h5572 u5581 eq x5571 h5592 eq h5572 x5590 eq x5571 h5617 eq h5572 |
+|               | u5615 eq x5571 > ]                                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h5572                                                                     |
+|               |   INDEX: x5571                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h5572 ARG0: e5614 ARG1: x5571 ARG2: x5611 ]           |
+|               |           [ def_implicit_q LBL: h5628 ARG0: x5611 RSTR: h5626 BODY: h5627 ]      |
+|               |           [ _south_a_1 LBL: h5613 ARG0: i5610 ARG1: x5611 ARG2: x5593 ]          |
+|               |           [ def_udef_a_q LBL: h5623 ARG0: x5593 RSTR: h5621 BODY: h5622 ]        |
+|               |           [ _lock_v_cause LBL: h5594 ARG0: e5606 [ e PERF: - ] ARG1: i5607 ARG2: |
+|               | x5593 ]                                                                          |
+|               |           [ compound LBL: h5594 ARG0: e5602 [ e PROG: - ] ARG1: x5593 ARG2:      |
+|               | x5595 ]                                                                          |
+|               |           [ udef_q LBL: h5600 ARG0: x5595 RSTR: h5598 BODY: h5599 ]              |
+|               |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|               |           [ _door_n_1 LBL: h5594 ARG0: x5593 ]                                   |
+|               |           [ place_n LBL: h5613 ARG0: x5611 ]                                     |
+|               |           [ poss LBL: h5572 ARG0: e5589 ARG1: x5571 ARG2: x5569 ]                |
+|               |           [ def_udef_a_q LBL: h5587 ARG0: x5569 RSTR: h5585 BODY: h5586 ]        |
+|               |           [ _machine_n_1 LBL: h5570 ARG0: x5569 ]                                |
+|               |           [ compound LBL: h5572 ARG0: e5580 [ e PROG: - ] ARG1: x5571 ARG2:      |
+|               | x5573 ]                                                                          |
+|               |           [ udef_q LBL: h5578 ARG0: x5573 RSTR: h5576 BODY: h5577 ]              |
+|               |           [ _front_n_1 LBL: h5574 ARG0: x5573 ]                                  |
+|               |           [ _opening_n_1 LBL: h5572 ARG0: x5571 ] >                              |
+|               |   HCONS: < h5598 qeq h5596 h5621 qeq h5594 h5626 qeq h5613 h5585 qeq h5570 h5576 |
+|               | qeq h5574 >                                                                      |
+|               |   ICONS: < e5606 topic x5593 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h5638                                                                     |
+|               |   INDEX: e5635                                                                   |
+|               |   RELS: < [ unknown LBL: h5634 ARG: x5571 ARG0: e5635 ]                          |
+|               |           [ def_udef_a_q LBL: h5633 ARG0: x5571 RSTR: h5631 BODY: h5632 ]        |
+|               |           [ loc_nonsp LBL: h5572 ARG0: e5614 ARG1: x5571 ARG2: x5611 ]           |
+|               |           [ def_implicit_q LBL: h5628 ARG0: x5611 RSTR: h5626 BODY: h5627 ]      |
+|               |           [ _south_a_1 LBL: h5613 ARG0: i5610 ARG1: x5611 ARG2: x5593 ]          |
+|               |           [ def_udef_a_q LBL: h5623 ARG0: x5593 RSTR: h5621 BODY: h5622 ]        |
+|               |           [ _lock_v_cause LBL: h5594 ARG0: e5606 [ e PERF: - ] ARG1: i5607 ARG2: |
+|               | x5593 ]                                                                          |
+|               |           [ compound LBL: h5594 ARG0: e5602 [ e PROG: - ] ARG1: x5593 ARG2:      |
+|               | x5595 ]                                                                          |
+|               |           [ udef_q LBL: h5600 ARG0: x5595 RSTR: h5598 BODY: h5599 ]              |
+|               |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|               |           [ _door_n_1 LBL: h5594 ARG0: x5593 ]                                   |
+|               |           [ place_n LBL: h5613 ARG0: x5611 ]                                     |
+|               |           [ poss LBL: h5572 ARG0: e5589 ARG1: x5571 ARG2: x5569 ]                |
+|               |           [ def_udef_a_q LBL: h5587 ARG0: x5569 RSTR: h5585 BODY: h5586 ]        |
+|               |           [ _machine_n_1 LBL: h5570 ARG0: x5569 ]                                |
+|               |           [ compound LBL: h5572 ARG0: e5580 [ e PROG: - ] ARG1: x5571 ARG2:      |
+|               | x5573 ]                                                                          |
+|               |           [ udef_q LBL: h5578 ARG0: x5573 RSTR: h5576 BODY: h5577 ]              |
+|               |           [ _front_n_1 LBL: h5574 ARG0: x5573 ]                                  |
+|               |           [ _opening_n_1 LBL: h5572 ARG0: x5571 ] >                              |
+|               |   HCONS: < h5598 qeq h5596 h5621 qeq h5594 h5626 qeq h5613 h5585 qeq h5570 h5576 |
+|               | qeq h5574 h5631 qeq h5572 h5638 qeq h5634 >                                      |
+|               |   ICONS: < e5606 topic x5593 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------+
+|                                               NODE SEMENTS                                               |
++-----------------------+----------------------------------------------------------------------------------+
+| Node                  | Generated SEMENT                                                                 |
++-----------------------+----------------------------------------------------------------------------------+
+| idMachineFrontOpening | [ TOP: h5572                                                                     |
+|                       |   INDEX: x5571                                                                   |
+|                       |   RELS: < [ poss LBL: h5592 ARG0: e5589 ARG1: x5590 ARG2: i5591 ]                |
+|                       |           [ def_udef_a_q LBL: h5587 ARG0: x5584 RSTR: h5585 BODY: h5586 ]        |
+|                       |           [ _machine_n_1 LBL: h5570 ARG0: x5569 ]                                |
+|                       |           [ compound LBL: h5583 ARG0: e5580 [ e PROG: - ] ARG1: u5581 ARG2:      |
+|                       | u5582 ]                                                                          |
+|                       |           [ udef_q LBL: h5578 ARG0: x5575 RSTR: h5576 BODY: h5577 ]              |
+|                       |           [ _front_n_1 LBL: h5574 ARG0: x5573 ]                                  |
+|                       |           [ _opening_n_1 LBL: h5572 ARG0: x5571 ] >                              |
+|                       |   HCONS: < h5585 qeq h5570 h5576 qeq h5574 >                                     |
+|                       |   EQS: < x5584 eq x5569 h5592 eq h5588 i5591 eq x5584 x5575 eq x5573 h5583 eq    |
+|                       | h5579 u5582 eq x5575 h5583 eq h5572 u5581 eq x5571 h5592 eq h5572 x5590 eq x5571 |
+|                       | > ]                                                                              |
++-----------------------+----------------------------------------------------------------------------------+
+| idMachineDoor         | [ TOP: h5594                                                                     |
+|                       |   INDEX: x5593                                                                   |
+|                       |   RELS: < [ compound LBL: h5605 ARG0: e5602 [ e PROG: - ] ARG1: u5603 ARG2:      |
+|                       | u5604 ]                                                                          |
+|                       |           [ udef_q LBL: h5600 ARG0: x5597 RSTR: h5598 BODY: h5599 ]              |
+|                       |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|                       |           [ _door_n_1 LBL: h5594 ARG0: x5593 ] >                                 |
+|                       |   HCONS: < h5598 qeq h5596 >                                                     |
+|                       |   EQS: < x5597 eq x5595 h5605 eq h5601 u5604 eq x5597 h5605 eq h5594 u5603 eq    |
+|                       | x5593 > ]                                                                        |
++-----------------------+----------------------------------------------------------------------------------+
+| locked                | [ TOP: h5609                                                                     |
+|                       |   INDEX: e5606                                                                   |
+|                       |   RELS: < [ _lock_v_cause LBL: h5609 ARG0: e5606 ARG1: i5607 ARG2: i5608 ] >     |
+|                       |   SLOTS: < ARG1: i5607 ARG2: i5608 > ]                                           |
++-----------------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                         EDGE SEMENTS                                                                        |
++----------------------------------+-----------------------+---------------+----------------------------------------------------------------------------------+
+| Edge                             | Parent                | Child         | Generated SEMENT                                                                 |
++----------------------------------+-----------------------+---------------+----------------------------------------------------------------------------------+
+| isSouthOf                        | idMachineFrontOpening | idMachineDoor | [ TOP: h5572                                                                     |
+|                                  |                       |               |   INDEX: x5571                                                                   |
+|                                  |                       |               |   RELS: < [ loc_nonsp LBL: h5617 ARG0: e5614 ARG1: u5615 ARG2: x5616 ]           |
+|                                  |                       |               |           [ def_implicit_q LBL: h5628 ARG0: x5625 RSTR: h5626 BODY: h5627 ]      |
+|                                  |                       |               |           [ _south_a_1 LBL: h5613 ARG0: i5610 ARG1: x5611 ARG2: u5612 ]          |
+|                                  |                       |               |           [ def_udef_a_q LBL: h5623 ARG0: x5620 RSTR: h5621 BODY: h5622 ]        |
+|                                  |                       |               |           [ _lock_v_cause LBL: h5609 ARG0: e5606 [ e PERF: - ] ARG1: i5607 ARG2: |
+|                                  |                       |               | i5608 ]                                                                          |
+|                                  |                       |               |           [ compound LBL: h5605 ARG0: e5602 [ e PROG: - ] ARG1: u5603 ARG2:      |
+|                                  |                       |               | u5604 ]                                                                          |
+|                                  |                       |               |           [ udef_q LBL: h5600 ARG0: x5597 RSTR: h5598 BODY: h5599 ]              |
+|                                  |                       |               |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|                                  |                       |               |           [ _door_n_1 LBL: h5594 ARG0: x5593 ]                                   |
+|                                  |                       |               |           [ place_n LBL: h5619 ARG0: x5618 ]                                     |
+|                                  |                       |               |           [ poss LBL: h5592 ARG0: e5589 ARG1: x5590 ARG2: i5591 ]                |
+|                                  |                       |               |           [ def_udef_a_q LBL: h5587 ARG0: x5584 RSTR: h5585 BODY: h5586 ]        |
+|                                  |                       |               |           [ _machine_n_1 LBL: h5570 ARG0: x5569 ]                                |
+|                                  |                       |               |           [ compound LBL: h5583 ARG0: e5580 [ e PROG: - ] ARG1: u5581 ARG2:      |
+|                                  |                       |               | u5582 ]                                                                          |
+|                                  |                       |               |           [ udef_q LBL: h5578 ARG0: x5575 RSTR: h5576 BODY: h5577 ]              |
+|                                  |                       |               |           [ _front_n_1 LBL: h5574 ARG0: x5573 ]                                  |
+|                                  |                       |               |           [ _opening_n_1 LBL: h5572 ARG0: x5571 ] >                              |
+|                                  |                       |               |   HCONS: < h5598 qeq h5596 h5621 qeq h5594 h5626 qeq h5619 h5585 qeq h5570 h5576 |
+|                                  |                       |               | qeq h5574 >                                                                      |
+|                                  |                       |               |   ICONS: < e5606 topic i5608 >                                                   |
+|                                  |                       |               |   EQS: < x5597 eq x5595 h5605 eq h5601 u5604 eq x5597 h5605 eq h5594 u5603 eq    |
+|                                  |                       |               | x5593 h5609 eq h5594 i5608 eq x5593 x5620 eq x5593 h5613 eq h5624 u5612 eq x5620 |
+|                                  |                       |               | h5613 eq h5619 x5611 eq x5618 x5625 eq x5618 h5617 eq h5629 x5616 eq x5625 x5584 |
+|                                  |                       |               | eq x5569 h5592 eq h5588 i5591 eq x5584 x5575 eq x5573 h5583 eq h5579 u5582 eq    |
+|                                  |                       |               | x5575 h5583 eq h5572 u5581 eq x5571 h5592 eq h5572 x5590 eq x5571 h5617 eq h5572 |
+|                                  |                       |               | u5615 eq x5571 > ]                                                               |
++----------------------------------+-----------------------+---------------+----------------------------------------------------------------------------------+
+| idMachineDoor_prop_idLockedState | idMachineDoor         | locked        | [ TOP: h5594                                                                     |
+|                                  |                       |               |   INDEX: x5593                                                                   |
+|                                  |                       |               |   RELS: < [ _lock_v_cause LBL: h5609 ARG0: e5606 [ e PERF: - ] ARG1: i5607 ARG2: |
+|                                  |                       |               | i5608 ]                                                                          |
+|                                  |                       |               |           [ compound LBL: h5605 ARG0: e5602 [ e PROG: - ] ARG1: u5603 ARG2:      |
+|                                  |                       |               | u5604 ]                                                                          |
+|                                  |                       |               |           [ udef_q LBL: h5600 ARG0: x5597 RSTR: h5598 BODY: h5599 ]              |
+|                                  |                       |               |           [ _machine_n_1 LBL: h5596 ARG0: x5595 ]                                |
+|                                  |                       |               |           [ _door_n_1 LBL: h5594 ARG0: x5593 ] >                                 |
+|                                  |                       |               |   HCONS: < h5598 qeq h5596 >                                                     |
+|                                  |                       |               |   ICONS: < e5606 topic i5608 >                                                   |
+|                                  |                       |               |   EQS: < x5597 eq x5595 h5605 eq h5601 u5604 eq x5597 h5605 eq h5594 u5603 eq    |
+|                                  |                       |               | x5593 h5609 eq h5594 i5608 eq x5593 > ]                                          |
++----------------------------------+-----------------------+---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------+
+|                         GENERATED ENGLISH TEXT                         |
++-----+------------------------------------------------------------------+
+| #   | Generated Text                                                   |
++-----+------------------------------------------------------------------+
+| 1   | A machine's front opening south of a locked machine door         |
+| 2   | A machine's front opening south of a locked machine door.        |
+| 3   | A machine's front opening south of a machines locked door        |
+| 4   | A machine's front opening south of a machines locked door.       |
+| 5   | A machine's front opening south of locked machine doors          |
+| 6   | A machine's front opening south of locked machine doors.         |
+| 7   | A machine's front opening south of machines locked doors         |
+| 8   | A machine's front opening south of machines locked doors.        |
+| 9   | A machine's front opening south of the locked machine door       |
+| 10  | A machine's front opening south of the locked machine door.      |
+| 11  | A machine's front opening south of the locked machine doors      |
+| 12  | A machine's front opening south of the locked machine doors.     |
+| 13  | A machine's front opening south of the machines locked door      |
+| 14  | A machine's front opening south of the machines locked door.     |
+| 15  | A machine's front opening south of the machines locked doors     |
+| 16  | A machine's front opening south of the machines locked doors.    |
+| 17  | A machine's front opening, south of a locked machine door        |
+| 18  | A machine's front opening, south of a machines locked door       |
+| 19  | A machine's front opening, south of locked machine doors         |
+| 20  | A machine's front opening, south of machines locked doors        |
+| 21  | A machine's front opening, south of the locked machine door      |
+| 22  | A machine's front opening, south of the locked machine doors     |
+| 23  | A machine's front opening, south of the machines locked door     |
+| 24  | A machine's front opening, south of the machines locked doors    |
+| 25  | A machine's front openings south of a locked machine door        |
+| 26  | A machine's front openings south of a locked machine door.       |
+| 27  | A machine's front openings south of a machines locked door       |
+| 28  | A machine's front openings south of a machines locked door.      |
+| 29  | A machine's front openings south of locked machine doors         |
+| 30  | A machine's front openings south of locked machine doors.        |
+| 31  | A machine's front openings south of machines locked doors        |
+| 32  | A machine's front openings south of machines locked doors.       |
+| 33  | A machine's front openings south of the locked machine door      |
+| 34  | A machine's front openings south of the locked machine door.     |
+| 35  | A machine's front openings south of the locked machine doors     |
+| 36  | A machine's front openings south of the locked machine doors.    |
+| 37  | A machine's front openings south of the machines locked door     |
+| 38  | A machine's front openings south of the machines locked door.    |
+| 39  | A machine's front openings south of the machines locked doors    |
+| 40  | A machine's front openings south of the machines locked doors.   |
+| 41  | A machine's front openings, south of a locked machine door       |
+| 42  | A machine's front openings, south of a machines locked door      |
+| 43  | A machine's front openings, south of locked machine doors        |
+| 44  | A machine's front openings, south of machines locked doors       |
+| 45  | A machine's front openings, south of the locked machine door     |
+| 46  | A machine's front openings, south of the locked machine doors    |
+| 47  | A machine's front openings, south of the machines locked door    |
+| 48  | A machine's front openings, south of the machines locked doors   |
+| 49  | Machines' front opening south of a locked machine door           |
+| 50  | Machines' front opening south of a locked machine door.          |
+| 51  | Machines' front opening south of a machines locked door          |
+| 52  | Machines' front opening south of a machines locked door.         |
+| 53  | Machines' front opening south of locked machine doors            |
+| 54  | Machines' front opening south of locked machine doors.           |
+| 55  | Machines' front opening south of machines locked doors           |
+| 56  | Machines' front opening south of machines locked doors.          |
+| 57  | Machines' front opening south of the locked machine door         |
+| 58  | Machines' front opening south of the locked machine door.        |
+| 59  | Machines' front opening south of the locked machine doors        |
+| 60  | Machines' front opening south of the locked machine doors.       |
+| 61  | Machines' front opening south of the machines locked door        |
+| 62  | Machines' front opening south of the machines locked door.       |
+| 63  | Machines' front opening south of the machines locked doors       |
+| 64  | Machines' front opening south of the machines locked doors.      |
+| 65  | Machines' front opening, south of a locked machine door          |
+| 66  | Machines' front opening, south of a machines locked door         |
+| 67  | Machines' front opening, south of locked machine doors           |
+| 68  | Machines' front opening, south of machines locked doors          |
+| 69  | Machines' front opening, south of the locked machine door        |
+| 70  | Machines' front opening, south of the locked machine doors       |
+| 71  | Machines' front opening, south of the machines locked door       |
+| 72  | Machines' front opening, south of the machines locked doors      |
+| 73  | Machines' front openings south of a locked machine door          |
+| 74  | Machines' front openings south of a locked machine door.         |
+| 75  | Machines' front openings south of a machines locked door         |
+| 76  | Machines' front openings south of a machines locked door.        |
+| 77  | Machines' front openings south of locked machine doors           |
+| 78  | Machines' front openings south of locked machine doors.          |
+| 79  | Machines' front openings south of machines locked doors          |
+| 80  | Machines' front openings south of machines locked doors.         |
+| 81  | Machines' front openings south of the locked machine door        |
+| 82  | Machines' front openings south of the locked machine door.       |
+| 83  | Machines' front openings south of the locked machine doors       |
+| 84  | Machines' front openings south of the locked machine doors.      |
+| 85  | Machines' front openings south of the machines locked door       |
+| 86  | Machines' front openings south of the machines locked door.      |
+| 87  | Machines' front openings south of the machines locked doors      |
+| 88  | Machines' front openings south of the machines locked doors.     |
+| 89  | Machines' front openings, south of a locked machine door         |
+| 90  | Machines' front openings, south of a machines locked door        |
+| 91  | Machines' front openings, south of locked machine doors          |
+| 92  | Machines' front openings, south of machines locked doors         |
+| 93  | Machines' front openings, south of the locked machine door       |
+| 94  | Machines' front openings, south of the locked machine doors      |
+| 95  | Machines' front openings, south of the machines locked door      |
+| 96  | Machines' front openings, south of the machines locked doors     |
+| 97  | The machine's front opening south of a locked machine door       |
+| 98  | The machine's front opening south of a locked machine door.      |
+| 99  | The machine's front opening south of a machines locked door      |
+| 100 | The machine's front opening south of a machines locked door.     |
+| 101 | The machine's front opening south of locked machine doors        |
+| 102 | The machine's front opening south of locked machine doors.       |
+| 103 | The machine's front opening south of machines locked doors       |
+| 104 | The machine's front opening south of machines locked doors.      |
+| 105 | The machine's front opening south of the locked machine door     |
+| 106 | The machine's front opening south of the locked machine door.    |
+| 107 | The machine's front opening south of the locked machine doors    |
+| 108 | The machine's front opening south of the locked machine doors.   |
+| 109 | The machine's front opening south of the machines locked door    |
+| 110 | The machine's front opening south of the machines locked door.   |
+| 111 | The machine's front opening south of the machines locked doors   |
+| 112 | The machine's front opening south of the machines locked doors.  |
+| 113 | The machine's front opening, south of a locked machine door      |
+| 114 | The machine's front opening, south of a machines locked door     |
+| 115 | The machine's front opening, south of locked machine doors       |
+| 116 | The machine's front opening, south of machines locked doors      |
+| 117 | The machine's front opening, south of the locked machine door    |
+| 118 | The machine's front opening, south of the locked machine doors   |
+| 119 | The machine's front opening, south of the machines locked door   |
+| 120 | The machine's front opening, south of the machines locked doors  |
+| 121 | The machine's front openings south of a locked machine door      |
+| 122 | The machine's front openings south of a locked machine door.     |
+| 123 | The machine's front openings south of a machines locked door     |
+| 124 | The machine's front openings south of a machines locked door.    |
+| 125 | The machine's front openings south of locked machine doors       |
+| 126 | The machine's front openings south of locked machine doors.      |
+| 127 | The machine's front openings south of machines locked doors      |
+| 128 | The machine's front openings south of machines locked doors.     |
+| 129 | The machine's front openings south of the locked machine door    |
+| 130 | The machine's front openings south of the locked machine door.   |
+| 131 | The machine's front openings south of the locked machine doors   |
+| 132 | The machine's front openings south of the locked machine doors.  |
+| 133 | The machine's front openings south of the machines locked door   |
+| 134 | The machine's front openings south of the machines locked door.  |
+| 135 | The machine's front openings south of the machines locked doors  |
+| 136 | The machine's front openings south of the machines locked doors. |
+| 137 | The machine's front openings, south of a locked machine door     |
+| 138 | The machine's front openings, south of a machines locked door    |
+| 139 | The machine's front openings, south of locked machine doors      |
+| 140 | The machine's front openings, south of machines locked doors     |
+| 141 | The machine's front openings, south of the locked machine door   |
+| 142 | The machine's front openings, south of the locked machine doors  |
+| 143 | The machine's front openings, south of the machines locked door  |
+| 144 | The machine's front openings, south of the machines locked doors |
+| 145 | The machines' front opening south of a locked machine door       |
+| 146 | The machines' front opening south of a locked machine door.      |
+| 147 | The machines' front opening south of a machines locked door      |
+| 148 | The machines' front opening south of a machines locked door.     |
+| 149 | The machines' front opening south of locked machine doors        |
+| 150 | The machines' front opening south of locked machine doors.       |
+| 151 | The machines' front opening south of machines locked doors       |
+| 152 | The machines' front opening south of machines locked doors.      |
+| 153 | The machines' front opening south of the locked machine door     |
+| 154 | The machines' front opening south of the locked machine door.    |
+| 155 | The machines' front opening south of the locked machine doors    |
+| 156 | The machines' front opening south of the locked machine doors.   |
+| 157 | The machines' front opening south of the machines locked door    |
+| 158 | The machines' front opening south of the machines locked door.   |
+| 159 | The machines' front opening south of the machines locked doors   |
+| 160 | The machines' front opening south of the machines locked doors.  |
+| 161 | The machines' front opening, south of a locked machine door      |
+| 162 | The machines' front opening, south of a machines locked door     |
+| 163 | The machines' front opening, south of locked machine doors       |
+| 164 | The machines' front opening, south of machines locked doors      |
+| 165 | The machines' front opening, south of the locked machine door    |
+| 166 | The machines' front opening, south of the locked machine doors   |
+| 167 | The machines' front opening, south of the machines locked door   |
+| 168 | The machines' front opening, south of the machines locked doors  |
+| 169 | The machines' front openings south of a locked machine door      |
+| 170 | The machines' front openings south of a locked machine door.     |
+| 171 | The machines' front openings south of a machines locked door     |
+| 172 | The machines' front openings south of a machines locked door.    |
+| 173 | The machines' front openings south of locked machine doors       |
+| 174 | The machines' front openings south of locked machine doors.      |
+| 175 | The machines' front openings south of machines locked doors      |
+| 176 | The machines' front openings south of machines locked doors.     |
+| 177 | The machines' front openings south of the locked machine door    |
+| 178 | The machines' front openings south of the locked machine door.   |
+| 179 | The machines' front openings south of the locked machine doors   |
+| 180 | The machines' front openings south of the locked machine doors.  |
+| 181 | The machines' front openings south of the machines locked door   |
+| 182 | The machines' front openings south of the machines locked door.  |
+| 183 | The machines' front openings south of the machines locked doors  |
+| 184 | The machines' front openings south of the machines locked doors. |
+| 185 | The machines' front openings, south of a locked machine door     |
+| 186 | The machines' front openings, south of a machines locked door    |
+| 187 | The machines' front openings, south of locked machine doors      |
+| 188 | The machines' front openings, south of machines locked doors     |
+| 189 | The machines' front openings, south of the locked machine door   |
+| 190 | The machines' front openings, south of the locked machine doors  |
+| 191 | The machines' front openings, south of the machines locked door  |
+| 192 | The machines' front openings, south of the machines locked doors |
++-----+------------------------------------------------------------------+
+

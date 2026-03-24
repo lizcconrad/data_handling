@@ -1,0 +1,671 @@
+GRAPH NAME: idCar1_subgraph
+
++------------------------------------------------------+
+|                  EVALUATION METRICS                  |
++---------------------------------+--------------------+
+| Metric                          | Value              |
++---------------------------------+--------------------+
+| Generated Text Results          | 450                |
+| Generated Gold Results          | 0                  |
+| Generated Gold Results Coverage | 0.0                |
++---------------------------------+--------------------+
+| Node Count                      | 7                  |
+| Nodes Covered                   | 6                  |
+| Nodes Included                  | 6                  |
++---------------------------------+--------------------+
+| Node Coverage                   | 0.8571428571428571 |
+| Node Inclusion                  | 0.8571428571428571 |
++---------------------------------+--------------------+
+| Edge Count                      | 6                  |
+| Edges Covered                   | 5                  |
+| Edges Included                  | 5                  |
++---------------------------------+--------------------+
+| Edge Coverage                   | 0.8333333333333334 |
+| Edge Inclusion                  | 0.8333333333333334 |
++---------------------------------+--------------------+
+
++-------------------------------------------------------------------------+
+|                               GOLD OUTPUTS                              |
++------------------------------------------------------------+------------+
+| Gold Output                                                | Generated? |
++------------------------------------------------------------+------------+
+| the old black immovable car east of the stumpy logged area | False      |
++------------------------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------------------------------+
+|                                                     NODE METRICS                                                    |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Node    | Node Covered | Node Included | Coverage Comment                       | Inclusion Comment                 |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idCar1  | True         | True          | Covered                                | Included                          |
+| black   | True         | True          | Covered                                | Included                          |
+| old     | True         | True          | Covered                                | Included                          |
+| yes     | True         | True          | Covered                                | Included                          |
+| idArea1 | True         | True          | Covered                                | Included                          |
+| logged  | True         | True          | Covered                                | Included                          |
+| stumpy  | False        | False         | 'stumpy' not in lexicon's node entries | No SEMENT generated for this node |
++---------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                         EDGE METRICS                                                                        |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Edge                        | Parent  | Child   | Edge Covered | Edge Included | Coverage Comment                       | Inclusion Comment                 |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idCar1_prop_idColor         | idCar1  | black   | True         | True          | Covered                                | Included                          |
+| idCar1_prop_idDescriptor    | idCar1  | old     | True         | True          | Covered                                | Included                          |
+| idCar1_prop_idImmovable     | idCar1  | yes     | True         | True          | Covered                                | Included                          |
+| isEastOf                    | idCar1  | idArea1 | True         | True          | Covered                                | Included                          |
+| idArea1_prop_idDescriptor   | idArea1 | logged  | True         | True          | Covered                                | Included                          |
+| idArea1_prop_idDescriptor_1 | idArea1 | stumpy  | False        | False         | child of 'idDescriptor_' has no SEMENT | No SEMENT generated for this edge |
++-----------------------------+---------+---------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h757                                                                      |
+|               |   INDEX: x756                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h787 ARG0: e784 ARG1: u785 ARG2: x786 ]               |
+|               |           [ def_implicit_q LBL: h798 ARG0: x795 RSTR: h796 BODY: h797 ]          |
+|               |           [ _east_a_1 LBL: h783 ARG0: i780 ARG1: x781 ARG2: u782 ]               |
+|               |           [ def_udef_a_q LBL: h793 ARG0: x790 RSTR: h791 BODY: h792 ]            |
+|               |           [ _log_v_1 LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: i778 ]  |
+|               |           [ _area_n_of LBL: h775 ARG0: x774 ]                                    |
+|               |           [ place_n LBL: h789 ARG0: x788 ]                                       |
+|               |           [ _immovable_a_1 LBL: h773 ARG0: e771 ARG1: u772 ]                     |
+|               |           [ _old_a_1 LBL: h763 ARG0: e761 ARG1: u762 ]                           |
+|               |           [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ]                         |
+|               |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|               |   HCONS: < h791 qeq h775 h796 qeq h789 >                                         |
+|               |   ICONS: < e776 topic i778 >                                                     |
+|               |   EQS: < h779 eq h775 i778 eq x774 x790 eq x774 h783 eq h794 u782 eq x790 h783   |
+|               | eq h789 x781 eq x788 x795 eq x788 h787 eq h799 x786 eq x795 h760 eq h757 i759 eq |
+|               | x756 h763 eq h757 u762 eq x756 h773 eq h757 u772 eq x756 h787 eq h757 u785 eq    |
+|               | x756 > ]                                                                         |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h757                                                                      |
+|               |   INDEX: x756                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h757 ARG0: e784 ARG1: x756 ARG2: x781 ]               |
+|               |           [ def_implicit_q LBL: h798 ARG0: x781 RSTR: h796 BODY: h797 ]          |
+|               |           [ _east_a_1 LBL: h783 ARG0: i780 ARG1: x781 ARG2: x774 ]               |
+|               |           [ def_udef_a_q LBL: h793 ARG0: x774 RSTR: h791 BODY: h792 ]            |
+|               |           [ _log_v_1 LBL: h775 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: x774 ]  |
+|               |           [ _area_n_of LBL: h775 ARG0: x774 ]                                    |
+|               |           [ place_n LBL: h783 ARG0: x781 ]                                       |
+|               |           [ _immovable_a_1 LBL: h757 ARG0: e771 ARG1: x756 ]                     |
+|               |           [ _old_a_1 LBL: h757 ARG0: e761 ARG1: x756 ]                           |
+|               |           [ _black_a_1 LBL: h757 ARG0: i758 ARG1: x756 ]                         |
+|               |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|               |   HCONS: < h791 qeq h775 h796 qeq h783 >                                         |
+|               |   ICONS: < e776 topic x774 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h808                                                                      |
+|               |   INDEX: e805                                                                    |
+|               |   RELS: < [ unknown LBL: h804 ARG: x756 ARG0: e805 ]                             |
+|               |           [ def_udef_a_q LBL: h803 ARG0: x756 RSTR: h801 BODY: h802 ]            |
+|               |           [ loc_nonsp LBL: h757 ARG0: e784 ARG1: x756 ARG2: x781 ]               |
+|               |           [ def_implicit_q LBL: h798 ARG0: x781 RSTR: h796 BODY: h797 ]          |
+|               |           [ _east_a_1 LBL: h783 ARG0: i780 ARG1: x781 ARG2: x774 ]               |
+|               |           [ def_udef_a_q LBL: h793 ARG0: x774 RSTR: h791 BODY: h792 ]            |
+|               |           [ _log_v_1 LBL: h775 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: x774 ]  |
+|               |           [ _area_n_of LBL: h775 ARG0: x774 ]                                    |
+|               |           [ place_n LBL: h783 ARG0: x781 ]                                       |
+|               |           [ _immovable_a_1 LBL: h757 ARG0: e771 ARG1: x756 ]                     |
+|               |           [ _old_a_1 LBL: h757 ARG0: e761 ARG1: x756 ]                           |
+|               |           [ _black_a_1 LBL: h757 ARG0: i758 ARG1: x756 ]                         |
+|               |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|               |   HCONS: < h791 qeq h775 h796 qeq h783 h801 qeq h757 h808 qeq h804 >             |
+|               |   ICONS: < e776 topic x774 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE SEMENTS                                  |
++---------+-----------------------------------------------------------------------+
+| Node    | Generated SEMENT                                                      |
++---------+-----------------------------------------------------------------------+
+| idCar1  | [ TOP: h757                                                           |
+|         |   INDEX: x756                                                         |
+|         |   RELS: < [ _car_n_1 LBL: h757 ARG0: x756 ] > ]                       |
++---------+-----------------------------------------------------------------------+
+| black   | [ TOP: h760                                                           |
+|         |   INDEX: i758                                                         |
+|         |   RELS: < [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ] >            |
+|         |   SLOTS: < ARG1: i759 > ]                                             |
++---------+-----------------------------------------------------------------------+
+| old     | [ TOP: h763                                                           |
+|         |   INDEX: e761                                                         |
+|         |   RELS: < [ _old_a_1 LBL: h763 ARG0: e761 ARG1: u762 ] >              |
+|         |   SLOTS: < ARG1: u762 > ]                                             |
++---------+-----------------------------------------------------------------------+
+| yes     | [ TOP: h767                                                           |
+|         |   INDEX: e764                                                         |
+|         |   RELS: < [ _true_a_of LBL: h767 ARG0: e764 ARG1: u765 ARG2: u766 ] > |
+|         |   SLOTS: < ARG1: u765 ARG2: u766 > ]                                  |
++---------+-----------------------------------------------------------------------+
+| idArea1 | [ TOP: h775                                                           |
+|         |   INDEX: x774                                                         |
+|         |   RELS: < [ _area_n_of LBL: h775 ARG0: x774 ] > ]                     |
++---------+-----------------------------------------------------------------------+
+| logged  | [ TOP: h779                                                           |
+|         |   INDEX: e776                                                         |
+|         |   RELS: < [ _log_v_1 LBL: h779 ARG0: e776 ARG1: i777 ARG2: i778 ] >   |
+|         |   SLOTS: < ARG1: i777 ARG2: i778 > ]                                  |
++---------+-----------------------------------------------------------------------+
+| stumpy  | None                                                                  |
++---------+-----------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                            EDGE SEMENTS                                                            |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| Edge                        | Parent  | Child   | Generated SEMENT                                                                 |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idCar1_prop_idColor         | idCar1  | black   | [ TOP: h757                                                                      |
+|                             |         |         |   INDEX: x756                                                                    |
+|                             |         |         |   RELS: < [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ]                         |
+|                             |         |         |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|                             |         |         |   EQS: < h760 eq h757 i759 eq x756 > ]                                           |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idCar1_prop_idDescriptor    | idCar1  | old     | [ TOP: h757                                                                      |
+|                             |         |         |   INDEX: x756                                                                    |
+|                             |         |         |   RELS: < [ _old_a_1 LBL: h763 ARG0: e761 ARG1: u762 ]                           |
+|                             |         |         |           [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ]                         |
+|                             |         |         |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|                             |         |         |   EQS: < h760 eq h757 i759 eq x756 h763 eq h757 u762 eq x756 > ]                 |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idCar1_prop_idImmovable     | idCar1  | yes     | [ TOP: h757                                                                      |
+|                             |         |         |   INDEX: x756                                                                    |
+|                             |         |         |   RELS: < [ _immovable_a_1 LBL: h773 ARG0: e771 ARG1: u772 ]                     |
+|                             |         |         |           [ _old_a_1 LBL: h763 ARG0: e761 ARG1: u762 ]                           |
+|                             |         |         |           [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ]                         |
+|                             |         |         |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|                             |         |         |   EQS: < h760 eq h757 i759 eq x756 h763 eq h757 u762 eq x756 h773 eq h757 u772   |
+|                             |         |         | eq x756 > ]                                                                      |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| isEastOf                    | idCar1  | idArea1 | [ TOP: h757                                                                      |
+|                             |         |         |   INDEX: x756                                                                    |
+|                             |         |         |   RELS: < [ loc_nonsp LBL: h787 ARG0: e784 ARG1: u785 ARG2: x786 ]               |
+|                             |         |         |           [ def_implicit_q LBL: h798 ARG0: x795 RSTR: h796 BODY: h797 ]          |
+|                             |         |         |           [ _east_a_1 LBL: h783 ARG0: i780 ARG1: x781 ARG2: u782 ]               |
+|                             |         |         |           [ def_udef_a_q LBL: h793 ARG0: x790 RSTR: h791 BODY: h792 ]            |
+|                             |         |         |           [ _log_v_1 LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: i778 ]  |
+|                             |         |         |           [ _area_n_of LBL: h775 ARG0: x774 ]                                    |
+|                             |         |         |           [ place_n LBL: h789 ARG0: x788 ]                                       |
+|                             |         |         |           [ _immovable_a_1 LBL: h773 ARG0: e771 ARG1: u772 ]                     |
+|                             |         |         |           [ _old_a_1 LBL: h763 ARG0: e761 ARG1: u762 ]                           |
+|                             |         |         |           [ _black_a_1 LBL: h760 ARG0: i758 ARG1: i759 ]                         |
+|                             |         |         |           [ _car_n_1 LBL: h757 ARG0: x756 ] >                                    |
+|                             |         |         |   HCONS: < h791 qeq h775 h796 qeq h789 >                                         |
+|                             |         |         |   ICONS: < e776 topic i778 >                                                     |
+|                             |         |         |   EQS: < h779 eq h775 i778 eq x774 x790 eq x774 h783 eq h794 u782 eq x790 h783   |
+|                             |         |         | eq h789 x781 eq x788 x795 eq x788 h787 eq h799 x786 eq x795 h760 eq h757 i759 eq |
+|                             |         |         | x756 h763 eq h757 u762 eq x756 h773 eq h757 u772 eq x756 h787 eq h757 u785 eq    |
+|                             |         |         | x756 > ]                                                                         |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idArea1_prop_idDescriptor   | idArea1 | logged  | [ TOP: h775                                                                      |
+|                             |         |         |   INDEX: x774                                                                    |
+|                             |         |         |   RELS: < [ _log_v_1 LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: i778 ]  |
+|                             |         |         |           [ _area_n_of LBL: h775 ARG0: x774 ] >                                  |
+|                             |         |         |   ICONS: < e776 topic i778 >                                                     |
+|                             |         |         |   EQS: < h779 eq h775 i778 eq x774 > ]                                           |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+| idArea1_prop_idDescriptor_1 | idArea1 | stumpy  | None                                                                             |
++-----------------------------+---------+---------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------+
+|                    GENERATED ENGLISH TEXT                    |
++-----+--------------------------------------------------------+
+| #   | Generated Text                                         |
++-----+--------------------------------------------------------+
+| 1   | A black immovable old car east of a logged area        |
+| 2   | A black immovable old car east of a logged area.       |
+| 3   | A black immovable old car east of logged area          |
+| 4   | A black immovable old car east of logged area.         |
+| 5   | A black immovable old car east of logged areas         |
+| 6   | A black immovable old car east of logged areas.        |
+| 7   | A black immovable old car east of the logged area      |
+| 8   | A black immovable old car east of the logged area.     |
+| 9   | A black immovable old car east of the logged areas     |
+| 10  | A black immovable old car east of the logged areas.    |
+| 11  | A black immovable old car, east of a logged area       |
+| 12  | A black immovable old car, east of logged area         |
+| 13  | A black immovable old car, east of logged areas        |
+| 14  | A black immovable old car, east of the logged area     |
+| 15  | A black immovable old car, east of the logged areas    |
+| 16  | A black old immovable car east of a logged area        |
+| 17  | A black old immovable car east of a logged area.       |
+| 18  | A black old immovable car east of logged area          |
+| 19  | A black old immovable car east of logged area.         |
+| 20  | A black old immovable car east of logged areas         |
+| 21  | A black old immovable car east of logged areas.        |
+| 22  | A black old immovable car east of the logged area      |
+| 23  | A black old immovable car east of the logged area.     |
+| 24  | A black old immovable car east of the logged areas     |
+| 25  | A black old immovable car east of the logged areas.    |
+| 26  | A black old immovable car, east of a logged area       |
+| 27  | A black old immovable car, east of logged area         |
+| 28  | A black old immovable car, east of logged areas        |
+| 29  | A black old immovable car, east of the logged area     |
+| 30  | A black old immovable car, east of the logged areas    |
+| 31  | An immovable black old car east of a logged area       |
+| 32  | An immovable black old car east of a logged area.      |
+| 33  | An immovable black old car east of logged area         |
+| 34  | An immovable black old car east of logged area.        |
+| 35  | An immovable black old car east of logged areas        |
+| 36  | An immovable black old car east of logged areas.       |
+| 37  | An immovable black old car east of the logged area     |
+| 38  | An immovable black old car east of the logged area.    |
+| 39  | An immovable black old car east of the logged areas    |
+| 40  | An immovable black old car east of the logged areas.   |
+| 41  | An immovable black old car, east of a logged area      |
+| 42  | An immovable black old car, east of logged area        |
+| 43  | An immovable black old car, east of logged areas       |
+| 44  | An immovable black old car, east of the logged area    |
+| 45  | An immovable black old car, east of the logged areas   |
+| 46  | An immovable old black car east of a logged area       |
+| 47  | An immovable old black car east of a logged area.      |
+| 48  | An immovable old black car east of logged area         |
+| 49  | An immovable old black car east of logged area.        |
+| 50  | An immovable old black car east of logged areas        |
+| 51  | An immovable old black car east of logged areas.       |
+| 52  | An immovable old black car east of the logged area     |
+| 53  | An immovable old black car east of the logged area.    |
+| 54  | An immovable old black car east of the logged areas    |
+| 55  | An immovable old black car east of the logged areas.   |
+| 56  | An immovable old black car, east of a logged area      |
+| 57  | An immovable old black car, east of logged area        |
+| 58  | An immovable old black car, east of logged areas       |
+| 59  | An immovable old black car, east of the logged area    |
+| 60  | An immovable old black car, east of the logged areas   |
+| 61  | An old black immovable car east of a logged area       |
+| 62  | An old black immovable car east of a logged area.      |
+| 63  | An old black immovable car east of logged area         |
+| 64  | An old black immovable car east of logged area.        |
+| 65  | An old black immovable car east of logged areas        |
+| 66  | An old black immovable car east of logged areas.       |
+| 67  | An old black immovable car east of the logged area     |
+| 68  | An old black immovable car east of the logged area.    |
+| 69  | An old black immovable car east of the logged areas    |
+| 70  | An old black immovable car east of the logged areas.   |
+| 71  | An old black immovable car, east of a logged area      |
+| 72  | An old black immovable car, east of logged area        |
+| 73  | An old black immovable car, east of logged areas       |
+| 74  | An old black immovable car, east of the logged area    |
+| 75  | An old black immovable car, east of the logged areas   |
+| 76  | An old immovable black car east of a logged area       |
+| 77  | An old immovable black car east of a logged area.      |
+| 78  | An old immovable black car east of logged area         |
+| 79  | An old immovable black car east of logged area.        |
+| 80  | An old immovable black car east of logged areas        |
+| 81  | An old immovable black car east of logged areas.       |
+| 82  | An old immovable black car east of the logged area     |
+| 83  | An old immovable black car east of the logged area.    |
+| 84  | An old immovable black car east of the logged areas    |
+| 85  | An old immovable black car east of the logged areas.   |
+| 86  | An old immovable black car, east of a logged area      |
+| 87  | An old immovable black car, east of logged area        |
+| 88  | An old immovable black car, east of logged areas       |
+| 89  | An old immovable black car, east of the logged area    |
+| 90  | An old immovable black car, east of the logged areas   |
+| 91  | Black immovable old car east of a logged area          |
+| 92  | Black immovable old car east of a logged area.         |
+| 93  | Black immovable old car east of logged area            |
+| 94  | Black immovable old car east of logged area.           |
+| 95  | Black immovable old car east of logged areas           |
+| 96  | Black immovable old car east of logged areas.          |
+| 97  | Black immovable old car east of the logged area        |
+| 98  | Black immovable old car east of the logged area.       |
+| 99  | Black immovable old car east of the logged areas       |
+| 100 | Black immovable old car east of the logged areas.      |
+| 101 | Black immovable old car, east of a logged area         |
+| 102 | Black immovable old car, east of logged area           |
+| 103 | Black immovable old car, east of logged areas          |
+| 104 | Black immovable old car, east of the logged area       |
+| 105 | Black immovable old car, east of the logged areas      |
+| 106 | Black immovable old cars east of a logged area         |
+| 107 | Black immovable old cars east of a logged area.        |
+| 108 | Black immovable old cars east of logged area           |
+| 109 | Black immovable old cars east of logged area.          |
+| 110 | Black immovable old cars east of logged areas          |
+| 111 | Black immovable old cars east of logged areas.         |
+| 112 | Black immovable old cars east of the logged area       |
+| 113 | Black immovable old cars east of the logged area.      |
+| 114 | Black immovable old cars east of the logged areas      |
+| 115 | Black immovable old cars east of the logged areas.     |
+| 116 | Black immovable old cars, east of a logged area        |
+| 117 | Black immovable old cars, east of logged area          |
+| 118 | Black immovable old cars, east of logged areas         |
+| 119 | Black immovable old cars, east of the logged area      |
+| 120 | Black immovable old cars, east of the logged areas     |
+| 121 | Black old immovable car east of a logged area          |
+| 122 | Black old immovable car east of a logged area.         |
+| 123 | Black old immovable car east of logged area            |
+| 124 | Black old immovable car east of logged area.           |
+| 125 | Black old immovable car east of logged areas           |
+| 126 | Black old immovable car east of logged areas.          |
+| 127 | Black old immovable car east of the logged area        |
+| 128 | Black old immovable car east of the logged area.       |
+| 129 | Black old immovable car east of the logged areas       |
+| 130 | Black old immovable car east of the logged areas.      |
+| 131 | Black old immovable car, east of a logged area         |
+| 132 | Black old immovable car, east of logged area           |
+| 133 | Black old immovable car, east of logged areas          |
+| 134 | Black old immovable car, east of the logged area       |
+| 135 | Black old immovable car, east of the logged areas      |
+| 136 | Black old immovable cars east of a logged area         |
+| 137 | Black old immovable cars east of a logged area.        |
+| 138 | Black old immovable cars east of logged area           |
+| 139 | Black old immovable cars east of logged area.          |
+| 140 | Black old immovable cars east of logged areas          |
+| 141 | Black old immovable cars east of logged areas.         |
+| 142 | Black old immovable cars east of the logged area       |
+| 143 | Black old immovable cars east of the logged area.      |
+| 144 | Black old immovable cars east of the logged areas      |
+| 145 | Black old immovable cars east of the logged areas.     |
+| 146 | Black old immovable cars, east of a logged area        |
+| 147 | Black old immovable cars, east of logged area          |
+| 148 | Black old immovable cars, east of logged areas         |
+| 149 | Black old immovable cars, east of the logged area      |
+| 150 | Black old immovable cars, east of the logged areas     |
+| 151 | Immovable black old car east of a logged area          |
+| 152 | Immovable black old car east of a logged area.         |
+| 153 | Immovable black old car east of logged area            |
+| 154 | Immovable black old car east of logged area.           |
+| 155 | Immovable black old car east of logged areas           |
+| 156 | Immovable black old car east of logged areas.          |
+| 157 | Immovable black old car east of the logged area        |
+| 158 | Immovable black old car east of the logged area.       |
+| 159 | Immovable black old car east of the logged areas       |
+| 160 | Immovable black old car east of the logged areas.      |
+| 161 | Immovable black old car, east of a logged area         |
+| 162 | Immovable black old car, east of logged area           |
+| 163 | Immovable black old car, east of logged areas          |
+| 164 | Immovable black old car, east of the logged area       |
+| 165 | Immovable black old car, east of the logged areas      |
+| 166 | Immovable black old cars east of a logged area         |
+| 167 | Immovable black old cars east of a logged area.        |
+| 168 | Immovable black old cars east of logged area           |
+| 169 | Immovable black old cars east of logged area.          |
+| 170 | Immovable black old cars east of logged areas          |
+| 171 | Immovable black old cars east of logged areas.         |
+| 172 | Immovable black old cars east of the logged area       |
+| 173 | Immovable black old cars east of the logged area.      |
+| 174 | Immovable black old cars east of the logged areas      |
+| 175 | Immovable black old cars east of the logged areas.     |
+| 176 | Immovable black old cars, east of a logged area        |
+| 177 | Immovable black old cars, east of logged area          |
+| 178 | Immovable black old cars, east of logged areas         |
+| 179 | Immovable black old cars, east of the logged area      |
+| 180 | Immovable black old cars, east of the logged areas     |
+| 181 | Immovable old black car east of a logged area          |
+| 182 | Immovable old black car east of a logged area.         |
+| 183 | Immovable old black car east of logged area            |
+| 184 | Immovable old black car east of logged area.           |
+| 185 | Immovable old black car east of logged areas           |
+| 186 | Immovable old black car east of logged areas.          |
+| 187 | Immovable old black car east of the logged area        |
+| 188 | Immovable old black car east of the logged area.       |
+| 189 | Immovable old black car east of the logged areas       |
+| 190 | Immovable old black car east of the logged areas.      |
+| 191 | Immovable old black car, east of a logged area         |
+| 192 | Immovable old black car, east of logged area           |
+| 193 | Immovable old black car, east of logged areas          |
+| 194 | Immovable old black car, east of the logged area       |
+| 195 | Immovable old black car, east of the logged areas      |
+| 196 | Immovable old black cars east of a logged area         |
+| 197 | Immovable old black cars east of a logged area.        |
+| 198 | Immovable old black cars east of logged area           |
+| 199 | Immovable old black cars east of logged area.          |
+| 200 | Immovable old black cars east of logged areas          |
+| 201 | Immovable old black cars east of logged areas.         |
+| 202 | Immovable old black cars east of the logged area       |
+| 203 | Immovable old black cars east of the logged area.      |
+| 204 | Immovable old black cars east of the logged areas      |
+| 205 | Immovable old black cars east of the logged areas.     |
+| 206 | Immovable old black cars, east of a logged area        |
+| 207 | Immovable old black cars, east of logged area          |
+| 208 | Immovable old black cars, east of logged areas         |
+| 209 | Immovable old black cars, east of the logged area      |
+| 210 | Immovable old black cars, east of the logged areas     |
+| 211 | Old black immovable car east of a logged area          |
+| 212 | Old black immovable car east of a logged area.         |
+| 213 | Old black immovable car east of logged area            |
+| 214 | Old black immovable car east of logged area.           |
+| 215 | Old black immovable car east of logged areas           |
+| 216 | Old black immovable car east of logged areas.          |
+| 217 | Old black immovable car east of the logged area        |
+| 218 | Old black immovable car east of the logged area.       |
+| 219 | Old black immovable car east of the logged areas       |
+| 220 | Old black immovable car east of the logged areas.      |
+| 221 | Old black immovable car, east of a logged area         |
+| 222 | Old black immovable car, east of logged area           |
+| 223 | Old black immovable car, east of logged areas          |
+| 224 | Old black immovable car, east of the logged area       |
+| 225 | Old black immovable car, east of the logged areas      |
+| 226 | Old black immovable cars east of a logged area         |
+| 227 | Old black immovable cars east of a logged area.        |
+| 228 | Old black immovable cars east of logged area           |
+| 229 | Old black immovable cars east of logged area.          |
+| 230 | Old black immovable cars east of logged areas          |
+| 231 | Old black immovable cars east of logged areas.         |
+| 232 | Old black immovable cars east of the logged area       |
+| 233 | Old black immovable cars east of the logged area.      |
+| 234 | Old black immovable cars east of the logged areas      |
+| 235 | Old black immovable cars east of the logged areas.     |
+| 236 | Old black immovable cars, east of a logged area        |
+| 237 | Old black immovable cars, east of logged area          |
+| 238 | Old black immovable cars, east of logged areas         |
+| 239 | Old black immovable cars, east of the logged area      |
+| 240 | Old black immovable cars, east of the logged areas     |
+| 241 | Old immovable black car east of a logged area          |
+| 242 | Old immovable black car east of a logged area.         |
+| 243 | Old immovable black car east of logged area            |
+| 244 | Old immovable black car east of logged area.           |
+| 245 | Old immovable black car east of logged areas           |
+| 246 | Old immovable black car east of logged areas.          |
+| 247 | Old immovable black car east of the logged area        |
+| 248 | Old immovable black car east of the logged area.       |
+| 249 | Old immovable black car east of the logged areas       |
+| 250 | Old immovable black car east of the logged areas.      |
+| 251 | Old immovable black car, east of a logged area         |
+| 252 | Old immovable black car, east of logged area           |
+| 253 | Old immovable black car, east of logged areas          |
+| 254 | Old immovable black car, east of the logged area       |
+| 255 | Old immovable black car, east of the logged areas      |
+| 256 | Old immovable black cars east of a logged area         |
+| 257 | Old immovable black cars east of a logged area.        |
+| 258 | Old immovable black cars east of logged area           |
+| 259 | Old immovable black cars east of logged area.          |
+| 260 | Old immovable black cars east of logged areas          |
+| 261 | Old immovable black cars east of logged areas.         |
+| 262 | Old immovable black cars east of the logged area       |
+| 263 | Old immovable black cars east of the logged area.      |
+| 264 | Old immovable black cars east of the logged areas      |
+| 265 | Old immovable black cars east of the logged areas.     |
+| 266 | Old immovable black cars, east of a logged area        |
+| 267 | Old immovable black cars, east of logged area          |
+| 268 | Old immovable black cars, east of logged areas         |
+| 269 | Old immovable black cars, east of the logged area      |
+| 270 | Old immovable black cars, east of the logged areas     |
+| 271 | The black immovable old car east of a logged area      |
+| 272 | The black immovable old car east of a logged area.     |
+| 273 | The black immovable old car east of logged area        |
+| 274 | The black immovable old car east of logged area.       |
+| 275 | The black immovable old car east of logged areas       |
+| 276 | The black immovable old car east of logged areas.      |
+| 277 | The black immovable old car east of the logged area    |
+| 278 | The black immovable old car east of the logged area.   |
+| 279 | The black immovable old car east of the logged areas   |
+| 280 | The black immovable old car east of the logged areas.  |
+| 281 | The black immovable old car, east of a logged area     |
+| 282 | The black immovable old car, east of logged area       |
+| 283 | The black immovable old car, east of logged areas      |
+| 284 | The black immovable old car, east of the logged area   |
+| 285 | The black immovable old car, east of the logged areas  |
+| 286 | The black immovable old cars east of a logged area     |
+| 287 | The black immovable old cars east of a logged area.    |
+| 288 | The black immovable old cars east of logged area       |
+| 289 | The black immovable old cars east of logged area.      |
+| 290 | The black immovable old cars east of logged areas      |
+| 291 | The black immovable old cars east of logged areas.     |
+| 292 | The black immovable old cars east of the logged area   |
+| 293 | The black immovable old cars east of the logged area.  |
+| 294 | The black immovable old cars east of the logged areas  |
+| 295 | The black immovable old cars east of the logged areas. |
+| 296 | The black immovable old cars, east of a logged area    |
+| 297 | The black immovable old cars, east of logged area      |
+| 298 | The black immovable old cars, east of logged areas     |
+| 299 | The black immovable old cars, east of the logged area  |
+| 300 | The black immovable old cars, east of the logged areas |
+| 301 | The black old immovable car east of a logged area      |
+| 302 | The black old immovable car east of a logged area.     |
+| 303 | The black old immovable car east of logged area        |
+| 304 | The black old immovable car east of logged area.       |
+| 305 | The black old immovable car east of logged areas       |
+| 306 | The black old immovable car east of logged areas.      |
+| 307 | The black old immovable car east of the logged area    |
+| 308 | The black old immovable car east of the logged area.   |
+| 309 | The black old immovable car east of the logged areas   |
+| 310 | The black old immovable car east of the logged areas.  |
+| 311 | The black old immovable car, east of a logged area     |
+| 312 | The black old immovable car, east of logged area       |
+| 313 | The black old immovable car, east of logged areas      |
+| 314 | The black old immovable car, east of the logged area   |
+| 315 | The black old immovable car, east of the logged areas  |
+| 316 | The black old immovable cars east of a logged area     |
+| 317 | The black old immovable cars east of a logged area.    |
+| 318 | The black old immovable cars east of logged area       |
+| 319 | The black old immovable cars east of logged area.      |
+| 320 | The black old immovable cars east of logged areas      |
+| 321 | The black old immovable cars east of logged areas.     |
+| 322 | The black old immovable cars east of the logged area   |
+| 323 | The black old immovable cars east of the logged area.  |
+| 324 | The black old immovable cars east of the logged areas  |
+| 325 | The black old immovable cars east of the logged areas. |
+| 326 | The black old immovable cars, east of a logged area    |
+| 327 | The black old immovable cars, east of logged area      |
+| 328 | The black old immovable cars, east of logged areas     |
+| 329 | The black old immovable cars, east of the logged area  |
+| 330 | The black old immovable cars, east of the logged areas |
+| 331 | The immovable black old car east of a logged area      |
+| 332 | The immovable black old car east of a logged area.     |
+| 333 | The immovable black old car east of logged area        |
+| 334 | The immovable black old car east of logged area.       |
+| 335 | The immovable black old car east of logged areas       |
+| 336 | The immovable black old car east of logged areas.      |
+| 337 | The immovable black old car east of the logged area    |
+| 338 | The immovable black old car east of the logged area.   |
+| 339 | The immovable black old car east of the logged areas   |
+| 340 | The immovable black old car east of the logged areas.  |
+| 341 | The immovable black old car, east of a logged area     |
+| 342 | The immovable black old car, east of logged area       |
+| 343 | The immovable black old car, east of logged areas      |
+| 344 | The immovable black old car, east of the logged area   |
+| 345 | The immovable black old car, east of the logged areas  |
+| 346 | The immovable black old cars east of a logged area     |
+| 347 | The immovable black old cars east of a logged area.    |
+| 348 | The immovable black old cars east of logged area       |
+| 349 | The immovable black old cars east of logged area.      |
+| 350 | The immovable black old cars east of logged areas      |
+| 351 | The immovable black old cars east of logged areas.     |
+| 352 | The immovable black old cars east of the logged area   |
+| 353 | The immovable black old cars east of the logged area.  |
+| 354 | The immovable black old cars east of the logged areas  |
+| 355 | The immovable black old cars east of the logged areas. |
+| 356 | The immovable black old cars, east of a logged area    |
+| 357 | The immovable black old cars, east of logged area      |
+| 358 | The immovable black old cars, east of logged areas     |
+| 359 | The immovable black old cars, east of the logged area  |
+| 360 | The immovable black old cars, east of the logged areas |
+| 361 | The immovable old black car east of a logged area      |
+| 362 | The immovable old black car east of a logged area.     |
+| 363 | The immovable old black car east of logged area        |
+| 364 | The immovable old black car east of logged area.       |
+| 365 | The immovable old black car east of logged areas       |
+| 366 | The immovable old black car east of logged areas.      |
+| 367 | The immovable old black car east of the logged area    |
+| 368 | The immovable old black car east of the logged area.   |
+| 369 | The immovable old black car east of the logged areas   |
+| 370 | The immovable old black car east of the logged areas.  |
+| 371 | The immovable old black car, east of a logged area     |
+| 372 | The immovable old black car, east of logged area       |
+| 373 | The immovable old black car, east of logged areas      |
+| 374 | The immovable old black car, east of the logged area   |
+| 375 | The immovable old black car, east of the logged areas  |
+| 376 | The immovable old black cars east of a logged area     |
+| 377 | The immovable old black cars east of a logged area.    |
+| 378 | The immovable old black cars east of logged area       |
+| 379 | The immovable old black cars east of logged area.      |
+| 380 | The immovable old black cars east of logged areas      |
+| 381 | The immovable old black cars east of logged areas.     |
+| 382 | The immovable old black cars east of the logged area   |
+| 383 | The immovable old black cars east of the logged area.  |
+| 384 | The immovable old black cars east of the logged areas  |
+| 385 | The immovable old black cars east of the logged areas. |
+| 386 | The immovable old black cars, east of a logged area    |
+| 387 | The immovable old black cars, east of logged area      |
+| 388 | The immovable old black cars, east of logged areas     |
+| 389 | The immovable old black cars, east of the logged area  |
+| 390 | The immovable old black cars, east of the logged areas |
+| 391 | The old black immovable car east of a logged area      |
+| 392 | The old black immovable car east of a logged area.     |
+| 393 | The old black immovable car east of logged area        |
+| 394 | The old black immovable car east of logged area.       |
+| 395 | The old black immovable car east of logged areas       |
+| 396 | The old black immovable car east of logged areas.      |
+| 397 | The old black immovable car east of the logged area    |
+| 398 | The old black immovable car east of the logged area.   |
+| 399 | The old black immovable car east of the logged areas   |
+| 400 | The old black immovable car east of the logged areas.  |
+| 401 | The old black immovable car, east of a logged area     |
+| 402 | The old black immovable car, east of logged area       |
+| 403 | The old black immovable car, east of logged areas      |
+| 404 | The old black immovable car, east of the logged area   |
+| 405 | The old black immovable car, east of the logged areas  |
+| 406 | The old black immovable cars east of a logged area     |
+| 407 | The old black immovable cars east of a logged area.    |
+| 408 | The old black immovable cars east of logged area       |
+| 409 | The old black immovable cars east of logged area.      |
+| 410 | The old black immovable cars east of logged areas      |
+| 411 | The old black immovable cars east of logged areas.     |
+| 412 | The old black immovable cars east of the logged area   |
+| 413 | The old black immovable cars east of the logged area.  |
+| 414 | The old black immovable cars east of the logged areas  |
+| 415 | The old black immovable cars east of the logged areas. |
+| 416 | The old black immovable cars, east of a logged area    |
+| 417 | The old black immovable cars, east of logged area      |
+| 418 | The old black immovable cars, east of logged areas     |
+| 419 | The old black immovable cars, east of the logged area  |
+| 420 | The old black immovable cars, east of the logged areas |
+| 421 | The old immovable black car east of a logged area      |
+| 422 | The old immovable black car east of a logged area.     |
+| 423 | The old immovable black car east of logged area        |
+| 424 | The old immovable black car east of logged area.       |
+| 425 | The old immovable black car east of logged areas       |
+| 426 | The old immovable black car east of logged areas.      |
+| 427 | The old immovable black car east of the logged area    |
+| 428 | The old immovable black car east of the logged area.   |
+| 429 | The old immovable black car east of the logged areas   |
+| 430 | The old immovable black car east of the logged areas.  |
+| 431 | The old immovable black car, east of a logged area     |
+| 432 | The old immovable black car, east of logged area       |
+| 433 | The old immovable black car, east of logged areas      |
+| 434 | The old immovable black car, east of the logged area   |
+| 435 | The old immovable black car, east of the logged areas  |
+| 436 | The old immovable black cars east of a logged area     |
+| 437 | The old immovable black cars east of a logged area.    |
+| 438 | The old immovable black cars east of logged area       |
+| 439 | The old immovable black cars east of logged area.      |
+| 440 | The old immovable black cars east of logged areas      |
+| 441 | The old immovable black cars east of logged areas.     |
+| 442 | The old immovable black cars east of the logged area   |
+| 443 | The old immovable black cars east of the logged area.  |
+| 444 | The old immovable black cars east of the logged areas  |
+| 445 | The old immovable black cars east of the logged areas. |
+| 446 | The old immovable black cars, east of a logged area    |
+| 447 | The old immovable black cars, east of logged area      |
+| 448 | The old immovable black cars, east of logged areas     |
+| 449 | The old immovable black cars, east of the logged area  |
+| 450 | The old immovable black cars, east of the logged areas |
++-----+--------------------------------------------------------+
+

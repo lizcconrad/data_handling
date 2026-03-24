@@ -1,0 +1,234 @@
+GRAPH NAME: idThief1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 3     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++--------------------------------------------------------+
+|                      GOLD OUTPUTS                      |
++-------------------------------------------+------------+
+| Gold Output                               | Generated? |
++-------------------------------------------+------------+
+| the unknown thief near the unknown worker | True       |
++-------------------------------------------+------------+
+
++---------------------------------------------------------------------------------+
+|                                   NODE METRICS                                  |
++-----------+--------------+---------------+------------------+-------------------+
+| Node      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-----------+--------------+---------------+------------------+-------------------+
+| idThief1  | True         | True          | Covered          | Included          |
+| true      | True         | True          | Covered          | Included          |
+| idWorker1 | True         | True          | Covered          | Included          |
++-----------+--------------+---------------+------------------+-------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         EDGE METRICS                                                         |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                           | Parent    | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+| idThief1_prop_idUnknownObject  | idThief1  | true      | True         | True          | Covered          | Included          |
+| isNear                         | idThief1  | idWorker1 | True         | True          | Covered          | Included          |
+| idWorker1_prop_idUnknownObject | idWorker1 | true      | True         | True          | Covered          | Included          |
++--------------------------------+-----------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3901                                                                     |
+|               |   INDEX: x3900                                                                   |
+|               |   RELS: < [ _near_p LBL: h3937 ARG0: e3934 ARG1: u3935 ARG2: i3936 ]             |
+|               |           [ def_udef_a_q LBL: h3941 ARG0: x3938 RSTR: h3939 BODY: h3940 ]        |
+|               |           [ _un-_a_neg LBL: h3933 ARG0: i3931 ARG1: e3932 ]                      |
+|               |           [ _know_v_1 LBL: h3930 ARG0: e3927 [ e PERF: - ] ARG1: u3928 ARG2:     |
+|               | i3929 ]                                                                          |
+|               |           [ _worker_n_1 LBL: h3918 ARG0: x3917 ]                                 |
+|               |           [ _un-_a_neg LBL: h3916 ARG0: i3914 ARG1: e3915 ]                      |
+|               |           [ _know_v_1 LBL: h3913 ARG0: e3910 [ e PERF: - ] ARG1: u3911 ARG2:     |
+|               | i3912 ]                                                                          |
+|               |           [ _thief_n_1 LBL: h3901 ARG0: x3900 ] >                                |
+|               |   HCONS: < h3939 qeq h3918 >                                                     |
+|               |   ICONS: < e3927 topic i3929 e3910 topic i3912 >                                 |
+|               |   EQS: < h3933 eq h3930 e3932 eq e3927 h3930 eq h3918 i3929 eq x3917 x3938 eq    |
+|               | x3917 h3937 eq h3942 i3936 eq x3938 h3916 eq h3913 e3915 eq e3910 h3913 eq h3901 |
+|               | i3912 eq x3900 h3937 eq h3901 u3935 eq x3900 > ]                                 |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3901                                                                     |
+|               |   INDEX: x3900                                                                   |
+|               |   RELS: < [ _near_p LBL: h3901 ARG0: e3934 ARG1: x3900 ARG2: x3917 ]             |
+|               |           [ def_udef_a_q LBL: h3941 ARG0: x3917 RSTR: h3939 BODY: h3940 ]        |
+|               |           [ _un-_a_neg LBL: h3918 ARG0: i3931 ARG1: e3927 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3918 ARG0: e3927 ARG1: u3928 ARG2: x3917 ]           |
+|               |           [ _worker_n_1 LBL: h3918 ARG0: x3917 ]                                 |
+|               |           [ _un-_a_neg LBL: h3901 ARG0: i3914 ARG1: e3910 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3901 ARG0: e3910 ARG1: u3911 ARG2: x3900 ]           |
+|               |           [ _thief_n_1 LBL: h3901 ARG0: x3900 ] >                                |
+|               |   HCONS: < h3939 qeq h3918 >                                                     |
+|               |   ICONS: < e3927 topic x3917 e3910 topic x3900 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3951                                                                     |
+|               |   INDEX: e3948                                                                   |
+|               |   RELS: < [ unknown LBL: h3947 ARG: x3900 ARG0: e3948 ]                          |
+|               |           [ def_udef_a_q LBL: h3946 ARG0: x3900 RSTR: h3944 BODY: h3945 ]        |
+|               |           [ _near_p LBL: h3901 ARG0: e3934 ARG1: x3900 ARG2: x3917 ]             |
+|               |           [ def_udef_a_q LBL: h3941 ARG0: x3917 RSTR: h3939 BODY: h3940 ]        |
+|               |           [ _un-_a_neg LBL: h3918 ARG0: i3931 ARG1: e3927 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3918 ARG0: e3927 ARG1: u3928 ARG2: x3917 ]           |
+|               |           [ _worker_n_1 LBL: h3918 ARG0: x3917 ]                                 |
+|               |           [ _un-_a_neg LBL: h3901 ARG0: i3914 ARG1: e3910 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h3901 ARG0: e3910 ARG1: u3911 ARG2: x3900 ]           |
+|               |           [ _thief_n_1 LBL: h3901 ARG0: x3900 ] >                                |
+|               |   HCONS: < h3939 qeq h3918 h3944 qeq h3901 h3951 qeq h3947 >                     |
+|               |   ICONS: < e3927 topic x3917 e3910 topic x3900 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                                      NODE SEMENTS                                     |
++-----------+---------------------------------------------------------------------------+
+| Node      | Generated SEMENT                                                          |
++-----------+---------------------------------------------------------------------------+
+| idThief1  | [ TOP: h3901                                                              |
+|           |   INDEX: x3900                                                            |
+|           |   RELS: < [ _thief_n_1 LBL: h3901 ARG0: x3900 ] > ]                       |
++-----------+---------------------------------------------------------------------------+
+| true      | [ TOP: h3922                                                              |
+|           |   INDEX: e3919                                                            |
+|           |   RELS: < [ _true_a_of LBL: h3922 ARG0: e3919 ARG1: u3920 ARG2: u3921 ] > |
+|           |   SLOTS: < ARG1: u3920 ARG2: u3921 > ]                                    |
++-----------+---------------------------------------------------------------------------+
+| idWorker1 | [ TOP: h3918                                                              |
+|           |   INDEX: x3917                                                            |
+|           |   RELS: < [ _worker_n_1 LBL: h3918 ARG0: x3917 ] > ]                      |
++-----------+---------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                EDGE SEMENTS                                                               |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| Edge                           | Parent    | Child     | Generated SEMENT                                                                 |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idThief1_prop_idUnknownObject  | idThief1  | true      | [ TOP: h3901                                                                     |
+|                                |           |           |   INDEX: x3900                                                                   |
+|                                |           |           |   RELS: < [ _un-_a_neg LBL: h3916 ARG0: i3914 ARG1: e3915 ]                      |
+|                                |           |           |           [ _know_v_1 LBL: h3913 ARG0: e3910 [ e PERF: - ] ARG1: u3911 ARG2:     |
+|                                |           |           | i3912 ]                                                                          |
+|                                |           |           |           [ _thief_n_1 LBL: h3901 ARG0: x3900 ] >                                |
+|                                |           |           |   ICONS: < e3910 topic i3912 >                                                   |
+|                                |           |           |   EQS: < h3916 eq h3913 e3915 eq e3910 h3913 eq h3901 i3912 eq x3900 > ]         |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| isNear                         | idThief1  | idWorker1 | [ TOP: h3901                                                                     |
+|                                |           |           |   INDEX: x3900                                                                   |
+|                                |           |           |   RELS: < [ _near_p LBL: h3937 ARG0: e3934 ARG1: u3935 ARG2: i3936 ]             |
+|                                |           |           |           [ def_udef_a_q LBL: h3941 ARG0: x3938 RSTR: h3939 BODY: h3940 ]        |
+|                                |           |           |           [ _un-_a_neg LBL: h3933 ARG0: i3931 ARG1: e3932 ]                      |
+|                                |           |           |           [ _know_v_1 LBL: h3930 ARG0: e3927 [ e PERF: - ] ARG1: u3928 ARG2:     |
+|                                |           |           | i3929 ]                                                                          |
+|                                |           |           |           [ _worker_n_1 LBL: h3918 ARG0: x3917 ]                                 |
+|                                |           |           |           [ _un-_a_neg LBL: h3916 ARG0: i3914 ARG1: e3915 ]                      |
+|                                |           |           |           [ _know_v_1 LBL: h3913 ARG0: e3910 [ e PERF: - ] ARG1: u3911 ARG2:     |
+|                                |           |           | i3912 ]                                                                          |
+|                                |           |           |           [ _thief_n_1 LBL: h3901 ARG0: x3900 ] >                                |
+|                                |           |           |   HCONS: < h3939 qeq h3918 >                                                     |
+|                                |           |           |   ICONS: < e3927 topic i3929 e3910 topic i3912 >                                 |
+|                                |           |           |   EQS: < h3933 eq h3930 e3932 eq e3927 h3930 eq h3918 i3929 eq x3917 x3938 eq    |
+|                                |           |           | x3917 h3937 eq h3942 i3936 eq x3938 h3916 eq h3913 e3915 eq e3910 h3913 eq h3901 |
+|                                |           |           | i3912 eq x3900 h3937 eq h3901 u3935 eq x3900 > ]                                 |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+| idWorker1_prop_idUnknownObject | idWorker1 | true      | [ TOP: h3918                                                                     |
+|                                |           |           |   INDEX: x3917                                                                   |
+|                                |           |           |   RELS: < [ _un-_a_neg LBL: h3933 ARG0: i3931 ARG1: e3932 ]                      |
+|                                |           |           |           [ _know_v_1 LBL: h3930 ARG0: e3927 [ e PERF: - ] ARG1: u3928 ARG2:     |
+|                                |           |           | i3929 ]                                                                          |
+|                                |           |           |           [ _worker_n_1 LBL: h3918 ARG0: x3917 ] >                               |
+|                                |           |           |   ICONS: < e3927 topic i3929 >                                                   |
+|                                |           |           |   EQS: < h3933 eq h3930 e3932 eq e3927 h3930 eq h3918 i3929 eq x3917 > ]         |
++--------------------------------+-----------+-----------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------+
+|               GENERATED ENGLISH TEXT               |
++----+-----------------------------------------------+
+| #  | Generated Text                                |
++----+-----------------------------------------------+
+| 1  | An unknown thief near an unknown worker       |
+| 2  | An unknown thief near an unknown worker.      |
+| 3  | An unknown thief near the unknown worker      |
+| 4  | An unknown thief near the unknown worker.     |
+| 5  | An unknown thief near the unknown workers     |
+| 6  | An unknown thief near the unknown workers.    |
+| 7  | An unknown thief near unknown workers         |
+| 8  | An unknown thief near unknown workers.        |
+| 9  | An unknown thief, near an unknown worker      |
+| 10 | An unknown thief, near the unknown worker     |
+| 11 | An unknown thief, near the unknown workers    |
+| 12 | An unknown thief, near unknown workers        |
+| 13 | The unknown thief near an unknown worker      |
+| 14 | The unknown thief near an unknown worker.     |
+| 15 | The unknown thief near the unknown worker     |
+| 16 | The unknown thief near the unknown worker.    |
+| 17 | The unknown thief near the unknown workers    |
+| 18 | The unknown thief near the unknown workers.   |
+| 19 | The unknown thief near unknown workers        |
+| 20 | The unknown thief near unknown workers.       |
+| 21 | The unknown thief, near an unknown worker     |
+| 22 | The unknown thief, near the unknown worker    |
+| 23 | The unknown thief, near the unknown workers   |
+| 24 | The unknown thief, near unknown workers       |
+| 25 | The unknown thieves near an unknown worker    |
+| 26 | The unknown thieves near an unknown worker.   |
+| 27 | The unknown thieves near the unknown worker   |
+| 28 | The unknown thieves near the unknown worker.  |
+| 29 | The unknown thieves near the unknown workers  |
+| 30 | The unknown thieves near the unknown workers. |
+| 31 | The unknown thieves near unknown workers      |
+| 32 | The unknown thieves near unknown workers.     |
+| 33 | The unknown thieves, near an unknown worker   |
+| 34 | The unknown thieves, near the unknown worker  |
+| 35 | The unknown thieves, near the unknown workers |
+| 36 | The unknown thieves, near unknown workers     |
+| 37 | Unknown thief near an unknown worker          |
+| 38 | Unknown thief near an unknown worker.         |
+| 39 | Unknown thief near the unknown worker         |
+| 40 | Unknown thief near the unknown worker.        |
+| 41 | Unknown thief near the unknown workers        |
+| 42 | Unknown thief near the unknown workers.       |
+| 43 | Unknown thief near unknown workers            |
+| 44 | Unknown thief near unknown workers.           |
+| 45 | Unknown thief, near an unknown worker         |
+| 46 | Unknown thief, near the unknown worker        |
+| 47 | Unknown thief, near the unknown workers       |
+| 48 | Unknown thief, near unknown workers           |
+| 49 | Unknown thieves near an unknown worker        |
+| 50 | Unknown thieves near an unknown worker.       |
+| 51 | Unknown thieves near the unknown worker       |
+| 52 | Unknown thieves near the unknown worker.      |
+| 53 | Unknown thieves near the unknown workers      |
+| 54 | Unknown thieves near the unknown workers.     |
+| 55 | Unknown thieves near unknown workers          |
+| 56 | Unknown thieves near unknown workers.         |
+| 57 | Unknown thieves, near an unknown worker       |
+| 58 | Unknown thieves, near the unknown worker      |
+| 59 | Unknown thieves, near the unknown workers     |
+| 60 | Unknown thieves, near unknown workers         |
++----+-----------------------------------------------+
+

@@ -1,0 +1,371 @@
+GRAPH NAME: idGameRoom1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 180   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------+
+|                       GOLD OUTPUTS                       |
++---------------------------------------------+------------+
+| Gold Output                                 | Generated? |
++---------------------------------------------+------------+
+| the unknown game room north of the blue key | True       |
++---------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idGameRoom1 | True         | True          | Covered          | Included          |
+| true        | True         | True          | Covered          | Included          |
+| idKeyBlue   | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+|                                                           EDGE METRICS                                                           |
++----------------------------------+-------------+-----------+--------------+---------------+------------------+-------------------+
+| Edge                             | Parent      | Child     | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++----------------------------------+-------------+-----------+--------------+---------------+------------------+-------------------+
+| idGameRoom1_prop_idUnknownObject | idGameRoom1 | true      | True         | True          | Covered          | Included          |
+| isNorthOf                        | idGameRoom1 | idKeyBlue | True         | True          | Covered          | Included          |
++----------------------------------+-------------+-----------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2                                                                        |
+|               |   INDEX: x1                                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h41 ARG0: e38 ARG1: u39 ARG2: x40 ]                   |
+|               |           [ def_implicit_q LBL: h52 ARG0: x49 RSTR: h50 BODY: h51 ]              |
+|               |           [ _north_a_1 LBL: h37 ARG0: i34 ARG1: x35 ARG2: u36 ]                  |
+|               |           [ def_udef_a_q LBL: h47 ARG0: x44 RSTR: h45 BODY: h46 ]                |
+|               |           [ _blue_a_1 LBL: h31 ARG0: i29 ARG1: i30 ]                             |
+|               |           [ _key_n_1 LBL: h33 ARG0: x32 ]                                        |
+|               |           [ place_n LBL: h43 ARG0: x42 ]                                         |
+|               |           [ _un-_a_neg LBL: h28 ARG0: i26 ARG1: e27 ]                            |
+|               |           [ _know_v_1 LBL: h25 ARG0: e22 [ e PERF: - ] ARG1: u23 ARG2: i24 ]     |
+|               |           [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: u11 ARG2: u12 ]      |
+|               |           [ udef_q LBL: h8 ARG0: x5 RSTR: h6 BODY: h7 ]                          |
+|               |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                         |
+|               |           [ _room_n_unit LBL: h2 ARG0: x1 ] >                                    |
+|               |   HCONS: < h45 qeq h33 h50 qeq h43 h6 qeq h4 >                                   |
+|               |   ICONS: < e22 topic i24 >                                                       |
+|               |   EQS: < h31 eq h33 i30 eq x32 x44 eq x32 h37 eq h48 u36 eq x44 h37 eq h43 x35   |
+|               | eq x42 x49 eq x42 h41 eq h53 x40 eq x49 h28 eq h25 e27 eq e22 x5 eq x3 h13 eq h9 |
+|               | u12 eq x5 h13 eq h2 u11 eq x1 h25 eq h2 i24 eq x1 h41 eq h2 u39 eq x1 > ]        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h13                                                                       |
+|               |   INDEX: x1                                                                      |
+|               |   RELS: < [ loc_nonsp LBL: h13 ARG0: e38 ARG1: x1 ARG2: x35 ]                    |
+|               |           [ def_implicit_q LBL: h52 ARG0: x35 RSTR: h50 BODY: h51 ]              |
+|               |           [ _north_a_1 LBL: h37 ARG0: i34 ARG1: x35 ARG2: x32 ]                  |
+|               |           [ def_udef_a_q LBL: h47 ARG0: x32 RSTR: h45 BODY: h46 ]                |
+|               |           [ _blue_a_1 LBL: h31 ARG0: i29 ARG1: x32 ]                             |
+|               |           [ _key_n_1 LBL: h31 ARG0: x32 ]                                        |
+|               |           [ place_n LBL: h37 ARG0: x35 ]                                         |
+|               |           [ _un-_a_neg LBL: h13 ARG0: i26 ARG1: e22 [ e PERF: - ] ]              |
+|               |           [ _know_v_1 LBL: h13 ARG0: e22 ARG1: u23 ARG2: x1 ]                    |
+|               |           [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: x1 ARG2: x3 ]        |
+|               |           [ udef_q LBL: h8 ARG0: x3 RSTR: h6 BODY: h7 ]                          |
+|               |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                         |
+|               |           [ _room_n_unit LBL: h13 ARG0: x1 ] >                                   |
+|               |   HCONS: < h45 qeq h31 h50 qeq h37 h6 qeq h4 >                                   |
+|               |   ICONS: < e22 topic x1 > ]                                                      |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h62                                                                       |
+|               |   INDEX: e59                                                                     |
+|               |   RELS: < [ unknown LBL: h58 ARG: x1 ARG0: e59 ]                                 |
+|               |           [ def_udef_a_q LBL: h57 ARG0: x1 RSTR: h55 BODY: h56 ]                 |
+|               |           [ loc_nonsp LBL: h13 ARG0: e38 ARG1: x1 ARG2: x35 ]                    |
+|               |           [ def_implicit_q LBL: h52 ARG0: x35 RSTR: h50 BODY: h51 ]              |
+|               |           [ _north_a_1 LBL: h37 ARG0: i34 ARG1: x35 ARG2: x32 ]                  |
+|               |           [ def_udef_a_q LBL: h47 ARG0: x32 RSTR: h45 BODY: h46 ]                |
+|               |           [ _blue_a_1 LBL: h31 ARG0: i29 ARG1: x32 ]                             |
+|               |           [ _key_n_1 LBL: h31 ARG0: x32 ]                                        |
+|               |           [ place_n LBL: h37 ARG0: x35 ]                                         |
+|               |           [ _un-_a_neg LBL: h13 ARG0: i26 ARG1: e22 [ e PERF: - ] ]              |
+|               |           [ _know_v_1 LBL: h13 ARG0: e22 ARG1: u23 ARG2: x1 ]                    |
+|               |           [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: x1 ARG2: x3 ]        |
+|               |           [ udef_q LBL: h8 ARG0: x3 RSTR: h6 BODY: h7 ]                          |
+|               |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                         |
+|               |           [ _room_n_unit LBL: h13 ARG0: x1 ] >                                   |
+|               |   HCONS: < h45 qeq h31 h50 qeq h37 h6 qeq h4 h55 qeq h13 h62 qeq h58 >           |
+|               |   ICONS: < e22 topic x1 > ]                                                      |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------+
+|                                        NODE SEMENTS                                       |
++-------------+-----------------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                            |
++-------------+-----------------------------------------------------------------------------+
+| idGameRoom1 | [ TOP: h2                                                                   |
+|             |   INDEX: x1                                                                 |
+|             |   RELS: < [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: u11 ARG2: u12 ] |
+|             |           [ udef_q LBL: h8 ARG0: x5 RSTR: h6 BODY: h7 ]                     |
+|             |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                    |
+|             |           [ _room_n_unit LBL: h2 ARG0: x1 ] >                               |
+|             |   HCONS: < h6 qeq h4 >                                                      |
+|             |   EQS: < x5 eq x3 h13 eq h9 u12 eq x5 h13 eq h2 u11 eq x1 > ]               |
++-------------+-----------------------------------------------------------------------------+
+| true        | [ TOP: h17                                                                  |
+|             |   INDEX: e14                                                                |
+|             |   RELS: < [ _true_a_of LBL: h17 ARG0: e14 ARG1: u15 ARG2: u16 ] >           |
+|             |   SLOTS: < ARG1: u15 ARG2: u16 > ]                                          |
++-------------+-----------------------------------------------------------------------------+
+| idKeyBlue   | [ TOP: h33                                                                  |
+|             |   INDEX: x32                                                                |
+|             |   RELS: < [ _blue_a_1 LBL: h31 ARG0: i29 ARG1: i30 ]                        |
+|             |           [ _key_n_1 LBL: h33 ARG0: x32 ] >                                 |
+|             |   EQS: < h31 eq h33 i30 eq x32 > ]                                          |
++-------------+-----------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE SEMENTS                                                                 |
++----------------------------------+-------------+-----------+----------------------------------------------------------------------------------+
+| Edge                             | Parent      | Child     | Generated SEMENT                                                                 |
++----------------------------------+-------------+-----------+----------------------------------------------------------------------------------+
+| idGameRoom1_prop_idUnknownObject | idGameRoom1 | true      | [ TOP: h2                                                                        |
+|                                  |             |           |   INDEX: x1                                                                      |
+|                                  |             |           |   RELS: < [ _un-_a_neg LBL: h28 ARG0: i26 ARG1: e27 ]                            |
+|                                  |             |           |           [ _know_v_1 LBL: h25 ARG0: e22 [ e PERF: - ] ARG1: u23 ARG2: i24 ]     |
+|                                  |             |           |           [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: u11 ARG2: u12 ]      |
+|                                  |             |           |           [ udef_q LBL: h8 ARG0: x5 RSTR: h6 BODY: h7 ]                          |
+|                                  |             |           |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                         |
+|                                  |             |           |           [ _room_n_unit LBL: h2 ARG0: x1 ] >                                    |
+|                                  |             |           |   HCONS: < h6 qeq h4 >                                                           |
+|                                  |             |           |   ICONS: < e22 topic i24 >                                                       |
+|                                  |             |           |   EQS: < h28 eq h25 e27 eq e22 x5 eq x3 h13 eq h9 u12 eq x5 h13 eq h2 u11 eq x1  |
+|                                  |             |           | h25 eq h2 i24 eq x1 > ]                                                          |
++----------------------------------+-------------+-----------+----------------------------------------------------------------------------------+
+| isNorthOf                        | idGameRoom1 | idKeyBlue | [ TOP: h2                                                                        |
+|                                  |             |           |   INDEX: x1                                                                      |
+|                                  |             |           |   RELS: < [ loc_nonsp LBL: h41 ARG0: e38 ARG1: u39 ARG2: x40 ]                   |
+|                                  |             |           |           [ def_implicit_q LBL: h52 ARG0: x49 RSTR: h50 BODY: h51 ]              |
+|                                  |             |           |           [ _north_a_1 LBL: h37 ARG0: i34 ARG1: x35 ARG2: u36 ]                  |
+|                                  |             |           |           [ def_udef_a_q LBL: h47 ARG0: x44 RSTR: h45 BODY: h46 ]                |
+|                                  |             |           |           [ _blue_a_1 LBL: h31 ARG0: i29 ARG1: i30 ]                             |
+|                                  |             |           |           [ _key_n_1 LBL: h33 ARG0: x32 ]                                        |
+|                                  |             |           |           [ place_n LBL: h43 ARG0: x42 ]                                         |
+|                                  |             |           |           [ _un-_a_neg LBL: h28 ARG0: i26 ARG1: e27 ]                            |
+|                                  |             |           |           [ _know_v_1 LBL: h25 ARG0: e22 [ e PERF: - ] ARG1: u23 ARG2: i24 ]     |
+|                                  |             |           |           [ compound LBL: h13 ARG0: e10 [ e PROG: - ] ARG1: u11 ARG2: u12 ]      |
+|                                  |             |           |           [ udef_q LBL: h8 ARG0: x5 RSTR: h6 BODY: h7 ]                          |
+|                                  |             |           |           [ _game_n_1 LBL: h4 ARG0: x3 ]                                         |
+|                                  |             |           |           [ _room_n_unit LBL: h2 ARG0: x1 ] >                                    |
+|                                  |             |           |   HCONS: < h45 qeq h33 h50 qeq h43 h6 qeq h4 >                                   |
+|                                  |             |           |   ICONS: < e22 topic i24 >                                                       |
+|                                  |             |           |   EQS: < h31 eq h33 i30 eq x32 x44 eq x32 h37 eq h48 u36 eq x44 h37 eq h43 x35   |
+|                                  |             |           | eq x42 x49 eq x42 h41 eq h53 x40 eq x49 h28 eq h25 e27 eq e22 x5 eq x3 h13 eq h9 |
+|                                  |             |           | u12 eq x5 h13 eq h2 u11 eq x1 h25 eq h2 i24 eq x1 h41 eq h2 u39 eq x1 > ]        |
++----------------------------------+-------------+-----------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------+
+|                 GENERATED ENGLISH TEXT                |
++-----+-------------------------------------------------+
+| #   | Generated Text                                  |
++-----+-------------------------------------------------+
+| 1   | A games unknown room north of a blue key        |
+| 2   | A games unknown room north of a blue key.       |
+| 3   | A games unknown room north of blue keys         |
+| 4   | A games unknown room north of blue keys.        |
+| 5   | A games unknown room north of the blue key      |
+| 6   | A games unknown room north of the blue key.     |
+| 7   | A games unknown room north of the blue keys     |
+| 8   | A games unknown room north of the blue keys.    |
+| 9   | A games unknown room, north of a blue key       |
+| 10  | A games unknown room, north of blue keys        |
+| 11  | A games unknown room, north of the blue key     |
+| 12  | A games unknown room, north of the blue keys    |
+| 13  | An unknown game room north of a blue key        |
+| 14  | An unknown game room north of a blue key        |
+| 15  | An unknown game room north of a blue key.       |
+| 16  | An unknown game room north of a blue key.       |
+| 17  | An unknown game room north of blue keys         |
+| 18  | An unknown game room north of blue keys         |
+| 19  | An unknown game room north of blue keys.        |
+| 20  | An unknown game room north of blue keys.        |
+| 21  | An unknown game room north of the blue key      |
+| 22  | An unknown game room north of the blue key      |
+| 23  | An unknown game room north of the blue key.     |
+| 24  | An unknown game room north of the blue key.     |
+| 25  | An unknown game room north of the blue keys     |
+| 26  | An unknown game room north of the blue keys     |
+| 27  | An unknown game room north of the blue keys.    |
+| 28  | An unknown game room north of the blue keys.    |
+| 29  | An unknown game room, north of a blue key       |
+| 30  | An unknown game room, north of a blue key       |
+| 31  | An unknown game room, north of blue keys        |
+| 32  | An unknown game room, north of blue keys        |
+| 33  | An unknown game room, north of the blue key     |
+| 34  | An unknown game room, north of the blue key     |
+| 35  | An unknown game room, north of the blue keys    |
+| 36  | An unknown game room, north of the blue keys    |
+| 37  | Games unknown room north of a blue key          |
+| 38  | Games unknown room north of a blue key.         |
+| 39  | Games unknown room north of blue keys           |
+| 40  | Games unknown room north of blue keys.          |
+| 41  | Games unknown room north of the blue key        |
+| 42  | Games unknown room north of the blue key.       |
+| 43  | Games unknown room north of the blue keys       |
+| 44  | Games unknown room north of the blue keys.      |
+| 45  | Games unknown room, north of a blue key         |
+| 46  | Games unknown room, north of blue keys          |
+| 47  | Games unknown room, north of the blue key       |
+| 48  | Games unknown room, north of the blue keys      |
+| 49  | Games unknown rooms north of a blue key         |
+| 50  | Games unknown rooms north of a blue key.        |
+| 51  | Games unknown rooms north of blue keys          |
+| 52  | Games unknown rooms north of blue keys.         |
+| 53  | Games unknown rooms north of the blue key       |
+| 54  | Games unknown rooms north of the blue key.      |
+| 55  | Games unknown rooms north of the blue keys      |
+| 56  | Games unknown rooms north of the blue keys.     |
+| 57  | Games unknown rooms, north of a blue key        |
+| 58  | Games unknown rooms, north of blue keys         |
+| 59  | Games unknown rooms, north of the blue key      |
+| 60  | Games unknown rooms, north of the blue keys     |
+| 61  | The games unknown room north of a blue key      |
+| 62  | The games unknown room north of a blue key.     |
+| 63  | The games unknown room north of blue keys       |
+| 64  | The games unknown room north of blue keys.      |
+| 65  | The games unknown room north of the blue key    |
+| 66  | The games unknown room north of the blue key.   |
+| 67  | The games unknown room north of the blue keys   |
+| 68  | The games unknown room north of the blue keys.  |
+| 69  | The games unknown room, north of a blue key     |
+| 70  | The games unknown room, north of blue keys      |
+| 71  | The games unknown room, north of the blue key   |
+| 72  | The games unknown room, north of the blue keys  |
+| 73  | The games unknown rooms north of a blue key     |
+| 74  | The games unknown rooms north of a blue key.    |
+| 75  | The games unknown rooms north of blue keys      |
+| 76  | The games unknown rooms north of blue keys.     |
+| 77  | The games unknown rooms north of the blue key   |
+| 78  | The games unknown rooms north of the blue key.  |
+| 79  | The games unknown rooms north of the blue keys  |
+| 80  | The games unknown rooms north of the blue keys. |
+| 81  | The games unknown rooms, north of a blue key    |
+| 82  | The games unknown rooms, north of blue keys     |
+| 83  | The games unknown rooms, north of the blue key  |
+| 84  | The games unknown rooms, north of the blue keys |
+| 85  | The unknown game room north of a blue key       |
+| 86  | The unknown game room north of a blue key       |
+| 87  | The unknown game room north of a blue key.      |
+| 88  | The unknown game room north of a blue key.      |
+| 89  | The unknown game room north of blue keys        |
+| 90  | The unknown game room north of blue keys        |
+| 91  | The unknown game room north of blue keys.       |
+| 92  | The unknown game room north of blue keys.       |
+| 93  | The unknown game room north of the blue key     |
+| 94  | The unknown game room north of the blue key     |
+| 95  | The unknown game room north of the blue key.    |
+| 96  | The unknown game room north of the blue key.    |
+| 97  | The unknown game room north of the blue keys    |
+| 98  | The unknown game room north of the blue keys    |
+| 99  | The unknown game room north of the blue keys.   |
+| 100 | The unknown game room north of the blue keys.   |
+| 101 | The unknown game room, north of a blue key      |
+| 102 | The unknown game room, north of a blue key      |
+| 103 | The unknown game room, north of blue keys       |
+| 104 | The unknown game room, north of blue keys       |
+| 105 | The unknown game room, north of the blue key    |
+| 106 | The unknown game room, north of the blue key    |
+| 107 | The unknown game room, north of the blue keys   |
+| 108 | The unknown game room, north of the blue keys   |
+| 109 | The unknown game rooms north of a blue key      |
+| 110 | The unknown game rooms north of a blue key      |
+| 111 | The unknown game rooms north of a blue key.     |
+| 112 | The unknown game rooms north of a blue key.     |
+| 113 | The unknown game rooms north of blue keys       |
+| 114 | The unknown game rooms north of blue keys       |
+| 115 | The unknown game rooms north of blue keys.      |
+| 116 | The unknown game rooms north of blue keys.      |
+| 117 | The unknown game rooms north of the blue key    |
+| 118 | The unknown game rooms north of the blue key    |
+| 119 | The unknown game rooms north of the blue key.   |
+| 120 | The unknown game rooms north of the blue key.   |
+| 121 | The unknown game rooms north of the blue keys   |
+| 122 | The unknown game rooms north of the blue keys   |
+| 123 | The unknown game rooms north of the blue keys.  |
+| 124 | The unknown game rooms north of the blue keys.  |
+| 125 | The unknown game rooms, north of a blue key     |
+| 126 | The unknown game rooms, north of a blue key     |
+| 127 | The unknown game rooms, north of blue keys      |
+| 128 | The unknown game rooms, north of blue keys      |
+| 129 | The unknown game rooms, north of the blue key   |
+| 130 | The unknown game rooms, north of the blue key   |
+| 131 | The unknown game rooms, north of the blue keys  |
+| 132 | The unknown game rooms, north of the blue keys  |
+| 133 | Unknown game room north of a blue key           |
+| 134 | Unknown game room north of a blue key           |
+| 135 | Unknown game room north of a blue key.          |
+| 136 | Unknown game room north of a blue key.          |
+| 137 | Unknown game room north of blue keys            |
+| 138 | Unknown game room north of blue keys            |
+| 139 | Unknown game room north of blue keys.           |
+| 140 | Unknown game room north of blue keys.           |
+| 141 | Unknown game room north of the blue key         |
+| 142 | Unknown game room north of the blue key         |
+| 143 | Unknown game room north of the blue key.        |
+| 144 | Unknown game room north of the blue key.        |
+| 145 | Unknown game room north of the blue keys        |
+| 146 | Unknown game room north of the blue keys        |
+| 147 | Unknown game room north of the blue keys.       |
+| 148 | Unknown game room north of the blue keys.       |
+| 149 | Unknown game room, north of a blue key          |
+| 150 | Unknown game room, north of a blue key          |
+| 151 | Unknown game room, north of blue keys           |
+| 152 | Unknown game room, north of blue keys           |
+| 153 | Unknown game room, north of the blue key        |
+| 154 | Unknown game room, north of the blue key        |
+| 155 | Unknown game room, north of the blue keys       |
+| 156 | Unknown game room, north of the blue keys       |
+| 157 | Unknown game rooms north of a blue key          |
+| 158 | Unknown game rooms north of a blue key          |
+| 159 | Unknown game rooms north of a blue key.         |
+| 160 | Unknown game rooms north of a blue key.         |
+| 161 | Unknown game rooms north of blue keys           |
+| 162 | Unknown game rooms north of blue keys           |
+| 163 | Unknown game rooms north of blue keys.          |
+| 164 | Unknown game rooms north of blue keys.          |
+| 165 | Unknown game rooms north of the blue key        |
+| 166 | Unknown game rooms north of the blue key        |
+| 167 | Unknown game rooms north of the blue key.       |
+| 168 | Unknown game rooms north of the blue key.       |
+| 169 | Unknown game rooms north of the blue keys       |
+| 170 | Unknown game rooms north of the blue keys       |
+| 171 | Unknown game rooms north of the blue keys.      |
+| 172 | Unknown game rooms north of the blue keys.      |
+| 173 | Unknown game rooms, north of a blue key         |
+| 174 | Unknown game rooms, north of a blue key         |
+| 175 | Unknown game rooms, north of blue keys          |
+| 176 | Unknown game rooms, north of blue keys          |
+| 177 | Unknown game rooms, north of the blue key       |
+| 178 | Unknown game rooms, north of the blue key       |
+| 179 | Unknown game rooms, north of the blue keys      |
+| 180 | Unknown game rooms, north of the blue keys      |
++-----+-------------------------------------------------+
+

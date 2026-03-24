@@ -1,0 +1,989 @@
+GRAPH NAME: idLivingRoomToKitchenDoor_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 621   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 4     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 5     |
+| Edges Covered                   | 5     |
+| Edges Included                  | 5     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+|                                                             GOLD OUTPUTS                                                            |
++------------------------------------------------------------------------------------------------------------------------+------------+
+| Gold Output                                                                                                            | Generated? |
++------------------------------------------------------------------------------------------------------------------------+------------+
+| the unknown open door from the living room to the kitchen west of the unknown open door from the bedroom to the closet | False      |
++------------------------------------------------------------------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------------+
+|                                           NODE METRICS                                          |
++---------------------------+--------------+---------------+------------------+-------------------+
+| Node                      | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------------------------+--------------+---------------+------------------+-------------------+
+| idLivingRoomToKitchenDoor | True         | True          | Covered          | Included          |
+| open                      | True         | True          | Covered          | Included          |
+| true                      | True         | True          | Covered          | Included          |
+| idBedroomToClosetDoor     | True         | True          | Covered          | Included          |
++---------------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                               EDGE METRICS                                                                               |
++------------------------------------------------+---------------------------+-----------------------+--------------+---------------+------------------+-------------------+
+| Edge                                           | Parent                    | Child                 | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++------------------------------------------------+---------------------------+-----------------------+--------------+---------------+------------------+-------------------+
+| idLivingRoomToKitchenDoor_prop_idOpenState     | idLivingRoomToKitchenDoor | open                  | True         | True          | Covered          | Included          |
+| idLivingRoomToKitchenDoor_prop_idUnknownObject | idLivingRoomToKitchenDoor | true                  | True         | True          | Covered          | Included          |
+| isWestOf                                       | idLivingRoomToKitchenDoor | idBedroomToClosetDoor | True         | True          | Covered          | Included          |
+| idBedroomToClosetDoor_prop_idOpenState         | idBedroomToClosetDoor     | open                  | True         | True          | Covered          | Included          |
+| idBedroomToClosetDoor_prop_idUnknownObject     | idBedroomToClosetDoor     | true                  | True         | True          | Covered          | Included          |
++------------------------------------------------+---------------------------+-----------------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2420                                                                     |
+|               |   INDEX: x2419                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2523 ARG0: e2520 ARG1: u2521 ARG2: x2522 ]           |
+|               |           [ def_implicit_q LBL: h2534 ARG0: x2531 RSTR: h2532 BODY: h2533 ]      |
+|               |           [ _west_a_1 LBL: h2519 ARG0: i2516 ARG1: x2517 ARG2: u2518 ]           |
+|               |           [ def_udef_a_q LBL: h2529 ARG0: x2526 RSTR: h2527 BODY: h2528 ]        |
+|               |           [ _un-_a_neg LBL: h2515 ARG0: i2513 ARG1: e2514 ]                      |
+|               |           [ _know_v_1 LBL: h2512 ARG0: e2509 [ e PERF: - ] ARG1: u2510 ARG2:     |
+|               | i2511 ]                                                                          |
+|               |           [ _open_a_to LBL: h2500 ARG0: e2497 ARG1: u2498 ARG2: u2499 ]          |
+|               |           [ _to_p LBL: h2491 ARG0: e2488 ARG1: u2489 ARG2: i2490 ]               |
+|               |           [ def_udef_a_q LBL: h2495 ARG0: x2492 RSTR: h2493 BODY: h2494 ]        |
+|               |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|               |           [ _from_p LBL: h2480 ARG0: e2477 ARG1: u2478 ARG2: u2479 ]             |
+|               |           [ def_udef_a_q LBL: h2484 ARG0: x2481 RSTR: h2482 BODY: h2483 ]        |
+|               |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|               |           [ _door_n_1 LBL: h2474 ARG0: x2473 ]                                   |
+|               |           [ place_n LBL: h2525 ARG0: x2524 ]                                     |
+|               |           [ _un-_a_neg LBL: h2472 ARG0: i2470 ARG1: e2471 ]                      |
+|               |           [ _know_v_1 LBL: h2469 ARG0: e2466 [ e PERF: - ] ARG1: u2467 ARG2:     |
+|               | i2468 ]                                                                          |
+|               |           [ _open_a_to LBL: h2457 ARG0: e2454 ARG1: u2455 ARG2: u2456 ]          |
+|               |           [ _to_p LBL: h2448 ARG0: e2445 ARG1: u2446 ARG2: i2447 ]               |
+|               |           [ def_udef_a_q LBL: h2452 ARG0: x2449 RSTR: h2450 BODY: h2451 ]        |
+|               |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|               |           [ _from_p LBL: h2437 ARG0: e2434 ARG1: u2435 ARG2: u2436 ]             |
+|               |           [ def_udef_a_q LBL: h2441 ARG0: x2438 RSTR: h2439 BODY: h2440 ]        |
+|               |           [ compound LBL: h2433 ARG0: e2430 [ e PROG: - ] ARG1: u2431 ARG2:      |
+|               | u2432 ]                                                                          |
+|               |           [ udef_q LBL: h2428 ARG0: x2425 RSTR: h2426 BODY: h2427 ]              |
+|               |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|               |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|               |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|               |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 h2527 qeq h2474 h2532 qeq h2525 h2450 |
+|               | qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                                      |
+|               |   ICONS: < e2509 topic i2511 e2466 topic i2468 >                                 |
+|               |   EQS: < h2515 eq h2512 e2514 eq e2509 x2492 eq x2486 h2491 eq h2496 i2490 eq    |
+|               | x2492 x2481 eq x2475 h2480 eq h2485 u2479 eq x2481 h2480 eq h2474 u2478 eq x2473 |
+|               | h2491 eq h2474 u2489 eq x2473 h2500 eq h2474 u2498 eq x2473 h2512 eq h2474 i2511 |
+|               | eq x2473 x2526 eq x2473 h2519 eq h2530 u2518 eq x2526 h2519 eq h2525 x2517 eq    |
+|               | x2524 x2531 eq x2524 h2523 eq h2535 x2522 eq x2531 h2472 eq h2469 e2471 eq e2466 |
+|               | x2449 eq x2443 h2448 eq h2453 i2447 eq x2449 x2425 eq x2423 h2433 eq h2429 u2432 |
+|               | eq x2425 h2433 eq h2422 u2431 eq x2421 x2438 eq x2421 h2437 eq h2442 u2436 eq    |
+|               | x2438 h2437 eq h2420 u2435 eq x2419 h2448 eq h2420 u2446 eq x2419 h2457 eq h2420 |
+|               | u2455 eq x2419 h2469 eq h2420 i2468 eq x2419 h2523 eq h2420 u2521 eq x2419 > ]   |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2420                                                                     |
+|               |   INDEX: x2419                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2420 ARG0: e2520 ARG1: x2419 ARG2: x2517 ]           |
+|               |           [ def_implicit_q LBL: h2534 ARG0: x2517 RSTR: h2532 BODY: h2533 ]      |
+|               |           [ _west_a_1 LBL: h2519 ARG0: i2516 ARG1: x2517 ARG2: x2473 ]           |
+|               |           [ def_udef_a_q LBL: h2529 ARG0: x2473 RSTR: h2527 BODY: h2528 ]        |
+|               |           [ _un-_a_neg LBL: h2474 ARG0: i2513 ARG1: e2509 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2474 ARG0: e2509 ARG1: u2510 ARG2: x2473 ]           |
+|               |           [ _open_a_to LBL: h2474 ARG0: e2497 ARG1: x2473 ARG2: u2499 ]          |
+|               |           [ _to_p LBL: h2474 ARG0: e2488 ARG1: x2473 ARG2: x2486 ]               |
+|               |           [ def_udef_a_q LBL: h2495 ARG0: x2486 RSTR: h2493 BODY: h2494 ]        |
+|               |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|               |           [ _from_p LBL: h2474 ARG0: e2477 ARG1: x2473 ARG2: x2475 ]             |
+|               |           [ def_udef_a_q LBL: h2484 ARG0: x2475 RSTR: h2482 BODY: h2483 ]        |
+|               |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|               |           [ _door_n_1 LBL: h2474 ARG0: x2473 ]                                   |
+|               |           [ place_n LBL: h2519 ARG0: x2517 ]                                     |
+|               |           [ _un-_a_neg LBL: h2420 ARG0: i2470 ARG1: e2466 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2420 ARG0: e2466 ARG1: u2467 ARG2: x2419 ]           |
+|               |           [ _open_a_to LBL: h2420 ARG0: e2454 ARG1: x2419 ARG2: u2456 ]          |
+|               |           [ _to_p LBL: h2420 ARG0: e2445 ARG1: x2419 ARG2: x2443 ]               |
+|               |           [ def_udef_a_q LBL: h2452 ARG0: x2443 RSTR: h2450 BODY: h2451 ]        |
+|               |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|               |           [ _from_p LBL: h2420 ARG0: e2434 ARG1: x2419 ARG2: x2421 ]             |
+|               |           [ def_udef_a_q LBL: h2441 ARG0: x2421 RSTR: h2439 BODY: h2440 ]        |
+|               |           [ compound LBL: h2422 ARG0: e2430 [ e PROG: - ] ARG1: x2421 ARG2:      |
+|               | x2423 ]                                                                          |
+|               |           [ udef_q LBL: h2428 ARG0: x2423 RSTR: h2426 BODY: h2427 ]              |
+|               |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|               |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|               |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|               |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 h2527 qeq h2474 h2532 qeq h2519 h2450 |
+|               | qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                                      |
+|               |   ICONS: < e2509 topic x2473 e2466 topic x2419 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2544                                                                     |
+|               |   INDEX: e2541                                                                   |
+|               |   RELS: < [ unknown LBL: h2540 ARG: x2419 ARG0: e2541 ]                          |
+|               |           [ def_udef_a_q LBL: h2539 ARG0: x2419 RSTR: h2537 BODY: h2538 ]        |
+|               |           [ loc_nonsp LBL: h2420 ARG0: e2520 ARG1: x2419 ARG2: x2517 ]           |
+|               |           [ def_implicit_q LBL: h2534 ARG0: x2517 RSTR: h2532 BODY: h2533 ]      |
+|               |           [ _west_a_1 LBL: h2519 ARG0: i2516 ARG1: x2517 ARG2: x2473 ]           |
+|               |           [ def_udef_a_q LBL: h2529 ARG0: x2473 RSTR: h2527 BODY: h2528 ]        |
+|               |           [ _un-_a_neg LBL: h2474 ARG0: i2513 ARG1: e2509 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2474 ARG0: e2509 ARG1: u2510 ARG2: x2473 ]           |
+|               |           [ _open_a_to LBL: h2474 ARG0: e2497 ARG1: x2473 ARG2: u2499 ]          |
+|               |           [ _to_p LBL: h2474 ARG0: e2488 ARG1: x2473 ARG2: x2486 ]               |
+|               |           [ def_udef_a_q LBL: h2495 ARG0: x2486 RSTR: h2493 BODY: h2494 ]        |
+|               |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|               |           [ _from_p LBL: h2474 ARG0: e2477 ARG1: x2473 ARG2: x2475 ]             |
+|               |           [ def_udef_a_q LBL: h2484 ARG0: x2475 RSTR: h2482 BODY: h2483 ]        |
+|               |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|               |           [ _door_n_1 LBL: h2474 ARG0: x2473 ]                                   |
+|               |           [ place_n LBL: h2519 ARG0: x2517 ]                                     |
+|               |           [ _un-_a_neg LBL: h2420 ARG0: i2470 ARG1: e2466 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2420 ARG0: e2466 ARG1: u2467 ARG2: x2419 ]           |
+|               |           [ _open_a_to LBL: h2420 ARG0: e2454 ARG1: x2419 ARG2: u2456 ]          |
+|               |           [ _to_p LBL: h2420 ARG0: e2445 ARG1: x2419 ARG2: x2443 ]               |
+|               |           [ def_udef_a_q LBL: h2452 ARG0: x2443 RSTR: h2450 BODY: h2451 ]        |
+|               |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|               |           [ _from_p LBL: h2420 ARG0: e2434 ARG1: x2419 ARG2: x2421 ]             |
+|               |           [ def_udef_a_q LBL: h2441 ARG0: x2421 RSTR: h2439 BODY: h2440 ]        |
+|               |           [ compound LBL: h2422 ARG0: e2430 [ e PROG: - ] ARG1: x2421 ARG2:      |
+|               | x2423 ]                                                                          |
+|               |           [ udef_q LBL: h2428 ARG0: x2423 RSTR: h2426 BODY: h2427 ]              |
+|               |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|               |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|               |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|               |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 h2527 qeq h2474 h2532 qeq h2519 h2450 |
+|               | qeq h2444 h2426 qeq h2424 h2439 qeq h2422 h2537 qeq h2420 h2544 qeq h2540 >      |
+|               |   ICONS: < e2509 topic x2473 e2466 topic x2419 > ]                               |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------+
+|                                                 NODE SEMENTS                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| Node                      | Generated SEMENT                                                                 |
++---------------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToKitchenDoor | [ TOP: h2420                                                                     |
+|                           |   INDEX: x2419                                                                   |
+|                           |   RELS: < [ _to_p LBL: h2448 ARG0: e2445 ARG1: u2446 ARG2: i2447 ]               |
+|                           |           [ def_udef_a_q LBL: h2452 ARG0: x2449 RSTR: h2450 BODY: h2451 ]        |
+|                           |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|                           |           [ _from_p LBL: h2437 ARG0: e2434 ARG1: u2435 ARG2: u2436 ]             |
+|                           |           [ def_udef_a_q LBL: h2441 ARG0: x2438 RSTR: h2439 BODY: h2440 ]        |
+|                           |           [ compound LBL: h2433 ARG0: e2430 [ e PROG: - ] ARG1: u2431 ARG2:      |
+|                           | u2432 ]                                                                          |
+|                           |           [ udef_q LBL: h2428 ARG0: x2425 RSTR: h2426 BODY: h2427 ]              |
+|                           |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|                           |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|                           |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|                           |   HCONS: < h2450 qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                     |
+|                           |   EQS: < x2449 eq x2443 h2448 eq h2453 i2447 eq x2449 x2425 eq x2423 h2433 eq    |
+|                           | h2429 u2432 eq x2425 h2433 eq h2422 u2431 eq x2421 x2438 eq x2421 h2437 eq h2442 |
+|                           | u2436 eq x2438 h2437 eq h2420 u2435 eq x2419 h2448 eq h2420 u2446 eq x2419 > ]   |
++---------------------------+----------------------------------------------------------------------------------+
+| open                      | [ TOP: h2500                                                                     |
+|                           |   INDEX: e2497                                                                   |
+|                           |   RELS: < [ _open_a_to LBL: h2500 ARG0: e2497 ARG1: u2498 ARG2: u2499 ] >        |
+|                           |   SLOTS: < ARG1: u2498 ARG2: u2499 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| true                      | [ TOP: h2504                                                                     |
+|                           |   INDEX: e2501                                                                   |
+|                           |   RELS: < [ _true_a_of LBL: h2504 ARG0: e2501 ARG1: u2502 ARG2: u2503 ] >        |
+|                           |   SLOTS: < ARG1: u2502 ARG2: u2503 > ]                                           |
++---------------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor     | [ TOP: h2474                                                                     |
+|                           |   INDEX: x2473                                                                   |
+|                           |   RELS: < [ _to_p LBL: h2491 ARG0: e2488 ARG1: u2489 ARG2: i2490 ]               |
+|                           |           [ def_udef_a_q LBL: h2495 ARG0: x2492 RSTR: h2493 BODY: h2494 ]        |
+|                           |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|                           |           [ _from_p LBL: h2480 ARG0: e2477 ARG1: u2478 ARG2: u2479 ]             |
+|                           |           [ def_udef_a_q LBL: h2484 ARG0: x2481 RSTR: h2482 BODY: h2483 ]        |
+|                           |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|                           |           [ _door_n_1 LBL: h2474 ARG0: x2473 ] >                                 |
+|                           |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 >                                     |
+|                           |   EQS: < x2492 eq x2486 h2491 eq h2496 i2490 eq x2492 x2481 eq x2475 h2480 eq    |
+|                           | h2485 u2479 eq x2481 h2480 eq h2474 u2478 eq x2473 h2491 eq h2474 u2489 eq x2473 |
+|                           | > ]                                                                              |
++---------------------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                      EDGE SEMENTS                                                                                     |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| Edge                                           | Parent                    | Child                 | Generated SEMENT                                                                 |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToKitchenDoor_prop_idOpenState     | idLivingRoomToKitchenDoor | open                  | [ TOP: h2420                                                                     |
+|                                                |                           |                       |   INDEX: x2419                                                                   |
+|                                                |                           |                       |   RELS: < [ _open_a_to LBL: h2457 ARG0: e2454 ARG1: u2455 ARG2: u2456 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2448 ARG0: e2445 ARG1: u2446 ARG2: i2447 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2452 ARG0: x2449 RSTR: h2450 BODY: h2451 ]        |
+|                                                |                           |                       |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|                                                |                           |                       |           [ _from_p LBL: h2437 ARG0: e2434 ARG1: u2435 ARG2: u2436 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2441 ARG0: x2438 RSTR: h2439 BODY: h2440 ]        |
+|                                                |                           |                       |           [ compound LBL: h2433 ARG0: e2430 [ e PROG: - ] ARG1: u2431 ARG2:      |
+|                                                |                           |                       | u2432 ]                                                                          |
+|                                                |                           |                       |           [ udef_q LBL: h2428 ARG0: x2425 RSTR: h2426 BODY: h2427 ]              |
+|                                                |                           |                       |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|                                                |                           |                       |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|                                                |                           |                       |   HCONS: < h2450 qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                     |
+|                                                |                           |                       |   EQS: < x2449 eq x2443 h2448 eq h2453 i2447 eq x2449 x2425 eq x2423 h2433 eq    |
+|                                                |                           |                       | h2429 u2432 eq x2425 h2433 eq h2422 u2431 eq x2421 x2438 eq x2421 h2437 eq h2442 |
+|                                                |                           |                       | u2436 eq x2438 h2437 eq h2420 u2435 eq x2419 h2448 eq h2420 u2446 eq x2419 h2457 |
+|                                                |                           |                       | eq h2420 u2455 eq x2419 > ]                                                      |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| idLivingRoomToKitchenDoor_prop_idUnknownObject | idLivingRoomToKitchenDoor | true                  | [ TOP: h2420                                                                     |
+|                                                |                           |                       |   INDEX: x2419                                                                   |
+|                                                |                           |                       |   RELS: < [ _un-_a_neg LBL: h2472 ARG0: i2470 ARG1: e2471 ]                      |
+|                                                |                           |                       |           [ _know_v_1 LBL: h2469 ARG0: e2466 [ e PERF: - ] ARG1: u2467 ARG2:     |
+|                                                |                           |                       | i2468 ]                                                                          |
+|                                                |                           |                       |           [ _open_a_to LBL: h2457 ARG0: e2454 ARG1: u2455 ARG2: u2456 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2448 ARG0: e2445 ARG1: u2446 ARG2: i2447 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2452 ARG0: x2449 RSTR: h2450 BODY: h2451 ]        |
+|                                                |                           |                       |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|                                                |                           |                       |           [ _from_p LBL: h2437 ARG0: e2434 ARG1: u2435 ARG2: u2436 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2441 ARG0: x2438 RSTR: h2439 BODY: h2440 ]        |
+|                                                |                           |                       |           [ compound LBL: h2433 ARG0: e2430 [ e PROG: - ] ARG1: u2431 ARG2:      |
+|                                                |                           |                       | u2432 ]                                                                          |
+|                                                |                           |                       |           [ udef_q LBL: h2428 ARG0: x2425 RSTR: h2426 BODY: h2427 ]              |
+|                                                |                           |                       |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|                                                |                           |                       |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|                                                |                           |                       |   HCONS: < h2450 qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                     |
+|                                                |                           |                       |   ICONS: < e2466 topic i2468 >                                                   |
+|                                                |                           |                       |   EQS: < h2472 eq h2469 e2471 eq e2466 x2449 eq x2443 h2448 eq h2453 i2447 eq    |
+|                                                |                           |                       | x2449 x2425 eq x2423 h2433 eq h2429 u2432 eq x2425 h2433 eq h2422 u2431 eq x2421 |
+|                                                |                           |                       | x2438 eq x2421 h2437 eq h2442 u2436 eq x2438 h2437 eq h2420 u2435 eq x2419 h2448 |
+|                                                |                           |                       | eq h2420 u2446 eq x2419 h2457 eq h2420 u2455 eq x2419 h2469 eq h2420 i2468 eq    |
+|                                                |                           |                       | x2419 > ]                                                                        |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| isWestOf                                       | idLivingRoomToKitchenDoor | idBedroomToClosetDoor | [ TOP: h2420                                                                     |
+|                                                |                           |                       |   INDEX: x2419                                                                   |
+|                                                |                           |                       |   RELS: < [ loc_nonsp LBL: h2523 ARG0: e2520 ARG1: u2521 ARG2: x2522 ]           |
+|                                                |                           |                       |           [ def_implicit_q LBL: h2534 ARG0: x2531 RSTR: h2532 BODY: h2533 ]      |
+|                                                |                           |                       |           [ _west_a_1 LBL: h2519 ARG0: i2516 ARG1: x2517 ARG2: u2518 ]           |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2529 ARG0: x2526 RSTR: h2527 BODY: h2528 ]        |
+|                                                |                           |                       |           [ _un-_a_neg LBL: h2515 ARG0: i2513 ARG1: e2514 ]                      |
+|                                                |                           |                       |           [ _know_v_1 LBL: h2512 ARG0: e2509 [ e PERF: - ] ARG1: u2510 ARG2:     |
+|                                                |                           |                       | i2511 ]                                                                          |
+|                                                |                           |                       |           [ _open_a_to LBL: h2500 ARG0: e2497 ARG1: u2498 ARG2: u2499 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2491 ARG0: e2488 ARG1: u2489 ARG2: i2490 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2495 ARG0: x2492 RSTR: h2493 BODY: h2494 ]        |
+|                                                |                           |                       |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|                                                |                           |                       |           [ _from_p LBL: h2480 ARG0: e2477 ARG1: u2478 ARG2: u2479 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2484 ARG0: x2481 RSTR: h2482 BODY: h2483 ]        |
+|                                                |                           |                       |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2474 ARG0: x2473 ]                                   |
+|                                                |                           |                       |           [ place_n LBL: h2525 ARG0: x2524 ]                                     |
+|                                                |                           |                       |           [ _un-_a_neg LBL: h2472 ARG0: i2470 ARG1: e2471 ]                      |
+|                                                |                           |                       |           [ _know_v_1 LBL: h2469 ARG0: e2466 [ e PERF: - ] ARG1: u2467 ARG2:     |
+|                                                |                           |                       | i2468 ]                                                                          |
+|                                                |                           |                       |           [ _open_a_to LBL: h2457 ARG0: e2454 ARG1: u2455 ARG2: u2456 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2448 ARG0: e2445 ARG1: u2446 ARG2: i2447 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2452 ARG0: x2449 RSTR: h2450 BODY: h2451 ]        |
+|                                                |                           |                       |           [ _kitchen_n_1 LBL: h2444 ARG0: x2443 ]                                |
+|                                                |                           |                       |           [ _from_p LBL: h2437 ARG0: e2434 ARG1: u2435 ARG2: u2436 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2441 ARG0: x2438 RSTR: h2439 BODY: h2440 ]        |
+|                                                |                           |                       |           [ compound LBL: h2433 ARG0: e2430 [ e PROG: - ] ARG1: u2431 ARG2:      |
+|                                                |                           |                       | u2432 ]                                                                          |
+|                                                |                           |                       |           [ udef_q LBL: h2428 ARG0: x2425 RSTR: h2426 BODY: h2427 ]              |
+|                                                |                           |                       |           [ _living_n_1 LBL: h2424 ARG0: x2423 ]                                 |
+|                                                |                           |                       |           [ _room_n_unit LBL: h2422 ARG0: x2421 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2420 ARG0: x2419 ] >                                 |
+|                                                |                           |                       |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 h2527 qeq h2474 h2532 qeq h2525 h2450 |
+|                                                |                           |                       | qeq h2444 h2426 qeq h2424 h2439 qeq h2422 >                                      |
+|                                                |                           |                       |   ICONS: < e2509 topic i2511 e2466 topic i2468 >                                 |
+|                                                |                           |                       |   EQS: < h2515 eq h2512 e2514 eq e2509 x2492 eq x2486 h2491 eq h2496 i2490 eq    |
+|                                                |                           |                       | x2492 x2481 eq x2475 h2480 eq h2485 u2479 eq x2481 h2480 eq h2474 u2478 eq x2473 |
+|                                                |                           |                       | h2491 eq h2474 u2489 eq x2473 h2500 eq h2474 u2498 eq x2473 h2512 eq h2474 i2511 |
+|                                                |                           |                       | eq x2473 x2526 eq x2473 h2519 eq h2530 u2518 eq x2526 h2519 eq h2525 x2517 eq    |
+|                                                |                           |                       | x2524 x2531 eq x2524 h2523 eq h2535 x2522 eq x2531 h2472 eq h2469 e2471 eq e2466 |
+|                                                |                           |                       | x2449 eq x2443 h2448 eq h2453 i2447 eq x2449 x2425 eq x2423 h2433 eq h2429 u2432 |
+|                                                |                           |                       | eq x2425 h2433 eq h2422 u2431 eq x2421 x2438 eq x2421 h2437 eq h2442 u2436 eq    |
+|                                                |                           |                       | x2438 h2437 eq h2420 u2435 eq x2419 h2448 eq h2420 u2446 eq x2419 h2457 eq h2420 |
+|                                                |                           |                       | u2455 eq x2419 h2469 eq h2420 i2468 eq x2419 h2523 eq h2420 u2521 eq x2419 > ]   |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor_prop_idOpenState         | idBedroomToClosetDoor     | open                  | [ TOP: h2474                                                                     |
+|                                                |                           |                       |   INDEX: x2473                                                                   |
+|                                                |                           |                       |   RELS: < [ _open_a_to LBL: h2500 ARG0: e2497 ARG1: u2498 ARG2: u2499 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2491 ARG0: e2488 ARG1: u2489 ARG2: i2490 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2495 ARG0: x2492 RSTR: h2493 BODY: h2494 ]        |
+|                                                |                           |                       |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|                                                |                           |                       |           [ _from_p LBL: h2480 ARG0: e2477 ARG1: u2478 ARG2: u2479 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2484 ARG0: x2481 RSTR: h2482 BODY: h2483 ]        |
+|                                                |                           |                       |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2474 ARG0: x2473 ] >                                 |
+|                                                |                           |                       |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 >                                     |
+|                                                |                           |                       |   EQS: < x2492 eq x2486 h2491 eq h2496 i2490 eq x2492 x2481 eq x2475 h2480 eq    |
+|                                                |                           |                       | h2485 u2479 eq x2481 h2480 eq h2474 u2478 eq x2473 h2491 eq h2474 u2489 eq x2473 |
+|                                                |                           |                       | h2500 eq h2474 u2498 eq x2473 > ]                                                |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+| idBedroomToClosetDoor_prop_idUnknownObject     | idBedroomToClosetDoor     | true                  | [ TOP: h2474                                                                     |
+|                                                |                           |                       |   INDEX: x2473                                                                   |
+|                                                |                           |                       |   RELS: < [ _un-_a_neg LBL: h2515 ARG0: i2513 ARG1: e2514 ]                      |
+|                                                |                           |                       |           [ _know_v_1 LBL: h2512 ARG0: e2509 [ e PERF: - ] ARG1: u2510 ARG2:     |
+|                                                |                           |                       | i2511 ]                                                                          |
+|                                                |                           |                       |           [ _open_a_to LBL: h2500 ARG0: e2497 ARG1: u2498 ARG2: u2499 ]          |
+|                                                |                           |                       |           [ _to_p LBL: h2491 ARG0: e2488 ARG1: u2489 ARG2: i2490 ]               |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2495 ARG0: x2492 RSTR: h2493 BODY: h2494 ]        |
+|                                                |                           |                       |           [ _closet_n_1 LBL: h2487 ARG0: x2486 ]                                 |
+|                                                |                           |                       |           [ _from_p LBL: h2480 ARG0: e2477 ARG1: u2478 ARG2: u2479 ]             |
+|                                                |                           |                       |           [ def_udef_a_q LBL: h2484 ARG0: x2481 RSTR: h2482 BODY: h2483 ]        |
+|                                                |                           |                       |           [ _bedroom_n_1 LBL: h2476 ARG0: x2475 ]                                |
+|                                                |                           |                       |           [ _door_n_1 LBL: h2474 ARG0: x2473 ] >                                 |
+|                                                |                           |                       |   HCONS: < h2493 qeq h2487 h2482 qeq h2476 >                                     |
+|                                                |                           |                       |   ICONS: < e2509 topic i2511 >                                                   |
+|                                                |                           |                       |   EQS: < h2515 eq h2512 e2514 eq e2509 x2492 eq x2486 h2491 eq h2496 i2490 eq    |
+|                                                |                           |                       | x2492 x2481 eq x2475 h2480 eq h2485 u2479 eq x2481 h2480 eq h2474 u2478 eq x2473 |
+|                                                |                           |                       | h2491 eq h2474 u2489 eq x2473 h2500 eq h2474 u2498 eq x2473 h2512 eq h2474 i2511 |
+|                                                |                           |                       | eq x2473 > ]                                                                     |
++------------------------------------------------+---------------------------+-----------------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+|                                                       GENERATED ENGLISH TEXT                                                       |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+| #   | Generated Text                                                                                                               |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+| 1   | An open unknown door from the living room west of the open unknown doors to the closet from the bedrooms to the kitchen      |
+| 2   | An open unknown door from the living room west of the open unknown doors to the closet from the bedrooms to the kitchens     |
+| 3   | An open unknown door from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchen     |
+| 4   | An open unknown door from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens    |
+| 5   | An open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from a living room          |
+| 6   | An open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from the living room        |
+| 7   | An open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms       |
+| 8   | An open unknown door to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms      |
+| 9   | An open unknown door to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms     |
+| 10  | An open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from a living room         |
+| 11  | An open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from the living room       |
+| 12  | An open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from the living rooms      |
+| 13  | An open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from a living room          |
+| 14  | An open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from the living room        |
+| 15  | An open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from the living rooms       |
+| 16  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from a living room        |
+| 17  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms         |
+| 18  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms.        |
+| 19  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living room      |
+| 20  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms     |
+| 21  | An open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms.    |
+| 22  | Open unknown doors from a living room to a kitchen west of the open unknown door to the closet from the bedrooms             |
+| 23  | Open unknown doors from a living room to a kitchen west of the open unknown doors to a closet from the bedrooms              |
+| 24  | Open unknown doors from a living room to a kitchen west of the open unknown doors to the closet from the bedrooms            |
+| 25  | Open unknown doors from a living room to kitchens west of the open unknown door to the closet from the bedrooms              |
+| 26  | Open unknown doors from a living room to kitchens west of the open unknown doors to the closet from the bedrooms             |
+| 27  | Open unknown doors from a living room to the kitchen west of an open unknown door to the closet from the bedrooms            |
+| 28  | Open unknown doors from a living room to the kitchen west of open unknown doors to the closet from the bedrooms              |
+| 29  | Open unknown doors from a living room to the kitchen west of the open unknown door to a closet from the bedrooms             |
+| 30  | Open unknown doors from a living room to the kitchen west of the open unknown door to closets from the bedrooms              |
+| 31  | Open unknown doors from a living room to the kitchen west of the open unknown door to the closet from the bedroom            |
+| 32  | Open unknown doors from a living room to the kitchen west of the open unknown door to the closet from the bedrooms           |
+| 33  | Open unknown doors from a living room to the kitchen west of the open unknown door to the closet from the bedrooms.          |
+| 34  | Open unknown doors from a living room to the kitchen west of the open unknown door to the closets from the bedrooms          |
+| 35  | Open unknown doors from a living room to the kitchen west of the open unknown doors from the bedroom to the closet           |
+| 36  | Open unknown doors from a living room to the kitchen west of the open unknown doors from the bedroom to the closets          |
+| 37  | Open unknown doors from a living room to the kitchen west of the open unknown doors from the bedrooms to the closet          |
+| 38  | Open unknown doors from a living room to the kitchen west of the open unknown doors from the bedrooms to the closets         |
+| 39  | Open unknown doors from a living room to the kitchen west of the open unknown doors to a closet from the bedrooms            |
+| 40  | Open unknown doors from a living room to the kitchen west of the open unknown doors to closets from the bedrooms             |
+| 41  | Open unknown doors from a living room to the kitchen west of the open unknown doors to the closet from a bedroom             |
+| 42  | Open unknown doors from a living room to the kitchen west of the open unknown doors to the closet from the bedroom           |
+| 43  | Open unknown doors from a living room to the kitchen west of the open unknown doors to the closet from the bedrooms          |
+| 44  | Open unknown doors from a living room to the kitchen west of the open unknown doors to the closet from the bedrooms.         |
+| 45  | Open unknown doors from a living room to the kitchen west of the open unknown doors to the closets from the bedrooms         |
+| 46  | Open unknown doors from a living room to the kitchen west of the unknown open door to the closet from the bedrooms           |
+| 47  | Open unknown doors from a living room to the kitchen west of the unknown open doors to the closet from the bedrooms          |
+| 48  | Open unknown doors from a living room to the kitchens west of the open unknown door to the closet from the bedrooms          |
+| 49  | Open unknown doors from a living room to the kitchens west of the open unknown doors to the closet from the bedrooms         |
+| 50  | Open unknown doors from living rooms to a kitchen west of the open unknown door to the closet from the bedrooms              |
+| 51  | Open unknown doors from living rooms to a kitchen west of the open unknown doors to a closet from the bedrooms               |
+| 52  | Open unknown doors from living rooms to a kitchen west of the open unknown doors to the closet from the bedrooms             |
+| 53  | Open unknown doors from living rooms to kitchens west of the open unknown doors to the closet from the bedrooms              |
+| 54  | Open unknown doors from living rooms to the kitchen west of an open unknown door to the closet from the bedrooms             |
+| 55  | Open unknown doors from living rooms to the kitchen west of the open unknown door to a closet from the bedrooms              |
+| 56  | Open unknown doors from living rooms to the kitchen west of the open unknown door to the closet from the bedroom             |
+| 57  | Open unknown doors from living rooms to the kitchen west of the open unknown door to the closet from the bedrooms            |
+| 58  | Open unknown doors from living rooms to the kitchen west of the open unknown door to the closet from the bedrooms.           |
+| 59  | Open unknown doors from living rooms to the kitchen west of the open unknown door to the closets from the bedrooms           |
+| 60  | Open unknown doors from living rooms to the kitchen west of the open unknown doors from the bedroom to the closet            |
+| 61  | Open unknown doors from living rooms to the kitchen west of the open unknown doors from the bedroom to the closets           |
+| 62  | Open unknown doors from living rooms to the kitchen west of the open unknown doors from the bedrooms to the closets          |
+| 63  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to a closet from the bedrooms             |
+| 64  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to closets from the bedrooms              |
+| 65  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to the closet from a bedroom              |
+| 66  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to the closet from the bedroom            |
+| 67  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms           |
+| 68  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms.          |
+| 69  | Open unknown doors from living rooms to the kitchen west of the open unknown doors to the closets from the bedrooms          |
+| 70  | Open unknown doors from living rooms to the kitchen west of the unknown open door to the closet from the bedrooms            |
+| 71  | Open unknown doors from living rooms to the kitchen west of the unknown open doors to the closet from the bedrooms           |
+| 72  | Open unknown doors from living rooms to the kitchens west of the open unknown door to the closet from the bedrooms           |
+| 73  | Open unknown doors from living rooms to the kitchens west of the open unknown doors to the closet from the bedrooms          |
+| 74  | Open unknown doors from the living room to a kitchen west of an open unknown door to the closet from the bedrooms            |
+| 75  | Open unknown doors from the living room to a kitchen west of the open unknown door to a closet from the bedrooms             |
+| 76  | Open unknown doors from the living room to a kitchen west of the open unknown door to the closet from the bedrooms           |
+| 77  | Open unknown doors from the living room to a kitchen west of the open unknown doors to a closet from the bedrooms            |
+| 78  | Open unknown doors from the living room to a kitchen west of the open unknown doors to closets from the bedrooms             |
+| 79  | Open unknown doors from the living room to a kitchen west of the open unknown doors to the closet from the bedroom           |
+| 80  | Open unknown doors from the living room to a kitchen west of the open unknown doors to the closet from the bedrooms          |
+| 81  | Open unknown doors from the living room to a kitchen west of the open unknown doors to the closet from the bedrooms.         |
+| 82  | Open unknown doors from the living room to a kitchen west of the open unknown doors to the closets from the bedrooms         |
+| 83  | Open unknown doors from the living room to kitchens west of the open unknown door to the closet from the bedrooms            |
+| 84  | Open unknown doors from the living room to kitchens west of the open unknown doors to a closet from the bedrooms             |
+| 85  | Open unknown doors from the living room to kitchens west of the open unknown doors to the closet from the bedrooms           |
+| 86  | Open unknown doors from the living room to the kitchen west of an open unknown door to a closet from the bedrooms            |
+| 87  | Open unknown doors from the living room to the kitchen west of an open unknown door to the closet from the bedrooms          |
+| 88  | Open unknown doors from the living room to the kitchen west of open unknown doors to the closet from the bedrooms            |
+| 89  | Open unknown doors from the living room to the kitchen west of the open unknown door from the bedroom to the closet          |
+| 90  | Open unknown doors from the living room to the kitchen west of the open unknown door from the bedroom to the closets         |
+| 91  | Open unknown doors from the living room to the kitchen west of the open unknown door from the bedrooms to the closets        |
+| 92  | Open unknown doors from the living room to the kitchen west of the open unknown door to a closet from the bedrooms           |
+| 93  | Open unknown doors from the living room to the kitchen west of the open unknown door to closets from the bedrooms            |
+| 94  | Open unknown doors from the living room to the kitchen west of the open unknown door to the closet from a bedroom            |
+| 95  | Open unknown doors from the living room to the kitchen west of the open unknown door to the closet from the bedroom          |
+| 96  | Open unknown doors from the living room to the kitchen west of the open unknown door to the closet from the bedrooms         |
+| 97  | Open unknown doors from the living room to the kitchen west of the open unknown door to the closet from the bedrooms.        |
+| 98  | Open unknown doors from the living room to the kitchen west of the open unknown door to the closets from the bedrooms        |
+| 99  | Open unknown doors from the living room to the kitchen west of the open unknown doors from the bedroom to a closet           |
+| 100 | Open unknown doors from the living room to the kitchen west of the open unknown doors from the bedroom to the closet         |
+| 101 | Open unknown doors from the living room to the kitchen west of the open unknown doors from the bedroom to the closets        |
+| 102 | Open unknown doors from the living room to the kitchen west of the open unknown doors from the bedrooms to the closet        |
+| 103 | Open unknown doors from the living room to the kitchen west of the open unknown doors from the bedrooms to the closets       |
+| 104 | Open unknown doors from the living room to the kitchen west of the open unknown doors to a closet from the bedroom           |
+| 105 | Open unknown doors from the living room to the kitchen west of the open unknown doors to a closet from the bedrooms          |
+| 106 | Open unknown doors from the living room to the kitchen west of the open unknown doors to a closet from the bedrooms.         |
+| 107 | Open unknown doors from the living room to the kitchen west of the open unknown doors to closets from the bedrooms           |
+| 108 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from a bedroom           |
+| 109 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from bedrooms            |
+| 110 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from the bedroom         |
+| 111 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from the bedrooms        |
+| 112 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from the bedrooms.       |
+| 113 | Open unknown doors from the living room to the kitchen west of the open unknown doors to the closets from the bedrooms       |
+| 114 | Open unknown doors from the living room to the kitchen west of the unknown open door to the closet from the bedrooms         |
+| 115 | Open unknown doors from the living room to the kitchen west of the unknown open doors to the closet from the bedrooms        |
+| 116 | Open unknown doors from the living room to the kitchens west of the open unknown door to the closet from the bedrooms        |
+| 117 | Open unknown doors from the living room to the kitchens west of the open unknown doors to a closet from the bedrooms         |
+| 118 | Open unknown doors from the living room to the kitchens west of the open unknown doors to the closet from the bedrooms       |
+| 119 | Open unknown doors from the living room west of the open unknown doors to the closet from the bedrooms to the kitchens       |
+| 120 | Open unknown doors from the living rooms to a kitchen west of an open unknown door to the closet from the bedrooms           |
+| 121 | Open unknown doors from the living rooms to a kitchen west of the open unknown door to a closet from the bedrooms            |
+| 122 | Open unknown doors from the living rooms to a kitchen west of the open unknown door to the closet from the bedrooms          |
+| 123 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to a closet from the bedrooms           |
+| 124 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to closets from the bedrooms            |
+| 125 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to the closet from the bedroom          |
+| 126 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to the closet from the bedrooms         |
+| 127 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to the closet from the bedrooms.        |
+| 128 | Open unknown doors from the living rooms to a kitchen west of the open unknown doors to the closets from the bedrooms        |
+| 129 | Open unknown doors from the living rooms to kitchens west of the open unknown door to the closet from the bedrooms           |
+| 130 | Open unknown doors from the living rooms to kitchens west of the open unknown doors to a closet from the bedrooms            |
+| 131 | Open unknown doors from the living rooms to kitchens west of the open unknown doors to the closet from the bedrooms          |
+| 132 | Open unknown doors from the living rooms to the kitchen west of an open unknown door to a closet from the bedrooms           |
+| 133 | Open unknown doors from the living rooms to the kitchen west of an open unknown door to the closet from the bedrooms         |
+| 134 | Open unknown doors from the living rooms to the kitchen west of open unknown doors to the closet from the bedrooms           |
+| 135 | Open unknown doors from the living rooms to the kitchen west of the open unknown door from the bedroom to the closet         |
+| 136 | Open unknown doors from the living rooms to the kitchen west of the open unknown door from the bedroom to the closets        |
+| 137 | Open unknown doors from the living rooms to the kitchen west of the open unknown door from the bedrooms to the closets       |
+| 138 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to a closet from the bedrooms          |
+| 139 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to closets from the bedrooms           |
+| 140 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to the closet from a bedroom           |
+| 141 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to the closet from the bedroom         |
+| 142 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to the closet from the bedrooms        |
+| 143 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to the closet from the bedrooms.       |
+| 144 | Open unknown doors from the living rooms to the kitchen west of the open unknown door to the closets from the bedrooms       |
+| 145 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors from the bedroom to a closet          |
+| 146 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors from the bedroom to the closet        |
+| 147 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors from the bedroom to the closets       |
+| 148 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors from the bedrooms to the closet       |
+| 149 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors from the bedrooms to the closets      |
+| 150 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to a closet from the bedroom          |
+| 151 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to a closet from the bedrooms         |
+| 152 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to a closet from the bedrooms.        |
+| 153 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to closets from the bedrooms          |
+| 154 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from a bedroom          |
+| 155 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from bedrooms           |
+| 156 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from the bedroom        |
+| 157 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms       |
+| 158 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms.      |
+| 159 | Open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closets from the bedrooms      |
+| 160 | Open unknown doors from the living rooms to the kitchen west of the unknown open door to the closet from the bedrooms        |
+| 161 | Open unknown doors from the living rooms to the kitchen west of the unknown open doors to the closet from the bedrooms       |
+| 162 | Open unknown doors from the living rooms to the kitchens west of the open unknown door to the closet from the bedrooms       |
+| 163 | Open unknown doors from the living rooms to the kitchens west of the open unknown doors to a closet from the bedrooms        |
+| 164 | Open unknown doors from the living rooms to the kitchens west of the open unknown doors to the closet from the bedrooms      |
+| 165 | Open unknown doors from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens      |
+| 166 | Open unknown doors to a kitchen from a living room west of an open unknown door to the closet from the bedrooms              |
+| 167 | Open unknown doors to a kitchen from a living room west of the open unknown door to a closet from the bedrooms               |
+| 168 | Open unknown doors to a kitchen from a living room west of the open unknown door to the closet from the bedrooms             |
+| 169 | Open unknown doors to a kitchen from a living room west of the open unknown doors from the bedroom to the closets            |
+| 170 | Open unknown doors to a kitchen from a living room west of the open unknown doors to a closet from the bedrooms              |
+| 171 | Open unknown doors to a kitchen from a living room west of the open unknown doors to closets from the bedrooms               |
+| 172 | Open unknown doors to a kitchen from a living room west of the open unknown doors to the closet from the bedroom             |
+| 173 | Open unknown doors to a kitchen from a living room west of the open unknown doors to the closet from the bedrooms            |
+| 174 | Open unknown doors to a kitchen from a living room west of the open unknown doors to the closet from the bedrooms.           |
+| 175 | Open unknown doors to a kitchen from a living room west of the open unknown doors to the closets from the bedrooms           |
+| 176 | Open unknown doors to a kitchen from a living room west of the unknown open door to the closet from the bedrooms             |
+| 177 | Open unknown doors to a kitchen from a living room west of the unknown open doors to the closet from the bedrooms            |
+| 178 | Open unknown doors to a kitchen from living rooms west of the open unknown door to the closet from the bedrooms              |
+| 179 | Open unknown doors to a kitchen from living rooms west of the open unknown doors to a closet from the bedrooms               |
+| 180 | Open unknown doors to a kitchen from living rooms west of the open unknown doors to the closet from the bedrooms             |
+| 181 | Open unknown doors to a kitchen from the living room west of an open unknown door to the closet from the bedrooms            |
+| 182 | Open unknown doors to a kitchen from the living room west of open unknown doors to the closet from the bedrooms              |
+| 183 | Open unknown doors to a kitchen from the living room west of the open unknown door to a closet from the bedrooms             |
+| 184 | Open unknown doors to a kitchen from the living room west of the open unknown door to closets from the bedrooms              |
+| 185 | Open unknown doors to a kitchen from the living room west of the open unknown door to the closet from the bedroom            |
+| 186 | Open unknown doors to a kitchen from the living room west of the open unknown door to the closet from the bedrooms           |
+| 187 | Open unknown doors to a kitchen from the living room west of the open unknown door to the closet from the bedrooms.          |
+| 188 | Open unknown doors to a kitchen from the living room west of the open unknown door to the closets from the bedrooms          |
+| 189 | Open unknown doors to a kitchen from the living room west of the open unknown doors from the bedroom to the closet           |
+| 190 | Open unknown doors to a kitchen from the living room west of the open unknown doors from the bedroom to the closets          |
+| 191 | Open unknown doors to a kitchen from the living room west of the open unknown doors from the bedrooms to the closet          |
+| 192 | Open unknown doors to a kitchen from the living room west of the open unknown doors from the bedrooms to the closets         |
+| 193 | Open unknown doors to a kitchen from the living room west of the open unknown doors to a closet from the bedrooms            |
+| 194 | Open unknown doors to a kitchen from the living room west of the open unknown doors to closets from the bedrooms             |
+| 195 | Open unknown doors to a kitchen from the living room west of the open unknown doors to the closet from a bedroom             |
+| 196 | Open unknown doors to a kitchen from the living room west of the open unknown doors to the closet from the bedroom           |
+| 197 | Open unknown doors to a kitchen from the living room west of the open unknown doors to the closet from the bedrooms          |
+| 198 | Open unknown doors to a kitchen from the living room west of the open unknown doors to the closet from the bedrooms.         |
+| 199 | Open unknown doors to a kitchen from the living room west of the open unknown doors to the closets from the bedrooms         |
+| 200 | Open unknown doors to a kitchen from the living room west of the unknown open door to the closet from the bedrooms           |
+| 201 | Open unknown doors to a kitchen from the living room west of the unknown open doors to the closet from the bedrooms          |
+| 202 | Open unknown doors to a kitchen from the living rooms west of an open unknown door to the closet from the bedrooms           |
+| 203 | Open unknown doors to a kitchen from the living rooms west of open unknown doors to the closet from the bedrooms             |
+| 204 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to a closet from the bedrooms            |
+| 205 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to closets from the bedrooms             |
+| 206 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to the closet from the bedroom           |
+| 207 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to the closet from the bedrooms          |
+| 208 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to the closet from the bedrooms.         |
+| 209 | Open unknown doors to a kitchen from the living rooms west of the open unknown door to the closets from the bedrooms         |
+| 210 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors from the bedroom to the closet          |
+| 211 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors from the bedroom to the closets         |
+| 212 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors from the bedrooms to the closet         |
+| 213 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors from the bedrooms to the closets        |
+| 214 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to a closet from the bedrooms           |
+| 215 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to closets from the bedrooms            |
+| 216 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closet from a bedroom            |
+| 217 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closet from the bedroom          |
+| 218 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms         |
+| 219 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms.        |
+| 220 | Open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closets from the bedrooms        |
+| 221 | Open unknown doors to a kitchen from the living rooms west of the unknown open door to the closet from the bedrooms          |
+| 222 | Open unknown doors to a kitchen from the living rooms west of the unknown open doors to the closet from the bedrooms         |
+| 223 | Open unknown doors to a kitchen west of the open unknown door to the closet from the bedrooms from a living room             |
+| 224 | Open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from a living room            |
+| 225 | Open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from the living room          |
+| 226 | Open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms         |
+| 227 | Open unknown doors to kitchens from a living room west of the open unknown door to the closet from the bedrooms              |
+| 228 | Open unknown doors to kitchens from a living room west of the open unknown doors to a closet from the bedrooms               |
+| 229 | Open unknown doors to kitchens from a living room west of the open unknown doors to the closet from the bedrooms             |
+| 230 | Open unknown doors to kitchens from living rooms west of the open unknown door to the closet from the bedrooms               |
+| 231 | Open unknown doors to kitchens from living rooms west of the open unknown doors to the closet from the bedrooms              |
+| 232 | Open unknown doors to kitchens from the living room west of an open unknown door to the closet from the bedrooms             |
+| 233 | Open unknown doors to kitchens from the living room west of the open unknown door to a closet from the bedrooms              |
+| 234 | Open unknown doors to kitchens from the living room west of the open unknown door to the closet from the bedrooms            |
+| 235 | Open unknown doors to kitchens from the living room west of the open unknown doors to a closet from the bedrooms             |
+| 236 | Open unknown doors to kitchens from the living room west of the open unknown doors to closets from the bedrooms              |
+| 237 | Open unknown doors to kitchens from the living room west of the open unknown doors to the closet from the bedroom            |
+| 238 | Open unknown doors to kitchens from the living room west of the open unknown doors to the closet from the bedrooms           |
+| 239 | Open unknown doors to kitchens from the living room west of the open unknown doors to the closet from the bedrooms.          |
+| 240 | Open unknown doors to kitchens from the living room west of the open unknown doors to the closets from the bedrooms          |
+| 241 | Open unknown doors to kitchens from the living rooms west of an open unknown door to the closet from the bedrooms            |
+| 242 | Open unknown doors to kitchens from the living rooms west of the open unknown door to a closet from the bedrooms             |
+| 243 | Open unknown doors to kitchens from the living rooms west of the open unknown door to the closet from the bedrooms           |
+| 244 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to a closet from the bedrooms            |
+| 245 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to closets from the bedrooms             |
+| 246 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to the closet from the bedroom           |
+| 247 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to the closet from the bedrooms          |
+| 248 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to the closet from the bedrooms.         |
+| 249 | Open unknown doors to kitchens from the living rooms west of the open unknown doors to the closets from the bedrooms         |
+| 250 | Open unknown doors to kitchens west of the open unknown doors to the closet from the bedrooms from a living room             |
+| 251 | Open unknown doors to the kitchen from a living room west of an open unknown door to a closet from the bedrooms              |
+| 252 | Open unknown doors to the kitchen from a living room west of an open unknown door to the closet from the bedrooms            |
+| 253 | Open unknown doors to the kitchen from a living room west of an unknown open door to the closet from the bedrooms            |
+| 254 | Open unknown doors to the kitchen from a living room west of open unknown doors to the closet from the bedrooms              |
+| 255 | Open unknown doors to the kitchen from a living room west of the open unknown door from the bedroom to the closet            |
+| 256 | Open unknown doors to the kitchen from a living room west of the open unknown door from the bedroom to the closets           |
+| 257 | Open unknown doors to the kitchen from a living room west of the open unknown door from the bedrooms to the closet           |
+| 258 | Open unknown doors to the kitchen from a living room west of the open unknown door from the bedrooms to the closets          |
+| 259 | Open unknown doors to the kitchen from a living room west of the open unknown door to a closet from the bedrooms             |
+| 260 | Open unknown doors to the kitchen from a living room west of the open unknown door to closets from the bedrooms              |
+| 261 | Open unknown doors to the kitchen from a living room west of the open unknown door to the closet from a bedroom              |
+| 262 | Open unknown doors to the kitchen from a living room west of the open unknown door to the closet from the bedroom            |
+| 263 | Open unknown doors to the kitchen from a living room west of the open unknown door to the closet from the bedrooms           |
+| 264 | Open unknown doors to the kitchen from a living room west of the open unknown door to the closet from the bedrooms.          |
+| 265 | Open unknown doors to the kitchen from a living room west of the open unknown door to the closets from the bedrooms          |
+| 266 | Open unknown doors to the kitchen from a living room west of the open unknown doors from a bedroom to the closets            |
+| 267 | Open unknown doors to the kitchen from a living room west of the open unknown doors from bedrooms to the closets             |
+| 268 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedroom to a closet             |
+| 269 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedroom to the closet           |
+| 270 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedroom to the closets          |
+| 271 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedrooms to a closet            |
+| 272 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedrooms to the closet          |
+| 273 | Open unknown doors to the kitchen from a living room west of the open unknown doors from the bedrooms to the closets         |
+| 274 | Open unknown doors to the kitchen from a living room west of the open unknown doors to a closet from the bedroom             |
+| 275 | Open unknown doors to the kitchen from a living room west of the open unknown doors to a closet from the bedrooms            |
+| 276 | Open unknown doors to the kitchen from a living room west of the open unknown doors to a closet from the bedrooms.           |
+| 277 | Open unknown doors to the kitchen from a living room west of the open unknown doors to closets from the bedrooms             |
+| 278 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from a bedroom             |
+| 279 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from bedrooms              |
+| 280 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from bedrooms.             |
+| 281 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from the bedroom           |
+| 282 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from the bedrooms          |
+| 283 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from the bedrooms.         |
+| 284 | Open unknown doors to the kitchen from a living room west of the open unknown doors to the closets from the bedrooms         |
+| 285 | Open unknown doors to the kitchen from a living room west of the unknown open door to a closet from the bedrooms             |
+| 286 | Open unknown doors to the kitchen from a living room west of the unknown open door to the closet from the bedrooms           |
+| 287 | Open unknown doors to the kitchen from a living room west of the unknown open doors to a closet from the bedrooms            |
+| 288 | Open unknown doors to the kitchen from a living room west of the unknown open doors to the closet from the bedrooms          |
+| 289 | Open unknown doors to the kitchen from living rooms west of an open unknown door to the closet from the bedrooms             |
+| 290 | Open unknown doors to the kitchen from living rooms west of open unknown doors to the closet from the bedrooms               |
+| 291 | Open unknown doors to the kitchen from living rooms west of the open unknown door to a closet from the bedrooms              |
+| 292 | Open unknown doors to the kitchen from living rooms west of the open unknown door to closets from the bedrooms               |
+| 293 | Open unknown doors to the kitchen from living rooms west of the open unknown door to the closet from the bedroom             |
+| 294 | Open unknown doors to the kitchen from living rooms west of the open unknown door to the closet from the bedrooms            |
+| 295 | Open unknown doors to the kitchen from living rooms west of the open unknown door to the closet from the bedrooms.           |
+| 296 | Open unknown doors to the kitchen from living rooms west of the open unknown door to the closets from the bedrooms           |
+| 297 | Open unknown doors to the kitchen from living rooms west of the open unknown doors from the bedroom to the closet            |
+| 298 | Open unknown doors to the kitchen from living rooms west of the open unknown doors from the bedroom to the closets           |
+| 299 | Open unknown doors to the kitchen from living rooms west of the open unknown doors from the bedrooms to the closets          |
+| 300 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to a closet from the bedrooms             |
+| 301 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to closets from the bedrooms              |
+| 302 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to the closet from a bedroom              |
+| 303 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to the closet from the bedroom            |
+| 304 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to the closet from the bedrooms           |
+| 305 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to the closet from the bedrooms.          |
+| 306 | Open unknown doors to the kitchen from living rooms west of the open unknown doors to the closets from the bedrooms          |
+| 307 | Open unknown doors to the kitchen from living rooms west of the unknown open door to the closet from the bedrooms            |
+| 308 | Open unknown doors to the kitchen from living rooms west of the unknown open doors to the closet from the bedrooms           |
+| 309 | Open unknown doors to the kitchen from the living room west of an open unknown door to a closet from the bedrooms            |
+| 310 | Open unknown doors to the kitchen from the living room west of an open unknown door to closets from the bedrooms             |
+| 311 | Open unknown doors to the kitchen from the living room west of an open unknown door to the closet from the bedroom           |
+| 312 | Open unknown doors to the kitchen from the living room west of an open unknown door to the closet from the bedrooms          |
+| 313 | Open unknown doors to the kitchen from the living room west of an open unknown door to the closet from the bedrooms.         |
+| 314 | Open unknown doors to the kitchen from the living room west of an open unknown door to the closets from the bedrooms         |
+| 315 | Open unknown doors to the kitchen from the living room west of an unknown open door to the closet from the bedrooms          |
+| 316 | Open unknown doors to the kitchen from the living room west of open unknown doors to a closet from the bedrooms              |
+| 317 | Open unknown doors to the kitchen from the living room west of open unknown doors to the closet from the bedrooms            |
+| 318 | Open unknown doors to the kitchen from the living room west of the open unknown door from the bedroom to a closet            |
+| 319 | Open unknown doors to the kitchen from the living room west of the open unknown door from the bedroom to the closet          |
+| 320 | Open unknown doors to the kitchen from the living room west of the open unknown door from the bedroom to the closets         |
+| 321 | Open unknown doors to the kitchen from the living room west of the open unknown door from the bedrooms to the closet         |
+| 322 | Open unknown doors to the kitchen from the living room west of the open unknown door from the bedrooms to the closets        |
+| 323 | Open unknown doors to the kitchen from the living room west of the open unknown door to a closet from the bedroom            |
+| 324 | Open unknown doors to the kitchen from the living room west of the open unknown door to a closet from the bedrooms           |
+| 325 | Open unknown doors to the kitchen from the living room west of the open unknown door to a closet from the bedrooms.          |
+| 326 | Open unknown doors to the kitchen from the living room west of the open unknown door to closets from the bedrooms            |
+| 327 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closet from a bedroom            |
+| 328 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closet from bedrooms             |
+| 329 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closet from the bedroom          |
+| 330 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closet from the bedrooms         |
+| 331 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closet from the bedrooms.        |
+| 332 | Open unknown doors to the kitchen from the living room west of the open unknown door to the closets from the bedrooms        |
+| 333 | Open unknown doors to the kitchen from the living room west of the open unknown doors from a bedroom to the closet           |
+| 334 | Open unknown doors to the kitchen from the living room west of the open unknown doors from a bedroom to the closets          |
+| 335 | Open unknown doors to the kitchen from the living room west of the open unknown doors from bedrooms to the closet            |
+| 336 | Open unknown doors to the kitchen from the living room west of the open unknown doors from bedrooms to the closets           |
+| 337 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedroom to a closet           |
+| 338 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedroom to closets            |
+| 339 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedroom to the closet         |
+| 340 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedroom to the closets        |
+| 341 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedroom to the closets.       |
+| 342 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedrooms to a closet          |
+| 343 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedrooms to the closet        |
+| 344 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedrooms to the closets       |
+| 345 | Open unknown doors to the kitchen from the living room west of the open unknown doors from the bedrooms to the closets.      |
+| 346 | Open unknown doors to the kitchen from the living room west of the open unknown doors to a closet from a bedroom             |
+| 347 | Open unknown doors to the kitchen from the living room west of the open unknown doors to a closet from the bedroom           |
+| 348 | Open unknown doors to the kitchen from the living room west of the open unknown doors to a closet from the bedrooms          |
+| 349 | Open unknown doors to the kitchen from the living room west of the open unknown doors to a closet from the bedrooms.         |
+| 350 | Open unknown doors to the kitchen from the living room west of the open unknown doors to closets from the bedroom            |
+| 351 | Open unknown doors to the kitchen from the living room west of the open unknown doors to closets from the bedrooms           |
+| 352 | Open unknown doors to the kitchen from the living room west of the open unknown doors to closets from the bedrooms.          |
+| 353 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from a bedroom           |
+| 354 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from bedrooms            |
+| 355 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from bedrooms.           |
+| 356 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from the bedroom         |
+| 357 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms        |
+| 358 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms.       |
+| 359 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closets from the bedroom        |
+| 360 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closets from the bedrooms       |
+| 361 | Open unknown doors to the kitchen from the living room west of the open unknown doors to the closets from the bedrooms.      |
+| 362 | Open unknown doors to the kitchen from the living room west of the unknown open door to a closet from the bedrooms           |
+| 363 | Open unknown doors to the kitchen from the living room west of the unknown open door to the closet from the bedrooms         |
+| 364 | Open unknown doors to the kitchen from the living room west of the unknown open doors to a closet from the bedrooms          |
+| 365 | Open unknown doors to the kitchen from the living room west of the unknown open doors to the closet from the bedrooms        |
+| 366 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to a closet from the bedrooms           |
+| 367 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to closets from the bedrooms            |
+| 368 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to the closet from the bedroom          |
+| 369 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to the closet from the bedrooms         |
+| 370 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to the closet from the bedrooms.        |
+| 371 | Open unknown doors to the kitchen from the living rooms west of an open unknown door to the closets from the bedrooms        |
+| 372 | Open unknown doors to the kitchen from the living rooms west of an unknown open door to the closet from the bedrooms         |
+| 373 | Open unknown doors to the kitchen from the living rooms west of open unknown doors to a closet from the bedrooms             |
+| 374 | Open unknown doors to the kitchen from the living rooms west of open unknown doors to the closet from the bedrooms           |
+| 375 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedroom to a closet           |
+| 376 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedroom to the closet         |
+| 377 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedroom to the closets        |
+| 378 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedrooms to a closet          |
+| 379 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedrooms to the closet        |
+| 380 | Open unknown doors to the kitchen from the living rooms west of the open unknown door from the bedrooms to the closets       |
+| 381 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to a closet from the bedroom           |
+| 382 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to a closet from the bedrooms          |
+| 383 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to a closet from the bedrooms.         |
+| 384 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to closets from the bedrooms           |
+| 385 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from a bedroom           |
+| 386 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from bedrooms            |
+| 387 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from the bedroom         |
+| 388 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from the bedrooms        |
+| 389 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from the bedrooms.       |
+| 390 | Open unknown doors to the kitchen from the living rooms west of the open unknown door to the closets from the bedrooms       |
+| 391 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from a bedroom to the closet          |
+| 392 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from a bedroom to the closets         |
+| 393 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from bedrooms to the closet           |
+| 394 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from bedrooms to the closets          |
+| 395 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedroom to a closet          |
+| 396 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedroom to closets           |
+| 397 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedroom to the closet        |
+| 398 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedroom to the closets       |
+| 399 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedroom to the closets.      |
+| 400 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedrooms to a closet         |
+| 401 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedrooms to the closet       |
+| 402 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedrooms to the closets      |
+| 403 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors from the bedrooms to the closets.     |
+| 404 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to a closet from a bedroom            |
+| 405 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to a closet from the bedroom          |
+| 406 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to a closet from the bedrooms         |
+| 407 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to a closet from the bedrooms.        |
+| 408 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to closets from the bedroom           |
+| 409 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to closets from the bedrooms          |
+| 410 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to closets from the bedrooms.         |
+| 411 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from a bedroom          |
+| 412 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from bedrooms           |
+| 413 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from bedrooms.          |
+| 414 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from the bedroom        |
+| 415 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms       |
+| 416 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms.      |
+| 417 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closets from the bedroom       |
+| 418 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closets from the bedrooms      |
+| 419 | Open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closets from the bedrooms.     |
+| 420 | Open unknown doors to the kitchen from the living rooms west of the unknown open door to a closet from the bedrooms          |
+| 421 | Open unknown doors to the kitchen from the living rooms west of the unknown open door to the closet from the bedrooms        |
+| 422 | Open unknown doors to the kitchen from the living rooms west of the unknown open door to the closet from the bedrooms.       |
+| 423 | Open unknown doors to the kitchen from the living rooms west of the unknown open doors to a closet from the bedrooms         |
+| 424 | Open unknown doors to the kitchen from the living rooms west of the unknown open doors to the closet from the bedrooms       |
+| 425 | Open unknown doors to the kitchen west of an open unknown door to the closet from the bedrooms from a living room            |
+| 426 | Open unknown doors to the kitchen west of the open unknown door to a closet from the bedrooms from a living room             |
+| 427 | Open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from a living room           |
+| 428 | Open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from the living room         |
+| 429 | Open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from the living rooms        |
+| 430 | Open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from a living room            |
+| 431 | Open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from the living room          |
+| 432 | Open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from the living rooms         |
+| 433 | Open unknown doors to the kitchen west of the open unknown doors to closets from the bedrooms from a living room             |
+| 434 | Open unknown doors to the kitchen west of the open unknown doors to the closet from the bedroom from a living room           |
+| 435 | Open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from a living room          |
+| 436 | Open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from the living room        |
+| 437 | Open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms       |
+| 438 | Open unknown doors to the kitchen west of the open unknown doors to the closets from the bedrooms from a living room         |
+| 439 | Open unknown doors to the kitchens from a living room west of the open unknown door to the closet from the bedrooms          |
+| 440 | Open unknown doors to the kitchens from a living room west of the open unknown doors to a closet from the bedrooms           |
+| 441 | Open unknown doors to the kitchens from a living room west of the open unknown doors to the closet from the bedrooms         |
+| 442 | Open unknown doors to the kitchens from living rooms west of the open unknown door to the closet from the bedrooms           |
+| 443 | Open unknown doors to the kitchens from living rooms west of the open unknown doors to the closet from the bedrooms          |
+| 444 | Open unknown doors to the kitchens from the living room west of an open unknown door to the closet from the bedrooms         |
+| 445 | Open unknown doors to the kitchens from the living room west of the open unknown door to a closet from the bedrooms          |
+| 446 | Open unknown doors to the kitchens from the living room west of the open unknown door to the closet from the bedrooms        |
+| 447 | Open unknown doors to the kitchens from the living room west of the open unknown doors to a closet from the bedrooms         |
+| 448 | Open unknown doors to the kitchens from the living room west of the open unknown doors to closets from the bedrooms          |
+| 449 | Open unknown doors to the kitchens from the living room west of the open unknown doors to the closet from the bedroom        |
+| 450 | Open unknown doors to the kitchens from the living room west of the open unknown doors to the closet from the bedrooms       |
+| 451 | Open unknown doors to the kitchens from the living room west of the open unknown doors to the closet from the bedrooms.      |
+| 452 | Open unknown doors to the kitchens from the living room west of the open unknown doors to the closets from the bedrooms      |
+| 453 | Open unknown doors to the kitchens from the living rooms west of an open unknown door to the closet from the bedrooms        |
+| 454 | Open unknown doors to the kitchens from the living rooms west of the open unknown door to a closet from the bedrooms         |
+| 455 | Open unknown doors to the kitchens from the living rooms west of the open unknown door to the closet from the bedrooms       |
+| 456 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to a closet from the bedrooms        |
+| 457 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to closets from the bedrooms         |
+| 458 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to the closet from the bedroom       |
+| 459 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to the closet from the bedrooms      |
+| 460 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to the closet from the bedrooms.     |
+| 461 | Open unknown doors to the kitchens from the living rooms west of the open unknown doors to the closets from the bedrooms     |
+| 462 | Open unknown doors to the kitchens west of the open unknown doors to the closet from the bedrooms from a living room         |
+| 463 | The open unknown door from a living room west of the open unknown doors to the closet from the bedrooms to the kitchen       |
+| 464 | The open unknown door from a living room west of the open unknown doors to the closet from the bedrooms to the kitchens      |
+| 465 | The open unknown door from the living room to the kitchen west of the open unknown doors to the closet from the bedrooms     |
+| 466 | The open unknown door from the living room west of the open unknown door to the closet from the bedrooms to the kitchens     |
+| 467 | The open unknown door from the living room west of the open unknown doors to the closet from the bedrooms to the kitchen     |
+| 468 | The open unknown door from the living room west of the open unknown doors to the closet from the bedrooms to the kitchens    |
+| 469 | The open unknown door from the living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms    |
+| 470 | The open unknown door from the living rooms west of the open unknown door to the closet from the bedrooms to the kitchens    |
+| 471 | The open unknown door from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchen    |
+| 472 | The open unknown door from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens   |
+| 473 | The open unknown door to a kitchen west of the open unknown door to the closet from the bedrooms from a living room          |
+| 474 | The open unknown door to a kitchen west of the open unknown door to the closet from the bedrooms from the living room        |
+| 475 | The open unknown door to a kitchen west of the open unknown door to the closet from the bedrooms from the living rooms       |
+| 476 | The open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from a living room         |
+| 477 | The open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from the living room       |
+| 478 | The open unknown door to a kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms      |
+| 479 | The open unknown door to the kitchen from a living room west of the open unknown doors to the closet from the bedrooms       |
+| 480 | The open unknown door to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms     |
+| 481 | The open unknown door to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms    |
+| 482 | The open unknown door to the kitchen west of an open unknown door to the closet from the bedrooms from a living room         |
+| 483 | The open unknown door to the kitchen west of an open unknown door to the closet from the bedrooms from the living rooms      |
+| 484 | The open unknown door to the kitchen west of the open unknown door to a closet from the bedrooms from a living room          |
+| 485 | The open unknown door to the kitchen west of the open unknown door to a closet from the bedrooms from the living room        |
+| 486 | The open unknown door to the kitchen west of the open unknown door to a closet from the bedrooms from the living rooms       |
+| 487 | The open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from a living room        |
+| 488 | The open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from living rooms         |
+| 489 | The open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from living rooms.        |
+| 490 | The open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from the living room      |
+| 491 | The open unknown door to the kitchen west of the open unknown door to the closet from the bedrooms from the living rooms     |
+| 492 | The open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from a living room         |
+| 493 | The open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from the living room       |
+| 494 | The open unknown door to the kitchen west of the open unknown doors to a closet from the bedrooms from the living rooms      |
+| 495 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedroom from a living room        |
+| 496 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from a living room       |
+| 497 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms        |
+| 498 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms.       |
+| 499 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living room     |
+| 500 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms    |
+| 501 | The open unknown door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms.   |
+| 502 | The open unknown door to the kitchen west of the open unknown doors to the closets from the bedrooms from a living room      |
+| 503 | The open unknown door to the kitchens west of the open unknown doors to the closet from the bedrooms from a living room      |
+| 504 | The open unknown doors from a living room to the kitchen west of the open unknown doors to the closet from the bedrooms      |
+| 505 | The open unknown doors from a living room west of the open unknown door to the closet from the bedrooms to the kitchen       |
+| 506 | The open unknown doors from a living room west of the open unknown door to the closet from the bedrooms to the kitchens      |
+| 507 | The open unknown doors from a living room west of the open unknown doors to the closet from the bedrooms to a kitchen        |
+| 508 | The open unknown doors from a living room west of the open unknown doors to the closet from the bedrooms to the kitchen      |
+| 509 | The open unknown doors from a living room west of the open unknown doors to the closet from the bedrooms to the kitchens     |
+| 510 | The open unknown doors from living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms       |
+| 511 | The open unknown doors from living rooms west of the open unknown doors to the closet from the bedrooms to the kitchen       |
+| 512 | The open unknown doors from living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens      |
+| 513 | The open unknown doors from the living room to the kitchen west of the open unknown door to the closet from the bedrooms     |
+| 514 | The open unknown doors from the living room to the kitchen west of the open unknown doors to the closet from the bedrooms    |
+| 515 | The open unknown doors from the living room west of the open unknown door to the closet from the bedrooms to the kitchen     |
+| 516 | The open unknown doors from the living room west of the open unknown door to the closet from the bedrooms to the kitchens    |
+| 517 | The open unknown doors from the living room west of the open unknown doors to a closet from the bedrooms to the kitchens     |
+| 518 | The open unknown doors from the living room west of the open unknown doors to the closet from the bedrooms to a kitchen      |
+| 519 | The open unknown doors from the living room west of the open unknown doors to the closet from the bedrooms to the kitchen    |
+| 520 | The open unknown doors from the living room west of the open unknown doors to the closet from the bedrooms to the kitchens   |
+| 521 | The open unknown doors from the living rooms to the kitchen west of the open unknown door to the closet from the bedrooms    |
+| 522 | The open unknown doors from the living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms   |
+| 523 | The open unknown doors from the living rooms west of the open unknown door to the closet from the bedrooms to the kitchen    |
+| 524 | The open unknown doors from the living rooms west of the open unknown door to the closet from the bedrooms to the kitchens   |
+| 525 | The open unknown doors from the living rooms west of the open unknown doors to a closet from the bedrooms to the kitchen     |
+| 526 | The open unknown doors from the living rooms west of the open unknown doors to a closet from the bedrooms to the kitchens    |
+| 527 | The open unknown doors from the living rooms west of the open unknown doors to the closet from the bedrooms to a kitchen     |
+| 528 | The open unknown doors from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchen   |
+| 529 | The open unknown doors from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens  |
+| 530 | The open unknown doors from the living rooms west of the open unknown doors to the closet from the bedrooms to the kitchens. |
+| 531 | The open unknown doors to a kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms     |
+| 532 | The open unknown doors to a kitchen west of the open unknown door to the closet from the bedrooms from a living room         |
+| 533 | The open unknown doors to a kitchen west of the open unknown door to the closet from the bedrooms from the living room       |
+| 534 | The open unknown doors to a kitchen west of the open unknown door to the closet from the bedrooms from the living rooms      |
+| 535 | The open unknown doors to a kitchen west of the open unknown doors to a closet from the bedrooms from a living room          |
+| 536 | The open unknown doors to a kitchen west of the open unknown doors to a closet from the bedrooms from the living room        |
+| 537 | The open unknown doors to a kitchen west of the open unknown doors to a closet from the bedrooms from the living rooms       |
+| 538 | The open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from a living room        |
+| 539 | The open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from living rooms         |
+| 540 | The open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from living rooms.        |
+| 541 | The open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from the living room      |
+| 542 | The open unknown doors to a kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms     |
+| 543 | The open unknown doors to kitchens west of the open unknown doors to the closet from the bedrooms from a living room         |
+| 544 | The open unknown doors to kitchens west of the open unknown doors to the closet from the bedrooms from the living room       |
+| 545 | The open unknown doors to kitchens west of the open unknown doors to the closet from the bedrooms from the living rooms      |
+| 546 | The open unknown doors to the kitchen from a living room west of the open unknown door to the closet from the bedrooms       |
+| 547 | The open unknown doors to the kitchen from a living room west of the open unknown doors to the closet from the bedrooms      |
+| 548 | The open unknown doors to the kitchen from living rooms west of the open unknown doors to the closet from the bedrooms       |
+| 549 | The open unknown doors to the kitchen from the living room west of the open unknown door to the closet from the bedrooms     |
+| 550 | The open unknown doors to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms    |
+| 551 | The open unknown doors to the kitchen from the living rooms west of the open unknown door to the closet from the bedrooms    |
+| 552 | The open unknown doors to the kitchen from the living rooms west of the open unknown doors to a closet from the bedrooms     |
+| 553 | The open unknown doors to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms   |
+| 554 | The open unknown doors to the kitchen west of an open unknown door to the closet from the bedrooms from a living room        |
+| 555 | The open unknown doors to the kitchen west of an open unknown door to the closet from the bedrooms from the living room      |
+| 556 | The open unknown doors to the kitchen west of an open unknown door to the closet from the bedrooms from the living rooms     |
+| 557 | The open unknown doors to the kitchen west of open unknown doors to the closet from the bedrooms from a living room          |
+| 558 | The open unknown doors to the kitchen west of the open unknown door to a closet from the bedrooms from a living room         |
+| 559 | The open unknown doors to the kitchen west of the open unknown door to a closet from the bedrooms from the living room       |
+| 560 | The open unknown doors to the kitchen west of the open unknown door to a closet from the bedrooms from the living rooms      |
+| 561 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedroom from a living room        |
+| 562 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from a living room       |
+| 563 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from living rooms        |
+| 564 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from living rooms.       |
+| 565 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from the living room     |
+| 566 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from the living rooms    |
+| 567 | The open unknown doors to the kitchen west of the open unknown door to the closet from the bedrooms from the living rooms.   |
+| 568 | The open unknown doors to the kitchen west of the open unknown door to the closets from the bedrooms from a living room      |
+| 569 | The open unknown doors to the kitchen west of the open unknown doors from the bedroom to the closet from a living room       |
+| 570 | The open unknown doors to the kitchen west of the open unknown doors from the bedroom to the closet from the living rooms    |
+| 571 | The open unknown doors to the kitchen west of the open unknown doors from the bedroom to the closets from a living room      |
+| 572 | The open unknown doors to the kitchen west of the open unknown doors from the bedroom to the closets from the living room    |
+| 573 | The open unknown doors to the kitchen west of the open unknown doors from the bedroom to the closets from the living rooms   |
+| 574 | The open unknown doors to the kitchen west of the open unknown doors from the bedrooms to the closets from a living room     |
+| 575 | The open unknown doors to the kitchen west of the open unknown doors from the bedrooms to the closets from the living rooms  |
+| 576 | The open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from a living room        |
+| 577 | The open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from living rooms         |
+| 578 | The open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from living rooms.        |
+| 579 | The open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from the living room      |
+| 580 | The open unknown doors to the kitchen west of the open unknown doors to a closet from the bedrooms from the living rooms     |
+| 581 | The open unknown doors to the kitchen west of the open unknown doors to closets from the bedrooms from a living room         |
+| 582 | The open unknown doors to the kitchen west of the open unknown doors to closets from the bedrooms from the living room       |
+| 583 | The open unknown doors to the kitchen west of the open unknown doors to closets from the bedrooms from the living rooms      |
+| 584 | The open unknown doors to the kitchen west of the open unknown doors to the closet from a bedroom from a living room         |
+| 585 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedroom from a living room       |
+| 586 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedroom from the living room     |
+| 587 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedroom from the living rooms    |
+| 588 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from a living room      |
+| 589 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms       |
+| 590 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from living rooms.      |
+| 591 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from the living room    |
+| 592 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms   |
+| 593 | The open unknown doors to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms.  |
+| 594 | The open unknown doors to the kitchen west of the open unknown doors to the closets from the bedrooms from a living room     |
+| 595 | The open unknown doors to the kitchen west of the open unknown doors to the closets from the bedrooms from the living room   |
+| 596 | The open unknown doors to the kitchen west of the open unknown doors to the closets from the bedrooms from the living rooms  |
+| 597 | The open unknown doors to the kitchen west of the unknown open door to the closet from the bedrooms from a living room       |
+| 598 | The open unknown doors to the kitchen west of the unknown open door to the closet from the bedrooms from the living room     |
+| 599 | The open unknown doors to the kitchen west of the unknown open door to the closet from the bedrooms from the living rooms    |
+| 600 | The open unknown doors to the kitchen west of the unknown open doors to the closet from the bedrooms from a living room      |
+| 601 | The open unknown doors to the kitchen west of the unknown open doors to the closet from the bedrooms from the living room    |
+| 602 | The open unknown doors to the kitchen west of the unknown open doors to the closet from the bedrooms from the living rooms   |
+| 603 | The open unknown doors to the kitchens west of the open unknown door to the closet from the bedrooms from a living room      |
+| 604 | The open unknown doors to the kitchens west of the open unknown doors to the closet from the bedrooms from a living room     |
+| 605 | The open unknown doors to the kitchens west of the open unknown doors to the closet from the bedrooms from the living room   |
+| 606 | The open unknown doors to the kitchens west of the open unknown doors to the closet from the bedrooms from the living rooms  |
+| 607 | The unknown open door to the kitchen west of the open unknown doors to the closet from the bedrooms from a living room       |
+| 608 | The unknown open door to the kitchen west of the open unknown doors to the closet from the bedrooms from the living rooms    |
+| 609 | Unknown open doors from a living room to the kitchen west of the open unknown doors to the closet from the bedrooms          |
+| 610 | Unknown open doors from the living room to the kitchen west of the open unknown doors to the closet from the bedrooms        |
+| 611 | Unknown open doors from the living rooms to the kitchen west of the open unknown doors to the closet from the bedrooms       |
+| 612 | Unknown open doors to a kitchen from the living room west of the open unknown doors to the closet from the bedrooms          |
+| 613 | Unknown open doors to a kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms         |
+| 614 | Unknown open doors to the kitchen from a living room west of the open unknown door to the closet from the bedrooms           |
+| 615 | Unknown open doors to the kitchen from a living room west of the open unknown doors to the closet from the bedrooms          |
+| 616 | Unknown open doors to the kitchen from the living room west of the open unknown door to the closet from the bedrooms         |
+| 617 | Unknown open doors to the kitchen from the living room west of the open unknown doors to a closet from the bedrooms          |
+| 618 | Unknown open doors to the kitchen from the living room west of the open unknown doors to the closet from the bedrooms        |
+| 619 | Unknown open doors to the kitchen from the living rooms west of the open unknown door to the closet from the bedrooms        |
+| 620 | Unknown open doors to the kitchen from the living rooms west of the open unknown doors to a closet from the bedrooms         |
+| 621 | Unknown open doors to the kitchen from the living rooms west of the open unknown doors to the closet from the bedrooms       |
++-----+------------------------------------------------------------------------------------------------------------------------------+
+

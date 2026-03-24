@@ -1,0 +1,570 @@
+GRAPH NAME: idSideMirror1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 360   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++------------------------------------------------------------+
+|                        GOLD OUTPUTS                        |
++-----------------------------------------------+------------+
+| Gold Output                                   | Generated? |
++-----------------------------------------------+------------+
+| the shiny broken side mirror near the whistle | True       |
++-----------------------------------------------+------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+|                                                        NODE METRICS                                                       |
++---------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Node          | Node Covered | Node Included | Coverage Comment                       | Inclusion Comment                 |
++---------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idSideMirror1 | True         | True          | Covered                                | Included                          |
+| shiny         | True         | True          | Covered                                | Included                          |
+| idFace        | False        | False         | 'idFace' not in lexicon's node entries | No SEMENT generated for this node |
+| broken        | True         | True          | Covered                                | Included                          |
+| idWhistle1    | True         | True          | Covered                                | Included                          |
++---------------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                EDGE METRICS                                                                                |
++-----------------------------------+---------------+------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Edge                              | Parent        | Child      | Edge Covered | Edge Included | Coverage Comment                       | Inclusion Comment                 |
++-----------------------------------+---------------+------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idSideMirror1_prop_idDescriptor   | idSideMirror1 | shiny      | True         | True          | Covered                                | Included                          |
+| idSideMirror1_prop_idDescriptor_1 | idSideMirror1 | idFace     | False        | False         | child of 'idDescriptor_' has no SEMENT | No SEMENT generated for this edge |
+| idSideMirror1_prop_idDescriptor_2 | idSideMirror1 | broken     | True         | True          | Covered                                | Included                          |
+| isNear                            | idSideMirror1 | idWhistle1 | True         | True          | Covered                                | Included                          |
++-----------------------------------+---------------+------------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h1221                                                                     |
+|               |   INDEX: x1220                                                                   |
+|               |   RELS: < [ _near_p LBL: h1245 ARG0: e1242 ARG1: u1243 ARG2: i1244 ]             |
+|               |           [ def_udef_a_q LBL: h1249 ARG0: x1246 RSTR: h1247 BODY: h1248 ]        |
+|               |           [ _whistle_n_1 LBL: h1241 ARG0: x1240 ]                                |
+|               |           [ _break_v_cause LBL: h1239 ARG0: e1236 [ e PERF: - ] ARG1: i1237      |
+|               | ARG2: i1238 ]                                                                    |
+|               |           [ _shiny_a_1 LBL: h1235 ARG0: e1233 ARG1: u1234 ]                      |
+|               |           [ compound LBL: h1232 ARG0: e1229 [ e PROG: - ] ARG1: u1230 ARG2:      |
+|               | u1231 ]                                                                          |
+|               |           [ udef_q LBL: h1227 ARG0: x1224 RSTR: h1225 BODY: h1226 ]              |
+|               |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|               |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|               |   HCONS: < h1247 qeq h1241 h1225 qeq h1223 >                                     |
+|               |   ICONS: < e1236 topic i1238 >                                                   |
+|               |   EQS: < x1246 eq x1240 h1245 eq h1250 i1244 eq x1246 x1224 eq x1222 h1232 eq    |
+|               | h1228 u1231 eq x1224 h1232 eq h1221 u1230 eq x1220 h1235 eq h1221 u1234 eq x1220 |
+|               | h1239 eq h1221 i1238 eq x1220 h1245 eq h1221 u1243 eq x1220 > ]                  |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1221                                                                     |
+|               |   INDEX: x1220                                                                   |
+|               |   RELS: < [ _near_p LBL: h1221 ARG0: e1242 ARG1: x1220 ARG2: x1240 ]             |
+|               |           [ def_udef_a_q LBL: h1249 ARG0: x1240 RSTR: h1247 BODY: h1248 ]        |
+|               |           [ _whistle_n_1 LBL: h1241 ARG0: x1240 ]                                |
+|               |           [ _break_v_cause LBL: h1221 ARG0: e1236 [ e PERF: - ] ARG1: i1237      |
+|               | ARG2: x1220 ]                                                                    |
+|               |           [ _shiny_a_1 LBL: h1221 ARG0: e1233 ARG1: x1220 ]                      |
+|               |           [ compound LBL: h1221 ARG0: e1229 [ e PROG: - ] ARG1: x1220 ARG2:      |
+|               | x1222 ]                                                                          |
+|               |           [ udef_q LBL: h1227 ARG0: x1222 RSTR: h1225 BODY: h1226 ]              |
+|               |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|               |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|               |   HCONS: < h1247 qeq h1241 h1225 qeq h1223 >                                     |
+|               |   ICONS: < e1236 topic x1220 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1259                                                                     |
+|               |   INDEX: e1256                                                                   |
+|               |   RELS: < [ unknown LBL: h1255 ARG: x1220 ARG0: e1256 ]                          |
+|               |           [ def_udef_a_q LBL: h1254 ARG0: x1220 RSTR: h1252 BODY: h1253 ]        |
+|               |           [ _near_p LBL: h1221 ARG0: e1242 ARG1: x1220 ARG2: x1240 ]             |
+|               |           [ def_udef_a_q LBL: h1249 ARG0: x1240 RSTR: h1247 BODY: h1248 ]        |
+|               |           [ _whistle_n_1 LBL: h1241 ARG0: x1240 ]                                |
+|               |           [ _break_v_cause LBL: h1221 ARG0: e1236 [ e PERF: - ] ARG1: i1237      |
+|               | ARG2: x1220 ]                                                                    |
+|               |           [ _shiny_a_1 LBL: h1221 ARG0: e1233 ARG1: x1220 ]                      |
+|               |           [ compound LBL: h1221 ARG0: e1229 [ e PROG: - ] ARG1: x1220 ARG2:      |
+|               | x1222 ]                                                                          |
+|               |           [ udef_q LBL: h1227 ARG0: x1222 RSTR: h1225 BODY: h1226 ]              |
+|               |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|               |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|               |   HCONS: < h1247 qeq h1241 h1225 qeq h1223 h1252 qeq h1221 h1259 qeq h1255 >     |
+|               |   ICONS: < e1236 topic x1220 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                           NODE SEMENTS                                           |
++---------------+----------------------------------------------------------------------------------+
+| Node          | Generated SEMENT                                                                 |
++---------------+----------------------------------------------------------------------------------+
+| idSideMirror1 | [ TOP: h1221                                                                     |
+|               |   INDEX: x1220                                                                   |
+|               |   RELS: < [ compound LBL: h1232 ARG0: e1229 [ e PROG: - ] ARG1: u1230 ARG2:      |
+|               | u1231 ]                                                                          |
+|               |           [ udef_q LBL: h1227 ARG0: x1224 RSTR: h1225 BODY: h1226 ]              |
+|               |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|               |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|               |   HCONS: < h1225 qeq h1223 >                                                     |
+|               |   EQS: < x1224 eq x1222 h1232 eq h1228 u1231 eq x1224 h1232 eq h1221 u1230 eq    |
+|               | x1220 > ]                                                                        |
++---------------+----------------------------------------------------------------------------------+
+| shiny         | [ TOP: h1235                                                                     |
+|               |   INDEX: e1233                                                                   |
+|               |   RELS: < [ _shiny_a_1 LBL: h1235 ARG0: e1233 ARG1: u1234 ] >                    |
+|               |   SLOTS: < ARG1: u1234 > ]                                                       |
++---------------+----------------------------------------------------------------------------------+
+| idFace        | None                                                                             |
++---------------+----------------------------------------------------------------------------------+
+| broken        | [ TOP: h1239                                                                     |
+|               |   INDEX: e1236                                                                   |
+|               |   RELS: < [ _break_v_cause LBL: h1239 ARG0: e1236 ARG1: i1237 ARG2: i1238 ] >    |
+|               |   SLOTS: < ARG1: i1237 ARG2: i1238 > ]                                           |
++---------------+----------------------------------------------------------------------------------+
+| idWhistle1    | [ TOP: h1241                                                                     |
+|               |   INDEX: x1240                                                                   |
+|               |   RELS: < [ _whistle_n_1 LBL: h1241 ARG0: x1240 ] > ]                            |
++---------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                    EDGE SEMENTS                                                                   |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| Edge                              | Parent        | Child      | Generated SEMENT                                                                 |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idSideMirror1_prop_idDescriptor   | idSideMirror1 | shiny      | [ TOP: h1221                                                                     |
+|                                   |               |            |   INDEX: x1220                                                                   |
+|                                   |               |            |   RELS: < [ _shiny_a_1 LBL: h1235 ARG0: e1233 ARG1: u1234 ]                      |
+|                                   |               |            |           [ compound LBL: h1232 ARG0: e1229 [ e PROG: - ] ARG1: u1230 ARG2:      |
+|                                   |               |            | u1231 ]                                                                          |
+|                                   |               |            |           [ udef_q LBL: h1227 ARG0: x1224 RSTR: h1225 BODY: h1226 ]              |
+|                                   |               |            |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|                                   |               |            |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|                                   |               |            |   HCONS: < h1225 qeq h1223 >                                                     |
+|                                   |               |            |   EQS: < x1224 eq x1222 h1232 eq h1228 u1231 eq x1224 h1232 eq h1221 u1230 eq    |
+|                                   |               |            | x1220 h1235 eq h1221 u1234 eq x1220 > ]                                          |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idSideMirror1_prop_idDescriptor_1 | idSideMirror1 | idFace     | None                                                                             |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| idSideMirror1_prop_idDescriptor_2 | idSideMirror1 | broken     | [ TOP: h1221                                                                     |
+|                                   |               |            |   INDEX: x1220                                                                   |
+|                                   |               |            |   RELS: < [ _break_v_cause LBL: h1239 ARG0: e1236 [ e PERF: - ] ARG1: i1237      |
+|                                   |               |            | ARG2: i1238 ]                                                                    |
+|                                   |               |            |           [ _shiny_a_1 LBL: h1235 ARG0: e1233 ARG1: u1234 ]                      |
+|                                   |               |            |           [ compound LBL: h1232 ARG0: e1229 [ e PROG: - ] ARG1: u1230 ARG2:      |
+|                                   |               |            | u1231 ]                                                                          |
+|                                   |               |            |           [ udef_q LBL: h1227 ARG0: x1224 RSTR: h1225 BODY: h1226 ]              |
+|                                   |               |            |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|                                   |               |            |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|                                   |               |            |   HCONS: < h1225 qeq h1223 >                                                     |
+|                                   |               |            |   ICONS: < e1236 topic i1238 >                                                   |
+|                                   |               |            |   EQS: < x1224 eq x1222 h1232 eq h1228 u1231 eq x1224 h1232 eq h1221 u1230 eq    |
+|                                   |               |            | x1220 h1235 eq h1221 u1234 eq x1220 h1239 eq h1221 i1238 eq x1220 > ]            |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+| isNear                            | idSideMirror1 | idWhistle1 | [ TOP: h1221                                                                     |
+|                                   |               |            |   INDEX: x1220                                                                   |
+|                                   |               |            |   RELS: < [ _near_p LBL: h1245 ARG0: e1242 ARG1: u1243 ARG2: i1244 ]             |
+|                                   |               |            |           [ def_udef_a_q LBL: h1249 ARG0: x1246 RSTR: h1247 BODY: h1248 ]        |
+|                                   |               |            |           [ _whistle_n_1 LBL: h1241 ARG0: x1240 ]                                |
+|                                   |               |            |           [ _break_v_cause LBL: h1239 ARG0: e1236 [ e PERF: - ] ARG1: i1237      |
+|                                   |               |            | ARG2: i1238 ]                                                                    |
+|                                   |               |            |           [ _shiny_a_1 LBL: h1235 ARG0: e1233 ARG1: u1234 ]                      |
+|                                   |               |            |           [ compound LBL: h1232 ARG0: e1229 [ e PROG: - ] ARG1: u1230 ARG2:      |
+|                                   |               |            | u1231 ]                                                                          |
+|                                   |               |            |           [ udef_q LBL: h1227 ARG0: x1224 RSTR: h1225 BODY: h1226 ]              |
+|                                   |               |            |           [ _side_n_1 LBL: h1223 ARG0: x1222 ]                                   |
+|                                   |               |            |           [ _mirror_n_1 LBL: h1221 ARG0: x1220 ] >                               |
+|                                   |               |            |   HCONS: < h1247 qeq h1241 h1225 qeq h1223 >                                     |
+|                                   |               |            |   ICONS: < e1236 topic i1238 >                                                   |
+|                                   |               |            |   EQS: < x1246 eq x1240 h1245 eq h1250 i1244 eq x1246 x1224 eq x1222 h1232 eq    |
+|                                   |               |            | h1228 u1231 eq x1224 h1232 eq h1221 u1230 eq x1220 h1235 eq h1221 u1234 eq x1220 |
+|                                   |               |            | h1239 eq h1221 i1238 eq x1220 h1245 eq h1221 u1243 eq x1220 > ]                  |
++-----------------------------------+---------------+------------+----------------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                  GENERATED ENGLISH TEXT                 |
++-----+---------------------------------------------------+
+| #   | Generated Text                                    |
++-----+---------------------------------------------------+
+| 1   | A broken shiny side mirror near a whistle         |
+| 2   | A broken shiny side mirror near a whistle.        |
+| 3   | A broken shiny side mirror near the whistle       |
+| 4   | A broken shiny side mirror near the whistle.      |
+| 5   | A broken shiny side mirror near the whistles      |
+| 6   | A broken shiny side mirror near the whistles.     |
+| 7   | A broken shiny side mirror near whistles          |
+| 8   | A broken shiny side mirror near whistles.         |
+| 9   | A broken shiny side mirror, near a whistle        |
+| 10  | A broken shiny side mirror, near the whistle      |
+| 11  | A broken shiny side mirror, near the whistles     |
+| 12  | A broken shiny side mirror, near whistles         |
+| 13  | A broken sides shiny mirror near a whistle        |
+| 14  | A broken sides shiny mirror near a whistle.       |
+| 15  | A broken sides shiny mirror near the whistle      |
+| 16  | A broken sides shiny mirror near the whistle.     |
+| 17  | A broken sides shiny mirror near the whistles     |
+| 18  | A broken sides shiny mirror near the whistles.    |
+| 19  | A broken sides shiny mirror near whistles         |
+| 20  | A broken sides shiny mirror near whistles.        |
+| 21  | A broken sides shiny mirror, near a whistle       |
+| 22  | A broken sides shiny mirror, near the whistle     |
+| 23  | A broken sides shiny mirror, near the whistles    |
+| 24  | A broken sides shiny mirror, near whistles        |
+| 25  | A shiny broken side mirror near a whistle         |
+| 26  | A shiny broken side mirror near a whistle.        |
+| 27  | A shiny broken side mirror near the whistle       |
+| 28  | A shiny broken side mirror near the whistle.      |
+| 29  | A shiny broken side mirror near the whistles      |
+| 30  | A shiny broken side mirror near the whistles.     |
+| 31  | A shiny broken side mirror near whistles          |
+| 32  | A shiny broken side mirror near whistles.         |
+| 33  | A shiny broken side mirror, near a whistle        |
+| 34  | A shiny broken side mirror, near the whistle      |
+| 35  | A shiny broken side mirror, near the whistles     |
+| 36  | A shiny broken side mirror, near whistles         |
+| 37  | A shiny sides broken mirror near a whistle        |
+| 38  | A shiny sides broken mirror near a whistle.       |
+| 39  | A shiny sides broken mirror near the whistle      |
+| 40  | A shiny sides broken mirror near the whistle.     |
+| 41  | A shiny sides broken mirror near the whistles     |
+| 42  | A shiny sides broken mirror near the whistles.    |
+| 43  | A shiny sides broken mirror near whistles         |
+| 44  | A shiny sides broken mirror near whistles.        |
+| 45  | A shiny sides broken mirror, near a whistle       |
+| 46  | A shiny sides broken mirror, near the whistle     |
+| 47  | A shiny sides broken mirror, near the whistles    |
+| 48  | A shiny sides broken mirror, near whistles        |
+| 49  | A sides broken shiny mirror near a whistle        |
+| 50  | A sides broken shiny mirror near a whistle.       |
+| 51  | A sides broken shiny mirror near the whistle      |
+| 52  | A sides broken shiny mirror near the whistle.     |
+| 53  | A sides broken shiny mirror near the whistles     |
+| 54  | A sides broken shiny mirror near the whistles.    |
+| 55  | A sides broken shiny mirror near whistles         |
+| 56  | A sides broken shiny mirror near whistles.        |
+| 57  | A sides broken shiny mirror, near a whistle       |
+| 58  | A sides broken shiny mirror, near the whistle     |
+| 59  | A sides broken shiny mirror, near the whistles    |
+| 60  | A sides broken shiny mirror, near whistles        |
+| 61  | A sides shiny broken mirror near a whistle        |
+| 62  | A sides shiny broken mirror near a whistle.       |
+| 63  | A sides shiny broken mirror near the whistle      |
+| 64  | A sides shiny broken mirror near the whistle.     |
+| 65  | A sides shiny broken mirror near the whistles     |
+| 66  | A sides shiny broken mirror near the whistles.    |
+| 67  | A sides shiny broken mirror near whistles         |
+| 68  | A sides shiny broken mirror near whistles.        |
+| 69  | A sides shiny broken mirror, near a whistle       |
+| 70  | A sides shiny broken mirror, near the whistle     |
+| 71  | A sides shiny broken mirror, near the whistles    |
+| 72  | A sides shiny broken mirror, near whistles        |
+| 73  | Broken shiny side mirror near a whistle           |
+| 74  | Broken shiny side mirror near a whistle.          |
+| 75  | Broken shiny side mirror near the whistle         |
+| 76  | Broken shiny side mirror near the whistle.        |
+| 77  | Broken shiny side mirror near the whistles        |
+| 78  | Broken shiny side mirror near the whistles.       |
+| 79  | Broken shiny side mirror near whistles            |
+| 80  | Broken shiny side mirror near whistles.           |
+| 81  | Broken shiny side mirror, near a whistle          |
+| 82  | Broken shiny side mirror, near the whistle        |
+| 83  | Broken shiny side mirror, near the whistles       |
+| 84  | Broken shiny side mirror, near whistles           |
+| 85  | Broken shiny side mirrors near a whistle          |
+| 86  | Broken shiny side mirrors near a whistle.         |
+| 87  | Broken shiny side mirrors near the whistle        |
+| 88  | Broken shiny side mirrors near the whistle.       |
+| 89  | Broken shiny side mirrors near the whistles       |
+| 90  | Broken shiny side mirrors near the whistles.      |
+| 91  | Broken shiny side mirrors near whistles           |
+| 92  | Broken shiny side mirrors near whistles.          |
+| 93  | Broken shiny side mirrors, near a whistle         |
+| 94  | Broken shiny side mirrors, near the whistle       |
+| 95  | Broken shiny side mirrors, near the whistles      |
+| 96  | Broken shiny side mirrors, near whistles          |
+| 97  | Broken sides shiny mirror near a whistle          |
+| 98  | Broken sides shiny mirror near a whistle.         |
+| 99  | Broken sides shiny mirror near the whistle        |
+| 100 | Broken sides shiny mirror near the whistle.       |
+| 101 | Broken sides shiny mirror near the whistles       |
+| 102 | Broken sides shiny mirror near the whistles.      |
+| 103 | Broken sides shiny mirror near whistles           |
+| 104 | Broken sides shiny mirror near whistles.          |
+| 105 | Broken sides shiny mirror, near a whistle         |
+| 106 | Broken sides shiny mirror, near the whistle       |
+| 107 | Broken sides shiny mirror, near the whistles      |
+| 108 | Broken sides shiny mirror, near whistles          |
+| 109 | Broken sides shiny mirrors near a whistle         |
+| 110 | Broken sides shiny mirrors near a whistle.        |
+| 111 | Broken sides shiny mirrors near the whistle       |
+| 112 | Broken sides shiny mirrors near the whistle.      |
+| 113 | Broken sides shiny mirrors near the whistles      |
+| 114 | Broken sides shiny mirrors near the whistles.     |
+| 115 | Broken sides shiny mirrors near whistles          |
+| 116 | Broken sides shiny mirrors near whistles.         |
+| 117 | Broken sides shiny mirrors, near a whistle        |
+| 118 | Broken sides shiny mirrors, near the whistle      |
+| 119 | Broken sides shiny mirrors, near the whistles     |
+| 120 | Broken sides shiny mirrors, near whistles         |
+| 121 | Shiny broken side mirror near a whistle           |
+| 122 | Shiny broken side mirror near a whistle.          |
+| 123 | Shiny broken side mirror near the whistle         |
+| 124 | Shiny broken side mirror near the whistle.        |
+| 125 | Shiny broken side mirror near the whistles        |
+| 126 | Shiny broken side mirror near the whistles.       |
+| 127 | Shiny broken side mirror near whistles            |
+| 128 | Shiny broken side mirror near whistles.           |
+| 129 | Shiny broken side mirror, near a whistle          |
+| 130 | Shiny broken side mirror, near the whistle        |
+| 131 | Shiny broken side mirror, near the whistles       |
+| 132 | Shiny broken side mirror, near whistles           |
+| 133 | Shiny broken side mirrors near a whistle          |
+| 134 | Shiny broken side mirrors near a whistle.         |
+| 135 | Shiny broken side mirrors near the whistle        |
+| 136 | Shiny broken side mirrors near the whistle.       |
+| 137 | Shiny broken side mirrors near the whistles       |
+| 138 | Shiny broken side mirrors near the whistles.      |
+| 139 | Shiny broken side mirrors near whistles           |
+| 140 | Shiny broken side mirrors near whistles.          |
+| 141 | Shiny broken side mirrors, near a whistle         |
+| 142 | Shiny broken side mirrors, near the whistle       |
+| 143 | Shiny broken side mirrors, near the whistles      |
+| 144 | Shiny broken side mirrors, near whistles          |
+| 145 | Shiny sides broken mirror near a whistle          |
+| 146 | Shiny sides broken mirror near a whistle.         |
+| 147 | Shiny sides broken mirror near the whistle        |
+| 148 | Shiny sides broken mirror near the whistle.       |
+| 149 | Shiny sides broken mirror near the whistles       |
+| 150 | Shiny sides broken mirror near the whistles.      |
+| 151 | Shiny sides broken mirror near whistles           |
+| 152 | Shiny sides broken mirror near whistles.          |
+| 153 | Shiny sides broken mirror, near a whistle         |
+| 154 | Shiny sides broken mirror, near the whistle       |
+| 155 | Shiny sides broken mirror, near the whistles      |
+| 156 | Shiny sides broken mirror, near whistles          |
+| 157 | Shiny sides broken mirrors near a whistle         |
+| 158 | Shiny sides broken mirrors near a whistle.        |
+| 159 | Shiny sides broken mirrors near the whistle       |
+| 160 | Shiny sides broken mirrors near the whistle.      |
+| 161 | Shiny sides broken mirrors near the whistles      |
+| 162 | Shiny sides broken mirrors near the whistles.     |
+| 163 | Shiny sides broken mirrors near whistles          |
+| 164 | Shiny sides broken mirrors near whistles.         |
+| 165 | Shiny sides broken mirrors, near a whistle        |
+| 166 | Shiny sides broken mirrors, near the whistle      |
+| 167 | Shiny sides broken mirrors, near the whistles     |
+| 168 | Shiny sides broken mirrors, near whistles         |
+| 169 | Sides broken shiny mirror near a whistle          |
+| 170 | Sides broken shiny mirror near a whistle.         |
+| 171 | Sides broken shiny mirror near the whistle        |
+| 172 | Sides broken shiny mirror near the whistle.       |
+| 173 | Sides broken shiny mirror near the whistles       |
+| 174 | Sides broken shiny mirror near the whistles.      |
+| 175 | Sides broken shiny mirror near whistles           |
+| 176 | Sides broken shiny mirror near whistles.          |
+| 177 | Sides broken shiny mirror, near a whistle         |
+| 178 | Sides broken shiny mirror, near the whistle       |
+| 179 | Sides broken shiny mirror, near the whistles      |
+| 180 | Sides broken shiny mirror, near whistles          |
+| 181 | Sides broken shiny mirrors near a whistle         |
+| 182 | Sides broken shiny mirrors near a whistle.        |
+| 183 | Sides broken shiny mirrors near the whistle       |
+| 184 | Sides broken shiny mirrors near the whistle.      |
+| 185 | Sides broken shiny mirrors near the whistles      |
+| 186 | Sides broken shiny mirrors near the whistles.     |
+| 187 | Sides broken shiny mirrors near whistles          |
+| 188 | Sides broken shiny mirrors near whistles.         |
+| 189 | Sides broken shiny mirrors, near a whistle        |
+| 190 | Sides broken shiny mirrors, near the whistle      |
+| 191 | Sides broken shiny mirrors, near the whistles     |
+| 192 | Sides broken shiny mirrors, near whistles         |
+| 193 | Sides shiny broken mirror near a whistle          |
+| 194 | Sides shiny broken mirror near a whistle.         |
+| 195 | Sides shiny broken mirror near the whistle        |
+| 196 | Sides shiny broken mirror near the whistle.       |
+| 197 | Sides shiny broken mirror near the whistles       |
+| 198 | Sides shiny broken mirror near the whistles.      |
+| 199 | Sides shiny broken mirror near whistles           |
+| 200 | Sides shiny broken mirror near whistles.          |
+| 201 | Sides shiny broken mirror, near a whistle         |
+| 202 | Sides shiny broken mirror, near the whistle       |
+| 203 | Sides shiny broken mirror, near the whistles      |
+| 204 | Sides shiny broken mirror, near whistles          |
+| 205 | Sides shiny broken mirrors near a whistle         |
+| 206 | Sides shiny broken mirrors near a whistle.        |
+| 207 | Sides shiny broken mirrors near the whistle       |
+| 208 | Sides shiny broken mirrors near the whistle.      |
+| 209 | Sides shiny broken mirrors near the whistles      |
+| 210 | Sides shiny broken mirrors near the whistles.     |
+| 211 | Sides shiny broken mirrors near whistles          |
+| 212 | Sides shiny broken mirrors near whistles.         |
+| 213 | Sides shiny broken mirrors, near a whistle        |
+| 214 | Sides shiny broken mirrors, near the whistle      |
+| 215 | Sides shiny broken mirrors, near the whistles     |
+| 216 | Sides shiny broken mirrors, near whistles         |
+| 217 | The broken shiny side mirror near a whistle       |
+| 218 | The broken shiny side mirror near a whistle.      |
+| 219 | The broken shiny side mirror near the whistle     |
+| 220 | The broken shiny side mirror near the whistle.    |
+| 221 | The broken shiny side mirror near the whistles    |
+| 222 | The broken shiny side mirror near the whistles.   |
+| 223 | The broken shiny side mirror near whistles        |
+| 224 | The broken shiny side mirror near whistles.       |
+| 225 | The broken shiny side mirror, near a whistle      |
+| 226 | The broken shiny side mirror, near the whistle    |
+| 227 | The broken shiny side mirror, near the whistles   |
+| 228 | The broken shiny side mirror, near whistles       |
+| 229 | The broken shiny side mirrors near a whistle      |
+| 230 | The broken shiny side mirrors near a whistle.     |
+| 231 | The broken shiny side mirrors near the whistle    |
+| 232 | The broken shiny side mirrors near the whistle.   |
+| 233 | The broken shiny side mirrors near the whistles   |
+| 234 | The broken shiny side mirrors near the whistles.  |
+| 235 | The broken shiny side mirrors near whistles       |
+| 236 | The broken shiny side mirrors near whistles.      |
+| 237 | The broken shiny side mirrors, near a whistle     |
+| 238 | The broken shiny side mirrors, near the whistle   |
+| 239 | The broken shiny side mirrors, near the whistles  |
+| 240 | The broken shiny side mirrors, near whistles      |
+| 241 | The broken sides shiny mirror near a whistle      |
+| 242 | The broken sides shiny mirror near a whistle.     |
+| 243 | The broken sides shiny mirror near the whistle    |
+| 244 | The broken sides shiny mirror near the whistle.   |
+| 245 | The broken sides shiny mirror near the whistles   |
+| 246 | The broken sides shiny mirror near the whistles.  |
+| 247 | The broken sides shiny mirror near whistles       |
+| 248 | The broken sides shiny mirror near whistles.      |
+| 249 | The broken sides shiny mirror, near a whistle     |
+| 250 | The broken sides shiny mirror, near the whistle   |
+| 251 | The broken sides shiny mirror, near the whistles  |
+| 252 | The broken sides shiny mirror, near whistles      |
+| 253 | The broken sides shiny mirrors near a whistle     |
+| 254 | The broken sides shiny mirrors near a whistle.    |
+| 255 | The broken sides shiny mirrors near the whistle   |
+| 256 | The broken sides shiny mirrors near the whistle.  |
+| 257 | The broken sides shiny mirrors near the whistles  |
+| 258 | The broken sides shiny mirrors near the whistles. |
+| 259 | The broken sides shiny mirrors near whistles      |
+| 260 | The broken sides shiny mirrors near whistles.     |
+| 261 | The broken sides shiny mirrors, near a whistle    |
+| 262 | The broken sides shiny mirrors, near the whistle  |
+| 263 | The broken sides shiny mirrors, near the whistles |
+| 264 | The broken sides shiny mirrors, near whistles     |
+| 265 | The shiny broken side mirror near a whistle       |
+| 266 | The shiny broken side mirror near a whistle.      |
+| 267 | The shiny broken side mirror near the whistle     |
+| 268 | The shiny broken side mirror near the whistle.    |
+| 269 | The shiny broken side mirror near the whistles    |
+| 270 | The shiny broken side mirror near the whistles.   |
+| 271 | The shiny broken side mirror near whistles        |
+| 272 | The shiny broken side mirror near whistles.       |
+| 273 | The shiny broken side mirror, near a whistle      |
+| 274 | The shiny broken side mirror, near the whistle    |
+| 275 | The shiny broken side mirror, near the whistles   |
+| 276 | The shiny broken side mirror, near whistles       |
+| 277 | The shiny broken side mirrors near a whistle      |
+| 278 | The shiny broken side mirrors near a whistle.     |
+| 279 | The shiny broken side mirrors near the whistle    |
+| 280 | The shiny broken side mirrors near the whistle.   |
+| 281 | The shiny broken side mirrors near the whistles   |
+| 282 | The shiny broken side mirrors near the whistles.  |
+| 283 | The shiny broken side mirrors near whistles       |
+| 284 | The shiny broken side mirrors near whistles.      |
+| 285 | The shiny broken side mirrors, near a whistle     |
+| 286 | The shiny broken side mirrors, near the whistle   |
+| 287 | The shiny broken side mirrors, near the whistles  |
+| 288 | The shiny broken side mirrors, near whistles      |
+| 289 | The shiny sides broken mirror near a whistle      |
+| 290 | The shiny sides broken mirror near a whistle.     |
+| 291 | The shiny sides broken mirror near the whistle    |
+| 292 | The shiny sides broken mirror near the whistle.   |
+| 293 | The shiny sides broken mirror near the whistles   |
+| 294 | The shiny sides broken mirror near the whistles.  |
+| 295 | The shiny sides broken mirror near whistles       |
+| 296 | The shiny sides broken mirror near whistles.      |
+| 297 | The shiny sides broken mirror, near a whistle     |
+| 298 | The shiny sides broken mirror, near the whistle   |
+| 299 | The shiny sides broken mirror, near the whistles  |
+| 300 | The shiny sides broken mirror, near whistles      |
+| 301 | The shiny sides broken mirrors near a whistle     |
+| 302 | The shiny sides broken mirrors near a whistle.    |
+| 303 | The shiny sides broken mirrors near the whistle   |
+| 304 | The shiny sides broken mirrors near the whistle.  |
+| 305 | The shiny sides broken mirrors near the whistles  |
+| 306 | The shiny sides broken mirrors near the whistles. |
+| 307 | The shiny sides broken mirrors near whistles      |
+| 308 | The shiny sides broken mirrors near whistles.     |
+| 309 | The shiny sides broken mirrors, near a whistle    |
+| 310 | The shiny sides broken mirrors, near the whistle  |
+| 311 | The shiny sides broken mirrors, near the whistles |
+| 312 | The shiny sides broken mirrors, near whistles     |
+| 313 | The sides broken shiny mirror near a whistle      |
+| 314 | The sides broken shiny mirror near a whistle.     |
+| 315 | The sides broken shiny mirror near the whistle    |
+| 316 | The sides broken shiny mirror near the whistle.   |
+| 317 | The sides broken shiny mirror near the whistles   |
+| 318 | The sides broken shiny mirror near the whistles.  |
+| 319 | The sides broken shiny mirror near whistles       |
+| 320 | The sides broken shiny mirror near whistles.      |
+| 321 | The sides broken shiny mirror, near a whistle     |
+| 322 | The sides broken shiny mirror, near the whistle   |
+| 323 | The sides broken shiny mirror, near the whistles  |
+| 324 | The sides broken shiny mirror, near whistles      |
+| 325 | The sides broken shiny mirrors near a whistle     |
+| 326 | The sides broken shiny mirrors near a whistle.    |
+| 327 | The sides broken shiny mirrors near the whistle   |
+| 328 | The sides broken shiny mirrors near the whistle.  |
+| 329 | The sides broken shiny mirrors near the whistles  |
+| 330 | The sides broken shiny mirrors near the whistles. |
+| 331 | The sides broken shiny mirrors near whistles      |
+| 332 | The sides broken shiny mirrors near whistles.     |
+| 333 | The sides broken shiny mirrors, near a whistle    |
+| 334 | The sides broken shiny mirrors, near the whistle  |
+| 335 | The sides broken shiny mirrors, near the whistles |
+| 336 | The sides broken shiny mirrors, near whistles     |
+| 337 | The sides shiny broken mirror near a whistle      |
+| 338 | The sides shiny broken mirror near a whistle.     |
+| 339 | The sides shiny broken mirror near the whistle    |
+| 340 | The sides shiny broken mirror near the whistle.   |
+| 341 | The sides shiny broken mirror near the whistles   |
+| 342 | The sides shiny broken mirror near the whistles.  |
+| 343 | The sides shiny broken mirror near whistles       |
+| 344 | The sides shiny broken mirror near whistles.      |
+| 345 | The sides shiny broken mirror, near a whistle     |
+| 346 | The sides shiny broken mirror, near the whistle   |
+| 347 | The sides shiny broken mirror, near the whistles  |
+| 348 | The sides shiny broken mirror, near whistles      |
+| 349 | The sides shiny broken mirrors near a whistle     |
+| 350 | The sides shiny broken mirrors near a whistle.    |
+| 351 | The sides shiny broken mirrors near the whistle   |
+| 352 | The sides shiny broken mirrors near the whistle.  |
+| 353 | The sides shiny broken mirrors near the whistles  |
+| 354 | The sides shiny broken mirrors near the whistles. |
+| 355 | The sides shiny broken mirrors near whistles      |
+| 356 | The sides shiny broken mirrors near whistles.     |
+| 357 | The sides shiny broken mirrors, near a whistle    |
+| 358 | The sides shiny broken mirrors, near the whistle  |
+| 359 | The sides shiny broken mirrors, near the whistles |
+| 360 | The sides shiny broken mirrors, near whistles     |
++-----+---------------------------------------------------+
+

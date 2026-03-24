@@ -1,0 +1,343 @@
+GRAPH NAME: idCardKey1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 120   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------------------------------+
+|                       GOLD OUTPUTS                       |
++---------------------------------------------+------------+
+| Gold Output                                 | Generated? |
++---------------------------------------------+------------+
+| the unknown key card north of the candy bar | True       |
++---------------------------------------------+------------+
+
++-----------------------------------------------------------------------------------+
+|                                    NODE METRICS                                   |
++-------------+--------------+---------------+------------------+-------------------+
+| Node        | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++-------------+--------------+---------------+------------------+-------------------+
+| idCardKey1  | True         | True          | Covered          | Included          |
+| true        | True         | True          | Covered          | Included          |
+| idCandyBar1 | True         | True          | Covered          | Included          |
++-------------+--------------+---------------+------------------+-------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+|                                                           EDGE METRICS                                                           |
++---------------------------------+------------+-------------+--------------+---------------+------------------+-------------------+
+| Edge                            | Parent     | Child       | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++---------------------------------+------------+-------------+--------------+---------------+------------------+-------------------+
+| idCardKey1_prop_idUnknownObject | idCardKey1 | true        | True         | True          | Covered          | Included          |
+| isNorthOf                       | idCardKey1 | idCandyBar1 | True         | True          | Covered          | Included          |
++---------------------------------+------------+-------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h2526                                                                     |
+|               |   INDEX: x2525                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2573 ARG0: e2570 ARG1: u2571 ARG2: x2572 ]           |
+|               |           [ def_implicit_q LBL: h2584 ARG0: x2581 RSTR: h2582 BODY: h2583 ]      |
+|               |           [ _north_a_1 LBL: h2569 ARG0: i2566 ARG1: x2567 ARG2: u2568 ]          |
+|               |           [ def_udef_a_q LBL: h2579 ARG0: x2576 RSTR: h2577 BODY: h2578 ]        |
+|               |           [ compound LBL: h2565 ARG0: e2562 [ e PROG: - ] ARG1: u2563 ARG2:      |
+|               | u2564 ]                                                                          |
+|               |           [ udef_q LBL: h2560 ARG0: x2557 RSTR: h2558 BODY: h2559 ]              |
+|               |           [ _candy_n_1 LBL: h2556 ARG0: x2555 ]                                  |
+|               |           [ _bar_n_1 LBL: h2554 ARG0: x2553 ]                                    |
+|               |           [ place_n LBL: h2575 ARG0: x2574 ]                                     |
+|               |           [ _un-_a_neg LBL: h2552 ARG0: i2550 ARG1: e2551 ]                      |
+|               |           [ _know_v_1 LBL: h2549 ARG0: e2546 [ e PERF: - ] ARG1: u2547 ARG2:     |
+|               | i2548 ]                                                                          |
+|               |           [ compound LBL: h2537 ARG0: e2534 [ e PROG: - ] ARG1: u2535 ARG2:      |
+|               | u2536 ]                                                                          |
+|               |           [ udef_q LBL: h2532 ARG0: x2529 RSTR: h2530 BODY: h2531 ]              |
+|               |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|               |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|               |   HCONS: < h2558 qeq h2556 h2577 qeq h2554 h2582 qeq h2575 h2530 qeq h2528 >     |
+|               |   ICONS: < e2546 topic i2548 >                                                   |
+|               |   EQS: < x2557 eq x2555 h2565 eq h2561 u2564 eq x2557 h2565 eq h2554 u2563 eq    |
+|               | x2553 x2576 eq x2553 h2569 eq h2580 u2568 eq x2576 h2569 eq h2575 x2567 eq x2574 |
+|               | x2581 eq x2574 h2573 eq h2585 x2572 eq x2581 h2552 eq h2549 e2551 eq e2546 x2529 |
+|               | eq x2527 h2537 eq h2533 u2536 eq x2529 h2537 eq h2526 u2535 eq x2525 h2549 eq    |
+|               | h2526 i2548 eq x2525 h2573 eq h2526 u2571 eq x2525 > ]                           |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h2526                                                                     |
+|               |   INDEX: x2525                                                                   |
+|               |   RELS: < [ loc_nonsp LBL: h2526 ARG0: e2570 ARG1: x2525 ARG2: x2567 ]           |
+|               |           [ def_implicit_q LBL: h2584 ARG0: x2567 RSTR: h2582 BODY: h2583 ]      |
+|               |           [ _north_a_1 LBL: h2569 ARG0: i2566 ARG1: x2567 ARG2: x2553 ]          |
+|               |           [ def_udef_a_q LBL: h2579 ARG0: x2553 RSTR: h2577 BODY: h2578 ]        |
+|               |           [ compound LBL: h2554 ARG0: e2562 [ e PROG: - ] ARG1: x2553 ARG2:      |
+|               | x2555 ]                                                                          |
+|               |           [ udef_q LBL: h2560 ARG0: x2555 RSTR: h2558 BODY: h2559 ]              |
+|               |           [ _candy_n_1 LBL: h2556 ARG0: x2555 ]                                  |
+|               |           [ _bar_n_1 LBL: h2554 ARG0: x2553 ]                                    |
+|               |           [ place_n LBL: h2569 ARG0: x2567 ]                                     |
+|               |           [ _un-_a_neg LBL: h2526 ARG0: i2550 ARG1: e2546 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2526 ARG0: e2546 ARG1: u2547 ARG2: x2525 ]           |
+|               |           [ compound LBL: h2526 ARG0: e2534 [ e PROG: - ] ARG1: x2525 ARG2:      |
+|               | x2527 ]                                                                          |
+|               |           [ udef_q LBL: h2532 ARG0: x2527 RSTR: h2530 BODY: h2531 ]              |
+|               |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|               |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|               |   HCONS: < h2558 qeq h2556 h2577 qeq h2554 h2582 qeq h2569 h2530 qeq h2528 >     |
+|               |   ICONS: < e2546 topic x2525 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h2594                                                                     |
+|               |   INDEX: e2591                                                                   |
+|               |   RELS: < [ unknown LBL: h2590 ARG: x2525 ARG0: e2591 ]                          |
+|               |           [ def_udef_a_q LBL: h2589 ARG0: x2525 RSTR: h2587 BODY: h2588 ]        |
+|               |           [ loc_nonsp LBL: h2526 ARG0: e2570 ARG1: x2525 ARG2: x2567 ]           |
+|               |           [ def_implicit_q LBL: h2584 ARG0: x2567 RSTR: h2582 BODY: h2583 ]      |
+|               |           [ _north_a_1 LBL: h2569 ARG0: i2566 ARG1: x2567 ARG2: x2553 ]          |
+|               |           [ def_udef_a_q LBL: h2579 ARG0: x2553 RSTR: h2577 BODY: h2578 ]        |
+|               |           [ compound LBL: h2554 ARG0: e2562 [ e PROG: - ] ARG1: x2553 ARG2:      |
+|               | x2555 ]                                                                          |
+|               |           [ udef_q LBL: h2560 ARG0: x2555 RSTR: h2558 BODY: h2559 ]              |
+|               |           [ _candy_n_1 LBL: h2556 ARG0: x2555 ]                                  |
+|               |           [ _bar_n_1 LBL: h2554 ARG0: x2553 ]                                    |
+|               |           [ place_n LBL: h2569 ARG0: x2567 ]                                     |
+|               |           [ _un-_a_neg LBL: h2526 ARG0: i2550 ARG1: e2546 [ e PERF: - ] ]        |
+|               |           [ _know_v_1 LBL: h2526 ARG0: e2546 ARG1: u2547 ARG2: x2525 ]           |
+|               |           [ compound LBL: h2526 ARG0: e2534 [ e PROG: - ] ARG1: x2525 ARG2:      |
+|               | x2527 ]                                                                          |
+|               |           [ udef_q LBL: h2532 ARG0: x2527 RSTR: h2530 BODY: h2531 ]              |
+|               |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|               |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|               |   HCONS: < h2558 qeq h2556 h2577 qeq h2554 h2582 qeq h2569 h2530 qeq h2528 h2587 |
+|               | qeq h2526 h2594 qeq h2590 >                                                      |
+|               |   ICONS: < e2546 topic x2525 > ]                                                 |
++---------------+----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------+
+|                                          NODE SEMENTS                                          |
++-------------+----------------------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                                 |
++-------------+----------------------------------------------------------------------------------+
+| idCardKey1  | [ TOP: h2526                                                                     |
+|             |   INDEX: x2525                                                                   |
+|             |   RELS: < [ compound LBL: h2537 ARG0: e2534 [ e PROG: - ] ARG1: u2535 ARG2:      |
+|             | u2536 ]                                                                          |
+|             |           [ udef_q LBL: h2532 ARG0: x2529 RSTR: h2530 BODY: h2531 ]              |
+|             |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|             |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|             |   HCONS: < h2530 qeq h2528 >                                                     |
+|             |   EQS: < x2529 eq x2527 h2537 eq h2533 u2536 eq x2529 h2537 eq h2526 u2535 eq    |
+|             | x2525 > ]                                                                        |
++-------------+----------------------------------------------------------------------------------+
+| true        | [ TOP: h2541                                                                     |
+|             |   INDEX: e2538                                                                   |
+|             |   RELS: < [ _true_a_of LBL: h2541 ARG0: e2538 ARG1: u2539 ARG2: u2540 ] >        |
+|             |   SLOTS: < ARG1: u2539 ARG2: u2540 > ]                                           |
++-------------+----------------------------------------------------------------------------------+
+| idCandyBar1 | [ TOP: h2554                                                                     |
+|             |   INDEX: x2553                                                                   |
+|             |   RELS: < [ compound LBL: h2565 ARG0: e2562 [ e PROG: - ] ARG1: u2563 ARG2:      |
+|             | u2564 ]                                                                          |
+|             |           [ udef_q LBL: h2560 ARG0: x2557 RSTR: h2558 BODY: h2559 ]              |
+|             |           [ _candy_n_1 LBL: h2556 ARG0: x2555 ]                                  |
+|             |           [ _bar_n_1 LBL: h2554 ARG0: x2553 ] >                                  |
+|             |   HCONS: < h2558 qeq h2556 >                                                     |
+|             |   EQS: < x2557 eq x2555 h2565 eq h2561 u2564 eq x2557 h2565 eq h2554 u2563 eq    |
+|             | x2553 > ]                                                                        |
++-------------+----------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                  EDGE SEMENTS                                                                 |
++---------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| Edge                            | Parent     | Child       | Generated SEMENT                                                                 |
++---------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| idCardKey1_prop_idUnknownObject | idCardKey1 | true        | [ TOP: h2526                                                                     |
+|                                 |            |             |   INDEX: x2525                                                                   |
+|                                 |            |             |   RELS: < [ _un-_a_neg LBL: h2552 ARG0: i2550 ARG1: e2551 ]                      |
+|                                 |            |             |           [ _know_v_1 LBL: h2549 ARG0: e2546 [ e PERF: - ] ARG1: u2547 ARG2:     |
+|                                 |            |             | i2548 ]                                                                          |
+|                                 |            |             |           [ compound LBL: h2537 ARG0: e2534 [ e PROG: - ] ARG1: u2535 ARG2:      |
+|                                 |            |             | u2536 ]                                                                          |
+|                                 |            |             |           [ udef_q LBL: h2532 ARG0: x2529 RSTR: h2530 BODY: h2531 ]              |
+|                                 |            |             |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|                                 |            |             |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|                                 |            |             |   HCONS: < h2530 qeq h2528 >                                                     |
+|                                 |            |             |   ICONS: < e2546 topic i2548 >                                                   |
+|                                 |            |             |   EQS: < h2552 eq h2549 e2551 eq e2546 x2529 eq x2527 h2537 eq h2533 u2536 eq    |
+|                                 |            |             | x2529 h2537 eq h2526 u2535 eq x2525 h2549 eq h2526 i2548 eq x2525 > ]            |
++---------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+| isNorthOf                       | idCardKey1 | idCandyBar1 | [ TOP: h2526                                                                     |
+|                                 |            |             |   INDEX: x2525                                                                   |
+|                                 |            |             |   RELS: < [ loc_nonsp LBL: h2573 ARG0: e2570 ARG1: u2571 ARG2: x2572 ]           |
+|                                 |            |             |           [ def_implicit_q LBL: h2584 ARG0: x2581 RSTR: h2582 BODY: h2583 ]      |
+|                                 |            |             |           [ _north_a_1 LBL: h2569 ARG0: i2566 ARG1: x2567 ARG2: u2568 ]          |
+|                                 |            |             |           [ def_udef_a_q LBL: h2579 ARG0: x2576 RSTR: h2577 BODY: h2578 ]        |
+|                                 |            |             |           [ compound LBL: h2565 ARG0: e2562 [ e PROG: - ] ARG1: u2563 ARG2:      |
+|                                 |            |             | u2564 ]                                                                          |
+|                                 |            |             |           [ udef_q LBL: h2560 ARG0: x2557 RSTR: h2558 BODY: h2559 ]              |
+|                                 |            |             |           [ _candy_n_1 LBL: h2556 ARG0: x2555 ]                                  |
+|                                 |            |             |           [ _bar_n_1 LBL: h2554 ARG0: x2553 ]                                    |
+|                                 |            |             |           [ place_n LBL: h2575 ARG0: x2574 ]                                     |
+|                                 |            |             |           [ _un-_a_neg LBL: h2552 ARG0: i2550 ARG1: e2551 ]                      |
+|                                 |            |             |           [ _know_v_1 LBL: h2549 ARG0: e2546 [ e PERF: - ] ARG1: u2547 ARG2:     |
+|                                 |            |             | i2548 ]                                                                          |
+|                                 |            |             |           [ compound LBL: h2537 ARG0: e2534 [ e PROG: - ] ARG1: u2535 ARG2:      |
+|                                 |            |             | u2536 ]                                                                          |
+|                                 |            |             |           [ udef_q LBL: h2532 ARG0: x2529 RSTR: h2530 BODY: h2531 ]              |
+|                                 |            |             |           [ _key_n_1 LBL: h2528 ARG0: x2527 ]                                    |
+|                                 |            |             |           [ _card_n_1 LBL: h2526 ARG0: x2525 ] >                                 |
+|                                 |            |             |   HCONS: < h2558 qeq h2556 h2577 qeq h2554 h2582 qeq h2575 h2530 qeq h2528 >     |
+|                                 |            |             |   ICONS: < e2546 topic i2548 >                                                   |
+|                                 |            |             |   EQS: < x2557 eq x2555 h2565 eq h2561 u2564 eq x2557 h2565 eq h2554 u2563 eq    |
+|                                 |            |             | x2553 x2576 eq x2553 h2569 eq h2580 u2568 eq x2576 h2569 eq h2575 x2567 eq x2574 |
+|                                 |            |             | x2581 eq x2574 h2573 eq h2585 x2572 eq x2581 h2552 eq h2549 e2551 eq e2546 x2529 |
+|                                 |            |             | eq x2527 h2537 eq h2533 u2536 eq x2529 h2537 eq h2526 u2535 eq x2525 h2549 eq    |
+|                                 |            |             | h2526 i2548 eq x2525 h2573 eq h2526 u2571 eq x2525 > ]                           |
++---------------------------------+------------+-------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------+
+|                 GENERATED ENGLISH TEXT                |
++-----+-------------------------------------------------+
+| #   | Generated Text                                  |
++-----+-------------------------------------------------+
+| 1   | A keys unknown card north of a candy bar        |
+| 2   | A keys unknown card north of a candy bar.       |
+| 3   | A keys unknown card north of candy bars         |
+| 4   | A keys unknown card north of candy bars.        |
+| 5   | A keys unknown card north of the candy bar      |
+| 6   | A keys unknown card north of the candy bar.     |
+| 7   | A keys unknown card north of the candy bars     |
+| 8   | A keys unknown card north of the candy bars.    |
+| 9   | A keys unknown card, north of a candy bar       |
+| 10  | A keys unknown card, north of candy bars        |
+| 11  | A keys unknown card, north of the candy bar     |
+| 12  | A keys unknown card, north of the candy bars    |
+| 13  | An unknown key card north of a candy bar        |
+| 14  | An unknown key card north of a candy bar.       |
+| 15  | An unknown key card north of candy bars         |
+| 16  | An unknown key card north of candy bars.        |
+| 17  | An unknown key card north of the candy bar      |
+| 18  | An unknown key card north of the candy bar.     |
+| 19  | An unknown key card north of the candy bars     |
+| 20  | An unknown key card north of the candy bars.    |
+| 21  | An unknown key card, north of a candy bar       |
+| 22  | An unknown key card, north of candy bars        |
+| 23  | An unknown key card, north of the candy bar     |
+| 24  | An unknown key card, north of the candy bars    |
+| 25  | Keys unknown card north of a candy bar          |
+| 26  | Keys unknown card north of a candy bar.         |
+| 27  | Keys unknown card north of candy bars           |
+| 28  | Keys unknown card north of candy bars.          |
+| 29  | Keys unknown card north of the candy bar        |
+| 30  | Keys unknown card north of the candy bar.       |
+| 31  | Keys unknown card north of the candy bars       |
+| 32  | Keys unknown card north of the candy bars.      |
+| 33  | Keys unknown card, north of a candy bar         |
+| 34  | Keys unknown card, north of candy bars          |
+| 35  | Keys unknown card, north of the candy bar       |
+| 36  | Keys unknown card, north of the candy bars      |
+| 37  | Keys unknown cards north of a candy bar         |
+| 38  | Keys unknown cards north of a candy bar.        |
+| 39  | Keys unknown cards north of candy bars          |
+| 40  | Keys unknown cards north of candy bars.         |
+| 41  | Keys unknown cards north of the candy bar       |
+| 42  | Keys unknown cards north of the candy bar.      |
+| 43  | Keys unknown cards north of the candy bars      |
+| 44  | Keys unknown cards north of the candy bars.     |
+| 45  | Keys unknown cards, north of a candy bar        |
+| 46  | Keys unknown cards, north of candy bars         |
+| 47  | Keys unknown cards, north of the candy bar      |
+| 48  | Keys unknown cards, north of the candy bars     |
+| 49  | The keys unknown card north of a candy bar      |
+| 50  | The keys unknown card north of a candy bar.     |
+| 51  | The keys unknown card north of candy bars       |
+| 52  | The keys unknown card north of candy bars.      |
+| 53  | The keys unknown card north of the candy bar    |
+| 54  | The keys unknown card north of the candy bar.   |
+| 55  | The keys unknown card north of the candy bars   |
+| 56  | The keys unknown card north of the candy bars.  |
+| 57  | The keys unknown card, north of a candy bar     |
+| 58  | The keys unknown card, north of candy bars      |
+| 59  | The keys unknown card, north of the candy bar   |
+| 60  | The keys unknown card, north of the candy bars  |
+| 61  | The keys unknown cards north of a candy bar     |
+| 62  | The keys unknown cards north of a candy bar.    |
+| 63  | The keys unknown cards north of candy bars      |
+| 64  | The keys unknown cards north of candy bars.     |
+| 65  | The keys unknown cards north of the candy bar   |
+| 66  | The keys unknown cards north of the candy bar.  |
+| 67  | The keys unknown cards north of the candy bars  |
+| 68  | The keys unknown cards north of the candy bars. |
+| 69  | The keys unknown cards, north of a candy bar    |
+| 70  | The keys unknown cards, north of candy bars     |
+| 71  | The keys unknown cards, north of the candy bar  |
+| 72  | The keys unknown cards, north of the candy bars |
+| 73  | The unknown key card north of a candy bar       |
+| 74  | The unknown key card north of a candy bar.      |
+| 75  | The unknown key card north of candy bars        |
+| 76  | The unknown key card north of candy bars.       |
+| 77  | The unknown key card north of the candy bar     |
+| 78  | The unknown key card north of the candy bar.    |
+| 79  | The unknown key card north of the candy bars    |
+| 80  | The unknown key card north of the candy bars.   |
+| 81  | The unknown key card, north of a candy bar      |
+| 82  | The unknown key card, north of candy bars       |
+| 83  | The unknown key card, north of the candy bar    |
+| 84  | The unknown key card, north of the candy bars   |
+| 85  | The unknown key cards north of a candy bar      |
+| 86  | The unknown key cards north of a candy bar.     |
+| 87  | The unknown key cards north of candy bars       |
+| 88  | The unknown key cards north of candy bars.      |
+| 89  | The unknown key cards north of the candy bar    |
+| 90  | The unknown key cards north of the candy bar.   |
+| 91  | The unknown key cards north of the candy bars   |
+| 92  | The unknown key cards north of the candy bars.  |
+| 93  | The unknown key cards, north of a candy bar     |
+| 94  | The unknown key cards, north of candy bars      |
+| 95  | The unknown key cards, north of the candy bar   |
+| 96  | The unknown key cards, north of the candy bars  |
+| 97  | Unknown key card north of a candy bar           |
+| 98  | Unknown key card north of a candy bar.          |
+| 99  | Unknown key card north of candy bars            |
+| 100 | Unknown key card north of candy bars.           |
+| 101 | Unknown key card north of the candy bar         |
+| 102 | Unknown key card north of the candy bar.        |
+| 103 | Unknown key card north of the candy bars        |
+| 104 | Unknown key card north of the candy bars.       |
+| 105 | Unknown key card, north of a candy bar          |
+| 106 | Unknown key card, north of candy bars           |
+| 107 | Unknown key card, north of the candy bar        |
+| 108 | Unknown key card, north of the candy bars       |
+| 109 | Unknown key cards north of a candy bar          |
+| 110 | Unknown key cards north of a candy bar.         |
+| 111 | Unknown key cards north of candy bars           |
+| 112 | Unknown key cards north of candy bars.          |
+| 113 | Unknown key cards north of the candy bar        |
+| 114 | Unknown key cards north of the candy bar.       |
+| 115 | Unknown key cards north of the candy bars       |
+| 116 | Unknown key cards north of the candy bars.      |
+| 117 | Unknown key cards, north of a candy bar         |
+| 118 | Unknown key cards, north of candy bars          |
+| 119 | Unknown key cards, north of the candy bar       |
+| 120 | Unknown key cards, north of the candy bars      |
++-----+-------------------------------------------------+
+

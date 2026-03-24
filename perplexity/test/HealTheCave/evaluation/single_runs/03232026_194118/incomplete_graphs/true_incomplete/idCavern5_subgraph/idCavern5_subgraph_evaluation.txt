@@ -1,0 +1,557 @@
+GRAPH NAME: idCavern5_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 360   |
+| Generated Gold Results          | 0     |
+| Generated Gold Results Coverage | 0.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++--------------------------------------------------------------------------+
+|                               GOLD OUTPUTS                               |
++-------------------------------------------------------------+------------+
+| Gold Output                                                 | Generated? |
++-------------------------------------------------------------+------------+
+| the fifth old ominous cavern north of the player's backside | False      |
++-------------------------------------------------------------+------------+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+|                                                          NODE METRICS                                                         |
++------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| Node             | Node Covered | Node Included | Coverage Comment                        | Inclusion Comment                 |
++------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+| idCavern5        | True         | True          | Covered                                 | Included                          |
+| cold             | True         | True          | Covered                                 | Included                          |
+| 5                | True         | True          | Covered                                 | Included                          |
+| ominous          | False        | False         | 'ominous' not in lexicon's node entries | No SEMENT generated for this node |
+| idPlayerBackside | True         | True          | Covered                                 | Included                          |
++------------------+--------------+---------------+-----------------------------------------+-----------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                               EDGE METRICS                                                                              |
++-------------------------------+-----------+------------------+--------------+---------------+---------------------------------------+-----------------------------------+
+| Edge                          | Parent    | Child            | Edge Covered | Edge Included | Coverage Comment                      | Inclusion Comment                 |
++-------------------------------+-----------+------------------+--------------+---------------+---------------------------------------+-----------------------------------+
+| idCavern5_prop_idDescriptor_1 | idCavern5 | cold             | True         | True          | Covered                               | Included                          |
+| idCavern5_prop_idOrdinality   | idCavern5 | 5                | True         | True          | Covered                               | Included                          |
+| idCavern5_prop_idDescriptor   | idCavern5 | ominous          | False        | False         | child of 'idDescriptor' has no SEMENT | No SEMENT generated for this edge |
+| isNorthOf                     | idCavern5 | idPlayerBackside | True         | True          | Covered                               | Included                          |
++-------------------------------+-----------+------------------+--------------+---------------+---------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h465                                                                      |
+|               |   INDEX: x464                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h496 ARG0: e493 ARG1: u494 ARG2: x495 ]               |
+|               |           [ def_implicit_q LBL: h507 ARG0: x504 RSTR: h505 BODY: h506 ]          |
+|               |           [ _north_a_1 LBL: h492 ARG0: i489 ARG1: x490 ARG2: u491 ]              |
+|               |           [ def_udef_a_q LBL: h502 ARG0: x499 RSTR: h500 BODY: h501 ]            |
+|               |           [ poss LBL: h488 ARG0: e485 ARG1: x486 ARG2: i487 ]                    |
+|               |           [ def_udef_a_q LBL: h483 ARG0: x480 RSTR: h481 BODY: h482 ]            |
+|               |           [ _player_n_of LBL: h477 ARG0: x475 ARG1: i476 ]                       |
+|               |           [ _backside_n_1 LBL: h479 ARG0: x478 ]                                 |
+|               |           [ place_n LBL: h498 ARG0: x497 ]                                       |
+|               |           [ ord LBL: h474 ARG0: i472 ARG1: u473 CARG: "5" ]                      |
+|               |           [ _cold_a_1 LBL: h468 ARG0: e466 ARG1: u467 ]                          |
+|               |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|               |   HCONS: < h481 qeq h477 h500 qeq h479 h505 qeq h498 >                           |
+|               |   EQS: < x480 eq x475 h488 eq h484 i487 eq x480 h488 eq h479 x486 eq x478 x499   |
+|               | eq x478 h492 eq h503 u491 eq x499 h492 eq h498 x490 eq x497 x504 eq x497 h496 eq |
+|               | h508 x495 eq x504 h468 eq h465 u467 eq x464 h474 eq h465 u473 eq x464 h496 eq    |
+|               | h465 u494 eq x464 > ]                                                            |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h465                                                                      |
+|               |   INDEX: x464                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h465 ARG0: e493 ARG1: x464 ARG2: x490 ]               |
+|               |           [ def_implicit_q LBL: h507 ARG0: x490 RSTR: h505 BODY: h506 ]          |
+|               |           [ _north_a_1 LBL: h492 ARG0: i489 ARG1: x490 ARG2: x478 ]              |
+|               |           [ def_udef_a_q LBL: h502 ARG0: x478 RSTR: h500 BODY: h501 ]            |
+|               |           [ poss LBL: h479 ARG0: e485 ARG1: x478 ARG2: x475 ]                    |
+|               |           [ def_udef_a_q LBL: h483 ARG0: x475 RSTR: h481 BODY: h482 ]            |
+|               |           [ _player_n_of LBL: h477 ARG0: x475 ARG1: i476 ]                       |
+|               |           [ _backside_n_1 LBL: h479 ARG0: x478 ]                                 |
+|               |           [ place_n LBL: h492 ARG0: x490 ]                                       |
+|               |           [ ord LBL: h465 ARG0: i472 ARG1: x464 CARG: "5" ]                      |
+|               |           [ _cold_a_1 LBL: h465 ARG0: e466 ARG1: x464 ]                          |
+|               |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|               |   HCONS: < h481 qeq h477 h500 qeq h479 h505 qeq h492 > ]                         |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h517                                                                      |
+|               |   INDEX: e514                                                                    |
+|               |   RELS: < [ unknown LBL: h513 ARG: x464 ARG0: e514 ]                             |
+|               |           [ def_udef_a_q LBL: h512 ARG0: x464 RSTR: h510 BODY: h511 ]            |
+|               |           [ loc_nonsp LBL: h465 ARG0: e493 ARG1: x464 ARG2: x490 ]               |
+|               |           [ def_implicit_q LBL: h507 ARG0: x490 RSTR: h505 BODY: h506 ]          |
+|               |           [ _north_a_1 LBL: h492 ARG0: i489 ARG1: x490 ARG2: x478 ]              |
+|               |           [ def_udef_a_q LBL: h502 ARG0: x478 RSTR: h500 BODY: h501 ]            |
+|               |           [ poss LBL: h479 ARG0: e485 ARG1: x478 ARG2: x475 ]                    |
+|               |           [ def_udef_a_q LBL: h483 ARG0: x475 RSTR: h481 BODY: h482 ]            |
+|               |           [ _player_n_of LBL: h477 ARG0: x475 ARG1: i476 ]                       |
+|               |           [ _backside_n_1 LBL: h479 ARG0: x478 ]                                 |
+|               |           [ place_n LBL: h492 ARG0: x490 ]                                       |
+|               |           [ ord LBL: h465 ARG0: i472 ARG1: x464 CARG: "5" ]                      |
+|               |           [ _cold_a_1 LBL: h465 ARG0: e466 ARG1: x464 ]                          |
+|               |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|               |   HCONS: < h481 qeq h477 h500 qeq h479 h505 qeq h492 h510 qeq h465 h517 qeq h513 |
+|               | > ]                                                                              |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                           NODE SEMENTS                                           |
++------------------+-------------------------------------------------------------------------------+
+| Node             | Generated SEMENT                                                              |
++------------------+-------------------------------------------------------------------------------+
+| idCavern5        | [ TOP: h465                                                                   |
+|                  |   INDEX: x464                                                                 |
+|                  |   RELS: < [ _cavern_n_1 LBL: h465 ARG0: x464 ] > ]                            |
++------------------+-------------------------------------------------------------------------------+
+| cold             | [ TOP: h468                                                                   |
+|                  |   INDEX: e466                                                                 |
+|                  |   RELS: < [ _cold_a_1 LBL: h468 ARG0: e466 ARG1: u467 ] >                     |
+|                  |   SLOTS: < ARG1: u467 > ]                                                     |
++------------------+-------------------------------------------------------------------------------+
+| 5                | [ TOP: h471                                                                   |
+|                  |   INDEX: i469                                                                 |
+|                  |   RELS: < [ card LBL: h471 ARG0: i469 ARG1: u470 CARG: "5" ] >                |
+|                  |   SLOTS: < ARG1: u470 > ]                                                     |
++------------------+-------------------------------------------------------------------------------+
+| ominous          | None                                                                          |
++------------------+-------------------------------------------------------------------------------+
+| idPlayerBackside | [ TOP: h479                                                                   |
+|                  |   INDEX: x478                                                                 |
+|                  |   RELS: < [ poss LBL: h488 ARG0: e485 ARG1: x486 ARG2: i487 ]                 |
+|                  |           [ def_udef_a_q LBL: h483 ARG0: x480 RSTR: h481 BODY: h482 ]         |
+|                  |           [ _player_n_of LBL: h477 ARG0: x475 ARG1: i476 ]                    |
+|                  |           [ _backside_n_1 LBL: h479 ARG0: x478 ] >                            |
+|                  |   HCONS: < h481 qeq h477 >                                                    |
+|                  |   EQS: < x480 eq x475 h488 eq h484 i487 eq x480 h488 eq h479 x486 eq x478 > ] |
++------------------+-------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                   EDGE SEMENTS                                                                  |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+| Edge                          | Parent    | Child            | Generated SEMENT                                                                 |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+| idCavern5_prop_idDescriptor_1 | idCavern5 | cold             | [ TOP: h465                                                                      |
+|                               |           |                  |   INDEX: x464                                                                    |
+|                               |           |                  |   RELS: < [ _cold_a_1 LBL: h468 ARG0: e466 ARG1: u467 ]                          |
+|                               |           |                  |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|                               |           |                  |   EQS: < h468 eq h465 u467 eq x464 > ]                                           |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+| idCavern5_prop_idOrdinality   | idCavern5 | 5                | [ TOP: h465                                                                      |
+|                               |           |                  |   INDEX: x464                                                                    |
+|                               |           |                  |   RELS: < [ ord LBL: h474 ARG0: i472 ARG1: u473 CARG: "5" ]                      |
+|                               |           |                  |           [ _cold_a_1 LBL: h468 ARG0: e466 ARG1: u467 ]                          |
+|                               |           |                  |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|                               |           |                  |   EQS: < h468 eq h465 u467 eq x464 h474 eq h465 u473 eq x464 > ]                 |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+| idCavern5_prop_idDescriptor   | idCavern5 | ominous          | None                                                                             |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+| isNorthOf                     | idCavern5 | idPlayerBackside | [ TOP: h465                                                                      |
+|                               |           |                  |   INDEX: x464                                                                    |
+|                               |           |                  |   RELS: < [ loc_nonsp LBL: h496 ARG0: e493 ARG1: u494 ARG2: x495 ]               |
+|                               |           |                  |           [ def_implicit_q LBL: h507 ARG0: x504 RSTR: h505 BODY: h506 ]          |
+|                               |           |                  |           [ _north_a_1 LBL: h492 ARG0: i489 ARG1: x490 ARG2: u491 ]              |
+|                               |           |                  |           [ def_udef_a_q LBL: h502 ARG0: x499 RSTR: h500 BODY: h501 ]            |
+|                               |           |                  |           [ poss LBL: h488 ARG0: e485 ARG1: x486 ARG2: i487 ]                    |
+|                               |           |                  |           [ def_udef_a_q LBL: h483 ARG0: x480 RSTR: h481 BODY: h482 ]            |
+|                               |           |                  |           [ _player_n_of LBL: h477 ARG0: x475 ARG1: i476 ]                       |
+|                               |           |                  |           [ _backside_n_1 LBL: h479 ARG0: x478 ]                                 |
+|                               |           |                  |           [ place_n LBL: h498 ARG0: x497 ]                                       |
+|                               |           |                  |           [ ord LBL: h474 ARG0: i472 ARG1: u473 CARG: "5" ]                      |
+|                               |           |                  |           [ _cold_a_1 LBL: h468 ARG0: e466 ARG1: u467 ]                          |
+|                               |           |                  |           [ _cavern_n_1 LBL: h465 ARG0: x464 ] >                                 |
+|                               |           |                  |   HCONS: < h481 qeq h477 h500 qeq h479 h505 qeq h498 >                           |
+|                               |           |                  |   EQS: < x480 eq x475 h488 eq h484 i487 eq x480 h488 eq h479 x486 eq x478 x499   |
+|                               |           |                  | eq x478 h492 eq h503 u491 eq x499 h492 eq h498 x490 eq x497 x504 eq x497 h496 eq |
+|                               |           |                  | h508 x495 eq x504 h468 eq h465 u467 eq x464 h474 eq h465 u473 eq x464 h496 eq    |
+|                               |           |                  | h465 u494 eq x464 > ]                                                            |
++-------------------------------+-----------+------------------+----------------------------------------------------------------------------------+
+
++----------------------------------------------------------------+
+|                     GENERATED ENGLISH TEXT                     |
++-----+----------------------------------------------------------+
+| #   | Generated Text                                           |
++-----+----------------------------------------------------------+
+| 1   | A cold fifth cavern north of a player's backside         |
+| 2   | A cold fifth cavern north of a player's backside.        |
+| 3   | A cold fifth cavern north of a player's backsides        |
+| 4   | A cold fifth cavern north of a player's backsides.       |
+| 5   | A cold fifth cavern north of players' backside           |
+| 6   | A cold fifth cavern north of players' backside.          |
+| 7   | A cold fifth cavern north of players' backsides          |
+| 8   | A cold fifth cavern north of players' backsides.         |
+| 9   | A cold fifth cavern north of the player's backside       |
+| 10  | A cold fifth cavern north of the player's backside.      |
+| 11  | A cold fifth cavern north of the player's backsides      |
+| 12  | A cold fifth cavern north of the player's backsides.     |
+| 13  | A cold fifth cavern north of the players' backside       |
+| 14  | A cold fifth cavern north of the players' backside.      |
+| 15  | A cold fifth cavern north of the players' backsides      |
+| 16  | A cold fifth cavern north of the players' backsides.     |
+| 17  | A cold fifth cavern, north of a player's backside        |
+| 18  | A cold fifth cavern, north of a player's backsides       |
+| 19  | A cold fifth cavern, north of players' backside          |
+| 20  | A cold fifth cavern, north of players' backsides         |
+| 21  | A cold fifth cavern, north of the player's backside      |
+| 22  | A cold fifth cavern, north of the player's backsides     |
+| 23  | A cold fifth cavern, north of the players' backside      |
+| 24  | A cold fifth cavern, north of the players' backsides     |
+| 25  | A cold fifth, cavern north of a player's backside        |
+| 26  | A cold fifth, cavern north of a player's backside.       |
+| 27  | A cold fifth, cavern north of a player's backsides       |
+| 28  | A cold fifth, cavern north of a player's backsides.      |
+| 29  | A cold fifth, cavern north of players' backside          |
+| 30  | A cold fifth, cavern north of players' backside.         |
+| 31  | A cold fifth, cavern north of players' backsides         |
+| 32  | A cold fifth, cavern north of players' backsides.        |
+| 33  | A cold fifth, cavern north of the player's backside      |
+| 34  | A cold fifth, cavern north of the player's backside.     |
+| 35  | A cold fifth, cavern north of the player's backsides     |
+| 36  | A cold fifth, cavern north of the player's backsides.    |
+| 37  | A cold fifth, cavern north of the players' backside      |
+| 38  | A cold fifth, cavern north of the players' backside.     |
+| 39  | A cold fifth, cavern north of the players' backsides     |
+| 40  | A cold fifth, cavern north of the players' backsides.    |
+| 41  | A cold fifth, cavern, north of a player's backside       |
+| 42  | A cold fifth, cavern, north of a player's backsides      |
+| 43  | A cold fifth, cavern, north of players' backside         |
+| 44  | A cold fifth, cavern, north of players' backsides        |
+| 45  | A cold fifth, cavern, north of the player's backside     |
+| 46  | A cold fifth, cavern, north of the player's backsides    |
+| 47  | A cold fifth, cavern, north of the players' backside     |
+| 48  | A cold fifth, cavern, north of the players' backsides    |
+| 49  | A fifth cold cavern north of a player's backside         |
+| 50  | A fifth cold cavern north of a player's backside.        |
+| 51  | A fifth cold cavern north of a player's backsides        |
+| 52  | A fifth cold cavern north of a player's backsides.       |
+| 53  | A fifth cold cavern north of players' backside           |
+| 54  | A fifth cold cavern north of players' backside.          |
+| 55  | A fifth cold cavern north of players' backsides          |
+| 56  | A fifth cold cavern north of players' backsides.         |
+| 57  | A fifth cold cavern north of the player's backside       |
+| 58  | A fifth cold cavern north of the player's backside.      |
+| 59  | A fifth cold cavern north of the player's backsides      |
+| 60  | A fifth cold cavern north of the player's backsides.     |
+| 61  | A fifth cold cavern north of the players' backside       |
+| 62  | A fifth cold cavern north of the players' backside.      |
+| 63  | A fifth cold cavern north of the players' backsides      |
+| 64  | A fifth cold cavern north of the players' backsides.     |
+| 65  | A fifth cold cavern, north of a player's backside        |
+| 66  | A fifth cold cavern, north of a player's backsides       |
+| 67  | A fifth cold cavern, north of players' backside          |
+| 68  | A fifth cold cavern, north of players' backsides         |
+| 69  | A fifth cold cavern, north of the player's backside      |
+| 70  | A fifth cold cavern, north of the player's backsides     |
+| 71  | A fifth cold cavern, north of the players' backside      |
+| 72  | A fifth cold cavern, north of the players' backsides     |
+| 73  | Cold fifth cavern north of a player's backside           |
+| 74  | Cold fifth cavern north of a player's backside.          |
+| 75  | Cold fifth cavern north of a player's backsides          |
+| 76  | Cold fifth cavern north of a player's backsides.         |
+| 77  | Cold fifth cavern north of players' backside             |
+| 78  | Cold fifth cavern north of players' backside.            |
+| 79  | Cold fifth cavern north of players' backsides            |
+| 80  | Cold fifth cavern north of players' backsides.           |
+| 81  | Cold fifth cavern north of the player's backside         |
+| 82  | Cold fifth cavern north of the player's backside.        |
+| 83  | Cold fifth cavern north of the player's backsides        |
+| 84  | Cold fifth cavern north of the player's backsides.       |
+| 85  | Cold fifth cavern north of the players' backside         |
+| 86  | Cold fifth cavern north of the players' backside.        |
+| 87  | Cold fifth cavern north of the players' backsides        |
+| 88  | Cold fifth cavern north of the players' backsides.       |
+| 89  | Cold fifth cavern, north of a player's backside          |
+| 90  | Cold fifth cavern, north of a player's backsides         |
+| 91  | Cold fifth cavern, north of players' backside            |
+| 92  | Cold fifth cavern, north of players' backsides           |
+| 93  | Cold fifth cavern, north of the player's backside        |
+| 94  | Cold fifth cavern, north of the player's backsides       |
+| 95  | Cold fifth cavern, north of the players' backside        |
+| 96  | Cold fifth cavern, north of the players' backsides       |
+| 97  | Cold fifth caverns north of a player's backside          |
+| 98  | Cold fifth caverns north of a player's backside.         |
+| 99  | Cold fifth caverns north of a player's backsides         |
+| 100 | Cold fifth caverns north of a player's backsides.        |
+| 101 | Cold fifth caverns north of players' backside            |
+| 102 | Cold fifth caverns north of players' backside.           |
+| 103 | Cold fifth caverns north of players' backsides           |
+| 104 | Cold fifth caverns north of players' backsides.          |
+| 105 | Cold fifth caverns north of the player's backside        |
+| 106 | Cold fifth caverns north of the player's backside.       |
+| 107 | Cold fifth caverns north of the player's backsides       |
+| 108 | Cold fifth caverns north of the player's backsides.      |
+| 109 | Cold fifth caverns north of the players' backside        |
+| 110 | Cold fifth caverns north of the players' backside.       |
+| 111 | Cold fifth caverns north of the players' backsides       |
+| 112 | Cold fifth caverns north of the players' backsides.      |
+| 113 | Cold fifth caverns, north of a player's backside         |
+| 114 | Cold fifth caverns, north of a player's backsides        |
+| 115 | Cold fifth caverns, north of players' backside           |
+| 116 | Cold fifth caverns, north of players' backsides          |
+| 117 | Cold fifth caverns, north of the player's backside       |
+| 118 | Cold fifth caverns, north of the player's backsides      |
+| 119 | Cold fifth caverns, north of the players' backside       |
+| 120 | Cold fifth caverns, north of the players' backsides      |
+| 121 | Cold fifth, cavern north of a player's backside          |
+| 122 | Cold fifth, cavern north of a player's backside.         |
+| 123 | Cold fifth, cavern north of a player's backsides         |
+| 124 | Cold fifth, cavern north of a player's backsides.        |
+| 125 | Cold fifth, cavern north of players' backside            |
+| 126 | Cold fifth, cavern north of players' backside.           |
+| 127 | Cold fifth, cavern north of players' backsides           |
+| 128 | Cold fifth, cavern north of players' backsides.          |
+| 129 | Cold fifth, cavern north of the player's backside        |
+| 130 | Cold fifth, cavern north of the player's backside.       |
+| 131 | Cold fifth, cavern north of the player's backsides       |
+| 132 | Cold fifth, cavern north of the player's backsides.      |
+| 133 | Cold fifth, cavern north of the players' backside        |
+| 134 | Cold fifth, cavern north of the players' backside.       |
+| 135 | Cold fifth, cavern north of the players' backsides       |
+| 136 | Cold fifth, cavern north of the players' backsides.      |
+| 137 | Cold fifth, cavern, north of a player's backside         |
+| 138 | Cold fifth, cavern, north of a player's backsides        |
+| 139 | Cold fifth, cavern, north of players' backside           |
+| 140 | Cold fifth, cavern, north of players' backsides          |
+| 141 | Cold fifth, cavern, north of the player's backside       |
+| 142 | Cold fifth, cavern, north of the player's backsides      |
+| 143 | Cold fifth, cavern, north of the players' backside       |
+| 144 | Cold fifth, cavern, north of the players' backsides      |
+| 145 | Cold fifth, caverns north of a player's backside         |
+| 146 | Cold fifth, caverns north of a player's backside.        |
+| 147 | Cold fifth, caverns north of a player's backsides        |
+| 148 | Cold fifth, caverns north of a player's backsides.       |
+| 149 | Cold fifth, caverns north of players' backside           |
+| 150 | Cold fifth, caverns north of players' backside.          |
+| 151 | Cold fifth, caverns north of players' backsides          |
+| 152 | Cold fifth, caverns north of players' backsides.         |
+| 153 | Cold fifth, caverns north of the player's backside       |
+| 154 | Cold fifth, caverns north of the player's backside.      |
+| 155 | Cold fifth, caverns north of the player's backsides      |
+| 156 | Cold fifth, caverns north of the player's backsides.     |
+| 157 | Cold fifth, caverns north of the players' backside       |
+| 158 | Cold fifth, caverns north of the players' backside.      |
+| 159 | Cold fifth, caverns north of the players' backsides      |
+| 160 | Cold fifth, caverns north of the players' backsides.     |
+| 161 | Cold fifth, caverns, north of a player's backside        |
+| 162 | Cold fifth, caverns, north of a player's backsides       |
+| 163 | Cold fifth, caverns, north of players' backside          |
+| 164 | Cold fifth, caverns, north of players' backsides         |
+| 165 | Cold fifth, caverns, north of the player's backside      |
+| 166 | Cold fifth, caverns, north of the player's backsides     |
+| 167 | Cold fifth, caverns, north of the players' backside      |
+| 168 | Cold fifth, caverns, north of the players' backsides     |
+| 169 | Fifth cold cavern north of a player's backside           |
+| 170 | Fifth cold cavern north of a player's backside.          |
+| 171 | Fifth cold cavern north of a player's backsides          |
+| 172 | Fifth cold cavern north of a player's backsides.         |
+| 173 | Fifth cold cavern north of players' backside             |
+| 174 | Fifth cold cavern north of players' backside.            |
+| 175 | Fifth cold cavern north of players' backsides            |
+| 176 | Fifth cold cavern north of players' backsides.           |
+| 177 | Fifth cold cavern north of the player's backside         |
+| 178 | Fifth cold cavern north of the player's backside.        |
+| 179 | Fifth cold cavern north of the player's backsides        |
+| 180 | Fifth cold cavern north of the player's backsides.       |
+| 181 | Fifth cold cavern north of the players' backside         |
+| 182 | Fifth cold cavern north of the players' backside.        |
+| 183 | Fifth cold cavern north of the players' backsides        |
+| 184 | Fifth cold cavern north of the players' backsides.       |
+| 185 | Fifth cold cavern, north of a player's backside          |
+| 186 | Fifth cold cavern, north of a player's backsides         |
+| 187 | Fifth cold cavern, north of players' backside            |
+| 188 | Fifth cold cavern, north of players' backsides           |
+| 189 | Fifth cold cavern, north of the player's backside        |
+| 190 | Fifth cold cavern, north of the player's backsides       |
+| 191 | Fifth cold cavern, north of the players' backside        |
+| 192 | Fifth cold cavern, north of the players' backsides       |
+| 193 | Fifth cold caverns north of a player's backside          |
+| 194 | Fifth cold caverns north of a player's backside.         |
+| 195 | Fifth cold caverns north of a player's backsides         |
+| 196 | Fifth cold caverns north of a player's backsides.        |
+| 197 | Fifth cold caverns north of players' backside            |
+| 198 | Fifth cold caverns north of players' backside.           |
+| 199 | Fifth cold caverns north of players' backsides           |
+| 200 | Fifth cold caverns north of players' backsides.          |
+| 201 | Fifth cold caverns north of the player's backside        |
+| 202 | Fifth cold caverns north of the player's backside.       |
+| 203 | Fifth cold caverns north of the player's backsides       |
+| 204 | Fifth cold caverns north of the player's backsides.      |
+| 205 | Fifth cold caverns north of the players' backside        |
+| 206 | Fifth cold caverns north of the players' backside.       |
+| 207 | Fifth cold caverns north of the players' backsides       |
+| 208 | Fifth cold caverns north of the players' backsides.      |
+| 209 | Fifth cold caverns, north of a player's backside         |
+| 210 | Fifth cold caverns, north of a player's backsides        |
+| 211 | Fifth cold caverns, north of players' backside           |
+| 212 | Fifth cold caverns, north of players' backsides          |
+| 213 | Fifth cold caverns, north of the player's backside       |
+| 214 | Fifth cold caverns, north of the player's backsides      |
+| 215 | Fifth cold caverns, north of the players' backside       |
+| 216 | Fifth cold caverns, north of the players' backsides      |
+| 217 | The cold fifth cavern north of a player's backside       |
+| 218 | The cold fifth cavern north of a player's backside.      |
+| 219 | The cold fifth cavern north of a player's backsides      |
+| 220 | The cold fifth cavern north of a player's backsides.     |
+| 221 | The cold fifth cavern north of players' backside         |
+| 222 | The cold fifth cavern north of players' backside.        |
+| 223 | The cold fifth cavern north of players' backsides        |
+| 224 | The cold fifth cavern north of players' backsides.       |
+| 225 | The cold fifth cavern north of the player's backside     |
+| 226 | The cold fifth cavern north of the player's backside.    |
+| 227 | The cold fifth cavern north of the player's backsides    |
+| 228 | The cold fifth cavern north of the player's backsides.   |
+| 229 | The cold fifth cavern north of the players' backside     |
+| 230 | The cold fifth cavern north of the players' backside.    |
+| 231 | The cold fifth cavern north of the players' backsides    |
+| 232 | The cold fifth cavern north of the players' backsides.   |
+| 233 | The cold fifth cavern, north of a player's backside      |
+| 234 | The cold fifth cavern, north of a player's backsides     |
+| 235 | The cold fifth cavern, north of players' backside        |
+| 236 | The cold fifth cavern, north of players' backsides       |
+| 237 | The cold fifth cavern, north of the player's backside    |
+| 238 | The cold fifth cavern, north of the player's backsides   |
+| 239 | The cold fifth cavern, north of the players' backside    |
+| 240 | The cold fifth cavern, north of the players' backsides   |
+| 241 | The cold fifth caverns north of a player's backside      |
+| 242 | The cold fifth caverns north of a player's backside.     |
+| 243 | The cold fifth caverns north of a player's backsides     |
+| 244 | The cold fifth caverns north of a player's backsides.    |
+| 245 | The cold fifth caverns north of players' backside        |
+| 246 | The cold fifth caverns north of players' backside.       |
+| 247 | The cold fifth caverns north of players' backsides       |
+| 248 | The cold fifth caverns north of players' backsides.      |
+| 249 | The cold fifth caverns north of the player's backside    |
+| 250 | The cold fifth caverns north of the player's backside.   |
+| 251 | The cold fifth caverns north of the player's backsides   |
+| 252 | The cold fifth caverns north of the player's backsides.  |
+| 253 | The cold fifth caverns north of the players' backside    |
+| 254 | The cold fifth caverns north of the players' backside.   |
+| 255 | The cold fifth caverns north of the players' backsides   |
+| 256 | The cold fifth caverns north of the players' backsides.  |
+| 257 | The cold fifth caverns, north of a player's backside     |
+| 258 | The cold fifth caverns, north of a player's backsides    |
+| 259 | The cold fifth caverns, north of players' backside       |
+| 260 | The cold fifth caverns, north of players' backsides      |
+| 261 | The cold fifth caverns, north of the player's backside   |
+| 262 | The cold fifth caverns, north of the player's backsides  |
+| 263 | The cold fifth caverns, north of the players' backside   |
+| 264 | The cold fifth caverns, north of the players' backsides  |
+| 265 | The cold fifth, cavern north of a player's backside      |
+| 266 | The cold fifth, cavern north of a player's backside.     |
+| 267 | The cold fifth, cavern north of a player's backsides     |
+| 268 | The cold fifth, cavern north of a player's backsides.    |
+| 269 | The cold fifth, cavern north of players' backside        |
+| 270 | The cold fifth, cavern north of players' backside.       |
+| 271 | The cold fifth, cavern north of players' backsides       |
+| 272 | The cold fifth, cavern north of players' backsides.      |
+| 273 | The cold fifth, cavern north of the player's backside    |
+| 274 | The cold fifth, cavern north of the player's backside.   |
+| 275 | The cold fifth, cavern north of the player's backsides   |
+| 276 | The cold fifth, cavern north of the player's backsides.  |
+| 277 | The cold fifth, cavern north of the players' backside    |
+| 278 | The cold fifth, cavern north of the players' backside.   |
+| 279 | The cold fifth, cavern north of the players' backsides   |
+| 280 | The cold fifth, cavern north of the players' backsides.  |
+| 281 | The cold fifth, cavern, north of a player's backside     |
+| 282 | The cold fifth, cavern, north of a player's backsides    |
+| 283 | The cold fifth, cavern, north of players' backside       |
+| 284 | The cold fifth, cavern, north of players' backsides      |
+| 285 | The cold fifth, cavern, north of the player's backside   |
+| 286 | The cold fifth, cavern, north of the player's backsides  |
+| 287 | The cold fifth, cavern, north of the players' backside   |
+| 288 | The cold fifth, cavern, north of the players' backsides  |
+| 289 | The cold fifth, caverns north of a player's backside     |
+| 290 | The cold fifth, caverns north of a player's backside.    |
+| 291 | The cold fifth, caverns north of a player's backsides    |
+| 292 | The cold fifth, caverns north of a player's backsides.   |
+| 293 | The cold fifth, caverns north of players' backside       |
+| 294 | The cold fifth, caverns north of players' backside.      |
+| 295 | The cold fifth, caverns north of players' backsides      |
+| 296 | The cold fifth, caverns north of players' backsides.     |
+| 297 | The cold fifth, caverns north of the player's backside   |
+| 298 | The cold fifth, caverns north of the player's backside.  |
+| 299 | The cold fifth, caverns north of the player's backsides  |
+| 300 | The cold fifth, caverns north of the player's backsides. |
+| 301 | The cold fifth, caverns north of the players' backside   |
+| 302 | The cold fifth, caverns north of the players' backside.  |
+| 303 | The cold fifth, caverns north of the players' backsides  |
+| 304 | The cold fifth, caverns north of the players' backsides. |
+| 305 | The cold fifth, caverns, north of a player's backside    |
+| 306 | The cold fifth, caverns, north of a player's backsides   |
+| 307 | The cold fifth, caverns, north of players' backside      |
+| 308 | The cold fifth, caverns, north of players' backsides     |
+| 309 | The cold fifth, caverns, north of the player's backside  |
+| 310 | The cold fifth, caverns, north of the player's backsides |
+| 311 | The cold fifth, caverns, north of the players' backside  |
+| 312 | The cold fifth, caverns, north of the players' backsides |
+| 313 | The fifth cold cavern north of a player's backside       |
+| 314 | The fifth cold cavern north of a player's backside.      |
+| 315 | The fifth cold cavern north of a player's backsides      |
+| 316 | The fifth cold cavern north of a player's backsides.     |
+| 317 | The fifth cold cavern north of players' backside         |
+| 318 | The fifth cold cavern north of players' backside.        |
+| 319 | The fifth cold cavern north of players' backsides        |
+| 320 | The fifth cold cavern north of players' backsides.       |
+| 321 | The fifth cold cavern north of the player's backside     |
+| 322 | The fifth cold cavern north of the player's backside.    |
+| 323 | The fifth cold cavern north of the player's backsides    |
+| 324 | The fifth cold cavern north of the player's backsides.   |
+| 325 | The fifth cold cavern north of the players' backside     |
+| 326 | The fifth cold cavern north of the players' backside.    |
+| 327 | The fifth cold cavern north of the players' backsides    |
+| 328 | The fifth cold cavern north of the players' backsides.   |
+| 329 | The fifth cold cavern, north of a player's backside      |
+| 330 | The fifth cold cavern, north of a player's backsides     |
+| 331 | The fifth cold cavern, north of players' backside        |
+| 332 | The fifth cold cavern, north of players' backsides       |
+| 333 | The fifth cold cavern, north of the player's backside    |
+| 334 | The fifth cold cavern, north of the player's backsides   |
+| 335 | The fifth cold cavern, north of the players' backside    |
+| 336 | The fifth cold cavern, north of the players' backsides   |
+| 337 | The fifth cold caverns north of a player's backside      |
+| 338 | The fifth cold caverns north of a player's backside.     |
+| 339 | The fifth cold caverns north of a player's backsides     |
+| 340 | The fifth cold caverns north of a player's backsides.    |
+| 341 | The fifth cold caverns north of players' backside        |
+| 342 | The fifth cold caverns north of players' backside.       |
+| 343 | The fifth cold caverns north of players' backsides       |
+| 344 | The fifth cold caverns north of players' backsides.      |
+| 345 | The fifth cold caverns north of the player's backside    |
+| 346 | The fifth cold caverns north of the player's backside.   |
+| 347 | The fifth cold caverns north of the player's backsides   |
+| 348 | The fifth cold caverns north of the player's backsides.  |
+| 349 | The fifth cold caverns north of the players' backside    |
+| 350 | The fifth cold caverns north of the players' backside.   |
+| 351 | The fifth cold caverns north of the players' backsides   |
+| 352 | The fifth cold caverns north of the players' backsides.  |
+| 353 | The fifth cold caverns, north of a player's backside     |
+| 354 | The fifth cold caverns, north of a player's backsides    |
+| 355 | The fifth cold caverns, north of players' backside       |
+| 356 | The fifth cold caverns, north of players' backsides      |
+| 357 | The fifth cold caverns, north of the player's backside   |
+| 358 | The fifth cold caverns, north of the player's backsides  |
+| 359 | The fifth cold caverns, north of the players' backside   |
+| 360 | The fifth cold caverns, north of the players' backsides  |
++-----+----------------------------------------------------------+
+

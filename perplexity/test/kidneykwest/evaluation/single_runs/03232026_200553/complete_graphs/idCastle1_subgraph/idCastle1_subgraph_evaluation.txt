@@ -1,0 +1,182 @@
+GRAPH NAME: idCastle1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 60    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 2     |
+| Nodes Covered                   | 2     |
+| Nodes Included                  | 2     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 1     |
+| Edges Covered                   | 1     |
+| Edges Included                  | 1     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++------------------------------------------+
+|               GOLD OUTPUTS               |
++-----------------------------+------------+
+| Gold Output                 | Generated? |
++-----------------------------+------------+
+| the castle near the machine | True       |
++-----------------------------+------------+
+
++----------------------------------------------------------------------------------+
+|                                   NODE METRICS                                   |
++------------+--------------+---------------+------------------+-------------------+
+| Node       | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++------------+--------------+---------------+------------------+-------------------+
+| idCastle1  | True         | True          | Covered          | Included          |
+| idMachine1 | True         | True          | Covered          | Included          |
++------------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------+
+|                                              EDGE METRICS                                             |
++--------+-----------+------------+--------------+---------------+------------------+-------------------+
+| Edge   | Parent    | Child      | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------+-----------+------------+--------------+---------------+------------------+-------------------+
+| isNear | idCastle1 | idMachine1 | True         | True          | Covered          | Included          |
++--------+-----------+------------+--------------+---------------+------------------+-------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h3396                                                                     |
+|               |   INDEX: x3395                                                                   |
+|               |   RELS: < [ _near_p LBL: h3402 ARG0: e3399 ARG1: u3400 ARG2: i3401 ]             |
+|               |           [ def_udef_a_q LBL: h3406 ARG0: x3403 RSTR: h3404 BODY: h3405 ]        |
+|               |           [ _machine_n_1 LBL: h3398 ARG0: x3397 ]                                |
+|               |           [ _castle_n_1 LBL: h3396 ARG0: x3395 ] >                               |
+|               |   HCONS: < h3404 qeq h3398 >                                                     |
+|               |   EQS: < x3403 eq x3397 h3402 eq h3407 i3401 eq x3403 h3402 eq h3396 u3400 eq    |
+|               | x3395 > ]                                                                        |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h3396                                                                     |
+|               |   INDEX: x3395                                                                   |
+|               |   RELS: < [ _near_p LBL: h3396 ARG0: e3399 ARG1: x3395 ARG2: x3397 ]             |
+|               |           [ def_udef_a_q LBL: h3406 ARG0: x3397 RSTR: h3404 BODY: h3405 ]        |
+|               |           [ _machine_n_1 LBL: h3398 ARG0: x3397 ]                                |
+|               |           [ _castle_n_1 LBL: h3396 ARG0: x3395 ] >                               |
+|               |   HCONS: < h3404 qeq h3398 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h3416                                                                     |
+|               |   INDEX: e3413                                                                   |
+|               |   RELS: < [ unknown LBL: h3412 ARG: x3395 ARG0: e3413 ]                          |
+|               |           [ def_udef_a_q LBL: h3411 ARG0: x3395 RSTR: h3409 BODY: h3410 ]        |
+|               |           [ _near_p LBL: h3396 ARG0: e3399 ARG1: x3395 ARG2: x3397 ]             |
+|               |           [ def_udef_a_q LBL: h3406 ARG0: x3397 RSTR: h3404 BODY: h3405 ]        |
+|               |           [ _machine_n_1 LBL: h3398 ARG0: x3397 ]                                |
+|               |           [ _castle_n_1 LBL: h3396 ARG0: x3395 ] >                               |
+|               |   HCONS: < h3404 qeq h3398 h3409 qeq h3396 h3416 qeq h3412 > ]                   |
++---------------+----------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------+
+|                            NODE SEMENTS                            |
++------------+-------------------------------------------------------+
+| Node       | Generated SEMENT                                      |
++------------+-------------------------------------------------------+
+| idCastle1  | [ TOP: h3396                                          |
+|            |   INDEX: x3395                                        |
+|            |   RELS: < [ _castle_n_1 LBL: h3396 ARG0: x3395 ] > ]  |
++------------+-------------------------------------------------------+
+| idMachine1 | [ TOP: h3398                                          |
+|            |   INDEX: x3397                                        |
+|            |   RELS: < [ _machine_n_1 LBL: h3398 ARG0: x3397 ] > ] |
++------------+-------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------+
+|                                                    EDGE SEMENTS                                                    |
++--------+-----------+------------+----------------------------------------------------------------------------------+
+| Edge   | Parent    | Child      | Generated SEMENT                                                                 |
++--------+-----------+------------+----------------------------------------------------------------------------------+
+| isNear | idCastle1 | idMachine1 | [ TOP: h3396                                                                     |
+|        |           |            |   INDEX: x3395                                                                   |
+|        |           |            |   RELS: < [ _near_p LBL: h3402 ARG0: e3399 ARG1: u3400 ARG2: i3401 ]             |
+|        |           |            |           [ def_udef_a_q LBL: h3406 ARG0: x3403 RSTR: h3404 BODY: h3405 ]        |
+|        |           |            |           [ _machine_n_1 LBL: h3398 ARG0: x3397 ]                                |
+|        |           |            |           [ _castle_n_1 LBL: h3396 ARG0: x3395 ] >                               |
+|        |           |            |   HCONS: < h3404 qeq h3398 >                                                     |
+|        |           |            |   EQS: < x3403 eq x3397 h3402 eq h3407 i3401 eq x3403 h3402 eq h3396 u3400 eq    |
+|        |           |            | x3395 > ]                                                                        |
++--------+-----------+------------+----------------------------------------------------------------------------------+
+
++-------------------------------------+
+|        GENERATED ENGLISH TEXT       |
++----+--------------------------------+
+| #  | Generated Text                 |
++----+--------------------------------+
+| 1  | A castle near a machine        |
+| 2  | A castle near a machine.       |
+| 3  | A castle near machines         |
+| 4  | A castle near machines.        |
+| 5  | A castle near the machine      |
+| 6  | A castle near the machine.     |
+| 7  | A castle near the machines     |
+| 8  | A castle near the machines.    |
+| 9  | A castle, near a machine       |
+| 10 | A castle, near machines        |
+| 11 | A castle, near the machine     |
+| 12 | A castle, near the machines    |
+| 13 | Castle near a machine          |
+| 14 | Castle near a machine.         |
+| 15 | Castle near machines           |
+| 16 | Castle near machines.          |
+| 17 | Castle near the machine        |
+| 18 | Castle near the machine.       |
+| 19 | Castle near the machines       |
+| 20 | Castle near the machines.      |
+| 21 | Castle, near a machine         |
+| 22 | Castle, near machines          |
+| 23 | Castle, near the machine       |
+| 24 | Castle, near the machines      |
+| 25 | Castles near a machine         |
+| 26 | Castles near a machine.        |
+| 27 | Castles near machines          |
+| 28 | Castles near machines.         |
+| 29 | Castles near the machine       |
+| 30 | Castles near the machine.      |
+| 31 | Castles near the machines      |
+| 32 | Castles near the machines.     |
+| 33 | Castles, near a machine        |
+| 34 | Castles, near machines         |
+| 35 | Castles, near the machine      |
+| 36 | Castles, near the machines     |
+| 37 | The castle near a machine      |
+| 38 | The castle near a machine.     |
+| 39 | The castle near machines       |
+| 40 | The castle near machines.      |
+| 41 | The castle near the machine    |
+| 42 | The castle near the machine.   |
+| 43 | The castle near the machines   |
+| 44 | The castle near the machines.  |
+| 45 | The castle, near a machine     |
+| 46 | The castle, near machines      |
+| 47 | The castle, near the machine   |
+| 48 | The castle, near the machines  |
+| 49 | The castles near a machine     |
+| 50 | The castles near a machine.    |
+| 51 | The castles near machines      |
+| 52 | The castles near machines.     |
+| 53 | The castles near the machine   |
+| 54 | The castles near the machine.  |
+| 55 | The castles near the machines  |
+| 56 | The castles near the machines. |
+| 57 | The castles, near a machine    |
+| 58 | The castles, near machines     |
+| 59 | The castles, near the machine  |
+| 60 | The castles, near the machines |
++----+--------------------------------+
+

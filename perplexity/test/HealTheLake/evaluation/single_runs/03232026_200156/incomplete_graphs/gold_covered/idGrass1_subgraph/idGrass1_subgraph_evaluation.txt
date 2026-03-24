@@ -1,0 +1,331 @@
+GRAPH NAME: idGrass1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 144   |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 5     |
+| Nodes Covered                   | 4     |
+| Nodes Included                  | 4     |
++---------------------------------+-------+
+| Node Coverage                   | 0.8   |
+| Node Inclusion                  | 0.8   |
++---------------------------------+-------+
+| Edge Count                      | 4     |
+| Edges Covered                   | 3     |
+| Edges Included                  | 3     |
++---------------------------------+-------+
+| Edge Coverage                   | 0.75  |
+| Edge Inclusion                  | 0.75  |
++---------------------------------+-------+
+
++---------------------------------------------------------+
+|                       GOLD OUTPUTS                      |
++--------------------------------------------+------------+
+| Gold Output                                | Generated? |
++--------------------------------------------+------------+
+| the flattened green grass east of the bush | True       |
++--------------------------------------------+------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+|                                                         NODE METRICS                                                         |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| Node        | Node Covered | Node Included | Coverage Comment                            | Inclusion Comment                 |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+| idGrass1    | True         | True          | Covered                                     | Included                          |
+| green       | True         | True          | Covered                                     | Included                          |
+| uncountable | False        | False         | 'uncountable' not in lexicon's node entries | No SEMENT generated for this node |
+| flattened   | True         | True          | Covered                                     | Included                          |
+| idBush2     | True         | True          | Covered                                     | Included                          |
++-------------+--------------+---------------+---------------------------------------------+-----------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                           EDGE METRICS                                                                           |
++-----------------------------+----------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| Edge                        | Parent   | Child       | Edge Covered | Edge Included | Coverage Comment                       | Inclusion Comment                 |
++-----------------------------+----------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+| idGrass1_prop_idColor       | idGrass1 | green       | True         | True          | Covered                                | Included                          |
+| idGrass1_prop_idArticleType | idGrass1 | uncountable | False        | False         | child of 'idArticleType' has no SEMENT | No SEMENT generated for this edge |
+| idGrass1_prop_idDescriptor  | idGrass1 | flattened   | True         | True          | Covered                                | Included                          |
+| isEastOf                    | idGrass1 | idBush2     | True         | True          | Covered                                | Included                          |
++-----------------------------+----------+-------------+--------------+---------------+----------------------------------------+-----------------------------------+
+
++--------------------------------------------------------------------------------------------------+
+|                                        GENERATED SEMENTS                                         |
++---------------+----------------------------------------------------------------------------------+
+| Version       | SEMENT                                                                           |
++---------------+----------------------------------------------------------------------------------+
+| Original      | [ TOP: h772                                                                      |
+|               |   INDEX: x771                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h789 ARG0: e786 ARG1: u787 ARG2: x788 ]               |
+|               |           [ def_implicit_q LBL: h800 ARG0: x797 RSTR: h798 BODY: h799 ]          |
+|               |           [ _east_a_1 LBL: h785 ARG0: i782 ARG1: x783 ARG2: u784 ]               |
+|               |           [ def_udef_a_q LBL: h795 ARG0: x792 RSTR: h793 BODY: h794 ]            |
+|               |           [ _bush_n_1 LBL: h781 ARG0: x780 ]                                     |
+|               |           [ place_n LBL: h791 ARG0: x790 ]                                       |
+|               |           [ _flatten_v_cause LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: |
+|               | i778 ]                                                                           |
+|               |           [ _green_a_2 LBL: h775 ARG0: i773 ARG1: i774 ]                         |
+|               |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|               |   HCONS: < h793 qeq h781 h798 qeq h791 >                                         |
+|               |   ICONS: < e776 topic i778 >                                                     |
+|               |   EQS: < x792 eq x780 h785 eq h796 u784 eq x792 h785 eq h791 x783 eq x790 x797   |
+|               | eq x790 h789 eq h801 x788 eq x797 h775 eq h772 i774 eq x771 h779 eq h772 i778 eq |
+|               | x771 h789 eq h772 u787 eq x771 > ]                                               |
++---------------+----------------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h772                                                                      |
+|               |   INDEX: x771                                                                    |
+|               |   RELS: < [ loc_nonsp LBL: h772 ARG0: e786 ARG1: x771 ARG2: x783 ]               |
+|               |           [ def_implicit_q LBL: h800 ARG0: x783 RSTR: h798 BODY: h799 ]          |
+|               |           [ _east_a_1 LBL: h785 ARG0: i782 ARG1: x783 ARG2: x780 ]               |
+|               |           [ def_udef_a_q LBL: h795 ARG0: x780 RSTR: h793 BODY: h794 ]            |
+|               |           [ _bush_n_1 LBL: h781 ARG0: x780 ]                                     |
+|               |           [ place_n LBL: h785 ARG0: x783 ]                                       |
+|               |           [ _flatten_v_cause LBL: h772 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: |
+|               | x771 ]                                                                           |
+|               |           [ _green_a_2 LBL: h772 ARG0: i773 ARG1: x771 ]                         |
+|               |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|               |   HCONS: < h793 qeq h781 h798 qeq h785 >                                         |
+|               |   ICONS: < e776 topic x771 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+| Prepped       | [ TOP: h810                                                                      |
+|               |   INDEX: e807                                                                    |
+|               |   RELS: < [ unknown LBL: h806 ARG: x771 ARG0: e807 ]                             |
+|               |           [ def_udef_a_q LBL: h805 ARG0: x771 RSTR: h803 BODY: h804 ]            |
+|               |           [ loc_nonsp LBL: h772 ARG0: e786 ARG1: x771 ARG2: x783 ]               |
+|               |           [ def_implicit_q LBL: h800 ARG0: x783 RSTR: h798 BODY: h799 ]          |
+|               |           [ _east_a_1 LBL: h785 ARG0: i782 ARG1: x783 ARG2: x780 ]               |
+|               |           [ def_udef_a_q LBL: h795 ARG0: x780 RSTR: h793 BODY: h794 ]            |
+|               |           [ _bush_n_1 LBL: h781 ARG0: x780 ]                                     |
+|               |           [ place_n LBL: h785 ARG0: x783 ]                                       |
+|               |           [ _flatten_v_cause LBL: h772 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: |
+|               | x771 ]                                                                           |
+|               |           [ _green_a_2 LBL: h772 ARG0: i773 ARG1: x771 ]                         |
+|               |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|               |   HCONS: < h793 qeq h781 h798 qeq h785 h803 qeq h772 h810 qeq h806 >             |
+|               |   ICONS: < e776 topic x771 > ]                                                   |
++---------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------+
+|                                        NODE SEMENTS                                       |
++-------------+-----------------------------------------------------------------------------+
+| Node        | Generated SEMENT                                                            |
++-------------+-----------------------------------------------------------------------------+
+| idGrass1    | [ TOP: h772                                                                 |
+|             |   INDEX: x771                                                               |
+|             |   RELS: < [ _grass_n_1 LBL: h772 ARG0: x771 ] > ]                           |
++-------------+-----------------------------------------------------------------------------+
+| green       | [ TOP: h775                                                                 |
+|             |   INDEX: i773                                                               |
+|             |   RELS: < [ _green_a_2 LBL: h775 ARG0: i773 ARG1: i774 ] >                  |
+|             |   SLOTS: < ARG1: i774 > ]                                                   |
++-------------+-----------------------------------------------------------------------------+
+| uncountable | None                                                                        |
++-------------+-----------------------------------------------------------------------------+
+| flattened   | [ TOP: h779                                                                 |
+|             |   INDEX: e776                                                               |
+|             |   RELS: < [ _flatten_v_cause LBL: h779 ARG0: e776 ARG1: i777 ARG2: i778 ] > |
+|             |   SLOTS: < ARG1: i777 ARG2: i778 > ]                                        |
++-------------+-----------------------------------------------------------------------------+
+| idBush2     | [ TOP: h781                                                                 |
+|             |   INDEX: x780                                                               |
+|             |   RELS: < [ _bush_n_1 LBL: h781 ARG0: x780 ] > ]                            |
++-------------+-----------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                               EDGE SEMENTS                                                              |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+| Edge                        | Parent   | Child       | Generated SEMENT                                                                 |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idColor       | idGrass1 | green       | [ TOP: h772                                                                      |
+|                             |          |             |   INDEX: x771                                                                    |
+|                             |          |             |   RELS: < [ _green_a_2 LBL: h775 ARG0: i773 ARG1: i774 ]                         |
+|                             |          |             |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|                             |          |             |   EQS: < h775 eq h772 i774 eq x771 > ]                                           |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idArticleType | idGrass1 | uncountable | None                                                                             |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+| idGrass1_prop_idDescriptor  | idGrass1 | flattened   | [ TOP: h772                                                                      |
+|                             |          |             |   INDEX: x771                                                                    |
+|                             |          |             |   RELS: < [ _flatten_v_cause LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: |
+|                             |          |             | i778 ]                                                                           |
+|                             |          |             |           [ _green_a_2 LBL: h775 ARG0: i773 ARG1: i774 ]                         |
+|                             |          |             |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|                             |          |             |   ICONS: < e776 topic i778 >                                                     |
+|                             |          |             |   EQS: < h775 eq h772 i774 eq x771 h779 eq h772 i778 eq x771 > ]                 |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+| isEastOf                    | idGrass1 | idBush2     | [ TOP: h772                                                                      |
+|                             |          |             |   INDEX: x771                                                                    |
+|                             |          |             |   RELS: < [ loc_nonsp LBL: h789 ARG0: e786 ARG1: u787 ARG2: x788 ]               |
+|                             |          |             |           [ def_implicit_q LBL: h800 ARG0: x797 RSTR: h798 BODY: h799 ]          |
+|                             |          |             |           [ _east_a_1 LBL: h785 ARG0: i782 ARG1: x783 ARG2: u784 ]               |
+|                             |          |             |           [ def_udef_a_q LBL: h795 ARG0: x792 RSTR: h793 BODY: h794 ]            |
+|                             |          |             |           [ _bush_n_1 LBL: h781 ARG0: x780 ]                                     |
+|                             |          |             |           [ place_n LBL: h791 ARG0: x790 ]                                       |
+|                             |          |             |           [ _flatten_v_cause LBL: h779 ARG0: e776 [ e PERF: - ] ARG1: i777 ARG2: |
+|                             |          |             | i778 ]                                                                           |
+|                             |          |             |           [ _green_a_2 LBL: h775 ARG0: i773 ARG1: i774 ]                         |
+|                             |          |             |           [ _grass_n_1 LBL: h772 ARG0: x771 ] >                                  |
+|                             |          |             |   HCONS: < h793 qeq h781 h798 qeq h791 >                                         |
+|                             |          |             |   ICONS: < e776 topic i778 >                                                     |
+|                             |          |             |   EQS: < x792 eq x780 h785 eq h796 u784 eq x792 h785 eq h791 x783 eq x790 x797   |
+|                             |          |             | eq x790 h789 eq h801 x788 eq x797 h775 eq h772 i774 eq x771 h779 eq h772 i778 eq |
+|                             |          |             | x771 h789 eq h772 u787 eq x771 > ]                                               |
++-----------------------------+----------+-------------+----------------------------------------------------------------------------------+
+
++-------------------------------------------------------+
+|                 GENERATED ENGLISH TEXT                |
++-----+-------------------------------------------------+
+| #   | Generated Text                                  |
++-----+-------------------------------------------------+
+| 1   | A flattened green grass east of a bush          |
+| 2   | A flattened green grass east of a bush.         |
+| 3   | A flattened green grass east of bushes          |
+| 4   | A flattened green grass east of bushes.         |
+| 5   | A flattened green grass east of the bush        |
+| 6   | A flattened green grass east of the bush.       |
+| 7   | A flattened green grass east of the bushes      |
+| 8   | A flattened green grass east of the bushes.     |
+| 9   | A flattened green grass, east of a bush         |
+| 10  | A flattened green grass, east of bushes         |
+| 11  | A flattened green grass, east of the bush       |
+| 12  | A flattened green grass, east of the bushes     |
+| 13  | A green flattened grass east of a bush          |
+| 14  | A green flattened grass east of a bush.         |
+| 15  | A green flattened grass east of bushes          |
+| 16  | A green flattened grass east of bushes.         |
+| 17  | A green flattened grass east of the bush        |
+| 18  | A green flattened grass east of the bush.       |
+| 19  | A green flattened grass east of the bushes      |
+| 20  | A green flattened grass east of the bushes.     |
+| 21  | A green flattened grass, east of a bush         |
+| 22  | A green flattened grass, east of bushes         |
+| 23  | A green flattened grass, east of the bush       |
+| 24  | A green flattened grass, east of the bushes     |
+| 25  | Flattened green grass east of a bush            |
+| 26  | Flattened green grass east of a bush            |
+| 27  | Flattened green grass east of a bush.           |
+| 28  | Flattened green grass east of a bush.           |
+| 29  | Flattened green grass east of bushes            |
+| 30  | Flattened green grass east of bushes            |
+| 31  | Flattened green grass east of bushes.           |
+| 32  | Flattened green grass east of bushes.           |
+| 33  | Flattened green grass east of the bush          |
+| 34  | Flattened green grass east of the bush          |
+| 35  | Flattened green grass east of the bush.         |
+| 36  | Flattened green grass east of the bush.         |
+| 37  | Flattened green grass east of the bushes        |
+| 38  | Flattened green grass east of the bushes        |
+| 39  | Flattened green grass east of the bushes.       |
+| 40  | Flattened green grass east of the bushes.       |
+| 41  | Flattened green grass, east of a bush           |
+| 42  | Flattened green grass, east of a bush           |
+| 43  | Flattened green grass, east of bushes           |
+| 44  | Flattened green grass, east of bushes           |
+| 45  | Flattened green grass, east of the bush         |
+| 46  | Flattened green grass, east of the bush         |
+| 47  | Flattened green grass, east of the bushes       |
+| 48  | Flattened green grass, east of the bushes       |
+| 49  | Flattened green grasses east of a bush          |
+| 50  | Flattened green grasses east of a bush.         |
+| 51  | Flattened green grasses east of bushes          |
+| 52  | Flattened green grasses east of bushes.         |
+| 53  | Flattened green grasses east of the bush        |
+| 54  | Flattened green grasses east of the bush.       |
+| 55  | Flattened green grasses east of the bushes      |
+| 56  | Flattened green grasses east of the bushes.     |
+| 57  | Flattened green grasses, east of a bush         |
+| 58  | Flattened green grasses, east of bushes         |
+| 59  | Flattened green grasses, east of the bush       |
+| 60  | Flattened green grasses, east of the bushes     |
+| 61  | Green flattened grass east of a bush            |
+| 62  | Green flattened grass east of a bush            |
+| 63  | Green flattened grass east of a bush.           |
+| 64  | Green flattened grass east of a bush.           |
+| 65  | Green flattened grass east of bushes            |
+| 66  | Green flattened grass east of bushes            |
+| 67  | Green flattened grass east of bushes.           |
+| 68  | Green flattened grass east of bushes.           |
+| 69  | Green flattened grass east of the bush          |
+| 70  | Green flattened grass east of the bush          |
+| 71  | Green flattened grass east of the bush.         |
+| 72  | Green flattened grass east of the bush.         |
+| 73  | Green flattened grass east of the bushes        |
+| 74  | Green flattened grass east of the bushes        |
+| 75  | Green flattened grass east of the bushes.       |
+| 76  | Green flattened grass east of the bushes.       |
+| 77  | Green flattened grass, east of a bush           |
+| 78  | Green flattened grass, east of a bush           |
+| 79  | Green flattened grass, east of bushes           |
+| 80  | Green flattened grass, east of bushes           |
+| 81  | Green flattened grass, east of the bush         |
+| 82  | Green flattened grass, east of the bush         |
+| 83  | Green flattened grass, east of the bushes       |
+| 84  | Green flattened grass, east of the bushes       |
+| 85  | Green flattened grasses east of a bush          |
+| 86  | Green flattened grasses east of a bush.         |
+| 87  | Green flattened grasses east of bushes          |
+| 88  | Green flattened grasses east of bushes.         |
+| 89  | Green flattened grasses east of the bush        |
+| 90  | Green flattened grasses east of the bush.       |
+| 91  | Green flattened grasses east of the bushes      |
+| 92  | Green flattened grasses east of the bushes.     |
+| 93  | Green flattened grasses, east of a bush         |
+| 94  | Green flattened grasses, east of bushes         |
+| 95  | Green flattened grasses, east of the bush       |
+| 96  | Green flattened grasses, east of the bushes     |
+| 97  | The flattened green grass east of a bush        |
+| 98  | The flattened green grass east of a bush.       |
+| 99  | The flattened green grass east of bushes        |
+| 100 | The flattened green grass east of bushes.       |
+| 101 | The flattened green grass east of the bush      |
+| 102 | The flattened green grass east of the bush.     |
+| 103 | The flattened green grass east of the bushes    |
+| 104 | The flattened green grass east of the bushes.   |
+| 105 | The flattened green grass, east of a bush       |
+| 106 | The flattened green grass, east of bushes       |
+| 107 | The flattened green grass, east of the bush     |
+| 108 | The flattened green grass, east of the bushes   |
+| 109 | The flattened green grasses east of a bush      |
+| 110 | The flattened green grasses east of a bush.     |
+| 111 | The flattened green grasses east of bushes      |
+| 112 | The flattened green grasses east of bushes.     |
+| 113 | The flattened green grasses east of the bush    |
+| 114 | The flattened green grasses east of the bush.   |
+| 115 | The flattened green grasses east of the bushes  |
+| 116 | The flattened green grasses east of the bushes. |
+| 117 | The flattened green grasses, east of a bush     |
+| 118 | The flattened green grasses, east of bushes     |
+| 119 | The flattened green grasses, east of the bush   |
+| 120 | The flattened green grasses, east of the bushes |
+| 121 | The green flattened grass east of a bush        |
+| 122 | The green flattened grass east of a bush.       |
+| 123 | The green flattened grass east of bushes        |
+| 124 | The green flattened grass east of bushes.       |
+| 125 | The green flattened grass east of the bush      |
+| 126 | The green flattened grass east of the bush.     |
+| 127 | The green flattened grass east of the bushes    |
+| 128 | The green flattened grass east of the bushes.   |
+| 129 | The green flattened grass, east of a bush       |
+| 130 | The green flattened grass, east of bushes       |
+| 131 | The green flattened grass, east of the bush     |
+| 132 | The green flattened grass, east of the bushes   |
+| 133 | The green flattened grasses east of a bush      |
+| 134 | The green flattened grasses east of a bush.     |
+| 135 | The green flattened grasses east of bushes      |
+| 136 | The green flattened grasses east of bushes.     |
+| 137 | The green flattened grasses east of the bush    |
+| 138 | The green flattened grasses east of the bush.   |
+| 139 | The green flattened grasses east of the bushes  |
+| 140 | The green flattened grasses east of the bushes. |
+| 141 | The green flattened grasses, east of a bush     |
+| 142 | The green flattened grasses, east of bushes     |
+| 143 | The green flattened grasses, east of the bush   |
+| 144 | The green flattened grasses, east of the bushes |
++-----+-------------------------------------------------+
+

@@ -1,0 +1,162 @@
+GRAPH NAME: idGem1_subgraph
+
++-----------------------------------------+
+|            EVALUATION METRICS           |
++---------------------------------+-------+
+| Metric                          | Value |
++---------------------------------+-------+
+| Generated Text Results          | 35    |
+| Generated Gold Results          | 1     |
+| Generated Gold Results Coverage | 1.0   |
++---------------------------------+-------+
+| Node Count                      | 3     |
+| Nodes Covered                   | 3     |
+| Nodes Included                  | 3     |
++---------------------------------+-------+
+| Node Coverage                   | 1.0   |
+| Node Inclusion                  | 1.0   |
++---------------------------------+-------+
+| Edge Count                      | 2     |
+| Edges Covered                   | 2     |
+| Edges Included                  | 2     |
++---------------------------------+-------+
+| Edge Coverage                   | 1.0   |
+| Edge Inclusion                  | 1.0   |
++---------------------------------+-------+
+
++----------------------------------+
+|           GOLD OUTPUTS           |
++---------------------+------------+
+| Gold Output         | Generated? |
++---------------------+------------+
+| the red glowing gem | True       |
++---------------------+------------+
+
++-------------------------------------------------------------------------------+
+|                                  NODE METRICS                                 |
++---------+--------------+---------------+------------------+-------------------+
+| Node    | Node Covered | Node Included | Coverage Comment | Inclusion Comment |
++---------+--------------+---------------+------------------+-------------------+
+| idGem1  | True         | True          | Covered          | Included          |
+| red     | True         | True          | Covered          | Included          |
+| glowing | True         | True          | Covered          | Included          |
++---------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------------------------------+
+|                                                    EDGE METRICS                                                   |
++--------------------------+--------+---------+--------------+---------------+------------------+-------------------+
+| Edge                     | Parent | Child   | Edge Covered | Edge Included | Coverage Comment | Inclusion Comment |
++--------------------------+--------+---------+--------------+---------------+------------------+-------------------+
+| idGem1_prop_idColor      | idGem1 | red     | True         | True          | Covered          | Included          |
+| idGem1_prop_idDescriptor | idGem1 | glowing | True         | True          | Covered          | Included          |
++--------------------------+--------+---------+--------------+---------------+------------------+-------------------+
+
++-------------------------------------------------------------------------------------------+
+|                                     GENERATED SEMENTS                                     |
++---------------+---------------------------------------------------------------------------+
+| Version       | SEMENT                                                                    |
++---------------+---------------------------------------------------------------------------+
+| Original      | [ TOP: h1778                                                              |
+|               |   INDEX: x1777                                                            |
+|               |   RELS: < [ _glow_v_1 LBL: h1784 ARG0: e1782 [ e PROG: + ] ARG1: u1783 ]  |
+|               |           [ _red_a_1 LBL: h1781 ARG0: i1779 ARG1: i1780 ]                 |
+|               |           [ _gem_n_1 LBL: h1778 ARG0: x1777 ] >                           |
+|               |   EQS: < h1781 eq h1778 i1780 eq x1777 h1784 eq h1778 u1783 eq x1777 > ]  |
++---------------+---------------------------------------------------------------------------+
+| EQs Collapsed | [ TOP: h1778                                                              |
+|               |   INDEX: x1777                                                            |
+|               |   RELS: < [ _glow_v_1 LBL: h1778 ARG0: e1782 [ e PROG: + ] ARG1: x1777 ]  |
+|               |           [ _red_a_1 LBL: h1778 ARG0: i1779 ARG1: x1777 ]                 |
+|               |           [ _gem_n_1 LBL: h1778 ARG0: x1777 ] > ]                         |
++---------------+---------------------------------------------------------------------------+
+| Prepped       | [ TOP: h1793                                                              |
+|               |   INDEX: e1790                                                            |
+|               |   RELS: < [ unknown LBL: h1789 ARG: x1777 ARG0: e1790 ]                   |
+|               |           [ def_udef_a_q LBL: h1788 ARG0: x1777 RSTR: h1786 BODY: h1787 ] |
+|               |           [ _glow_v_1 LBL: h1778 ARG0: e1782 [ e PROG: + ] ARG1: x1777 ]  |
+|               |           [ _red_a_1 LBL: h1778 ARG0: i1779 ARG1: x1777 ]                 |
+|               |           [ _gem_n_1 LBL: h1778 ARG0: x1777 ] >                           |
+|               |   HCONS: < h1786 qeq h1778 h1793 qeq h1789 > ]                            |
++---------------+---------------------------------------------------------------------------+
+
++------------------------------------------------------------------------+
+|                              NODE SEMENTS                              |
++---------+--------------------------------------------------------------+
+| Node    | Generated SEMENT                                             |
++---------+--------------------------------------------------------------+
+| idGem1  | [ TOP: h1778                                                 |
+|         |   INDEX: x1777                                               |
+|         |   RELS: < [ _gem_n_1 LBL: h1778 ARG0: x1777 ] > ]            |
++---------+--------------------------------------------------------------+
+| red     | [ TOP: h1781                                                 |
+|         |   INDEX: i1779                                               |
+|         |   RELS: < [ _red_a_1 LBL: h1781 ARG0: i1779 ARG1: i1780 ] >  |
+|         |   SLOTS: < ARG1: i1780 > ]                                   |
++---------+--------------------------------------------------------------+
+| glowing | [ TOP: h1784                                                 |
+|         |   INDEX: e1782                                               |
+|         |   RELS: < [ _glow_v_1 LBL: h1784 ARG0: e1782 ARG1: u1783 ] > |
+|         |   SLOTS: < ARG1: u1783 > ]                                   |
++---------+--------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------+
+|                                                      EDGE SEMENTS                                                      |
++--------------------------+--------+---------+--------------------------------------------------------------------------+
+| Edge                     | Parent | Child   | Generated SEMENT                                                         |
++--------------------------+--------+---------+--------------------------------------------------------------------------+
+| idGem1_prop_idColor      | idGem1 | red     | [ TOP: h1778                                                             |
+|                          |        |         |   INDEX: x1777                                                           |
+|                          |        |         |   RELS: < [ _red_a_1 LBL: h1781 ARG0: i1779 ARG1: i1780 ]                |
+|                          |        |         |           [ _gem_n_1 LBL: h1778 ARG0: x1777 ] >                          |
+|                          |        |         |   EQS: < h1781 eq h1778 i1780 eq x1777 > ]                               |
++--------------------------+--------+---------+--------------------------------------------------------------------------+
+| idGem1_prop_idDescriptor | idGem1 | glowing | [ TOP: h1778                                                             |
+|                          |        |         |   INDEX: x1777                                                           |
+|                          |        |         |   RELS: < [ _glow_v_1 LBL: h1784 ARG0: e1782 [ e PROG: + ] ARG1: u1783 ] |
+|                          |        |         |           [ _red_a_1 LBL: h1781 ARG0: i1779 ARG1: i1780 ]                |
+|                          |        |         |           [ _gem_n_1 LBL: h1778 ARG0: x1777 ] >                          |
+|                          |        |         |   EQS: < h1781 eq h1778 i1780 eq x1777 h1784 eq h1778 u1783 eq x1777 > ] |
++--------------------------+--------+---------+--------------------------------------------------------------------------+
+
++-----------------------------+
+|    GENERATED ENGLISH TEXT   |
++----+------------------------+
+| #  | Generated Text         |
++----+------------------------+
+| 1  | A glowing red gem      |
+| 2  | A glowing red gem.     |
+| 3  | A red gem glowing      |
+| 4  | A red gem glowing.     |
+| 5  | A red gem, glowing.    |
+| 6  | A red glowing gem      |
+| 7  | A red glowing gem.     |
+| 8  | Glowing red gem        |
+| 9  | Glowing red gem.       |
+| 10 | Glowing red gems       |
+| 11 | Glowing red gems.      |
+| 12 | Red gem glowing        |
+| 13 | Red gem glowing.       |
+| 14 | Red gem, glowing.      |
+| 15 | Red gems glowing       |
+| 16 | Red gems glowing.      |
+| 17 | Red gems, glowing.     |
+| 18 | Red glowing gem        |
+| 19 | Red glowing gem.       |
+| 20 | Red glowing gems       |
+| 21 | Red glowing gems.      |
+| 22 | The glowing red gem    |
+| 23 | The glowing red gem.   |
+| 24 | The glowing red gems   |
+| 25 | The glowing red gems.  |
+| 26 | The red gem glowing    |
+| 27 | The red gem glowing.   |
+| 28 | The red gem, glowing.  |
+| 29 | The red gems glowing   |
+| 30 | The red gems glowing.  |
+| 31 | The red gems, glowing. |
+| 32 | The red glowing gem    |
+| 33 | The red glowing gem.   |
+| 34 | The red glowing gems   |
+| 35 | The red glowing gems.  |
++----+------------------------+
+
